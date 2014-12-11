@@ -1,15 +1,36 @@
 # Working title: 
-1. Multi-episodic subjective Quality of Telecommunication Services: Effects over Time
+1. Multi-episodic Subjective Quality of Telecommunication Services: Temporal Effects
 2. Subjective Quality of Telecommunication Services: Effects of Multi-episodic usage
 
 ## 1. Motivation, Research Question and Outline
-### Research Question
-How does an overall quality evolve, if a user is using a system several times / episodes / session?
+### Research Questions
+1. How does an overall quality evolve over multiple interactions (multiple episodes) with the one system/service for one user?
+2. How does an overall quality evolve over multiple interactions using a bundle, e.g. more than one system/service for one user?
+
+Goal: Find underlying effects and create service-dependant or better service-independent models.
 
 Part 1: Motivation and Fundamentals
 ### Motivation
-	Services usage, re-usage, churn etc.
+	Telecommunication service (why important, what kind of degradations, short overview on distribution and how did those evolve)
+		Goal: Make customer happy for as little money as possible for infrastructure
+		Services usage, re-usage, churn etc.
 
+### Definition of Service: The Business Perspective
+	What is a service in this case?
+	Definition: Service Quality
+	Which parties are participating in a telecommunication service?
+		service provider, customer, network provider and "business" provider
+		business impact: how does the money flow and ?net neutrality? as business driver
+	
+	Service/Product bundles (TODO)
+	
+	Business impact of low performing services: churn
+	Proposes measurement methods for business performance: NPS (TODO)
+	
+	Quality estimation needed as input for business models, however def. quality must be checked carefully.
+
+	Acceptability, Willingness-to-pay
+		
 ### Perception, Quality and Quality of Experience, Performance, Subjective vs. Objective Quality, Different Types of Models
 [WhitePaper], [QoE Book: Quality of Experiencing], [Jekosch]
 	Distinction QoS (Prioritisation)
@@ -27,23 +48,7 @@ b) Characteristics:
 	Video-on-demand
 c) Performance impact 
 
-### Definition of Service: The Business Perspective
-	What is a service in this case?
-	Definition: Service Quality
-	Which parties are participating in a telecommunication service?
-		service provider, customer, network provider and "business" provider
-		business impact: how does the money flow and ?net neutrality? as business driver
-	
-	Service/Product bundles (TODO)
-	
-	Business impact of low performing services: churn
-	Proposes measurement methods for business performance: NPS (TODO)
-	
-	Quality estimation needed as input for business models, however def. quality must be checked carefully.
-
-	Acceptability, Willingness-to-pay
-	
-## 3. Work on Temporal Effects
+## 2. Work on Temporal Effects
 
 ### Temporal Effects in Phsychology
 	Learning: Recency, Primacy
