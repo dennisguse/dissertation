@@ -1,108 +1,247 @@
-# Working title: 
+# Working title:
 1. Multi-episodic Subjective Quality of Telecommunication Services: Temporal Effects
 2. Subjective Quality of Telecommunication Services: Effects of Multi-episodic usage
+3. Multi-episodic Perceptual Quality of Telecommunication Services
 
 ## 1. Motivation, Research Question and Outline
 ### Research Questions
-1. How does an overall quality evolve over multiple interactions (multiple episodes) with the one system/service for one user?
-2. How does an overall quality evolve over multiple interactions using a bundle, e.g. more than one system/service for one user?
+1. How does perceptual quality evolve over multiple interactions (multiple episodes) with the one system/service for one user?
+2. How does perceptual overall quality evolve over multiple interactions using a bundle, e.g. more than one system/service for one user?
 
-Goal: Find underlying effects and create service-dependant or better service-independent models.
+Goal: Find underlying _effects_ and *create service-dependant* or *service-independent models*.
 
-Part 1: Motivation and Fundamentals
-### Motivation
-	Telecommunication service (why important, what kind of degradations, short overview on distribution and how did those evolve)
+
+TODO:
+- (Required?) Theory of planned behavior
+- (Required?) Expectation confirmation theory
+- (Required?) Task technology fit
+
+- Where Subjective quality assessment methods [Raake, Moeller]
+- (Required?) QoE frameworks: ARCU 
+- (Required?) [Geerts 2010]
+- Modeling: Temporal pooling
+
+- Quality assessment methods: ACR, paired comparison
+--> between-subject vs. in-subject
+- Overview on temporal assessment methods (UX curve)
+- (Optional) Partly non-working system
+- Multi-dimensional integration (audio + video)
+
+## Chapter 1: Introduction and Motivation
+  Temporal perceptual integration for Telecommunication services.
 		Goal: Make customer happy for as little money as possible for infrastructure
 		Services usage, re-usage, churn etc.
+  Definition:
+    What is to service? [Whitepaper]
+    What is a service, application, system?
+    What is service quality?
+    NPS, Churn, Acceptability, Willingness-to-paying
+    Retainability (sMOS)
+    Telecommunication services + Service Provider
 
-### Definition of Service: The Business Perspective
-	What is a service in this case?
-	Definition: Service Quality
-	Which parties are participating in a telecommunication service?
-		service provider, customer, network provider and "business" provider
-		business impact: how does the money flow and ?net neutrality? as business driver
-	
-	Service/Product bundles (TODO)
-	
-	Business impact of low performing services: churn
-	Proposes measurement methods for business performance: NPS (TODO)
-	
-	Quality estimation needed as input for business models, however def. quality must be checked carefully.
+  Adaptive services
+  
+#Part 1: State-of-the-Art		
+## Chapter 2: On Perceptual Quality [WhitePaper, QoE Book Chap 2, Jekosch, Blauert, Moeller]
 
-	Acceptability, Willingness-to-pay
-		
-### Perception, Quality and Quality of Experience, Performance, Subjective vs. Objective Quality, Different Types of Models
-[WhitePaper], [QoE Book: Quality of Experiencing], [Jekosch]
-	Distinction QoS (Prioritisation)
-	
-	Assessment methods and standards: limitations
-	Subjective Measures: self-reported, physiological, behavioural (Big Data)
-	Objective Measures
-	Network Measurements [Hohlfeld]
+###Perceptual Quality
+    - Definition of performance
+    (Physical) Event: An obervable occurance with time, location, character [Whitepaper].
+    -> Duration? [me]
+    
+    Perceptual Event (with Sensory Processing [QoE Book Chap 2]): A physical event may(!) trigger a perceptual event.
+    -> When does a physical event trigger a perceptual event? (Attention?, Focus?)
+    -> Behavioral impact of perceptual events: _anticipation and matching_ and _explorative actions_ [QoE Book Chap 2]
+    
+    Experience: An experience is an individual's stream of perception and interpretation of one or multiple events [Whitepaper].
+    (Perceptual) Quality: Individual comparison and judgment process with perception, reflection (optional?) and description of the outcome (optional?) [Whitepaper]
+      [Jekosch, Raake, Whitepaper]
+    
+    Expectations: [REF?]
+    - Prior experiences
+    - Desired nature
 
-### Implementation, Characteristics and Provision of telecommunication services
-a) Implementation: IP (one network to rule them all); net neutrality
-b) Characteristics:
-	VoIP + Conferencing (optional)
-	IPTV
-	Video-on-demand
-c) Performance impact 
+    Perceptual Quality Features, Quality Elements, Perceptual dimensions [Moeller, Raake]
 
-## 2. Work on Temporal Effects
+    Quality as hygenic factor [Moeller, Wechsung]
 
-### Temporal Effects in Phsychology
-	Learning: Recency, Primacy
+    Semiotic triangle [Raake, Buch p.2]
+
+    Contextual factors, Task, Acceptance
+    Utility [Kahnemann]
+
+    Open questions:
+    - How do experience and perceptual event come together?
+      Is an experience a perceptual event?
+
+    
+###Memorization: Encoding and Retrieval of episodes
+    Episode [Tulving, Black+Bower, Ezzyat]:
+    - Colloquial:  http://www.merriam-webster.com/dictionary/episode (an event that is distinctive and separate although part of a larger series)
+    - remembering vs. knowledge [Tulving]
+
+    - Episodic memory "temporally dated episodes or events and temporal-spatial relations" [Tulving p.385]
+    - "A perceptual event _can_ be stored in the episodic system solely in terms of its perceptible properties [Tulving p.385]
+    - Experienced events have a temporal order (Retrieval should also reveal this order!) [Tulving]
+
+    - autobiographical reference, personal identiy [Tulving p.10], [Conway]
+    -> What? When? Where? Situation+Feelings [Tulving p.10]
+    - Explicit start and end [Conway]
+    - Time-travel (I must be able to travel back to that situation); memory-vivedness [Conway]
+      
+    - Successful retrieval requires succesful encoding! (successful retrieval: a person can describe perceptual properties AND temporal relations to other events)
+
+    - Events are part of an episode.
+    -> Providing a cue for one episodes allows to retrieve information this episode alone!
+    
+    Event segmentation theory (EST) [Black+Bower, Ezzyat, Zacks]
+    - by goal [Black+Bower]
+    - temporal closeness [Black+Bower, Ezzyat p.248]
+    - "that segments experience (events) into episodes" [Ezzyat p.248]
+    - event segmentation happens while experiencing [Ezzyat p.248]
+
+    - [Conway] following [Barsalou 1988] Event-specific knowledge (ESK)
+    -> general "events": repeated events (e.g. evening hikes) and single events (trip to Paris)
+    -> Series of memories linked to together by a theme
+    -> Goal-attainment knowledege
+    --- First encounter (better encoded->more important AND seems to set expectations)
+    --- Repeated encouter
+    
+    - Memory failures [Schacter?]
+    -> Failure to recall due encoding
+    -> Failure to recall due to retrievability
+    -> Mis-attribution
+
+###Quality assessment
+  Quality formation process [Raake, QoE Book Chap.2]
+
+  Quality perspectives [QoE Book, UX Whitepaper :(]:
+  - Momentary
+  - Retrospective (with/out duration)
+  - Multi-episodic
+  
+  Note: Not everything is an episode: a 8s speech stimuli is not an episode (unlikely to be encoded as episode in episodic memory)
+  Anyhow, assessment is done in retrospect (after listening to the simulus).
+  
+  (Definition) _Episodic Perceptual Quality_: 
+    Retrospective perceptual quality evaluation _after_ completion of one or more interactions that is _likely_ with one system/application/service to be memorized as episode.
+    -> Spatio-temporal boundaries AND goal!
+    Example: A full-length movie.
+    Example: A phone call.
+    Example: A browsing session.
+    
+    Note: An episode _might_ consists of several interactions, e.g. pause watching a movie for an incoming phone call and continuing afterwards.
+    Note: It is not required that an _episode_ can be recalled - it must only fulfill the requirements that it _can_ be encoded in episodic memory.
+
+  Definition: Multi-episodic Quality
+    Retrospective perceptual quality evaluation _after_ multiple usage episodes with the _same_ system/application/service.
+    Note: Recall of each individual episodic quality is _not_ required.
+    
+    Question: Using Skype on a mobile vs. fixed access to be integrated into the _same multi-episodic quality_?
+
+##Chapter 3: Implementation, Characteristics and Provision of IP-based Telecommunication services
+How do IP-based telecommunication services work?
+- VoIP [Raake]
+- Video [Neige-Garcia]
+- Web []
+
+##Chapter 4: Time as aspect of experience
+
+###TODO
+  Utility [Kahnemann]
+  Happiness [Kahnemann]
+  Learning
+
+  Importance of content [Baumgartner]: Ads and _positive_ peak effect on remembering content
+
+  Definition Effects:
+  - Recency
+  - Duration neglect [Kahnemann, Frederickson]
+  - Peak
+  - Peak-end effect
+  
+  Belief-Adjustment Model [Hogarth]
+
 	Memory failures [Schacter]
-	Opinion change due to presented evidence
 	
-### Temporal effects in QoE research
-
-	Varying in call performance
-	[Belmudez], [Lewcio]
-	
-	Call quality
-	[Weiss] [ETSI]
-
-	Video quality
-	[Reiter], [Borowiak]
-	
-	Web quality
-	[Strohmeier] [Egger]
-	Discuss difference to Usability acceptance studies
-
-	Parallel use: Attention and Importance / Preference
-	
-## 4. Service(s) in less than 1 hour
-
-### One service: sequential use
-	H1: The multi-episodic rating is higher the longer the distance between the rating and the ONE degraded episode (Condition 1-3)
-	H2: The multi-episodic rating decreases the more episodes are degraded.
-	
-	Studies: Telephony and 3rd Party Listening
-
-### Two services: alternating use
-
-### Two services: parallel use
-	Web+TV
-
-### Aspect: only partial working system (MSc. Sebastian); web-page with missing elements / CSS
-
-### Aspect: Importance: Task-dependency / Motivation / Goal setting (optional)
-	
-## 5. Service(s) over multiple days
-
-### One Service
-[Skype] [3rd party listening (tbd)]
-Question 1: How do subjects remember bad experience?
-Question 2: Which kind of bad experiences are remembered at all?
-
-Gaming: over multiple days; do subjects get more sensitve?
-
-### Two services
-Question 1: Are subjects distinguishing between the two services?
-Question 2: Is bundle / two-service quality just (A+B)/2?
-Question 3: Is one service more important than the other?
-In case of interactive (Web, Telephony, Gaming) vs. non-interactive (IPTV, VoD, AoD) 
+	(optional) Adjustment-level Theory
 
 
-##6. Conclusion and Outlook
+###Time and perceptual quality
+Assumption: Temporal perception AND memorization comparable over persons.
+
+####Performance fluctuations as part of an episode
+  -> Temporal fluctuations in one _short_ stimulus
+  
+  TODO: Not long enough - much more related work required.
+  
+	VoIP: Packet-loss [Raake, Waeltermann, Cote]
+	VoIP: Call-quality	[Lewcio, Belmudez, Berger]
+	Video quality [???]
+	Web quality	[Strohmeier, Egger, Sackl]
+
+####Performance fluctuations in episodes
+  Assessment methods, Tasks?
+  
+	Call [Weiss, ETSI 102206, Rosenbluth], Gros+Chateau]
+	Video [Reiter, Borowiak, Staelens]
+	Video telephony [Schoenenberg?]
+	Web [Hossfeld, Egger, Sackl, Strohmeier]
+
+	Distraction [Guse]: 2nd task with 2nd system
+	-> Attention and Importance / Preference
+
+####Modelling temporal effects
+  Baseline: averaging model (in line with Belief-Update-Model)
+  
+  Temporal pooling
+  
+
+#Part 2: On Multi-episodic Perceptual Quality
+
+Overview: Multi-episodic, multi-service diagram
+
+##Chapter 5: Prior work
+  - Average phone call [Duncanson]
+  - Assessment method [Moeller Skype]
+
+##Chapter 5: Multi-episodic quality in 1 hour
+
+###Sequential use
+  - One system:  repeated usage
+  -> Number of degraded episodes.
+  -> Recency?
+  -> Recovery
+  -> Type of task (conversation vs. listening)
+  - Impact of 2nd service on multi-episodic
+
+### Parallel-use
+  Study Web+TV, e.g. distraction
+
+
+##Chapter 6: Multi-episodic quality over multiple days
+
+  -> Research Question: How do subjects integrate low episodic quality into an overall experience?
+
+  - [Skype]
+  - XoD
+  - VoIP + AoD
+  - [3rd party listening (tbd)]
+  - Telephony field
+
+  Gaming: over multiple days; do subjects get more sensitve?
+
+  ###Limitations of field studies
+
+##Chapter 7: Multi-episodic quality of multiple services
+  - XoD
+  - VoIP + VoD
+  
+  Question 1: Are subjects distinguishing between the two services?
+  Question 2: Is bundle / two-service quality just (A+B)/2?
+  Question 3: Is one service more important than the other?
+
+##Chapter 8: Conclusion and Outlook
+  - Service retainability?
+  - Task importance (impact on memorizing, i.e. encoding)?
+  - 
