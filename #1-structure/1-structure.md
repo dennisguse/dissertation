@@ -163,6 +163,7 @@ How do IP-based telecommunication services work?
   Belief-Adjustment Model [Hogarth]
 
 	Memory failures [Schacter]
+
 	
 	(optional) Adjustment-level Theory
 
@@ -244,4 +245,4 @@ Overview: Multi-episodic, multi-service diagram
 ##Chapter 8: Conclusion and Outlook
   - Service retainability?
   - Task importance (impact on memorizing, i.e. encoding)?
-  - 
+  - What happens with a positive peak (better performance tha usual)?

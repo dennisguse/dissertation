@@ -13,7 +13,7 @@
                 BCOR=5mm,paper=a4,fontsize=11pt, % Binding correction, paper type and font size
                 ngerman,american, % Languages
                 ]{scrreprt} 
-\input{classicthesis-config}
+\input{support/classicthesis-config}
 
 \begin{document}
 
@@ -34,23 +34,23 @@
 %	PRE-CONTENT THESIS PAGES
 %----------------------------------------------------------------------------------------
 
-\include{FrontBackMatter/Titlepage} % Main title page
+%\include{support/FrontBackMatter/Titlepage} % Main title page
 
-\include{FrontBackMatter/Titleback} % Back of the title page
+%\include{support/FrontBackMatter/Titleback} % Back of the title page
 
-\cleardoublepage\include{FrontBackMatter/Dedication} % Dedication page
+%\cleardoublepage\include{support/FrontBackMatter/Dedication} % Dedication page
 
-%\cleardoublepage\include{FrontBackMatter/Foreword} % Uncomment and create a Foreword.tex to include a foreword
+%\cleardoublepage\include{support/FrontBackMatter/Foreword} % Uncomment and create a Foreword.tex to include a foreword
 
-\cleardoublepage\include{FrontBackMatter/Abstract} % Abstract page
+%\cleardoublepage\include{support/FrontBackMatter/Abstract} % Abstract page
 
-\cleardoublepage\include{FrontBackMatter/Publication} % Publications from the thesis page
+%\cleardoublepage\include{support/FrontBackMatter/Publication} % Publications from the thesis page
 
-\cleardoublepage\include{FrontBackMatter/Acknowledgments} % Acknowledgements page
+%\cleardoublepage\include{support/FrontBackMatter/Acknowledgments} % Acknowledgements page
 
 \pagestyle{scrheadings} % Show chapter titles as headings
 
-\cleardoublepage\include{FrontBackMatter/Contents} % Contents, list of figures/tables/listings and acronyms
+%\cleardoublepage\include{support/FrontBackMatter/Contents} % Contents, list of figures/tables/listings and acronyms
 
 \cleardoublepage
 
@@ -63,11 +63,9 @@
 %	THESIS CONTENT - CHAPTERS
 %----------------------------------------------------------------------------------------
 
-\ctparttext{You can put some informational part preamble text here. Illo principalmente su nos. Non message \emph{occidental} angloromanic da. Debitas effortio simplificate sia se, auxiliar summarios da que, se avantiate publicationes via. Pan in terra summarios, capital interlingua se que. Al via multo esser specimen, campo responder que da. Le usate medical addresses pro, europa origine sanctificate nos se.} % Text on the Part 1 page describing  the content in Part 1
-
 \part{Some Kind of Manual} % First part of the thesis
 
-%\include{Chapters/Chapter01} % Chapter 1
+%\include{chapter01.tex} % Chapter 1
 
 \cleardoublepage % Empty page before the start of the next part
 
@@ -75,11 +73,11 @@
 %	POST-CONTENT THESIS PAGES
 %----------------------------------------------------------------------------------------
 
-\cleardoublepage\include{FrontBackMatter/Bibliography} % Bibliography
+%\cleardoublepage\include{FrontBackMatter/Bibliography} % Bibliography
 
-\cleardoublepage\include{FrontBackMatter/Colophon} % Colophon
+%\cleardoublepage\include{FrontBackMatter/Colophon} % Colophon
 
-\cleardoublepage\include{FrontBackMatter/Declaration} % Declaration
+%\cleardoublepage\include{FrontBackMatter/Declaration} % Declaration
 
 %----------------------------------------------------------------------------------------
 
