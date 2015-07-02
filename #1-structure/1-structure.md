@@ -32,7 +32,7 @@ TODO:
 		Goal: Make customer happy for as little money as possible for infrastructure
 		Services usage, re-usage, churn etc.
   Definition:
-    What is to service? [Whitepaper]
+    What is to service? [Whitepaper] [http://www.merriam-webster.com/dictionary/service]
     What is a service, application, system?
     What is service quality?
     NPS, Churn, Acceptability, Willingness-to-paying
@@ -195,7 +195,7 @@ Assumption: Temporal perception AND memorization comparable over persons.
 ####Modelling temporal effects
   Baseline: averaging model (in line with Belief-Update-Model)
   
-  Temporal pooling
+  Temporal pooling [Egger, Sackl]
   
 
 #Part 2: On Multi-episodic Perceptual Quality
