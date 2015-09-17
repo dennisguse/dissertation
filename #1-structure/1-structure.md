@@ -25,7 +25,9 @@ TODO:
 --> between-subject vs. in-subject
 - Overview on temporal assessment methods (UX curve)
 - (Optional) Partly non-working system
-- Multi-dimensional integration (audio + video)
+- Multi-modal integration (audio + video)
+- NPS?
+
 
 ## Chapter 1: Introduction and Motivation
   Temporal perceptual integration for Telecommunication services.
@@ -139,12 +141,6 @@ TODO:
     
     Question: Using Skype on a mobile vs. fixed access to be integrated into the _same multi-episodic quality_?
 
-##Chapter 3: Implementation, Characteristics and Provision of IP-based Telecommunication services
-How do IP-based telecommunication services work?
-- VoIP [Raake]
-- Video [Neige-Garcia]
-- Web []
-
 ##Chapter 4: Time as aspect of experience
 
 ###TODO
@@ -165,7 +161,7 @@ How do IP-based telecommunication services work?
 	Memory failures [Schacter]
 
 	
-	(optional) Adjustment-level Theory
+	(optional) Adjustment-level Theory; NOPE
 
 
 ###Time and perceptual quality
@@ -189,14 +185,13 @@ Assumption: Temporal perception AND memorization comparable over persons.
 	Video telephony [Schoenenberg?]
 	Web [Hossfeld, Egger, Sackl, Strohmeier]
 
-	Distraction [Guse]: 2nd task with 2nd system
+	Distraction [Guse Web]: 2nd task with 2nd system
 	-> Attention and Importance / Preference
 
 ####Modelling temporal effects
   Baseline: averaging model (in line with Belief-Update-Model)
   
   Temporal pooling [Egger, Sackl]
-  
 
 #Part 2: On Multi-episodic Perceptual Quality
 
@@ -216,6 +211,8 @@ Overview: Multi-episodic, multi-service diagram
   -> Type of task (conversation vs. listening)
   - Impact of 2nd service on multi-episodic
 
+-> Lab Telephony; LST only
+
 ### Parallel-use
   Study Web+TV, e.g. distraction
 
@@ -228,11 +225,16 @@ Overview: Multi-episodic, multi-service diagram
   - XoD
   - VoIP + AoD
   - [3rd party listening (tbd)]
-  - Telephony field
+  - Telephony field (aborted)
+  -> Field AoD
 
-  Gaming: over multiple days; do subjects get more sensitve?
+  (Sabrina, Gaming): over multiple days; do subjects get more sensitve?
 
   ###Limitations of field studies
+  - Production Readyness
+  - Temporal constraint
+  - "Real" evironment (subject's own context)
+  -
 
 ##Chapter 7: Multi-episodic quality of multiple services
   - XoD
@@ -241,6 +243,7 @@ Overview: Multi-episodic, multi-service diagram
   Question 1: Are subjects distinguishing between the two services?
   Question 2: Is bundle / two-service quality just (A+B)/2?
   Question 3: Is one service more important than the other?
+
 
 ##Chapter 8: Conclusion and Outlook
   - Service retainability?

@@ -18,23 +18,20 @@
 \begin{document}
 
 \frenchspacing % Reduces space after periods to make text more compact
-
 \raggedbottom % Makes all pages the height of the text on that page
-
 \selectlanguage{american} % Select your default language - e.g. american or ngerman
 
 %\renewcommand*{\bibname}{new name} % Uncomment to change the name of the bibliography
 %\setbibpreamble{} % Uncomment to include a preamble to the bibliography - some text before the reference list starts
 
 \pagenumbering{roman} % Roman page numbering prior to the start of the thesis content (i, ii, iii, etc)
-
 \pagestyle{plain} % Suppress headers for the pre-content pages
 
 %----------------------------------------------------------------------------------------
 %	PRE-CONTENT THESIS PAGES
 %----------------------------------------------------------------------------------------
 
-%\include{support/FrontBackMatter/Titlepage} % Main title page
+\include{support/FrontBackMatter/Titlepage} % Main title page
 
 %\include{support/FrontBackMatter/Titleback} % Back of the title page
 
@@ -48,26 +45,29 @@
 
 %\cleardoublepage\include{support/FrontBackMatter/Acknowledgments} % Acknowledgements page
 
-\pagestyle{scrheadings} % Show chapter titles as headings
+%\pagestyle{scrheadings} % Show chapter titles as headings
 
 %\cleardoublepage\include{support/FrontBackMatter/Contents} % Contents, list of figures/tables/listings and acronyms
 
 \cleardoublepage
-
 \pagenumbering{arabic} % Arabic page numbering for thesis content (1, 2, 3, etc)
 %\setcounter{page}{90} % Uncomment to manually start the page counter at an arbitrary value (for example if you wish to count the pre-content pages in the page count)
 
-\cleardoublepage % Avoids problems with pdfbookmark
+
+
 
 %----------------------------------------------------------------------------------------
 %	THESIS CONTENT - CHAPTERS
 %----------------------------------------------------------------------------------------
 
-\part{Some Kind of Manual} % First part of the thesis
+\cleardoublepage
+\part{Helo?}
+\cleardoublepage\include{chapter01}
+\include{chapter02}
+\include{chapter03}
+\include{chapter04}
+\include{chapter05}
 
-%\include{chapter01.tex} % Chapter 1
-
-\cleardoublepage % Empty page before the start of the next part
 
 %----------------------------------------------------------------------------------------
 %	POST-CONTENT THESIS PAGES
