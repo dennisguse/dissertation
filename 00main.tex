@@ -13,6 +13,8 @@
                 BCOR=5mm,paper=a4,fontsize=11pt, % Binding correction, paper type and font size
                 ngerman,american, % Languages
                 ]{scrreprt} 
+\usepackage[utf8]{inputenc}
+
 \input{support/classicthesis-config}
 
 \begin{document}
@@ -51,9 +53,7 @@
 
 \cleardoublepage
 \pagenumbering{arabic} % Arabic page numbering for thesis content (1, 2, 3, etc)
-%\setcounter{page}{90} % Uncomment to manually start the page counter at an arbitrary value (for example if you wish to count the pre-content pages in the page count)
-
-
+\setcounter{page}{1} % Uncomment to manually start the page counter at an arbitrary value (for example if you wish to count the pre-content pages in the page count)
 
 
 %----------------------------------------------------------------------------------------
@@ -61,13 +61,22 @@
 %----------------------------------------------------------------------------------------
 
 \cleardoublepage
-\part{Helo?}
-\cleardoublepage\include{chapter01}
+\part{Introduction and State of the Art}\cleardoublepage
+\include{chapter01}
 \include{chapter02}
 \include{chapter03}
 \include{chapter04}
-\include{chapter05}
 
+\part{Towards Multi-episodic QQoE}\cleardoublepage
+\include{chapter05}
+\include{chapter06}
+\include{chapter07}
+\include{chapter08}
+\include{chapter09}
+
+\part{Appendix}\cleardoublepage
+\pagenumbering{Roman} % Arabic page numbering for thesis content (1, 2, 3, etc)
+\setcounter{page}{1}
 
 %----------------------------------------------------------------------------------------
 %	POST-CONTENT THESIS PAGES
