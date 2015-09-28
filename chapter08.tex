@@ -1,2 +1,14 @@
 \chapter{Prediction of multi-episodic QoE}\label{chap:08}
 \section*{Abstract}
+Using data presented in previous studies, I will present here my modeling approach.
+As a baseline I take the average over full history.
+The approach will be analytical and not numerical, i.e. I will model effects found (hopefully all significant) and not number crunching via fancy mathematics.
+This will also include modeling multi-service (for one provider) QoE.
+
+Models I take into account are:
+\begin{itemize}
+\item Recency: average over limited history + linear forgetting
+\item Negative Peak: weighted peak + full average
+\item Positive Peak?
+\item Multi-service QoE: (Service A+Service B) / 2
+\end{itemize}
