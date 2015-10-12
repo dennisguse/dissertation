@@ -1,14 +1,23 @@
 \chapter{Prediction of multi-episodic QoE}\label{chap:08}
 \section*{Abstract}
-Using data presented in previous studies, I will present here my modeling approach.
+Using data presented in previous studies and the found effects, I will present here my modeling approach.
 As a baseline I take the average over full history.
-The approach will be analytical and not numerical, i.e. I will model effects found (hopefully all significant) and not number crunching via fancy mathematics.
+The approach will be analytical and not numerical, i.e. I will model effects found (hopefully all significant) and not number crunching.
 This will also include modeling multi-service (for one provider) QoE.
 
-Models I take into account are:
+Note: modeling using lab studies will be more fancy than field trials (latter has lesser conditions and more noise).
+
+\section{Multi-episodic QoE with one service}
+\textit{Model parts} I take into account are:
 \begin{itemize}
 \item Recency: average over limited history + linear forgetting
 \item Negative Peak: weighted peak + full average
-\item Positive Peak?
-\item Multi-service QoE: (Service A+Service B) / 2
+\item Positive Peak? (Waiting for lab study results)
 \end{itemize}
+
+\section{Multi-episodic QoE with multiple services}
+Baseline: Multi-service QoE: (Service A+Service B) / 2
+
+HOWEVER: So far in no study found to be different.
+Question: Is there something as "service importance" or is this "service-type" (AoD, VoD etc.) specific?
+TODO: How could we trigger this in a study? and conduct a lab study about it?
