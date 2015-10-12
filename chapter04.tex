@@ -1,16 +1,27 @@
 \chapter{Effects of Performance fluctuations on (sub-)episodic QoE}\label{chap:04}
 \section*{Abstract}
-Here I will present the all prior work on QoE with regard to performance fluctuations: speech telephony, video consumption, web-browsing.
-This will include assessments methods (ACR, SSCQ, task-driven vs. quality-driven assessment etc.)
-Assessments Methods that are basis for multi-episodic QoE are described in great detail otherwise only state.
+This is an overview chapter on \textit{related work}.
+Here I will present the all prior work on QoE with regard to performance fluctuations/changes in a continuous usage (sub-episode/episode).
+Performance fluctuations is not everything that yields varying, non-constant perception, but focuses a noticeable change in an episode or sub-episode (e.g. codec/parameter changes, packet-loss, interactive delay, NOT speech induced noise or broken echo canceler).
+The major point is here to present an overview on temporal effects (e.g., recency) that affect \textit{retrospective QoE judgments for (sub-)episodes}.
+In the second part, modeling methods for those effects are present and broken down on their essential parts (model parts) and found parameters.
+
+
+%Here I will present the all prior work on QoE with regard to performance fluctuations: speech telephony, video consumption, web-browsing.
+%This will include assessments methods (ACR, SSCQ, task-driven vs. quality-driven assessment etc.)
+%Assessments Methods that are basis for multi-episodic QoE are described in great detail otherwise only state.
 %Assumption: Temporal perception AND memorization comparable over persons.
 
-Start with a definition of usage episode; especially focus on "meaningfulness of an interaction"
+%State the implicit assumption: Temporal perception AND memorization comparable over persons.
 
-Describe temporal effects that were found in QoE research (include potential reasons, if known) and discuss relation-ship to human memory.
+%Definition usage episode!
 
-TODO: Determine, if the belief-adjustment model can be applied! (Journal Paper idea)
-TODO: Service quality studies could be at least referred here (e.g., call into call center)
+%Start with a definition of usage episode; especially focus on "meaningfulness of an interaction"
+
+%Describe temporal effects that were found in QoE research (include potential reasons, if known) and discuss relation-ship to human memory.
+
+%TODO: Determine, if the belief-adjustment model can be applied! (Journal Paper idea)
+%TODO: Service quality studies could be at least referred here (e.g., call into call center)
 
 \section{Performance fluctuations in sub-episode}
 \begin{itemize}
@@ -19,10 +30,25 @@ TODO: Service quality studies could be at least referred here (e.g., call into c
 \item Web (one-page view only)
 \end{itemize}
 
+
+QoE assessment of part of an episode (something that is in itself not complete like listening to one sentence).
+For those no "real" (meaningful) tasks should be solved, but rather the task is to \textit{experiencing} and judge \cite{egger_qoe_2014}.
+
 \section{Performance fluctuations in one episode}
+Here task-driven assessment methodologies are presented, which focus "usage" as part of an experience.
+This includes also passive (task-free) media (audio or video) studies where the task is watch a movie that is in itself meaningful (longer than some seconds).
+
 \begin{itemize}
 \item Call Quality, Conversational assessment
 \item "long-term" Video
 \item Put Web-session in here?
-\item 
 \end{itemize}
+
+
+\section{Modeling of Performance Fluctuations}
+This section can be either split into two, if differences with regard to modeling are found.
+Here I will show how the found temporal effects are modeled and use this as basis for modeling approaches in Chapter~\ref{chap:08}.
+
+Keyword: Temporal pooling
+%TODO Try to apply belief-adjustment model here ;)
+>>>>>>> eb2df1c641f8bd97e84a6080cbbea44501521d6c
