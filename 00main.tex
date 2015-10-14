@@ -15,7 +15,7 @@
                 ]{scrreprt} 
 \usepackage[utf8]{inputenc}
 \usepackage{shadethm}
-
+\usepackage[normalem]{ulem}
 
 %Stuff for definitions using shadethm
 \newshadetheorem{definitions}{Definition}[chapter]
@@ -44,17 +44,18 @@
 %	PRE-CONTENT THESIS PAGES
 %----------------------------------------------------------------------------------------
 
-\renewcommand*{\cleardoublepage}{}
+\renewcommand*{\cleardoublepage}{} %TODO Only for my stuff
 
 \include{support/FrontBackMatter/Titlepage} % Main title page
 %\include{support/FrontBackMatter/Titleback} % Back of the title page
 %\cleardoublepage\include{support/FrontBackMatter/Dedication} % Dedication page
 %\cleardoublepage\include{support/FrontBackMatter/Foreword} % Uncomment and create a Foreword.tex to include a foreword
-%\cleardoublepage\include{support/FrontBackMatter/Abstract} % Abstract page
+%\cleardoublepage\include{support/FrontBackMatter/Abstract}
 %\cleardoublepage\include{support/FrontBackMatter/Publication} % Publications from the thesis page
-%\cleardoublepage\include{support/FrontBackMatter/Acknowledgments} % Acknowledgements page
-%\pagestyle{scrheadings} % Show chapter titles as headings
-%\cleardoublepage\include{support/FrontBackMatter/Contents} % Contents, list of figures/tables/listings and acronyms
+%TODO Add here a list with my own publications here; must descripe what I did for all work that has shared authorship.
+%\cleardoublepage\include{support/FrontBackMatter/Acknowledgments}
+\pagestyle{scrheadings} % Show chapter titles as headings
+\cleardoublepage\include{support/FrontBackMatter/Contents}
 
 \cleardoublepage
 
@@ -65,6 +66,7 @@
 \part{Introduction and State of the Art}\cleardoublepage
 \pagenumbering{arabic} % Arabic page numbering for thesis content (1, 2, 3, etc)
 \setcounter{page}{1} % Uncomment to manually start the page counter at an arbitrary value (for example if you wish to count the pre-content pages in the page count)
+
 \include{chapter01}
 \include{chapter02}
 \include{chapter03}
