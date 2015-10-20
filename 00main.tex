@@ -6,9 +6,9 @@
 % André Miede (http://www.miede.de)
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \documentclass[
-		twoside,openright,titlepage,numbers=noenddot,headinclude,%1headlines,
+%		twoside,
+		openright,titlepage,numbers=noenddot,headinclude,%1headlines,
                 footinclude=true,cleardoublepage=empty,
                 BCOR=5mm,paper=a4,fontsize=11pt, % Binding correction, paper type and font size
                 ngerman,american, % Languages
@@ -39,6 +39,13 @@
 
 \pagenumbering{roman} % Roman page numbering prior to the start of the thesis content (i, ii, iii, etc)
 \pagestyle{plain} % Suppress headers for the pre-content pages
+
+%%%My personal environment stuff.
+\newenvironment{chapter-abstract}{\section*{Abstract}\hrulefill\par}{\par\hrulefill\vspace{3cm}}
+\newenvironment{chapter-summary}{\section*{Summary}\hrulefill\par}{\par\hrulefill\vspace{3cm}}
+
+\newenvironment{chapter-structure}{\section*{Structure}\hrulefill\par\tiny}{\par\hrulefill\vspace{3cm}}
+\renewenvironment{chapter-structure}{\iffalse}{\fi}
 
 %----------------------------------------------------------------------------------------
 %	PRE-CONTENT THESIS PAGES

@@ -1,34 +1,14 @@
 \chapter{Introduction}
-\section*{Abstract}
+\begin{chapter-abstract}
 Here I give an overview on my thesis.
-This includes:
-\begin{itemize}
-\item general topic
-\item field of research: perceptual quality + judgment (relying on memorization and recall?)
-\item relevance: why is this question relevant at all? Practical implications?
-\item overview on service provider things: acceptance + satisfaction + money stuff
-\item my personal motivation to tackle this topic (why important to me?)
-\item how am I tackling the question?
-\item what can the reader expect? (just hints)
-\item (graphic) aspects of multi-episodic QoE: usage duration and time in between + usage pattern + multi-services
-\end{itemize}
+This includes general topic and field of research (perceptual quality judgment that relies on memorization and then recall).
+I state why this topic is relevant and what practical implications occur.
+I give a brief overview on "service basics": to service, satisfaction, acceptance, money stuff.
+At the end I will state the research questions and my approach towards answering this question.
+I will give hints on the results a reader can expect.
+\end{chapter-abstract}
 
-\section{Goal}
-\begin{itemize}
-\item How does perceptual quality evolve over multiple interactions (multiple episodes) with the one system/service for one user?
-\item How does perceptual overall quality evolve over multiple interactions using a bundle, e.g. more than one system/service for one user? (basically an extension of previous stuff)
-\item Goal 1: Find underlying effects temporal effects? (relate them to human memory)
-\item Goal 2: Evaluate potential model components for temporal effects (Implement models: either service-independent (better) or service-dependent.)
-\end{itemize}
-%NOTE: Quality and model must be explained at least minimal here.
-
-\begin{figure}
-	\centering
-	\includegraphics{fig/multi-episodic}
-	\caption{Repeated usage episodes with one service and their episodic QoE form a multi-episodic QoE in the user.}
-	\label{chap10:img:multiEpisodic}
-\end{figure}
-
+\iffalse
 \section{Basic definitions}
 \begin{itemize}
 \item What is \emph{to service}? [Whitepaper] [http://www.merriam-webster.com/dictionary/service] 
@@ -52,10 +32,7 @@ Make customer happy for as little money as possible for infrastructure:
 \item Retainability (sMOS)
 \item Adaptive services: service that adjust performance to current conditions (best + economic feasible)
 \end{itemize}
-
-\section{Structure}
-%TODO Here I describe the structure of my thesis    
-
+\fi
 
 A \emph{service provider} provides a \emph{service}\footnote{Please note that the term \emph{service} in this work does not refer to a technical system executed on a server.} that provides a certain "service" to potential users.
 In difference to "product creating industries" a service cannot be pre-manufactured, but is rather created on request when needed by a then user., \ie to serve somebody.
@@ -71,7 +48,7 @@ The performance of a service might be varying from usage instance to usage insta
 From a user's perspective this might be sufficient, but if the performance some usage instances does meet the expectations / desired performance then a dissatisfaction might occur.
 This force the user to abandon the service provider and chose a different one.
 
-This is, in fact, holds for both \emph{physical services} in which a service is provided to user in a physical location often by a person, but also for \emph{telecommunication services}\footnote{Definition as bit pipe as of https://en.wikipedia.org/wiki/Telecommunications_service follow definition of US Communications Act of 1934} like speech telephony or Internet access.
+This is, in fact, holds for both \emph{physical services} in which a service is provided to user in a physical location often by a person, but also for \emph{telecommunication services}\footnote{Definition as bit pipe as of https://en.wikipedia.org/wiki/Telecommunicationsservice follow definition of US Communications Act of 1934} like speech telephony or Internet access.
 In fact, in telecommunication service are different from classical services as those provide communication between one or more parties, which can be a computer or a person.
 
 In this work, I present my work on the \emph{perceived quality impression} occurring by a human user of telecommunication services.
@@ -85,8 +62,16 @@ In addition, satisfaction and also dissatisfaction of a customers can spread to 
 In this work I focus on the development of perceived quality over several distinct interactions with a telecommunication service and how a retrospective assessment of the perceived quality of this service is affected by varying service performance.
 The actual impact on customer satisfaction and thus business performance of performance variation is not in the scope of this thesis.
 
-The goals of this has two goals:
-\paragraph{Goal 1:}
+\section{Goal}
+\begin{itemize}
+\item How does perceptual quality evolve over multiple interactions (multiple episodes) with the one system/service for one user?
+\item How does perceptual overall quality evolve over multiple interactions using a bundle, e.g. more than one system/service for one user? (basically an extension of previous stuff)
+\end{itemize}
 
+\begin{itemize}
+\item Goal 1: Find underlying effects temporal effects? (relate them to human memory)
+\item Goal 2: Evaluate potential model components for temporal effects (Implement models: either service-independent (better) or service-dependent.)
+\end{itemize}
 
+\section{Structure}
 This work is structured as follows:
