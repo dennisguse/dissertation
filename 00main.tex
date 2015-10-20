@@ -17,6 +17,7 @@
 \usepackage{shadethm}
 \usepackage[normalem]{ulem}
 \usepackage[authoryear,round,colon]{natbib}
+\usepackage{comment}
 
 %Stuff for definitions using shadethm
 \newshadetheorem{definitions}{Definition}[chapter]
@@ -42,11 +43,11 @@
 \pagestyle{plain} % Suppress headers for the pre-content pages
 
 %%%My personal environment stuff.
-\newenvironment{chapter-abstract}{\section*{Abstract}\hrulefill\par}{\par\hrulefill\vspace{3cm}}
-\newenvironment{chapter-summary}{\section*{Summary}\hrulefill\par}{\par\hrulefill\vspace{3cm}}
+\newenvironment{chapter-abstract}{\section*{Abstract}\hrulefill\par}{\par\hrulefill\vspace{1cm}}
+\newenvironment{chapter-summary}{\section*{Summary}\hrulefill\par}{\par\hrulefill\vspace{1cm}}
 
-\newenvironment{chapter-structure}{\section*{Structure}\hrulefill\par\tiny}{\par\hrulefill\vspace{3cm}}
-\renewenvironment{chapter-structure}{\iffalse}{\fi}
+%\newenvironment{chapter-structure}{\section*{Structure}\hrulefill\par\tiny}{\par\hrulefill\vspace{1cm}}
+
 
 %----------------------------------------------------------------------------------------
 %	PRE-CONTENT THESIS PAGES
@@ -71,8 +72,7 @@
 %	THESIS CONTENT - CHAPTERS
 %----------------------------------------------------------------------------------------
 
-\pagenumbering{arabic} % Arabic page numbering for thesis content (1, 2, 3, etc)
-\setcounter{page}{1} % Uncomment to manually start the page counter at an arbitrary value (for example if you wish to count the pre-content pages in the page count)
+\pagenumbering{arabic}\setcounter{page}{1}
 \part{Introduction and State of the Art}\cleardoublepage
 
 \include{chapter01}
@@ -87,8 +87,7 @@
 \include{chapter08}
 \include{chapter09}
 
-\pagenumbering{Roman} % Arabic page numbering for thesis content (1, 2, 3, etc)
-\setcounter{page}{1}
+\pagenumbering{Roman}\setcounter{page}{1}
 \part{Appendix}\cleardoublepage
 \include{appendix}
 

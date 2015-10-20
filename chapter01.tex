@@ -1,4 +1,4 @@
-\chapter{Introduction}
+\chapter{Introduction}\label{chap:01}
 \begin{chapter-abstract}
 Here I give an overview on my thesis.
 This includes general topic and field of research (perceptual quality judgment that relies on memorization and then recall).
@@ -8,35 +8,31 @@ At the end I will state the research questions and my approach towards answering
 I will give hints on the results a reader can expect.
 \end{chapter-abstract}
 
-\iffalse
-\section{Basic definitions}
-\begin{itemize}
-\item What is \emph{to service}? [Whitepaper] [http://www.merriam-webster.com/dictionary/service] 
-\item What is a service, application, system?
-\item Telecommunication services + Service Provider %https://www.law.cornell.edu/uscode/text/47/153#50
-\end{itemize}
+%\section{Basic definitions}
+%\begin{itemize}
+%\item What is \emph{to service}? [Whitepaper] [http://www.merriam-webster.com/dictionary/service] 
+%\item What is a service, application, system?
+%\item Telecommunication services + Service Provider %https://www.law.cornell.edu/uscode/text/47/153#50
+%\end{itemize}
+%\paragraph*{Service provider's goal}
+%Make customer happy for as little money as possible for infrastructure: 
+%\begin{itemize}
+%\item cost-efficiency: trade-off
+%\item risk reduction
+%\item Service usage
+%\item repeated usage / churn
+%\end{itemize}
+%\section{Aspects}
+%\begin{itemize}
+%\item QoE as hygienic factor [Moeller, Wechsung]  
+%\item Money: NPS, Churn, Acceptability, Willingness-to-paying
+%\item Retainability (sMOS)
+%\item Adaptive services: service that adjust performance to current conditions (best + economic feasible)
+%\end{itemize}
 
-\paragraph*{Service provider's goal}
-Make customer happy for as little money as possible for infrastructure: 
-\begin{itemize}
-\item cost-efficiency: trade-off
-\item risk reduction
-\item Service usage
-\item repeated usage / churn
-\end{itemize}
-
-\section{Aspects}
-\begin{itemize}
-\item QoE as hygienic factor [Moeller, Wechsung]  
-\item Money: NPS, Churn, Acceptability, Willingness-to-paying
-\item Retainability (sMOS)
-\item Adaptive services: service that adjust performance to current conditions (best + economic feasible)
-\end{itemize}
-\fi
-
-A \emph{service provider} provides a \emph{service}\footnote{Please note that the term \emph{service} in this work does not refer to a technical system executed on a server.} that provides a certain "service" to potential users.
+A \emph{service provider} provides a \emph{service}\footnote{Please note that the term \emph{service} in this work does not refer to a technical system executed on a server.} that provides a defined "service" to potential users.
 In difference to "product creating industries" a service cannot be pre-manufactured, but is rather created on request when needed by a then user., \ie to serve somebody.
-%TODO: Performance cannot be determined beforehand! Trust; Service usage lifecycle? Expectations
+%TODO: Performance cannot be determined beforehand! Trust; Service usage lifecycle? Customer Expectations and providers promise
 
 Before actually deciding to use a service, a potential user must have a need that can be fulfilled by using a service. %proposes to fulfill
 If multiple service provider that provide a similar service, a potential user must chose which service to use for fulfillment of his need.
@@ -51,6 +47,7 @@ This force the user to abandon the service provider and chose a different one.
 This is, in fact, holds for both \emph{physical services} in which a service is provided to user in a physical location often by a person, but also for \emph{telecommunication services}\footnote{Definition as bit pipe as of https://en.wikipedia.org/wiki/Telecommunicationsservice follow definition of US Communications Act of 1934} like speech telephony or Internet access.
 In fact, in telecommunication service are different from classical services as those provide communication between one or more parties, which can be a computer or a person.
 
+%Scope
 In this work, I present my work on the \emph{perceived quality impression} occurring by a human user of telecommunication services.
 This work extends prior work by investigating the impact of varying service/system performance on the perceived quality, when the same system(s) are used repeatedly.
 This is, in fact, a common case for telecommunication service.
@@ -60,18 +57,47 @@ Although contract duration might bind customers to a provider, low performance a
 In addition, satisfaction and also dissatisfaction of a customers can spread to other customers and potential customers and thus have severe impact on the business performance of a service provider.
 
 In this work I focus on the development of perceived quality over several distinct interactions with a telecommunication service and how a retrospective assessment of the perceived quality of this service is affected by varying service performance.
+%TODO What is performance and what is perceived quality
 The actual impact on customer satisfaction and thus business performance of performance variation is not in the scope of this thesis.
 
-\section{Goal}
+Two research questions are addressed in this thesis:
 \begin{itemize}
-\item How does perceptual quality evolve over multiple interactions (multiple episodes) with the one system/service for one user?
-\item How does perceptual overall quality evolve over multiple interactions using a bundle, e.g. more than one system/service for one user? (basically an extension of previous stuff)
+\item How does perceptual quality evolve over multiple distinct interactions with the one system/service for one user?
+\item How does perceptual quality evolve over multiple distinct interactions with a multiple services offered by the same service provider for one user?
 \end{itemize}
 
-\begin{itemize}
-\item Goal 1: Find underlying effects temporal effects? (relate them to human memory)
-\item Goal 2: Evaluate potential model components for temporal effects (Implement models: either service-independent (better) or service-dependent.)
-\end{itemize}
+Here distinct interaction refers to one usage instance by a user with a service to fulfill a certain need of the user or solve a certain task.
+Such an instance is denoted as a \emph{usage episode}.
+Each usage episode has a perceived quality, which can be assessed momentary while in the usage episode and also in retrospective after the usage episode is finished.
+In this thesis I investigate how a multi-episodic perceived quality evolves over several distinct usage episode with the same service.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=1\columnwidth]{fig/multi-episodic}
+	\caption{Repeated usage episodes with one service and their episodic QoE form a multi-episodic QoE in the user.}
+	\label{img:chap01:multi-episodic}
+\end{figure}
+
+This thesis has two goals:
+\paragraph*{Goal 1}
+First, I will investigate what affects a retrospective multi-episodic quality judgment.
+The major focus here is to understand which usage episode are of special importance for a multi-episodic quality judgment and what temporal effects occur.
+
+\paragraph*{Goal 2}
+Second, I will investigate how multi-episodic quality can be predicted based upon episodic quality judgments and investigate components for model.
 
 \section{Structure}
-This work is structured as follows:
+This thesis is divided into two parts.
+In \emph{Part I} I will introduce concepts and fundamentals that form the basis for my approach towards multi-episodic quality.
+In Chapter~\ref{chap:02} an introduction on \ac{QoE} is given.
+This includes prior work on psychophysics, perception and the quality formation process.
+At the end of this chapter the relationship to higher level concepts like satisfaction and service quality is discussed.
+In Chapter~\ref{chap:03} I present relevant concepts that affect recall and thus retrospective judgments of an \emph{general experience}.
+Here, I will discuss how memory affects those retrospective judgments and those (temporal) effects are presented.
+Based upon Chapter~\ref{chap:02} and Chapter~\ref{chap:03} I will present the state-of-the-art on performance fluctuations on QoE in one usage episode in Chapter~\ref{chap:04}.
+This chapter closes with a review on found temporal effects in this domain and what how those effects are modeled.
+
+In \emph{Part II} multi-episodic QoE is presented.
+First an overview on prior work on multi-episodic QoE is given in Chapter~\ref{chap:05}.
+Here the assessment methodology developed for multi-episodic QoE presented in \cite{moller_single-call_2011} is presented in detail.
+This task-driven assessment methodology is 																													
