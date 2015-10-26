@@ -1,10 +1,10 @@
 \chapter{Quality of Experience}\label{chap:02}
 \begin{chapter-abstract}
 Here I give an overview on the concept of \ac{QoE}.
-This is basically Psychophysics (Perception): Blauert, Möller, Jekosch and Raake.
+This is basically Psychophysics (Perception): Blauert, Moeller, Jekosch and Raake.
 I present standard assessment methods (\ac{ACR}, \ac{MUSHRA} etc.)and the underlying/implicit assumption for user studies).
 However, the main focus on \textit{higher level} concepts (Moeller, ARCU and Geerts), which propose a more holistic approach towards \ac{QoE} and consider time and repeated usage.
-At the end I will discuss, how QoE relates to concepts of Utility, Acceptability, Satisfaction and Service Quality (needed in chap 4).
+At the end I will discuss, how \ac{QoE} relates to concepts of Utility, Acceptability, Satisfaction and Service Quality (needed in chap 4).
 Those concept are important from the business perspective.
 
 I should here include also some technical examples why \ac{QoE} is important for \ac{IP}-based networks.
@@ -22,35 +22,41 @@ This model is then used to plan actions and updated, when new information includ
 
 %\item Perceptual Event (with Sensory Processing [QoE Book Chap 2]): A physical event may(!) trigger a
 %\item (Physical) Event: An observable occurrence with time, location, character [Whitepaper] -> Duration? [me]
-A \emph{perceptual event} occurs in a human observer occurs, when a \emph{physical event} stimulates a  sensory organ.
+A \emph{perceptual event} occurs in a human observer occurs, when a \emph{physical event} stimulates a sensory organ~\cite{blauert_spatial_1996}.
 A physical event is an observable occurrence in time, location and character~\cite{callet_qualinet_2013}.
 One example of a physical event is a sound event that reaches the ear results in an auditory event in the observer (see ~\ref{img:chap02:auditory-event}).
-Because the perceptual event occurs in only in the observer, it cannot be observed directly.
-Such an perceptual event can be described by the observer. %or series
-This description can be done with quantitative or qualitative way.
+Because the perceptual event occurs inside the observer, also due to perceptual and mental processing, it cannot observed directly.
+A perceptual event can only be described by the observer by comparing the perception to other known features and express it.
 
 \begin{figure}
 %	\includegraphics[width=1\textwidth]{•}
-	\caption{Perceptual event (Blauert stuff)}
+	\caption{Blauerts Perceptual event (Blauert stuff)}
 	\label{img:chap02:auditory-event}
 \end{figure}
-
-%Just noticable difference
-
-%\item Behavioral impact of perceptual events: anticipation and matching and exploratory actions [QoE Book Chap 2]
-
-%\item Inherent assumption: perception is more or less reproducible: humans perceive similar
-
-%\item Experience: An experience is an individual's stream of perception and interpretation of one or multiple events [Whitepaper].
+%Blauert ergodic system p.11 mittig
 
 %\item Definition of physical observable things may lead to perception AND may be memorized.
+By measuring the properties of a physical event and relating those measurements to the description of the perceptual events psychometric functions can be derived.
+%Initial work on psychophysics was conducted Weber\cite{???} introducing the later coined term \ac{JND} for the perceptability of physical changes.
+
+%\item Inherent assumption: perception is more or less reproducible: humans perceive similar
+The description of a physical event and their perception must not necessarily be identical for different observers as each observer describes his individual perceptual event~\cite[p. 11]{blauert_spatial_1996}.
+A psychophysical experiment is considered \emph{objective}, if the results are reproducible independent if one subject is measured repeatedly or multiple subjects are used, \ie the system is ergodic~\cite[p. 11]{blauert_spatial_1996}.
+
+A physical event and, if perceived, the resulting perceptual event changes the state of the observer.
+This may affect perception of following physical events.
+For example 
+ and thus affect the perception of following physical events as described by Weber.
+
+
+\section{Perceptual Quality}
 
 %\item What is experiencing? (cite book)
 \begin{definition}[Experiencing]
 ``is the individual stream of perceptions (of feelings, sensory percepts and concepts) that occurs in a particular situation of reference.''~\citep[p. 13]{moller_quality_2014}.
 \end{definition}
 
-\section{Perceptual Quality}
+
 \begin{itemize}
 \item (Perceptual) Quality: Individual comparison and judgment process with perception, reflection (optional?) and description of the outcome (optional?) [whitepaper]
 \item Quality formation process
