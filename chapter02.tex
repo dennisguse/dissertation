@@ -1,4 +1,4 @@
-\chapter{Quality of Experience}\label{chap:02}
+\chapter{Perceptual Quality}\label{chap:02}
 \begin{chapter-abstract}
 Here I give an overview on the concept of \ac{QoE}.
 This is basically Psychophysics (Perception): Blauert, Moeller, Jekosch and Raake.
@@ -28,8 +28,8 @@ Because the perceptual event occurs inside the observer, also due to perceptual 
 A perceptual event can only be described by the observer by comparing the perception to other known features and express it.
 
 \begin{figure}
-%	\includegraphics[width=1\textwidth]{•}
-	\caption{Blauerts Perceptual event (Blauert stuff)}
+	\includegraphics[width=1\textwidth]{fig/perceptual-event}
+	\caption{Blauerts Perceptual event (Blauert stuff)}	
 	\label{img:chap02:auditory-event}
 \end{figure}
 %Blauert ergodic system p.11 mittig
@@ -56,59 +56,95 @@ This denotes the fact that a person can actively focus on a sound source and fil
 This allows a person to listen to one speaker in a room with several parallel speakers.
 
 A psychophysical experiment is conducted by presenting one or more physical events as stimuli to one or more observers.
-Each individual observer derives the description of his perceptual event by translating it to XXX. %TODO
+Each individual observer derives the description of his perceptual event by translating it to \todo{XXX}. %TODO
 The description can be expressed in a quantitative form by selecting the best fitting answer from a pre-defined set or in a free form.
 Whereas in the first case the encoding is conducted by an observer himself, in the latter case the encoding open by the observer.
-The description task requires that the perceptual event can be observed consciously and the observation process affects perception.
-Physical events that lead to perceptual event that cannot be observed consciously cannot be studied using this method of active reflection.
-The (subconscious) reaction of an observer due to a physical event, however, can be measured by using physiological measurements like skin conductance.
-By applying \ac{EEG}, in fact, also parts of the subconscious perceptual process might be observable.
+The description task requires that the perceptual event can be observed consciously and an \emph{active} observation process may affect the actual perception and thus perceptual event.%TODO REF
+%Add training results in more differentiated perception
+In addition to variations in the perception process leading to varying perception also the observation and description process is not constant.
+The description process of a perceptual event may be affected by previous perceptual events that form an internal reference that is used for description (e.g., the sound is lower than the previous one), but the description process also changes over longer time spans as more information could be memorized and can be used for the description of the perceptual event.
 
+A physical event that lead to perceptual event that cannot be observed consciously cannot be studied using this method of active reflection.
+The (subconscious) reaction of an observer to a physical event can be measured by using physiological measurements.
+Common examples are eye tracking, or skin conductance.
+To a certain degree also reactions of the subconscious perceptual process might be observable by 
+By applying \ac{EEG}, in fact, also parts of the subconscious perceptual process happening in the brain can be observed to a certain degree.
 
-\section{Perceptual Quality}
-Based upon the psychophysics and t
+In fact, an observer cannot only describe the perceptual event, but might react to a perceived physical event.
+First he will incorporate the newly acquired information provided by the new perceptual event and update his internal representation of his environment.
+The observer might then actively react, so that following physical events might yield more relevant information.
+For example a human listener can actively try to the direction of a sound source by actively moving his head, which will affect following perceptual events.\todo{REF}
 
-%\item What is experiencing? (cite book)
+\section{Perceptual Quality and Quality Formation Process}
+The field \emph{perceptual quality}, or so-called \ac{QoE}, is a field of psychophysics focusing on the \emph{experience} due to perceptions and the resulting \emph{quality} of this experience.
+Experience is overall result from the experience of perceptual events.
 \begin{definition}[Experiencing]
 ``is the individual stream of perceptions (of feelings, sensory percepts and concepts) that occurs in a particular situation of reference.''~\citep[p. 13]{moller_quality_2014}.
 \end{definition}
 
-
-\begin{itemize}
-\item (Perceptual) Quality: Individual comparison and judgment process with perception, reflection (optional?) and description of the outcome (optional?) [whitepaper]
-\item Quality formation process
-\item Assumed quality + recalled quality
-\item Expectations: Prior experiences, Desired nature, Internal reference, Contextual Factors, Task [Moeller, Raake] 
-\item Perceptual Quality Features, Quality Elements, Perceptual dimensions [Moeller, Raake]%NOTE: Features only very short!
-%NOPE \item Semiotic triangle [Raake, Buch p.2]: sign carrier, referent and meaning; (is similar to Shannon)
-\item What are related concepts: QoS, Performance?
-\item Check Geerts for broader context!
-\item Moeller DISS taxonomy
-\item REF Gaming taxonomy, if used later!
-\item Lab vs. field studies
-\end{itemize}
-
+%Quality: Individual comparison and judgment process with perception, reflection (optional?) and description of the outcome (optional?) [whitepaper]
+%\item Quality formation process
+With regard to quality of an experience, and the underlying perceptual events, \cite{jekosch_voice_2005} formulates the \emph{quality formation process} as individual comparison process between the desired outcome, or expected, with the experienced outcome.
+The comparison with the expectations of the experience results in a \emph{quality event}, which similar to a perceptual event can be described.
+This process is shown in Figure~\ref{img:chap02:quality-event} as extension to the perceptual event processing and description process \todo{REF previous section, blauert}.
 \begin{figure}
 	\includegraphics[width=1\textwidth]{fig/quality-event}
-	\caption{Quality event}
+	\caption{Quality formation and description process as extension to the perceptual event.}
 	\label{img:chap02:quality-event}
 \end{figure}
 
+It is assumed that a perceptual event is evaluated by the comparing system within an observer with regard to the \emph{quality features} of this event~\cite[cf. p. 17]{jekosch_voice_2005}.
+\footnote{\cite{jekosch_voice_2005} uses the term \emph{entity} with regard to the quality formation process.
+As entity does not convey a temporal component, the term \emph{event} is in this work used instead following the notion of \cite{blauert_spatial_1996}.}
+The comparing system actually evaluates the difference between the \emph{perceived quality features} and the \emph{desired quality features}~\cite[p. 23]{raake_book}.
+
+\begin{definition}[Quality Feature]
+``A quality feature is a recognized and designated characteristic of an entity that is relevant to the entity's quality.''~\cite[p. 17]{jekosch_voice_2005}
+\end{definition}
+
+The work of Jekosch with regard to the \emph{quality formation process} was extended by later Raake\cite{raake_voip_book, raake_book}.
+
+\begin{figure}
+	\includegraphics[width=1\textwidth]{fig/quality-formation-process}
+	\caption{Quality formation process\cite{raake_book}}
+	\label{img:chap02:quality-formation-process}
+\end{figure}
+
+With regard to telecommunication systems and services the perceived quality has been extended to \ac{QoE}
+
+
+\begin{definition}[Assumed Quality]
+``corresponds to the quality and quality features that users, developers, manufacturers or  service  providers assume regarding a  system, service or product that they intend to be using, or will be producing, without however grounding these assumptions on an explicit assessment of \textit{quality based on experiencing}.''~\citep[p. 20]{moller_quality_2014}.
+\end{definition}
 
 \begin{definition}[\acf{QoE}]
 ``is the degree of delight or annoyance of a person whose experiencing involves an application, service, or system. It results from the person’s evaluation of the fulfillment of his or her expectations and needs with respect to the utility and / or enjoyment in the light of the person’s context, personality and current state.''~\citep[p. 21]{moller_quality_2014}.
 \end{definition}
 
-\begin{definition}[Assumed quality]
-``corresponds to the quality and quality features that users, developers, manufacturers or  service  providers assume regarding a  system, service or product that they intend to be using, or will be producing, without however grounding these assumptions on an explicit assessment of \textit{quality based on experiencing}.''~\citep[p. 20]{moller_quality_2014}.
-\end{definition}
+\section{Factors influencing \ac{QoE}}
 
+%recalled quality
+%\item Expectations: Prior experiences, Desired nature, Internal reference, Contextual Factors, Task [Moeller, Raake] 
+%\item Perceptual dimensions [Moeller, Raake]%NOTE: Features only very short!
+%\item What are related concepts: QoS, Performance?
+%\item Check Geerts for broader context!
+%\item Moeller DISS taxonomy
+%\item REF Gaming taxonomy, if used later!
+%\item Lab vs. field studies
+
+
+\section{Assessment Methods}
 
 \begin{figure}
 	\includegraphics[width=1\textwidth]{fig/quality7pt_scale}
 	\caption{Continuous 7-point scale for \ac{ACR} with German labels; labels from left-to-right: extremely bad (0), bad (1), poor (2), fair (3), good (4), excellent (5) and ideal (6) \citep{itu-t_p.805:_2007}.}
-	\label{img:chap02:qualityScale}
+	\label{img:chap02:quality-scale}
 \end{figure}
+
+%Dimenions and perceptual space
+%Dimension-based stuff
+%MUSHRA direct comparins
+%ACR
 
 \section{Application of Quality of Experience}
 \begin{itemize}
