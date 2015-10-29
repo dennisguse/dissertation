@@ -8,7 +8,7 @@ At the end I will discuss, how \ac{QoE} relates to concepts of Utility, Acceptab
 Those concept are important from the business perspective.
 
 I should here include also some technical examples why \ac{QoE} is important for \ac{IP}-based networks.
-Specialized methods for assessment of temporal effects / performance fluctuations are presented in Chapter~\ref{chap:04}.
+Specialized methods for assessment of temporal effects / performance fluctuations are presented in \autoref{chap:04}.
 \end{chapter-abstract}
 
 \section{Perception and Psychophysics}
@@ -23,7 +23,7 @@ This model is then used to plan actions and updated, when new information includ
 %\item (Physical) Event: An observable occurrence with time, location, character [Whitepaper] -> Duration? [me]
 A \emph{perceptual event} occurs in a human observer occurs, when a \emph{physical event} stimulates a sensory organ~\cite{blauert_spatial_1996}.
 A physical event is an observable occurrence in time, location and character~\cite{callet_qualinet_2013}.
-One example of a physical event is a sound event that reaches the ear results in an auditory event in the observer (see ~\ref{img:chap02:auditory-event}).
+One example of a physical event is a sound event that reaches the ear results in an auditory event in the observer (see \autoref{img:chap02:auditory-event}).
 Because the perceptual event occurs inside the observer, also due to perceptual and mental processing, it cannot observed directly.
 A perceptual event can only be described by the observer by comparing the perception to other known features and express it.
 
@@ -86,7 +86,7 @@ Experience is overall result from the experience of perceptual events.
 %\item Quality formation process
 With regard to quality of an experience, and the underlying perceptual events, \cite{jekosch_voice_2005} formulates the \emph{quality formation process} as individual comparison process between the desired outcome, or expected, with the experienced outcome.
 The comparison with the expectations of the experience results in a \emph{quality event}, which similar to a perceptual event can be described.
-This process is shown in Figure~\ref{img:chap02:quality-event} as extension to the perceptual event processing and description process \todo{REF previous section, blauert}.
+This process is shown in \autoref{img:chap02:quality-event} as extension to the perceptual event processing and description process \todo{REF previous section, blauert}.
 \begin{figure}
 	\includegraphics[width=1\textwidth]{fig/quality-event}
 	\caption{Quality formation and description process as extension to the perceptual event.}
@@ -102,26 +102,31 @@ The comparing system actually evaluates the difference between the \emph{perceiv
 ``A quality feature is a recognized and designated characteristic of an entity that is relevant to the entity's quality.''~\cite[p. 17]{jekosch_voice_2005}
 \end{definition}
 
-\cite{raake_voip_book, raake_book} extended the \emph{quality formation process} of \cite{jekosch_voice_2005}.
-Raake's splits the quality formation process into three phases.
-The first phase contains the sensory processing depending on contextual information and predescessing perceptual events, which transforms a physical event to a perceptual event.
-
-Figure~\ref{img:chap02:quality-formation-process} 
+\cite{raake_voip_2005, moller_quality_2014} extended the \emph{quality formation process} of \cite{jekosch_voice_2005}.
+Raake splits the quality formation process into three phases as shown in \autoref{img:chap02:quality-formation-process}.
+The first phase contains the sensory processing depending on contextual information and predescessing perceptual events, which transforms a physical event to a perceptual event leading to the perceived characteristic.
+This phase also contains reactions to the perceptual event by exploration and anticipation.
+\todo{Write more about ALEX here}
 
 \begin{figure}
 	\includegraphics[width=1\textwidth]{fig/quality-formation-process}
-	\caption{Quality-formation process as defined by \cite{raake_book} extending \cite{jekosch_voice_2005}.}
+	\caption{Quality-formation process as defined by \cite{moller_quality_2014} extending \cite{jekosch_voice_2005}.}
 	\label{img:chap02:quality-formation-process}
 \end{figure}
 
-With regard to telecommunication systems and services the perceived quality has been extended to \ac{QoE}.
+With regard to telecommunication services and multimedia systems the term \emph{perceived quality} has been extended to \acf{QoE}.
 \begin{definition}[\acf{QoE}]
-``is the degree of delight or annoyance of a person whose experiencing involves an application, service, or system. It results from the person’s evaluation of the fulfillment of his or her expectations and needs with respect to the utility and / or enjoyment in the light of the person’s context, personality and current state.''~\citep[p. 21]{moller_quality_2014}.
+``is the degree of delight or annoyance of a person whose experiencing involves an application, service, or system.
+It results from the person’s evaluation of the fulfillment of his or her expectations and needs with respect to the utility and / or enjoyment in the light of the person’s context, personality and current state.''~\citep[p. 21]{moller_quality_2014}.
 \end{definition}
+
+In \ac{QoE} an observer is not only regarded as a measurement instrument, but as an actor striving for a   satisfying perceived quality with regard to his expectations, requirements and needs.
+In difference to an observer, who only describes an event, in QoE the perceiving human is regarded as an actor that can not only react but also proactive make decisions.
 
 \begin{definition}[Assumed Quality]
 ``corresponds to the quality and quality features that users, developers, manufacturers or  service  providers assume regarding a  system, service or product that they intend to be using, or will be producing, without however grounding these assumptions on an explicit assessment of \textit{quality based on experiencing}.''~\citep[p. 20]{moller_quality_2014}.
 \end{definition}
+
 
 \section{Factors influencing \ac{QoE}}
 
@@ -132,10 +137,17 @@ With regard to telecommunication systems and services the perceived quality has 
 %\item Check Geerts for broader context!
 %\item Moeller DISS taxonomy
 %\item REF Gaming taxonomy, if used later!
-%\item Lab vs. field studies
 
 
 \section{Assessment Methods}
+%\item Lab vs. field studies
+
+%paired comparison
+%speech integibility
+%MUSHRA direct comparins
+%ACR
+%Dimenions and perceptual space
+%Dimension-based stuff
 
 \begin{figure}
 	\includegraphics[width=1\textwidth]{fig/quality7pt_scale}
@@ -143,14 +155,12 @@ With regard to telecommunication systems and services the perceived quality has 
 	\label{img:chap02:quality-scale}
 \end{figure}
 
-%Dimenions and perceptual space
-%Dimension-based stuff
-%MUSHRA direct comparins
-%ACR
+%Types of judgment
 
-\section{Application of Quality of Experience}
+%Assumption: average user: 
+
+\section{Application of \acf{Quality of Experience}}
 \begin{itemize}
-\item How is this studied? How is QoE typically assessed? (Methods)? 
 \item Practical outcome? Evaluation procedures, knowledge and Objective Models (for different purpose)
 
 \item Approaches towards modeling: how to one create a model? What are limitations?
