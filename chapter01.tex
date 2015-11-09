@@ -9,11 +9,10 @@ I will give hints on the results a reader can expect.
 \end{chapter-abstract}
 
 %\section{Basic definitions}
-%\begin{itemize}
 %\item What is \emph{to service}? [Whitepaper] [http://www.merriam-webster.com/dictionary/service] 
 %\item What is a service, application, system?
 %\item Telecommunication services + Service Provider %https://www.law.cornell.edu/uscode/text/47/153#50
-%\end{itemize}
+
 %\paragraph*{Service provider's goal}
 %Make customer happy for as little money as possible for infrastructure: 
 %\begin{itemize}
@@ -21,17 +20,52 @@ I will give hints on the results a reader can expect.
 %\item risk reduction
 %\item Service usage
 %\item repeated usage / churn
-%\end{itemize}
-%\section{Aspects}
-%\begin{itemize}
+
 %\item QoE as hygienic factor [Moeller, Wechsung]  
 %\item Money: NPS, Churn, Acceptability, Willingness-to-paying
 %\item Retainability (sMOS)
 %\item Adaptive services: service that adjust performance to current conditions (best + economic feasible)
 %\end{itemize}
 
-A \emph{service provider} provides a \emph{service}\footnote{Please note that the term \emph{service} in this work does not refer to a technical system executed on a server.} that provides a defined "service" to potential users.
-In difference to "product creating industries" a service cannot be pre-manufactured, but is rather created on request when needed by a then user., \ie to serve somebody.
+\section{Motivation}
+In difference to products, which can be manufactured and stored, is a service volatile.
+A service is simultaneously produced or rather provided by the \emph{service provider} and consumed by the \emph{customer}.
+A typical example is a \emph{telecommunication service} like speech telephony, or Internet access.
+%US Communications Act 1934
+Telecommunication services provide communication, \ie data transmission, between one or more parties.
+Here a party can be a person but also a computer.
+A service provider maintains the network infrastructure to provide those services and makes it available to potential users\footnote{Throughout this a person engaging a service is called \emph{user} of this service without distinction if he is the actual customer.}.
+The actual service is produced, when a user uses a provided service, using the provider's network infrastructure for data transmission.
+
+As a service is produced when it is used, the \emph{service performance} might be varying.
+Here, service performance are absolutely measurable parameters of this service like transmission bandwidth and one-way transmission delay~\citep[cf][p. 12]{moller_assessment_2000}.
+In case of a telecommunication service varying service performance can be the result of current network load conditions, network equipment failure, but also related to end-user devices (\eg the telephone) and other factors.
+Usage of telecommunication services can be divided into two aspects.
+First, a user can actively interact with a service like starting and engaging a telephone conversation.
+Second, user can passively use a service, which provides like reachability of a telephone.
+
+The active use by a user of a telecommunication service also results in a \emph{perceived quality} of this interaction (cf. \autoref{chap:02}).
+It is assumed that perceived quality results from a comparison between the \emph{desired experience} and \emph{actual experience}. %Expected experience?
+Here experience includes all perceptions resulting from this service instance \citep[cf.][p.13]{Book chapter 2}.
+The perceived quality of an interaction with a service is affected by the experienced service performance, but also individual factors.
+
+%QoE Methods; human perception 
+Understanding the relationship between service (or system) performance with perceived quality has become important field of research.
+Starting from speech transmission for telephony \citep[cf.]{IEEE Recommended Practice for Speech Quality Measurements} and the resulting degradations, perceived quality now mainly considers digital transmission of multimedia data \citep{moeller_quality_2015}}.
+This includes the production, transmission (especially lossy coding) and reproduction of text, voice, speech, image and video information.
+Specific characteristics of human perceptual system have been used to develop enhanced coding mechanisms like \ac{MP3} or \ac{H264}.
+%Service choice!
+
+\section{Research Questions}
+This work extends prior work by investigating the impact of varying service/system performance on the perceived quality, when the same system(s) are used repeatedly.
+This is, in fact, a common case for telecommunication service.
+For example a customer of a mobile  provider will use the provided service(s) usually repeatedly, because his telephone number is bound to the service provider and, although it can be transfered to a different provider, this process takes time and effort.
+Furthermore, a customer might be bound for a certain extend to a service provider contract duration.
+
+The performance of a service might be varying from usage instance to usage instance.
+From a user's perspective this might be sufficient, but if the performance some usage instances does meet the expectations / desired performance then a dissatisfaction might occur.
+This force the user to abandon the service provider and chose a different one.
+
 %TODO: Performance cannot be determined beforehand! Trust; Service usage lifecycle? Customer Expectations and providers promise
 
 Before actually deciding to use a service, a potential user must have a need that can be fulfilled by using a service. %proposes to fulfill
@@ -39,23 +73,10 @@ If multiple service provider that provide a similar service, a potential user mu
 When satisfied with the outcome of using the service a user might interact with the service later on again, whereas a non-satisfying outcome will likely result in not using the same service again and rather use a different one.
 In fact, using the same service again, saves time and resource, because the service discovery, evaluation and selection is not conducted.
 
-However, the performance of a service cannot be constant as the service is created on-demand.
-The performance of a service might be varying from usage instance to usage instance.
-From a user's perspective this might be sufficient, but if the performance some usage instances does meet the expectations / desired performance then a dissatisfaction might occur.
-This force the user to abandon the service provider and chose a different one.
-
-This is, in fact, holds for both \emph{physical services} in which a service is provided to user in a physical location often by a person, but also for \emph{telecommunication services}\footnote{Definition as bit pipe as of https://en.wikipedia.org/wiki/Telecommunicationsservice follow definition of US Communications Act of 1934} like speech telephony or Internet access.
-In fact, in telecommunication service are different from classical services as those provide communication between one or more parties, which can be a computer or a person.
-
-%Scope
-In this work, I present my work on the \emph{perceived quality impression} occurring by a human user of telecommunication services.
-This work extends prior work by investigating the impact of varying service/system performance on the perceived quality, when the same system(s) are used repeatedly.
-This is, in fact, a common case for telecommunication service.
-For example a customer of a mobile  provider will use the provided service(s) usually repeatedly, because his telephone number is bound to the service provider and, although it can be transfered to a different provider, this process takes time and effort.
-Furthermore, a customer might be bound for a certain extend to a service provider contract duration.
 Although contract duration might bind customers to a provider, low performance and thus a low perceived quality affects the future use behavior and increases the churn rate for the end of contract.
 In addition, satisfaction and also dissatisfaction of a customers can spread to other customers and potential customers and thus have severe impact on the business performance of a service provider.
 
+\section{Goals}
 In this work I focus on the development of perceived quality over several distinct interactions with a telecommunication service and how a retrospective assessment of the perceived quality of this service is affected by varying service performance.
 %TODO What is performance and what is perceived quality
 The actual impact on customer satisfaction and thus business performance of performance variation is not in the scope of this thesis.
