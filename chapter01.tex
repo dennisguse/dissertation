@@ -8,25 +8,6 @@ At the end I will state the research questions and my approach towards answering
 I will give hints on the results a reader can expect.
 \end{chapter-abstract}
 
-%\section{Basic definitions}
-%\item What is \emph{to service}? [Whitepaper] [http://www.merriam-webster.com/dictionary/service] 
-%\item What is a service, application, system?
-%\item Telecommunication services + Service Provider %https://www.law.cornell.edu/uscode/text/47/153#50
-
-%\paragraph*{Service provider's goal}
-%Make customer happy for as little money as possible for infrastructure: 
-%\begin{itemize}
-%\item cost-efficiency: trade-off
-%\item risk reduction
-%\item Service usage
-%\item repeated usage / churn
-
-%\item QoE as hygienic factor [Moeller, Wechsung]  
-%\item Money: NPS, Churn, Acceptability, Willingness-to-paying
-%\item Retainability (sMOS)
-%\item Adaptive services: service that adjust performance to current conditions (best + economic feasible)
-%\end{itemize}
-
 \section{Motivation}
 In difference to products, which can be manufactured and stored, is a service volatile.
 A service is simultaneously produced or rather provided by the \emph{service provider} and consumed by the \emph{customer}.
@@ -38,7 +19,7 @@ A service provider maintains the network infrastructure to provide those service
 The actual service is produced, when a user uses a provided service, using the provider's network infrastructure for data transmission.
 
 As a service is produced when it is used, the \emph{service performance} might be varying.
-Here, service performance are absolutely measurable parameters of this service like transmission bandwidth and one-way transmission delay~\citep[cf][p. 12]{moller_assessment_2000}.
+Here, service performance are absolutely measurable parameters of this service like transmission bandwidth and one-way transmission delay~\citep[cf.][p. 12]{moller_assessment_2000}.
 In case of a telecommunication service varying service performance can be the result of current network load conditions, network equipment failure, but also related to end-user devices (\eg the telephone) and other factors.
 Usage of telecommunication services can be divided into two aspects.
 First, a user can actively interact with a service like starting and engaging a telephone conversation.
@@ -47,50 +28,46 @@ Second, user can passively use a service, which provides like reachability of a 
 The active use by a user of a telecommunication service also results in a \emph{perceived quality} of this interaction (cf. \autoref{chap:02}).
 It is assumed that perceived quality results from a comparison between the \emph{desired experience} and \emph{actual experience}. %Expected experience?
 Here experience includes all perceptions resulting from this service instance \citep[cf.][p.13]{Book chapter 2}.
-The perceived quality of an interaction with a service is affected by the experienced service performance, but also individual factors.
+The perceived quality of an interaction with a service is affected by the experienced service performance, but also individual factors like requirements, tasks, etc.
 
 %QoE Methods; human perception 
 Understanding the relationship between service (or system) performance with perceived quality has become important field of research.
-Starting from speech transmission for telephony \citep[cf.]{IEEE Recommended Practice for Speech Quality Measurements} and the resulting degradations, perceived quality now mainly considers digital transmission of multimedia data \citep{moeller_quality_2015}}.
-This includes the production, transmission (especially lossy coding) and reproduction of text, voice, speech, image and video information.
-Specific characteristics of human perceptual system have been used to develop enhanced coding mechanisms like \ac{MP3} or \ac{H264}.
-%Service choice!
+Starting from speech transmission for telephony \citep[cf.][]{IEEE Recommended Practice for Speech Quality Measurements} and the resulting degradations, perceived quality now mainly considers digital transmission of multimedia data \citep{moller_quality_2014}.
+This includes the production, coding, transmission, decoding and reproduction of text, voice, speech, image and video information.
+Specific characteristics of human perceptual system have been used to develop enhanced coding mechanisms like \ac{MP3} or \ac{H.264}\todo{REF}, which use lossy coding to provide a reduction in data rate but achieve a better perceived quality.
+Another application of knowledge about perceived quality is the monitoring of network transmission infrastructure.
+This allows to estimate the actual impact of degradations on a user and enable service provider to react accordingly to improve the perceived quality.
+For example a temporary reduction in network bandwidth could be compensated by a reduction of encoding bandwidth, frame rate, or resolution.
+Although the service performance is reduced, the perceived quality for a user is often better as long as the service is still useful.
+
+%Service choice
+In general a user can chose from a variety of service providers, which provide a similar service, and select the one provider that suits best.
+For a reasoned selection a user must know his needs, requirements, economical limits and estimate the perceived quality\footnote{This is actually denoted as \emph{assumed quality} (cf. \autoref{chap:02}).} a service provider might achieve.
+Based upon this knowledge he can estimate, if usage of a service is likely to be satisfying for him.
+After using and experiencing a service, the user can then decide, if this service fulfills his needs incl. perceived quality and if he might use it again, or rather select a different service provider the next time he needs this type of service \citep[cf.][]{geerts_linking_2010}.
+%Hygenic factor?
 
 \section{Research Questions}
-This work extends prior work by investigating the impact of varying service/system performance on the perceived quality, when the same system(s) are used repeatedly.
-This is, in fact, a common case for telecommunication service.
-For example a customer of a mobile  provider will use the provided service(s) usually repeatedly, because his telephone number is bound to the service provider and, although it can be transfered to a different provider, this process takes time and effort.
-Furthermore, a customer might be bound for a certain extend to a service provider contract duration.
+This work extends prior work by investigating the impact of varying service performance on the perceived quality, when the one or more service(s) are used repeatedly.
+This is, in fact, a common case for telecommunication service(s).
+For example a customer of a mobile  provider will use the provided service(s) usually repeatedly, because his telephone number is bound to the service provider.
 
-The performance of a service might be varying from usage instance to usage instance.
-From a user's perspective this might be sufficient, but if the performance some usage instances does meet the expectations / desired performance then a dissatisfaction might occur.
-This force the user to abandon the service provider and chose a different one.
+Especially for a telecommunication service the performance might be varying from usage instance to usage instance.
+Although some prior work has been done on varying performance during one usage episode, it is so far not known how perceived quality evolves over several distinct usage episodes.
+This, however, is expected one factor contributing to \emph{service quality} \citep[cf.][]{zeithaml_behavioral_1996}.
+The construct service quality maintains a holistic view from a business perspective of service usage and is important for economical decisions.
+In fact, perceived quality is an implicit part of service quality.
 
-%TODO: Performance cannot be determined beforehand! Trust; Service usage lifecycle? Customer Expectations and providers promise
+In this thesis I investigate perceived quality over several distinct and meaningful interactions with a service.
+Such an interaction is denoted as \emph{usage episodes} like a telephone call (cf. \autoref{chap:03}).
+The perceived quality over several usage episodes is denoted as \emph{multi-episodic perceived quality}.
+I focus on telecommunication services(s) as those are well-studied with regard to perceived quality, are widely used and degradations, irrespective of the actual reason, occur relative frequently.
 
-Before actually deciding to use a service, a potential user must have a need that can be fulfilled by using a service. %proposes to fulfill
-If multiple service provider that provide a similar service, a potential user must chose which service to use for fulfillment of his need.
-When satisfied with the outcome of using the service a user might interact with the service later on again, whereas a non-satisfying outcome will likely result in not using the same service again and rather use a different one.
-In fact, using the same service again, saves time and resource, because the service discovery, evaluation and selection is not conducted.
-
-Although contract duration might bind customers to a provider, low performance and thus a low perceived quality affects the future use behavior and increases the churn rate for the end of contract.
-In addition, satisfaction and also dissatisfaction of a customers can spread to other customers and potential customers and thus have severe impact on the business performance of a service provider.
-
-\section{Goals}
-In this work I focus on the development of perceived quality over several distinct interactions with a telecommunication service and how a retrospective assessment of the perceived quality of this service is affected by varying service performance.
-%TODO What is performance and what is perceived quality
-The actual impact on customer satisfaction and thus business performance of performance variation is not in the scope of this thesis.
-
-Two research questions are addressed in this thesis:
+I address two research questions in this thesis:
 \begin{itemize}
-\item How does perceptual quality evolve over multiple distinct interactions with the one system/service for one user?
-\item How does perceptual quality evolve over multiple distinct interactions with a multiple services offered by the same service provider for one user?
+\item How does multi-episodic perceptual quality evolve over several usage episodes with the one service for one user and which factors determine the multi-episodic perceived quality?
+\item How is multi-episodic perceptual quality affected, if different services are used, and how are those quality judgments integrated to form an overall judgment?
 \end{itemize}
-
-Here distinct interaction refers to one usage instance by a user with a service to fulfill a certain need of the user or solve a certain task.
-Such an instance is denoted as a \emph{usage episode}.
-Each usage episode has a perceived quality, which can be assessed momentary while in the usage episode and also in retrospective after the usage episode is finished.
-In this thesis I investigate how a multi-episodic perceived quality evolves over several distinct usage episode with the same service.
 
 \begin{figure}
 	\centering
@@ -99,13 +76,22 @@ In this thesis I investigate how a multi-episodic perceived quality evolves over
 	\label{img:chap01:multi-episodic}
 \end{figure}
 
-This thesis has two goals:
+%Memory
+Each usage episode has a perceived quality, which can be assessed momentary while in the usage episode and also in retrospective after the usage episode is finished.
+Multi-episodic perceived quality requires experiencing multiple usage episodes with a service, but unknown how this the integration of prior experiences occurs.
+It could be a continuous process that integrates current experiences immediately into a current view, a retrospective assessment evaluating all memorized and recallable information, or a mixture of both. %ist eine forwardref auf belief-adjustment model
+
+\section{Goals}
+In this thesis I pursue two goals towards understanding multi-episodic perceived quality.
+In fact, the development of multi-episodic perceived quality cannot be observed directly (cf. \autoref{chap:02}) and therefore multi-episodic perceived quality can only sampled resulting in a judgment of the multi-episodic perceived quality.
+
 \paragraph*{Goal 1}
-First, I will investigate what affects a retrospective multi-episodic quality judgment.
-The major focus here is to understand which usage episode are of special importance for a multi-episodic quality judgment and what temporal effects occur.
+I will investigate what affects a retrospective multi-episodic quality judgment.
+The major focus here is to understand which usage episode are of special importance for a multi-episodic quality judgment to identify underlying temporal effects.
 
 \paragraph*{Goal 2}
-Second, I will investigate how multi-episodic quality can be predicted based upon episodic quality judgments and investigate components for model.
+Second, I will investigate how multi-episodic quality can be predicted based upon episodic quality judgments.
+The modeling will be based upon effects and use those to derive suiting model components.
 
 \section{Structure}
 This thesis is divided into two parts.
@@ -113,12 +99,16 @@ In \emph{Part I} I will introduce concepts and fundamentals that form the basis 
 In Chapter~\ref{chap:02} an introduction on \ac{QoE} is given.
 This includes prior work on psychophysics, perception and the quality formation process.
 At the end of this chapter the relationship to higher level concepts like satisfaction and service quality is discussed.
-In Chapter~\ref{chap:03} I present relevant concepts that affect recall and thus retrospective judgments of an \emph{general experience}.
-Here, I will discuss how memory affects those retrospective judgments and those (temporal) effects are presented.
-Based upon Chapter~\ref{chap:02} and Chapter~\ref{chap:03} I will present the state-of-the-art on performance fluctuations on QoE in one usage episode in Chapter~\ref{chap:04}.
+In \autoref{chap:03} I present relevant concepts that affect recall and thus retrospective judgments of a \emph{general experience}.
+Here, I will discuss how memory affects those retrospective judgments and present known temporal effects from related fields.
+Based upon \autoref{chap:02} and \autoref{chap:03} I will present the state-of-the-art on performance fluctuations on QoE in one usage episode in \autoref{chap:04}.
 This chapter closes with a review on found temporal effects in this domain and what how those effects are modeled.
 
 In \emph{Part II} multi-episodic QoE is presented.
-First an overview on prior work on multi-episodic QoE is given in Chapter~\ref{chap:05}.
+First an overview on prior work on multi-episodic QoE is given in \autoref{chap:05}.
 Here the assessment methodology developed for multi-episodic QoE presented in \cite{moller_single-call_2011} is presented in detail.
-This task-driven assessment methodology is 																													
+This task-driven assessment method is the basis for my work and I will apply as well as extend this method further.
+In \autoref{chap:06} I present my work on multi-episodic perceived quality in time-frame of up to one hour.
+Those studies and the found results are then complemented in \autoref{chap:07} with studies on multi-episodic perceived quality over several days.
+In \autoref{chap:08} the prediction models for multi-episodic perceived quality are implemented presened.
+\autoref{chap:09} summarizes the thesis, discusses the results and highlights direction for future work.
