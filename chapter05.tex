@@ -1,36 +1,112 @@
-\chapter{State-of-the-art of Multi-episodic QoE (or Perception?)}\label{chap:05} %state-of-the-art? QoE might be too limiting as we also include usability
+\chapter{State-of-the-art of Multi-episodic Perceived Quality}\label{chap:05}
 \begin{chapter-abstract}
 %NOTE: This chapter might be too small, consider merging with previous chapter.
-
-Here I present the state-of-the-art on multi-episodic QoE (Moeller2011, Duncanson1969, Guse2013?.
-Here it is important to state again the research question (How do subjects integrate low episodic quality into an overall experience?) for this domain and introduce methodologies.
+Here I present the state-of-the-art on multi-episodic QoE\cite{moller_single-call_2011}, \cite{duncanson_average_1969}, \cite{guse_macro-temporal_2013}.
+It is important to state again the research question (How do subjects integrate low episodic quality into an overall experience?) for this domain and introduce methodologies.
 Major point here is the research method (task-driven, defined usage behavior, limited freedom in usage behavior).
-
-In the second part I give an overview from the usability perspective with regard to adaption of behavior over time (long-term / multi-episodic QoE).
 At the end of this chapter I must have made clear what methodologies are used and also made clear what their respective target is.
-
-%Hint here practical limitations (setup, for test subjects).
-%Duncanson actually did not multi-episodic QoE but rather \textit{expected average QoE}.
-%Moeller2011 developed and a applied a research methodology for multi-episodic QoE, but results were limited: low performance episode did not statistically affect multi-episodic QoE.
-%Duncanson: looked actually not into multi-episodic QoE, but rather what influences the expected average system performance?
-%Results: low performance is bad.
 \end{chapter-abstract}
 
 
-\section{Assessment Methods for Multi-episodic QoE}
-%TODO: Discuss here potential methods for multi-episodic QoE and highlight that either a really large amount of people is necessary OR "freedom" of test subjects needs to be limited.
+\section{Introduction}
+%Multi-episodic == Repeated use and repeated experience
+Services are in general used on a regular basis by a user.
+The experiences of a usage episode lead to a perceived quality in the user of this very episode. %NOTE Influence factors (human etc.)
+The multi-episodic perceived quality is the result of an \emph{integrating process} combining prior experiences and perceived qualities with said service.
+Prior experiences can affect the \emph{quality formation process} of a user and such a change affects the perceived quality of following usage episodes.
+%Also a re-evaluation of the perceived quality of prior episodes might occur.
+%Quality formation process: Reflection and Attribution, Comparison & Judgment, Encoding
+The user's behavior towards the service might also be affected by the perceived quality like usage frequency, task solving strategies, or even abandon the service completely.
+Multi-episodic perceived quality must be thus regarded as a sequential process in which the experienced order of usage episodes affect the outcome. %NOTE: Is sequential process correct?
+Investigations on multi-episodic perceived quality can therefore only be undertaken in experiments adhering to a between-subject design, so that every subject is only exposed to one condition.
 
-\section{Moeller 2011}
-Moeller (Skype): First conducted multi-episodic QoE study.
-Major Result: methodology can be applied, episodic quality judgments show that performance could be provided with the used system.
-Minor Results2: 
-\begin{itemize}
-\item increase of episodic QoE judgments over time? (significant)
-\item conditions did not yield significant different multi-episodic QoE, but at least consistent
-%TODO Critize study as the performance cannot be replicated, no recordings
+In the field of perceived quality multi-episodic perceived quality has so far only received limited attention.
+One reason for this is that research in the field of perceived quality is technology-driven.
+This means that the major focus lies on the evaluation of new technologies, understanding of potential impairments, and the impact on perceived quality.
+The derived knowledge is then applied to enhance existing technologies.
+For applicability it is often sufficient to know the relationship between different performance parameters and the general effect on perceived quality, and neglect the influence of time, tasks and other factors on perceived quality.
+
+\subsection{Excurse: Multi-episodic usage in \acl{UX}}
+Multi-episodic evaluation has been done so far for the evaluation of \acf{UX}.
+Perceived quality and \ac{UX} conceptually overlap as both focus on experience in general and, in many cases, experience with technology \citep[cf.][]{book chap 3}.
+\ac{UX}, steaming from usability, focuses on the interaction with technology and how interactions affect usage, behavior, and emotions towards used technology.\footnote{For a longer discussion on similarities and difference between \ac{QoE} and \ac{UX} see \cite{book chapter 3} and also \cite{Hasenzahl 2008: towards user experience}.}
+As interaction behavior towards technology often changes as a user learns how to use it and which tasks are well-suited, makes multi-episodic evaluation an important aspect for \ac{UX}.
+The multi-episodic terminology is described by \citet[p. 8]{roto_user_2011}, but missed to put it into context with prior work and do not present their definitions.
+
+\cite{karapanos_user_2009} investigated in an experiment with \unit[6]{subjects} how expectations and usage changes from before buying a smart phone and after an overall usage period of \unit[4]{weeks}. %RESULT?
+This is extended by \cite{kujala_ux_2011} with the newly presented \emph{UX Curve Method}.
+In this method a participant evaluates his experiences with a product or service in retrospective.
+The participant draws a line reflecting how is satisfaction changed over time and annotates the vertices with the reason for th change.
+In the reported experiment participated 20 subjects evaluating also changes in their satisfaction with their mobile phone.
+Both experiments showed that the usage and also emotions towards the product under investigation changes over time.
+In the beginning interaction is more playful and exploratory whereas it task-oriented and productive.
+
+
+%Daz Reconstruction Method, Experience Sampling Method
+%\cite{kujala_emotions_2013}
+
+%\subsection{Excurse: BWL} Optional
+
+
+\subsection{Duncanson: Average quality}
+First work in direction on multi-episodic perceived quality was performed by \cite{duncanson_average_1969} for telecommunication services.
+Duncanson asked regular users of an oversea speech telephone service about the their experience with said service.
+He investigated, if their is a difference between \emph{a)} the \emph{perceived quality of a just finished call} with average performance and \emph{b)} the \emph{assumed quality} of a call with average performance.
+For this experiment Duncanson used a 4-point \ac{MOS} scale\footnote{\cite{duncanson_average_1969} applied a 4-point \ac{MOS} scale with the labels excellent (4), good (3), fair (2), and poor (1).} and \emph{Thurstone's Law of Categorical Judment} and found in three experiments similar results.
+It could be shown that that case a) is rated better than case b).
+Duncansons concludes ``that ratings of single, recent telephone calls
+yield results different from ratings of subjectively averaged, past
+telephone calls of the same type'' \citep[][p. 116]{duncanson_average_1969}.
+
+Although Duncanson studied episodic perceived quality and assumed quality, his works indicates that integration process of multi-episodic perceived quality seems not just averaging.
+
+%NOT prediction!
+
+%IMPORTANCE?
+\section{Assessment of Multi-episodic Perceived Quality}
+%ASSUME: MOS = average quality perception; ASSUMPTION: average quality perception over time!
+This extends the underlying assumption of the \acf{MOS}.
+Here it is assumed that averaging the scores of a condition for a number of participants results in a score of an \emph{average perceiving person}\todo{REF}.
+Applying MOS 
+, which derives an absolute judgment 
+
+%NAME time-frames! (day, weeks)
+
+
+%Basic requirement: between-subject!
+
+\section{Aspects}
+% Prior knowledge / expectations / PERSONALITY
+% Task / usage behavior / task importance?
+% Usage pattern
+% %%%PERFORMANCE
+%%ASSUMPTION: All factors constant people: yields similar Multi-episodic perceived quality
+%Temporal effects are similar?
+
+\section{Option A: Free-use}
+%Collect large surveillance data... Duncanson
+%Indirect measurements (task, service performance) etc.
+
+\section{Option B: Controlled; Moeller} %Methodology of Moeller
+%Extends controlled lab study.
+%Episodic judgment are optional.
+%Constant performance!
+
+\subsection{Discussion}
+%Research question and assessment methodology (requirements, limitations, options and issues): time-frames
+%Technical requirements: must be able to provide desired performance reliably (ALWAYS!)
+%Practical requirements: test subject must able to follow 
+
+\section{Initial work on Multi-episodic Perceived Quality}
+%Moeller2011 developed and a applied a research methodology for multi-episodic QoE, but results were limited: low performance episode did not statistically affect multi-episodic QoE.
+
+%Works in general, but fails sometimes (negative peaks)
+\cite{moller_single-call_2011}: First conducted multi-episodic QoE study.
+%Major Result: methodology can be applied, episodic quality judgments show that performance could be provided with the used system.
+%Minor Results: 
+%increase of episodic QoE judgments over time? (significant)
+%\item conditions did not yield significant different multi-episodic QoE, but at least consistent
+
+%TODO Critize study as the performance cannot be replicated, no recordings, system description, performance monitoring
 %Limitation: no "training" and no supervised usage(?) 
 %NO imposter detection!, very expansive
-\end{itemize}
-\section{Guse 2013}
-%Guse2013 (following Moeller) found a relative slow adaptation of multi-episodic QoE.
-%The two data sets cannot be used alone for modeling multi-episodic QoE.
