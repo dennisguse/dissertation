@@ -32,6 +32,9 @@
   \begin{definitions}[#1]\hspace*{2mm}%
   
 }{\end{definitions}}
+%%%My personal environment stuff.
+\newenvironment{chapter-abstract}{\section*{Abstract}\hrulefill\par}{\par\hrulefill\vspace{0.0cm}}
+\newenvironment{chapter-summary}{\section*{Summary}\hrulefill\par}{\par\hrulefill\vspace{0.0cm}}
 
 \input{support/classicthesis-config}
 
@@ -47,9 +50,7 @@
 \pagenumbering{roman} % Roman page numbering prior to the start of the thesis content (i, ii, iii, etc)
 \pagestyle{plain} % Suppress headers for the pre-content pages
 
-%%%My personal environment stuff.
-\newenvironment{chapter-abstract}{\section*{Abstract}\hrulefill\par}{\par\hrulefill\vspace{1cm}}
-\newenvironment{chapter-summary}{\section*{Summary}\hrulefill\par}{\par\hrulefill\vspace{1cm}}
+
 
 %\newenvironment{chapter-structure}{\section*{Structure}\hrulefill\par\tiny}{\par\hrulefill\vspace{1cm}}
 
@@ -92,7 +93,7 @@
 \include{chapter09}
 
 \pagenumbering{Roman}\setcounter{page}{1}
-\part{Appendix}\cleardoublepage
+%\part{Appendix}\cleardoublepage
 \include{appendix}
 
 %----------------------------------------------------------------------------------------
