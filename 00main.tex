@@ -22,20 +22,6 @@
 \usepackage{todo}
 \usepackage[]{units}
 
-%Stuff for definitions using shadethm
-\newshadetheorem{definitions}{Definition}[chapter]
-\newenvironment{definition}[1][]{%
-  \definecolor{shadethmcolor}{rgb}{.9,.9,.95}%
-  \definecolor{shaderulecolor}{rgb}{0.0,0.0,0.4}%
-  \setlength{\shadedtextwidth}{\textwidth}
-%  \setlength{\shadeboxrule}{1.5pt}%
-  \begin{definitions}[#1]\hspace*{2mm}%
-  
-}{\end{definitions}}
-%%%My personal environment stuff.
-\newenvironment{chapter-abstract}{\section*{Abstract}\hrulefill\par}{\par\hrulefill\vspace{0.0cm}}
-\newenvironment{chapter-summary}{\section*{Summary}\hrulefill\par}{\par\hrulefill\vspace{0.0cm}}
-
 \input{support/classicthesis-config}
 
 \begin{document}
@@ -58,8 +44,25 @@
 %----------------------------------------------------------------------------------------
 %	PRE-CONTENT THESIS PAGES
 %----------------------------------------------------------------------------------------
+%Stuff for definitions using shadethm
+\newshadetheorem{definitions}{Definition}[chapter]
+\newenvironment{definition}[1][]{%
+  \definecolor{shadethmcolor}{rgb}{.9,.9,.95}%
+  \definecolor{shaderulecolor}{rgb}{0.0,0.0,0.4}%
+  \setlength{\shadedtextwidth}{\textwidth}
+%  \setlength{\shadeboxrule}{1.5pt}%
+  \begin{definitions}[#1]\hspace*{2mm}%
+  
+}{\end{definitions}}
 
-\renewcommand*{\cleardoublepage}{} %TODO Only for my stuff
+%%%My personal environment stuff.
+\newenvironment{chapter-abstract}{\section*{Abstract}\hrulefill\par}{\par\hrulefill\vspace{0.0cm}}
+\newenvironment{chapter-summary}{\section*{Summary}\hrulefill\par}{\par\hrulefill\vspace{0.0cm}}
+
+%Page number per chapter (starting with 0?)
+\numberwithin{page}{chapter}
+\renewcommand*{\cleardoublepage}{} %Remove empty pages
+
 
 %\include{support/FrontBackMatter/Titlepage} % Main title page
 %\include{support/FrontBackMatter/Titleback} % Back of the title page
