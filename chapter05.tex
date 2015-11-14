@@ -7,7 +7,7 @@ Major point here is the research method (task-driven, defined usage behavior, li
 At the end of this chapter I must have made clear what methodologies are used and also made clear what their respective target is.
 \end{chapter-abstract}
 
-
+%TODO Add sentence about multiple service / bundles! und das das sprachlich schwierig ist!
 \section{Introduction}
 %Multi-episodic == Repeated use and repeated experience
 Services are in general used on a regular basis by a user.
@@ -86,7 +86,7 @@ Both might change expectations, attribution of degradations, and \emph{assumed q
 %TODO Advertisement-Paper too good to be bad? (oder so)
 This is for example expressed in the \emph{E-Model} by the \emph{advantage factor \textbf{A}} \citep{itu-t_g.107:_2014}.
 
-\subsubsection*{Tasks and Task Solving Strategies}
+\subsubsection*{Task, Task Importance and Task Solving Strategies}
 The \emph{quality formation process} is also affected by the user's behavior.
 This includes human factors like attention, but also to be fulfilled needs and to be solved task.
 By repeated use the user's behavior might adjust, if certain degradations are encountered, so that task solving is effective and efficient.
@@ -105,27 +105,47 @@ A usage pattern can be regular with a defined frequency, and also irregular with
 The usage pattern, in fact, describes how often a user is exposed to the service's performance and thus acquire new information about the multi-episodic perceived quality.
 For the investigation of multi-episodic perceived quality, it is therefore required that usage pattern are similar.
 
-\subsection{Assessment method: Free use}
+\subsection{Assessment Methodology: Free-use}
 Multi-episodic perceived quality can be assessed by observing user's interaction with a service without restricting their usage behavior.
 This approach has for example been taken \cite{duncanson_average_1969}.
-Here user's are free to select when and how to use a service, to abandon it, and also acquire new information about it. %Ads
+Here user's are free to select when and how to use a service, to abandon it, and also acquire new information about it. %e.g. adverstisements
 Often information about per user usage pattern, service performance, tasks, goals, expectations, prior knowledge, and also personality cannot be acquired.
 This lack of information is often overcome by sampling a large amount of users to overcome.
 Another option to reduce the impact of this lack is to gather self-reported measures of users, or gather behavioral data (\eg, churn, likelihood to re-buy, monetization).
 
-Allowing user to decide themselves when and under which conditions a service is used, can be used to investigate usage under "real conditions"\footnote{"Real conditions" means that the object under study is observed while interacting his \emph{real} environment, which changes as well as the user. In fact, the term "real" does not describe precisely the actual condition, but is an imprecise umbrella term.}, \ie how he would behave in general in his environment.
+Allowing user to decide themselves when and under which conditions a service is used, enables to investigate usage under "real conditions"\footnote{"Real conditions" means that the object under study is observed while interacting with his \emph{real} environment, which changes as well as the user. In fact, the term "real" does not describe precisely the actual condition, but is an imprecise umbrella term.}, \ie, how a user would behave in his current environment.
 
-\subsection{Assessment method: Defined use} %Methodology of Moeller
-%Extends controlled lab study.
-%Episodic judgment are optional.
-%Constant performance!
+\subsection{Assessment Methodology: Defined-use}
+Limiting the users freedom by defining how to interact with a service, allows to apply a \ac{MOS} evaluation.
+For multi-episodic perceived quality this requires to define the usage pattern for the service, and for each usage episode the task and service performance.
+This enforces that all users are exposed in a similar manner to the service.
+A task can be artificial, \ie, a user must not necessarily engage in such a task on his own, and should lead to a similar task solving strategy.
+For telecommunication services this could be a telephone call with defined content \citep[cf.][]{itu-t_p.805:_2007}, or even listening to a recorded telephone call.
+
+To limit an influence of prior experiences and information about a service, it must made sure that users have a similar knowledge and exposure with the service.
+This can be achieved by a careful selection of users, or by creating a \emph{new service}.
+Creating a new service does not prevent that a user has prior knowledge about such a type of service, but avoids that prior experiences, especially with regard to perceived quality, affect the multi-episodic perceived quality.
 
 \subsection{Discussion}
-%Research question and assessment methodology (requirements, limitations, options and issues): time-frames
-%Technical requirements: must be able to provide desired performance reliably (ALWAYS!)
-%Practical requirements: test subject must able to follow 
+Both assessment methodologies are diametrically opposed. Free-use allows studying multi-episodic perceived quality with existing user by observing their interaction with said service and optionally gather direct feedback, but is limited This non-intrusive methodology is, however, in general limited by information that can be gathered about a user.
+In addition, service performance cannot be controlled and desired performance might occur not reliably enough.
+Modifying the service performance on purpose, however, introduces ethical issues, if users are not informed about this and the underlying reason.
+The latter, actually, influences the quality formation process by setting expectations and thus affect multi-episodic perceived quality judgments.
+
+Defined-use, on the other hand, requires a large effort as a new service must be created.
+The deployed service be able to provide \emph{defined service performance} precise and reliable.
+This means that such a service must be able to introduce degradations, when defined, and prevent degradations, when none are defined, from a end-to-end perspective and on a per user basis.
+This is challenging task for telecommunication services especially due to the necessary data transmission and non-desired transmission-related degradations that often cannot be controlled in a reliable manner.
+In addition to technological challenges to deploy such a service, a user needs to solve artificial tasks at specific point in time.
+This is not problematic if multi-episodic perceived quality is studied in one session, \eg several consecutive telephone calls.
+Investigating multi-episodic perceived quality over larger time-spans covering several days, weeks, or months, however, increases the required to effort for a user.
+This increases the need for compensation, which if served in monetary terms is costly.
+However, investigating multi-episodic perceived quality beyond one session alone enables to derive how usage episodes are recalled and perceived quality potentially forgotten.
+However, larger time-spans also increase the likelihood that a defined usage pattern cannot be fulfilled by a user as each user must embedded service usage into their daily life.
 
 \section{Initial work on Multi-episodic Perceived Quality}
+%Constant performance!
+
 %Moeller2011 developed and a applied a research methodology for multi-episodic QoE, but results were limited: low performance episode did not statistically affect multi-episodic QoE.
 
 %Works in general, but fails sometimes (negative peaks)
