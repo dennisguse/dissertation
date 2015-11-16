@@ -21,6 +21,7 @@
 \usepackage{bibentry}
 \usepackage{todo}
 \usepackage[]{units}
+\usepackage{lineno}
 
 \input{support/classicthesis-config}
 
@@ -62,7 +63,7 @@
 %Page number per chapter (starting with 0?)
 \numberwithin{page}{chapter}
 \renewcommand*{\cleardoublepage}{} %Remove empty pages
-
+%\linenumbers
 
 %\include{support/FrontBackMatter/Titlepage} % Main title page
 %\include{support/FrontBackMatter/Titleback} % Back of the title page
@@ -71,6 +72,7 @@
 %\cleardoublepage\include{support/FrontBackMatter/Abstract}
 %\cleardoublepage\include{support/FrontBackMatter/Publication} % Publications from the thesis page
 %TODO Add here a list with my own publications here; must descripe what I did for all work that has shared authorship.
+
 %\cleardoublepage\include{support/FrontBackMatter/Acknowledgments}
 \pagestyle{scrheadings} % Show chapter titles as headings
 \cleardoublepage\include{support/FrontBackMatter/Contents}
