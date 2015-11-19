@@ -1,4 +1,4 @@
-\chapter{Multi-episodic QoE in 1 hour}\label{chap:06}
+\chapter{Multi-episodic Perceived Quality in one Session}\label{chap:06}
 \begin{chapter-abstract}
 Here I describe my approach towards understanding multi-episodic QoE.
 First question: can multi-episodic QoE be studied in "short" laboratory study?
@@ -9,19 +9,110 @@ This chapter closes with the description of cross-service QoE (using results of 
 %Important point: argue that must degradations must be severe!
 \end{chapter-abstract}
 
+Initial work on multi-episodic perceived quality with \emph{defined use} focused on a usage period over several days (cf., \autoref{chap:05}). 
+This period has been expected to allow new users of a service to determine its future use \citep[cf.,][]{moller_single-call_2011}.
+However, it is so far unknown, if the length of usage period affects the formation process of multi-episodic perceived quality.
+Whereas \cite{moller_single-call_2011} focused on a usage period of multiple days, multi-episodic perceived quality also occurs in one session that is divided into several distinct usage episodes.
+This limits the duration of usage period to avoid influence factors like fatigue affect the formation process.
+Typical experiments on perceived quality do not exceed \unit[90]{min}\todo{REF} to avoid such influence, but if a longer duration are required such experiments are split into multiple sessions.
+Studying multi-episodic perceived quality in one session alone allows to conduct the experiment under controlled laboratory conditions similar to standardized experiments on perceived quality.
+This avoids potential sources of noise for example due to differences in the presentation environment over several participants.
+In fact, reducing the usage period to such a short time-frame compared to multiple days, allows to study a greater number on conditions in detail.
+Results on multi-episodic perceived quality in one session can then be used as a starting point to investigate multi-episodic perceived quality over several days.
+
 \section{One Service}
-Studied aspects using speech telephony
+%Follow Moeller: sequential use -> seperate usage episodes
+%Audio-only (avoid multi-modality)
+%Controlled environment, same system for all
 
-Describe study design in the beginning as it is similar for all sequential studies
+%Assume well working-system in the beginning for adaptation.
+%Present peformance modes AND non-failure!
 
-\begin{itemize}
-\item Position (Conversation and Listening): yes/no, found for conversation
-\item Length of degradation (Conversation and Listening): yes, similar: saturation
-\item Task (Conversation vs. Listening): their might be an effect due to mental capacity
-\item Strength of degradation (Conversation): yes, supports peak
-\item Length of degraded episode (Extension of Study 2): results not yet known %TODO
-\item Does episodic quality judgment impact multi-episodic QoE? %TODO
-\end{itemize}
+\subsection{Hypotheses}
+
+\subsubsection*{\emph{H1}: Number of Degraded Episodes}
+%Length of degradation (Conversation and Listening): yes, similar: saturation
+
+\subsubsection*{\emph{H2}: Position of one Degraded}
+%Position (Conversation and Listening): yes/no, found for conversation
+
+\subsubsection*{\emph{H3}: Recovery}
+%Telephony only
+
+\subsubsection*{\emph{H4}: Length of Degraded Episode}
+%Length of degraded episode (Extension of Study 2): none
+%Aod only
+
+\subsubsection*{\emph{H5}: Strength of one Degraded Episode}
+%Strength of degradation (Conversation): yes, supports peak
+
+\subsubsection*{\emph{H6}: Episodic Perceived Quality Judgment }
+%Does the episodic quality judgment impact multi-episodic QoE???? AOD to be prepared! %TODO
+
+\begin{table}
+ \centering
+ \begin{tabulary}{\textwidth}{C|C|C|C||C|C|C||C|C|C||C|C|C|C|C|C}
+ Condition & \multicolumn{9}{c|}{Episodic Performance}        & \multicolumn{6}{c}{Hypotheses} \\
+           & 1  & 2  & 3  & 4           & 5           & 6           & 7  & 8  & 9  & H1 & H2  & H3  & H4  & H5 & H6 \\
+ \midrule
+ 1         & HP & HP & HP & \textbf{LP} & HP          & HP          & -  & -  & -  & -  &  *  &  -  &  * \\
+ \hline
+ 2a        & HP & HP & HP & HP          & \textbf{LP} & HP          & -  & -  & -  &  * &  *  &  -  &  - \\
+ \hline
+ 2b        & HP & HP & HP & HP          & \textbf{long LP} & HP          & -  & -  & -  &  * &  *  &  -  &  - \\
+ \hline
+ 3         & HP & HP & HP & HP          & HP          & \textbf{LP} & -  & -  & -  &  $\star$ &  *  &  -  &  - \\
+ \hline
+ 4         & HP & HP & HP & \textbf{LP} & \textbf{LP} & HP          & -  & -  & -  &  * &  $\star$  &  -  &  * \\
+ \hline
+ 5a        & HP & HP & HP & HP          & \textbf{LP} & \textbf{LP} & -  & -  & -  &  $\star$ &  $\star$  &  -  &  - \\
+ \hline
+ 5b        & HP & HP & HP & HP          & \textbf{LP} & \textbf{LP} & HP & HP & HP &  $\star$ &  $\star$  &  *  &  - \\
+ \hline
+ 6         & HP & HP & HP & \textbf{LP} & \textbf{LP} & \textbf{LP} & -  & -  & -  &  $\star$ &  -  &  -  &  - \\
+ \hline
+ 7         & HP & HP & HP & HP          & \textbf{LP} & \emph{MP}   & HP & HP & HP & -  &  -  &  *  &  * \\
+ \end{tabulary}
+ \caption{Overview of all conditions with the episodic performance of all usages episodes and showing which conditions are compared for each of the three hypotheses.
+ Non-HP episodes are in bold (LP) and italic (MP).
+ Position of multi-episodic QoE judgments are marked by \emph{double vertical lines}.
+ All conditions are evaluated in Study~1.
+ In Study~2 all conditions except 5b and 7 are applied.}
+ \label{tab:chap06:hypothesesComparison}
+\end{table}
+
+\subsection{Experimental Design}
+%Feedback: scale + questions
+%System description Appendix?
+%Digitial feedback, paper allows to go back in time...
+%Task: Conversation vs. Listening (Note taking) vs. Listening (retrospective content)
+%Type of services
+%Shared characteristics HP vs. LP (Table!) with MOS_LQO!
+
+\begin{table}
+ \centering
+ \begin{tabulary}{\columnwidth}{C|C|C|C}
+   Performance & Signal bandwidth & Codec & $MOS_{LQO}$ \\
+   \midrule
+   HP & 50 to \unit[7000]{Hz}  & G.722, Mode 1 & 4.0 \\ %MOS1-5: 3.9
+   \hline
+   MP & 300 to \unit[3400]{Hz} & G.711         & 3.3 \\ %MOS1-5: 3.3
+   \hline
+   LP & 300 to \unit[3400]{Hz} & LPC-10        & 1.9 \\ %MOS1-5: 2.0
+   \end{tabulary}
+   \caption{Details of performance levels (\ac{HP}, \ac{MP} and \ac{LP}) with \ac{POLQA} prediction (Mode: Super-wideband). The prediction was transformed on the continuous 7-pt scale shown in \autoref{img:chap05:quality-scale} by applying the transformation described by  \cite{koster_comparison_2015}.}
+   \label{tab:performance}
+\end{table}
+
+\subsection{Experiments}
+
+
+\subsection{Results}
+
+\subsubsection*{Aspect: Task influence}
+%Task (Conversation vs. Listening): their might be an effect due to mental capacity
+%No Conversation related degradation...
+
 
 \section{Two Services}
 \subsection{Sequential use}
@@ -30,8 +121,6 @@ Describe study design in the beginning as it is similar for all sequential studi
 \item Second \textit{impaired} service: same effect
 \end{itemize}
 
-\subsection{Parallel use}
+\subsection{Excurse: Parallel use}
 Present here that using two services in parallel only has a slight impact on Web-QoE.
 First present degraded web-only and then web+TV.
-
-\subsection{Multi-episodic over multiple Systems} %TODO Cross-service as extra chapter?
