@@ -1,20 +1,25 @@
-\chapter{Discussion and Conclusion}\label{chap:09}
+\chapter{Prediction of multi-episodic QoE}\label{chap:modelling}
 \begin{chapter-abstract}
-In this chapter I will give an overview of my conducted research.
-I will start with the research question and my approach.
-Then I will outline the key facts of my work and very important lessons learned (how to conduct a field study).
-Here I will also criticize my work (especially study methodology and the included limitations).
-The outlook will include three distinct research directions for follow-up PhDs.
+Using data presented in previous studies and the found effects, I will present here my modeling approach.
+As a baseline I take the average over full history.
+The approach will be analytical and not numerical, i.e. I will model effects found (hopefully all significant) and not number crunching.
+This will also include modeling multi-service (for one provider) QoE.
 
-Highlight that reproducible research is very important, because multi-episodic QoE studies are very expensive AND an added value can only be achieved if enough data is available.
+Note: modeling using lab studies will be more fancy than field trials (latter has lesser conditions and more noise).
 \end{chapter-abstract}
 
-\section{Future Work}
-\begin{itemize}
-\item Task importance; service failure (task not solvable)
-\item Verify determining factors for episodic QoE? Can an episode be split (solve a task later due to failure?);
-\item Not triggering episodic evaluation?
-\item Multi-episodic QoE with one service, but different access paths? (like Skype on mobile vs. Skype on fixed access), 
 
-\item Analyze business impact: reference to Miguel's work.
+\section{Multi-episodic QoE with one service}
+\textit{Model parts} I take into account are:
+\begin{itemize}
+\item Recency: average over limited history + linear forgetting
+\item Negative Peak: weighted peak + full average
+\item Positive Peak? (Waiting for lab study results)
 \end{itemize}
+
+\section{Multi-episodic QoE with multiple services}
+Baseline: Multi-service QoE: (Service A+Service B) / 2
+
+HOWEVER: So far in no study found to be different.
+Question: Is there something as "service importance" or is this "service-type" (AoD, VoD etc.) specific?
+TODO: How could we trigger this in a study? and conduct a lab study about it?

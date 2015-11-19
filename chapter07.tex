@@ -1,49 +1,94 @@
-\chapter{Multi-episodic QoE over multiple days}\label{chap:07}
+\chapter{Multi-episodic Perceived Quality in one Session}\label{chap:lab}
 \begin{chapter-abstract}
-Here I present all studies that I conducted on multi-episodic QoE over several days.
-This will include studies with one service only, but also with two services (multi-service) part.
+First question: can multi-episodic QoE be studied in "short" laboratory study?
+I with my laboratory studies on with one speech telephony service focusing on effects of position(s) of degraded usage episodes (the finished Journal paper) and the already finished extensions.
 
-\textit{Key question:} do field trials (longer timespan) yield similar effects as found in lab trials (chap 6).
-What are the differences? (If there are any)
-What services are technically feasible to deploy (or socially manageable)?
-How to conduct a study over several days (lab vs. field)?
-
-The main study will be the currently \textit{successfully} running Audio-on-demand study with BYOD.
-This study is complemented by speech telephony (SIPGATE study) and QoMEX2014 study.
-This chapter will also include an overview of limitations and practical knowledge for \textit{successful} field trials.
+Then the parallel-use studies are presented (impact of a 2nd service used in parallel).
+This chapter closes with the description of cross-service QoE (using results of studies with two services) (However, results are limited).
 \end{chapter-abstract}
 
-\section{Studies}
+
+
+\section{One Service}
+%Follow Moeller: sequential use -> seperate usage episodes
+%Audio-only (avoid multi-modality)
+%Controlled environment, same system for all
+
+%Assume well working-system in the beginning for adaptation.
+%Present peformance modes AND non-failure!
+
+\begin{table}
+ \centering
+ \begin{tabulary}{\textwidth}{C|C|C|C||C|C|C||C|C|C||C|C|C|C|C|C}
+ Condition & \multicolumn{9}{c|}{Episodic Performance}        & \multicolumn{6}{c}{Hypotheses} \\
+           & 1  & 2  & 3  & 4           & 5           & 6           & 7  & 8  & 9  & H1 & H2  & H3  & H4  & H5 & H6 \\
+ \midrule
+ 1         & HP & HP & HP & \textbf{LP} & HP          & HP          & -  & -  & -  & -  &  *  &  -  &  * \\
+ \hline
+ 2a        & HP & HP & HP & HP          & \textbf{LP} & HP          & -  & -  & -  &  * &  *  &  -  &  - \\
+ \hline
+ 2b        & HP & HP & HP & HP          & \textbf{long LP} & HP     & -  & -  & -  &  * &  *  &  -  &  - \\
+ \hline
+ 3         & HP & HP & HP & HP          & HP          & \textbf{LP} & -  & -  & -  &  $\star$ &  *  &  -  &  - \\
+ \hline
+ 4         & HP & HP & HP & \textbf{LP} & \textbf{LP} & HP          & -  & -  & -  &  * &  $\star$  &  -  &  * \\
+ \hline
+ 5a        & HP & HP & HP & HP          & \textbf{LP} & \textbf{LP} & -  & -  & -  &  $\star$ &  $\star$  &  -  &  - \\
+ \hline
+ 5b        & HP & HP & HP & HP          & \textbf{LP} & \textbf{LP} & HP & HP & HP &  $\star$ &  $\star$  &  *  &  - \\
+ \hline
+ 6         & HP & HP & HP & \textbf{LP} & \textbf{LP} & \textbf{LP} & -  & -  & -  &  $\star$ &  -  &  -  &  - \\
+ \hline
+ 7         & HP & HP & HP & HP          & \textbf{LP} & \emph{MP}   & HP & HP & HP & -  &  -  &  *  &  * \\
+ \end{tabulary}
+ \caption{Overview of all conditions with the episodic performance of all usages episodes and showing which conditions are compared for each of the three hypotheses.
+ Non-HP episodes are in bold (LP) and italic (MP).
+ Position of multi-episodic QoE judgments are marked by \emph{double vertical lines}.
+ All conditions are evaluated in Study~1.
+ In Study~2 all conditions except 5b and 7 are applied.}
+ \label{tab:chap06:hypothesesComparison}
+\end{table}
+
+\subsection{Experimental Design}
+%Feedback: scale + questions
+%System description Appendix?
+%Digitial feedback, paper allows to go back in time...
+%Task: Conversation vs. Listening (Note taking) vs. Listening (retrospective content)
+%Type of services
+%Shared characteristics HP vs. LP (Table!) with MOS_LQO!
+
+\begin{table}
+ \centering
+ \begin{tabulary}{\columnwidth}{C|C|C|C}
+   Performance & Signal bandwidth & Codec & $MOS_{LQO}$ \\
+   \midrule
+   HP & 50 to \unit[7000]{Hz}  & G.722, Mode 1 & 4.0 \\ %MOS1-5: 3.9
+   \hline
+   MP & 300 to \unit[3400]{Hz} & G.711         & 3.3 \\ %MOS1-5: 3.3
+   \hline
+   LP & 300 to \unit[3400]{Hz} & LPC-10        & 1.9 \\ %MOS1-5: 2.0
+   \end{tabulary}
+   \caption{Details of performance levels (\ac{HP}, \ac{MP} and \ac{LP}) with \ac{POLQA} prediction (Mode: Super-wideband). The prediction was transformed on the continuous 7-pt scale shown in \autoref{img:chap05:quality-scale} by applying the transformation described by  \cite{koster_comparison_2015}.}
+   \label{tab:performance}
+\end{table}
+
+\subsection{Experiments}
+
+
+\subsection{Results}
+
+\subsubsection*{Aspect: Task influence}
+%Task (Conversation vs. Listening): their might be an effect due to mental capacity
+%No Conversation related degradation...
+
+
+\section{Two Services}
+\subsection{Sequential use}
 \begin{itemize}
-%\item Jitsi + Silverlight (DAGA); Actually I would like to use this in Chap 4.
-\item CSipSimple + Silverlight
-\item AoD + VoD (QoMEX)
-\item SIPGate Telephony
-\item Field AoD: to be evaluated
-\item (Sabrina, Gaming): over multiple days; is there an effect on multi-episodic? Do subjects get more (delay) sensitive?
-\cite{guse_macro-temporal_2013} %Pre-Stud
-\subsection{Guse 2013}
-%Guse2013 (following Moeller) found a relative slow adaptation of multi-episodic QoE.
-%The two data sets cannot be used alone for modeling multi-episodic QoE.
+\item Second \textit{unimpaired} service: reduced negative effect of LP episodes
+\item Second \textit{impaired} service: same effect
 \end{itemize}
 
-\section{Multi-episodic QoE with one service}
-
-%TODO are there cross-service effects?
-
-Finish this section with a comparison to laboratory studies?
-
-%\section{Excurse: on retaining information}
-%Can subjects recall
-
-\section{Cross-service QoE}
-%BLABLABLA
-
-\section{On practical aspects of Field Studies}
-\begin{itemize}
-\item Production Ready Systems
-\item Temporal Constraint
-\item "Real" environment (subject's own context)
-\item Cheater detection for consumption only
-\item Drop out rate
-\end{itemize}
+%\subsection{Excurse: Parallel use} %DO NOT INCLUDE!
+%Present here that using two services in parallel only has a slight impact on Web-QoE.
+%First present degraded web-only and then web+TV.

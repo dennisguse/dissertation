@@ -59,12 +59,22 @@
   
 }{\end{definitions}}
 
+\newshadetheorem{hypotheses}{Hypothesis}[chapter]
+\newenvironment{hypothesis}[1][]{%
+  \definecolor{shadethmcolor}{rgb}{.9,.9,.95}%
+  \definecolor{shaderulecolor}{rgb}{0.0,0.0,0.4}%
+  \setlength{\shadedtextwidth}{\textwidth}
+%  \setlength{\shadeboxrule}{1.5pt}%
+  \begin{definitions}[#1]\hspace*{2mm}%
+  
+}{\end{definitions}}
+
 %%%My personal environment stuff.
 \newenvironment{chapter-abstract}{\section*{Abstract}\hrulefill\par}{\par\hrulefill\vspace{0.0cm}}
 \newenvironment{chapter-summary}{\section*{Summary}\hrulefill\par}{\par\hrulefill\vspace{0.0cm}}
 
 %Page number per chapter (starting with 0?)
-\numberwithin{page}{chapter}
+%\numberwithin{page}{chapter}
 \renewcommand*{\cleardoublepage}{} %Remove empty pages
 %\linenumbers
 

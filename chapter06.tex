@@ -1,15 +1,124 @@
-\chapter{Multi-episodic Perceived Quality in one Session}\label{chap:06}
+\chapter{Towards Multi-episodic Perceived Quality}\label{chap:towards}
 \begin{chapter-abstract}
 Here I describe my approach towards understanding multi-episodic QoE.
-First question: can multi-episodic QoE be studied in "short" laboratory study?
-I with my laboratory studies on with one speech telephony service focusing on effects of position(s) of degraded usage episodes (the finished Journal paper) and the already finished extensions.
+Based upon \cite{moller_single-call_2011}, I approach multi-episodic perceived quality in two periods: one session and multiple days.
 
-Then the parallel-use studies are presented (impact of a 2nd service used in parallel).
-This chapter closes with the description of cross-service QoE (using results of studies with two services) (However, results are limited).
+What do I need for modeling?
+Where are limits?
+Only do limited assumptions! (we don't know anything)
+
+Find anomalies that are not reflected by "averaging"
+Hypotheses in detail
+
+Experiments share the same stuff:
 %Important point: argue that must degradations must be severe!
 \end{chapter-abstract}
 
-Initial work on multi-episodic perceived quality with \emph{defined use} focused on a usage period over several days (cf., \autoref{chap:05}). 
+First work on multi-episodic perceived quality with a defined-use methodology was conducted by \cite{moller_single-call_2011}.
+Although only limited results were obtained, the conducted experiment showed that this assessment methodology can be successfully applied.
+I follow the work of \cite{moller_single-call_2011} by investigating multi-episodic perceived quality with a defined-use methodology.
+The experiment of \cite{moller_single-call_2011} indicated that formation process of multi-episodic perceived quality is unlikely to be an averaging of the perceived quality of all prior usage episodes.
+Based upon this and prior work on temporal effects on retrospective judgment, I conducted a series of experiments to examine the formation process in detail to derive potential model components and create a prediction model based upon episodic perceived quality judgments.
+
+\section{Approach}
+\subsection{Prior Experiences}
+\cite{moller_single-call_2011} investigated multi-episodic perceived quality for the case, in which a service delivers highest performance in the beginning but latter reduced performance is sometimes only provided.
+This allows a person to experience the service under the best performance, and experience it.
+When reduced performance occurs this person can compare his prior experiences with said service.
+This avoids that the person compares reduced performance of a usage episode to prior experiences, which do not result of the experiences said service.
+\cite{moller_single-call_2011} applied for this four episodes (\ie, two days).
+In my experiments I followed this approach.
+
+\subsection{Judgments}
+The investigation of multi-episodic perceived quality will be based on the retrospective judgment, which is in the following denoted \emph{multi-episodic judgment}.
+For this judgment a person is requested to judge his \emph{perceived quality of all prior usage episodes with the service}.\todo{REF to Appendix!}
+It is assumed that the experiences of different conditions, if those are different enough, manifest in differences in multi-episodic judgments.
+
+In addition, episodic perceived quality judgments are collected, which are in the following denoted as \emph{episodic judgments}.
+This judgment is collected directly after finishing a usage episode.
+This ensures that the judgment reflects the perceived quality as precise as possible.
+The episodic judgment allows to determine, how the performance of a usage episode was perceived.
+
+The multi-episodic judgment is always taken after the episodic judgment.
+It is assumed that this order prevents an effect of the multi-episodic judgment on the episodic judgment.
+For both judgments the same scale is used.
+This enables a direct mapping from episodic judgments to a multi-episodic judgment without converting the scale and makes the judgments directly comparable.
+
+Following \cite{moller_single-call_2011} the 7-point \ac{ACR} scale is applied for all judgments about perceived quality (cf., \autoref{img:chap05:quality-scale}, \autopageref{img:chap05:quality-scale}).
+Using a continuous scale over the discrete 5-point \ac{ACR} scales allows for more fine-grained judgments between two categories.
+This enables to observe small differences between different conditions, but can be a source of noise, also in-subject, as more rating possibilities are provided.
+
+\subsection{Performance Levels}
+\cite{moller_single-call_2011} applied per condition two performance levels \acf{HP}, and \acf{LP}.
+\ac{HP} denotes the highest performance that should lead a higher episodic judgment than\ac{LP}, which denotes the lowest performance.
+For both performance levels \cite{moller_single-call_2011} limited the overall maximum transmission rate only.
+This performance limitation was selected as a near \emph{constant} quality per episode desired. %"stable quality judgment"
+This avoids effects due to in-episodic quality fluctuations on episodic judgments and multi-episodic judgments as those are not yet fully understood (cf., \autoref{chap:04}).
+
+The results of \cite{moller_single-call_2011} show that episodic judgments are in line with the defined performance levels as those show a clear difference between \ac{HP} and \ac{LP} episodic judgments.
+However, the impact on the multi-episodic judgments due to \ac{LP} usage episodes is very limited (cf. \autoref{chap:04}).
+This indicates that the selected performance level for \ac{LP} did produce degradations that were perceived, but were not severe enough to produce a clear, observable effect on multi-episodic judgments.
+Thus, \ac{LP} must be selected in such a way that degradations are \emph{severe} enough to produce an observable effect on multi-episodic perceived quality, but still provide sufficient performance to use the service to successfully solve defined tasks.
+
+Per condition two performance levels alone do not allow to investigate the existence of a peak effect (cf. \autoref{chap:state-of-the-art}).
+This effect states that the worst part of an experience, has a higher impact on a retrospective judgment.
+For this investigation at least a third performance level is required that provides a higher episodic quality than \ac{LP}, but lower than \ac{HP}.
+This performance level is in the following denoted as \acf{MP}.
+
+\section{Hypotheses}
+Based upon prior work on retrospective experiences (cf., \autoref{chap:03}) and quality assessment (cf., \autoref{chap:04}), I derived \unit[6]{hypotheses} to provide information about the formation process.
+In the following the \unit[6]{hypotheses} are presented.
+
+\subsection*{\emph{Hypothesis 1 (H1)}: Number of Consecutive \ac{LP} Episodes}
+\begin{hypothesis}[Hypothesis H1]
+Increasing the number of degraded episodes before a multi-episodic judgment decreases this judgment, because more \ac{LP} episodes and thus more time of \ac{LP} is experienced.
+\end{hypothesis}
+
+The presentation of \ac{LP} episode(s) is expected to result in a reduction in multi-episodic judgment compared to presenting the same usage episode(s) in \ac{HP}.
+Presenting all episodes in \ac{HP} the multi-episodic judgment should be sufficiently reflected by averaging all prior episodic judgments as found by \cite{moller_single-call_2011}.
+The more \ac{LP} episode(s) are presented, the higher is the expected reduction until the multi-episodic judgment reaches the same level as the episodic judgments of \ac{LP} usage episodes, which is considered a lower boundary.
+
+For this hypothesis to be valid, no effect of \emph{duration neglect} should be observed (\cf, \autoref{chap:03}).
+
+%Length of degradation (Conversation and Listening): yes, similar: saturation
+
+\subsection*{\emph{Hypothesis 2 (H2)}: Position of \ac{LP} Episode(s)}
+\begin{hypothesis}[Hypothesis H2]
+Increasing the number of \ac{HP} episode(s), which follow one or more \ac{LP} episodes, results a lower decrease of the multi-episodic judgment.
+\end{hypothesis}
+
+%Position (Conversation and Listening): yes/no, found for conversation
+
+\subsection*{\emph{Hypothesis 3 (H3)}: Recovery after \ac{LP} Episodes}
+\begin{hypothesis}[Hypothesis H3]
+Presenting additional \ac{HP} episodes after a negatively affected multi-episodic judgment judgment, increases the following multi-episodic judgment.
+\end{hypothesis}
+
+%Telephony only
+
+\subsection*{\emph{Hypothesis 4 (H4)}: Duration of \ac{LP} Episode}
+\begin{hypothesis}[Hypothesis H5]
+Usage episodes with a longer duration have a higher impact on multi-episodic perceived quality than shorter usage episode, because more time the experience the is longer.
+\end{hypothesis}
+%Length of degraded episode (Extension of Study 2): none
+%Aod only
+
+\subsection*{\emph{Hypothesis 5 (H5)}: Strength of one \ac{LP} Episode}
+\begin{hypothesis}[Hypothesis H5]
+The \emph{lowest} experienced episodic performance has a higher impact on multi-episodic judgment than smaller degradations.
+\end{hypothesis}
+%Strength of degradation (Conversation): yes, supports peak
+
+\subsection*{\emph{Hypothesis 6 (H6)}: Different Services are Independent}
+\begin{hypothesis}[Hypothesis H5]
+The multi-episodic judgment is not affect, if multiple services are used.
+\end{hypothesis}
+
+%\subsection*{\emph{H7}: Episodic Judgment} %optional!
+%Does the episodic quality judgment impact multi-episodic QoE???? AOD to be prepared! %TODO
+
+\section{Usage periods}
+Initial work on multi-episodic perceived quality with \emph{defined use} focused on a usage period over several days (cf., \autoref{chap:state-of-the-art}). 
 This period has been expected to allow new users of a service to determine its future use \citep[cf.,][]{moller_single-call_2011}.
 However, it is so far unknown, if the length of usage period affects the formation process of multi-episodic perceived quality.
 Whereas \cite{moller_single-call_2011} focused on a usage period of multiple days, multi-episodic perceived quality also occurs in one session that is divided into several distinct usage episodes.
@@ -20,107 +129,12 @@ This avoids potential sources of noise for example due to differences in the pre
 In fact, reducing the usage period to such a short time-frame compared to multiple days, allows to study a greater number on conditions in detail.
 Results on multi-episodic perceived quality in one session can then be used as a starting point to investigate multi-episodic perceived quality over several days.
 
-\section{One Service}
-%Follow Moeller: sequential use -> seperate usage episodes
-%Audio-only (avoid multi-modality)
-%Controlled environment, same system for all
+\section{Service Types}
 
-%Assume well working-system in the beginning for adaptation.
-%Present peformance modes AND non-failure!
+\subsection{Tasks}
 
-\subsection{Hypotheses}
+\subsection{Service-specific Performance Levels}
 
-\subsubsection*{\emph{H1}: Number of Degraded Episodes}
-%Length of degradation (Conversation and Listening): yes, similar: saturation
+\section{Overview on Conducted Experiments}
 
-\subsubsection*{\emph{H2}: Position of one Degraded}
-%Position (Conversation and Listening): yes/no, found for conversation
-
-\subsubsection*{\emph{H3}: Recovery}
-%Telephony only
-
-\subsubsection*{\emph{H4}: Length of Degraded Episode}
-%Length of degraded episode (Extension of Study 2): none
-%Aod only
-
-\subsubsection*{\emph{H5}: Strength of one Degraded Episode}
-%Strength of degradation (Conversation): yes, supports peak
-
-\subsubsection*{\emph{H6}: Episodic Perceived Quality Judgment }
-%Does the episodic quality judgment impact multi-episodic QoE???? AOD to be prepared! %TODO
-
-\begin{table}
- \centering
- \begin{tabulary}{\textwidth}{C|C|C|C||C|C|C||C|C|C||C|C|C|C|C|C}
- Condition & \multicolumn{9}{c|}{Episodic Performance}        & \multicolumn{6}{c}{Hypotheses} \\
-           & 1  & 2  & 3  & 4           & 5           & 6           & 7  & 8  & 9  & H1 & H2  & H3  & H4  & H5 & H6 \\
- \midrule
- 1         & HP & HP & HP & \textbf{LP} & HP          & HP          & -  & -  & -  & -  &  *  &  -  &  * \\
- \hline
- 2a        & HP & HP & HP & HP          & \textbf{LP} & HP          & -  & -  & -  &  * &  *  &  -  &  - \\
- \hline
- 2b        & HP & HP & HP & HP          & \textbf{long LP} & HP          & -  & -  & -  &  * &  *  &  -  &  - \\
- \hline
- 3         & HP & HP & HP & HP          & HP          & \textbf{LP} & -  & -  & -  &  $\star$ &  *  &  -  &  - \\
- \hline
- 4         & HP & HP & HP & \textbf{LP} & \textbf{LP} & HP          & -  & -  & -  &  * &  $\star$  &  -  &  * \\
- \hline
- 5a        & HP & HP & HP & HP          & \textbf{LP} & \textbf{LP} & -  & -  & -  &  $\star$ &  $\star$  &  -  &  - \\
- \hline
- 5b        & HP & HP & HP & HP          & \textbf{LP} & \textbf{LP} & HP & HP & HP &  $\star$ &  $\star$  &  *  &  - \\
- \hline
- 6         & HP & HP & HP & \textbf{LP} & \textbf{LP} & \textbf{LP} & -  & -  & -  &  $\star$ &  -  &  -  &  - \\
- \hline
- 7         & HP & HP & HP & HP          & \textbf{LP} & \emph{MP}   & HP & HP & HP & -  &  -  &  *  &  * \\
- \end{tabulary}
- \caption{Overview of all conditions with the episodic performance of all usages episodes and showing which conditions are compared for each of the three hypotheses.
- Non-HP episodes are in bold (LP) and italic (MP).
- Position of multi-episodic QoE judgments are marked by \emph{double vertical lines}.
- All conditions are evaluated in Study~1.
- In Study~2 all conditions except 5b and 7 are applied.}
- \label{tab:chap06:hypothesesComparison}
-\end{table}
-
-\subsection{Experimental Design}
-%Feedback: scale + questions
-%System description Appendix?
-%Digitial feedback, paper allows to go back in time...
-%Task: Conversation vs. Listening (Note taking) vs. Listening (retrospective content)
-%Type of services
-%Shared characteristics HP vs. LP (Table!) with MOS_LQO!
-
-\begin{table}
- \centering
- \begin{tabulary}{\columnwidth}{C|C|C|C}
-   Performance & Signal bandwidth & Codec & $MOS_{LQO}$ \\
-   \midrule
-   HP & 50 to \unit[7000]{Hz}  & G.722, Mode 1 & 4.0 \\ %MOS1-5: 3.9
-   \hline
-   MP & 300 to \unit[3400]{Hz} & G.711         & 3.3 \\ %MOS1-5: 3.3
-   \hline
-   LP & 300 to \unit[3400]{Hz} & LPC-10        & 1.9 \\ %MOS1-5: 2.0
-   \end{tabulary}
-   \caption{Details of performance levels (\ac{HP}, \ac{MP} and \ac{LP}) with \ac{POLQA} prediction (Mode: Super-wideband). The prediction was transformed on the continuous 7-pt scale shown in \autoref{img:chap05:quality-scale} by applying the transformation described by  \cite{koster_comparison_2015}.}
-   \label{tab:performance}
-\end{table}
-
-\subsection{Experiments}
-
-
-\subsection{Results}
-
-\subsubsection*{Aspect: Task influence}
-%Task (Conversation vs. Listening): their might be an effect due to mental capacity
-%No Conversation related degradation...
-
-
-\section{Two Services}
-\subsection{Sequential use}
-\begin{itemize}
-\item Second \textit{unimpaired} service: reduced negative effect of LP episodes
-\item Second \textit{impaired} service: same effect
-\end{itemize}
-
-\subsection{Excurse: Parallel use}
-Present here that using two services in parallel only has a slight impact on Web-QoE.
-First present degraded web-only and then web+TV.
+%\section{Scales}

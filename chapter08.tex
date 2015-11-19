@@ -1,25 +1,49 @@
-\chapter{Prediction of multi-episodic QoE}\label{chap:08}
+\chapter{Multi-episodic QoE over multiple days}\label{chap:field}
 \begin{chapter-abstract}
-Using data presented in previous studies and the found effects, I will present here my modeling approach.
-As a baseline I take the average over full history.
-The approach will be analytical and not numerical, i.e. I will model effects found (hopefully all significant) and not number crunching.
-This will also include modeling multi-service (for one provider) QoE.
+Here I present all studies that I conducted on multi-episodic QoE over several days.
+This will include studies with one service only, but also with two services (multi-service) part.
 
-Note: modeling using lab studies will be more fancy than field trials (latter has lesser conditions and more noise).
+\textit{Key question:} do field trials (longer timespan) yield similar effects as found in lab trials (chap 6).
+What are the differences? (If there are any)
+What services are technically feasible to deploy (or socially manageable)?
+How to conduct a study over several days (lab vs. field)?
+
+The main study will be the currently \textit{successfully} running Audio-on-demand study with BYOD.
+This study is complemented by speech telephony (SIPGATE study) and QoMEX2014 study.
+This chapter will also include an overview of limitations and practical knowledge for \textit{successful} field trials.
 \end{chapter-abstract}
 
-
-\section{Multi-episodic QoE with one service}
-\textit{Model parts} I take into account are:
+\section{Studies}
 \begin{itemize}
-\item Recency: average over limited history + linear forgetting
-\item Negative Peak: weighted peak + full average
-\item Positive Peak? (Waiting for lab study results)
+%\item Jitsi + Silverlight (DAGA); Actually I would like to use this in Chap 4.
+\item CSipSimple + Silverlight
+\item AoD + VoD (QoMEX)
+\item SIPGate Telephony
+\item Field AoD: to be evaluated
+\item (Sabrina, Gaming): over multiple days; is there an effect on multi-episodic? Do subjects get more (delay) sensitive?
+\cite{guse_macro-temporal_2013} %Pre-Stud
+\subsection{Guse 2013}
+%Guse2013 (following Moeller) found a relative slow adaptation of multi-episodic QoE.
+%The two data sets cannot be used alone for modeling multi-episodic QoE.
 \end{itemize}
 
-\section{Multi-episodic QoE with multiple services}
-Baseline: Multi-service QoE: (Service A+Service B) / 2
+\section{Multi-episodic QoE with one service}
 
-HOWEVER: So far in no study found to be different.
-Question: Is there something as "service importance" or is this "service-type" (AoD, VoD etc.) specific?
-TODO: How could we trigger this in a study? and conduct a lab study about it?
+%TODO are there cross-service effects?
+
+Finish this section with a comparison to laboratory studies?
+
+%\section{Excurse: on retaining information}
+%Can subjects recall
+
+\section{Cross-service QoE}
+%BLABLABLA
+
+\section{On practical aspects of Field Studies}
+\begin{itemize}
+\item Production Ready Systems
+\item Temporal Constraint
+\item "Real" environment (subject's own context)
+\item Cheater detection for consumption only
+\item Drop out rate
+\end{itemize}
