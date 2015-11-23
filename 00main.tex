@@ -20,17 +20,11 @@
 \usepackage{comment}
 \usepackage{bibentry}
 \usepackage{todo}
+\usepackage[]{units}
+\usepackage{lineno}
 
-%Stuff for definitions using shadethm
-\newshadetheorem{definitions}{Definition}[chapter]
-\newenvironment{definition}[1][]{%
-  \definecolor{shadethmcolor}{rgb}{.9,.9,.95}%
-  \definecolor{shaderulecolor}{rgb}{0.0,0.0,0.4}%
-  \setlength{\shadedtextwidth}{\textwidth}
-%  \setlength{\shadeboxrule}{1.5pt}%
-  \begin{definitions}[#1]\hspace*{2mm}%
-  
-}{\end{definitions}}
+\usepackage{tabulary}
+\usepackage{tabularx}
 
 \input{support/classicthesis-config}
 
@@ -46,9 +40,7 @@
 \pagenumbering{roman} % Roman page numbering prior to the start of the thesis content (i, ii, iii, etc)
 \pagestyle{plain} % Suppress headers for the pre-content pages
 
-%%%My personal environment stuff.
-\newenvironment{chapter-abstract}{\section*{Abstract}\hrulefill\par}{\par\hrulefill\vspace{1cm}}
-\newenvironment{chapter-summary}{\section*{Summary}\hrulefill\par}{\par\hrulefill\vspace{1cm}}
+
 
 %\newenvironment{chapter-structure}{\section*{Structure}\hrulefill\par\tiny}{\par\hrulefill\vspace{1cm}}
 
@@ -56,16 +48,34 @@
 %----------------------------------------------------------------------------------------
 %	PRE-CONTENT THESIS PAGES
 %----------------------------------------------------------------------------------------
+%Stuff for definitions using shadethm
+\newshadetheorem{definitions}{Definition}[chapter]
+\newenvironment{definition}[1][]{%
+  \definecolor{shadethmcolor}{rgb}{.9,.9,.95}%
+  \definecolor{shaderulecolor}{rgb}{0.0,0.0,0.4}%
+  \setlength{\shadedtextwidth}{\textwidth}
+%  \setlength{\shadeboxrule}{1.5pt}%
+  \begin{definitions}[#1]\hspace*{2mm}%
+  
+}{\end{definitions}}
 
-\renewcommand*{\cleardoublepage}{} %TODO Only for my stuff
+%%%My personal environment stuff.
+\newenvironment{chapter-abstract}{\section*{Abstract}\hrulefill\par}{\par\hrulefill\vspace{0.0cm}}
+\newenvironment{chapter-summary}{\section*{Summary}\hrulefill\par}{\par\hrulefill\vspace{0.0cm}}
 
-\include{support/FrontBackMatter/Titlepage} % Main title page
+%Page number per chapter (starting with 0?)
+\numberwithin{page}{chapter}
+\renewcommand*{\cleardoublepage}{} %Remove empty pages
+%\linenumbers
+
+%\include{support/FrontBackMatter/Titlepage} % Main title page
 %\include{support/FrontBackMatter/Titleback} % Back of the title page
 %\cleardoublepage\include{support/FrontBackMatter/Dedication} % Dedication page
 %\cleardoublepage\include{support/FrontBackMatter/Foreword} % Uncomment and create a Foreword.tex to include a foreword
 %\cleardoublepage\include{support/FrontBackMatter/Abstract}
-\cleardoublepage\include{support/FrontBackMatter/Publication} % Publications from the thesis page
+%\cleardoublepage\include{support/FrontBackMatter/Publication} % Publications from the thesis page
 %TODO Add here a list with my own publications here; must descripe what I did for all work that has shared authorship.
+
 %\cleardoublepage\include{support/FrontBackMatter/Acknowledgments}
 \pagestyle{scrheadings} % Show chapter titles as headings
 \cleardoublepage\include{support/FrontBackMatter/Contents}
@@ -76,14 +86,14 @@
 %	THESIS CONTENT - CHAPTERS
 %----------------------------------------------------------------------------------------
 \pagenumbering{arabic}\setcounter{page}{1}
-\part{Introduction and State of the Art}\cleardoublepage
+%\part{Introduction and State of the Art}\cleardoublepage
 
 \include{chapter01}
 \include{chapter02}
 \include{chapter03}
 \include{chapter04}
 
-\part{Towards Multi-episodic QoE}\cleardoublepage
+%\part{Towards Multi-episodic QoE}\cleardoublepage
 \include{chapter05}
 \include{chapter06}
 \include{chapter07}
@@ -91,7 +101,7 @@
 \include{chapter09}
 
 \pagenumbering{Roman}\setcounter{page}{1}
-\part{Appendix}\cleardoublepage
+%\part{Appendix}\cleardoublepage
 \include{appendix}
 
 %----------------------------------------------------------------------------------------
