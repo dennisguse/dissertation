@@ -45,7 +45,7 @@ It is assumed that this order prevents an effect of the multi-episodic judgment 
 For both judgments the same scale is used.
 This enables a direct mapping from episodic judgments to a multi-episodic judgment without converting the scale and makes the judgments directly comparable.
 
-Following \cite{moller_single-call_2011} the 7-point \ac{ACR} scale is applied for all judgments about perceived quality (\cf, \autoref{img:chap05:quality-scale}, \autopageref{img:chap05:quality-scale}).
+Following \cite{moller_single-call_2011} the 7-point \ac{CCR} scale is applied for all judgments about perceived quality (\cf, \autoref{img:chap05:quality-scale}, \autopageref{img:chap05:quality-scale}).
 Using a continuous scale over the discrete 5-point \ac{ACR} scales allows for more fine-grained judgments between two categories.
 This enables to observe small differences between different conditions, but can be a source of noise, also in-subject, as more rating possibilities are provided.
 
@@ -66,7 +66,8 @@ This effect states that the worst part of an experience, has a higher impact on 
 For this investigation at least a third performance level is required that provides a higher episodic quality than \ac{LP}, but lower than \ac{HP}.
 This performance level is in the following denoted as \acf{MP}.
 
-\section{Usage Periods}
+\subsection{Usage Periods}
+%TODO Make two aspects CLEAR: SESSION and multiple days!
 Initial work on multi-episodic perceived quality with \emph{defined use} focused on a usage period over several days (\cf, \autoref{chap:state-of-the-art}). 
 This period has been expected to allow new users of a service to determine its future use \citep[\cf,][]{moller_single-call_2011}.
 However, it is so far unknown, if the length of usage period affects the formation process of multi-episodic perceived quality.
@@ -78,6 +79,93 @@ Studying multi-episodic perceived quality in one session alone allows to conduct
 This avoids potential sources of noise for example due to differences in the presentation environment over several participants.
 In fact, reducing the usage period to such a short time-frame compared to multiple days, allows to study a greater number on conditions in detail.
 Results on multi-episodic perceived quality in one session can then be used as a starting point to investigate multi-episodic perceived quality over several days.
+
+\subsubsection{Service Types}
+With regard to multi-episodic perceived quality for telecommunication services, those service types are of higher interest that are widely and also frequently used in daily life.
+In the following the different services types are presented, which are in the experiments applied to investigate multi-episodic perceived quality in detail.
+Different service types must be considered, because it is not known, if the formation process of multi-episodic perceived quality is affected by the service type, the service type specific interaction, and the to be solved task.
+
+For multi-episodic perceived quality tasks should be selected in such way that those are meaningful enough to result in an episodic experience.
+%TODO USAGE EPISODE!!!!
+%TODO usage episode length (my desired length)?
+%TODO similar usage behavior: non-interactive services
+
+\subsubsection*{Telephony}
+Speech telephony services provide the live communication of between two or more remote parties for spoken interaction.
+This is a well established and, in fact, classical service for telecommunication providers.
+In fact, the quality perception and underlying influence factors for speech telephony are well understood and standardized evaluation methods have been developed for evaluation of perceived quality.
+
+\*{Two-party Conversation}
+Speech telephony is most often used for the communication between two remote parties, who engage in an conversation.
+A conversation is in itself interactive as in general roles of speaker and listener are changing while caller and callee speak with each to exchange information.
+The interaction behavior of caller and callee, in fact, can affect the perceived quality for both parties.
+
+For the evaluation of perceived quality standardized methods have been developed to achieve a comparable interaction behavior in a conversation and thus limited the impact of noise due to differences in behavior.
+
+The \acf{SCT} have been especially developed to simulate typical conversational tasks that caller and callee need to solve together \cite[\cf,][p. 76]{moller_assessment_2000}.
+Here caller and callee need to exchange a defined set of information while a conversation structure is suggested.
+The \ac{SCT} mimic a common situation in which the caller has a demand with specific requirements, which he tries to fulfill by initiating the telephone conversation and informing the callee about his needs.
+Based upon this information the callee selects the appropriate option or information and presents this to the caller.
+If the presented option or information fulfills the requirements of the caller and is confirmed by him, a second information transfer is initiated in which the callee provides the caller information, so that he can finally fulfill the requirement using the selected option.
+The standardized \acs{SCT} \citep{itu-t_p.805:_2007} should result in a conversation duration of \unit[3]{min} to \unit[7]{min}.
+
+While conversations and the resulting perceived quality is affected by varying user behavior, it allows to study the whole range of degradations for speech telephony and also determine how those degradations \emph{affect} the usage behavior.
+Furthermore, an active conversation allows to investigate the impact of degradations in a setting, in which a speech telephony service is actually used.
+
+Beside the advantages the evaluation of perceived quality in an active conversation requires a large effort, because \emph{a)} a service with desired performance levels must be available, \emph{b)} requires multiple participants at the same time and \emph{c)} the users behavior is an additional factor of noise in quality judgments.
+%Social impact?
+
+\subsubsection*{Third-party Listening}
+Perceived quality of speech telephony can be assessed in a passive situation to a certain degree.
+A subject listens to a conversation and thus not an actual part of the conversation.
+This procedure is denoted as third-party listening \citep[\cf, ][p. 13]{itu-t_p.832:_2000}.
+As the subject is not part of the conversation, his behavior cannot affect the conversation.
+This is, in fact, an uncommon situation as it cannot occur in a two-party situation, but is not a uncommon situation in multi-party conferencing \todo{REF JANTO, Kathrin oder so?}.
+
+Elimination the influence of a subjects behavior on a conversation allows to use recordings of conversations and thus present exactly the same material to multiple subjects.
+If the degradations under considerations do not affect the behavior of the people participating in a conversation, the degradations can be inserted after recording the conversation.
+If recordings are used alone no system is necessary that can provide required service performance live.
+
+As a subject only experiences a listening-only situation alone, the impact of degradations on the speaking phase cannot be assessed.
+Another limitation is that the usage situation is different.
+A passive observer is not forced to follow a conversation, if it is known to him beforehand that content of the conversation is not relevant for him.
+This can be avoided by applying a task that requires that subjects follow the content of a conversation.
+
+If conversations are based upon \acs{SCT}, a note taking task can be applied.
+Here the task is to write down information exchanged between caller and callee, and vice versa.
+As standardized \acs{SCT} \citep{itu-t_p.805:_2007} contain similar content, this task can be structured by asking content-specific questions like \emph{"What is the name of the caller/callee?"}, or \emph{"What does the callee want?"}.
+In a \ac{SCT} induced conversation those question are implicitly answered by caller and callee.
+
+For the assessment of multi-episodic perceived quality, third-party listening has some advantages over two-party conversation although the usage situation is artificial.
+Most important the task can be solved by one subject alone and thus eliminating the need of a conversation partner.
+Furthermore, the same conversation with preprocessed degradations can be presented to multiple subjects in exactly the same manner.
+In this case also the length of a usage episode is known beforehand allowing to investigate the impact episode duration on multi-episodic judgment.
+
+\subsubsection{Entertainment Media Consumption: Audio and Audiovisual Services}
+Telecommunication services for media consumption provide a unidirectional transmission of (multi-)media content to a user on his request.
+This can be unimodal content like audio, or speech, as well as multi-modal content like audiovisual content.
+
+A typical usage scenario is the provision of media content for entertainment purpose.
+Services that provide content on-demand are denoted \ac{AoD} for audio-only and \ac{VoD} for audiovisual content.
+Here a user can select from available content the currently desired piece, which is transmitted to him in the best case almost immediately.
+A common use case for media-on-demand services is the consumption of a series content-related parts like a TV series.
+
+While the media selection procedure is often interactive as a user can select the desired content, the actual media consumption only provides limited to no interactivity.
+Former, a service might allow to pause, or seek whereas latter the only option for the user is to abort consumption at all.
+In fact, a service that does not allow media selection but rather provides media in a defined order, this service can be considered non-interactive.
+
+In fact, a third-party listening could be considered as a special case of media consumption, \ie, consumption of recorded, degraded two-party speech conversation.
+However, third-party listening focuses on the simulation of multi-party conferencing in which the observer takes a passive part of the conversation whereas media consumption focus on the media consumption alone.
+In difference to telephony, media consumption focuses on the consumption of pre-produced content.
+This allows to use high-end recording equipment, adequate post-processing, and efficient but time consuming compression.
+This, in general, limits the sources of degradations to the transmission as well as reproduction.
+Recently, media-on-demand services have been widely deployed that adapt to the current network conditions to avoid stalling at a reduced service performance, \eg, limit transmission bandwidth, so the service is still provided.
+For a usage episode this can either happen while content is consumed resulting in performance fluctuations, or beforehand trying to achieve a constant service performance.
+
+Media-on-demand services are well-suited for investigation multi-episodic perceived quality, because those can be setup in a non-interactive way and thus avoid impact of user behavior especially on duration of usage episodes.
+Furthermore, media-on-demand services are nowadays widely used in mobile as well as in stationary usage situations. 
+
+%\subsection{Web-browsing}
 
 \section{Hypotheses}
 Based upon prior work on retrospective experiences (\cf, \autoref{chap:03}) and quality assessment (\cf, \autoref{chap:04}), I derived \unit[6]{hypotheses} to provide information about the formation process.
@@ -168,130 +256,4 @@ It is therefore important to know, if how the use of other services affect this 
 %Does the episodic quality judgment impact multi-episodic QoE???? AOD to be prepared! %TODO
 %\end{hypothesis}
 
-\section{Conditions}
-The presented conditions can be assessed in 
-%Measurement after 6th usage episode OR DAY
-
-\begin{table}[h]
- \centering
- \begin{tabulary}{\textwidth}{C|C||C|C|C|C|C|C|}
- Condition & \multicolumn{7}{c|}{Episodic Performance}        \\
-           & 1-3	& 4           & 5           & 6           & 7  & 8  & 9 \\
- \midrule
- 1         & HP 	& \textbf{LP} & HP          & HP          & -  & -  & - \\
- \hline
- 2a        & HP 	& HP          & \textbf{LP} & HP          & -  & -  & - \\
- \hline
- 2b        & HP 	& HP          & \textbf{LP}, long & HP     & -  & -  & - \\
- \hline
- 3         & HP 	& HP          & HP          & \textbf{LP} & -  & -  & - \\
- \hline
- 4         & HP 	& \textbf{LP} & \textbf{LP} & HP          & -  & -  & - \\
- \hline
- 5a        & HP 	& HP          & \textbf{LP} & \textbf{LP} & -  & -  & - \\
- \hline
- 5b        & HP 	& HP          & \textbf{LP} & \textbf{LP} & HP & HP & HP \\
- \hline
- 6         & HP 	& \textbf{LP} & \textbf{LP} & \textbf{LP} & -  & -  & - \\
- \hline
- 7         & HP 	& HP          & \textbf{LP} & \emph{MP}   & HP & HP & HP \\
- \end{tabulary}
- \caption{Overview of all conditions with the episodic performance of all usages episodes and showing which conditions are compared for each of the three hypotheses.
- Non-HP episodes are in bold (\ac{LP}) and italic (\ac{MP}).}
- \label{tab:chap06:hypothesesComparison}
-\end{table}
-
-
-
-\section{Service Types}
-With regard to multi-episodic perceived quality for telecommunication services, those service types are of higher interest that are widely and also frequently used in daily life.
-In the following the different services types are presented, which are in the experiments applied to investigate multi-episodic perceived quality in detail.
-Different service types must be considered, because it is not known, if the formation process of multi-episodic perceived quality is affected by the service type, the service type specific interaction, and the to be solved task.
-
-For multi-episodic perceived quality tasks should be selected in such way that those are meaningful enough to result in an episodic experience.
-%TODO USAGE EPISODE!!!!
-
-\subsection{Telephony}
-Speech telephony services provide the live communication of between two or more remote parties for spoken interaction.
-This is a well established and, in fact, classical service for telecommunication providers.
-In fact, the quality perception and underlying influence factors for speech telephony are well understood and standardized evaluation methods have been developed for evaluation of perceived quality.
-
-\subsubsection{Two-party Conversation}
-Speech telephony is most often used for the communication between two remote parties, who engage in an conversation.
-A conversation is in itself interactive as in general roles of speaker and listener are changing while caller and callee speak with each to exchange information.
-The interaction behavior of caller and callee, in fact, can affect the perceived quality for both parties.
-
-For the evaluation of perceived quality standardized methods have been developed to achieve a comparable interaction behavior in a conversation and thus limited the impact of noise due to differences in behavior.
-
-The \acf{SCT} have been especially developed to simulate typical conversational tasks that caller and callee need to solve together \cite[\cf,][p. 76]{moller_assessment_2000}.
-Here caller and callee need to exchange a defined set of information while a conversation structure is suggested.
-The \ac{SCT} mimic a common situation in which the caller has a demand with specific requirements, which he tries to fulfill by initiating the telephone conversation and informing the callee about his needs.
-Based upon this information the callee selects the appropriate option or information and presents this to the caller.
-If the presented option or information fulfills the requirements of the caller and is confirmed by him, a second information transfer is initiated in which the callee provides the caller information, so that he can finally fulfill the requirement using the selected option.
-The standardized \acs{SCT} \citep{itu-t_p.805:_2007} should result in a conversation duration of \unit[3]{min} to \unit[7]{min}.
-
-While conversations and the resulting perceived quality is affected by varying user behavior, it allows to study the whole range of degradations for speech telephony and also determine how those degradations \emph{affect} the usage behavior.
-Furthermore, an active conversation allows to investigate the impact of degradations in a setting, in which a speech telephony service is actually used.
-
-Beside the advantages the evaluation of perceived quality in an active conversation requires a large effort, because \emph{a)} a service with desired performance levels must be available, \emph{b)} requires multiple participants at the same time and \emph{c)} the users behavior is an additional factor of noise in quality judgments.
-%Social impact?
-
-\subsubsection{Third-party Listening}
-Perceived quality of speech telephony can be assessed in a passive situation to a certain degree.
-A subject listens to a conversation and thus not an actual part of the conversation.
-This procedure is denoted as third-party listening \citep[\cf, ][p. 13]{itu-t_p.832:_2000}.
-As the subject is not part of the conversation, his behavior cannot affect the conversation.
-This is, in fact, an uncommon situation as it cannot occur in a two-party situation, but is not an uncommon situation in multi-party conferencing \todo{REF JANTO, Kathrin oder so?}.
-
-Elimination the influence of a subjects behavior on a conversation allows to use recordings of conversations and thus present exactly the same material to multiple subjects.
-If the degradations under considerations do not affect the behavior of the people participating in a conversation, the degradations can be inserted after recording the conversation.
-If recordings are used alone no system is necessary that can provide required service performance live.
-
-As a subject only experiences a listening-only situation alone, the impact of degradations on the speaking phase cannot be assessed.
-Another limitation is that the usage situation is different.
-A passive observer is not forced to follow a conversation, if it is known to him beforehand that content of the conversation is not relevant for him.
-This can be avoided by applying a task that requires that subjects follow the content of a conversation.
-
-If conversations are based upon \acs{SCT}, a note taking task can be applied.
-Here the task is to write down information exchanged between caller and callee, and vice versa.
-As standardized \acs{SCT} \citep{itu-t_p.805:_2007} contain similar content, this task can be structured by asking content-specific questions like \emph{"What is the name of the caller/callee?"}, or \emph{"What does the callee want?"}.
-In a \ac{SCT} induced conversation those question are implicitly answered by caller and callee.
-
-For the assessment of multi-episodic perceived quality, third-party listening has some advantages over two-party conversation although the usage situation is artificial.
-Most important the task can be solved by one subject alone and thus eliminating the need of a conversation partner.
-Furthermore, the same conversation with preprocessed degradations can be presented to multiple subjects in exactly the same manner.
-In this case also the length of a usage episode is known beforehand allowing to investigate the impact episode duration on multi-episodic judgment.
-
-\subsection{Media Consumption: Audio and Audiovisual}
-
-
-%passive
-
-%passive
-%\subsection{Web-browsing}
-%interactive
-
-
-\chapter{Conducted Experiments}
-\section{Performance Levels}
-
-%Describe each used service and usage situation (mobile vs. PC vs. [optional] living room)
-%Describe tasks per service and requirements
-
-\section{Overview on Studies}
-%Put table with studies here!?
-
-\begin{table}[h]
-	\begin{tabular}{|c|c|c|c|c|}
-	Identifier	& Service type 			& Task 									& Usage Period	& Hypotheses \\
-	\hline
-	S1L			& Telephony				& Two-party Conversation with \ac{SCT}	& One session	& H1, H2, H3, H5 \\
-	S1F			& Telephony				& Two-party Conversation with \ac{SCT}	& One week		& H1 \\
-	S2			& Telephony				& Third-party Listening					& One session	& H1, H2 \\ 
-	S3L			& Audio Entertainment	& -										& One session	& H1, H2, H\\
-	S3F			& Audio Entertainment	& -										& One week		& \\
-	S4			& Audio Entertainment and Video Entertainment & - 				& One session	& H6 \\
-	
-	
-	\end{tabular}
-\end{table}
+%TODO \section{Conclusion}
