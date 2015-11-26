@@ -1,106 +1,87 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Classicthesis Typographic Thesis
-% LaTeX Template
-% Version 1.3 (15/2/14)
+% **************************************************************************************************************
+% A Classic Thesis Style
+% An Homage to The Elements of Typographic Style
 %
-% André Miede (http://www.miede.de)
+% Copyright (C) 2015 André Miede http://www.miede.de
 %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\documentclass[
-%		twoside,
-		dottedtoc,
-		openright,titlepage,numbers=noenddot,headinclude,%1headlines,
-                footinclude=true,cleardoublepage=empty,
-                BCOR=5mm,paper=a4,fontsize=11pt, % Binding correction, paper type and font size
-                ngerman,american, % Languages
-                ]{scrreprt} 
-\usepackage[utf8]{inputenc}
-\usepackage{shadethm}
-\usepackage[normalem]{ulem}
-\usepackage[authoryear,round,colon]{natbib}
-\usepackage{comment}
-\usepackage{bibentry}
-\usepackage{todo}
-\usepackage[]{units}
-\usepackage{lineno}
+% If you like the style then I would appreciate a postcard. My address 
+% can be found in the file ClassicThesis.pdf. A collection of the 
+% postcards I received so far is available online at 
+% http://postcards.miede.de
+%
+% License:
+% This program is free software; you can redistribute it and/or modify
+% it under the terms of the GNU General Public License as published by
+% the Free Software Foundation; either version 2 of the License, or
+% (at your option) any later version.
+%
+% This program is distributed in the hope that it will be useful,
+% but WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+% GNU General Public License for more details.
+%
+% You should have received a copy of the GNU General Public License
+% along with this program; see the file COPYING.  If not, write to
+% the Free Software Foundation, Inc., 59 Temple Place - Suite 330,
+% Boston, MA 02111-1307, USA.
+%
+% **************************************************************************************************************
+\RequirePackage{fix-cm} % fix some latex issues see: http://texdoc.net/texmf-dist/doc/latex/base/fixltx2e.pdf
+\documentclass[ %twoside,
+                dottedtoc,
+                openright,titlepage,numbers=noenddot,headinclude,%1headlines,% letterpaper a4paper
+                footinclude=true,cleardoublepage=empty,abstractoff, % <--- obsolete, remove (todo)
+                BCOR=5mm,paper=a4,fontsize=11pt,%11pt,a4paper,%
+                ngerman,american,%
+                ]{scrreprt}
 
-\usepackage{tabulary}
-\usepackage{tabularx}
-
+%********************************************************************
+% Note: Make all your adjustments in here
+%*******************************************************
 \input{support/classicthesis-config}
 
+%********************************************************************
+% Bibliographies
+%*******************************************************
+\addbibresource{Bibliography.bib}
+\addbibresource[label=ownpubs]{Publications.bib}
+
+%********************************************************************
+% Hyphenation
+%*******************************************************
+%\hyphenation{put special hyphenation here}
+
+% ********************************************************************
+% GO!GO!GO! MOVE IT!
+%*******************************************************
 \begin{document}
-
-\frenchspacing % Reduces space after periods to make text more compact
-\raggedbottom % Makes all pages the height of the text on that page
-\selectlanguage{american} % Select your default language - e.g. american or ngerman
-
-%\renewcommand*{\bibname}{new name} % Uncomment to change the name of the bibliography
-%\setbibpreamble{} % Uncomment to include a preamble to the bibliography - some text before the reference list starts
-
-\pagenumbering{roman} % Roman page numbering prior to the start of the thesis content (i, ii, iii, etc)
-\pagestyle{plain} % Suppress headers for the pre-content pages
-
-
-
-%\newenvironment{chapter-structure}{\section*{Structure}\hrulefill\par\tiny}{\par\hrulefill\vspace{1cm}}
-
-
-%----------------------------------------------------------------------------------------
-%	PRE-CONTENT THESIS PAGES
-%----------------------------------------------------------------------------------------
-%Stuff for definitions using shadethm
-\newshadetheorem{definitions}{Definition}[chapter]
-\newenvironment{definition}[1][]{%
-  \definecolor{shadethmcolor}{rgb}{.9,.9,.95}%
-  \definecolor{shaderulecolor}{rgb}{0.0,0.0,0.4}%
-  \setlength{\shadedtextwidth}{\textwidth}
-%  \setlength{\shadeboxrule}{1.5pt}%
-  \begin{definitions}[#1]\hspace*{2mm}%
-  
-}{\end{definitions}}
-\newcommand{\definitionautoref}{Definition}
-
-\newshadetheorem{hypotheses}{Hypothesis}[]
-\newenvironment{hypothesis}[1][]{%
-  \definecolor{shadethmcolor}{rgb}{.9,.9,.95}%
-  \definecolor{shaderulecolor}{rgb}{0.0,0.0,0.4}%
-  \setlength{\shadedtextwidth}{\textwidth}
-%  \setlength{\shadeboxrule}{1.5pt}%
-  \begin{hypotheses}[#1]\hspace*{2mm}%
-  
-}{\end{hypotheses}}
-\newcommand{\hypothesisautoref}{Hypothesis}
-
-%%%My personal environment stuff.
-\newenvironment{chapter-abstract}{\section*{Abstract}\hrulefill\par}{\par\hrulefill\vspace{0.0cm}}
-\newenvironment{chapter-summary}{\section*{Summary}\hrulefill\par}{\par\hrulefill\vspace{0.0cm}}
-
-%Page number per chapter (starting with 0?)
-%\numberwithin{page}{chapter}
-\renewcommand*{\cleardoublepage}{} %Remove empty pages
-%\linenumbers
-
-%\include{support/FrontBackMatter/Titlepage} % Main title page
-%\include{support/FrontBackMatter/Titleback} % Back of the title page
-%\cleardoublepage\include{support/FrontBackMatter/Dedication} % Dedication page
-%\cleardoublepage\include{support/FrontBackMatter/Foreword} % Uncomment and create a Foreword.tex to include a foreword
-%\cleardoublepage\include{support/FrontBackMatter/Abstract}
-%\cleardoublepage\include{support/FrontBackMatter/Publication} % Publications from the thesis page
-%TODO Add here a list with my own publications here; must descripe what I did for all work that has shared authorship.
-
-%\cleardoublepage\include{support/FrontBackMatter/Acknowledgments}
-\pagestyle{scrheadings} % Show chapter titles as headings
-\cleardoublepage\include{support/FrontBackMatter/Contents}
-
-\cleardoublepage
-
-%----------------------------------------------------------------------------------------
-%	THESIS CONTENT - CHAPTERS
-%----------------------------------------------------------------------------------------
+\frenchspacing
+\raggedbottom
+\selectlanguage{american} % american ngerman
+%\renewcommand*{\bibname}{new name}
+%\setbibpreamble{}
+\pagenumbering{roman}
+\pagestyle{plain}
+%********************************************************************
+% Frontmatter
+%*******************************************************
+%\include{support/FrontBackmatter/DirtyTitlepage}
+\include{support/FrontBackmatter/Titlepage}
+\include{support/FrontBackmatter/Titleback}
+\cleardoublepage\include{support/FrontBackmatter/Dedication}
+%\cleardoublepage\include{FrontBackmatter/Foreword}
+\cleardoublepage\include{support/FrontBackmatter/Abstract}
+\cleardoublepage/FrontBackmatter/Publications}
+\cleardoublepage\include{support/FrontBackmatter/Acknowledgments}
+\pagestyle{scrheadings}
+\cleardoublepage\include{support/FrontBackmatter/Contents}
+%********************************************************************
+% Mainmatter
+%*******************************************************
 \pagenumbering{arabic}\setcounter{page}{1}
 %\part{Introduction and State of the Art}\cleardoublepage
 
+\include{support/shade}
 \include{chapter01}
 \include{chapter02}
 \include{chapter03}
@@ -115,13 +96,14 @@
 
 \pagenumbering{Roman}\setcounter{page}{1}
 %\part{Appendix}\cleardoublepage
-\include{appendix}
-
-%----------------------------------------------------------------------------------------
-%	POST-CONTENT THESIS PAGES
-%----------------------------------------------------------------------------------------
-\cleardoublepage\include{support/FrontBackMatter/Bibliography} % Bibliography
-%\cleardoublepage\include{FrontBackMatter/Colophon} % Colophon
-%\cleardoublepage\include{FrontBackMatter/Declaration} % Declaration
-
+\include{appendix}%********************************************************************
+% Other Stuff in the Back
+%*******************************************************
+\cleardoublepage\include{support/FrontBackmatter/Bibliography}
+%\cleardoublepage\include{FrontBackmatter/Declaration}
+%\cleardoublepage\include{FrontBackmatter/Colophon}
+% ********************************************************************
+% Game Over: Restore, Restart, or Quit?
+%*******************************************************
 \end{document}
+% ********************************************************************

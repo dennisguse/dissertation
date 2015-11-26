@@ -1,0 +1,25 @@
+%Stuff for definitions using shadethm
+\newshadetheorem{definitions}{Definition}[chapter]
+\newenvironment{definition}[1][]{%
+  \definecolor{shadethmcolor}{rgb}{.9,.9,.95}%
+  \definecolor{shaderulecolor}{rgb}{0.0,0.0,0.4}%
+  \setlength{\shadedtextwidth}{\textwidth}
+%  \setlength{\shadeboxrule}{1.5pt}%
+  \begin{definitions}[#1]\hspace*{2mm}%
+  
+}{\end{definitions}}
+\newcommand{\definitionautoref}{Definition}
+
+\newshadetheorem{hypotheses}{Hypothesis}[]
+\newenvironment{hypothesis}[1][]{%
+  \definecolor{shadethmcolor}{rgb}{.9,.9,.95}%
+  \definecolor{shaderulecolor}{rgb}{0.0,0.0,0.4}%
+  \setlength{\shadedtextwidth}{\textwidth}
+%  \setlength{\shadeboxrule}{1.5pt}%
+  \begin{hypotheses}[#1]\hspace*{2mm}%
+  
+}{\end{hypotheses}}
+\newcommand{\hypothesisautoref}{Hypothesis}
+
+\newenvironment{chapter-abstract}{\section*{Abstract}\hrulefill\par}{\par\hrulefill\vspace{0.0cm}}
+\newenvironment{chapter-summary}{\section*{Summary}\hrulefill\par}{\par\hrulefill\vspace{0.0cm}}
