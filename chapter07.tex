@@ -106,17 +106,72 @@ If a peak-effect occurs in the formation process of multi-episodic perceived qua
 H6 it is hypothesized that multi-episodic perceived quality is judged on a per-service basis, \ie, usage of different, distinct service types in the same usage period does not affect each others multi-episodic judgment.
 Following the experimental approach of sequential usage episodes this can be investigated by presenting a second service in the same usage period, where both services are used sequentially.
 This is investigated for two overall conditions presenting the first service always in condition 4, \ie the 5th and 6th usage episodes is presented in \ac{LP}.
-The second service is presented in two conditions to investigate, if the condition of the second service affect the judgment of the first service.
+The 2nd service is presented in two conditions to investigate, if the condition of the 2nd service affect the judgment of the first service.
 The second service is presented in condition 8, \ie, all episodes in \ac{HP}, as well as condition 4.
-
-
-\subsection{Applied Performance Level}
-In all four experiments similar degradations were 
-
-The presented conditions can be assessed in 
 
 %Describe each used service and usage situation (mobile vs. PC vs. [optional] living room)
 %Describe tasks per service and requirements
+
+\subsection{Performance Levels}
+In each of the four experiments a speech-only service was used.
+By using similar manifestations for the performance levels, the multi-episodic judgments for the same conditions between different experiments can be compared and thus draw conclusion about potential impact of the usage situation as well as service type on the results.
+
+Three performance levels (\ac{HP}, \ac{MP}, and \ac{LP}) must be selected in a way that episodic judgments decrease, and that \ac{LP} is very likely to produce a measurable effect on multi-episodic judgments.
+Thus, the \ac{LP} should be not only noticeable but rather present a \emph{severe} reduction in performance. 
+However, it must ensured that solving a task is not prevented, if \ac{MP} or \ac{LP} are applied.
+All performance level should lead to \emph{constant} impairments rather than fluctuations in one episode over time.
+This can be achieved for digital transmission systems in the encoding and compression stage, \eg, codec selection and configuration.
+
+\ac{HP} can be properly chosen by selecting a current state-of-the-art performance level, which is actively in use.
+For speech telephony this is at the time of this writing the transmission in wideband with proper loudness, but without loss, noise, echo, reverberation or other negative factors.
+In case, of an active conversation the one-way delay should be lower than \unit[100]{ms}~\citep[\cf,][p. 9]{itu-t_g.107:_2005}, so that perceived quality is not negatively affected.
+For digital transmission of wideband speech the codec \emph{G.722} with Mode 1 (\unit[64]{kbit/s}) is in general used reference condition as it achieves very similar quality judgments like pure wideband filtered speech signals. %TODO Miese Begruendung ;)
+
+
+
+\begin{table}
+ \centering
+ \begin{tabulary}{\columnwidth}{C|C|C|C}
+   Performance & Signal bandwidth & Codec & $MOS_{LQO}$ \\
+   \midrule
+   \ac{HP} & 50...\unit[7000]{Hz}  & G.722, Mode 1 & 4.0 \\ %MOS1-5: 3.9
+   \hline
+   \ac{MP} & 300...\unit[3400]{Hz} & G.711         & 3.3 \\ %MOS1-5: 3.3
+   \hline
+   \ac{LP} & 300...\unit[3400]{Hz} & LPC-10        & 1.9 \\ %MOS1-5: 2.0
+   \end{tabulary}
+   \caption{Details of performance levels (HP, MP and LP) with POLQA prediction (Mode: Super-wideband). The prediction was transformed on the continuous 7-pt scale shown in Figure ~\ref{img:qualityScale} by applying the transformation described in \cite{koster_comparison_2015}.}
+   \label{tab:performance}
+\end{table}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \subsection{Procedure} % Design
 
