@@ -120,12 +120,24 @@ Three performance levels (\ac{HP}, \ac{MP}, and \ac{LP}) must be selected in a w
 Thus, the \ac{LP} should be not only noticeable but rather present a \emph{severe} reduction in performance. 
 However, it must ensured that solving a task is not prevented, if \ac{MP} or \ac{LP} are applied.
 All performance level should lead to \emph{constant} impairments rather than fluctuations in one episode over time.
-This can be achieved for digital transmission systems in the encoding and compression stage, \eg, codec selection and configuration.
+This can be achieved for digital transmission systems in the encoding and compression stage, \eg, selection and configuration of the codec.
+Introducing degradations by coding and compression alone enables to apply those performance levels to listening-only as well as a conversational usage situation.
 
-\ac{HP} can be properly chosen by selecting a current state-of-the-art performance level, which is actively in use.
+%TODO! BE CAREFUL with MOS here!
+\ac{HP} can be properly chosen by selecting a current configuration that provides state-of-the-art performance level.
 For speech telephony this is at the time of this writing the transmission in wideband with proper loudness, but without loss, noise, echo, reverberation or other negative factors.
-In case, of an active conversation the one-way delay should be lower than \unit[100]{ms}~\citep[\cf,][p. 9]{itu-t_g.107:_2005}, so that perceived quality is not negatively affected.
-For digital transmission of wideband speech the codec \emph{G.722} with Mode 1 (\unit[64]{kbit/s}) is in general used reference condition as it achieves very similar quality judgments like pure wideband filtered speech signals. %TODO Miese Begruendung ;)
+For digital transmission of wideband speech the codec \emph{G.722} with Mode 1 (\unit[64]{kbit/s}) is often used reference condition as it achieves very similar quality judgments like pure wideband filtered speech signals. %TODO Add refs, Moeller, Raake, Marcel
+%Furthermore, this codec is although it is rather old, but still in active use.
+In subjective experiments G.722 with Mode 1 typically achieves a \ac{MOSLQ} around 4.5 on 5-point \ac{ACR} scale.
+
+For \ac{LP} the speech signal is compressed with the \emph{LPC-10} codec is selected. %TODO REF
+This codec is designed for low bitrate radio transmission focusing on intelligibility rather than naturalness.
+The re-synthesized speech sounds very unnatural and is often described as robotic, and muddy with a hissing background noise.
+LPC-10 achieves a 5-point \ac{MOSLQ} of 2.3~\cite{gibson book}.
+In fact, LPC-10 is not designed for speech telephony especially due to the focus on a low bitrate and the resulting degradations of the speech signal.
+However, available speech telephony codecs provide a rather \ac{MOS} scores.
+Even the worst codec, \ie, \ac{MELP}, only results in a 5-point \ac{MOS} of 3.0. 
+Therefore, LPC-10 is well suited for the evaluation of multi-episodic perceived quality although it is a codec that is not used for speech telephony, but provides an intelligble re-synthesized speech signal with severe and thus expected memorable reduction in quality.
 
 
 
@@ -140,10 +152,13 @@ For digital transmission of wideband speech the codec \emph{G.722} with Mode 1 (
    \hline
    \ac{LP} & 300...\unit[3400]{Hz} & LPC-10        & 1.9 \\ %MOS1-5: 2.0
    \end{tabulary}
-   \caption{Details of performance levels (HP, MP and LP) with POLQA prediction (Mode: Super-wideband). The prediction was transformed on the continuous 7-pt scale shown in Figure ~\ref{img:qualityScale} by applying the transformation described in \cite{koster_comparison_2015}.}
+   \caption{Details of performance levels (HP, MP and LP) with POLQA prediction (Mode: Super-wideband).
+   The prediction was transformed on the continuous 7-pt scale shown in  \autoref{img:chap05:quality-scale} by applying the transformation described in \cite{koster_comparison_2015}.}
    \label{tab:performance}
 \end{table}
 
+For a two-party conversation the end-to-end delay is an additional factor influencing perceived quality.
+Providing a proper one-way delay up to \unit[100]{ms} is rarely noticeable and is not perceived as degradation~\citep[\cf,][p. 9]{itu-t_g.107:_2005}.
 
 
 
