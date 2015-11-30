@@ -70,12 +70,12 @@ Differences between conditions can be evaluated by comparing multi-episodic judg
  \hline
  6         & HP 	& \textbf{LP} & \textbf{LP} & \textbf{LP} & - \\
  \hline
- 7         & HP 	& HP          & \textbf{LP} & \emph{MP}   & HP \\
+ 7         & HP 	& HP          & \textbf{LP} & \textit{MP}   & HP \\
  \hline
  8         & HP 	& HP          & HP          & HP          & HP \\
  \end{tabulary}
  \caption{Overview of all conditions with the episodic performance of all usages episodes.
- Non-HP episodes are in bold (\ac{LP}) and italic (\ac{MP}).}
+ Non-HP episodes are in \textbf{bold} (\ac{LP}) and \textit{italic} (\ac{MP}).}
  \label{tab:lab:hypothesesComparison}
 \end{table}
 
@@ -126,22 +126,30 @@ Introducing degradations by coding and compression alone enables to apply those 
 %TODO! BE CAREFUL with MOS here!
 \ac{HP} can be properly chosen by selecting a current configuration that provides state-of-the-art performance level.
 For speech telephony this is at the time of this writing the transmission in wideband with proper loudness, but without loss, noise, echo, reverberation or other negative factors.
-For digital transmission of wideband speech the codec \emph{G.722} with Mode 1 (\unit[64]{kbit/s}) is often used reference condition as it achieves very similar quality judgments like pure wideband filtered speech signals. %TODO Add refs, Moeller, Raake, Marcel
+For digital transmission of wideband speech the codec \emph{G.722} with Mode 1 (\unit[64]{kbit/s})~\cite{itu-t_g.722} is often used reference condition as it achieves very similar quality judgments like pure wideband filtered speech signals. %TODO Add refs, Moeller, Raake, Marcel
 %Furthermore, this codec is although it is rather old, but still in active use.
 In subjective experiments G.722 with Mode 1 typically achieves a \ac{MOSLQ} around 4.5 on 5-point \ac{ACR} scale.
 
-For \ac{LP} the speech signal is compressed with the \emph{LPC-10} codec is selected. %TODO REF
+For \ac{LP} the speech signal the \emph{LPC-10}\footnote{LPC-10 is also known as \emph{FS-1015} as well as \emph{STANAG 4198}.} codec is selected. %TODO REF
 This codec is designed for low bitrate radio transmission focusing on intelligibility rather than naturalness.
-The re-synthesized speech sounds very unnatural and is often described as robotic, and muddy with a hissing background noise.
-LPC-10 achieves a 5-point \ac{MOSLQ} of 2.3~\cite{gibson book}.
-In fact, LPC-10 is not designed for speech telephony especially due to the focus on a low bitrate and the resulting degradations of the speech signal.
-However, available speech telephony codecs provide a rather \ac{MOS} scores.
+The re-synthesized speech sounds very unnatural and is often described as robotic, and muddy with a hissing background noise by providing only narrowband transmission.
+LPC-10 achieves a 5-point $\ac{MOS}_LQ$ of 2.3~\cite{gibson book}.
+In fact, LPC-10 is not designed for speech telephony especially due to the focus on a low bitrate of \unit[2.4]{kbit/s}.
+However, available codecs that are designed for speech telephony achieve rather high \ac{MOS} scores.
 Even the worst codec, \ie, \ac{MELP}, only results in a 5-point \ac{MOS} of 3.0. 
-Therefore, LPC-10 is well suited for the evaluation of multi-episodic perceived quality although it is a codec that is not used for speech telephony, but provides an intelligble re-synthesized speech signal with severe and thus expected memorable reduction in quality.
+LPC-10 is therefore useful for the investigation of multi-episodic perceived quality for speech-based services, because it allows to create severe degradations alone and is thus likely to affect the formation process multi-episodic perceived quality.
 
+For \ac{MP} \emph{G.711}~\cite{itu-t_g.711} is selected, because this is the common reference condition for narrowband speech telephony.
+Compared to G.722 on a 5-point $\ac{MOS}_LQ$ of is achieved due to the lower speech bandwidth.
+However, in comparison to LPC-10 the re-synthesized speech signal contains far less artifacts.
 
+As LPC-10 is rarely evaluated with compared to G.711 as well as G.722 an objective evaluation using \ac{POLQA}has been conducted.
+\ac{POLQA} estimates the \ac{MOS} for the 5-point \ac{ACR} scale, which is based upon the listening-only experiments for stimuli of a duration \unit[8...12]{sec}.
+\cite{koster_comparison_2015} created a transformation function that allows to transform judgments from the 5-point \ac{ACR} scale to the 7-point \ac{CCR} scale and vice versa.
+The evaluation has been conducted with \unit[12]{sec} long German speech samples with \ac{POLQA} in super-wideband mode and the resutls transformed to the 7-point \ac{CCR} scale.
+The results are shown in \autoref{tab:lab:performance}.
 
-\begin{table}
+\begin{table}[h]
  \centering
  \begin{tabulary}{\columnwidth}{C|C|C|C}
    Performance & Signal bandwidth & Codec & $MOS_{LQO}$ \\
@@ -152,58 +160,60 @@ Therefore, LPC-10 is well suited for the evaluation of multi-episodic perceived 
    \hline
    \ac{LP} & 300...\unit[3400]{Hz} & LPC-10        & 1.9 \\ %MOS1-5: 2.0
    \end{tabulary}
-   \caption{Details of performance levels (HP, MP and LP) with POLQA prediction (Mode: Super-wideband).
-   The prediction was transformed on the continuous 7-pt scale shown in  \autoref{img:chap05:quality-scale} by applying the transformation described in \cite{koster_comparison_2015}.}
-   \label{tab:performance}
+   \caption{Details of performance levels (\ac{HP}, \ac{MP}, and \ac{LP}) with \ac{POLQA} prediction (Mode: Super-wideband).
+   The prediction was transformed on the 7-point \ac{CCR} scale shown in  \autoref{img:chap05:quality-scale} by applying the transformation described in \cite{koster_comparison_2015}.}
+   \label{tab:lab:performance}
 \end{table}
 
 For a two-party conversation the end-to-end delay is an additional factor influencing perceived quality.
 Providing a proper one-way delay up to \unit[100]{ms} is rarely noticeable and is not perceived as degradation~\citep[\cf,][p. 9]{itu-t_g.107:_2005}.
+LPC-10 requires a look-ahead of \unit[90]{ms} while a frame size of \unit[22.5]{ms} is applied resulting in an delay of up to \unit[112.5]{ms} for encoding alone.
+G.711 and G.722 provide a algorithmic delay without look-ahead of \unit[0.125]{ms} and, respectively, XXXX while both codecs can be run with minimal frame size of \unit[10]{ms}. %TODO 
+Thus LPC-10 alone might introduce additional noticeable difference due to the additional introduced delay.
 
+For the \ac{VoD} service a \emph{Nexus 7 (2012)} was used.
+This device has a \unit[7]{inch} screen with a resolution of 1280x800.
+For \ac{HP} video content is downscaled to this resolution\footnote{The Nexus 7 is not capable of playback of raw video signals and thus the video is re-encoded with H.264, \unit[25]{\ac{fps}}, \unit[5]{mbit/s}, two-pass coding.} and audio mixed to two channels encoded with \ac{AAC} with \unit[48]{kHz}.
+For \ac{LP} the video signal only is degraded encoding it in H.264 with the same resolution, and frame rate but defined \ac{QP}.
+Setting a higher \ac{QP} increases the blockiness of a frame as less information is encoded.
+In difference to limiting the bandwidth, \ac{QP} results in a near constant degradation over multiple frames.  %TODO REF
+Degrading the video channel of the \ac{VoD} service only is chosen over degrading the audio or both channels, because then the \ac{VoD} service and \ac{AoD} service are not degraded in the same modality.
+Thus a direct comparison of the presented degradations between the two services is not possible.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+In all experiments a binaural representation is provided using a pair of headphones and, if needed, audio capturing using a headset.
+The experimental setups are described in \autoref{chap:appendix} in \autoref{appendix:laboratorySetups}.
 
 \subsection{Procedure} % Design
+The experiments consists of four stages with an overall duration of from \unit[45...90]{min}.
+In the \emph{first stage} a participant was informed about this experiment, his task(s), and the experimental procedure, and demographic data collected.
+In this stage also participant filled a questionnaire with demographic and signed a consent form.
+
+In the second stage participant were checked for hearing impairments using an audiometer for the frequency \unit[125]{kHz}, \unit[250]{kHz}, \unit[500]{kHz}, \unit[1000]{kHz}, \unit[2000]{kHz}, \unit[4000]{kHz}, and \unit[8000]{kHz} covering the spectrum for wideband.
+This procedure was conducted with \emph{Ear 1.7} audiometer connected to a pair of \emph{Sennheiser HDA 200}.
+
+In the \emph{third stage} participants conducted a training.
+Presenting a training showing a range of potential degradations is expect to reduce intra-personal variations.
+In all experiments participants rated 27 speech stimuli with a duration of circa \unit[8]{sec} with two male and one female speaker.
+Those stimuli contained different bandwidth (wideband, narrowband), codecs (G.711, G.722, GSM-FR, LPC-10), white noise without codec, and random packet-loss with G.722 no \ac{PLC} (with 2\%, and 5\%).
+In E4 an additional training was included for the \ac{VoD} service.
+Here, 22 videos with an approximate duration of \unit[8]{sec} were used.
+As degradations only the \ac{QP} was varied (0, 42, 47, and 50) while audio was left unchanged.
+After the presentation of a stimulus the \emph{overall perceived quality} needed to be judged on the 7-point \ac{CCR} scale.\footnote{The question was phrased in German: "Wie bewerten Sie die Gesamtqualität der gehörten Audioaufnahme?" for speech-based training and "Wie bewerten Sie die Gesamtqualität des gerade gesehenen Videos?" in case of the video training.}
+
+In the fourth stage the multi-episodic part was conducted consisting of sequential use of said service(s).
+In all four experiments the participants judged directly after finishing an episode their episodic quality on the 7-point \ac{CCR} scale.
+In addition, could describe the experienced degradation in free form.
+A multi-episodic judgment taken every after three episodes on the same scale.
 
 Usage Episodes: number and length (approx): 3-9min
-Experiment duration: 60-90min.
 Versuchspersonenanzahl per Condition (15)?
 
-Phase 1: Initial Questionnaires
-Phase 2: Preparation (Audiometer)
-Phase 3: Training - Bewertung Sprachstimuli (Telefoniestoerungen und Video)
-Phase 4: Episodic Usage and final Questionnaire
 
-Feedback:
-- CCR scale: training, retrospective episodic and retrospective multi-episodic 
-- Beschreibung der Stoerungen per Usage
 
-Applied Service performance levels
+
+\subsection{Feedback}
+
+
 
 Telefonie (Papier; PEAK: digital)
 - NPS
