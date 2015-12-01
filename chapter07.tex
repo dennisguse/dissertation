@@ -1,3 +1,4 @@
+\addtocontents{toc}{\protect\newpage}
 \chapter{Experiments: One Session}\label{chap:lab}
 \begin{chapter-abstract}
 First question: can multi-episodic QoE be studied in "short" laboratory study?
@@ -9,16 +10,16 @@ These experiments follow the same procedure, but differ in usage situation and, 
 
 %Overview on Experiments
 \begin{table}[h]
-	\begin{tabulary}{\textwidth}{C|C|C|C}
-	Experiment	& Service Type 				& Task								& Episodes \\
+	\begin{tabulary}{\textwidth}{C|C|C|C|C}
+	Experiment	& Service Type 				& Task								& Episodes & Hypothesis \\
 	\hline
-	E1			& Telephony					& Two-party conversation (\ac{SCT})	& 6-9 \\
+	E1			& Telephony					& Two-party conversation (\ac{SCT})	& 6-9      & H1, H2, H3, H5 \\
 	\hline
-	E2a			& Telephony					& 3rd-party listening (\ac{SCT})	& 6 \\
+	E2a			& Telephony					& 3rd-party listening (\ac{SCT})	& 6        & H1, H2 \\
 	\hline
-	E2b			& Telephony and \ac{VoD}	& E2a with Movie					& 12 \\
+	E2b			& Telephony and \ac{VoD}	& E2a with Movie					& 12       & H6\\
 	\hline
-	E3			& \ac{AoD}					& Audiobook							& 6 \\
+	E3			& \ac{AoD}					& Audiobook							& 6        & H4\\
 	\end{tabulary}
 	\caption{Overview on conducted experiments for multi-episodic perceived quality in one session.}
 	\label{tab:lab:experiments}
@@ -172,8 +173,8 @@ G.711 and G.722 provide a algorithmic delay without look-ahead of \unit[0.125]{m
 Thus LPC-10 alone might introduce additional noticeable difference due to the additional introduced delay.
 
 For the \ac{VoD} service a \emph{Nexus 7 (2012)} was used.
-This device has a \unit[7]{inch} screen with a resolution of 1280x800.
-For \ac{HP} video content is downscaled to this resolution\footnote{The Nexus 7 is not capable of playback of raw video signals and thus the video is re-encoded with H.264, \unit[25]{\ac{fps}}, \unit[5]{mbit/s}, two-pass coding.} and audio mixed to two channels encoded with \ac{AAC} with \unit[48]{kHz}.
+This device has a \unit[7]{inch} screen with a resolution of $1280x800$.
+For \ac{HP} video content is downscaled to this resolution\footnote{The Nexus 7 is not capable of playback of raw video signals and thus the video signal is downscaled and re-encoded with H.264, \unit[25]{\ac{FPS}}, \unit[5]{mbit/s}, two-pass coding resulting in no visible additional distortions.} and audio mixed to two channels encoded with \ac{AAC} with \unit[48]{kHz}.
 For \ac{LP} the video signal only is degraded encoding it in H.264 with the same resolution, and frame rate but defined \ac{QP}.
 Setting a higher \ac{QP} increases the blockiness of a frame as less information is encoded.
 In difference to limiting the bandwidth, \ac{QP} results in a near constant degradation over multiple frames.  %TODO REF
@@ -184,9 +185,10 @@ In all experiments a binaural representation is provided using a pair of headpho
 The experimental setups are described in \autoref{chap:appendix} in \autoref{appendix:laboratorySetups}.
 
 \subsection{Procedure} % Design
-The experiments consists of four stages with an overall duration of from \unit[45...90]{min}.
+The experiments consists of 5 stages with an overall duration of from \unit[45...90]{min}.
 In the \emph{first stage} a participant was informed about this experiment, his task(s), and the experimental procedure, and demographic data collected.
 In this stage also participant filled a questionnaire with demographic and signed a consent form.
+%E1: Telefonpartner bekannt
 
 In the second stage participant were checked for hearing impairments using an audiometer for the frequency \unit[125]{kHz}, \unit[250]{kHz}, \unit[500]{kHz}, \unit[1000]{kHz}, \unit[2000]{kHz}, \unit[4000]{kHz}, and \unit[8000]{kHz} covering the spectrum for wideband.
 This procedure was conducted with \emph{Ear 1.7} audiometer connected to a pair of \emph{Sennheiser HDA 200}.
@@ -195,70 +197,80 @@ In the \emph{third stage} participants conducted a training.
 Presenting a training showing a range of potential degradations is expect to reduce intra-personal variations.
 In all experiments participants rated 27 speech stimuli with a duration of circa \unit[8]{sec} with two male and one female speaker.
 Those stimuli contained different bandwidth (wideband, narrowband), codecs (G.711, G.722, GSM-FR, LPC-10), white noise without codec, and random packet-loss with G.722 no \ac{PLC} (with 2\%, and 5\%).
-In E4 an additional training was included for the \ac{VoD} service.
+In E2b an additional training was included for the \ac{VoD} service.
 Here, 22 videos with an approximate duration of \unit[8]{sec} were used.
 As degradations only the \ac{QP} was varied (0, 42, 47, and 50) while audio was left unchanged.
 After the presentation of a stimulus the \emph{overall perceived quality} needed to be judged on the 7-point \ac{CCR} scale.\footnote{The question was phrased in German: "Wie bewerten Sie die Gesamtqualität der gehörten Audioaufnahme?" for speech-based training and "Wie bewerten Sie die Gesamtqualität des gerade gesehenen Videos?" in case of the video training.}
 
-In the fourth stage the multi-episodic part was conducted consisting of sequential use of said service(s).
+In the \emph{fourth stage} the multi-episodic part was conducted consisting of sequential use of said service(s).
 In all four experiments the participants judged directly after finishing an episode their episodic quality on the 7-point \ac{CCR} scale.
-In addition, could describe the experienced degradation in free form.
-A multi-episodic judgment taken every after three episodes on the same scale.
+In addition, could describe the experienced degradation in quantitative form.
+A multi-episodic judgment is taken after every three episodes on the 7-point \ac{CCR} scale.
+In this stage 6 to 12 episodes were presented.
+In E2a, E2b, and E3 pre-processed content was presented varying from \unit[2]{min} to \unit[3]{min} in duration.
+In E1 the duration was not controlled as the \acs{SCT} needed to be fulfilled in a two-party conversation resulting in varying duration.
 
-Usage Episodes: number and length (approx): 3-9min
-Versuchspersonenanzahl per Condition (15)?
+In the \emph{fifth stage} final feedback about the fourth stage is collected.
+In all experiments the underlying question of the \ac{NPS} is collected.
+The \ac{NPS} has been proposed as the one sufficient question indicating business success~\citep[\cf,][]{reichheld_one_2003}.
+This score assessed on 11-point discrete scale ranging from 0 to 10 and is phrased as "How likely is it that you would recommend our company/product/service to a friend or colleague?"~\citep[][p. 5]{reichheld_one_2003}.
+In this study it was rephrased to "On scale ranging from 0 (unlikely) to 10 (likely), how likely is it that you would recommend the service to a friend or colleague?"\footnote{The question was phrased in German: "Auf einer Skala von 0 (unwahrscheinlich) bis 10 (wahrscheinlich), wie wahrscheinlich ist es, dass Sie das System einem Freund oder Kollegen weiterempfehlen werden?".}.
+In E1, E2a, E2b, and E3 requested to answer the following questions, if degradations have been perceived.
+First the total count of degraded episodes needed to be answered, followed by request to denote the exact episodes with degradations.
+It was furthermore asked, if degradations were temporary in degraded episodes. 
+In E3 those three questions were asked separate for the speech service and \ac{VoD} service.
+Those questions can be used as integrity check for participants.
+%Telefonie (Papier; PEAK: digital);- Anzahl gestoerter Telefonate (Freitext vs. 0-9)
+%- Welche (Freitext vs. 0-9)?
+%- Dauer der Stoerung (Ja/Nein)
+
+In E3 different questions were asked in the fifth stage due to the focus on duration neglect.
+Here it was assessed in a quantitative form, if episodes were degraded and if so, which one.
+In addition, it was asked, if all episodes were similar in length, and how long one episode was.
+
+\subsection{Content}
+In experiment E1 six to nine \acs{SCT}, depending on the condition, were used as defined in \cite{itu-t_p.805:_2007}.
+For all conditions in this experiment the presentation order of the \acs{SCT} was kept constant.
+In difference to \cite{itu-t_p.805:_2007} no \ac{SCT} needed to be solved beforehand, but participants were given a written and oral explanation using an examplary \ac{SCT}.
+The actual order of \acs{SCT} is given in \autoref{} \autoref{tab:appendix:labsct}.
+
+In E1 the two-party conversations were recorded.
+One recording for each episode 1 to 6 of those that have been presented in \ac{HP} was selected for experiment E2a and E2b.
+The recordings common task solving behavior with several speaker changes and only with little double talk.
+Furthermore, no emotional reaction like laughing should be present and not contain any degradations due to other sound sources like breathing sound, but only clear and clean speech.
 
 
 
 
-\subsection{Feedback}
 
 
 
-Telefonie (Papier; PEAK: digital)
-- NPS
-- Anzahl gestoerter Telefonate (Freitext vs. 0-9)
-- Welche (Freitext vs. 0-9)?
-- Dauer der Stoerung (Ja/Nein)
--> Telefonpartner bekannt
 
-LST
-- NPS
-- Wie viele Telefonate waren gestört?
-- Falls Sie sich erinnern, welche Telefonat(e) waren gestört?
-- Sind die Störungen nur kurzzeitig (also nur Teil eines Telefonates war betroffen) aufgetreten?
 
-LST+Video: Digital
-- NPS
-- Wie viele Telefonate waren gestört? 
-- Falls Sie sich erinnern, welche Telefonat(e) waren gestört? (Freitext)
-- Sind die Störungen nur kurzzeitig (also nur Teil eines Telefonates war betroffen) aufgetreten?
 
-- Wie viele Videos waren gestört?
-- Falls Sie sich erinnern, welche Videos waren gestört?
-- Sind die Störungen nur kurzzeitig innerhalb des Videos aufgetreten?
 
-AOD:
-- NPS
-- War eine Episode gestoert
-- Waren alle Episode gleich lang
-- Wie lang war ein Episode?
-% gleicher sprecher 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%Versuchspersonenanzahl per Condition (15)?
+ 
 
 \section{Results}
 %Stichprobenbeschreibung
 %Hypothekenweise durch die Studien durchgehen
 \section{Discussion}
-\begin{table}[h]
-	\begin{tabular}{|c|c|c|c|}
-	Identifier	& Service type 			& Task 									& Hypotheses \\
-	\hline
-	S1			& Telephony				& Two-party Conversation (\ac{SCT})	& H1, H2, H3, H5 \\
-	S2a			& Telephony				& Third-party Listening	(\ac{SCT})		& H1, H2 \\ 
-	S2b			& Telephony and \ac{VoD}& Third-party Listening	(\ac{SCT}) and Video Entertainment & H1, H2 \\  % on mobile device
-	S3			& \ac{AoD}				& -										& H1, H2,
-	\end{tabular}
-\end{table}
-
-\subsection{Details}
-
