@@ -15,11 +15,11 @@ These experiments follow the same procedure, but differ in usage situation and, 
 	\hline
 	E1			& Telephony					& Two-party conversation (\ac{SCT})	& 6-9      & H1, H2, H3, H5 \\
 	\hline
-	E2a			& Telephony					& 3rd-party listening (\ac{SCT})	& 6        & H1, H2 \\
+	E2a			& Telephony					& 3rd-party listening (\ac{SCT})		& 6        & H1, H2 \\
 	\hline
-	E2b			& Telephony and \ac{VoD}	& E2a with Movie					& 12       & H6\\
+	E2b			& Telephony and \ac{VoD}	& E2a with Movie							& 12       & H6\\
 	\hline
-	E3			& \ac{AoD}					& Audiobook							& 6        & H4\\
+	E3			& \ac{AoD}					& Audiobook													& 6        & H4\\
 	\end{tabulary}
 	\caption{Overview on conducted experiments for multi-episodic perceived quality in one session.}
 	\label{tab:lab:experiments}
@@ -55,25 +55,27 @@ Differences between conditions can be evaluated by comparing multi-episodic judg
  Condition & \multicolumn{5}{c|}{Episodic Performance}        \\
            & 1-3	& 4           & 5           & 6           & 7-9 \\
  \midrule
- 1         & HP 	& \textbf{LP} & HP          & HP          & - \\
+ C0		   & HP		& HP		  & HP			& HP		  & - \\
  \hline
- 2a        & HP 	& HP          & \textbf{LP} & HP          & - \\
+ C1         & HP 	& \textbf{LP} & HP          & HP          & - \\
  \hline
- 2b        & HP 	& HP          & \textbf{LP}, long & HP    & - \\
+ C2a        & HP 	& HP          & \textbf{LP} & HP          & - \\
  \hline
- 3         & HP 	& HP          & HP          & \textbf{LP} & - \\
+ C2b        & HP 	& HP          & \textbf{LP}, long & HP    & - \\
  \hline
- 4         & HP 	& \textbf{LP} & \textbf{LP} & HP          & - \\
+ C3         & HP 	& HP          & HP          & \textbf{LP} & - \\
  \hline
- 5a        & HP 	& HP          & \textbf{LP} & \textbf{LP} & - \\
+ C4         & HP 	& \textbf{LP} & \textbf{LP} & HP          & - \\
  \hline
- 5b        & HP 	& HP          & \textbf{LP} & \textbf{LP} & HP \\
+ C5a        & HP 	& HP          & \textbf{LP} & \textbf{LP} & - \\
  \hline
- 6         & HP 	& \textbf{LP} & \textbf{LP} & \textbf{LP} & - \\
+ C5b        & HP 	& HP          & \textbf{LP} & \textbf{LP} & HP \\
  \hline
- 7         & HP 	& HP          & \textbf{LP} & \textit{MP}   & HP \\
+ C6         & HP 	& \textbf{LP} & \textbf{LP} & \textbf{LP} & - \\
  \hline
- 8         & HP 	& HP          & HP          & HP          & HP \\
+ C7         & HP 	& HP          & \textbf{LP} & \textit{MP} & HP \\
+ \hline
+ C8         & HP 	& \textbf{LP} & HP          & \textbf{LP} & - \\
  \end{tabulary}
  \caption{Overview of all conditions with the episodic performance of all usages episodes.
  Non-HP episodes are in \textbf{bold} (\ac{LP}) and \textit{italic} (\ac{MP}).}
@@ -263,24 +265,48 @@ All four experiments were conducted in Berlin, Germany.
 Participants were required to have no hearing impairments for all of the four experiments.
 For participation in E2b normal vision was additionally mandatory.
 
-Experiment E1 was conducted  with \unit[59]{female} and \unit[40]{male} participants aging from 19 to \unit[53]{years} ($\mu=27.2$, $\sigma=6.5$).
+Experiment E1 was conducted  with \unit[59]{female} and \unit[40]{male} participants aging from 19 to \unit[53]{years} ($\mu=27.2$, $\sigma=6.5$). %TODO Ist falsch!
 This experiment was conducted from April 2014 until August 2015.
-Experiment E2a was conducted with \unit[65]{female} and \unit[35]{male} participants aging from of 18 to \unit[50]{years} ($\mu=26.1$, $\sigma=4.6$).
+Experiment E2a was conducted with \unit[65]{female} and \unit[35]{male} participants aging from of 18 to \unit[50]{years} ($\mu=26.1$, $\sigma=4.6$). %TODO Ist falsch!
 This experiment was conducted from August 2014 until March 2015.
 In experiment E1 participants received \unit[15]{EUR} as compensation and participation in experiments E2a, E2b, and E3 was compensated with \unit[10]{EUR}.
 
-For both studies each participant was individually checked for inconsistent episodic judgments.
-A participant is considered inconsistent, if more than two episodic judgments are exceeding the 1.5 $\times$ \emph{interquartile range}. %TODO REF
+%TODO Add E2b and E3
+
+In all experiments each participant was individually checked for inconsistent episodic judgments.
+A participant is considered inconsistent, if more than two episodic judgments are exceeding the 1.5 $\times$ \emph{interquartile range} of the performance levels of this condition. %TODO REF
 The interquartile range is, in fact, a rather conservative criteria.
 However, due to the lack of ground-truth on episodic judgments in a usage multi-episodic case, participants should be only removed, if severe differences occur.
 For none participants of the four experiments this criteria was met and thus none was excluded from the data analysis.
 
+In all four experiments overall 310 participants 
+\autoref{tab:lab:participants} gives an overview on participants per condition.
+
 %%TODO Table with conditions per Study + Number of subjects
 \begin{table}
-	\begin{tabular}{c|c|c|c}
-	
-	\end{tabular}
-	\caption{Overview on }
+	\centering
+	\begin{tabular}{c|c|c|c|c}
+	Conditions & \multicolumn{4}{c}{Experiments} \\
+			& E1	& E2a 	& E2b 	& E3\\
+	\midrule
+	C0		& -		& 	-	& 	14	&  - \\
+	C1		& 13 TODO	&	12	&	-	&  - \\
+	C2a		& 12 TODO	&	15	&	-	&  16\\
+	C2b		& -		&	-	&	-	&  20\\
+	C3		& 16	&	13	&	-	&  - \\
+	C4		& 18	&	15	&	12	&  - \\
+	C5a		& -		&	24	&	-	&  - \\
+	C5b		& 16	&	-	&	-	&  - \\
+	C6		& 16	&	21	&	-	&  - \\
+	C7		& 43	&	-	&	-	&  - \\
+	C8		& -		&	15 &	-	&  - \\ %TODO Check E2a! for C8
+	\midrule
+	$\sum$ 	& 133	&	115 &	26 	& 36 \\
+	\end{tabular} %TODO Add male / female, age? or put this into the appendix
+	\caption{
+	Overview on conditions for the experiments E1, E2a, E2b, and E3 incl. number of participants per condition.
+	For E2b the conditions of the \ac{VoD} are shown whereas the telephony service was always presented in C5a for all participants.}
+	\label{tab:lab:participants}
 \end{table}
 
 \section{Data Analysis}
@@ -291,14 +317,47 @@ All results are reported as \ac{MOS} ranging from 0 to 6 (for the scale cf. Figu
 For statistic evaluation of two unpaired samples a \emph{Wilcoxon rank-sum test} is conducted.
 More than two unpaired samples are compared by conducting a \emph{Kruskal-Wallis test} and, if significant differences are found, a \emph{pairwise Wilcoxon rank-sum test with Holms' correction} as post-hoc test is conducted.
 Paired samples are evaluated with a \emph{Wilcoxon signed-rank test}.
-Effect sizes for significant differences are estimated with the \emph{Hodges-Lehmann estimator} and reported as $\triangle: F_{2}(x)=F_{1}(x-\triangle)$, where
-$F_{1}$ and $F_{2}$ denote the two distributions and $x$ their median.
-Non-parametric tests are chosen over parametric tests like Anova due to 
-
+Effect sizes for significant differences are estimated with the \emph{Hodges-Lehmann estimator} and reported as $\triangle: F_{2}(x)=F_{1}(x-\triangle)$, where $F_{1}$ and $F_{2}$ denote the two distributions and $x$ their median.
+%Non-parametric tests are chosen over parametric tests like Anova due to 
 
 \subsection{Episodic Judgments} 
 
-\subsection{Multi-episodic Judgments}
+%Order effect (Moeller): HP following LP
 
-%Hypothekenweise durch die Studien durchgehen
+%Increase (Moeller): 1 vs last
+
+%Consistency 
+HP vs. MP vs. LP
+
+%Differences between CONDITION and USAGE SITUATION (Task?)
+
+%TODO Add exemplary plot of (C7)
+\begin{figure}
+%	\includegraphics[width=1\columnwidth]{fig/e1-condition7-boxplot}
+	\caption{Boxplot for episodic QoE judgments of C7 for E1.
+	The 5th usage episode is presented in LP and the 6th in MP.}
+	\label{img:lab:boxplotE1c7}
+\end{figure}
+
+\subsection{Multi-episodic Judgments}
+In the following the results for multi-episodic QoE are evaluated.
+First consistency between conditions is analyzed with regard to the multi-episodic QoE after the 3rd usage episode.
+Then the results are evaluated in detail with regard to the hypotheses under investigation.
+
+%TODO TODO TODO
+For the multi-episodic QoE judgment after the 3rd usage episode no significant difference between conditions is found for neither Study~1 ($H(6)=2.5433, p=0.8636$) nor Study~2 ($H(5)=6.4111, p=0.2682$).
+%With regard to this multi-episodic QoE judgment no significant difference between Study~1 ($MOS=4.2, \sigma=0.7$) and Study~2 ($MOS=4.3, \sigma=0.8$) are found ($H(1)=2.7926, p=0.0947$).
+With regard to this multi-episodic QoE judgment both studies do not differ significantly ($H(1)=2.7926, p=0.0947$, Study~1: $MOS=4.2, \sigma=0.7$, Study~2: $MOS=4.3, \sigma=0.8$).
+This indicates that, as long as only HP episodes are presented, neither the between-subject design nor the task affected this multi-episodic QoE judgment.
+
+In the following, the hypotheses under investigation are analyzed for the experiments E1, E2a, E2b, and E3.
+
+\subsubsection{H1}
+\subsubsection{H2}
+\subsubsection{H3}
+\subsubsection{H4}
+\subsubsection{H5}
+\subsubsection{H6}
+\subsubsection{H7}
+
 \section{Discussion}
