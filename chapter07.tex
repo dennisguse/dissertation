@@ -282,7 +282,6 @@ For none participants of the four experiments this criteria was met and thus non
 In all four experiments overall 310 participants 
 \autoref{tab:lab:participants} gives an overview on participants per condition.
 
-%%TODO Table with conditions per Study + Number of subjects
 \begin{table}
 	\centering
 	\begin{tabular}{c|c|c|c|c}
@@ -310,36 +309,74 @@ In all four experiments overall 310 participants
 \end{table}
 
 \section{Data Analysis}
-First, episodic QoE results are inspected with regard to consistency between conditions for each experiment individually, and then potential differences between the experiments are investigated.
-Second, multi-episodic QoE results are evaluated with regard to the presented hypotheses.
+First, episodic judgments are inspected with regard to consistency between conditions for each experiment individually, and then potential differences between the experiments are investigated.
+Second, multi-episodic judgments are evaluated with regard to the presented hypotheses (\cf, \autoref{chap:towards}).
 
-All results are reported as \ac{MOS} ranging from 0 to 6 (for the scale cf. Figure~\ref{img:qualityScale}).
+All results are reported as \ac{MOS} ranging from 0 to 6 (for the scale \cf Figure~\ref{img:qualityScale}).
 For statistic evaluation of two unpaired samples a \emph{Wilcoxon rank-sum test} is conducted.
 More than two unpaired samples are compared by conducting a \emph{Kruskal-Wallis test} and, if significant differences are found, a \emph{pairwise Wilcoxon rank-sum test with Holms' correction} as post-hoc test is conducted.
 Paired samples are evaluated with a \emph{Wilcoxon signed-rank test}.
-Effect sizes for significant differences are estimated with the \emph{Hodges-Lehmann estimator} and reported as $\triangle: F_{2}(x)=F_{1}(x-\triangle)$, where $F_{1}$ and $F_{2}$ denote the two distributions and $x$ their median.
-%Non-parametric tests are chosen over parametric tests like Anova due to 
+Effect sizes for significant differences are estimated with the \emph{Hodges-Lehmann estimator} and reported as $\triangle: F_{2}(x)=F_{1}(x-\triangle)$, where $F_{1}$ and $F_{2}$ denote the two distributions and $x$ their median. %TODO VERIFY THAT Hodges Lehmann is always used!
+%Episodic judgments could be interpreted as paired samples -> then Friedmanm.mc should be used instead
+Non-parametric statistical methods are applied, because the assumptions of parametric methods are likely violated especially due to the limited number of samples.
 
 \subsection{Episodic Judgments} 
+For both studies each condition was individually checked for inconsistent participants.
+A participant is considered inconsistent, if more than two episodic QoE judgments are beyond 1.5 $\times$ \emph{interquartile range}.
+No participant met this criteria and thus none was excluded from further data analysis.
 
-%Order effect (Moeller): HP following LP
+\subsubsection{Experiment E1}
+Then episodic QoE judgments of all conditions are compared to investigate for an influence of the applied between-subject design.
+%In fact, in prior work a negative influence on the episodic QoE judgment of a HP episode that follow one or more LP episode(s) is sometimes observed \citep{moller_single-call_2011, guse_macro-temporal_2013}.
+In prior work a negative influence on the episodic QoE judgment of HP episodes is observed, when those directly follow LP episode(s) \citep{moller_single-call_2011, guse_macro-temporal_2013}.
+Such an effect could neither be observed for any condition of Study~1 nor Study~2.
+As such an effect cannot be ruled out, only episodic QoE judgments of usage episodes 1-3 are compared, because non-HP episodes are only presented for 4th to 6th usage episode.
+For Study~1 no significant differences between conditions are found ($H(6)=7.9821, p=0.2394$).
+However, for Study~2 a significant difference is found ($H(5)=13.3992, p=0.01991$).
+The post-hoc test shows a significant difference between condition 4 ($MOS=4.6$) and 6 ($MOS=4.1$) ($p=0.023,\triangle=0.6$, two-tailed).
+A detailed analysis did not yield a reason for the difference, and we thus consider this an artifact due to the between-subject design not affecting the hypotheses testing.
+Significant differences of episodic QoE for LP episodes is neither observed in Study~1 ($H(6)=7.8509, p=0.2492$) nor Study~2 ($H(5)=3.8765, p=0.5673$).
+Episodic QoE judgments of HP and LP are significant different for Study~1 ($W=106877, p=2.2e-16$, one-sided) and Study~2 ($W=109715.5, p=2.2e-16$, one-sided).
 
-%Increase (Moeller): 1 vs last
+Comparing episodic QoE judgments between Study~1 and Study~2 significant differences are found for HP ($W=41868, p=0.004675,\triangle=-0.2$, two-tailed) and also for LP ($W=11803.5, p=0.00005542,\triangle=-0.3$, two-tailed).
+For HP episodes Study~1 yielded $MOS=4.1$ and Study~2 $MOS=4.3$.
+For LP episodes Study~1 yielded $MOS=1.4$ and Study~2 $MOS=1.8$.
 
-%Consistency 
-HP vs. MP vs. LP
+Study~1 resulted in lower episodic QoE judgments for both HP and LP than Study~2.
+This indicates that the usage situation influences the formation process of episodic QoE, although the effect on episodic QoE judgments is rather small.
 
-%Differences between CONDITION and USAGE SITUATION (Task?)
+\subsubsection{Experiments E2a and Experiments E2b}
 
-%TODO Add exemplary plot of (C7)
-\begin{figure}
+\subsubsection{Experiments E3}
+
+\begin{figure} %TODO Add exemplary plot of (C7)
 %	\includegraphics[width=1\columnwidth]{fig/e1-condition7-boxplot}
 	\caption{Boxplot for episodic QoE judgments of C7 for E1.
 	The 5th usage episode is presented in LP and the 6th in MP.}
 	\label{img:lab:boxplotE1c7}
 \end{figure}
 
+\begin{table}
+
+	\caption{}
+\end{table}
+
+%TODO Insert table of all studies by performance level!
+
+
+\subsubsection{Consistency per Experiment}
+HP vs. MP vs. LP
+
+
+
+%Order effect (Moeller): HP following LP
+%Increase (Moeller): 1 vs last
+
+\subsubsection{Impact of Usage Situation}
+
+
 \subsection{Multi-episodic Judgments}
+%TODO
 In the following the results for multi-episodic QoE are evaluated.
 First consistency between conditions is analyzed with regard to the multi-episodic QoE after the 3rd usage episode.
 Then the results are evaluated in detail with regard to the hypotheses under investigation.
@@ -352,12 +389,28 @@ This indicates that, as long as only HP episodes are presented, neither the betw
 
 In the following, the hypotheses under investigation are analyzed for the experiments E1, E2a, E2b, and E3.
 
-\subsubsection{H1}
+\subsubsection{Hypothesis H1: Number of LP Episodes}
+In H1 it is assumed that increasing the number of LP episodes before a multi-episodic judgment results in a decrease of this judgment.
+This hypothesis can be evaluated by comparing the results multi-episodic judgment after the 6th episode between condition C3, C5, and C6, which present one to three LP episodes directly before the multi-episodic judgment (\cf, \autoref{tab:lab:hypothesesComparison}).
+
+Conditions 2 and 4 present one, respectively, two LP episodes followed by one HP episode before the multi-episodic QoE judgment.
+
+
+\autoref{tab:lab:h1} shows the multi-episodic QoE judgment after the 6th usage episode 
+for these five conditions.
+
+\begin{table}
+
+	\caption{}
+	\label{tab:lab:h1}
+\end{table}
+
 \subsubsection{H2}
 \subsubsection{H3}
 \subsubsection{H4}
 \subsubsection{H5}
 \subsubsection{H6}
 \subsubsection{H7}
+\subsubsection{H8}
 
 \section{Discussion}

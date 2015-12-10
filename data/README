@@ -1,0 +1,16 @@
+Contains all data used in this thesis.
+Data is imported from a main SVN manually.
+
+The CSV-file contains the following columns for all studies:
+* username (anonymized)
+* study
+* duration (1h, 7d, 12d)
+* service
+* id: episode ID
+* performance
+* peformance_level: HP, MP, LP
+* QU: episodic quality (0-6, 7-pt continuous scale ITU-T p.851, precision .2)
+* IQU: multi-episodic quality - so far
+* IQU_3: multi-episodic quality - last three days
+* NPS: Net promoter score
+
