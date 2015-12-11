@@ -1,3 +1,12 @@
+<<echo=F>>=
+timeseries = read.csv("data/data_minimal.csv")
+attach(timeseries)
+participants <- function(study_filter, condition_filter="ALL") {
+	if (condition_filter == "ALL") length(unique(subset(timeseries$username, study==study_filter)))
+	else length(unique(subset(timeseries$username, study==study_filter & condition==condition_filter)))
+}
+@
+
 \addtocontents{toc}{\protect\newpage}
 \chapter{Experiments: One Session}\label{chap:lab}
 \begin{chapter-abstract}
@@ -15,11 +24,11 @@ These experiments follow the same procedure, but differ in usage situation and, 
 	\hline
 	E1			& Telephony					& Two-party conversation (\ac{SCT})	& 6-9      & H1, H2, H3, H5 \\
 	\hline
-	E2a			& Telephony					& 3rd-party listening (\ac{SCT})		& 6        & H1, H2 \\
+	E2a			& Telephony					& 3rd-party listening (\ac{SCT})	& 6        & H1, H2 \\
 	\hline
-	E2b			& Telephony and \ac{VoD}	& E2a with Movie							& 12       & H6\\
+	E2b			& Telephony and \ac{VoD}	& E2a with Movie					& 12       & H6\\
 	\hline
-	E3			& \ac{AoD}					& Audiobook													& 6        & H4\\
+	E3			& \ac{AoD}					& Audiobook							& 6        & H4\\
 	\end{tabulary}
 	\caption{Overview on conducted experiments for multi-episodic perceived quality in one session.}
 	\label{tab:lab:experiments}
@@ -288,19 +297,19 @@ In all four experiments overall 310 participants
 	Conditions & \multicolumn{4}{c}{Experiments} \\
 			& E1	& E2a 	& E2b 	& E3\\
 	\midrule
-	C0		& -		& 	-	& 	14	&  - \\
-	C1		& 13 TODO	&	12	&	-	&  - \\
-	C2a		& 12 TODO	&	15	&	-	&  16\\
-	C2b		& -		&	-	&	-	&  20\\
-	C3		& 16	&	13	&	-	&  - \\
-	C4		& 18	&	15	&	12	&  - \\
-	C5a		& -		&	24	&	-	&  - \\
-	C5b		& 16	&	-	&	-	&  - \\
-	C6		& 16	&	21	&	-	&  - \\
-	C7		& 43	&	-	&	-	&  - \\
-	C8		& -		&	15 &	-	&  - \\ %TODO Check E2a! for C8
+	C0		& -									& 	-									& 	\Sexpr{participants("E2b", "0")}	&  - \\
+	C1		& \Sexpr{participants("E1", "1")}	&	\Sexpr{participants("E2a", "1")}	&	-	&  - \\
+	C2a		& \Sexpr{participants("E1", "2a")}	&	\Sexpr{participants("E2a", "2a")}	&	-	&  \Sexpr{participants("E3", "2a")}\\
+	C2b		& -									&	-									&	-	&  \Sexpr{participants("E3", "2b")}\\
+	C3		& \Sexpr{participants("E1", "3")}	&	\Sexpr{participants("E2a", "3")}	&	-	&  - \\
+	C4		& \Sexpr{participants("E1", "4")}	&	\Sexpr{participants("E2a", "4")}	&	\Sexpr{participants("E2b", "4")}	&  - \\
+	C5a		& -									&	\Sexpr{participants("E2a", "5a")}	&	-	&  - \\
+	C5b		& \Sexpr{participants("E1", "5b")}	&	-									&	-	&  - \\
+	C6		& \Sexpr{participants("E1", "6")}	&	\Sexpr{participants("E2a", "6")}	&	-	&  - \\
+	C7		& \Sexpr{participants("E1", "7")}	&	-	&	-	&  - \\
+	C8		& -									&	\Sexpr{participants("E2a", "8")} 	&	-	&  - \\
 	\midrule
-	$\sum$ 	& 133	&	115 &	26 	& 36 \\
+	$\sum$ 	& \Sexpr{participants("E1")}		&	\Sexpr{participants("E2a")}			&	\Sexpr{participants("E2b")} 	& \Sexpr{participants("E3")} \\
 	\end{tabular} %TODO Add male / female, age? or put this into the appendix
 	\caption{
 	Overview on conditions for the experiments E1, E2a, E2b, and E3 incl. number of participants per condition.

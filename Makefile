@@ -4,7 +4,7 @@ build: tex
 	makeindex %.idx
 	pdflatex 00main.tex
 
-tex: chapter07.tex chapter08.tex chapter09.tex appendix.tex
+tex: 00main.tex chapter07.tex chapter08.tex chapter09.tex appendix.tex
 	echo "Done"
 
 %.tex : %.Rnw

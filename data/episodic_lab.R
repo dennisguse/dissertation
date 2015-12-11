@@ -8,14 +8,14 @@ stat_qu_by = function(t, formula=QU~condition) {
  return (p)
 }
 
-stat_qu_by(subset(timeseries, study=="Lab-TEL"), QU~performance_level)       #S
-stat_qu_by(subset(timeseries, study=="Lab-TEL" & performance_level == "HP")) #S, 4v5, 4v7
-#pairwise.wilcox.test(subset(timeseries, study=="Lab-TEL")$QU, subset(timeseries, study=="Lab-TEL")$performance_level)
-stat_qu_by(subset(timeseries, study=="Lab-TEL" & performance_level == "LP")) #N
+stat_qu_by(subset(timeseries, study=="E1"), QU~performance_level)       #S
+stat_qu_by(subset(timeseries, study=="E1" & performance_level == "HP")) #S, 4v5, 4v7
+#pairwise.wilcox.test(subset(timeseries, study=="E1")$QU, subset(timeseries, study=="E1")$performance_level)
+stat_qu_by(subset(timeseries, study=="E1" & performance_level == "LP")) #N
 
-stat_qu_by(subset(timeseries, study=="Lab-LST"), QU~performance_level)       #S
-stat_qu_by(subset(timeseries, study=="Lab-LST" & performance_level == "HP")) #S, N pairwise
-stat_qu_by(subset(timeseries, study=="Lab-LST" & performance_level == "LP")) #N
+stat_qu_by(subset(timeseries, study=="E2a"), QU~performance_level)       #S
+stat_qu_by(subset(timeseries, study=="E2a" & performance_level == "HP")) #S, N pairwise
+stat_qu_by(subset(timeseries, study=="E2a" & performance_level == "LP")) #N
 
 
 stat_qu_by(subset(timeseries, study=="Lab-AOD"), QU~performance_level)       #S
