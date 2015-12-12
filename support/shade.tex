@@ -5,7 +5,7 @@
   \setlength{\shadedtextwidth}{\textwidth}
   \begin{definitions}[#1]\hspace*{2mm}
 }{\end{definitions}}
-\newcommand{\definitionautoref}{Definition}
+
 \newshadetheorem{hypotheses}{Hypothesis}[]
 \newenvironment{hypothesis}[1][]{
   \definecolor{shadethmcolor}{rgb}{.9,.9,.95}
@@ -14,6 +14,14 @@
   \begin{hypotheses}[#1]\hspace*{2mm}
 }{\end{hypotheses}}
 %  \setlength{\shadeboxrule}{1.5pt}
-\newcommand{\hypothesisautoref}{Hypothesis}
+
+%TODO Does not work for \autorefname. I do not yet know why.
+\newcommand{\definitionautorefname}{Definition}
+\newcommand{\definitionsautorefname}{Definition}
+
+\newcommand{\hypothesisautorefname}{Hypothesis}
+\newcommand{\hypothesesautorefname}{Hypotheses}
+
+
 \newenvironment{chapter-abstract}{\section*{Abstract}\hrulefill\par}{\par\hrulefill\vspace{0.0cm}}
 \newenvironment{chapter-summary}{\section*{Summary}\hrulefill\par}{\par\hrulefill\vspace{0.0cm}}
