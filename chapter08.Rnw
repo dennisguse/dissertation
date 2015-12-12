@@ -1,3 +1,8 @@
+<<echo=F, cache=F, results='asis'>>=
+timeseries = read.csv("data/data.csv")
+source('R_eval.R')
+@
+
 \chapter{Experiments: Multiple Days}\label{chap:field}
 \begin{chapter-abstract}
 Here I present all studies that I conducted on multi-episodic QoE over several days.
@@ -13,28 +18,142 @@ This study is complemented by speech telephony (SIPGATE study) and QoMEX2014 stu
 This chapter will also include an overview of limitations and practical knowledge for \textit{successful} field trials.
 \end{chapter-abstract}
 
-\section{Studies}
-\begin{itemize}
-%\item Jitsi + Silverlight (DAGA); Actually I would like to use this in Chap 4.
-\item CSipSimple + Silverlight
-\item AoD + VoD (QoMEX)
-\item SIPGate Telephony
-\item Field AoD: to be evaluated
-\item (Sabrina, Gaming): over multiple days; is there an effect on multi-episodic? Do subjects get more (delay) sensitive?
-\cite{guse_macro-temporal_2013} %Pre-Stud
-\subsection{Guse 2013}
+
+%Overview on Experiments
+\begin{table}[h]
+	\begin{tabulary}{\textwidth}{C|C|C|C}
+	Experiment	& Service Type 				& Tasks								& Days & Participants \\
+	\hline
+	E4a			& Telephony	and \ac{VoD}		& Two-party conversation (\ac{SCT})	& 14   \\
+	\hline
+	E4b			& Telephony	and \ac{VoD}		& Two-party conversation (\ac{SCT})	& 14   \\
+	\hline
+	E5			& \ac{VoD} and \ac{AoD}		& Audiobook							& 14   \\
+	E6			& Telephony					& Two-party conversation (\ac{SCT})	& 7
+	\end{tabulary}
+	\caption{Preliminary experiments on multi-episodic QoE over multiple days.}
+	\label{tab:field:pre-experiments}
+\end{table}
+
+\section{Preliminary Experiments}
+
+
+\subsection{Telephony and \ac{VoD} \citep{guse_macro-temporal_2013}} % Actually I would like to use this in Chap 4.
 %Guse2013 (following Moeller) found a relative slow adaptation of multi-episodic QoE.
 %The two data sets cannot be used alone for modeling multi-episodic QoE.
-\end{itemize}
 
-\section{Multi-episodic QoE with one service}
+%\item CSipSimple + Silverlight??? 
 
-%TODO are there cross-service effects?
+E4a and E4b
 
-Finish this section with a comparison to laboratory studies?
+\subsection{\ac{VoD} and \ac{AoD} \citep{guse_modelling_2014}}
 
-%\section{Excurse: on retaining information}
+
+\subsection{Telephony}
+
+
+\section{Design}
+
+
+\subsection{Discussion}
+
+
+\section{Design}
+
+
+\section{Data Analysis}
+
+
+\subsubsection{\autoref{hypo:number}: Number of LP Episodes}
+
+\begin{table}[h!]
+\centering
+ \begin{tabulary}{\columnwidth}{c|c|C}
+	Condition   & LP episode(s) 	& E5 \\
+	\midrule
+	C3			& 6				& \Sexpr{mos_iqu_with_sd_by_condition("E5", "3", 14)}\\
+	\hline
+	C5a			& 5..6			& \Sexpr{mos_iqu_with_sd_by_condition("E5", "5a", 14)}\\
+	\hline
+	C6			& 4..6			& \Sexpr{mos_iqu_with_sd_by_condition("E5", "6", 14)}\\
+ \end{tabulary}
+ \caption{\autoref{hypo:number}: \ac{MOS} of multi-episodic judgments after the 6th episode for experiment E5 and E2a.}
+	\label{tab:field:hyponumber}
+\end{table}
+
+\subsubsection{\autoref{hypo:position}: Impact of Position}
+
+\begin{table}[h!]
+\centering
+ \begin{tabulary}{\columnwidth}{c|c|C|C}
+	Condition   & LP episode(s) 	& E4 & E5 \\
+	\midrule
+	C1			& 4				& \Sexpr{mos_iqu_with_sd_by_condition("E4", "1", 14)} & \Sexpr{mos_iqu_with_sd_by_condition("E5", "1", 14)}\\
+	\hline
+	C3			& 6				& - & \Sexpr{mos_iqu_with_sd_by_condition("E5", "3", 14)}\\
+	\hline
+	\hline
+	C4			& 4..5			& \Sexpr{mos_iqu_with_sd_by_condition("E4", "4", 14)} & \Sexpr{mos_iqu_with_sd_by_condition("E5", "4", 14)}\\
+	\hline
+	C5a 			& 5..6			& - & \Sexpr{mos_iqu_with_sd_by_condition("E5", "5a", 14)}\\
+ \end{tabulary}
+ \caption{\autoref{hypo:position}: \ac{MOS} of multi-episodic judgment after the 6th usage episode for experiment E5.}
+ \label{tab:field:hypoposition}
+\end{table}
+
+\subsubsection{\autoref{hypo:consecutive}: Consecutive vs. Non-consecutive \ac{LP} Episodes}
+
+\begin{table}[h!]
+\centering
+ \begin{tabulary}{\columnwidth}{c|c|C}
+	Condition   & LP episode(s) 	& E5 \\
+	\midrule
+	C3			& 6				& \Sexpr{mos_iqu_with_sd_by_condition("E5", "3", 14)}\\
+	\hline
+	\hline
+	C4			& 4..5			& \Sexpr{mos_iqu_with_sd_by_condition("E5", "4", 14)}\\
+	\hline
+	C8			& 4, 5			& \Sexpr{mos_iqu_with_sd_by_condition("E5", "8", 14)}\\
+	\hline
+	C5a			& 5..6			& \Sexpr{mos_iqu_with_sd_by_condition("E5", "5a", 14)}\\
+	\hline
+	\hline
+	C1			& 4				& \Sexpr{mos_iqu_with_sd_by_condition("E5", "1", 14)}\\
+ \end{tabulary}
+ \caption{\autoref{hypo:position}: \ac{MOS} of multi-episodic judgment after the 6th usage episode for experiment E5.}
+ \label{tab:field:hypoposition}
+\end{table}
+
+\section{Excurse: Retaining Information}
 %Can subjects recall
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \section{Cross-service QoE}
 %BLABLABLA

@@ -1,4 +1,5 @@
 <<echo=F, cache=F, results='asis'>>=
+timeseries = read.csv("data/data_minimal.csv")
 source('R_eval.R')
 @
 
@@ -273,7 +274,7 @@ Experiment E1 was conducted  with \unit[59]{female} and \unit[40]{male} particip
 This experiment was conducted from April 2014 until August 2015.
 Experiment E2a was conducted with \unit[65]{female} and \unit[35]{male} participants aging from of 18 to \unit[50]{years} ($\mu=26.1$, $\sigma=4.6$). %TODO Ist falsch!
 This experiment was conducted from August 2014 until March 2015.
-In experiment E1 participants received \unit[15]{EUR} as compensation and participation in experiments E2a, E2b, and E3 was compensated with \unit[10]{EUR}.
+In experiment E1 participants received \unit[20]{EUR} as compensation and participation in experiments E2a, E2b, and E3 was compensated with \unit[10]{EUR}.
 
 %TODO Add E2b and E3
 
@@ -283,7 +284,6 @@ The interquartile range is, in fact, a rather conservative criteria.
 However, due to the lack of ground-truth on episodic judgments in a usage multi-episodic case, participants should be only removed, if severe differences occur.
 For none participants of the four experiments this criteria was met and thus none was excluded from the data analysis.
 
-In all four experiments overall 310 participants 
 \autoref{tab:lab:participants} gives an overview on participants per condition.
 
 \begin{table}

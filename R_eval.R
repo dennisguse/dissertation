@@ -1,6 +1,4 @@
-timeseries = read.csv("data/data_minimal.csv")
 attach(timeseries)
-
 mean_sd <- function(d, precision=1) {
  paste(format(round(mean(d, na.rm=T), precision), nsmall=precision), " (", format(round(sd(d, na.rm=T), precision), nsmall=precision), ")", sep = "")
 }
@@ -27,9 +25,15 @@ mos_iqu_with_sd_by_condition <- function(experiment_filter, condition_filter=uni
  mean_sd(d)
 }
 mos_iqu_with_sd_by_condition("E1", 4, 3)
-mos_qu_with_sd_by_condition("E2a", "LP", "2b", 5)
+mos_qu_with_sd_by_condition("E1", "LP", "2b", 5)
 
-mos_iqu_with_sd_by_condition("E2b", "5", 6, "telephony")
+mos_iqu_with_sd_by_condition("E2b", "5a0", 6, "telephony")
+mos_iqu_with_sd_by_condition("E2b", "5a4", 6, "telephony")
 
 mos_iqu_with_sd_by_condition("E2b", "0", 6, "video")
 mos_iqu_with_sd_by_condition("E2b", "4", 6, "video")
+
+participants("E3")
+participants("E4")
+participants("E5")
+mos_iqu_with_sd_by_condition("E5", "5a", 14)
