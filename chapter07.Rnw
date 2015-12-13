@@ -1,6 +1,7 @@
-<<echo=F, cache=F, results='asis'>>=
+<<setup, echo=F, cache=F, results='asis'>>=
 timeseries = read.csv("data/data_minimal.csv")
 source('R_eval.R')
+source('R_plot.R')
 @
 
 \addtocontents{toc}{\protect\newpage}
@@ -329,6 +330,15 @@ For both studies each condition was individually checked for inconsistent partic
 A participant is considered inconsistent, if more than two episodic QoE judgments are beyond 1.5 $\times$ \emph{interquartile range}.
 No participant met this criteria and thus none was excluded from further data analysis.
 
+\begin{figure}
+	\centering
+	<<echo=F, fig.height=3>>=
+		ggplot_timeseries_create(subset(timeseries, experiment=="E1" & condition=="7")) + geom_boxplot(aes(factor(id), y=QU), na.rm=T)
+	@
+	\caption{Boxplot of episodic judgments for E1:C7. The 5th episode is presented in \ac{LP}, the 6th episode in \ac{MP}, and all other episodes in \ac{HP}.}
+	\label{img:lab:e1condition7boxplot}
+\end{figure}
+
 \subsubsection{Experiment E1}
 Then episodic QoE judgments of all conditions are compared to investigate for an influence of the applied between-subject design.
 %In fact, in prior work a negative influence on the episodic QoE judgment of a HP episode that follow one or more LP episode(s) is sometimes observed \citep{moller_single-call_2011, guse_macro-temporal_2013}.
@@ -523,7 +533,7 @@ Conditions C2a and C4 present one, respectively, two LP episodes followed by one
 \centering
  \begin{tabulary}{\columnwidth}{c|C|C}
 	Condition	& \multicolumn{2}{c|}{Multi-episodic Judgment per Service} \\
-				& \ac{LST} 	& \ac{VoD} & \\
+				& \ac{LST} 	& \ac{VoD} \\
 	\midrule 
 	C0			& \Sexpr{mos_iqu_with_sd_by_condition("E2b", "5a0", 6, "telephony")} & \Sexpr{mos_iqu_with_sd_by_condition("E2b", "0", 6, "video")}\\
 	\hline
