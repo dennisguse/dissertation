@@ -22,7 +22,7 @@ This chapter will also include an overview of limitations and practical knowledg
 %Overview on Experiments
 \begin{table}[h]
 	\begin{tabulary}{\textwidth}{C|C|C|C}
-	Experiment	& Service Type 				& Tasks								& Days & Participants \\
+	Experiment	& Service Type 				& Tasks								& Days \\
 	\hline
 	E4a			& Telephony	and \ac{VoD}		& Two-party conversation (\ac{SCT})	& 14   \\
 	\hline

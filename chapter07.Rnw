@@ -519,7 +519,7 @@ Conditions C2a and C4 present one, respectively, two LP episodes followed by one
 	Condition	& \multicolumn{2}{c|}{6th usage episode} & Multi-episodic Judgment\\
 				& Duration 	& Episodic Judgment & \\
 	\midrule 
-	C2a			& similar 	& \Sexpr{mos_qu_with_sd_by_condition("E3", "LP", "2a", 5)}	& \Sexpr{mos_iqu_with_sd_by_condition("E3", "2a", 6)} \\
+	C2a			& similar 	& \Sexpr{mos_qu_with_sd_by_condition("E3", "LP", "2a", 5)}		& \Sexpr{mos_iqu_with_sd_by_condition("E3", "2a", 6)} \\
 	\hline
 	C2b			& doubled	& \Sexpr{mos_qu_with_sd_by_condition("E3", "LP", "2b", 5)} 	& \Sexpr{mos_iqu_with_sd_by_condition("E3", "2b", 6)} \\
  \end{tabulary}
@@ -531,15 +531,17 @@ Conditions C2a and C4 present one, respectively, two LP episodes followed by one
 
 \begin{table}[h!]
 \centering
- \begin{tabulary}{\columnwidth}{c|C|C}
-	Condition	& \multicolumn{2}{c|}{Multi-episodic Judgment per Service} \\
-				& \ac{LST} 	& \ac{VoD} \\
+ \begin{tabulary}{\columnwidth}{c|C|C|C}
+	Experiment & Condition \ac{VoD}	& \multicolumn{2}{c}{Multi-episodic Judgment per Service} \\
+				& 					& \ac{LST} 															& \ac{VoD} \\
 	\midrule 
-	C0			& \Sexpr{mos_iqu_with_sd_by_condition("E2b", "5a0", 6, "telephony")} & \Sexpr{mos_iqu_with_sd_by_condition("E2b", "0", 6, "video")}\\
+	E2a			& -					& \Sexpr{mos_iqu_with_sd_by_condition("E2a", "5a", 6, "telephony")}	& - \\
 	\hline
-	C4			& \Sexpr{mos_iqu_with_sd_by_condition("E2b", "5a4", 6, "telephony")} & \Sexpr{mos_iqu_with_sd_by_condition("E2b", "4", 6, "video")}\\
+	E2b			& C0					& \Sexpr{mos_iqu_with_sd_by_condition("E2b", "5a0", 6, "telephony")}	& \Sexpr{mos_iqu_with_sd_by_condition("E2b", "0", 6, "video")}\\
+	\hline
+	E2b			& C4					& \Sexpr{mos_iqu_with_sd_by_condition("E2b", "5a4", 6, "telephony")}	& \Sexpr{mos_iqu_with_sd_by_condition("E2b", "4", 6, "video")}\\
  \end{tabulary}
- \caption{\autoref{hypo:hypoindependent}: \ac{MOS} of multi-episodic judgment after the 6th usage episode for E3.}
+ \caption{\autoref{hypo:hypoindependent}: \ac{MOS} of multi-episodic judgment after the 6th usage episode for E2a and E2b.}
  \label{tab:lab:hypoindependent}
 \end{table}
 
