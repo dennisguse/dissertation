@@ -357,95 +357,28 @@ A significant difference between conditions for episodic judgments for \ac{LP} e
 
 \subsubsection{Experiment E2a and E2b}
 For E2a significant differences between conditions are found (\Sexpr{kruskal(QU~condition, "E2a", "HP", unique(timeseries[["condition"]]), c(1:3))}).
-A post-hoc test shows a significant difference between condition C4 (MOS=$\Sexpr{mos_qu_with_sd_by_condition("E2a", "HP", "4", c(1:3))}$) and C6 (MOS=$\Sexpr{mos_qu_with_sd_by_condition("E2a", "HP", "7", c(1:3))}$) ($p=\Sexpr{wilcox.pairwise.print(QU~condition, "E2a", "HP", unique(timeseries[["condition"]]), c(1:3))[["p.value"]][5,4]}$, \Sexpr{wilcox(QU~condition, "E1", "HP", c("4", "7"), c(1:3), diffOnly=T)}).
+A post-hoc test shows a significant difference between condition C4 (MOS=$\Sexpr{mos_qu_with_sd_by_condition("E2a", "HP", "4", c(1:3))}$) and C6 (MOS=$\Sexpr{mos_qu_with_sd_by_condition("E2a", "HP", "6", c(1:3))}$) ($p=\Sexpr{wilcox.pairwise.print(QU~condition, "E2a", "HP", unique(timeseries[["condition"]]), c(1:3))[["p.value"]][5,4]}$, \Sexpr{wilcox(QU~condition, "E1", "HP", c("4", "7"), c(1:3), diffOnly=T)}).
 For E2a no significant differences are observed for \ac{LP} between conditions (\Sexpr{kruskal(QU~condition, "E2a", "LP", unique(timeseries[["condition"]]))}).
 
-Significant difference are also found between conditions C5a and C5b for E2b for telephony (\Sexpr{wilcox(QU~condition, "E2b", "HP", c("5a0", "5a4"), c(1:3))}), but not for \ac{VoD} service \Sexpr{wilcox(QU~condition, "E2b", "HP", c("0", "4"), c(1:3))}.
+Significant difference are also found between conditions C5a and C5b for E2b for telephony (\Sexpr{wilcox(QU~condition, "E2b", "HP", c("5a0", "5a4"), c(1:3))}), but not for \ac{VoD} service (\Sexpr{wilcox(QU~condition, "E2b", "HP", c("0", "4"), c(1:3))}).
 Similar to E2a no significant differences are observed for the two conditions between \ac{LP} for telephony (\Sexpr{wilcox(QU~condition, "E2b", "LP", c("5a0", "5a4"))}).
 
 \subsubsection{Experiment E3}
 For experiment E3 no significant differences are found for \ac{HP} between conditions (\Sexpr{wilcox(QU~condition, "E3", "HP", unique(timeseries[["condition"]]), c(1:3))}).
 Also no significant difference is observed for \ac{LP} between conditions (\Sexpr{wilcox(QU~condition, "E3", "LP", unique(timeseries[["condition"]]))}).
 
-\subsubsection{Experiment E1 vs. E2a}
+\subsubsection{Impact of Usage Situation: Experiment E1 vs. E2a}
 Comparing the episodic judgments between experiment E1 and E2a allows to investigate a potential difference between the two usage situation, \eg, two-party conversation vs. passive listening.
 Episodic judgments are significant different between E1 and E2a for \ac{HP} (\Sexpr{wilcox(QU~experiment, c("E1", "E2a"), "HP", unique(timeseries[["condition"]]), c(1:3))}) as well as \ac{LP} (\Sexpr{wilcox(QU~experiment, c("E1", "E2a"), "LP", unique(timeseries[["condition"]]))}).
 
-
-
-
-
-\section{BAUM}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Comparing episodic QoE judgments between Study~1 and Study~2 significant differences are found for HP ($W=41868, p=0.004675,\triangle=-0.2$, two-tailed) and also for LP ($W=11803.5, p=0.00005542,\triangle=-0.3$, two-tailed).
-For HP episodes Study~1 yielded $MOS=4.1$ and Study~2 $MOS=4.3$.
-For LP episodes Study~1 yielded $MOS=1.4$ and Study~2 $MOS=1.8$.
-
-Study~1 resulted in lower episodic QoE judgments for both HP and LP than Study~2.
+For \ac{HP} episodes E1 yielded $\Sexpr{mos_qu_with_sd_by_condition("E2a", "HP", unique(timeseries[["condition"]]), c(1:3))}$ and E2a $\Sexpr{mos_qu_with_sd_by_condition("E2a", "HP", unique(timeseries[["condition"]]))}$.
+For \ac{LP} episodes E1 yielded $\Sexpr{mos_qu_with_sd_by_condition("E1", "LP", unique(timeseries[["condition"]]))}$ and E2a $\Sexpr{mos_qu_with_sd_by_condition("E2a", "LP", unique(timeseries[["condition"]]))}$
+E1 resulted in lower episodic QoE judgments for both \ac{HP} and \ac{LP} than E2a.
 This indicates that the usage situation influences the formation process of episodic QoE, although the effect on episodic QoE judgments is rather small.
-
-\subsubsection{Experiments E2a and Experiments E2b}
-
-\subsubsection{Experiments E3}
-
-\begin{figure} %TODO Add exemplary plot of (C7)
-%	\includegraphics[width=1\columnwidth]{fig/e1-condition7-boxplot}
-	\caption{Boxplot for episodic QoE judgments of C7 for E1.
-	The 5th usage episode is presented in LP and the 6th in MP.}
-	\label{img:lab:boxplotE1c7}
-\end{figure}
-
-%\begin{table}
-
-%	\caption{}
-%\end{table}
-
-%TODO Insert table of all studies by performance level!
-
-
-\subsubsection{Consistency per Experiment}
-HP vs. MP vs. LP
-
 
 
 %Order effect (Moeller): HP following LP
 %Increase (Moeller): 1 vs last
-
-\subsubsection{Impact of Usage Situation}
 
 
 \subsection{Multi-episodic Judgments}
