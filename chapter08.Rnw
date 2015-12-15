@@ -1,4 +1,4 @@
-<<echo=F, cache=F, results='asis'>>=
+<<setup, echo=F, cache=F, results='hide'>>=
 timeseries = read.csv("data/data.csv")
 source('R_eval.R')
 @
@@ -22,11 +22,11 @@ This chapter will also include an overview of limitations and practical knowledg
 %Overview on Experiments
 \begin{table}[h]
 	\begin{tabulary}{\textwidth}{C|C|C|C}
-	Experiment	& Service Type 				& Tasks								& Days & Participants \\
+	Experiment	& Service Type 				& Tasks								& Days \\
 	\hline
-	E4a			& Telephony	and \ac{VoD}		& Two-party conversation (\ac{SCT})	& 14   \\
+	E4a			& Telephony	and \ac{VoD}	& Two-party conversation (\ac{SCT})	& 14   \\
 	\hline
-	E4b			& Telephony	and \ac{VoD}		& Two-party conversation (\ac{SCT})	& 14   \\
+	E4b			& Telephony	and \ac{VoD}	& Two-party conversation (\ac{SCT})	& 14   \\
 	\hline
 	E5			& \ac{VoD} and \ac{AoD}		& Audiobook							& 14   \\
 	E6			& Telephony					& Two-party conversation (\ac{SCT})	& 7

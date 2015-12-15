@@ -84,18 +84,18 @@
 \pagenumbering{arabic}\setcounter{page}{1}
 %TODO \part{Introduction and State of the Art}\cleardoublepage
 
-\include{chapter01}
-\include{chapter02}
-\include{chapter03}
-\include{chapter04}
+%\include{chapter01}
+%\include{chapter02}
+%\include{chapter03}
+%\include{chapter04}
 
 %TODO \part{Towards Multi-episodic QoE}\cleardoublepage
-\include{chapter05}
-\include{chapter06}
+%\include{chapter05}
+%\include{chapter06}
 
 \include{chapter07}
-\include{chapter08}
-\include{chapter09}
+%\include{chapter08}
+%\include{chapter09}
 
 \pagenumbering{Roman}\setcounter{page}{1}
 %\part{Appendix}\cleardoublepage
