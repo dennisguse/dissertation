@@ -84,7 +84,7 @@ Differences between conditions can be evaluated by comparing multi-episodic judg
  C8         & HP 	& \textbf{LP} & HP          & \textbf{LP} & - \\
  \end{tabulary}
  \caption{Overview of all conditions with the episodic performance of all usages episodes.
- Non-HP episodes are in \textbf{bold} (\ac{LP}) and \textit{italic} (\ac{MP}).}
+ Non-\ac{HP} episodes are in \textbf{bold} (\ac{LP}) and \textit{italic} (\ac{MP}).}
  \label{tab:lab:hypothesesComparison}
 \end{table}
 
