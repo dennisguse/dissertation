@@ -406,9 +406,6 @@ Conditions C2a and C4 present one, respectively, two LP episodes followed by one
 \autoref{tab:lab:hyponumber} shows the multi-episodic QoE judgment after the 6th usage episode for these five conditions evaluated in experiment E1 and experiment E2a.
 Conditions C3, C5a, and C6 are significant different for experiment E1 (\Sexpr{kruskal(IQU~condition, "E1", unique(timeseries[["performance_level"]]), c("3", "5a", "6"), c(6))}) as well as experiment E2a (\Sexpr{kruskal(IQU~condition, "E2a", unique(timeseries[["performance_level"]]), c("3", "5a", "6"), c(6))}).
 
-
-as well as C2a and C4 (\Sexpr{wilcox(IQU~condition, "E1", unique(timeseries[["performance_level"]]), c("2a", "4"), c(6))}).
-
 \begin{table}[h!]
 \centering
  \begin{tabulary}{\columnwidth}{c|c|C|C}
