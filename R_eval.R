@@ -1,6 +1,7 @@
 attach(timeseries)
 mean_sd <- function(d, precision=1) {
  paste0(format(round(mean(d, na.rm=T), precision), nsmall=precision), " (", format(round(sd(d, na.rm=T), precision), nsmall=precision), ")")
+ #sprintf("%f (%f)", mean(d, na.rm=T), sd(d, na.rm=T))
 }
 
 
@@ -58,10 +59,11 @@ wilcox <- function(formula=QU~condition, experiment_filter, performance_level_fi
  } else {
   if (r$alternative == "two.sided") r$alternative = ""
   else r$alternative = ", one-sided"
-  
-  if (r$p.value < 0.0001) paste0("$W=", round(r$statistic, 4), "$, $p<0.0001$, $\\triangle=", format(round(r$estimate, 2), nsmall=2), "$", r$alternative) 
-  else paste0("$W=", round(r$statistic, 4), "$, $p=", round(r$p.value, 4), "$, $\\triangle=", format(round(r$estimate, 2), nsmall=2), "$", r$alternative) 
- }
+
+  if (r$p.value > 0.05) sprintf("$W=%.2f$, $p=%.2f$ %s", r$statistic, r$p.value, r$alternative)
+  else if (r$p.value < 0.001) sprintf("$W=%.2f$, $p<0.001$, $\\triangle=%.2f$ %s", r$statistic, r$estimate, r$alternative)
+  else sprintf("$W=%.2f$, $p=%.2f$, $\\triangle=%.2f$  %s", r$statistic, r$p.value, r$estimate, r$alternative)
+  }
 }
 wilcox(QU~performance, "E1",  c("HP", "LP"))
 wilcox(QU~performance, "E1",  c("HP", "LP"), alternative="greater")

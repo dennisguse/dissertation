@@ -54,17 +54,10 @@ E4a and E4b
 
 \section{Design}
 
-
-\subsection{Discussion}
-
-
-\section{Design}
-
-
 \section{Data Analysis}
 
 
-\subsubsection{\autoref{hypo:number}: Number of LP Episodes}
+\subsubsection{\autoref{hypo:number}: Number of \ac{LP} Episodes}
 
 \begin{table}[h!]
 \centering
