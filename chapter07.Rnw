@@ -11,7 +11,7 @@ First question: can multi-episodic QoE be studied in "short" laboratory study?
 I with my laboratory studies on with one speech telephony service focusing on effects of position(s) of degraded usage episodes (the finished Journal paper) and the already finished extensions.
 \end{chapter-abstract}
 
-For the evaluation of the six hypotheses with regard to multi-episodic perceived quality for sequential use in one session four experiments were conducted.
+For the evaluation of the hypotheses with regard to multi-episodic perceived quality for sequential use in one session four experiments were conducted.
 These experiments follow the same procedure, but differ in usage situation and, respectively, service type as shown in \autoref{tab:lab:experiments}.
 
 %Overview on Experiments
