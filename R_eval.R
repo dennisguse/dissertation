@@ -60,9 +60,9 @@ wilcox <- function(formula=QU~condition, experiment_filter, performance_level_fi
   if (r$alternative == "two.sided") r$alternative = ""
   else r$alternative = ", one-sided"
 
-  if (r$p.value > 0.05) sprintf("$W=%.2f$, $p=%.2f$ %s", r$statistic, r$p.value, r$alternative)
-  else if (r$p.value < 0.001) sprintf("$W=%.2f$, $p<0.001$, $\\triangle=%.2f$ %s", r$statistic, r$estimate, r$alternative)
-  else sprintf("$W=%.2f$, $p=%.2f$, $\\triangle=%.2f$  %s", r$statistic, r$p.value, r$estimate, r$alternative)
+  if (r$p.value > 0.05) sprintf("$W=%.2f$, $p=%.2f$%s", r$statistic, r$p.value, r$alternative)
+  else if (r$p.value < 0.001) sprintf("$W=%.2f$, $p<0.001$, $\\triangle=%.2f$%s", r$statistic, r$estimate, r$alternative)
+  else sprintf("$W=%.2f$, $p=%.2f$, $\\triangle=%.2f$%s", r$statistic, r$p.value, r$estimate, r$alternative)
   }
 }
 wilcox(QU~performance, "E1",  c("HP", "LP"))
