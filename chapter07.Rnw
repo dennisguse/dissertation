@@ -555,7 +555,7 @@ For multi-episodic judgments significant differences are found for condition C5b
 A paired post-hoc tests finds significant differences for condition C5b (3rd and 6th: $\Sexpr{wilcox.pairwise.print(QU~id, "E1", unique(timeseries[["performance_level"]]), "5b", c(3, 6, 9), paired=T)[["p.value"]][1,1]}$, 3rd and 9th: $\Sexpr{wilcox.pairwise.print(QU~id, "E1", unique(timeseries[["performance_level"]]), "5b", c(3, 6, 9), paired=T)[["p.value"]][2,1]}$ as well as 3rd and 9th: $\Sexpr{wilcox.pairwise.print(QU~id, "E1", unique(timeseries[["performance_level"]]), "5b", c(3, 6, 9), paired=T)[["p.value"]][2,2]}$).
 For condition C7 significant differences are found between the 3rd and 6th judgment ($\Sexpr{wilcox.pairwise.print(QU~id, "E1", unique(timeseries[["performance_level"]]), "5b", c(3, 6, 9), paired=T)[["p.value"]][2,2]}$) as well as the 6th and 9th judgment = ($\Sexpr{wilcox.pairwise.print(QU~id, "E1", unique(timeseries[["performance_level"]]), "5b", c(3, 6, 9), paired=T)[["p.value"]][1,1]}$).
 The 3rd and 9th judgment are not significant different ($\Sexpr{wilcox.pairwise.print(QU~id, "E1", unique(timeseries[["performance_level"]]), "5b", c(3, 6, 9), paired=T)[["p.value"]][2,1]}$).
-The final multi-episodic judgments of condition C5b and condition C7 are significant different (\Sexpr{wilcox(IQU~condition, "E1", unique(timeseries[["performance_level"]]), c("5b", "7"), c(9), paired=T)}).
+The final multi-episodic judgments of condition C5b and condition C7 are significant different ( \Sexpr{wilcox(IQU~condition, "E1", unique(timeseries[["performance_level"]]), c("5b", "7"), c(9))}).
 
 \begin{table}[h!]
 \centering
@@ -577,11 +577,21 @@ For condition C5 an improvement is observed, but the final multi-episodic QoE ju
 
 \subsubsection{\autoref{hypo:duration}: Duration of \ac{LP} Episode}
 
+In experiment E3 the impact of varying duration of one \ac{LP} episode on the following multi-episodic judgment is investigated (\cf, \autoref{hypo:duration}).
+It is hypothesized that increasing the duration of an \ac{LP} episode will lead to a higher reduction in multi-episodic judgment than presenting a shorter duration.
+The two conditions C2a and C2b both present the 5th episode in \ac{LP}.
+In C2a all six episodes have similar duration.
+C2b is similar to C2a except that the 5th episode has longer duration, \eg, doubled.
+\autoref{tab:lab:hypoduration} shows the episodic judgment of this episode and the final multi-episodic of the two conditions.
+The episodic judgments of the 5th episode are not significant different between the two conditions (\Sexpr{wilcox(QU~condition, "E3", unique(timeseries[["performance_level"]]), c("2a", "2b"), c(5))}).
+The final multi-episodic judgments of the two conditions are also not significant different (
+\Sexpr{wilcox(IQU~condition, "E3", unique(timeseries[["performance_level"]]), c("2a", "2b"), c(6))}).
+
 \begin{table}[h!]
 \centering
  \begin{tabulary}{\columnwidth}{c|C|C|C}
-	Condition	& \multicolumn{2}{c|}{6th usage episode} & Multi-episodic Judgment\\
-				& Duration 	& Episodic Judgment & \\
+	Condition	& \multicolumn{2}{c|}{5th usage episode} & Multi-episodic Judgment\\
+					& Duration 	& Episodic Judgment & \\
 	\midrule 
 	C2a			& similar 	& \Sexpr{mos_qu_with_sd_by_condition("E3", "LP", "2a", 5)}		& \Sexpr{mos_iqu_with_sd_by_condition("E3", "2a", 6)} \\
 	\hline
@@ -591,13 +601,15 @@ For condition C5 an improvement is observed, but the final multi-episodic QoE ju
  \label{tab:lab:hypoduration}
 \end{table}
 
+%TODO Add statements? + Duration length + Different in length?
+
 \subsubsection{\autoref{hypo:services}: Services are Judged Independent}
 
 \begin{table}[h!]
 \centering
  \begin{tabulary}{\columnwidth}{c|C|C|C}
 	Experiment & Condition \ac{VoD}	& \multicolumn{2}{c}{Multi-episodic Judgment per Service} \\
-				& 					& \ac{LST} 															& \ac{VoD} \\
+					& 						& \ac{LST} 															& \ac{VoD} \\
 	\midrule 
 	E2a			& -					& \Sexpr{mos_iqu_with_sd_by_condition("E2a", "5a", 6, "telephony")}	& - \\
 	\hline
