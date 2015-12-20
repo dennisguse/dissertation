@@ -86,11 +86,11 @@ wilcox.pairwise.table <- function(formula=IQU~condition, experiment_filter, perf
  
  return (r)
 }
-wilcox.pairwise.print <- function(formula=IQU~condition, experiment_filter, performance_level_filter=unique(timeseries$performance_level), condition_filter=unique(timeseries$condition), id_filter=unique(timeseries$id)) { #, alternative="two.sided", paired=F, p.adjust.method = "holm"
+wilcox.pairwise.print <- function(formula=IQU~condition, experiment_filter, performance_level_filter=unique(timeseries$performance_level), condition_filter=unique(timeseries$condition), id_filter=unique(timeseries$id), alternative="two.sided", paired=F) { #, alternative="two.sided", paired=F, p.adjust.method = "holm"
  d = subset(timeseries, experiment==experiment_filter & performance_level %in% performance_level_filter & condition %in% condition_filter & id %in% id_filter)
  
  f = all.names(formula, functions=F)
- r = pairwise.wilcox.test(d[[f[1]]], d[[f[2]]], exact=F) 
+ r = pairwise.wilcox.test(d[[f[1]]], d[[f[2]]], exact=F, alternative = alternative, paired = paired) 
 }
 
 
