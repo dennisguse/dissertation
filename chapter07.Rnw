@@ -7,7 +7,7 @@ timeseries=timeseries[-which(timeseries$experiment == "E1" & timeseries$conditio
 @
 
 \addtocontents{toc}{\protect\newpage}
-\chapter{Experiments: One Session}\label{chap:lab}
+\chapter{Multi-episodic Perceived Quality in One Session}\label{chap:lab}
 \begin{chapter-abstract}
 First question: can multi-episodic QoE be studied in "short" laboratory study?
 I with my laboratory studies on with one speech telephony service focusing on effects of position(s) of degraded usage episodes (the finished Journal paper) and the already finished extensions.
@@ -55,8 +55,6 @@ Overall 10 conditions were created that allow to investigate the six hypotheses 
 All conditions are shown in \autoref{tab:lab:hypothesesComparison}.
 Differences between conditions can be evaluated by comparing multi-episodic judgments that were taken after the same usage episode, \ie participants experienced the same number of usage episodes so far.
 
-%TODO Abkuerzung aller Conditions C1-C7?
-
 \begin{table}[h]
  \centering
  \begin{tabulary}{\textwidth}{C|C||C|C|C||C||}
@@ -93,7 +91,7 @@ Differences between conditions can be evaluated by comparing multi-episodic judg
 \autoref{hypo:number}, \ie, increasing the number of \ac{LP} episodes reduces the following multi-episodic judgment, can be investigated by comparing the results of conditions C3, C5 (a+b) and C6 as well as conditions C2a and C4.
 The former presents an increasing number of \ac{LP} episodes directly before the multi-episodic judgment whereas the latter presents the last episode before the multi-episodic judgment in \ac{HP}.
 
-\autoref{chap:lab}ef{hypo:position} focuses on the position of the \ac{LP} episodes towards the following multi-episodic judgment.
+\autoref{hypo:position} focuses on the position of the \ac{LP} episodes towards the following multi-episodic judgment.
 Following the so-called recency effect, it is expected that increasing the number of \ac{HP} episodes before the multi-episodic judgment reduces the negative effect of presented \ac{LP} episodes.
 This can be investigated by comparing the multi-episodic judgment of conditions C1, C2, and C3 as well as conditions C4 and C5 (a+b) for one and, respectively, two LP usage episodes.
 
@@ -140,9 +138,9 @@ Introducing degradations by coding and compression alone enables to apply those 
 %TODO! BE CAREFUL with MOS here!
 \ac{HP} can be properly chosen by selecting a current configuration that provides state-of-the-art performance level.
 For speech telephony this is at the time of this writing the transmission in wideband with proper loudness, but without loss, noise, echo, reverberation or other negative factors.
-For digital transmission of wideband speech the codec \emph{G.722} with Mode 1 (\unit[64]{kbit/s})~\cite{itu-t_g.722} is often used reference condition as it achieves very similar quality judgments like pure wideband filtered speech signals. %TODO Add refs, Moeller, Raake, Marcel
+For digital transmission of wideband speech the codec \emph{G.722} with Mode 1 (\unit[64]{kbit/s})~\citep{itu-t_g.722} is often used reference condition as it achieves very similar quality judgments like pure wideband filtered speech signals. %TODO Add refs, Moeller, Raake, Marcel
 %Furthermore, this codec is although it is rather old, but still in active use.
-In subjective experiments G.722 with Mode 1 typically achieves a \ac{MOSLQ} around 4.5 on 5-point \ac{ACR} scale.
+In subjective experiments G.722 with Mode 1 typically achieves a \ac{MOSLQ} around 4.5 on 5-point \ac{ACR} scale. %TODO REF
 
 For \ac{LP} the speech signal the \emph{LPC-10}\footnote{LPC-10 is also known as \emph{FS-1015} as well as \emph{STANAG 4198}.} codec is selected. %TODO REF
 This codec is designed for low bitrate radio transmission focusing on intelligibility rather than naturalness.
@@ -504,7 +502,7 @@ The latter presents the 4th and 6th episode in \ac{LP} .
 %	\hline
 	C4			& 4..5			& \Sexpr{mos_iqu_with_sd_by_condition("E2a", "4", 6)}\\
 	\hline
-	C8			& 4 and 6		& \Sexpr{mos_iqu_with_sd_by_condition("E2a", "8", 6)}\\
+	C8			& 4 and 6	& \Sexpr{mos_iqu_with_sd_by_condition("E2a", "8", 6)}\\
 	\hline
 	C5a		& 5..6			& \Sexpr{mos_iqu_with_sd_by_condition("E2a", "5a", 6)}\\
  \end{tabulary}
@@ -535,11 +533,11 @@ Condition C2a and C7 are not significant different (\Sexpr{wilcox.pairwise.print
 	Condition   & \multicolumn{2}{c|}{6th usage episode} & Multi-episodic Judgment\\
 	            & Performance 	& Episodic Judgment & \\
 	\midrule 
-	C2a			& \ac{HP}		& \Sexpr{mos_qu_with_sd_by_condition("E1", "HP", "2a", 6)}		& \Sexpr{mos_iqu_with_sd_by_condition("E1", "2a", 6)} \\
+	C2a		& \ac{HP}		& \Sexpr{mos_qu_with_sd_by_condition("E1", "HP", "2a", 6)}	& \Sexpr{mos_iqu_with_sd_by_condition("E1", "2a", 6)} \\
 	\hline
-	C7			& \ac{MP}		& \Sexpr{mos_qu_with_sd_by_condition("E1", "MP", "7", 6)} 			& \Sexpr{mos_iqu_with_sd_by_condition("E1", "7", 6)} \\
+	C7			& \ac{MP}		& \Sexpr{mos_qu_with_sd_by_condition("E1", "MP", "7", 6)} 	& \Sexpr{mos_iqu_with_sd_by_condition("E1", "7", 6)} \\
 	\hline
-	C5b	& \ac{LP}				& \Sexpr{mos_qu_with_sd_by_condition("E1", "LP", "5b", 6)} 	& \Sexpr{mos_iqu_with_sd_by_condition("E1", "5b", 6)} \\
+	C5b		& \ac{LP}		& \Sexpr{mos_qu_with_sd_by_condition("E1", "LP", "5b", 6)} 	& \Sexpr{mos_iqu_with_sd_by_condition("E1", "5b", 6)} \\
  \end{tabulary}
  \caption{\autoref{hypo:strength}: \ac{MOS} of multi-episodic judgment after the 6th usage episode for E1.}
  \label{tab:lab:hypostrength}
@@ -616,7 +614,7 @@ In fact, no significant difference has been found between experiment E2a and exp
 
 The multi-episodic judgment of the \ac{VoD} service is significant different between the two conditions (\Sexpr{wilcox(IQU~condition, "E2b", unique(timeseries[["performance_level"]]), c("0", "4"), c(6))}).
 For the multi-episodic judgment of the speech telephony service no significant difference is found due to the condition of the \ac{VoD} service (\Sexpr{wilcox(IQU~condition, "E2b", unique(timeseries[["performance_level"]]), c("5a0", "5a4"), c(6))}).
-However, the multi-episodic judgments of the speech telephony service for condition C5 are significant different between experiment E2a and experiment E2b (\Sexpr{wilcox(IQU~experiment, c("E2a", "E2b"), unique(timeseries[["performance_level"]]), c("5a", "5a0", "5a4"), c(6) alternative="less")}). %TODO: "less" is not really nice here :D
+However, the multi-episodic judgments of the speech telephony service for condition C5 are significant different between experiment E2a and experiment E2b (\Sexpr{wilcox(IQU~experiment, c("E2a", "E2b"), unique(timeseries[["performance_level"]]), c("5a", "5a0", "5a4"), c(6), alternative="less")}). %TODO: "less" is not really nice here :D
 
 \begin{table}[h!]
 \centering
