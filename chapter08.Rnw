@@ -18,17 +18,15 @@ The main study will be the currently \textit{successfully} running Audio-on-dema
 This study is complemented by speech telephony (SIPGATE study) and QoMEX2014 study.
 This chapter will also include an overview of limitations and practical knowledge for \textit{successful} field trials.
 
-TODO: Remove E6? (No useful information derived)
-TODO: Remove E4b (No useful information derived)
+TODO: \section{Digression: Retaining Information}%Can subjects recall
 \end{chapter-abstract}
 
 \section{Introduction}
 For the investigation of multi-episodic perceived quality four experiments were conducted with duration from 7 to \unit[14]{days}.
 Those experiments follow the defined-use methodology presented by \citet{moller_single-call_2011}.
 The first two experiments focused on general feasibility of conducting field experiments\footnote{Here field experiment refers to an experiment conducted by the participants on their own in their "real" environment over several days, \ie, multiple sessions each with consisting of one episode.} on multi-episodic perceived quality with different services and potential issues. 
-In those three experiments participants each used two service.
 
-In experiment E6 and experiment E7 only one service was used, to investigate the hypotheses \autoref{hypo:number}, \autoref{hypo:position}, and \autoref{hypo:consecutive}.
+In experiment E6 only one service was used, to investigate the hypotheses \autoref{hypo:number}, \autoref{hypo:position}, and \autoref{hypo:consecutive}.
 In \autoref{tab:field:experiments} the service(s) and duration per experiment is shown.
 
 In the following first experiment E4a, E4b, and E5 are presented in detail as those form the basis for experiment E6 and E7.
@@ -38,18 +36,16 @@ This, however, has been found difficult as two participants needed to solve each
 In all those experiments two performance only were applied, \ie, \ac{HP} and \ac{LP}.
 
 \begin{table}[h]
-	\begin{tabulary}{\textwidth}{C|C|C|C}
-	Experiment	& Service Type 			& Tasks															& Days & Participants \\
+	\begin{tabulary}{\textwidth}{C|C|C|C|C}
+	Experiment	& Service Type 			& Tasks														& Days	& Participants \\
 	\midrule
-	E4		& Telephony	and \ac{VoD}	& Two-party conversation (\ac{SCT})	& 14	& \Sexpr{participants("E4a")}\\ %Study 1/E4a
-%	\hline
-%	E4b		& Telephony	and \ac{VoD}	& Two-party conversation (\ac{SCT})	& 14	& \Sexpr{participants("E4b")}\\ %Study 2 NO!
+	E4		& Telephony	and \ac{VoD}	& Two-party conversation (\ac{SCT})	& 14		& \Sexpr{participants("E4a")}\\ %Study 1/E4a
 	\hline
-	E5			& \ac{VoD} and \ac{AoD}	& Audiobook	and Video consumption		& 14	& \Sexpr{participants("E5")} \\ %Study 3
+	E5		& \ac{VoD} and \ac{AoD}	& Audiobook	and Video consumption		& 14		& \Sexpr{participants("E5")} \\ %Study 3
 	\hline
-	E6		& \ac{AoD}								& Audiobook													& 7 & \Sexpr{participants("E7")} %Study 14
+	E6		& \ac{AoD}								& Audiobook													& 7		& \Sexpr{participants("E6a")} %Study 14
 	\end{tabulary}
-	\caption{Preliminary experiments on multi-episodic QoE over multiple days.}
+	\caption{Experiments on multi-episodic QoE over multiple days.}
 	\label{tab:field:experiments}
 \end{table}
 
@@ -79,22 +75,21 @@ In the first condition only \ac{HP} episodes were presented for
 
 \section{Experiment E6}
 Experiment E6 complement the experiments on multi-episodic perceived quality in one session (\cf, \autoref{chap:lab}).
-In this experiment an \ac{AoD} service is used.
+In this experiment an \ac{AoD} service only is used.
 
 \begin{table}
 	\centering
 	\begin{tabular}{c|c|c}
-	Conditions & \multicolumn{2}{c}{Experiments} \\
-			& E6a		& E6b\\
+	Conditions & Experiment E6\\
 	\midrule
-	C1		& \Sexpr{participants("E6a", "1")}	&	\Sexpr{participants("E6b", "1")}	\\
-	C3		& -																&	\Sexpr{participants("E6b", "3")} \\
-	C4		& \Sexpr{participants("E6a", "4")}	&	\Sexpr{participants("E6b", "4")}	\\
-	C5a	& -																&	\Sexpr{participants("E6b", "5a")}\\
-	C6		& -																&	\Sexpr{participants("E6b", "6")}	 \\
-	C8		& -																&	\Sexpr{participants("E6b", "8")}  \\
+	C1		& \Sexpr{participants("E6a", "1")}	\\
+	C3		& \Sexpr{participants("E6a", "3")} \\
+	C4		& \Sexpr{participants("E6a", "4")}	\\
+	C5a	& \Sexpr{participants("E6a", "5a")}\\
+	C6		& \Sexpr{participants("E6a", "6")}	 \\
+	C8		& \Sexpr{participants("E6a", "8")}  \\
 	\midrule
-	$\sum$ 	& \Sexpr{participants("E6a", c("1", "4"))}		&	\Sexpr{participants("E6b")}\\
+	$\sum$ 	& \Sexpr{participants("E6a")}\\
 	\end{tabular}
 	\caption{Overview on conditions for the experiments E6a and E6b incl. number of participants per condition.}
 	\label{tab:field:participants}
@@ -108,7 +103,7 @@ had a experiment period of \unit[7]{days}
 TODO
 
 
-\section{Digression: Retaining Information}%Can subjects recall
+
 
 
 \subsection{Data Analysis}
@@ -119,13 +114,13 @@ TODO
 \begin{table}[h!]
 \centering
  \begin{tabulary}{\columnwidth}{c|c|C}
-	Condition	& LP episode(s) 	& E7 \\
+	Condition	& \ac{LP} episode(s) 	& E7 \\
 	\midrule
-	C3			& 6				& \Sexpr{mos_iqu_with_sd_by_condition("E7", "3", 14)}\\
+	C3			& 6				& \Sexpr{mos_iqu_with_sd_by_condition("E6a", "3", 14)}\\
 	\hline
-	C5a		& 5..6			& \Sexpr{mos_iqu_with_sd_by_condition("E7", "5a", 14)}\\
+	C5a		& 5..6			& \Sexpr{mos_iqu_with_sd_by_condition("E6a", "5a", 14)}\\
 	\hline
-	C6			& 4..6			& \Sexpr{mos_iqu_with_sd_by_condition("E7", "6", 14)}\\
+	C6			& 4..6			& \Sexpr{mos_iqu_with_sd_by_condition("E6a", "6", 14)}\\
  \end{tabulary}
  \caption{\autoref{hypo:number}: \ac{MOS} of multi-episodic judgments after the 6th day for experiment E7.}
 	\label{tab:field:hyponumber}
@@ -135,17 +130,17 @@ TODO
 
 \begin{table}[h!]
 \centering
- \begin{tabulary}{\columnwidth}{c|c|C|C}
-	Condition   & LP episode(s) 	& E6 & E7 \\
+ \begin{tabulary}{\columnwidth}{c|c|C}
+	Condition   & \ac{LP} episode(s) 	& E6 \\
 	\midrule
-	C1			& 4				& \Sexpr{mos_iqu_with_sd_by_condition("E6", "1", 14)} & \Sexpr{mos_iqu_with_sd_by_condition("E7", "1", 14)}\\
+	C1			& 4				& \Sexpr{mos_iqu_with_sd_by_condition("E6a", "1", 14)}\\
 	\hline
-	C3			& 6				& - 																									& \Sexpr{mos_iqu_with_sd_by_condition("E7", "3", 14)}\\
+	C3			& 6				& \Sexpr{mos_iqu_with_sd_by_condition("E6a", "3", 14)}\\
 	\hline
 	\hline
-	C4			& 4..5			& \Sexpr{mos_iqu_with_sd_by_condition("E6", "4", 14)} & \Sexpr{mos_iqu_with_sd_by_condition("E7", "4", 14)}\\
+	C4			& 4..5			& \Sexpr{mos_iqu_with_sd_by_condition("E6a", "4", 14)}\\
 	\hline
-	C5a 		& 5..6			& -																									 & \Sexpr{mos_iqu_with_sd_by_condition("E7", "5a", 14)}\\
+	C5a 		& 5..6			& \Sexpr{mos_iqu_with_sd_by_condition("E6a", "5a", 14)}\\
  \end{tabulary}
  \caption{\autoref{hypo:position}: \ac{MOS} of multi-episodic judgment after the 6th usage episode for experiment E5.}
  \label{tab:field:hypoposition}
@@ -156,19 +151,19 @@ TODO
 \begin{table}[h!]
 \centering
  \begin{tabulary}{\columnwidth}{c|c|C}
-	Condition   & LP episode(s) 	& E5 \\
+	Condition   & LP episode(s) 	& E6a \\
 	\midrule
-	C3			& 6				& \Sexpr{mos_iqu_with_sd_by_condition("E5", "3", 14)}\\
+	C3			& 6				& \Sexpr{mos_iqu_with_sd_by_condition("E6a", "3", 14)}\\
 	\hline
 	\hline
-	C4			& 4..5			& \Sexpr{mos_iqu_with_sd_by_condition("E5", "4", 14)}\\
+	C4			& 4..5			& \Sexpr{mos_iqu_with_sd_by_condition("E6a", "4", 14)}\\
 	\hline
-	C8			& 4, 5			& \Sexpr{mos_iqu_with_sd_by_condition("E5", "8", 14)}\\
+	C8			& 4, 5			& \Sexpr{mos_iqu_with_sd_by_condition("E6a", "8", 14)}\\
 	\hline
-	C5a			& 5..6			& \Sexpr{mos_iqu_with_sd_by_condition("E5", "5a", 14)}\\
+	C5a		& 5..6			& \Sexpr{mos_iqu_with_sd_by_condition("E6a", "5a", 14)}\\
 	\hline
 	\hline
-	C1			& 4				& \Sexpr{mos_iqu_with_sd_by_condition("E5", "1", 14)}\\
+	C1			& 4				& \Sexpr{mos_iqu_with_sd_by_condition("E6a", "1", 14)}\\
  \end{tabulary}
  \caption{\autoref{hypo:position}: \ac{MOS} of multi-episodic judgment after the 6th usage episode for experiment E5.}
  \label{tab:field:hypoposition}
