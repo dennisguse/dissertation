@@ -1,7 +1,10 @@
 <<setup, echo=F, cache=F, results='hide'>>=
+opts_knit$set(progress = TRUE, verbose = TRUE)
 timeseries = read.csv("data/data.csv")
 source('R_eval.R')
 source('R_plot.R')
+
+timeseries=timeseries[-which(timeseries$experiment == "E1" & timeseries$condition == "5a")]
 @
 
 \chapter{Multi-episodic Perceived Quality in Multiple Days}\label{chap:field}

@@ -1,4 +1,5 @@
 <<setup, echo=F, cache=F, results='hide'>>=
+opts_knit$set(progress = TRUE, verbose = TRUE)
 timeseries = read.csv("data/data_minimal.csv")
 source('R_eval.R')
 source('R_plot.R')
@@ -181,9 +182,9 @@ For a two-party conversation the end-to-end delay is an additional factor influe
 Providing a proper one-way delay up to \unit[100]{ms} is rarely noticeable and is not perceived as degradation~\citep[\cf,][p. 9]{itu-t_g.107:_2005}.
 LPC-10 requires a look-ahead of \unit[90]{ms} while a frame size of \unit[22.5]{ms} is applied resulting in an delay of up to \unit[112.5]{ms} for encoding alone.
 G.711 and G.722 provide a algorithmic delay without look-ahead of \unit[0.125]{ms} and, respectively, while both codecs can be run with minimal frame size of \unit[10]{ms}. %TODO 
-Thus LPC-10 alone might introduce additional noticeable difference due to the additional introduced delay.
+Thus LPC-10 alone might introduce a noticeable difference due to the additional introduced delay.
 
-For the \ac{VoD} service a \emph{Nexus 7 (2012)} was used.
+For the \ac{VoD} service a \emph{Nexus 7 (2012)} was used. %TODO Experiment is redone with Nexus 7, 2013 
 This device has a \unit[7]{inch} screen with a resolution of $1280x800$.
 For \ac{HP} video content is downscaled to this resolution\footnote{The Nexus 7 is not capable of playback of raw video signals and thus the video signal is downscaled and re-encoded with H.264, \unit[25]{\ac{FPS}}, \unit[5]{mbit/s}, two-pass coding resulting in no visible additional distortions.} and audio mixed to two channels encoded with \ac{AAC} with \unit[48]{kHz}.
 For \ac{LP} the video signal only is degraded encoding it in H.264 with the same resolution, and frame rate but defined \ac{QP}.
@@ -387,7 +388,7 @@ In experiment E2b the episodic judgments of \ac{HP} episodes for the telephony s
 For the \ac{VoD} service no significant differences between conditions are found of \ac{HP} episodes (\Sexpr{wilcox(QU~condition, "E2b", "HP", c("0", "4"))}).
 The episodic judgment of \ac{HP} and \ac{LP} episodes are significant different for the telephony service (\Sexpr{wilcox(QU~performance_level, "E2b", unique(timeseries[["performance_level"]]), c("5a0", "5a4"))}) as well as the video service (\Sexpr{wilcox(QU~performance_level, "E2b", unique(timeseries[["performance_level"]]), c("0", "4"))}).
 
-%E2a vs. E2b 
+%E2a vs. E2b  %TODO
 %kruskal(QU~experiment, c("E2a", "E2b"), "HP", unique(timeseries$condition), c(1:3), "telephony") %NONSIG
 %kruskal(QU~experiment, c("E2a", "E2b"), "LP", unique(timeseries$condition), c(1:6), "telephony") %NONSIG
 
@@ -430,7 +431,12 @@ Conditions C2a and C4 present one, respectively, two LP episodes followed by one
 \autoref{tab:lab:hyponumber} shows the multi-episodic judgment after the 6th episode for these five conditions evaluated in experiment E1 and experiment E2a.
 Conditions C3, C5a/C5b, and C6 are significant different for experiment E1 (\Sexpr{kruskal(IQU~condition, "E1", unique(timeseries[["performance_level"]]), c("3", "5b", "6"), c(6))}) and experiment E2a (\Sexpr{kruskal(IQU~condition, "E2a", unique(timeseries[["performance_level"]]), c("3", "5a", "6"), c(6))}).
 A post-hoc tests for experiment E1 shows that C3 and C5b are significant different (\Sexpr{wilcox.pairwise.print(IQU~condition, "E1", unique(timeseries[["performance_level"]]), c("3", "5b", "6"), c("6"))[["p.value"]][1,1]}) as well as C3 and C6 (\Sexpr{wilcox.pairwise.print(IQU~condition, "E1", unique(timeseries[["performance_level"]]), c("3", "5b", "6"), c("6"))[["p.value"]][2,1]}), but C5b and C6 are not significant different (\Sexpr{wilcox.pairwise.print(IQU~condition, "E1", unique(timeseries[["performance_level"]]), c("3", "5b", "6"), c("6"))[["p.value"]][2,2]}).
+
 A post-hoc tests for experiment E2a shows that C3 and C5a are significant different (\Sexpr{wilcox.pairwise.print(IQU~condition, "E2a", unique(timeseries[["performance_level"]]), c("3", "5a", "6"), c("6"))[["p.value"]][1,1]}) as well as C3 and C6 (\Sexpr{wilcox.pairwise.print(IQU~condition, "E2a", unique(timeseries[["performance_level"]]), c("3", "5a", "6"), c("6"))[["p.value"]][2,1]}), but C5a and C6 are not significant different (\Sexpr{wilcox.pairwise.print(IQU~condition, "E2a", unique(timeseries[["performance_level"]]), c("3", "5a", "6"), c("6"))[["p.value"]][2,2]}).
+
+%TODO C2 vs C4!
+%\Sexpr{wilcox.(IQU~condition, "E1", unique(timeseries[["performance_level"]]), c("2a", "4"), c("6"))}
+%\Sexpr{wilcox.(IQU~condition, "E2a", unique(timeseries[["performance_level"]]), c("2a", "4"), c("6"))}
 
 \begin{table}[h!]
 \centering
@@ -555,7 +561,7 @@ Multi-episodic judgment is assessed for those two conditions after the 3rd, 6th 
 
 For multi-episodic judgments significant differences are found for condition C5b (\Sexpr{kruskal(IQU~id, "E1", unique(timeseries[["performance_level"]]),"5b", c(3, 6, 9))}) and C7 (\Sexpr{kruskal(IQU~id, "E1", unique(timeseries[["performance_level"]]),"7", c(3, 6, 9))}).
 A paired post-hoc tests finds significant differences for condition C5b (3rd and 6th: $\Sexpr{wilcox.pairwise.print(QU~id, "E1", unique(timeseries[["performance_level"]]), "5b", c(3, 6, 9), paired=T)[["p.value"]][1,1]}$, 3rd and 9th: $\Sexpr{wilcox.pairwise.print(QU~id, "E1", unique(timeseries[["performance_level"]]), "5b", c(3, 6, 9), paired=T)[["p.value"]][2,1]}$ as well as 3rd and 9th: $\Sexpr{wilcox.pairwise.print(QU~id, "E1", unique(timeseries[["performance_level"]]), "5b", c(3, 6, 9), paired=T)[["p.value"]][2,2]}$).
-For condition C7 significant differences are found between the 3rd and 6th judgment ($\Sexpr{wilcox.pairwise.print(QU~id, "E1", unique(timeseries[["performance_level"]]), "5b", c(3, 6, 9), paired=T)[["p.value"]][2,2]}$) as well as the 6th and 9th judgment = ($\Sexpr{wilcox.pairwise.print(QU~id, "E1", unique(timeseries[["performance_level"]]), "5b", c(3, 6, 9), paired=T)[["p.value"]][1,1]}$).
+For condition C7 significant differences are found between the 3rd and 6th judgment ($\Sexpr{wilcox.pairwise.print(QU~id, "E1", unique(timeseries[["performance_level"]]), "5b", c(3, 6, 9), paired=T)[["p.value"]][2,2]}$) as well as between the 6th and 9th judgment ($\Sexpr{wilcox.pairwise.print(QU~id, "E1", unique(timeseries[["performance_level"]]), "5b", c(3, 6, 9), paired=T)[["p.value"]][1,1]}$).
 The 3rd and 9th judgment are not significant different ($\Sexpr{wilcox.pairwise.print(QU~id, "E1", unique(timeseries[["performance_level"]]), "5b", c(3, 6, 9), paired=T)[["p.value"]][2,1]}$).
 The final multi-episodic judgments of condition C5b and condition C7 are significant different ( \Sexpr{wilcox(IQU~condition, "E1", unique(timeseries[["performance_level"]]), c("5b", "7"), c(9))}).
 
@@ -565,9 +571,9 @@ The final multi-episodic judgments of condition C5b and condition C7 are signifi
 	Condition	& Episodic Performance			& \multicolumn{3}{c}{Multi-episodic Judgments} \\
 				&					 			& 3rd		& 6th		& 9th  \\
 	\midrule
-	5b			& 4:\ac{HP}, 5:\ac{LP}, 6:\ac{LP}	& \Sexpr{mos_iqu_with_sd_by_condition("E1", "5b", 3)}	& \Sexpr{mos_iqu_with_sd_by_condition("E1", "5b", 6)}	& \Sexpr{mos_iqu_with_sd_by_condition("E1", "5b", 9)}\\
+	C5b			& 4:\ac{HP}, 5:\ac{LP}, 6:\ac{LP}	& \Sexpr{mos_iqu_with_sd_by_condition("E1", "5b", 3)}	& \Sexpr{mos_iqu_with_sd_by_condition("E1", "5b", 6)}	& \Sexpr{mos_iqu_with_sd_by_condition("E1", "5b", 9)}\\
 	\hline
-	7			& 4:\ac{HP}, 5:\ac{LP}, 6:\ac{MP}	& \Sexpr{mos_iqu_with_sd_by_condition("E1", "7", 3)}	& \Sexpr{mos_iqu_with_sd_by_condition("E1", "7", 6)} & \Sexpr{mos_iqu_with_sd_by_condition("E1", "7", 9)}\\
+	C7			& 4:\ac{HP}, 5:\ac{LP}, 6:\ac{MP}	& \Sexpr{mos_iqu_with_sd_by_condition("E1", "7", 3)}	& \Sexpr{mos_iqu_with_sd_by_condition("E1", "7", 6)} & \Sexpr{mos_iqu_with_sd_by_condition("E1", "7", 9)}\\
  \end{tabulary}
  \caption{\autoref{hypo:recovery}: \ac{MOS} of multi-episodic judgments after the 3rd, 6th and 9th usage episode for E1.}
  \label{tab:lab:hyporecovery}
