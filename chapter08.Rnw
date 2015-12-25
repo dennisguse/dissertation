@@ -31,18 +31,19 @@ It is, however, so far unknown how and if at all the duration between episodes a
 The findings of the conducted experiments on multi-episodic QoE in one session (\cf, \autoref{chap:lab}), can be used as a basis towards longer usage durations.
 For the investigation of multi-episodic perceived quality with a usage period of multiple days, three experiments were conducted.
 Those experiments follow the defined-use methodology presented by \citet{moller_single-call_2011}.
-The first two experiments E4 and E5 focused on general feasibility of conducting field experiments on multi-episodic perceived quality with two services.
-Experiment E4 focused on reproduction of the findings of \citet{moller_single-call_2011}, whereas experiment E5 focused on more frequent degraded episodes.
+The first two experiments \E4 and \E5 focused on general feasibility of conducting field experiments on multi-episodic perceived quality with two services.
+Experiment \E4 focused on reproduction of the findings of \citet{moller_single-call_2011}, whereas experiment E5 focused on more frequent degraded episodes.
 Both experiments had a usage period of \unit[14]{days}.
-Based upon experiments E4, E5 and the findings of the laboratory experiments (\cf, \autoref{chap:lab}), experiment E6 was designed and conducted.
-In difference to E4 and E5, only a usage period of \unit[7]{days} with one service only was applied.
-Following the laboratory experiments the hypotheses \autoref{hypo:number}, \autoref{hypo:position}, and \autoref{hypo:consecutive} were focused in experiment E6.
+Based upon experiments \E4, \E5 and the findings of the laboratory experiments (\cf, \autoref{chap:lab}), experiment \E6 was designed and conducted.
+In difference to \E4 and \E5, only a usage period of \unit[7]{days} with one service only was applied.
+Following the laboratory experiments the hypotheses \autoref{hypo:number}, \autoref{hypo:position}, and \autoref{hypo:consecutive} were focused in experiment \E6.
 %Here field experiment refers to an experiment conducted by the participants on their own in their "real" environment over several days, \ie, multiple sessions each with consisting of one episode.
 
-In the following first experiment E4 and E5 are presented in detail as those form the basis for experiment E6.
+In the following first experiment \E4 and \E5 are presented in detail as those form the basis for experiment \E6.
 In these three experiments two performance level were applied, \ie, \ac{HP} and \ac{LP}.
 In fact, the performance level between experiments between experiments were different.
 
+\label{E4}\label{E5}\label{E6}
 \begin{table}[h]
 	\begin{tabulary}{\textwidth}{C|C|C|C|C}
 	Experiment	& Service Type 		& Tasks															& Days	& Participants \\
@@ -57,11 +58,11 @@ In fact, the performance level between experiments between experiments were diff
 	\label{tab:field:experiments}
 \end{table}
 
-\section{Experiment E4} %DAGA PAPER in lang
-Experiment E4\footnote{The results of experiment E4 are published in \cite{guse_macro-temporal_2013}.} focused on the reproduction of the results of \citet{moller_single-call_2011}, showing that the defined-use methodology can be successfully applied in field experiments.
+\section{Experiment \E4} %DAGA PAPER in lang
+Experiment \E4\footnote{The results of experiment \E4 are published in \cite{guse_macro-temporal_2013}.} focused on the reproduction of the results of \citet{moller_single-call_2011}, showing that the defined-use methodology can be successfully applied in field experiments.
 In fact, the experiment of \citet{moller_single-call_2011} showed only little, \ie, not significant, variation of multi-episodic judgments between conditions.
 This might be either to the the limited number of degraded episodes per condition, or that applied the applied performance level for degraded episode were not severe enough.
-In addition to applying the defined-use methodology experiment E4 focused on two aspects.
+In addition to applying the defined-use methodology experiment \E4 focused on two aspects.
 First, to achieve a higher impact on multi-episodic judgments due to different conditions.
 For this \emph{a)} the number of \ac{LP} episodes was increased compared to \citet{moller_single-call_2011} and \emph{b)} the performance levels \ac{HP} and \ac{LP} 
 a strong degradation for \ac{LP} selected.
@@ -85,7 +86,7 @@ In the experiment participants used the services from their private computer run
 For audio reproduction and recording a Logitech PC120 headset was provided for each participant.
 The full description of the technical setup can be found in \autoref{appendix:setupE4}.
 
-In experiment E4 two conditions were applied.
+In experiment \E4 two conditions were applied.
 In the first one all episodes for both services were presented in \ac{HP}.
 In the second condition both services were presented in \ac{HP} for the first two days followed by two days \ac{LP} and so on, resulting in \unit[8]{days} presented \ac{HP} versus \unit[6]{days} presented in \ac{LP}.
 
@@ -112,9 +113,10 @@ For the entertainment tasks,13 per-interaction questionnaires and one integrated
 %Guse2013 (following Moeller) found a relative slow adaptation of multi-episodic QoE.
 %The two data sets cannot be used alone for modeling multi-episodic QoE.
 
-\section{Experiment E5 \ac{VoD} and \ac{AoD} \citep{guse_modelling_2014}}
+\section{Experiment \E5}
+ \ac{VoD} and \ac{AoD} \citep{guse_modelling_2014}
 
-\section{Experiment E6}
+\section{Experiment \E6}
 Experiment E6 complement the experiments on multi-episodic perceived quality in one session (\cf, \autoref{chap:lab}).
 In this experiment an \ac{AoD} service only is used.
 
@@ -157,11 +159,11 @@ TODO
  \begin{tabulary}{\columnwidth}{c|c|C}
 	Condition	& \ac{LP} episode(s) 	& E7 \\
 	\midrule
-	C3			& 6				& \Sexpr{mos_iqu_with_sd_by_condition("E6a", "3", 14)}\\
+	\C3			& 6				& \Sexpr{mos_iqu_with_sd_by_condition("E6a", "3", 14)}\\
 	\hline
-	C5a		& 5..6			& \Sexpr{mos_iqu_with_sd_by_condition("E6a", "5a", 14)}\\
+	\C5a		& 5..6			& \Sexpr{mos_iqu_with_sd_by_condition("E6a", "5a", 14)}\\
 	\hline
-	C6			& 4..6			& \Sexpr{mos_iqu_with_sd_by_condition("E6a", "6", 14)}\\
+	\C6			& 4..6			& \Sexpr{mos_iqu_with_sd_by_condition("E6a", "6", 14)}\\
  \end{tabulary}
  \caption{\autoref{hypo:number}: \ac{MOS} of multi-episodic judgments after the 6th day for experiment E7.}
 	\label{tab:field:hyponumber}
@@ -174,14 +176,14 @@ TODO
  \begin{tabulary}{\columnwidth}{c|c|C}
 	Condition   & \ac{LP} episode(s) 	& E6 \\
 	\midrule
-	C1			& 4				& \Sexpr{mos_iqu_with_sd_by_condition("E6a", "1", 14)}\\
+	\C1			& 4				& \Sexpr{mos_iqu_with_sd_by_condition("E6a", "1", 14)}\\
 	\hline
-	C3			& 6				& \Sexpr{mos_iqu_with_sd_by_condition("E6a", "3", 14)}\\
+	\C3			& 6				& \Sexpr{mos_iqu_with_sd_by_condition("E6a", "3", 14)}\\
 	\hline
 	\hline
-	C4			& 4..5			& \Sexpr{mos_iqu_with_sd_by_condition("E6a", "4", 14)}\\
+	\C4			& 4..5			& \Sexpr{mos_iqu_with_sd_by_condition("E6a", "4", 14)}\\
 	\hline
-	C5a 		& 5..6			& \Sexpr{mos_iqu_with_sd_by_condition("E6a", "5a", 14)}\\
+	\C5a 		& 5..6			& \Sexpr{mos_iqu_with_sd_by_condition("E6a", "5a", 14)}\\
  \end{tabulary}
  \caption{\autoref{hypo:position}: \ac{MOS} of multi-episodic judgment after the 6th usage episode for experiment E5.}
  \label{tab:field:hypoposition}
@@ -194,19 +196,19 @@ TODO
  \begin{tabulary}{\columnwidth}{c|c|C}
 	Condition   & LP episode(s) 	& E6a \\
 	\midrule
-	C3			& 6				& \Sexpr{mos_iqu_with_sd_by_condition("E6a", "3", 14)}\\
+	\C3			& 6				& \Sexpr{mos_iqu_with_sd_by_condition("E6a", "3", 14)}\\
 	\hline
 	\hline
-	C4			& 4..5			& \Sexpr{mos_iqu_with_sd_by_condition("E6a", "4", 14)}\\
+	\C4			& 4..5			& \Sexpr{mos_iqu_with_sd_by_condition("E6a", "4", 14)}\\
 	\hline
-	C8			& 4, 5			& \Sexpr{mos_iqu_with_sd_by_condition("E6a", "8", 14)}\\
+	\C8			& 4, 5			& \Sexpr{mos_iqu_with_sd_by_condition("E6a", "8", 14)}\\
 	\hline
-	C5a		& 5..6			& \Sexpr{mos_iqu_with_sd_by_condition("E6a", "5a", 14)}\\
+	\C5a		& 5..6			& \Sexpr{mos_iqu_with_sd_by_condition("E6a", "5a", 14)}\\
 	\hline
 	\hline
-	C1			& 4				& \Sexpr{mos_iqu_with_sd_by_condition("E6a", "1", 14)}\\
+	\C1			& 4				& \Sexpr{mos_iqu_with_sd_by_condition("E6a", "1", 14)}\\
  \end{tabulary}
- \caption{\autoref{hypo:position}: \ac{MOS} of multi-episodic judgment after the 6th usage episode for experiment E5.}
+ \caption{\autoref{hypo:position}: \ac{MOS} of multi-episodic judgment after the 6th usage episode for experiment \E5.}
  \label{tab:field:hypoposition}
 \end{table}
 
