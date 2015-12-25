@@ -18,29 +18,34 @@ What services are technically feasible to deploy (or socially manageable)?
 How to conduct a study over several days (lab vs. field)?
 
 The main study will be the currently \textit{successfully} running Audio-on-demand study with BYOD.
-This study is complemented by speech telephony (SIPGATE study) and QoMEX2014 study.
+This study is complemented by QoMEX2014 study.
 This chapter will also include an overview of limitations and practical knowledge for \textit{successful} field trials.
 
 TODO: \section{Digression: Retaining Information}%Can subjects recall
 \end{chapter-abstract}
 
 \section{Introduction}
-For the investigation of multi-episodic perceived quality four experiments were conducted with duration from 7 to \unit[14]{days}.
+The integration of perceived quality of distinct episodes into a multi-episodic perceived quality often does not cover one session alone, but rather usage episode with one service occurs over several days.
+In difference to consecutive usage in one session alone, here the time between two usage episodes is in general longer.
+It is, however, so far unknown how and if at all the duration between episodes affect the quality formation process of multi-episodic perceived quality and thus a multi-episodic judgment.
+The findings of the conducted experiments on multi-episodic QoE in one session (\cf, \autoref{chap:lab}), can be used as a basis towards longer usage durations.
+For the investigation of multi-episodic perceived quality with a usage period of multiple days, three experiments were conducted.
 Those experiments follow the defined-use methodology presented by \citet{moller_single-call_2011}.
-The first two experiments focused on general feasibility of conducting field experiments\footnote{Here field experiment refers to an experiment conducted by the participants on their own in their "real" environment over several days, \ie, multiple sessions each with consisting of one episode.} on multi-episodic perceived quality with different services and potential issues. 
+The first two experiments E4 and E5 focused on general feasibility of conducting field experiments on multi-episodic perceived quality with two services.
+Experiment E4 focused on reproduction of the findings of \citet{moller_single-call_2011}, whereas experiment E5 focused on more frequent degraded episodes.
+Both experiments had a usage period of \unit[14]{days}.
+Based upon experiments E4, E5 and the findings of the laboratory experiments (\cf, \autoref{chap:lab}), experiment E6 was designed and conducted.
+In difference to E4 and E5, only a usage period of \unit[7]{days} with one service only was applied.
+Following the laboratory experiments the hypotheses \autoref{hypo:number}, \autoref{hypo:position}, and \autoref{hypo:consecutive} were focused in experiment E6.
+%Here field experiment refers to an experiment conducted by the participants on their own in their "real" environment over several days, \ie, multiple sessions each with consisting of one episode.
 
-In experiment E6 only one service was used, to investigate the hypotheses \autoref{hypo:number}, \autoref{hypo:position}, and \autoref{hypo:consecutive}.
-In \autoref{tab:field:experiments} the service(s) and duration per experiment is shown.
-
-In the following first experiment E4a, E4b, and E5 are presented in detail as those form the basis for experiment E6 and E7.
-Experiment E6 is, in fact, pre-experiment to E7 applying a two-party conversation task for speech telephony was used.
-This, however, has been found difficult as two participants needed to solve each task together and requires a large effort of the two participants to solve the tasks together.
-
-In all those experiments two performance only were applied, \ie, \ac{HP} and \ac{LP}.
+In the following first experiment E4 and E5 are presented in detail as those form the basis for experiment E6.
+In these three experiments two performance level were applied, \ie, \ac{HP} and \ac{LP}.
+In fact, the performance level between experiments between experiments were different.
 
 \begin{table}[h]
 	\begin{tabulary}{\textwidth}{C|C|C|C|C}
-	Experiment	& Service Type 			& Tasks														& Days	& Participants \\
+	Experiment	& Service Type 		& Tasks															& Days	& Participants \\
 	\midrule
 	E4		& Telephony	and \ac{VoD}	& Two-party conversation (\ac{SCT})	& 14		& \Sexpr{participants("E4a")}\\ %Study 1/E4a
 	\hline
@@ -52,23 +57,56 @@ In all those experiments two performance only were applied, \ie, \ac{HP} and \ac
 	\label{tab:field:experiments}
 \end{table}
 
-\section{Experiment E4} %DAGA PAPER in lang + Data RECOVERY!
-Experiment E4\footnote{The results of E4 are published in \citet{guse_macro-temporal_2013}.} is based upon \citet{moller_single-call_2011}.
-In the later experiment it was found that the different conditions only resulted in little variation on multi-episodic judgments.
+\section{Experiment E4} %DAGA PAPER in lang
+Experiment E4\footnote{The results of experiment E4 are published in \cite{guse_macro-temporal_2013}.} focused on the reproduction of the results of \citet{moller_single-call_2011}, showing that the defined-use methodology can be successfully applied in field experiments.
+In fact, the experiment of \citet{moller_single-call_2011} showed only little, \ie, not significant, variation of multi-episodic judgments between conditions.
 This might be either to the the limited number of degraded episodes per condition, or that applied the applied performance level for degraded episode were not severe enough.
-Experiment E4 focused on two aspects: verifying the results of \citet{moller_single-call_2011} with 
-In this experiment two services needed to be used on a daily basis over the experiment period of \unit[14]{days}.
-the two 
-In one condition th
+In addition to applying the defined-use methodology experiment E4 focused on two aspects.
+First, to achieve a higher impact on multi-episodic judgments due to different conditions.
+For this \emph{a)} the number of \ac{LP} episodes was increased compared to \citet{moller_single-call_2011} and \emph{b)} the performance levels \ac{HP} and \ac{LP} 
+a strong degradation for \ac{LP} selected.
+Second, an additional service to additionally assess integration of perceived quality of two services.
 
-The speech telephony service needed to be used twice per day.
-For episode a pair participants needed to solve one \ac{SCT} together.
+\subsection{Design}
+In this experiment a speech telephony service and a \ac{VoD} service needed to be used for the usage period of \unit[14]{days}.
+A pair participants conducted the experiment together by solving daily two \acs{SCT} with the speech telephony service.
+The first \ac{SCT} needed to be solved between \unit[6]{am} and \unit[1]{pm} whereas the second \ac{SCT} between \unit[3]{pm} and midnight.
+For this experiment the \ac{SCT} defined in \cite{itu-t_p.805:_2007} were used and additional \ac{SCT} created to provide 28 different \acs{SCT}.
+The \ac{VoD} needed to be used daily between \unit[1]{pm} and midnight.
+As content for the \ac{VoD} service episodes of \emph{Friends Season 3} were used.
+Each original episode was cut into two pieces of about 12 to \unit[17]{min} duration and presented for the \ac{VoD} service in the chronological order.
 
-The \ac{VoD} service needed to be used once per day in the afternoon.
+For the speech telephony service the codec G.722 was used for both performance levels.
+For \ac{HP} no additional packet-loss was added whereas \ac{LP} was set to additional 5\% of random packet-loss.
+For the \ac{VoD} service the video was encoded with H.264 (Main Profile) with a resolution of \unit[720x576]{px} and the audio with \ac{AAC} in stereo with \unit[48]{kHz} at [165]{Kbit/s}.
+For this service the two performance levels only different in video coding bandwidth without affecting the audio signal.
+For \ac{HP} a video bandwidth of \unit[2]{Mbit/s} and for \ac{LP} a video bandwidth of \unit[0.125]{MBit/s} was used.
+In the experiment participants used the services from their private computer running Windows~7 using a \ac{USB} thumb drive.
+For audio reproduction and recording a Logitech PC120 headset was provided for each participant.
+The full description of the technical setup can be found in \autoref{appendix:setupE4}.
 
-BYOD
 In experiment E4 two conditions were applied.
-In the first condition only \ac{HP} episodes were presented for 
+In the first one all episodes for both services were presented in \ac{HP}.
+In the second condition both services were presented in \ac{HP} for the first two days followed by two days \ac{LP} and so on, resulting in \unit[8]{days} presented \ac{HP} versus \unit[6]{days} presented in \ac{LP}.
+
+After every episode with a service participants assessed the episodic perceived quality on the 7-point \ac{CCR} scale.
+The multi-episodic perceived quality for each service was assessed after the 4th, 7th, 10th, and 14th day directly after finishing the episode with the \ac{VoD} service.
+In addition to the multi-episodic judgment the \ac{NPS} was assessed for each service individually and for both services as a bundle.
+
+Especially the high number \ac{LP} in the second condition was expected 
+
+\subsection{Participants} %TODO Verify numbers
+10 pairs successfully finished the study, 5 per condition, with an average age of 22.9 years.
+11 male and 9 females participated.
+Of the 280 scheduled calls, 5 were not done and 18 per-interaction questionnaires were not filled.
+For the entertainment tasks,13 per-interaction questionnaires and one integrated QoE questionnaire were not filled.
+
+\subsection{Data Analysis}
+
+
+
+\subsection{Discussion}
+
 
 
 %Guse2013 (following Moeller) found a relative slow adaptation of multi-episodic QoE.
@@ -201,10 +239,12 @@ TODO
 
 
 
+
+
 \section{Cross-service QoE}
 %BLABLABLA
 
-\section{On practical aspects of Field Studies}
+\section{Digression: On practical aspects of Field Studies}
 \begin{itemize}
 \item Production Ready Systems
 \item Temporal Constraint
@@ -212,3 +252,5 @@ TODO
 \item Cheater detection for consumption only
 \item Drop out rate
 \end{itemize}
+
+\section{Conclusion and Discussion}
