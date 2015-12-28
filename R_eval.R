@@ -50,8 +50,8 @@ kruskal(QU~condition, "E2b", "HP", c("5a0", "5a4"), c(1:3))
 
 
 
-wilcox <- function(formula=QU~condition, experiment_filter, performance_level_filter=unique(timeseries$performance_level), condition_filter=unique(timeseries$condition), id_filter=unique(timeseries$id), alternative="two.sided", paired=F, diffOnly = F) {
- d = subset(timeseries, experiment %in% experiment_filter & performance_level %in% performance_level_filter & condition %in% condition_filter & id %in% id_filter)
+wilcox <- function(formula=QU~condition, experiment_filter, performance_level_filter=unique(timeseries$performance_level), condition_filter=unique(timeseries$condition), id_filter=unique(timeseries$id), service_filter=unique(timeseries$service), alternative="two.sided", paired=F, diffOnly = F) {
+ d = subset(timeseries, experiment %in% experiment_filter & performance_level %in% performance_level_filter & condition %in% condition_filter & id %in% id_filter & service %in% service_filter)
 
  r = wilcox.test(formula, d, exact = F, conf.int = T, alternative = alternative, paired = paired)
  if (diffOnly == T) {
@@ -127,6 +127,6 @@ pairwise.wilcox.estimate <-function (x, g, p.adjust.method = p.adjust.methods, p
 }
 wilcox.pairwise.print(QU~condition, "E1", "HP", unique(timeseries[["condition"]]), c(1:3))
 wilcox.pairwise.print(QU~condition, "E1", "HP", unique(timeseries[["condition"]]), c(1:3))[7, 4]
-pairwise.wilcox.estimate(d[[f[1]]], d[[f[2]]], exact=F, alternative = "two.sided", paired = F)
+#pairwise.wilcox.estimate(d[[f[1]]], d[[f[2]]], exact=F, alternative = "two.sided", paired = F)
 
 wilcox(QU~condition, "E1", "HP", c("7", "4"), c(1:3))

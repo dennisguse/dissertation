@@ -6,6 +6,9 @@ source('R_plot.R')
 
 timeseries=timeseries[-which(timeseries$experiment == "E1" & timeseries$condition == "5a")]
 @
+%TODO 
+%% E4:C9
+%% E5:C10 + C11
 
 \chapter{Multi-episodic Perceived Quality in Multiple Days}\label{chap:field}
 \begin{chapter-abstract}
@@ -21,23 +24,30 @@ The main study will be the currently \textit{successfully} running Audio-on-dema
 This study is complemented by QoMEX2014 study.
 This chapter will also include an overview of limitations and practical knowledge for \textit{successful} field trials.
 
-TODO: \section{Digression: Retaining Information}%Can subjects recall
+%TODO: \section{Digression: Retaining Information}%Can subjects recall
 \end{chapter-abstract}
 
 \section{Introduction}
-The integration of perceived quality of distinct episodes into a multi-episodic perceived quality often does not cover one session alone, but rather usage episode with one service occurs over several days.
-In difference to consecutive usage in one session alone, here the time between two usage episodes is in general longer.
-It is, however, so far unknown how and if at all the duration between episodes affect the quality formation process of multi-episodic perceived quality and thus a multi-episodic judgment.
-The findings of the conducted experiments on multi-episodic QoE in one session (\cf, \autoref{chap:lab}), can be used as a basis towards longer usage durations.
+The integration of perceived quality of distinct episodes into a multi-episodic perceived quality often does not cover one session alone, but rather usage episodes with one service occur regularly in general covering multiple days or longer usage periods.
+In difference to consecutive usage in one session alone, here the time that passes between two usage episodes is in longer.
+It is, however, so far unknown how and if at all the time between episodes affect the quality formation process of multi-episodic perceived quality and thus a multi-episodic judgment.
+Due to the lack of ground truth, the findings of the conducted experiments on multi-episodic \ac{QoE} in one session (\cf, \autoref{chap:lab}), are used as a basis towards the investigation multi-episodic \ac{QoE} with a usage duration covering multiple days.
+For this investigation field experiments are well.
+Here field experiment refers to an experiment conducted by the participants on their own and, furthermore, in their "real" environment over several days, \ie, multiple sessions each with consisting of one episode.
+On the one hand, this limits the effort for participants as they do not move to the laboratory and thus also allows for a higher number of relative short usage episodes.
+This also limits the personal effort for conducting such an experiment.
+On the other hand, neither the environment can be controlled nor the participants supervised as in a laboratory environment.
+In addition, experimental setups must be robust against failures as well as errors and reliably able to provide the desired performance per usage episode.
+
 For the investigation of multi-episodic perceived quality with a usage period of multiple days, three experiments were conducted.
 Those experiments follow the defined-use methodology presented by \citet{moller_single-call_2011}.
-The first two experiments \E4 and \E5 focused on general feasibility of conducting field experiments on multi-episodic perceived quality with two services.
-Experiment \E4 focused on reproduction of the findings of \citet{moller_single-call_2011}, whereas experiment E5 focused on more frequent degraded episodes.
-Both experiments had a usage period of \unit[14]{days}.
+The first two experiments \E4 and \E5 focused on general feasibility of conducting field experiments on multi-episodic perceived quality.
+Here the goal was to derive knowledge, how a field experiment can be conducted that is a) reproducible, b) verifiable, c) failure-resistant, d) cost-efficient.  %Cheater?
+In these two experiments two services needed to be used covering a usage period of \unit[14]{days}.
+Beside feasibility experiment \E4 focused on reproduction of the findings of \citet{moller_single-call_2011}, whereas experiment \E5 focused on more frequent degraded episodes.
 Based upon experiments \E4, \E5 and the findings of the laboratory experiments (\cf, \autoref{chap:lab}), experiment \E6 was designed and conducted.
-In difference to \E4 and \E5, only a usage period of \unit[7]{days} with one service only was applied.
-Following the laboratory experiments the hypotheses \autoref{hypo:number}, \autoref{hypo:position}, and \autoref{hypo:consecutive} were focused in experiment \E6.
-%Here field experiment refers to an experiment conducted by the participants on their own in their "real" environment over several days, \ie, multiple sessions each with consisting of one episode.
+In difference to \E4 and \E5, only a usage period of \unit[7]{days} with one service was selected.
+In \E6 the hypotheses \autoref{hypo:number}, \autoref{hypo:position}, and \autoref{hypo:consecutive} were investigated.
 
 In the following first experiment \E4 and \E5 are presented in detail as those form the basis for experiment \E6.
 In these three experiments two performance level were applied, \ie, \ac{HP} and \ac{LP}.
@@ -58,53 +68,94 @@ In fact, the performance level between experiments between experiments were diff
 	\label{tab:field:experiments}
 \end{table}
 
-\section{Experiment \E4} %DAGA PAPER in lang
+\section{Experiment E4} %DAGA PAPER in lang
 Experiment \E4\footnote{The results of experiment \E4 are published in \cite{guse_macro-temporal_2013}.} focused on the reproduction of the results of \citet{moller_single-call_2011}, showing that the defined-use methodology can be successfully applied in field experiments.
-In fact, the experiment of \citet{moller_single-call_2011} showed only little, \ie, not significant, variation of multi-episodic judgments between conditions.
+In fact, the experiment of \citet{moller_single-call_2011} showed only little, \ie, not significant, variation of multi-episodic judgments between different conditions.
 This might be either to the the limited number of degraded episodes per condition, or that applied the applied performance level for degraded episode were not severe enough.
 In addition to applying the defined-use methodology experiment \E4 focused on two aspects.
 First, to achieve a higher impact on multi-episodic judgments due to different conditions.
 For this \emph{a)} the number of \ac{LP} episodes was increased compared to \citet{moller_single-call_2011} and \emph{b)} the performance levels \ac{HP} and \ac{LP} 
 a strong degradation for \ac{LP} selected.
-Second, an additional service to additionally assess integration of perceived quality of two services.
+Second, an additional service to additionally assess the integration of perceived quality of two services.
 
 \subsection{Design}
-In this experiment a speech telephony service and a \ac{VoD} service needed to be used for the usage period of \unit[14]{days}.
+In this experiment a speech telephony service and a \ac{VoD} service needed to be used for the usage period of \unit[15]{days}.
 A pair participants conducted the experiment together by solving daily two \acs{SCT} with the speech telephony service.
 The first \ac{SCT} needed to be solved between \unit[6]{am} and \unit[1]{pm} whereas the second \ac{SCT} between \unit[3]{pm} and midnight.
 For this experiment the \ac{SCT} defined in \cite{itu-t_p.805:_2007} were used and additional \ac{SCT} created to provide 28 different \acs{SCT}.
-The \ac{VoD} needed to be used daily between \unit[1]{pm} and midnight.
+The \ac{VoD} needed to be used daily between \unit[1]{pm} and midnight by each participant alone.
 As content for the \ac{VoD} service episodes of \emph{Friends Season 3} were used.
-Each original episode was cut into two pieces of about 12 to \unit[17]{min} duration and presented for the \ac{VoD} service in the chronological order.
+Each original episode was cut into two pieces of about 12 to \unit[17]{min} duration and presented by the \ac{VoD} service in the chronological order.
+The first day of this experiment was conducted in the laboratory.
+Here each pair of participant solved one episode with the speech telephony service as well as \ac{VoD} service.
+This allowed to first of verify the setup and make sure participants understood and follow the instructions.
 
 For the speech telephony service the codec G.722 was used for both performance levels.
-For \ac{HP} no additional packet-loss was added whereas \ac{LP} was set to additional 5\% of random packet-loss.
+For \ac{HP} no additional packet-loss was added whereas \ac{LP} was set to additional 5\% of randomly distributed packet-loss while each packet contained \unit[20]{ms} of the coded speech signal.
+Neither \ac{PLC} nor \ac{FEC} was applied.
 For the \ac{VoD} service the video was encoded with H.264 (Main Profile) with a resolution of \unit[720x576]{px} and the audio with \ac{AAC} in stereo with \unit[48]{kHz} at [165]{Kbit/s}.
 For this service the two performance levels only different in video coding bandwidth without affecting the audio signal.
 For \ac{HP} a video bandwidth of \unit[2]{Mbit/s} and for \ac{LP} a video bandwidth of \unit[0.125]{MBit/s} was used.
 In the experiment participants used the services from their private computer running Windows~7 using a \ac{USB} thumb drive.
 For audio reproduction and recording a Logitech PC120 headset was provided for each participant.
+Participants were instructed to use the headset for the speech telephony service as well as the \ac{VoD} service.
 The full description of the technical setup can be found in \autoref{appendix:setupE4}.
 
 In experiment \E4 two conditions were applied.
 In the first one all episodes for both services were presented in \ac{HP}.
 In the second condition both services were presented in \ac{HP} for the first two days followed by two days \ac{LP} and so on, resulting in \unit[8]{days} presented \ac{HP} versus \unit[6]{days} presented in \ac{LP}.
+Especially the high number \ac{LP} episodes in the second condition should lead to significant reduction in multi-episodic judgments.
 
-After every episode with a service participants assessed the episodic perceived quality on the 7-point \ac{CCR} scale.
-The multi-episodic perceived quality for each service was assessed after the 4th, 7th, 10th, and 14th day directly after finishing the episode with the \ac{VoD} service.
+After every episode with a service, participants assessed the episodic perceived quality on the 7-point \ac{CCR} scale.
+The multi-episodic perceived quality for each service was assessed after the 5th, 8th, 11th, and 15th day directly after finishing the episode with the \ac{VoD} service.
 In addition to the multi-episodic judgment the \ac{NPS} was assessed for each service individually and for both services as a bundle.
-f
-Especially the high number \ac{LP} in the second condition was expected 
 
 \subsection{Participants} %TODO Verify numbers
-10 pairs successfully finished the study, 5 per condition, with an average age of 22.9 years.
+10 pairs successfully finished the study, 5 per condition, with an average age of \unit[22.9]{years}.
 11 male and 9 females participated.
 Of the 280 scheduled calls, 5 were not done and 18 per-interaction questionnaires were not filled.
 For the entertainment tasks,13 per-interaction questionnaires and one integrated QoE questionnaire were not filled.
 
 \subsection{Data Analysis}
 
+%EPisodic
+\Sexpr{wilcox(QU~condition, "E4a",  "HP", c("A0", "A1"), unique(timeseries[["id"]]), "VoD")} %SIG
+\Sexpr{wilcox(QU~condition, "E4a",  "HP", c("A0", "A1"), unique(timeseries[["id"]]), "telephony")}
 
+
+\Sexpr{wilcox(QU~condition, "E4a",  c("HP", "LP"), c("A0", "A1"), unique(timeseries[["id"]]), "VoD")} %SIG
+\Sexpr{wilcox(QU~condition, "E4a",  c("HP", "LP"), c("A0", "A1"), unique(timeseries[["id"]]), "telephony")} %SIG
+
+%ME
+\Sexpr{wilcox(IQU~condition, "E4a",  c("HP", "LP"), c("A0", "A1"), 15, "VoD", alternative="greater")} %NON SIGN
+\Sexpr{wilcox(IQU~condition, "E4a",  c("HP", "LP"), c("A0", "A1"), 29, "telephony", alternative="greater")} %NON-SIG
+
+%ME per id + condition
+\Sexpr{kruskal(IQU~id, "E4a", c("HP", "LP"), "A0", unique(timeseries[["id"]]), "telephony")}
+\Sexpr{kruskal(IQU~id, "E4a", c("HP", "LP"), "A0", unique(timeseries[["id"]]), "VoD")}
+
+\begin{table}[h!]
+\centering
+ \begin{tabular}{c|c|c|c|c}
+	Condition	& \ac{LP} episode(s)	& Day & \multicolumn{2}{c}{Service} \\
+						& 										& 			& Speech Telephony & \ac{VoD} \\
+	\midrule
+	\multirow{4}{*}{\C0}			& \multirow{4}{*}{}	& 4 & \Sexpr{mos_iqu_with_sd_by_condition("E4a", "A0", 9, "telephony")} & \Sexpr{mos_iqu_with_sd_by_condition("E4a", "A0", 5, "VoD")} \\
+													& 										& 7 & \Sexpr{mos_iqu_with_sd_by_condition("E4a", "A0", 15, "telephony")} & \Sexpr{mos_iqu_with_sd_by_condition("E4a", "A0", 8, "VoD")} \\
+													& 										& 15 & \Sexpr{mos_iqu_with_sd_by_condition("E4a", "A0", 21, "telephony")} & \Sexpr{mos_iqu_with_sd_by_condition("E4a", "A0", 11, "VoD")} \\
+													& 										& 14 & \Sexpr{mos_iqu_with_sd_by_condition("E4a", "A0", 29, "telephony")} & \Sexpr{mos_iqu_with_sd_by_condition("E4a", "A0", 15, "VoD")} \\
+ 	\hline
+ 	\hline
+	\multirow{4}{*}{\C9}			& \multirow{4}{*}{}	& 4 & \Sexpr{mos_iqu_with_sd_by_condition("E4a", "A1", 9, "telephony")} & \Sexpr{mos_iqu_with_sd_by_condition("E4a", "A1", 5, "VoD")} \\
+													& 										& 7 & \Sexpr{mos_iqu_with_sd_by_condition("E4a", "A1", 15, "telephony")} & \Sexpr{mos_iqu_with_sd_by_condition("E4a", "A1", 8, "VoD")} \\
+													& 										& 15 & \Sexpr{mos_iqu_with_sd_by_condition("E4a", "A1", 21, "telephony")} & \Sexpr{mos_iqu_with_sd_by_condition("E4a", "A1", 11, "VoD")} \\
+													& 										& 14 & \Sexpr{mos_iqu_with_sd_by_condition("E4a", "A1", 29, "telephony")} & \Sexpr{mos_iqu_with_sd_by_condition("E4a", "A1", 15, "VoD")} \\
+	\end{tabular}
+	\caption{\ac{MOS}  \E6.}
+	\label{tab:field:e4results}
+\end{table}
+
+%NO NPS 
 
 \subsection{Discussion}
 
@@ -113,16 +164,69 @@ For the entertainment tasks,13 per-interaction questionnaires and one integrated
 %Guse2013 (following Moeller) found a relative slow adaptation of multi-episodic QoE.
 %The two data sets cannot be used alone for modeling multi-episodic QoE.
 
-\section{Experiment \E5}
+\section{Experiment E5}
  \ac{VoD} and \ac{AoD} \citep{guse_modelling_2014}
 
-\section{Experiment \E6}
-Experiment E6 complement the experiments on multi-episodic perceived quality in one session (\cf, \autoref{chap:lab}).
+\subsection{Data Analysis}
+%EPisodic
+\Sexpr{wilcox(QU~condition, "E5",  "HP", c("P1", "P2"), unique(timeseries[["id"]]), "AoD")}
+\Sexpr{wilcox(QU~condition, "E5",  "HP", c("P1", "P2"), unique(timeseries[["id"]]), "VoD")}
+\Sexpr{wilcox(QU~condition, "E5",  "LP", c("P1", "P2"), unique(timeseries[["id"]]), "AoD")}
+\Sexpr{wilcox(QU~condition, "E5",  "LP", c("P1", "P2"), unique(timeseries[["id"]]), "VoD")}
+
+\Sexpr{wilcox(QU~service, "E5",  "HP", c("P1", "P2"), unique(timeseries[["id"]]), c("AoD", "VoD"))}
+\Sexpr{wilcox(QU~service, "E5",  "LP", c("P1", "P2"), unique(timeseries[["id"]]), c("AoD", "VoD"))}
+
+\Sexpr{mos_qu_with_sd_by_condition("E5", "HP", c("P1", "P2"), unique(timeseries[["id"]]), "AoD")}
+\Sexpr{mos_qu_with_sd_by_condition("E5", "LP", c("P1", "P2"), unique(timeseries[["id"]]), "AoD")}
+\Sexpr{mos_qu_with_sd_by_condition("E5", "HP", c("P1", "P2"), unique(timeseries[["id"]]), "VoD")}
+\Sexpr{mos_qu_with_sd_by_condition("E5", "LP", c("P1", "P2"), unique(timeseries[["id"]]), "VoD")}
+
+
+\Sexpr{wilcox(QU~condition, "E5",  c("HP", "LP"), c("P1", "P2"), unique(timeseries[["id"]]), "AoD")} %SIG
+\Sexpr{wilcox(QU~condition, "E5",  c("HP", "LP"), c("P1", "P2"), unique(timeseries[["id"]]), "VoD")} %SIG
+
+%ME
+\Sexpr{wilcox(IQU~condition, "E5",  c("HP", "LP"), c("P1", "P2"), 15, "AoD", alternative="greater")} %NON-SIG
+\Sexpr{wilcox(IQU~condition, "E5",  c("HP", "LP"), c("P1", "P2"), 15, "VoD", alternative="greater")} %NON SIGN
+
+
+%ME per id + condition
+\Sexpr{kruskal(IQU~id, "E5", c("HP", "LP"), "P1", unique(timeseries[["id"]]), "AoD")}
+\Sexpr{kruskal(IQU~id, "E5", c("HP", "LP"), "P2", unique(timeseries[["id"]]), "VoD")}
+\Sexpr{kruskal(IQU~id, "E5", c("HP", "LP"), "P1", unique(timeseries[["id"]]), "AoD")}
+\Sexpr{kruskal(IQU~id, "E5", c("HP", "LP"), "P2", unique(timeseries[["id"]]), "VoD")}
+
+\begin{table}[h!]
+\centering
+ \begin{tabular}{c|c|c|c|c}
+	Condition	& \ac{LP} episode(s)	& Day & \multicolumn{2}{c}{Service} \\
+						& 										& 			& \ac{AoD} & \ac{VoD} \\
+	\midrule
+	\multirow{4}{*}{\C0}			& \multirow{4}{*}{}	& 3 & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P1", 3, "AoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P1", 3, "VoD")} \\
+													& 										& 6 & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P1", 6, "AoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P1", 6, "VoD")} \\
+													& 										& 9 & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P1", 9, "AoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P1", 9, "VoD")} \\
+													& 										& 12 & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P1", 12, "AoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P1", 12, "VoD")} \\
+													& 										& 15 & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P1", 15, "AoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P1", 15, "VoD")} \\
+ 	\hline
+ 	\hline
+	\multirow{4}{*}{\C9}			& \multirow{4}{*}{}	& 3 & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P2", 3, "AoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P2", 3, "VoD")} \\
+													& 										& 6 & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P2", 6, "AoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P2", 6, "VoD")} \\
+													& 										& 9 & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P2", 9, "AoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P2", 9, "VoD")} \\
+													& 										& 12 & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P2", 12, "AoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P2", 12, "VoD")} \\
+													& 										& 15 & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P2", 15, "AoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P2", 15, "VoD")} \\
+	\end{tabular}
+	\caption{\ac{MOS}  \E6.}
+	\label{tab:field:e4results}
+\end{table}
+
+\section{Experiment E6}
+Experiment \E6 complement the experiments on multi-episodic perceived quality in one session (\cf, \autoref{chap:lab}).
 In this experiment an \ac{AoD} service only is used.
 
 \begin{table}
 	\centering
-	\begin{tabular}{c|c|c}
+	\begin{tabular}{c|c}
 	Conditions & Experiment E6\\
 	\midrule
 	C1		& \Sexpr{participants("E6a", "1")}	\\
@@ -134,13 +238,11 @@ In this experiment an \ac{AoD} service only is used.
 	\midrule
 	$\sum$ 	& \Sexpr{participants("E6a")}\\
 	\end{tabular}
-	\caption{Overview on conditions for the experiments E6a and E6b incl. number of participants per condition.}
+	\caption{Overview on conditions for the experiments E6 incl. number of participants per condition.}
 	\label{tab:field:participants}
 \end{table}
 
 In both experiment a experimental period of \unit[7]{days} was selected.
-
-had a experiment period of \unit[7]{days} 
 
 \subsection{Participants}
 TODO
@@ -161,11 +263,11 @@ TODO
 	\midrule
 	\C3			& 6				& \Sexpr{mos_iqu_with_sd_by_condition("E6a", "3", 14)}\\
 	\hline
-	\C5a		& 5..6			& \Sexpr{mos_iqu_with_sd_by_condition("E6a", "5a", 14)}\\
+	\C5a			& 5..6			& \Sexpr{mos_iqu_with_sd_by_condition("E6a", "5a", 14)}\\
 	\hline
 	\C6			& 4..6			& \Sexpr{mos_iqu_with_sd_by_condition("E6a", "6", 14)}\\
  \end{tabulary}
- \caption{\autoref{hypo:number}: \ac{MOS} of multi-episodic judgments after the 6th day for experiment E7.}
+ \caption{\autoref{hypo:number}: \ac{MOS} of multi-episodic judgments after the 6th day for experiment \E6.}
 	\label{tab:field:hyponumber}
 \end{table}
 
@@ -185,7 +287,7 @@ TODO
 	\hline
 	\C5a 		& 5..6			& \Sexpr{mos_iqu_with_sd_by_condition("E6a", "5a", 14)}\\
  \end{tabulary}
- \caption{\autoref{hypo:position}: \ac{MOS} of multi-episodic judgment after the 6th usage episode for experiment E5.}
+ \caption{\autoref{hypo:position}: \ac{MOS} of multi-episodic judgment after the 6th usage episode for experiment \E6.}
  \label{tab:field:hypoposition}
 \end{table}
 
@@ -203,12 +305,12 @@ TODO
 	\hline
 	\C8			& 4, 5			& \Sexpr{mos_iqu_with_sd_by_condition("E6a", "8", 14)}\\
 	\hline
-	\C5a		& 5..6			& \Sexpr{mos_iqu_with_sd_by_condition("E6a", "5a", 14)}\\
+	\C5a			& 5..6			& \Sexpr{mos_iqu_with_sd_by_condition("E6a", "5a", 14)}\\
 	\hline
 	\hline
 	\C1			& 4				& \Sexpr{mos_iqu_with_sd_by_condition("E6a", "1", 14)}\\
  \end{tabulary}
- \caption{\autoref{hypo:position}: \ac{MOS} of multi-episodic judgment after the 6th usage episode for experiment \E5.}
+ \caption{\autoref{hypo:position}: \ac{MOS} of multi-episodic judgment after the 6th usage episode for experiment \E6.}
  \label{tab:field:hypoposition}
 \end{table}
 
