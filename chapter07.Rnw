@@ -560,7 +560,7 @@ Condition \C2a and \C7 are not significant different (\Sexpr{wilcox.pairwise.pri
 \end{table}
 
 This indicates that presenting the 6th episode either in \ac{MP} or \ac{HP} does not affect the multi-episodic judgment although the episodic judgments are different.
-This is in line with prior work on retrospective episodic experiences \citep[e.g.,][]{kahneman_experienced_2000} as well as episodic QoE \citep[e.g.,][]{weiss_modeling_2009}, where it is denoted as (negative) peak effect.
+This is in line with prior work on retrospective episodic experiences \citep[e.g.,][]{kahneman_experienced_2000} as well as episodic \ac{QoE} \citep[e.g.,][]{weiss_modeling_2009}, where it is denoted as (negative) peak effect.
 
 \subsubsection{\autoref{hypo:recovery}: Recovery after \ac{LP} Episodes}
 %TODO Choose Friedman? Or one-sided?
