@@ -145,6 +145,8 @@ For digital transmission of wideband speech the codec \emph{G.722} with Mode 1 (
 %Furthermore, this codec is although it is rather old, but still in active use.
 In subjective experiments G.722 with Mode 1 typically achieves a \ac{MOSLQ} around 4.5 on 5-point \ac{ACR} scale. %TODO REF
 
+%TODO Experiment E3 was conducted with WAV from CD in 44.1kHz!
+
 For \ac{LP} the speech signal the \emph{LPC-10}\footnote{LPC-10 is also known as \emph{FS-1015} as well as \emph{STANAG 4198}.} codec is selected. %TODO REF
 This codec is designed for low bitrate radio transmission focusing on intelligibility rather than naturalness.
 The re-synthesized speech sounds very unnatural and is often described as robotic, and muddy with a hissing background noise by providing only narrowband transmission.
@@ -155,10 +157,10 @@ Even the worst codec, \ie, \ac{MELP}, only results in a 5-point \ac{MOS} of 3.0.
 LPC-10 is therefore useful for the investigation of multi-episodic perceived quality for speech-based services, because it allows to create severe degradations alone and is thus likely to affect the formation process multi-episodic perceived quality.
 
 For \ac{MP} \emph{G.711}~\cite{itu-t_g.711} is selected, because this is the common reference condition for narrowband speech telephony.
-Compared to G.722 on a 5-point $\ac{MOS}_LQ$ of is achieved due to the lower speech bandwidth.
+Compared to G.722 on a 5-point \ac{MOSLQ} of is achieved due to the lower speech bandwidth.
 However, in comparison to LPC-10 the re-synthesized speech signal contains far less artifacts.
 
-As LPC-10 is rarely evaluated with compared to G.711 as well as G.722 an objective evaluation using \ac{POLQA}has been conducted.
+As LPC-10 is rarely compared to G.711 as well as G.722 an objective evaluation using \ac{POLQA} has been conducted.
 \ac{POLQA} estimates the \ac{MOS} for the 5-point \ac{ACR} scale, which is based upon the listening-only experiments for stimuli of a duration \unit[8...12]{sec}.
 \cite{koster_comparison_2015} created a transformation function that allows to transform judgments from the 5-point \ac{ACR} scale to the 7-point \ac{CCR} scale and vice versa.
 The evaluation has been conducted with \unit[12]{sec} long German speech samples with \ac{POLQA} in super-wideband mode and the results transformed to the 7-point \ac{CCR} scale.
@@ -198,22 +200,25 @@ Thus a direct comparison of the presented degradations between the two services 
 In all experiments a binaural representation is provided using a pair of headphones and, if needed, audio capturing using a headset.
 The experimental setups are described in \autoref{chap:appendix} in \autoref{appendix:laboratorySetups}.
 
-\subsection{Procedure} % Design
+\subsection{Procedure}\label{sec:training}
 The experiments consists of 5 stages with an overall duration of from \unit[45...90]{min}.
-In the \emph{first stage} a participant was informed about this experiment, his task(s), and the experimental procedure, and demographic data collected.
-In this stage also participant filled a questionnaire with demographic and signed a consent form.
+In the \emph{first stage} a participant was informed about this experiment, his task(s), and the experimental procedure.
+In this stage also participant filled a questionnaire with demographic data and signed a consent form.
 %\E1: Telefonpartner bekannt
 
 In the second stage participant were checked for hearing impairments using an audiometer for the frequency \unit[125]{Hz}, \unit[250]{Hz}, \unit[500]{Hz}, \unit[1]{kHz}, \unit[2]{kHz}, \unit[4]{kHz}, and \unit[8]{kHz} covering the spectrum for wideband.
 This procedure was conducted with an \emph{Ear 1.7} audiometer connected to a pair of \emph{Sennheiser HDA 200}.
+In \E3 no audiometry was conducted.
 
-In the \emph{third stage} participants conducted a training.
-Presenting a training showing a range of potential degradations is expect to reduce intra-personal variations.
-In all experiments participants rated 27 speech stimuli with a duration of circa \unit[8]{sec} with two male and one female speaker.
-Those stimuli contained different bandwidth (wideband, narrowband), codecs (G.711, G.722, GSM-FR, LPC-10), white noise without codec, and random packet-loss with G.722 no \ac{PLC} (with 2\%, and 5\%).
+In the \emph{third stage} participants conducted a training to present typical speech telephony degradations.
+%Presenting a training showing a range of potential degradations is expect to reduce intra-personal variations.
+In all experiments participants rated 27 speech stimuli with a duration of circa \unit[8]{sec}.
+In each stimuli one speaker presented two sentences.
+Three different speakers were used: two male and one female speaker.
+Those stimuli contained different signal bandwidths (wideband, narrowband), codecs (G.711, G.722, GSM-FR, LPC-10), white noise (fullband without codec), and random packet-loss with G.722 no \ac{PLC} (with 2\%, and 5\%).
 In \E2b an additional training was included for the \ac{VoD} service.
 Here, 22 videos with an approximate duration of \unit[8]{sec} were used.
-As degradations only the \ac{QP} was varied (0, 42, 47, and 50) while audio was left unchanged.
+As degradations only the \ac{QP} factor was varied (0, 42, 47, and 50) while audio was left unchanged.
 After the presentation of a stimulus the \emph{overall perceived quality} needed to be judged on the 7-point \ac{CCR} scale.\footnote{The question was phrased in German: "Wie bewerten Sie die Gesamtqualität der gehörten Audioaufnahme?" for speech-based training and "Wie bewerten Sie die Gesamtqualität des gerade gesehenen Videos?" in case of the video training.}
 
 In the \emph{fourth stage} the multi-episodic part was conducted consisting of sequential use of said service(s).
@@ -291,7 +296,7 @@ The interquartile range is, in fact, a rather conservative criteria.
 However, due to the lack of ground-truth on episodic judgments in a usage multi-episodic case, participants should be only removed, if severe differences occur.
 For none participants of the four experiments this criteria was met and thus none was excluded from the data analysis.
 
-\autoref{tab:lab:participants} gives an overview on participants per condition.
+\autoref{tab:lab:participants} gives an overview on the number of participants per condition for the four experiments.
 
 \begin{table}
 	\centering
@@ -380,7 +385,7 @@ Such an effect could neither be directly observed for any of the four experiment
 
 \subsubsection{Experiment \E1}
 Investigating differences between the episodic judgments for \ac{HP} episodes showed a significant differences (\Sexpr{kruskal(QU~condition, "E1", "HP", unique(timeseries[["condition"]]), c(1:3))}).
-A post-hoc test showed a significant difference between condition \C4 (\ac{MOS}=$\Sexpr{mos_qu_with_sd_by_condition("E1", "HP", "4")}$) and \C7 (\ac{MOS}=$\Sexpr{mos_qu_with_sd_by_condition("E1", "HP", "7")}$) (\Sexpr{wilcox.pairwise.print(QU~condition, "E1", "HP", unique(timeseries[["condition"]]))[7,4]}).
+A post-hoc test showed a significant difference between condition \C4 (\ac{MOS}=$\Sexpr{mos_qu_with_sd_by_condition("E1", "HP", "4", c(1:3))}$) and \C7 (\ac{MOS}=$\Sexpr{mos_qu_with_sd_by_condition("E1", "HP", "7", c(1:3)}$) (\Sexpr{wilcox.pairwise.print(QU~condition, "E1", "HP", unique(timeseries[["condition"]], c(1:3)))[7,4]}).
 A detailed analysis did not yield a reason for the difference, and it is thus considered an artifact due to the between-subject design not affecting the multi-episodic hypotheses testing.
 
 For the episodic judgments of \ac{LP} episodes no significant differences between conditions are found (\Sexpr{kruskal(QU~condition, "E1", "LP", unique(timeseries[["condition"]]))}).
@@ -435,7 +440,7 @@ This indicates that, as long as only \ac{HP} episodes are presented, the between
 
 \subsubsection{\autoref{hypo:number}: Number of \ac{LP} Episodes}
 In \autoref{hypo:number} it is assumed that increasing the number of \ac{LP} episodes before a multi-episodic judgment results in a decrease of this judgment.
-This hypothesis can be evaluated by comparing the results multi-episodic judgments after the 6th episode between condition \C3, C5, and \C6, which present one to three \ac{LP} episodes directly before the multi-episodic judgment (\cf, \autoref{tab:lab:hypothesesComparison}).
+This hypothesis can be evaluated by comparing the results multi-episodic judgments after the 6th episode between condition \C3, \C5, and \C6, which present one to three \ac{LP} episodes directly before the multi-episodic judgment (\cf, \autoref{tab:lab:hypothesesComparison}).
 Conditions \C2a and \C4 present one, respectively, two LP episodes followed by one HP episode before the multi-episodic judgment.
 
 \autoref{tab:lab:hyponumber} shows the multi-episodic judgment after the 6th episode for these five conditions evaluated in experiment \E1 and experiment \E2a.
@@ -481,16 +486,16 @@ Conditions \C4 and C5(a+b) present two consecutive LP episodes with one or no \a
  \begin{tabulary}{\columnwidth}{c|c|C|C}
 	Condition   & LP episode(s) 	& \E1 & \E2a \\
 	\midrule
-	\C1			& 4				& \Sexpr{mos_iqu_with_sd_by_condition("E1", "1", 6)} 			& \Sexpr{mos_iqu_with_sd_by_condition("E2a", "1", 6)} \\
+	\C1			& 4				& \Sexpr{mos_iqu_with_sd_by_condition("E1", "1", 6)} 		& \Sexpr{mos_iqu_with_sd_by_condition("E2a", "1", 6)} \\
 	\hline
-	\C2a		& 5				& \Sexpr{mos_iqu_with_sd_by_condition("E1", "2a", 6)} 		& \Sexpr{mos_iqu_with_sd_by_condition("E2a", "2a", 6)} \\
+	\C2a			& 5				& \Sexpr{mos_iqu_with_sd_by_condition("E1", "2a", 6)} 	& \Sexpr{mos_iqu_with_sd_by_condition("E2a", "2a", 6)} \\
 	\hline
-	\C3			& 6				& \Sexpr{mos_iqu_with_sd_by_condition("E1", "3", 6)} 			& \Sexpr{mos_iqu_with_sd_by_condition("E2a", "3", 6)} \\
+	\C3			& 6				& \Sexpr{mos_iqu_with_sd_by_condition("E1", "3", 6)} 		& \Sexpr{mos_iqu_with_sd_by_condition("E2a", "3", 6)} \\
 	\hline
 	\hline
-	\C4			& 4..5			& \Sexpr{mos_iqu_with_sd_by_condition("E1", "4", 6)} 			& \Sexpr{mos_iqu_with_sd_by_condition("E2a", "4", 6)} \\
+	\C4			& 4..5			& \Sexpr{mos_iqu_with_sd_by_condition("E1", "4", 6)} 		& \Sexpr{mos_iqu_with_sd_by_condition("E2a", "4", 6)} \\
 	\hline
-	\C5a / \C5b 	& 5..6			& \Sexpr{mos_iqu_with_sd_by_condition("E1", "5b", 6)}			& \Sexpr{mos_iqu_with_sd_by_condition("E2a", "5a", 6)} \\
+	\C5a / \C5b 	& 5..6	& \Sexpr{mos_iqu_with_sd_by_condition("E1", "5b", 6)}		& \Sexpr{mos_iqu_with_sd_by_condition("E2a", "5a", 6)} \\
  \end{tabulary}
  \caption{\autoref{hypo:position}: \ac{MOS} of multi-episodic judgment after the 6th usage episode for experiment \E1 and \E2a.}
  \label{tab:lab:hypoposition}
@@ -551,7 +556,7 @@ Condition \C2a and \C7 are not significant different (\Sexpr{wilcox.pairwise.pri
 	\midrule 
 	\C2a		& \ac{HP}		& \Sexpr{mos_qu_with_sd_by_condition("E1", "HP", "2a", 6)}	& \Sexpr{mos_iqu_with_sd_by_condition("E1", "2a", 6)} \\
 	\hline
-	\C7			& \ac{MP}		& \Sexpr{mos_qu_with_sd_by_condition("E1", "MP", "7", 6)} 	& \Sexpr{mos_iqu_with_sd_by_condition("E1", "7", 6)} \\
+	\C7		& \ac{MP}		& \Sexpr{mos_qu_with_sd_by_condition("E1", "MP", "7", 6)} 	& \Sexpr{mos_iqu_with_sd_by_condition("E1", "7", 6)} \\
 	\hline
 	\C5b		& \ac{LP}		& \Sexpr{mos_qu_with_sd_by_condition("E1", "LP", "5b", 6)} 	& \Sexpr{mos_iqu_with_sd_by_condition("E1", "5b", 6)} \\
  \end{tabulary}

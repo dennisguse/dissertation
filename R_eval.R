@@ -41,7 +41,7 @@ kruskal <- function(formula=QU~condition, experiment_filter, performance_level_f
  d = subset(timeseries, experiment %in% experiment_filter & performance_level %in% performance_level_filter & condition %in% condition_filter & id %in% id_filter)
 
  r = kruskal.test(formula, d)
- if (r$p.value < 0.0001) paste0("$H(", r$parameter, ")=", round(r$statistic, 4), "$, $p<0.0001$") 
+ if (r$p.value < 0.001) paste0("$H(", r$parameter, ")=", round(r$statistic, 4), "$, $p<0.001$") 
  else paste0("$H(", r$parameter, ")=", round(r$statistic, 4), "$, $p=", round(r$p.value, 4), "$") 
 }
 kruskal(QU~condition, "E1", "HP", unique(timeseries$condition), c(1:3))

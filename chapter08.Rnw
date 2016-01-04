@@ -99,7 +99,7 @@ For \ac{HP} a video bandwidth of \unit[2]{Mbit/s} and for \ac{LP} a video bandwi
 In the experiment participants used the services from their private computer running Windows~7 using a \ac{USB} thumb drive.
 For audio reproduction and recording a Logitech PC120 headset was provided for each participant.
 Participants were instructed to use the headset for the speech telephony service as well as the \ac{VoD} service.
-The full description of the technical setup can be found in \autoref{appendix:setupE4}.
+The full description of the technical setup can be found in \autoref{appendix:setup}.
 
 In experiment \E4 two conditions were applied.
 In the first one all episodes for both services were presented in \ac{HP}.
@@ -110,17 +110,16 @@ After every episode with a service, participants assessed the episodic perceived
 The multi-episodic perceived quality for each service was assessed after the 5th, 8th, 11th, and 15th day directly after finishing the episode with the \ac{VoD} service.
 In addition to the multi-episodic judgment the \ac{NPS} was assessed for each service individually and for both services as a bundle.
 
-\subsection{Participants} %TODO Verify numbers
-10 pairs successfully finished the study, 5 per condition, with an average age of \unit[22.9]{years}.
-11 male and 9 females participated.
+\subsection{Participants}
+10 pairs successfully finished experiment E4, 5 per condition, with an average age of \unit[22.9]{years} consisting of \unit[11]{male} and \unit[9]{female} participants.
 Of the 280 scheduled calls, 5 were not done and 18 per-interaction questionnaires were not filled.
-For the entertainment tasks,13 per-interaction questionnaires and one integrated QoE questionnaire were not filled.
+For the entertainment tasks, 13 per-interaction questionnaires and one integrated QoE questionnaire were not filled.
 
 \subsection{Data Analysis}
 
 %EPisodic
-\Sexpr{wilcox(QU~condition, "E4a",  "HP", c("A0", "A1"), unique(timeseries[["id"]]), "VoD")} %SIG
-\Sexpr{wilcox(QU~condition, "E4a",  "HP", c("A0", "A1"), unique(timeseries[["id"]]), "telephony")}
+\Sexpr{wilcox(QU~condition, "E4a",  "HP", c("A0", "A1"), unique(timeseries[["id"]]), "VoD")}
+\Sexpr{wilcox(QU~condition, "E4a",  "HP", c("A0", "A1"), unique(timeseries[["id"]]), "telephony")} %SIG
 
 
 \Sexpr{wilcox(QU~condition, "E4a",  c("HP", "LP"), c("A0", "A1"), unique(timeseries[["id"]]), "VoD")} %SIG
@@ -197,6 +196,8 @@ For the entertainment tasks,13 per-interaction questionnaires and one integrated
 \Sexpr{kruskal(IQU~id, "E5", c("HP", "LP"), "P1", unique(timeseries[["id"]]), "AoD")}
 \Sexpr{kruskal(IQU~id, "E5", c("HP", "LP"), "P2", unique(timeseries[["id"]]), "VoD")}
 
+TODO: Define C9
+
 \begin{table}[h!]
 \centering
  \begin{tabular}{c|c|c|c|c}
@@ -222,36 +223,95 @@ For the entertainment tasks,13 per-interaction questionnaires and one integrated
 
 \section{Experiment E6}
 Experiment \E6 complement the experiments on multi-episodic perceived quality in one session (\cf, \autoref{chap:lab}).
-In this experiment an \ac{AoD} service only is used.
+In difference to experiment \E4 and \E5 only one service was used.
+This service was chosen to be an \ac{AoD} service as it is media consumption-only and thus user behavior can be neglected.
+Furthermore, technical distribution can be implemented in an error-robust manner as content is preproduced in difference to a speech telephony service.
+Experiment \E6 is a follow-up upon the laboratory experiments (\E1, \E2a, \E2b, and \E3) but extending the usage period to \unit[7]{days} and only one usage episode per session.
+The main goal of this experiment was to investigate, if the effects observed for multi-episodic \ac{QoE} in one session (\cf, \autoref{chap:lab}) can also be observed in longer usage periods with non-consecutive usage, or if differences are observed.
+Whereas in the former case, prognosis models could be applied to both situations, the later case would require to implement custom prognosis models or add the length of usage period as a parameter.
+In experiment \E6 only a subset of hypotheses is investigated omitting those hypotheses with a relative small effect size, because it is likely that noise masks such effects especially due to the length of the overall usage period and less controllable, and potentially varying, usage situations.
+In experiment \E6 the impact of the number of \ac{LP} episodes (\autoref{hypo:number}), the position of one or two \ac{LP} episodes (\autoref{hypo:position}), and the presentation two \ac{LP} episodes in sequential versus non-sequential (\autoref{hypo:consecutive}) are investigated.
 
-\begin{table}
+\subsection{Design}
+Experiment \E6 is closely designed to the conducted laboratory experiments consisting of a usage period of \unit[7]{days}.
+On each of those \unit[7]{days} the provided \ac{AoD} service needed to be used twice per day.
+
+Here, the audiobook Isabel Allende's \emph{"City of the Beats"}, which has also been used in experiment \E3, has been selected.
+In difference to laboratory experiments in which episodes lasted circa \unit[3]{min}, for this experiment it was opted for longer episodic duration.
+This avoids that participants are not able to focus on the content as the episodes are too short.
+Therefore, a duration of \unit[7]{min} was selected and the audiobook cut in such a way that the individual scenes remained meaningful in itself.
+Those were then presented in the original order.
+
+In this experiment the \ac{AoD} service was presented in two different performance level, \ie, \ac{HP} and \ac{LP}.
+For \ac{LP} the source material was first encoded with LPC-10 and then re-encoded into \ac{MP3} with (\unit[192]{kbit/s}).
+For \ac{HP} the source material was directly encoded in \ac{MP3} with the same bitrate.\footnote{Encoding in \ac{MP3} was necessary as the audio files were downloaded from via Internet and uncompressed audio data is not suited for this type of distribution.}
+
+\subsubsection{Conditions}
+For the investigation of the three hypotheses under investigation, six conditions were evaluated in this experiment.
+In difference to the laboratory experiments performance of the service was varied per \emph{day} instead of per episode, \ie, the two episodes of each day were always presented with the same performance level.
+As the conditions of this experiment are very similar to the conditions of the laboratory experiments, those are denoted with the \emph{same} abbreviations and only counting the actual \emph{\unit[6]{days}} that were conducted  in the multi-episodic part of this experiment that was conducted in the field.
+In all conditions the first three days of the field experiment were presented in \ac{HP} and \ac{LP} episodes only presented from day 4 to day 6.
+For the investigation of \autoref{hypo:number} the results of the conditions \C3, \C5, and \C6 can be compared.
+\autoref{hypo:position} can be evaluated by comparing the results of conditions \C1 and \C3 as well as \C4 and \C5.
+Finally, \autoref{hypo:consecutive}  is evaluated by comparing the results condition \C8 with \C3 and \C5.
+\autoref{tab:field:e6:participants} gives an overview on the conducted conditions and the number of participants.
+
+\subsubsection{Feedback}
+The first day of the experiment was conducted in the laboratory consisting of three stages.
+First, each participant received all necessary information about the experiment, signed a consent form, and provided demographic data.
+Second, the same training session as in the laboratory experiments was conducted, presenting different speech telephony related degradations (\cf, \autoref{sec:training}).
+Finally, the two usage episodes of this day were conducted.
+On subsequent six days the first usage episode of a day needed to be conducted between \unit[7]{am} and \unit[1]{pm}, and the second usage episode between 3 and \unit[10]{pm}.
+After every usage episode participants needed to judge the episodic quality on the 7-point \ac{CCR} scale.
+In addition, two content-related questions needed to be answered by selecting the correct answer out of three presented.
+Multi-episodic judgments were collected after the second episode of the \unit[3rd]{day} and the \unit[6th]{day} of the field part.
+
+One day after finishing the \unit[7]{days} usage period a final interview was conducted.
+In this interview the \ac{NPS}, the retrospective quality for every day, and the content answers for every episode were assessed.
+In addition, potential issues with the provided technical system were assessed.
+A detailed description of the system can be found in the \autoref{appendix:setups}.
+
+\subsection{Participants}
+Experiment \E6 was conducted in Berlin from September 2015 until November 2015.
+Participants were required to have non-impaired hearing and were able to follow the experimental instructions.
+Overall this experiment was conducted with \unit[65]{female} and \unit[35]{male} participants aging from of 18 to \unit[50]{years} ($\mu=26.1$, $\sigma=4.6$). %TODO Ist falsch!
+Participants received \unit[20]{EUR} as compensation for their participation, if all usage episodes were conducted.
+
+\begin{table}[h]
 	\centering
 	\begin{tabular}{c|c}
-	Conditions & Experiment E6\\
+	Conditions 	& \ac{LP} episodes & Number of Participants\\
 	\midrule
-	C1		& \Sexpr{participants("E6a", "1")}	\\
-	C3		& \Sexpr{participants("E6a", "3")} \\
-	C4		& \Sexpr{participants("E6a", "4")}	\\
-	C5a	& \Sexpr{participants("E6a", "5a")}\\
-	C6		& \Sexpr{participants("E6a", "6")}	 \\
-	C8		& \Sexpr{participants("E6a", "8")}  \\
+	\C1		& 4 		& \Sexpr{participants("E6a", "1")}	\\
+	\C3		& 6 		& \Sexpr{participants("E6a", "3")} \\
+	\C4		& 4..5	& \Sexpr{participants("E6a", "4")}	\\
+	\C5		& 5..6	& \Sexpr{participants("E6a", "5a")}\\
+	\C6		& 4..6	& \Sexpr{participants("E6a", "6")}	\\
+	\C8		& 4, 6	& \Sexpr{participants("E6a", "8")} \\
 	\midrule
 	$\sum$ 	& \Sexpr{participants("E6a")}\\
 	\end{tabular}
-	\caption{Overview on conditions for the experiments E6 incl. number of participants per condition.}
-	\label{tab:field:participants}
+	\caption{Overview on conditions for the experiment \E6 with number of participants per condition.}
+	\label{tab:field:e6:participants}
 \end{table}
 
-In both experiment a experimental period of \unit[7]{days} was selected.
-
-\subsection{Participants}
-TODO
-
-
-
-
+Similar to the laboratory experiments each participant was individually checked for inconsistent episodic judgments.
+A participant is considered inconsistent, if more than two episodic judgments are exceeding the 1.5 $\times$ \emph{interquartile range} of the performance levels of this condition. %TODO REF
+None of the participants of experiment \E6 fulfilled this criteria.
+In addition, the content related answers that were collected directly after finishing each episode were evaluated.
+For this criteria one participant was excluded as only 9 out of 28 questions were answered correct. %TODO
 
 \subsection{Data Analysis}
+In the following the data of experiment \E6 are analyzed.
+First the episodic judgments are evaluated to investigate potential differences between the conditions.
+
+\subsubsection{Episodic Judgments}
+Investigating differences between the episodic judgments for \ac{HP} episodes showed a significant differences (\Sexpr{kruskal(QU~condition, "E6a", "HP", unique(timeseries[["condition"]]), c(1:8))}).
+A post-hoc test showed no significant difference between conditions altough \C4 (\ac{MOS}=$\Sexpr{mos_qu_with_sd_by_condition("E6a", "HP", "4", c(1:8)}$) and \C6 are (\ac{MOS}=$\Sexpr{mos_qu_with_sd_by_condition("E6a", "HP", "6", c(1:8))}$) close to significant different (\Sexpr{wilcox.pairwise.print(QU~condition, "E6a", "HP", unique(timeseries[["condition"]], c(1:8)))[5,4]}).
+A detailed analysis did not yield a reason for the difference, and it is thus considered an artifact due to the between-subject design not affecting the multi-episodic hypotheses testing.
+
+For the episodic judgments of \ac{LP} episodes no significant differences between conditions are found (\Sexpr{kruskal(QU~condition, "E2a", "LP", unique(timeseries[["condition"]]))}).
+The episodic judgments are significantly different between performance levels (\Sexpr{wilcox(QU~performance_level, "E6a", unique(timeseries[["performance_level"]]), unique(timeseries[["condition"]]))}).
 
 
 \subsubsection{\autoref{hypo:number}: Number of \ac{LP} Episodes}
@@ -259,11 +319,11 @@ TODO
 \begin{table}[h!]
 \centering
  \begin{tabulary}{\columnwidth}{c|c|C}
-	Condition	& \ac{LP} episode(s) 	& E7 \\
+	Condition	& \ac{LP} episode(s) 	& multi-episodic judgment (\ac{MOS})\\
 	\midrule
 	\C3			& 6				& \Sexpr{mos_iqu_with_sd_by_condition("E6a", "3", 14)}\\
 	\hline
-	\C5a			& 5..6			& \Sexpr{mos_iqu_with_sd_by_condition("E6a", "5a", 14)}\\
+	\C5			& 5..6			& \Sexpr{mos_iqu_with_sd_by_condition("E6a", "5a", 14)}\\
 	\hline
 	\C6			& 4..6			& \Sexpr{mos_iqu_with_sd_by_condition("E6a", "6", 14)}\\
  \end{tabulary}
@@ -276,7 +336,7 @@ TODO
 \begin{table}[h!]
 \centering
  \begin{tabulary}{\columnwidth}{c|c|C}
-	Condition   & \ac{LP} episode(s) 	& E6 \\
+	Condition   & \ac{LP} episode(s) 	& \E6 \\
 	\midrule
 	\C1			& 4				& \Sexpr{mos_iqu_with_sd_by_condition("E6a", "1", 14)}\\
 	\hline
@@ -296,33 +356,23 @@ TODO
 \begin{table}[h!]
 \centering
  \begin{tabulary}{\columnwidth}{c|c|C}
-	Condition   & LP episode(s) 	& E6a \\
+	Condition   & \ac{LP} episode(s) 	& \E6 \\
 	\midrule
 	\C3			& 6				& \Sexpr{mos_iqu_with_sd_by_condition("E6a", "3", 14)}\\
 	\hline
 	\hline
 	\C4			& 4..5			& \Sexpr{mos_iqu_with_sd_by_condition("E6a", "4", 14)}\\
 	\hline
-	\C8			& 4, 5			& \Sexpr{mos_iqu_with_sd_by_condition("E6a", "8", 14)}\\
+	\C8			& 4, 6			& \Sexpr{mos_iqu_with_sd_by_condition("E6a", "8", 14)}\\
 	\hline
-	\C5a			& 5..6			& \Sexpr{mos_iqu_with_sd_by_condition("E6a", "5a", 14)}\\
+	\C5			& 5..6			& \Sexpr{mos_iqu_with_sd_by_condition("E6a", "5a", 14)}\\
 	\hline
 	\hline
 	\C1			& 4				& \Sexpr{mos_iqu_with_sd_by_condition("E6a", "1", 14)}\\
  \end{tabulary}
  \caption{\autoref{hypo:position}: \ac{MOS} of multi-episodic judgment after the 6th usage episode for experiment \E6.}
- \label{tab:field:hypoposition}
+ \label{tab:field:hypoconsecutive}
 \end{table}
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -346,7 +396,7 @@ TODO
 
 
 \section{Cross-service QoE}
-%BLABLABLA
+TODO
 
 \section{Digression: On practical aspects of Field Studies}
 \begin{itemize}
