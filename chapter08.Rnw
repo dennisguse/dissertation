@@ -97,7 +97,7 @@ For the \ac{VoD} service the video was encoded with H.264 (Main Profile) with a 
 For this service the two performance levels only different in video coding bandwidth without affecting the audio signal.
 For \ac{HP} a video bandwidth of \unit[2]{Mbit/s} and for \ac{LP} a video bandwidth of \unit[0.125]{MBit/s} was used.
 In the experiment participants used the services from their private computer running Windows~7 using a \ac{USB} thumb drive.
-For audio reproduction and recording a Logitech PC120 headset was provided for each participant.
+For audio reproduction and recording a \emph{Logitech PC120} headset was provided for each participant.
 Participants were instructed to use the headset for the speech telephony service as well as the \ac{VoD} service.
 The full description of the technical setup can be found in \autoref{appendix:setup}.
 
@@ -289,7 +289,7 @@ Participants received \unit[20]{EUR} as compensation for their participation, if
 	\C6		& 4..6	& \Sexpr{participants("E6a", "6")}	\\
 	\C8		& 4, 6	& \Sexpr{participants("E6a", "8")} \\
 	\midrule
-	$\sum$ 	& \Sexpr{participants("E6a")}\\
+	& 	& $\sum$: \Sexpr{participants("E6a")}\\
 	\end{tabular}
 	\caption{Overview on conditions for the experiment \E6 with number of participants per condition.}
 	\label{tab:field:e6:participants}
@@ -389,7 +389,6 @@ The three conditions, however, are not significant different with regard to the 
  \caption{\autoref{hypo:position}: \ac{MOS} of multi-episodic judgment after the 6th usage episode for experiment \E6.}
  \label{tab:field:hypoconsecutive}
 \end{table}
-
 
 \subsection{Discussion}
 
