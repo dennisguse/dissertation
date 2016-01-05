@@ -4,6 +4,7 @@ mean_sd <- function(d, precision=1) {
  #sprintf("%f (%f)", mean(d, na.rm=T), sd(d, na.rm=T))
 }
 
+#TODO Sprintf does not round, but rather cuts numbers!
 
 participants <- function(experiment_filter, condition_filter=unique(timeseries$condition)) {
  d = subset(timeseries$username, experiment==experiment_filter & condition %in% condition_filter)
@@ -60,9 +61,9 @@ wilcox <- function(formula=QU~condition, experiment_filter, performance_level_fi
   if (r$alternative == "two.sided") r$alternative = ""
   else r$alternative = ", one-sided"
 
-  if (r$p.value > 0.05) sprintf("$W=%.2f$, $p=%.2f$%s", r$statistic, r$p.value, r$alternative)
+  if (r$p.value > 0.05) sprintf("$W=%.2f$, $p=%.3f$%s", r$statistic, r$p.value, r$alternative)
   else if (r$p.value < 0.001) sprintf("$W=%.2f$, $p<0.001$, $\\triangle=%.2f$%s", r$statistic, r$estimate, r$alternative)
-  else sprintf("$W=%.2f$, $p=%.2f$, $\\triangle=%.2f$%s", r$statistic, r$p.value, r$estimate, r$alternative)
+  else sprintf("$W=%.2f$, $p=%.3f$, $\\triangle=%.2f$%s", r$statistic, r$p.value, r$estimate, r$alternative)
   }
 }
 wilcox(QU~performance, "E1",  c("HP", "LP"))
@@ -98,9 +99,9 @@ wilcox.pairwise.print <- function(formula=IQU~condition, experiment_filter, perf
   for(y in 1:ncol(p)) {
    if (is.na(p[x, y])) result[x, y] = "NA"
    else 
-   if (p[x, y] > 0.05) result[x, y] = sprintf("$p=%.2f$", p[x, y])
+   if (p[x, y] > 0.05) result[x, y] = sprintf("$p=%.3f$", p[x, y])
    else if (p[x, y] < 0.001) result[x, y] = sprintf("$p<0.001$, $\\triangle=%.2f$", estimate[x, y])
-   else result[x, y] = sprintf("$p=%.2f$, $\\triangle=%.2f$", p[x, y], estimate[x, y])
+   else result[x, y] = sprintf("$p=%.3f$, $\\triangle=%.2f$", p[x, y], estimate[x, y])
    }
   }
  return (result)
