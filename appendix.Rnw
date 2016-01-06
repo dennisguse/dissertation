@@ -4,127 +4,139 @@ In the appendix I include all information about the presented studies.
 This includes all details that are necessary for understanding the results, but are important for reproduction (additional data and plots as well as a detailed technical description of the setups).
 \end{chapter-abstract}
 
-\section{Setups}\label{appendix:setups}
+\section{Experimental Setups}\label{appendix:setups}
+The systems that were used in the conducted experiments are described focusing on the media processing and reproduction details.
+It must be noted that the systems for experiments \E1, \E2a, \E2b, and \E3 were designed especially for use in a controlled laboratory setting and thus precise reproduction of desired system performance was focused.
+The systems designed for experiments \E4, \E5, and \E6 were designed for use in field experiments and thus requiring ease-of-setup, needed rather to be reliable and robust than absolutely precise in system performance.
 
-\subsection{Experiment \E1: Two-party Conversation}
-In \E1 the third stage, \ie, quality assessment of short speech stimuli as training, was conducted on a tablet computer (\emph{Fujitsu~Stylistic~ST6012}).
+\subsection{Experiment \E1}
+For experiment \E1 two systems were required, one \ac{LOT} conducted as training for the presentation of telephony related degradations and their effect on speech, and a two-party speech telephony systems.
+
+\subsubsection{Listening-only Training}
+For the listening-only training conducted in experiment \E1 was conducted with a tablet computer (\emph{Fujitsu~Stylistic~ST6012}).
 For binaural representation a pair of \emph{AKG~K-271} was connected to the internal sound card of the tablet computer.
 The system was calibrated using a \emph{HEAD acoustics} head and torso simulator \emph{HSM~II.3} to a sound pressure level of \unit[75]{dB20$\mu$Pa} for babble noise.
 
-The multi-episodic assessment, \ie, the fourth stage, a speech telephony system for two-party conversations was required.
+For the generation of stimuli the ITU-T STL2009 tools \cite{itu-t_g.191_2010} and the audio-processing tool \emph{SOX} were used.
+The STL2009 were used for coding G.711, G.722 and inserting packet-loss for G.722, whereas SOX was used for coding GSM-FR, and LPC-10 as well as filtering wideband, narrowband, and white noise.
+
+\subsubsection{Two-party Speech telephony}
+For the multi-episodic assessment of experiment \E1 a speech telephony speech telephony system for two-party conversations was required.
+
+\paragraph*{Network-based Setup}
 In the first part of the experiment a \ac{VoIP}-based system consisting of three computers was used.
 Those three computers were connected via Ethernet (CAT-5). 
-One computer (\emph{Lenovo X61}) acted as a Server running the open-source telephony server \emph{Asterisk 11}\footnote{\url{http://www.asterisk.org}}.
-Two \emph{Fujitsu Siemens TODO} were running each a custom client based-upon \emph{PJSIP~2.1}\footnote{PJSIP is an open-source library for \ac{SIP}-based \ac{VoIP}}, which were connected via \ac{SIP} with the server.
-The custom client presented only a minimal \ac{UI} consisting of one button for call initiation and hangup, one checkbox to set own presence status, and an image presenting the present status of the other client.
-On each of the two client computers one \emph{Beyerdynamic~DT~790~Pro} headset connected to a \emph{Edirol~UA-25EX} was used for binaural reproduction and recording.
-%The headset uses closed headphones ($80 \ohm$, \unit[5...35.000}[MHz]), which provide a ambient noise reduction of approximately \unit[35]{dBA}. https://www.beyerdynamic.de/shop/media/datenblaetter/DAT_DT790_EN_A4.pdf
-The output on both systems was calibrated to a comfortable listening level. %TODO REF?
-The clients did not send transmit the speech data directly with each other, but rather the signal was relayed via Asterisk.
-Transmission of the speech signal between Asterisk and client in both direction was lossless by using the \emph{L16} codec with a sample rate of \unit[16]{kHz} resulting in a unidirectional net transmission rate of \unit[256]{kbit/s}. %TODO CITE RFC3551
-Asterisk applied the desired performance level, \ie, codec, by compression the signal and immediately decompressing it before relaying the signal.\footnote{The performance levels were set by using the transcoding capability of Asterisk. On an incoming call coded with L16, Asterisk initiated a call to himself with the desired codec (\ie, G.722, or LPC-10). The later call triggered an outgoing call to the callee encoded in L16. This requires that the call loop detection is disabled in Asterisk.}
+One computer (\emph{Lenovo X61}) acted as a Server running the open-source \ac{PBX} \emph{Asterisk 11}\footnote{\url{http://www.asterisk.org}}.
+Two \emph{Fujitsu Lifebook S761} were running each a custom client based-upon \emph{PJSIP~2.1}\footnote{PJSIP is an open-source library for \ac{SIP}-based \ac{VoIP}.}, which were connected via \ac{SIP} with the server.
+The custom client presented only a minimal \ac{UI} consisting of one button for call initiation and hangup, one button to set the current presence status, and an image presenting the presence status of the other client.
+Call initiation was only possible, if both clients set their presence status to available.
+The two clients did not communicate directly with each other, but the Asterisk server acted as a proxy providing transcoding functionality.
+Transmission of the speech signal between Asterisk and clients in both direction was lossless by using the \emph{L16} codec with a sample rate of \unit[16]{kHz} resulting in a unidirectional net transmission rate of \unit[256]{kbit/s}.
+Asterisk applied the desired performance level, \ie, codec, by compression the signal and immediately decompressing it before relaying the signal.\footnote{The performance levels were set by using the transcoding capability of Asterisk. On an incoming call coded with L16, Asterisk initiated a call to himself with the desired codec (\ie, G.722, or LPC-10). The later call triggered an outgoing call to the callee encoded in L16.}
 This system achieved a one-way end-to-end delay of \unit[120]{ms}.
 
-This system was in the second part replaced by a more elaborate system, which provides easier setup, maintenance, and verification.
-For this system only one computer without a network for speech transmission is used.
+On each of the two client computers one \emph{Beyerdynamic~DT~790~Pro} headset connected to a \emph{Edirol~UA-25EX} was used for recording and binaural reproduction.
+The output on both systems was calibrated to a comfortable listening level.
+
+\paragraph*{Sound card Setup}
+In the second this system was replaced by a more elaborate system, which provides easier setup that less complex to verify.
+For this system only one computer without an actual network is used.
 Rather than transmitting the signals digital via Ethernet, an analogue transmission via audio cables is used.
 In this system also the \emph{Beyerdynamic~DT~790~Pro} headsets were used.
 The two headsets were connected to the processing computer (\emph{Lenovo X61}) with one \emph{Edirol~UA-25EX}.
-As the individual signals were transmitted using analogue audio cables with a length of \unit[10]{m}, the microphone signals were amplified beforehand using a \emph{RME QuadMic II} microphone preamplifier.
+As the individual signals were transmitted using analogue audio cables with a length of \unit[10]{m}, the microphone signals were amplified beforehand using a \emph{RME QuadMic II} microphone preamplifier to avoid a degradation of the signal due to the cable length.
+
 On the computer \emph{PureData}, an open-source audio processing program, is used to modify the speech signals.
 As no speech codecs were not available in PureData, PureData was extended with the speech codecs G.711, G.722 and LPC-10.
-It was verified that the PureData setup provides similar characteristics as the Asterisk setup.
+It was verified that the PureData setup provides similar characteristics as the Network-based setup.
 The overall system achieved a constant, glitch-free one-way end-to-end delay of \unit[70]{ms}.
 
-In both setups neither comfort noise nor side tone was presented.
-Furthermore, no \ac{VAD}, \ac{AGC}, denoising, or echo cancellation was used as the usage of \emph{Beyerdynamic~DT~790~Pro} in a room according \ac{ITU-T} P.800~\citep{itu-t_p.800:_1996} is not necessary.
-As not a precise reproduction of standardized telephone handsets was not required, audio signals were not \ac{IRS} filtered.
+\paragraph*{Additional Processing}
+Due to the performance of the \emph{Beyerdynamic~DT~790~Pro} headsets, which provide a pair of closed headphones as well as a directional microphone, neither echo cancellation nor denoising algorithms were applied.
+Both systems were configured to provide neither side tone nor comfort noise, if not introduced by the codec.
+No additional audio processing was applied.
 
 \subsection{Experiments \E2a, \E2b, and \E3}
-For the experiments \E2a, \E2b, and \E3 very similar setups were used for the binaural reproduction of the audio signals.
-Here a pair of \emph{Sennheiser HD 25-1} headphones was used for sound reproduction connected.
-For experiment \E2a, and \E3 those were connected to the internal sound card of a \emph{Microsoft Surface Pro} tablet computer.
-
-For experiment \E2b the same pair of headphones was used, but connected to the internal sound card of the used \emph{Nexus 7 (2013)}.
-In this experiment the display of the Nexus~7 was used for presentation of the video signals.
-
-%Media presentation
-
+For the experiments \E2a, \E2b, and \E3 audio signals were presented with a pair of \emph{Sennheiser HD 25-1}.
+For experiment \E2a, and \E3 those were connected to the internal sound card of a \emph{Microsoft Surface Pro} tablet computer whereas for experiment \E2b those were connected to the internal sound card of the used \emph{Nexus 7 (2013)}.
 In all three experiments the sound pressure level was calibrated to \unit[75]{dB20$\mu$Pa} using the \emph{HSM II.3} with babble noise and the experiments conducted in a sound-proof cabin following ITU-T~P.800~\citep{itu-t_p.800:_1996}.
+In experiment \E2b the \ac{VoD} service was presented on the display Nexus~7 (2013) showing videos horizontal in fullscreen.
+This \unit[7]{inch} display of this device was set to maximum brightness without applying any device related color adaption.
+
+In those three experiments non-degraded recordings of two-party conversations of experiment \E1 were selected.
+Those recordings were processed with the ITU-T STL2009 tools \cite{itu-t_g.191_2010} for coding with G.722 and with SOX for coding with LPC-10.
+For experiment \E2b the videos material was cut with \emph{Adobe Premiere 6} and exported with H.264 ($1280x800$, \unit[10]{Mbit/s}, two-pass coding) and \ac{AAC} (stereo, \unit[448]{kbit/s}).
+Afterwards it was processed with \emph{FFPMEG} to re-encode with desired \ac{QP} factor while leaving audio unchanged.
 
 \subsection{Experiment \E4}
-For experiment \E4 a speech telephony services and a \ac{VoD} were required.
-In this experiment participants used their own personal computer, which was required running Windows~7.
-In addition, participants were provided a \emph{Logitech P120} headset.
+Experiment \E4 was the first conducted experiment as a field experiment with a usage period of multiple days.
+For this experiment \E4 a speech telephony service and a \ac{VoD} service were implemented that could be used by participants with their own personal computer while using their Internet access.
+For recording and audio reproduction participants were provided a \emph{Logitech P120} headset.
 
-\subsubsection{Two-party Speech Telephony}
+\subsubsection{Speech Telephony Service}
 For conducting experiment \E4 a public reachable \ac{VoIP} telephony service was setup.
 The service needed to be able to allow parallel two-party speech conversations and be able to insert packet-loss for individual conversations.
 For this service one server was installed in the data center of the \emph{TU Berlin} reachable by a public IPv4 address.
-As operating system \emph{FreeBSD 9.0} was selected as this system provides built-in a firewall with integrated traffic shaper called \emph{Dummynet}~\cite{rizzo_dummynet}.
-This traffic shaper allows allows to add additional network impairments like packet-loss, delay, and jitter per individual connection, \ie, protocol, port, source address, destination address and if a packet is received or send.
+As operating system \emph{FreeBSD 9.0} was selected, because it provides a built-in firewall with integrated traffic shaper called \emph{Dummynet}~\cite{rizzo_dummynet}.
+This traffic shaper allows allows to add network impairments like packet-loss, delay, and jitter per individual connection, \ie, protocol, port, source address, destination address and if a packet is incoming or outgoing.
 On this server the \ac{PBX} software \emph{Asterisk 10} was installed, which was configured to act as a \ac{SIP} registrar as well as \ac{RTP}-Proxy for the \ac{UDP}-based media streams.
-On call initiation of a client Asterisk enforced, so it acted as relay for all media streams of this call and informed Dummynet about the to be applied packet-loss rate for those streams.
-Packet-loss was not added to the \ac{SIP} connections between clients and server as this might lead to call setup delay, call hangup delay and call hangup due to timeout on the control connection.
-%Those connections used \ac{UDP} with a timeout of \unit[30]{sec}.
-In this experiment the \ac{VoIP} client \emph{Jitsi 1.0} was installed on each participant's computer running Windows~7.
+On call initiation of a client Asterisk informed Dummynet about the desired packet-loss rate for the media streams of this call.
+Packet-loss was not added to the \ac{SIP} connections between clients and server, because this affects the reactivity telephony system and might lead call drops.
+As client the multi-platform client \emph{Jitsi 1.0} was installed on each participant's computer.
 
-While the speech telephony server was running well while testing, it was not able to fulfill the desired performance levels as desired.
-Two limitations have been observed while using the overall system for experiment \E4.
-First of all, participants connected using their Internet access, required to be \ac{DSL} with at least \unit[6]{MBit/s}, often using a \ac{WLAN}.
-The performance of this connection could neither be estimated nor enforced, but for some conversations severe, often bursty, packet-loss was observed.
-However, for the media streams no counter measures were taken against packet-loss as the used speech codec G.722 (\unit[64]{kbit/s}) was used without \ac{PLC} nor \ac{FEC} on \ac{UDP} connections without retransmission.
+While the speech telephony server was running well while testing, it was not able to fulfill the desired performance levels in the experiment.
+Two limitations have been observed while using the overall system.
+First of all, participants connected using their own Internet access, required to be \ac{DSL} with at least \unit[6]{MBit/s}, often using a \ac{WLAN}.
+The performance of this connection could neither be estimated nor enforced, but for some calls severe, often bursty, packet-loss was observed.
+However, for the media streams no counter measures were taken against packet-loss as the used speech codec G.722 (\unit[64]{kbit/s}) was used with neither \ac{PLC} nor \ac{FEC} on \ac{UDP} connections without retransmission.
 Second, packet-loss was added by Dummynet in addition to packet-loss occurring due to connection issues resulting in potentially higher loss than desired.
 
 \subsubsection{\ac{VoD}}
-For the \ac{VoD} service an actual service was simulated rather than setup.
-Here a video player was implemented with \emph{Microsoft Silverlight} that replicated a video streaming website including login procedure and initial buffering.
-This video player could furthermore only be executed in a web browser.
+For the \ac{VoD} service an actual service was simulated offline rather than providing it as an online service.
+Here a video player was implemented with \emph{Microsoft Silverlight} that replicated a video streaming website including login procedure and initial buffering, which could only be executed in a web browser.
 This video player was bundled together with the preprocessed videos on a \ac{USB} flash drive.
-Participants were instructed that while using the \ac{VoD} service the \ac{USB} flash drive must remain connected to the computer.
-Storing the content locally rather downloading it, if needed, avoided issues like to limited network bandwidth altogether.
+Participants were instructed that for using the \ac{VoD} service the \ac{USB} flash drive must be inserted into the computer and remain connected while using this service.
+Storing the content locally rather downloading it, if needed, avoided the setup of such a service as well as potential network related issues.
 
 In difference to the speech telephony service, this system achieved the desired performance levels in a reliable manner.
 
 \subsection{Experiment \E5}
-Using an \ac{AoD} service and a \ac{VoD} service in experiment \E5 was inspired by the reliability of the implemented system for the \ac{VoD} service.
-For this experiment, however, mobile devices running \emph{Android 2.3} were available.
-This prevented reusing the Silverlight of the video player used in experiment \E4.
-Therefore, a native Android application was implemented with the same functionality, \ie, storing media content locally while providing login functionality and initial buffering.
+Based upon the reliability of the simulation of a \ac{VoD} service for experiment \E4, an \ac{AoD} service and \ac{VoD} service were used in experiment \E5, but simulating both services.
+For this experiment ten \emph{Samsung Galaxy SII (GT-I9210)} mobile phones running \emph{Android 2.3} were available.
+This mobile phone has \unit[4.5]{inch} display with a resolution of $480x800$.
+A native Android application was implemented with the same functionality as the implementation used in experiment \E4, \ie, storing media content locally while providing login functionality and initial buffering.
 For media playback the \ac{VoD} service presented the video horizontally in full screen while the \ac{AoD} presented an equalizer.
-
-For this experiment \emph{Samsung Galaxy SII (GT-I9210)} including mobile Internet access were provided to participants as well as a pair of \emph{Shure 240} headphones.
+In addition to the mobile phone each participant received a pair of \emph{Shure 240} headphones.
 
 \subsection{Experiment \E6}
+For experiment \E6 only an \ac{AoD} service was used.
+For this experiment it chosen not to provide any equipment for participants, but rather let participants use their own equipment.
+Rather than installing a software on the participant's computer, the \ac{AoD} service was implemented as a website available online.
+This website used HTML5 multi-media features to download and playback the audio content.
+Participants were only required to use as web browser either \emph{Google Chrome} or \emph{Chromium} to limit and testing effort for the website.
+As the buffering strategy for media content cannot be controlled by website using standardized HTML5, the preloading was initiated, when the webpage was loaded while presenting a loading animation of \unit[5]{sec}.
+This avoids issues due initial buffering by providing a constant waiting time.
 
 
 
-\subsection{Media Processing and Degradations}
 
-
-
-
-
-
-
-\section{Content}
-
-\subsection{\acs{SCT} used in \E1, \E2a, \E2b, and E3}
-\begin{table}[h]
-	\centering
-	\begin{tabular}{c|c|c}
-	Episode & Title & Page \\
-	\hline
-	1 & Travel Agent (German: Reisebüro) & p. 16f \\
-	2 & Rail Travel Information (German: Bahnauskunft) & p. 18f \\
-	3 & Theater Box office (German: Theaterkasse) & p. 30f \\
-	4 & Renting a car (German: Autovermietung) & p. 26f \\
-	5 & Information on Flights (German: Flugumbuchung) & Based upon p. 24f \\
-	6 & Eye Specialist's Appointment (German: Arzttermin) & p. 50f \\
-	7 & Pizza Service (German: Pizzaservice) & p. 38f \\
-	8 & Flat to Let (German: Wohnungsanzeige) & p. 46f \\
-	9 & Booking an Apartment (German: Appartmentreservierung) & p. 36f \\
-	\end{tabular}
-	\caption{The \acs{SCT} used in \E1, \E2, and \E3 were taken from \cite{itu-t_p.805:_2007} and out-dated information updated. The scenario of episode 4 was changed from a flight information and booking task to a change of booking task.}
-	\label{tab:appendix:labsct}
-\end{table}
+%\section{Content}
+%\subsection{\acs{SCT} used in \E1, \E2a, \E2b, and E3}
+%\begin{table}[h]
+%	\centering
+%	\begin{tabular}{c|c|c}
+%	Episode & Title & Page \\
+%	\hline
+%	1 & Travel Agent (German: Reisebüro) & p. 16f \\
+%	2 & Rail Travel Information (German: Bahnauskunft) & p. 18f \\
+%	3 & Theater Box office (German: Theaterkasse) & p. 30f \\
+%	4 & Renting a car (German: Autovermietung) & p. 26f \\
+%	5 & Information on Flights (German: Flugumbuchung) & Based upon p. 24f \\
+%	6 & Eye Specialist's Appointment (German: Arzttermin) & p. 50f \\
+%	7 & Pizza Service (German: Pizzaservice) & p. 38f \\
+%	8 & Flat to Let (German: Wohnungsanzeige) & p. 46f \\
+%	9 & Booking an Apartment (German: Appartmentreservierung) & p. 36f \\
+%	\end{tabular}
+%	\caption{The \acs{SCT} used in \E1, \E2, and \E3 were taken from \cite{itu-t_p.805:_2007} and out-dated information updated. The scenario of episode 4 was changed from a flight information and booking task to a change of booking task.}
+%	\label{tab:appendix:labsct}
+%\end{table}

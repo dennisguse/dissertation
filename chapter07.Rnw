@@ -188,7 +188,7 @@ LPC-10 requires a look-ahead of \unit[90]{ms} while a frame size of \unit[22.5]{
 G.711 and G.722 provide a algorithmic delay without look-ahead of \unit[0.125]{ms} and, respectively, while both codecs can be run with minimal frame size of \unit[10]{ms}. %TODO 
 Thus LPC-10 alone might introduce a noticeable difference due to the additional introduced delay.
 
-For the \ac{VoD} service a \emph{Nexus 7 (2012)} was used. %TODO Experiment is redone with Nexus 7, 2013 
+For the \ac{VoD} service a \emph{Nexus 7 (2013)} was used. %TODO Experiment is redone with Nexus 7, 2013 
 This device has a \unit[7]{inch} screen with a resolution of $1280x800$.
 For \ac{HP} video content is downscaled to this resolution\footnote{The Nexus 7 is not capable of playback of raw video signals and thus the video signal is downscaled and re-encoded with H.264, \unit[25]{\ac{FPS}}, \unit[5]{mbit/s}, two-pass coding resulting in no visible additional distortions.} and audio mixed to two channels encoded with \ac{AAC} with \unit[48]{kHz}.
 For \ac{LP} the video signal only is degraded encoding it in H.264 with the same resolution, and frame rate but defined \ac{QP}.
@@ -198,7 +198,7 @@ Degrading the video channel of the \ac{VoD} service only is chosen over degradin
 Thus a direct comparison of the presented degradations between the two services is not possible.
 
 In all experiments a binaural representation is provided using a pair of headphones and, if needed, audio capturing using a headset.
-The experimental setups are described in \autoref{chap:appendix} in \autoref{appendix:laboratorySetups}.
+The experimental setups are described in \appendix in \autoref{appendix:setups}.
 
 \subsection{Procedure}\label{sec:training}
 The experiments consists of 5 stages with an overall duration of from \unit[45...90]{min}.
@@ -251,7 +251,7 @@ In addition, it was asked, if all episodes were similar in length, and how long 
 In experiment \E1 six to nine \acs{SCT}, depending on the condition, were used as defined in \cite{itu-t_p.805:_2007}.
 For all conditions in this experiment the presentation order of the \acs{SCT} was kept constant.
 In difference to \cite{itu-t_p.805:_2007} no \ac{SCT} needed to be solved beforehand, but participants were given a written and oral explanation using an exemplary \ac{SCT}.
-The actual order of the \acs{SCT} is given in \autoref{} \autoref{tab:appendix:labsct}.
+The actual order of the \acs{SCT} is given in \appendix \autoref{tab:appendix:labsct}.
 
 In \E1 the two-party conversations were recorded before applying the performance level for each speaker channel individually with a sampling rate of \unit[16]{kHz}.
 One recording for each episode 1 to 6 of those that have been presented in \ac{HP} was selected for experiment \E2a and \E2b.
@@ -262,7 +262,7 @@ The selected recordings had an average duration of \unit[153]{sec} ranging from 
 The individual speech signals of each speaker were normalized, mixed into one channel and then encoded with G.722 or, respectively, LPC-10.
 The six selected recordings were presented in \E2a and \E2b in the same order as in \E1.
 
-For the \ac{VoD} service that was to be simulated in \E2b, scences from one sitcom were taken.
+For the \ac{VoD} service that was to be simulated in \E2b, scenes from one sitcom were taken.
 Here scenes were taken from \emph{The Big Bang Theory} (Season One, BluRay Version, German).
 Those scenes were selected in a way that the duration of the two-party conversational recordings were closely matched.
 Furthermore, scenes needed to be itself meaningful as well as self-contained and are likely candidates for usage episode, \ie, such a scene would be watched out of context.
