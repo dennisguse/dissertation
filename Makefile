@@ -20,3 +20,10 @@ clean:
 	-rm *.lol
 	-rm *.log
 	rm 00main.tex chapter07.tex chapter08.tex chapter09.tex appendix.tex
+
+copydata:
+	cp "/home/dennis/hack/cscu-tools_svn/#r-evaluation/data_minimal.csv" ./data_minimal.csv
+	cp "/home/dennis/hack/cscu-tools_svn/#r-evaluation/data.csv" ./data.csv
+	cp "/home/dennis/hack/cscu-tools_svn/#r-evaluation/data_minimal.csv" ./data/data_minimal.csv
+	cp "/home/dennis/hack/cscu-tools_svn/#r-evaluation/data.csv" ./data/data.csv
+

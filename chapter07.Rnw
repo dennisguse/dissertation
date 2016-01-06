@@ -145,8 +145,6 @@ For digital transmission of wideband speech the codec \emph{G.722} with Mode 1 (
 %Furthermore, this codec is although it is rather old, but still in active use.
 In subjective experiments G.722 with Mode 1 typically achieves a \ac{MOSLQ} around 4.5 on 5-point \ac{ACR} scale. %TODO REF
 
-%TODO Experiment E3 was conducted with WAV from CD in 44.1kHz!
-
 For \ac{LP} the speech signal the \emph{LPC-10}\footnote{LPC-10 is also known as \emph{FS-1015} as well as \emph{STANAG 4198}.} codec is selected. %TODO REF
 This codec is designed for low bitrate radio transmission focusing on intelligibility rather than naturalness.
 The re-synthesized speech sounds very unnatural and is often described as robotic, and muddy with a hissing background noise by providing only narrowband transmission.
