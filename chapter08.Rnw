@@ -271,7 +271,7 @@ In fact, this judgment is the only one for the \ac{VoD} service that significant
 \centering
  \begin{tabular}{c|c|c}
 	Day & \multicolumn{2}{c}{Service} \\
-			& 			& \ac{AoD} & \ac{VoD} \\
+			& \ac{AoD} & \ac{VoD} \\
 	\midrule
 	2 	& \Sexpr{wilcox(IQU~condition, "E5",  c("HP", "LP"), c("P1", "P2"), 3, "AoD")} & \Sexpr{wilcox(IQU~condition, "E5",  c("HP", "LP"), c("P1", "P2"), 3, "VoD")} \\
 	5 	& \Sexpr{wilcox(IQU~condition, "E5",  c("HP", "LP"), c("P1", "P2"), 6, "AoD")} & \Sexpr{wilcox(IQU~condition, "E5",  c("HP", "LP"), c("P1", "P2"), 6, "VoD")} \\
@@ -442,7 +442,7 @@ This hypothesis can be evaluated by comparing \C4 and \C5, for which it has alre
 The former present two days in \ac{LP} consecutively whereas the latter presents two days in \ac{LP} , but presents between those two days one day in \ac{HP}.
 \autoref{tab:field:hypoconsecutive} shows the multi-episodic judgments for those three conditions.
 
-The three conditions, however, are not significant different with regard to the last multi-episodic judgment \Sexpr{kruskal(IQU~condition, "E6a", c("HP", "LP"), c("4", "5a", "8"), 14)}.
+The three conditions, however, are not significant different with regard to the last multi-episodic judgment (\Sexpr{kruskal(IQU~condition, "E6a", c("HP", "LP"), c("4", "5a", "8"), 14)}).
 
 \begin{table}[h!]
 \centering
