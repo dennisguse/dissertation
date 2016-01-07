@@ -169,7 +169,7 @@ For condition \C0, although not significant and rather small, a slight of the ep
 With regard to the multi-episodic judgments no significant differences between the two conditions could be found.
 In fact, the final judgment are nearly identical between the two conditions.
 This indicated that the applied performance for \ac{LP} was not severe enough, which is also indicated by the rather small difference between \ac{HP} and \ac{LP}.
-With regard to multi-episodic \ac{QoE} the gathered data is not sufficient for creation of models, but can be used to evaluate the performance of a model.
+With regard to multi-episodic \ac{QoE} the gathered data is not sufficient for creation of a prediction models, but can be used to evaluate the performance of a model.
 
 \section{Experiment E5}
 Based upon the practical insights of experiment \E4, especially with regard to service provision, in experiment \E5 only media-consumption was used.
@@ -185,7 +185,7 @@ Each of the two services needed to be used once per day for the usage period.
 The \ac{AoD} service episode needed to be solved between \unit[7]{am} and \unit[1]{pm} whereas the \ac{VoD} service needed to be used between \unit[5]{pm} and \unit[11]{pm}.
 The two services were not presented with the same condition as in the experiment \E4, but rather with opposing.
 
-For the \ac{AoD} service the content was encoded for \ac{HP} in \ac{AAC} (stereo, \unit[44.1]{kHz}, \unit[320]{kbit/s}) and \ac{LP} was encoded with GSM-FR.
+For the \ac{AoD} service the content was encoded for \ac{HP} in \ac{AAC} (stereo, \unit[44.1]{kHz}, \unit[320]{kbit/s}) and \ac{LP} was encoded with \ac{GSM-FR}.
 Those were also applied for the \ac{VoD} service while encoding the video in H.264 (two-pass) with \unit[3]{Mbit/s} for \ac{HP} and \unit[250]{kbit/s} to \ac{LP} at a resolution of \unit[800x480]{px}.
 For the \ac{VoD} service scenes of \emph{The Big Bang Theory} (Season One, BluRay Version, German) were used.
 Here meaningful scenes were cut resulting in duration of \unit[8]{min} to \unit[12]{min} per episode.
@@ -211,11 +211,6 @@ In this experiment no issues with the technical setup were observed.
 In the data is analyzed.
 
 \paragraph*{Episodic Judgments}
-<<echo=F>>=
-
-@
-
-
 The \ac{AoD} service resulted for \ac{HP} episodes in \ac{MOS} of \Sexpr{mos_qu_with_sd_by_condition("E5", "HP", c("P1", "P2"), unique(timeseries[["id"]]), "AoD")} and for \ac{LP} episode in \Sexpr{mos_qu_with_sd_by_condition("E5", "LP", c("P1", "P2"), unique(timeseries[["id"]]), "AoD")}.
 No statistic difference of the episodic judgments between the two conditions is neither observed for \ac{HP} (\Sexpr{wilcox(QU~condition, "E5",  "HP", c("P1", "P2"), unique(timeseries[["id"]]), "AoD")}) nor \ac{LP} (\Sexpr{wilcox(QU~condition, "E5",  "LP", c("P1", "P2"), unique(timeseries[["id"]]), "AoD")}).
 The episodic judgments are significant different between the two performance levels (\Sexpr{wilcox(QU~condition, "E5",  c("HP", "LP"), c("P1", "P2"), unique(timeseries[["id"]]), "AoD")}).
@@ -234,33 +229,27 @@ In this experiment no increase of episodic judgments for \ac{HP} episodes as in 
 \begin{figure}
 	\centering
 	<<plotE5C0, echo=F, fig.height=3>>=
-		ggplot_timeseries_create(subset(timeseries, experiment=="E5" & condition=="P0")) + geom_boxplot(aes(factor(id), y=QU), na.rm=T)
-	@
-	<<plotE5C9, echo=F, fig.height=3>>=
 		ggplot_timeseries_create(subset(timeseries, experiment=="E5" & condition=="P1")) + geom_boxplot(aes(factor(id), y=QU), na.rm=T)
 	@
-	\caption{Box plot of episodic judgments in experiment \E5.}
+	<<plotE5C9, echo=F, fig.height=3>>=
+		ggplot_timeseries_create(subset(timeseries, experiment=="E5" & condition=="P2")) + geom_boxplot(aes(factor(id), y=QU), na.rm=T)
+	@
+	\caption{Box plot of episodic judgments in experiment \E5 for condition \C9 (left) and \C10 (right).}
 	\label{img:field:boxplotE5}
 \end{figure}
 
-
 \paragraph*{Multi-episodic Judgments}
 The multi-episodic judgments for both services and conditions are shown in \autoref{tab:field:e5results}.
+For condition \C9 no significant difference could be observed between the multi-episodic judgments for neither the \ac{AoD} service (\Sexpr{kruskal(IQU~id, "E5", c("HP", "LP"), "P1", unique(timeseries[["id"]]), "AoD")}) nor the \ac{VoD} service (\Sexpr{kruskal(IQU~id, "E5", c("HP", "LP"), "P1", unique(timeseries[["id"]]), "VoD")}).
+For condition \C10 a significant difference is found for the \ac{AoD} service (\Sexpr{kruskal(IQU~id, "E5", c("HP", "LP"), "P2", unique(timeseries[["id"]]), "AoD")}) and the \ac{VoD} service (\Sexpr{kruskal(IQU~id, "E5", c("HP", "LP"), "P2", unique(timeseries[["id"]]), "VoD")}). %\Sexpr{wilcox.pairwise.print(IQU~id, "E5", c("HP", "LP"), "P2", c(3, 6, 9, 12, 15), "AoD")}
+For the \ac{AoD} service a post-hoc test does not show significant differences. For the \ac{VoD} service a post-hoc test shows that the multi-episodic judgment after the 2nd day is significant different to all following judgments ($p<0.006, \triangle = -1.60..-1.00$). %\Sexpr{wilcox.pairwise.print(IQU~id, "E5", c("HP", "LP"), "P2", c(3, 6, 9, 12, 15), "VoD")}
 
-%ME
-\Sexpr{wilcox(IQU~condition, "E5",  c("HP", "LP"), c("P1", "P2"), 15, "AoD"} %NON-SIG
-\Sexpr{wilcox(IQU~condition, "E5",  c("HP", "LP"), c("P1", "P2"), 15, "VoD"} %NON SIGN
 
+%NON-SIG
+\Sexpr{wilcox(IQU~condition, "E5",  c("HP", "LP"), c("P1", "P2"), 15, "AoD")}
+\Sexpr{wilcox(IQU~condition, "E5",  c("HP", "LP"), c("P1", "P2"), 15, "VoD")} %NON SIGN
 
-%ME per id + condition
-\Sexpr{kruskal(IQU~id, "E5", c("HP", "LP"), "P1", unique(timeseries[["id"]]), "AoD")}
-\Sexpr{kruskal(IQU~id, "E5", c("HP", "LP"), "P2", unique(timeseries[["id"]]), "AoD")} %SIG
-
-\Sexpr{wilcox.pairwise.print(IQU~id, "E5", c("HP", "LP"), "P2", unique(timeseries[["id"]]), "VoD")}
-wilcox.pairwise.print(QU~condition, "E1", "HP", unique(timeseries[["condition"]], c(1:3)))
-
-\Sexpr{kruskal(IQU~id, "E5", c("HP", "LP"), "P1", unique(timeseries[["id"]]), "VoD")}
-\Sexpr{kruskal(IQU~id, "E5", c("HP", "LP"), "P2", unique(timeseries[["id"]]), "VoD")}
+ %SIG
 
 \begin{table}[h!]
 \centering
