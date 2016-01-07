@@ -349,7 +349,7 @@ No participant met this criteria and thus none was excluded from further data an
 
 \begin{figure}
 	\centering
-	<<echo=F, fig.height=3>>=
+	<<plotE1C7, echo=F, fig.height=3>>=
 		ggplot_timeseries_create(subset(timeseries, experiment=="E1" & condition=="7")) + geom_boxplot(aes(factor(id), y=QU), na.rm=T)
 	@
 	\caption{Boxplot of episodic judgments for \E1:\C7. The 5th episode is presented in \ac{LP}, the 6th episode in \ac{MP}, and all other episodes in \ac{HP}.}

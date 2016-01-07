@@ -62,7 +62,9 @@ wilcox <- function(formula=QU~condition, experiment_filter, performance_level_fi
   else r$alternative = ", one-sided"
 
   if (r$p.value > 0.05) sprintf("$W=%.2f$, $p=%.3f$%s", r$statistic, r$p.value, r$alternative)
+  else if (r$p.value < 0.001 && abs(r$estimate) < 0.1) sprintf("$W=%.2f$, $p<0.001$, $\\triangle<0.1$%s", r$statistic, r$alternative)
   else if (r$p.value < 0.001) sprintf("$W=%.2f$, $p<0.001$, $\\triangle=%.2f$%s", r$statistic, r$estimate, r$alternative)
+  else if (abs(r$estimate) < 0.1) sprintf("$W=%.2f$, $p=%.3f$, $\\triangle<0.1$%s", r$statistic, r$p.value, r$alternative)
   else sprintf("$W=%.2f$, $p=%.3f$, $\\triangle=%.2f$%s", r$statistic, r$p.value, r$estimate, r$alternative)
   }
 }
@@ -87,8 +89,8 @@ wilcox.pairwise.table <- function(formula=IQU~condition, experiment_filter, perf
  
  return (r)
 }
-wilcox.pairwise.print <- function(formula=IQU~condition, experiment_filter, performance_level_filter=unique(timeseries$performance_level), condition_filter=unique(timeseries$condition), id_filter=unique(timeseries$id), alternative="two.sided", paired=F) { #, alternative="two.sided", paired=F, p.adjust.method = "holm"
- d = subset(timeseries, experiment==experiment_filter & performance_level %in% performance_level_filter & condition %in% condition_filter & id %in% id_filter)
+wilcox.pairwise.print <- function(formula=IQU~condition, experiment_filter, performance_level_filter=unique(timeseries$performance_level), condition_filter=unique(timeseries$condition), id_filter=unique(timeseries$id), service_filter=unique(timeseries$service), alternative="two.sided", paired=F) { #, alternative="two.sided", paired=F, p.adjust.method = "holm"
+ d = subset(timeseries, experiment==experiment_filter & performance_level %in% performance_level_filter & condition %in% condition_filter & id %in% id_filter & service %in% service_filter)
  
  f = all.names(formula, functions=F)
  p = pairwise.wilcox.test(d[[f[1]]], d[[f[2]]], exact=F, alternative = alternative, paired = paired)$p.value
