@@ -64,7 +64,7 @@ wilcox <- function(formula=QU~condition, experiment_filter, performance_level_fi
   if (r$p.value > 0.05) sprintf("$W=%.2f$, $p=%.3f$%s", r$statistic, r$p.value, r$alternative)
   else if (r$p.value < 0.001 && abs(r$estimate) < 0.1) sprintf("$W=%.2f$, $p<0.001$, $\\triangle<0.1$%s", r$statistic, r$alternative)
   else if (r$p.value < 0.001) sprintf("$W=%.2f$, $p<0.001$, $\\triangle=%.2f$%s", r$statistic, r$estimate, r$alternative)
-  else if (abs(r$estimate) < 0.1) sprintf("$W=%.2f$, $p=%.3f$, $\\triangle<0.1$%s", r$statistic, r$p.value, r$alternative)
+  else if (abs(r$estimate) < 0.1) sprintf("$W=%.2f$, $p=%.3f$, $|\\triangle|<0.1$%s", r$statistic, r$p.value, r$alternative)
   else sprintf("$W=%.2f$, $p=%.3f$, $\\triangle=%.2f$%s", r$statistic, r$p.value, r$estimate, r$alternative)
   }
 }

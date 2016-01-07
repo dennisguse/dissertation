@@ -7,9 +7,6 @@ source('R_plot.R')
 timeseries=timeseries[-which(timeseries$experiment == "E1" & timeseries$condition == "5a")]
 timeseries=timeseries[-which(timeseries$experiment == "E5" & timeseries$id != "1")]
 @
-%TODO 
-%% E4:C9
-%% E5:C10 + C11
 
 \chapter{Multi-episodic Perceived Quality in Multiple Days}\label{chap:field}
 \begin{chapter-abstract}
@@ -135,11 +132,11 @@ An analysis of the speech telephony service is omitted here as the implemented s
 The episodic judgments of the \ac{VoD} service yielded a \ac{MOS} for \ac{HP} episodes of \ac{HP} \Sexpr{mos_qu_with_sd_by_condition("E4a", "HP", c("A0", "A1"), c(1:15), "VoD")} and for \ac{LP} episodes  \Sexpr{mos_qu_with_sd_by_condition("E4a", "LP", c("A0", "A1"), c(1:15), "VoD")}.
 A statistical analysis shows that \ac{HP} is significant different between the conditions (\Sexpr{wilcox(QU~condition, "E4a",  "HP", c("A0", "A1"), unique(timeseries[["id"]]), "VoD")}).
 For condition A0 a slight increase in episodic judgments over the usage period could be observed starting from \Sexpr{mos_qu_with_sd_by_condition("E4a", "HP", c("A0", "A1"), c(1), "VoD")} to \Sexpr{mos_qu_with_sd_by_condition("E4a", "HP", c("A0", "A1"), c(14), "VoD")}, which is however not statistically significant (\Sexpr{wilcox(QU~id, "E4a",  "HP", c("A0"), c(1, 14), "VoD")}).
-For condition \C9 the two performance levels are significant different \Sexpr{wilcox(QU~performance_level, "E4a",  c("HP", "LP"), "A1", unique(timeseries[["id"]]), "VoD")}.
+For condition \C9 the two performance levels are significant different (\Sexpr{wilcox(QU~performance_level, "E4a",  c("HP", "LP"), "A1", unique(timeseries[["id"]]), "VoD")}).
 
 \paragraph*{Multi-episodic Judgments}
 The multi-episodic judgments for the \ac{VoD} service are shown in \autoref{tab:field:e4results}.
-For condition \C0 no significant differences in multi-episodic judgments are found between the four measurements (\Sexpr{kruskal(IQU~id, "E4a", c("HP", "LP"), "A1", unique(timeseries[["id"]]), "VoD")}).
+For condition \C0 no significant differences in multi-episodic judgments are found between the four measurements (\Sexpr{kruskal(IQU~id, "E4a", c("HP", "LP"), "A0", unique(timeseries[["id"]]), "VoD")}).
 Also for condition \C9 no significant differences are observed (\Sexpr{kruskal(IQU~id, "E4a", c("HP", "LP"), "A1", unique(timeseries[["id"]]), "VoD")}).
 In fact, even between the two conditions no significant differences in multi-episodic judgments are observed (\cf, \autoref{tab:field:e4results}).
 
@@ -203,6 +200,7 @@ In this session one episode with both services presented in \ac{HP} was solved.
 This experiment was conducted in Berlin, Germany from June until August 2013.
 21 participants (11 female, 10 male) took part in this experiment with an average of \unit[27.8]{years} ($\sigma = 4.0$).
 11 participants were assigned to for the \ac{AoD} service with condition \C9 and the \ac{VoD} service with condition \C10 and 10 vice versa.
+Participants received \unit[40]{EUR} as compensation.
 Out of the overall 294 usage episodes 9 were not conducted for the \ac{AoD} service and 13 not for the \ac{VoD} service.
 6 questionnaires with multi-episodic perceived quality and \ac{NPS} were not filled.
 
@@ -219,7 +217,7 @@ For \ac{HP} episodes the \ac{VoD} service yielded a \ac{MOS} of \Sexpr{mos_qu_wi
 Neither \ac{HP} (\Sexpr{wilcox(QU~condition, "E5",  "HP", c("P1", "P2"), unique(timeseries[["id"]]), "VoD")}) nor \ac{LP} (\Sexpr{wilcox(QU~condition, "E5",  "LP", c("P1", "P2"), unique(timeseries[["id"]]), "VoD")}) are significant different.
 The episodic judgments are significant different between the two performance levels (\Sexpr{wilcox(QU~condition, "E5",  c("HP", "LP"), c("P1", "P2"), unique(timeseries[["id"]]), "VoD")}).
 
-For \ac{HP} both services are judged significant different (\Sexpr{wilcox(QU~service, "E5",  "HP", c("P1", "P2"), unique(timeseries[["id"]]), c("AoD", "VoD"))}).
+For \ac{HP} episodes both services are judged significant different (\Sexpr{wilcox(QU~service, "E5",  "HP", c("P1", "P2"), unique(timeseries[["id"]]), c("AoD", "VoD"))}).
 In fact, the difference is very small is not affected the multi-episodic hypotheses testing.
 For \ac{LP} no significant difference is found (\Sexpr{wilcox(QU~service, "E5",  "LP", c("P1", "P2"), unique(timeseries[["id"]]), c("AoD", "VoD"))}).
 In \autoref{img:field:boxplotE5} the episodic judgments for both conditions are presented without discriminating by by service.
@@ -240,42 +238,59 @@ In this experiment no increase of episodic judgments for \ac{HP} episodes as in 
 
 \paragraph*{Multi-episodic Judgments}
 The multi-episodic judgments for both services and conditions are shown in \autoref{tab:field:e5results}.
-For condition \C9 no significant difference could be observed between the multi-episodic judgments for neither the \ac{AoD} service (\Sexpr{kruskal(IQU~id, "E5", c("HP", "LP"), "P1", unique(timeseries[["id"]]), "AoD")}) nor the \ac{VoD} service (\Sexpr{kruskal(IQU~id, "E5", c("HP", "LP"), "P1", unique(timeseries[["id"]]), "VoD")}).
-For condition \C10 a significant difference is found for the \ac{AoD} service (\Sexpr{kruskal(IQU~id, "E5", c("HP", "LP"), "P2", unique(timeseries[["id"]]), "AoD")}) and the \ac{VoD} service (\Sexpr{kruskal(IQU~id, "E5", c("HP", "LP"), "P2", unique(timeseries[["id"]]), "VoD")}). 
-For the \ac{AoD} service a post-hoc test does not show significant differences. %\Sexpr{wilcox.pairwise.print(IQU~id, "E5", c("HP", "LP"), "P2", c(3, 6, 9, 12, 15), "AoD")}
-For the \ac{VoD} service a post-hoc test shows that the multi-episodic judgment after the 2nd day is significant different to all following judgments ($p<0.006, \triangle = -1.60..-1.00$). %\Sexpr{wilcox.pairwise.print(IQU~id, "E5", c("HP", "LP"), "P2", c(3, 6, 9, 12, 15), "VoD")}
 
+\begin{table}
+\centering
+ \begin{tabular}{c|c|c|c}
+	Condition	& Day & \multicolumn{2}{c}{Service} \\
+						& 			& \ac{AoD} & \ac{VoD} \\
+	\midrule
+	\multirow{4}{*}{\C0}	& 2 & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P1", 3, "AoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P1", 3, "VoD")} \\
+											& 5 & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P1", 6, "AoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P1", 6, "VoD")} \\
+											& 8 & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P1", 9, "AoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P1", 9, "VoD")} \\
+											& 11 & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P1", 12, "AoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P1", 12, "VoD")} \\
+											& 14 & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P1", 15, "AoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P1", 15, "VoD")} \\
+ 	\hline
+ 	\hline
+	\multirow{4}{*}{\C10}	& 2 & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P2", 3, "AoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P2", 3, "VoD")} \\
+												& 5 & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P2", 6, "AoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P2", 6, "VoD")} \\
+												& 8 & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P2", 9, "AoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P2", 9, "VoD")} \\
+												& 11 & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P2", 12, "AoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P2", 12, "VoD")} \\
+												& 14 & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P2", 15, "AoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P2", 15, "VoD")} \\
+	\end{tabular}
+	\caption{\ac{MOS}  \E6.}
+	\label{tab:field:e5results}
+\end{table}
 
-%NON-SIG
-\Sexpr{wilcox(IQU~condition, "E5",  c("HP", "LP"), c("P1", "P2"), 15, "AoD")}
-\Sexpr{wilcox(IQU~condition, "E5",  c("HP", "LP"), c("P1", "P2"), 15, "VoD")} %NON SIGN
-
- %SIG
+For the \ac{AoD} service no significant difference is observed for condition \C9 (\Sexpr{kruskal(IQU~id, "E5", c("HP", "LP"), "P1", unique(timeseries[["id"]]), "AoD")}) and \C10 (\Sexpr{kruskal(IQU~id, "E5", c("HP", "LP"), "P2", unique(timeseries[["id"]]), "AoD")}).
+The \ac{VoD} service did as well yield no significant difference for \C9 (\Sexpr{kruskal(IQU~id, "E5", c("HP", "LP"), "P1", unique(timeseries[["id"]]), "VoD")}), but for \C10 ((\Sexpr{kruskal(IQU~id, "E5", c("HP", "LP"), "P2", unique(timeseries[["id"]]), "VoD")}).
+For \C10 a post-hoc test shows that the multi-episodic judgment after the 2nd day is significant different to all following judgments ($p<0.006, \triangle = -1.60..-1.00$). %\Sexpr{wilcox.pairwise.print(IQU~id, "E5", c("HP", "LP"), "P2", c(3, 6, 9, 12, 15), "VoD")}
+In fact, this judgment is the only one for the \ac{VoD} service that significantly differs between the conditions (\Sexpr{wilcox(IQU~condition, "E5",  c("HP", "LP"), c("P1", "P2"), 3, "VoD", diffOnly=T)}) whereas for the \ac{AoD} service none differ significantly.
 
 \begin{table}[h!]
 \centering
- \begin{tabular}{c|c|c|c|c}
-	Condition	& \ac{LP} episode(s)	& Day & \multicolumn{2}{c}{Service} \\
-						& 										& 			& \ac{AoD} & \ac{VoD} \\
+ \begin{tabular}{c|c|c}
+	Day & \multicolumn{2}{c}{Service} \\
+			& 			& \ac{AoD} & \ac{VoD} \\
 	\midrule
-	\multirow{4}{*}{\C0}			& \multirow{4}{*}{}	& 2 & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P1", 3, "AoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P1", 3, "VoD")} \\
-													& 										& 5 & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P1", 6, "AoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P1", 6, "VoD")} \\
-													& 										& 8 & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P1", 9, "AoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P1", 9, "VoD")} \\
-													& 										& 11 & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P1", 12, "AoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P1", 12, "VoD")} \\
-													& 										& 14 & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P1", 15, "AoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P1", 15, "VoD")} \\
- 	\hline
- 	\hline
-	\multirow{4}{*}{\C10}		& \multirow{4}{*}{}	& 2 & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P2", 3, "AoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P2", 3, "VoD")} \\
-													& 										& 5 & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P2", 6, "AoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P2", 6, "VoD")} \\
-													& 										& 8 & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P2", 9, "AoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P2", 9, "VoD")} \\
-													& 										& 11 & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P2", 12, "AoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P2", 12, "VoD")} \\
-													& 										& 14 & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P2", 15, "AoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P2", 15, "VoD")} \\
+	2 	& \Sexpr{wilcox(IQU~condition, "E5",  c("HP", "LP"), c("P1", "P2"), 3, "AoD")} & \Sexpr{wilcox(IQU~condition, "E5",  c("HP", "LP"), c("P1", "P2"), 3, "VoD")} \\
+	5 	& \Sexpr{wilcox(IQU~condition, "E5",  c("HP", "LP"), c("P1", "P2"), 6, "AoD")} & \Sexpr{wilcox(IQU~condition, "E5",  c("HP", "LP"), c("P1", "P2"), 6, "VoD")} \\
+	8 	& \Sexpr{wilcox(IQU~condition, "E5",  c("HP", "LP"), c("P1", "P2"), 9, "AoD")} & \Sexpr{wilcox(IQU~condition, "E5",  c("HP", "LP"), c("P1", "P2"), 9, "VoD")} \\
+	11	& \Sexpr{wilcox(IQU~condition, "E5",  c("HP", "LP"), c("P1", "P2"), 12, "AoD")} & \Sexpr{wilcox(IQU~condition, "E5",  c("HP", "LP"), c("P1", "P2"), 12, "VoD")} \\
+	14	& \Sexpr{wilcox(IQU~condition, "E5",  c("HP", "LP"), c("P1", "P2"), 15, "AoD")} & \Sexpr{wilcox(IQU~condition, "E5",  c("HP", "LP"), c("P1", "P2"), 15, "VoD")} \\
 	\end{tabular}
 	\caption{\ac{MOS}  \E6.}
 	\label{tab:field:e5results}
 \end{table}
 
 \subsection{Conclusion and Discussion}
+In experiment \E5 the implemented setup was able to provide the desired performance levels in a reliable manner as reflected by the episodic judgments for both services.
+As long as only \ac{HP} episodes are presented the following multi-episodic judgments are similar to previous episodic judgments for both services (\C9).
+It must be noted that in this experiment the presentation of \ac{LP} episodes affects following multi-episodic judgments as long as a sufficient number of \ac{LP} episodes are presented.
+In fact, for the two conditions only little variation of those multi-episodic judgments is hinted.
+In condition \C10 even the presentation of three consecutive days in \ac{HP} only lead to a (non-significant) increase.
+This shows that the multi-episodic integration process is still affected, indicating a longer integration interval.
+However, the presentation of the first \ac{LP} episodes resulted in a significant decrease of the following multi-episodic judgment.
 
 \section{Experiment E6}
 Experiment \E6 complement the experiments on multi-episodic perceived quality in one session (\cf, \autoref{chap:lab}).
@@ -295,7 +310,7 @@ On each of those \unit[7]{days} the provided \ac{AoD} service needed to be used 
 Here, the audiobook Isabel Allende's \emph{"City of the Beats"}, which has also been used in experiment \E3, has been selected.
 In difference to laboratory experiments in which episodes lasted circa \unit[3]{min}, for this experiment it was opted for longer episodic duration.
 This avoids that participants are not able to focus on the content as the episodes are too short.
-Therefore, a duration of \unit[7]{min} was selected and the audiobook cut in such a way that the individual scenes remained meaningful in itself.
+Therefore, a duration of \unit[6]{min} to \unit[8]{min} was selected and the audio book cut in such a way that the individual scenes remained meaningful in itself.
 Those were then presented in the original order.
 
 In this experiment the \ac{AoD} service was presented in two different performance level, \ie, \ac{HP} and \ac{LP}.
@@ -344,8 +359,6 @@ Participants received \unit[20]{EUR} as compensation for their participation, if
 	\C5		& 5..6	& \Sexpr{participants("E6a", "5a")}\\
 	\C6		& 4..6	& \Sexpr{participants("E6a", "6")}	\\
 	\C8		& 4, 6	& \Sexpr{participants("E6a", "8")} \\
-	\midrule
-	& 	& $\sum$: \Sexpr{participants("E6a")}\\
 	\end{tabular}
 	\caption{Overview on conditions for the experiment \E6 with number of participants per condition.}
 	\label{tab:field:e6:participants}
@@ -361,9 +374,9 @@ For this criteria one participant was excluded as only 9 out of 28 questions wer
 In the following the data of experiment \E6 are analyzed.
 First the episodic judgments are evaluated to investigate potential differences between the conditions.
 
-\subsubsection{Consistency}
-Investigating differences between the episodic judgments for \ac{HP} episodes showed a significant differences (\Sexpr{kruskal(QU~condition, "E6a", "HP", unique(timeseries[["condition"]]), c(1:8))}).
-A post-hoc test showed no significant difference between conditions although \C4 (\ac{MOS}=$\Sexpr{mos_qu_with_sd_by_condition("E6a", "HP", "4", c(1:8))}$) and \C6 are (\ac{MOS}=$\Sexpr{mos_qu_with_sd_by_condition("E6a", "HP", "6", c(1:8))}$) close to significant different (\Sexpr{wilcox.pairwise.print(QU~condition, "E6a", "HP", unique(timeseries[["condition"]], c(1:8)))[5,4]}).
+\subsubsection{Consistency} %ID 1:8 are only HP!
+Investigating differences between the episodic judgments for \ac{HP} episodes showed a significant difference (\Sexpr{kruskal(QU~condition, "E6a", "HP", unique(timeseries[["condition"]]), c(1:8))}).
+A post-hoc test showed no significant difference between conditions although \C4 (\ac{MOS}=$\Sexpr{mos_qu_with_sd_by_condition("E6a", "HP", "4", c(1:8))}$) and \C6 (\ac{MOS}=$\Sexpr{mos_qu_with_sd_by_condition("E6a", "HP", "6", c(1:8))}$) are close to significant different (\Sexpr{wilcox.pairwise.print(QU~condition, "E6a", "HP", unique(timeseries[["condition"]], c(1:8)))[5,4]}).
 A detailed analysis did not yield a reason for the difference, and it is thus considered an artifact due to the between-subject design not affecting the multi-episodic hypotheses testing.
 
 For the episodic judgments of \ac{LP} episodes no significant differences between conditions are found (\Sexpr{kruskal(QU~condition, "E2a", "LP", unique(timeseries[["condition"]]))}).
@@ -446,15 +459,15 @@ The three conditions, however, are not significant different with regard to the 
  \label{tab:field:hypoconsecutive}
 \end{table}
 
-\subsection{Discussion}
+\subsection{Conclusion and Discussion}
 
-\section{Digression: On practical aspects of Field Studies}
-\begin{itemize}
-\item Production Ready Systems
-\item Temporal Constraint
-\item "Real" environment (subject's own context)
-\item Cheater detection for consumption only
-\item Drop out rate
-\end{itemize}
+%\section{Digression: On practical aspects of Field Studies}
+%\begin{itemize}
+%\item Production Ready Systems
+%\item Temporal Constraint
+%\item "Real" environment (subject's own context)
+%\item Cheater detection for consumption only
+%\item Drop out rate
+%\end{itemize}
 
 \section{Conclusion and Discussion}
