@@ -39,7 +39,7 @@ mos_iqu_with_sd_by_condition("E2b", "4", 6, "video")
 #####STATISTICS!
 
 kruskal <- function(formula=QU~condition, experiment_filter, performance_level_filter=unique(timeseries$performance_level), condition_filter=unique(timeseries$condition), id_filter=unique(timeseries$id), service_filter=unique(timeseries$service)) {
- d = subset(timeseries, experiment %in% experiment_filter & performance_level %in% performance_level_filter & condition %in% condition_filter & id %in% id_filter)
+ d = subset(timeseries, experiment %in% experiment_filter & performance_level %in% performance_level_filter & condition %in% condition_filter & id %in% id_filter & service %in% service_filter)
 
  r = kruskal.test(formula, d)
  if (r$p.value < 0.001) paste0("$H(", r$parameter, ")=", round(r$statistic, 4), "$, $p<0.001$") 

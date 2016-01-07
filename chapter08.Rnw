@@ -241,8 +241,9 @@ In this experiment no increase of episodic judgments for \ac{HP} episodes as in 
 \paragraph*{Multi-episodic Judgments}
 The multi-episodic judgments for both services and conditions are shown in \autoref{tab:field:e5results}.
 For condition \C9 no significant difference could be observed between the multi-episodic judgments for neither the \ac{AoD} service (\Sexpr{kruskal(IQU~id, "E5", c("HP", "LP"), "P1", unique(timeseries[["id"]]), "AoD")}) nor the \ac{VoD} service (\Sexpr{kruskal(IQU~id, "E5", c("HP", "LP"), "P1", unique(timeseries[["id"]]), "VoD")}).
-For condition \C10 a significant difference is found for the \ac{AoD} service (\Sexpr{kruskal(IQU~id, "E5", c("HP", "LP"), "P2", unique(timeseries[["id"]]), "AoD")}) and the \ac{VoD} service (\Sexpr{kruskal(IQU~id, "E5", c("HP", "LP"), "P2", unique(timeseries[["id"]]), "VoD")}). %\Sexpr{wilcox.pairwise.print(IQU~id, "E5", c("HP", "LP"), "P2", c(3, 6, 9, 12, 15), "AoD")}
-For the \ac{AoD} service a post-hoc test does not show significant differences. For the \ac{VoD} service a post-hoc test shows that the multi-episodic judgment after the 2nd day is significant different to all following judgments ($p<0.006, \triangle = -1.60..-1.00$). %\Sexpr{wilcox.pairwise.print(IQU~id, "E5", c("HP", "LP"), "P2", c(3, 6, 9, 12, 15), "VoD")}
+For condition \C10 a significant difference is found for the \ac{AoD} service (\Sexpr{kruskal(IQU~id, "E5", c("HP", "LP"), "P2", unique(timeseries[["id"]]), "AoD")}) and the \ac{VoD} service (\Sexpr{kruskal(IQU~id, "E5", c("HP", "LP"), "P2", unique(timeseries[["id"]]), "VoD")}). 
+For the \ac{AoD} service a post-hoc test does not show significant differences. %\Sexpr{wilcox.pairwise.print(IQU~id, "E5", c("HP", "LP"), "P2", c(3, 6, 9, 12, 15), "AoD")}
+For the \ac{VoD} service a post-hoc test shows that the multi-episodic judgment after the 2nd day is significant different to all following judgments ($p<0.006, \triangle = -1.60..-1.00$). %\Sexpr{wilcox.pairwise.print(IQU~id, "E5", c("HP", "LP"), "P2", c(3, 6, 9, 12, 15), "VoD")}
 
 
 %NON-SIG
