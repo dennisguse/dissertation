@@ -4,7 +4,7 @@ build: tex
 	makeindex %.idx
 	pdflatex 00main.tex
 
-tex: 00main.tex chapter07.tex chapter08.tex chapter09.tex appendix.tex
+tex: 00main.tex chapter05.tex chapter07.tex chapter08.tex chapter09.tex appendix.tex
 	echo "Done"
 
 %.tex : %.Rnw
@@ -19,7 +19,7 @@ clean:
 	-rm *.old
 	-rm *.lol
 	-rm *.log
-	rm 00main.tex chapter07.tex chapter08.tex chapter09.tex appendix.tex
+	rm 00main.tex chapter05.tex chapter07.tex chapter08.tex chapter09.tex appendix.tex
 
 copydata:
 	cp ~/hack/cscu-tools_svn/#r-evaluation/data_minimal.csv ./data_minimal.csv

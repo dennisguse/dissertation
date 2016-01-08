@@ -351,11 +351,18 @@ Experiment \E6 was conducted in Berlin from September 2015 until November 2015.
 Participants were required to have non-impaired hearing.
 Overall this experiment was conducted with \unit[65]{female} and \unit[35]{male} participants aging from of 18 to \unit[50]{years} ($\mu=26.1$, $\sigma=4.6$). %TODO Ist falsch!
 Participants received \unit[20]{EUR} as compensation.
+In this experiment all usage episodes were conducted and all questionnaires filled. %\footnote{In difference to previous experiments participants were informed by email when a usage episode could be started, reminding them to conduct the task.}.
+
+<<echo=F>>=
+timeseriesE6 = subset(timeseries, experiment == "E6a")
+content = aggregate(timeseriesE6[["AnswerBool1"]], by=timeseriesE6["username"], FUN=sum, na.rm=TRUE)
+content$x = content$x + aggregate(timeseriesE6[["AnswerBool2"]], by=timeseriesE6["username"], FUN=sum, na.rm=TRUE)$x
+@
 
 \begin{table}[h]
 	\centering
 	\begin{tabular}{c|c|c}
-	Conditions 	& \ac{LP} episodes & Number of Participants\\
+	Conditions 	& \ac{LP} days & Number of Participants\\
 	\midrule
 	\C1		& 4 		& \Sexpr{participants("E6a", "1")}	\\
 	\C3		& 6 		& \Sexpr{participants("E6a", "3")} \\
@@ -368,40 +375,53 @@ Participants received \unit[20]{EUR} as compensation.
 	\label{tab:field:e6:participants}
 \end{table}
 
-In this experiment all usage episodes were conducted and all questionnaires filled. %\footnote{In difference to previous experiments participants were informed by email when a usage episode could be started, reminding them to conduct the task.}.
-
 Similar to the laboratory experiments each participant was individually checked for inconsistent episodic judgments.
 A participant is considered inconsistent, if more than two episodic judgments are exceeding the 1.5 $\times$ \emph{interquartile range} of the performance levels of this condition. %TODO REF
 None of the participants of experiment \E6 fulfilled this criteria.
 In addition, the content related answers that were collected directly after finishing each episode were evaluated.
-For this criteria one participant was excluded as only 9 out of 28 questions were answered correct. %TODO
+Participants answered on average \Sexpr{mean(content[["x"]])} ($\sigma = \Sexpr{sd(content[["x"]])}$).
+For this criteria one participant, who participated in \C8, was excluded as less than half of the questions (12 out of 28) were answered correct.
+<<echo=F>>=
+content[content$x > 15, ] = NA
+timeseries[timeseries$username %in% content$username, ] = NA
+@
 
 \subsection{Data Analysis}
 In the following the data of experiment \E6 are analyzed.
 First the episodic judgments are evaluated to investigate potential differences between the conditions.
 
 \subsubsection{Consistency}
-As for experiment \E
-Investigating differences between the episodic judgments for \ac{HP} episodes showed a significant difference (\Sexpr{kruskal(QU~condition, "E6a", "HP", unique(timeseries[["condition"]]), c(1:8))}).
-A post-hoc test showed no significant difference between conditions although \C4 (\ac{MOS}=$\Sexpr{mos_qu_with_sd_by_condition("E6a", "HP", "4", c(1:8))}$) and \C6 (\ac{MOS}=$\Sexpr{mos_qu_with_sd_by_condition("E6a", "HP", "6", c(1:8))}$) are close to significant different (\Sexpr{wilcox.pairwise.print(QU~condition, "E6a", "HP", unique(timeseries[["condition"]], c(1:8)))[5,4]}).
-%TODO
+Similar to the one session experiments (\autoref{chap:lab}) the episodic judgments for \ac{HP} and \ac{LP} between all conditions are compared.
+For \ac{HP} only episodic judgments of the first three days are used as for all conditions no \ac{LP} episodes were presented so far.
+Those judgments are significant different (\Sexpr{kruskal(QU~condition, "E6a", "HP", unique(timeseries[["condition"]]), c(3:8))}).
+A post-hoc tests shows that \C5 is significant different to all other conditions. %%wilcox.pairwise.print(QU~condition, "E6a", "HP", unique(timeseries[["condition"]], c(3:8)))
+Condition \C3 is significant different to \C4 and \C8.
+Also for \ac{LP} episodes episodic judgments are different between conditions (\Sexpr{kruskal(QU~condition, "E6a", "LP", unique(timeseries[["condition"]]))}).
+A post-hoc tests shows that \C5 is significant different to \C1, \C4, and \C8.
+In fact, it must be noted that condition episodic judgments \C5 resulted in the highest \ac{MOS} for \ac{HP} and in the lowest for \ac{LP}.
+A detailed analysis did not yield a reason for the difference, and it is thus considered an artifact due to the between-subject design not affecting the multi-episodic hypotheses testing.
+\autoref{tab:field:e6episodic} shows the episodic judgments by performance level.
 
 \begin{table}
+	\centering
 	\begin{tabular}{c|c|c}
 	Condition & \ac{HP} & \ac{LP} \\
-	\C1 & \Sexpr{mos_qu_with_sd_by_condition("E6a", "HP", "1", c(1:8))} & \Sexpr{mos_qu_with_sd_by_condition("E6a", "LP", "1")} \\
-	\C3 & \Sexpr{mos_qu_with_sd_by_condition("E6a", "HP", "3", c(1:8))} & \Sexpr{mos_qu_with_sd_by_condition("E6a", "LP", "3")} \\
-	\C4 & \Sexpr{mos_qu_with_sd_by_condition("E6a", "HP", "4", c(1:8))}	& \Sexpr{mos_qu_with_sd_by_condition("E6a", "LP", "4")} \\
-	\C5 & \Sexpr{mos_qu_with_sd_by_condition("E6a", "HP", "5a", c(1:8))}	& \Sexpr{mos_qu_with_sd_by_condition("E6a", "LP", "5a")} \\
-	\C6 & \Sexpr{mos_qu_with_sd_by_condition("E6a", "HP", "6", c(1:8))}	& \Sexpr{mos_qu_with_sd_by_condition("E6a", "LP", "6")} \\
-	\C8 & \Sexpr{mos_qu_with_sd_by_condition("E6a", "HP", "8", c(1:8))}	& \Sexpr{mos_qu_with_sd_by_condition("E6a", "LP", "8")} \\
+	\midrule
+	\C1 & \Sexpr{mos_qu_with_sd_by_condition("E6a", "HP", "1", c(3:8))} 	& \Sexpr{mos_qu_with_sd_by_condition("E6a", "LP", "1")} \\
+	\hline
+	\C3 & \Sexpr{mos_qu_with_sd_by_condition("E6a", "HP", "3", c(3:8))} 	& \Sexpr{mos_qu_with_sd_by_condition("E6a", "LP", "3")} \\
+	\hline
+	\C4 & \Sexpr{mos_qu_with_sd_by_condition("E6a", "HP", "4", c(3:8))}		& \Sexpr{mos_qu_with_sd_by_condition("E6a", "LP", "4")} \\
+	\hline
+	\C5 & \Sexpr{mos_qu_with_sd_by_condition("E6a", "HP", "5a", c(3:8))}	& \Sexpr{mos_qu_with_sd_by_condition("E6a", "LP", "5a")} \\
+	\hline
+	\C6 & \Sexpr{mos_qu_with_sd_by_condition("E6a", "HP", "6", c(3:8))}		& \Sexpr{mos_qu_with_sd_by_condition("E6a", "LP", "6")} \\
+	\hline
+	\C8 & \Sexpr{mos_qu_with_sd_by_condition("E6a", "HP", "8", c(3:8))}		& \Sexpr{mos_qu_with_sd_by_condition("E6a", "LP", "8")} \\
 	\end{tabular}
+	\caption{\E6: episodic judgments for all conditions by performance level.}
+	\label{tab:field:e6episodic}
 \end{table}
-
-A detailed analysis did not yield a reason for the difference, and it is thus considered an artifact due to the between-subject design not affecting the multi-episodic hypotheses testing.
-
-For the episodic judgments of \ac{LP} episodes no significant differences between conditions are found (\Sexpr{kruskal(QU~condition, "E6a", "LP", unique(timeseries[["condition"]]))}).
-The episodic judgments between performance levels \ac{HP} (\Sexpr{mos_qu_with_sd_by_condition("E6a", "HP", unique(timeseries[["condition"]]))}) and \ac{LP} (\Sexpr{mos_qu_with_sd_by_condition("E6a", "LP", unique(timeseries[["condition"]]))}) are significantly different (\Sexpr{wilcox(QU~performance_level, "E6a", unique(timeseries[["performance_level"]]), unique(timeseries[["condition"]]))}).
 
 For the multi-episodic judgment after the 3rd day in experiment \E6 no significant differences between conditions are observed (\Sexpr{kruskal(IQU~condition, "E6a", "HP", unique(timeseries[["condition"]]), c(8))}).
 This indicates that, as long as only \ac{HP} episodes are presented, the between-subject design does not affect multi-episodic judgments.

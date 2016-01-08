@@ -96,9 +96,12 @@ wilcox.pairwise.print <- function(formula=IQU~condition, experiment_filter, perf
  
  f = all.names(formula, functions=F)
  p = pairwise.wilcox.test(d[[f[1]]], d[[f[2]]], exact=F, alternative = alternative, paired = paired)$p.value
- estimate = pairwise.wilcox.estimate(d[[f[1]]], d[[f[2]]], exact=F, alternative = alternative, paired = paired)$p.value
+ result = apply(p, c(1, 2), function(x) {sprintf("$p=%.3f$", x)})
+  
+ return (result)
+# estimate = pairwise.wilcox.estimate(d[[f[1]]], d[[f[2]]], exact=F, alternative = alternative, paired = paired)$p.value
  
-  result = p
+#  result = p
 #  for(x in 1:nrow(p)) {
 #   for(y in 1:ncol(p)) {
 #    if (is.na(p[x, y])) result[x, y] = "NA"
@@ -108,7 +111,7 @@ wilcox.pairwise.print <- function(formula=IQU~condition, experiment_filter, perf
 #    else result[x, y] = sprintf("$p=%.3f$, $\\triangle=%.2f$", p[x, y], estimate[x, y])
 #    }
 #   }
-  return (result)
+#  return (result)
  #result = as.data.frame(outer(r, estimate, function(x, y) {return (paste(x, ": ", y))} ))
  
 }
