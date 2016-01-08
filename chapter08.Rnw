@@ -338,7 +338,7 @@ Second, the same training session as in the laboratory experiments was conducted
 Finally, the two usage episodes of this day were conducted.
 On subsequent six days the first usage episode of a day needed to be conducted between \unit[7]{am} and \unit[1]{pm}, and the second usage episode between 3 and \unit[10]{pm}.
 After every usage episode participants needed to judge the episodic quality on the 7-point \ac{CCR} scale.
-In addition, two content-related questions needed to be answered by selecting the correct answer out of three presented.
+In addition, two content-related questions needed to be answered by selecting the correct answer out of three presented options.
 Multi-episodic judgments were collected after the second episode of the \unit[3rd]{day} and the \unit[6th]{day} of the field part.
 
 One day after finishing the \unit[7]{days} usage period a final interview was conducted.
