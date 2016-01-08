@@ -61,11 +61,14 @@ wilcox <- function(formula=QU~condition, experiment_filter, performance_level_fi
   if (r$alternative == "two.sided") r$alternative = ""
   else r$alternative = ", one-sided"
 
-  if (r$p.value > 0.05) sprintf("$W=%.2f$, $p=%.3f$%s", r$statistic, r$p.value, r$alternative)
-  else if (r$p.value < 0.001 && abs(r$estimate) < 0.1) sprintf("$W=%.2f$, $p<0.001$, $\\triangle<0.1$%s", r$statistic, r$alternative)
-  else if (r$p.value < 0.001) sprintf("$W=%.2f$, $p<0.001$, $\\triangle=%.2f$%s", r$statistic, r$estimate, r$alternative)
-  else if (abs(r$estimate) < 0.1) sprintf("$W=%.2f$, $p=%.3f$, $|\\triangle|<0.1$%s", r$statistic, r$p.value, r$alternative)
-  else sprintf("$W=%.2f$, $p=%.3f$, $\\triangle=%.2f$%s", r$statistic, r$p.value, r$estimate, r$alternative)
+  if (r$p.value > 0.001) sprintf("$W=%.2f$, $p=%.3f$%s", r$statistic, r$p.value, r$alternative)
+  else sprintf("$W=%.2f$, $p<0.001$%s", r$statistic, r$alternative)
+  
+#   if (r$p.value > 0.05) sprintf("$W=%.2f$, $p=%.3f$%s", r$statistic, r$p.value, r$alternative)
+#   else if (r$p.value < 0.001 && abs(r$estimate) < 0.1) sprintf("$W=%.2f$, $p<0.001$, $\\triangle<0.1$%s", r$statistic, r$alternative)
+#   else if (r$p.value < 0.001) sprintf("$W=%.2f$, $p<0.001$, $\\triangle=%.2f$%s", r$statistic, r$estimate, r$alternative)
+#   else if (abs(r$estimate) < 0.1) sprintf("$W=%.2f$, $p=%.3f$, $|\\triangle|<0.1$%s", r$statistic, r$p.value, r$alternative)
+#   else sprintf("$W=%.2f$, $p=%.3f$, $\\triangle=%.2f$%s", r$statistic, r$p.value, r$estimate, r$alternative)
   }
 }
 wilcox(QU~performance, "E1",  c("HP", "LP"))
@@ -96,17 +99,17 @@ wilcox.pairwise.print <- function(formula=IQU~condition, experiment_filter, perf
  p = pairwise.wilcox.test(d[[f[1]]], d[[f[2]]], exact=F, alternative = alternative, paired = paired)$p.value
  estimate = pairwise.wilcox.estimate(d[[f[1]]], d[[f[2]]], exact=F, alternative = alternative, paired = paired)$p.value
  
- result = p
- for(x in 1:nrow(p)) {
-  for(y in 1:ncol(p)) {
-   if (is.na(p[x, y])) result[x, y] = "NA"
-   else 
-   if (p[x, y] > 0.05) result[x, y] = sprintf("$p=%.3f$", p[x, y])
-   else if (p[x, y] < 0.001) result[x, y] = sprintf("$p<0.001$, $\\triangle=%.2f$", estimate[x, y])
-   else result[x, y] = sprintf("$p=%.3f$, $\\triangle=%.2f$", p[x, y], estimate[x, y])
-   }
-  }
- return (result)
+  result = p
+#  for(x in 1:nrow(p)) {
+#   for(y in 1:ncol(p)) {
+#    if (is.na(p[x, y])) result[x, y] = "NA"
+#    else 
+#    if (p[x, y] > 0.05) result[x, y] = sprintf("$p=%.3f$", p[x, y])
+#    else if (p[x, y] < 0.001) result[x, y] = sprintf("$p<0.001$, $\\triangle=%.2f$", estimate[x, y])
+#    else result[x, y] = sprintf("$p=%.3f$, $\\triangle=%.2f$", p[x, y], estimate[x, y])
+#    }
+#   }
+  return (result)
  #result = as.data.frame(outer(r, estimate, function(x, y) {return (paste(x, ": ", y))} ))
  
 }
@@ -128,6 +131,7 @@ pairwise.wilcox.estimate <-function (x, g, p.adjust.method = p.adjust.methods, p
  class(ans) <- "pairwise.htest"
  ans
 }
+wilcox.pairwise.print(QU~condition, "E1", "HP", unique(timeseries[["condition"]]))
 wilcox.pairwise.print(QU~condition, "E1", "HP", unique(timeseries[["condition"]]), c(1:3))
 wilcox.pairwise.print(QU~condition, "E1", "HP", unique(timeseries[["condition"]]), c(1:3))[7, 4]
 #pairwise.wilcox.estimate(d[[f[1]]], d[[f[2]]], exact=F, alternative = "two.sided", paired = F)

@@ -338,7 +338,6 @@ All results are reported as \ac{MOS} ranging from 0 to 6 (for the scale \cf, Fig
 For statistic evaluation of two unpaired samples a \emph{Wilcoxon rank-sum test} is conducted.
 More than two unpaired samples are compared by conducting a \emph{Kruskal-Wallis test} and, if significant differences are found, a \emph{pairwise Wilcoxon rank-sum test with Holms' correction} as post-hoc test is conducted.
 Paired samples are evaluated with a \emph{Wilcoxon signed-rank test}.
-Effect sizes for significant differences are estimated with the \emph{Hodges-Lehmann estimator} and reported as $\triangle: F_{2}(x)=F_{1}(x-\triangle)$, where $F_{1}$ and $F_{2}$ denote the two distributions and $x$ their median. %TODO VERIFY THAT Hodges Lehmann is always used!
 %Episodic judgments could be interpreted as paired samples -> then Friedmanm.mc should be used instead
 Non-parametric statistical methods are applied, because the assumptions of parametric methods are likely violated especially due to the limited number of subjects per condition and the applied between-subject design.
 
@@ -368,14 +367,14 @@ Such an effect could neither be directly observed for any of the four experiment
 	Experiment	& Service & \multicolumn{3}{c}{Performance Level} \\
 						& & \ac{HP}																	& \ac{MP}	& \ac{LP}\\
 	\hline
-	\E1					& Telephony (Conversation)	& \Sexpr{mos_qu_with_sd_by_condition("E1", "HP")} 	& \Sexpr{mos_qu_with_sd_by_condition("E1", "MP")}	& \Sexpr{mos_qu_with_sd_by_condition("E1", "LP")} \\
+	\E1				& Telephony (Conversation)	& \Sexpr{mos_qu_with_sd_by_condition("E1", "HP")} 	& \Sexpr{mos_qu_with_sd_by_condition("E1", "MP")}	& \Sexpr{mos_qu_with_sd_by_condition("E1", "LP")} \\
 	\hline
 	\E2a				& Telephony (Listening) 		& \Sexpr{mos_qu_with_sd_by_condition("E2a", "HP")}	& - 																					& \Sexpr{mos_qu_with_sd_by_condition("E2a", "LP")} \\
 	\hline
 	\multirow{2}{*}{\E2b}	& Telephony (Listening)	& \Sexpr{mos_qu_with_sd_by_condition("E2b", "HP", c("5a0", "5a4"))} 	& - 											& \Sexpr{mos_qu_with_sd_by_condition("E2b", "LP", c("5a0", "5a4"))} \\
 	& \ac{VoD}													& \Sexpr{mos_qu_with_sd_by_condition("E2b", "HP", c("0", "4"))} 	& - 															& \Sexpr{mos_qu_with_sd_by_condition("E2b", "LP", c("4"))} \\
 	\hline
-	\E3					& \ac{AoD} 								& \Sexpr{mos_qu_with_sd_by_condition("E3", "HP")} 	& - 																					& \Sexpr{mos_qu_with_sd_by_condition("E3", "LP")} \\
+	\E3				& \ac{AoD} 								& \Sexpr{mos_qu_with_sd_by_condition("E3", "HP")} 	& - 																					& \Sexpr{mos_qu_with_sd_by_condition("E3", "LP")} \\
 	\end{tabular}
   \caption{Episodic judgments (\ac{MOS}) per performance levels for experiment \E1, \E2a, \E2b, and \E3.}
 	\label{img:lab:episodicMOS}
