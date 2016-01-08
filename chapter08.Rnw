@@ -265,7 +265,7 @@ The multi-episodic judgments for both services and conditions are shown in \auto
 For the \ac{AoD} service no significant difference is observed for condition \C9 (\Sexpr{kruskal(IQU~id, "E5", c("HP", "LP"), "P1", unique(timeseries[["id"]]), "AoD")}) and \C10 (\Sexpr{kruskal(IQU~id, "E5", c("HP", "LP"), "P2", unique(timeseries[["id"]]), "AoD")}).
 The \ac{VoD} service did as well yield no significant difference for \C9 (\Sexpr{kruskal(IQU~id, "E5", c("HP", "LP"), "P1", unique(timeseries[["id"]]), "VoD")}), but for \C10 ((\Sexpr{kruskal(IQU~id, "E5", c("HP", "LP"), "P2", unique(timeseries[["id"]]), "VoD")}).
 For \C10 a post-hoc test shows that the multi-episodic judgment after the 2nd day is significant different to all following judgments ($p<0.006, \triangle = -1.60..-1.00$). %\Sexpr{wilcox.pairwise.print(IQU~id, "E5", c("HP", "LP"), "P2", c(3, 6, 9, 12, 15), "VoD")}
-In fact, this judgment is the only one for the \ac{VoD} service that significantly differs between the conditions (\Sexpr{wilcox(IQU~condition, "E5",  c("HP", "LP"), c("P1", "P2"), 3, "VoD", diffOnly=T)}) whereas for the \ac{AoD} service none differ significantly.
+In fact, this judgment is the only one for the \ac{VoD} service that significantly differs between the conditions whereas for the \ac{AoD} service none differ significantly.
 
 \begin{table}[h!]
 \centering
@@ -298,12 +298,11 @@ Due to the fact that only two conditions were applied and, although the episodic
 
 \section{Experiment E6}
 Experiment \E6 complement the experiments on multi-episodic perceived quality in one session (\cf, \autoref{chap:lab}).
-In difference to experiment \E4 and \E5 only one service was used.
-This service was chosen to be an \ac{AoD} service as it is media consumption-only and thus user behavior can be neglected.
+In difference to experiment \E4 and \E5 only one service (\ac{AoD}) was used.
 Furthermore, technical distribution can be implemented in an error-robust manner as content is preprocessed.
 Experiment \E6 is a follow-up upon the laboratory experiments (\E1, \E2a, \E2b, and \E3) but extending the usage period to \unit[7]{days} and only one usage episode per session.
 The main goal of this experiment was to investigate, if the effects observed for multi-episodic \ac{QoE} in one session (\cf, \autoref{chap:lab}) can also be observed in longer usage periods with non-consecutive usage, or if differences are observed.
-Whereas in the former case, prognosis models could be applied to both situations, the later case would require to implement custom prognosis models or add the length of usage period as a parameter.
+Whereas in the former case, prognosis models could be applied to both situations, the latter case would require to implement custom prognosis models or add the length of usage period as a parameter.
 In experiment \E6 only a subset of hypotheses is investigated omitting those hypotheses with a relative small effect size, because it is likely that noise masks such effects especially due to the length of the overall usage period and less controllable, and potentially varying, usage situations.
 In experiment \E6 the impact of the number of \ac{LP} episodes (\autoref{hypo:number}), the position of one or two \ac{LP} episodes (\autoref{hypo:position}), and the presentation two \ac{LP} episodes in sequential versus non-sequential (\autoref{hypo:consecutive}) are investigated.
 
@@ -319,7 +318,7 @@ Those were then presented in the original order.
 
 In this experiment the \ac{AoD} service was presented in two different performance level, \ie, \ac{HP} and \ac{LP}.
 For \ac{LP} the source material was first encoded with LPC-10 and then re-encoded into \ac{MP3} with (\unit[192]{kbit/s}).
-For \ac{HP} the source material was directly encoded in \ac{MP3} with the same bitrate.\footnote{Encoding in \ac{MP3} was necessary as the audio files were downloaded from via Internet and uncompressed audio data is not suited for this type of distribution.}
+For \ac{HP} the source material was directly encoded in \ac{MP3} with the same bitrate.\footnote{Encoding in \ac{MP3} was necessary as the audio files were downloaded via Internet from a server and uncompressed audio data is not suited for this type of distribution.}
 
 \subsubsection{Conditions}
 For the investigation of the three hypotheses under investigation, six conditions were evaluated in this experiment.
@@ -336,6 +335,7 @@ The first day of the experiment was conducted in the laboratory consisting of th
 First, each participant received all necessary information about the experiment, signed a consent form, and provided demographic data.
 Second, the same training session as in the laboratory experiments was conducted, presenting different speech telephony related degradations (\cf, \autoref{sec:training}).
 Finally, the two usage episodes of this day were conducted.
+
 On subsequent six days the first usage episode of a day needed to be conducted between \unit[7]{am} and \unit[1]{pm}, and the second usage episode between 3 and \unit[10]{pm}.
 After every usage episode participants needed to judge the episodic quality on the 7-point \ac{CCR} scale.
 In addition, two content-related questions needed to be answered by selecting the correct answer out of three presented options.
@@ -348,9 +348,9 @@ A detailed description of the system can be found in the \autoref{appendix:setup
 
 \subsection{Participants}
 Experiment \E6 was conducted in Berlin from September 2015 until November 2015.
-Participants were required to have non-impaired hearing and were able to follow the experimental instructions.
+Participants were required to have non-impaired hearing.
 Overall this experiment was conducted with \unit[65]{female} and \unit[35]{male} participants aging from of 18 to \unit[50]{years} ($\mu=26.1$, $\sigma=4.6$). %TODO Ist falsch!
-Participants received \unit[20]{EUR} as compensation for their participation, if all usage episodes were conducted.
+Participants received \unit[20]{EUR} as compensation.
 
 \begin{table}[h]
 	\centering
@@ -368,7 +368,7 @@ Participants received \unit[20]{EUR} as compensation for their participation, if
 	\label{tab:field:e6:participants}
 \end{table}
 
-In this experiment all usage episodes were conducted and none of the judgments were missing. %\footnote{In difference to previous experiments participants were informed by email when a usage episode could be started, reminding them to conduct the task.}.
+In this experiment all usage episodes were conducted and all questionnaires filled. %\footnote{In difference to previous experiments participants were informed by email when a usage episode could be started, reminding them to conduct the task.}.
 
 Similar to the laboratory experiments each participant was individually checked for inconsistent episodic judgments.
 A participant is considered inconsistent, if more than two episodic judgments are exceeding the 1.5 $\times$ \emph{interquartile range} of the performance levels of this condition. %TODO REF
@@ -380,10 +380,24 @@ For this criteria one participant was excluded as only 9 out of 28 questions wer
 In the following the data of experiment \E6 are analyzed.
 First the episodic judgments are evaluated to investigate potential differences between the conditions.
 
-\subsubsection{Consistency} %ID 1:8 are only HP!
+\subsubsection{Consistency}
+As for experiment \E
 Investigating differences between the episodic judgments for \ac{HP} episodes showed a significant difference (\Sexpr{kruskal(QU~condition, "E6a", "HP", unique(timeseries[["condition"]]), c(1:8))}).
 A post-hoc test showed no significant difference between conditions although \C4 (\ac{MOS}=$\Sexpr{mos_qu_with_sd_by_condition("E6a", "HP", "4", c(1:8))}$) and \C6 (\ac{MOS}=$\Sexpr{mos_qu_with_sd_by_condition("E6a", "HP", "6", c(1:8))}$) are close to significant different (\Sexpr{wilcox.pairwise.print(QU~condition, "E6a", "HP", unique(timeseries[["condition"]], c(1:8)))[5,4]}).
 %TODO
+
+\begin{table}
+	\begin{tabular}{c|c|c}
+	Condition & \ac{HP} & \ac{LP} \\
+	\C1 & \Sexpr{mos_qu_with_sd_by_condition("E6a", "HP", "1", c(1:8))} & \Sexpr{mos_qu_with_sd_by_condition("E6a", "LP", "1")} \\
+	\C3 & \Sexpr{mos_qu_with_sd_by_condition("E6a", "HP", "3", c(1:8))} & \Sexpr{mos_qu_with_sd_by_condition("E6a", "LP", "3")} \\
+	\C4 & \Sexpr{mos_qu_with_sd_by_condition("E6a", "HP", "4", c(1:8))}	& \Sexpr{mos_qu_with_sd_by_condition("E6a", "LP", "4")} \\
+	\C5 & \Sexpr{mos_qu_with_sd_by_condition("E6a", "HP", "5a", c(1:8))}	& \Sexpr{mos_qu_with_sd_by_condition("E6a", "LP", "5a")} \\
+	\C6 & \Sexpr{mos_qu_with_sd_by_condition("E6a", "HP", "6", c(1:8))}	& \Sexpr{mos_qu_with_sd_by_condition("E6a", "LP", "6")} \\
+	\C8 & \Sexpr{mos_qu_with_sd_by_condition("E6a", "HP", "8", c(1:8))}	& \Sexpr{mos_qu_with_sd_by_condition("E6a", "LP", "8")} \\
+	\end{tabular}
+\end{table}
+
 A detailed analysis did not yield a reason for the difference, and it is thus considered an artifact due to the between-subject design not affecting the multi-episodic hypotheses testing.
 
 For the episodic judgments of \ac{LP} episodes no significant differences between conditions are found (\Sexpr{kruskal(QU~condition, "E6a", "LP", unique(timeseries[["condition"]]))}).

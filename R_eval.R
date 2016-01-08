@@ -18,7 +18,6 @@ mos_qu_with_sd_by_condition <- function(experiment_filter, performance_level_fil
  
  mean_sd(d)
 }
-mos_qu_with_sd_by_condition("E1", "HP", 3)
 mos_qu_with_sd_by_condition("E1", "HP", c(1:3), 1)
 
 mos_iqu_with_sd_by_condition <- function(experiment_filter, condition_filter=unique(timeseries$condition), id_filter=unique(timeseries$id), service_filter=unique(timeseries$service)) {
