@@ -1,7 +1,7 @@
 build: tex
 	pdflatex 00main.tex
-	bibtex 00main.aux
-	makeindex %.idx
+	biber 00main
+	makeindex 00main.idx
 	pdflatex 00main.tex
 
 tex: 00main.tex chapter05.tex chapter07.tex chapter08.tex chapter09.tex appendix.tex
@@ -19,6 +19,7 @@ clean:
 	-rm *.old
 	-rm *.lol
 	-rm *.log
+	-rm *.bbl
 	rm 00main.tex chapter05.tex chapter07.tex chapter08.tex chapter09.tex appendix.tex
 
 copydata:

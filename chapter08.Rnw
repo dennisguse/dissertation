@@ -118,7 +118,7 @@ Due to the small sample size and the missing ground truth the data of no partici
 \subsection{Data Analysis}
 First the episodic judgments are evaluated for the \ac{VoD} service followed by a detailed analysis of the multi-episodic judgments.
 An analysis of the speech telephony service is omitted here as the implemented setup failed to provide desired performance levels reliable and thus a \ac{MOS} evaluation cannot be conducted as not all participants were exposed to very similar system performance.
-\autoref{img:field:E4conditionA1TELboxplot} shows the box plot for the episodic judgments of condition \C9.
+\autoref{img:field:E4conditionA1TELboxplot} shows the boxplot for the episodic judgments of condition \C9.
 \begin{figure}
 	\centering
 	<<plotE4C0, echo=F, fig.height=3>>=
@@ -155,7 +155,7 @@ In fact, even between the two conditions no significant differences in multi-epi
 	\label{tab:field:e4results}
 \end{table}
 
-\subsection{Conclusion and Discussion}
+\subsection{Discussion}
 Experiment \E4 was only partly successful.
 It could be shown that the defined-use methodology could be applied successfully.
 However, with regard to multi-episodic \ac{QoE} the results are limited for two reasons.
@@ -232,7 +232,7 @@ In this experiment no increase of episodic judgments for \ac{HP} episodes as in 
 	<<plotE5C9, echo=F, fig.height=3>>=
 		ggplot_timeseries_create(subset(timeseries, experiment=="E5" & condition=="P2")) + geom_boxplot(aes(factor(id), y=QU), na.rm=T)
 	@
-	\caption{Box plot of episodic judgments in experiment \E5 for condition \C9 (left) and \C10 (right).}
+	\caption{Boxplot of episodic judgments in experiment \E5 for condition \C9 (left) and \C10 (right).}
 	\label{img:field:boxplotE5}
 \end{figure}
 
@@ -283,7 +283,7 @@ In fact, this judgment is the only one for the \ac{VoD} service that significant
 	\label{tab:field:e5results}
 \end{table}
 
-\subsection{Conclusion and Discussion}
+\subsection{Discussion}
 In experiment \E5 the implemented setup was able to provide the desired performance levels in a reliable manner as reflected by the episodic judgments for both services.
 As long as only \ac{HP} episodes are presented the following multi-episodic judgments are similar to previous episodic judgments for both services (\C9), which is in line with \citet{moller_single-call_2011} and \E4.
 It must be noted that in this experiment the presentation of \ac{LP} episodes affects following multi-episodic judgments as long as a sufficient number of \ac{LP} episodes are presented.
@@ -500,7 +500,7 @@ The three conditions, however, are not significant different with regard to the 
  \label{tab:field:hypoconsecutive}
 \end{table}
 
-\subsection{Conclusion and Discussion}
+\subsection{Discussion}
 In this experiment three hypothesis were investigated complementing the conducted experiments on multi-episodic \ac{QoE} in one session.
 Although an absolute comparison between this experiment and the one session experiments can only be limited due to the differences in experimental design.
 However, in experiment \E6 similar effects could be observed.
@@ -515,7 +515,7 @@ In the latter no effect could be observed for one \ac{LP} episode, but for two \
 
 With regard to \autoref{hypo:consecutive} no effects could be observed as the judgments of the three conditions are too close and a potential effect hidden.
 
-\section{Conclusion and Discussion}
+\section{Conclusion}
 Experiment \E6 was conducted based upon the practical findings of experiment \E4 as well as experiment \E5.
 Although the results for multi-episodic \ac{QoE} of those two experiments were very limited, it was found that a media-consumption service can be setup in a reliable manner.
 For \autoref{hypo:number} very similar results to the one session experiments were obtained, showing an decrease if more \ac{LP} episodes are presented and finally yielding an effect of saturation.

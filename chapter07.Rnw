@@ -646,9 +646,10 @@ However, the multi-episodic judgments of the speech telephony service for condit
  \label{tab:lab:hypoindependent}
 \end{table}
 
+\subsection{Discussion}
 %\section{Digression: Cross-Service Quality} TODO
 
-\section{Conclusion and Discussion}
+\section{Conclusion}
 The four experiment showed that multi-episodic \ac{QoE} can be assessed in one session with duration of \unit[90]{min}.
 
 It could be consistently shown increasing the number of \ac{LP} episodes leads to a reduction in multi-episodic judgments (\autoref{hypo:number}).

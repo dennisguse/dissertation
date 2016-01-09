@@ -44,7 +44,6 @@
 % Bibliographies
 %*******************************************************
 \addbibresource{Bibliography.bib}
-\addbibresource[label=ownpubs]{Publications.bib}
 
 %********************************************************************
 % Hyphenation
