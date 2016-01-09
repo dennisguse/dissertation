@@ -300,7 +300,7 @@ Due to the fact that only two conditions were applied and, although the episodic
 Experiment \E6 complement the experiments on multi-episodic perceived quality in one session (\cf, \autoref{chap:lab}).
 In difference to experiment \E4 and \E5 only one service (\ac{AoD}) was used.
 Furthermore, technical distribution can be implemented in an error-robust manner as content is preprocessed.
-Experiment \E6 is a follow-up upon the laboratory experiments (\E1, \E2a, \E2b, and \E3) but extending the usage period to \unit[7]{days} and only one usage episode per session.
+Experiment \E6 is a follow-up upon the laboratory experiments (\E1, \E2a, \EIIb, and \E3) but extending the usage period to \unit[7]{days} and only one usage episode per session.
 The main goal of this experiment was to investigate, if the effects observed for multi-episodic \ac{QoE} in one session (\cf, \autoref{chap:lab}) can also be observed in longer usage periods with non-consecutive usage, or if differences are observed.
 Whereas in the former case, prognosis models could be applied to both situations, the latter case would require to implement custom prognosis models or add the length of usage period as a parameter.
 In experiment \E6 only a subset of hypotheses is investigated omitting those hypotheses with a relative small effect size, because it is likely that noise masks such effects especially due to the length of the overall usage period and less controllable, and potentially varying, usage situations.
@@ -506,11 +506,11 @@ Although an absolute comparison between this experiment and the one session expe
 However, in experiment \E6 similar effects could be observed.
 
 For \autoref{hypo:number} a decrease in multi-episodic judgments could be observed, if up to two days were presented in \ac{LP} whereas three days did not resulted in a further decrease.
-This is resembles the results found in experiments \E1 and \E2a.
+This is resembles the results found in experiments \E1 and \EIIa.
 
 With regard to varying the position of one or two days in \ac{LP} an effect is indicated (\autoref{hypo:position}).
 For both cases an (non-significant) increase the multi-episodic judgments is observed, if \ac{LP} episodes are followed by \ac{HP} episodes before the final judgment.
-This is in line with the findings of experiment \E1 and partly for \E2a.
+This is in line with the findings of experiment \E1 and partly for \EIIa.
 In the latter no effect could be observed for one \ac{LP} episode, but for two \ac{LP} episodes
 
 With regard to \autoref{hypo:consecutive} no effects could be observed as the judgments of the three conditions are too close and a potential effect hidden.
@@ -520,9 +520,9 @@ Experiment \E6 was conducted based upon the practical findings of experiment \E4
 Although the results for multi-episodic \ac{QoE} of those two experiments were very limited, it was found that a media-consumption service can be setup in a reliable manner.
 For \autoref{hypo:number} very similar results to the one session experiments were obtained, showing an decrease if more \ac{LP} episodes are presented and finally yielding an effect of saturation.
 The saturation might be due to the reason that the presented \ac{HP} episodes prevent a further decrease as those are still recalled and considered in the final multi-episodic judgment.
-With regard to \autoref{hypo:position} an effect is indicated (non-significant), but actually in line with the results of experiment \E1 and \E2a.
+With regard to \autoref{hypo:position} an effect is indicated (non-significant), but actually in line with the results of experiment \E1 and \EIIa.
 In difference to those two hypotheses, \autoref{hypo:consecutive} cannot be answered in experiment \E6.
-In difference to experiment \E2a the non-consecutive condition (\C8) is neither different to \C4 nor \C5.
+In difference to experiment \EIIa the non-consecutive condition (\C8) is neither different to \C4 nor \C5.
 This indicates that, if such an effect exists, its effect size is rather small.
 
 In difference to previous experiments does experiment \E6 provide a large data set (6 conditions, 95 participants) that is in the following used for the creation of a prediction model for multi-episodic judgments.
