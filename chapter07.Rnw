@@ -7,7 +7,7 @@ source('R_plot.R')
 timeseries=timeseries[-which(timeseries$experiment == "E1" & timeseries$condition == "5a")]
 @
 
-\addtocontents{toc}{\protect\newpage}
+%\addtocontents{toc}{\protect\newpage}
 \chapter{Multi-episodic Perceived Quality in One Session}\label{chap:lab}
 \begin{chapter-abstract}
 First question: can multi-episodic QoE be studied in "short" laboratory study?
