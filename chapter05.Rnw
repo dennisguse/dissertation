@@ -20,14 +20,14 @@ At the end of this chapter I must have made clear what methodologies are used an
 
 %\section{Introduction}
 %Multi-episodic == Repeated use and repeated experience
-Services are in general used on a regular basis by a user.
+Services are in general used on a regular basis by a user~\citep[\cf,][]{geerts_linking_2010}.
 The experiences of a usage episode lead to a perceived quality in the user of this very episode. %NOTE Influence factors (human etc.)
 The multi-episodic perceived quality is the result of an \emph{integrating process} combining prior experiences and perceived qualities with said service.
 Prior experiences can affect the \emph{quality formation process} of a user and such a change affects the perceived quality of following usage episodes.
 %Also a re-evaluation of the perceived quality of prior episodes might occur.
 %Quality formation process: Reflection and Attribution, Comparison & Judgment, Encoding
 The user's behavior towards the service might also be affected by the perceived quality like usage frequency, task solving strategies, or even abandon the service completely.
-Multi-episodic perceived quality must be thus regarded as a sequential process in which the experienced order of usage episodes affect the outcome. %NOTE: Is sequential process correct?
+Multi-episodic perceived quality must be thus regarded as a sequential process in which the experienced order of usage episodes affect the outcome.
 Investigations on multi-episodic perceived quality can therefore only be undertaken in experiments adhering to a between-subject design, so that every subject is only exposed to one condition.
 
 In the field of perceived quality multi-episodic perceived quality has so far only received limited attention.
@@ -40,6 +40,7 @@ For applicability it is often sufficient to know the relationship between differ
 Multi-episodic evaluation has been done so far for the evaluation of \acf{UX}.
 Perceived quality and \ac{UX} conceptually overlap as both focus on experience in general and, in many cases, experience with technology \citep[\cf,][]{book chap 3}.
 \ac{UX}, steaming from usability, focuses on the interaction with technology and how interactions affect usage, behavior, and emotions towards used technology.\footnote{For a longer discussion on similarities and difference between \ac{QoE} and \ac{UX} see \cite{book chapter 3} and also \cite{Hasenzahl 2008: towards user experience}.}
+\cite{halpern_two_1990}
 As interaction behavior towards technology often changes as a user learns how to use it and which tasks are well-suited, makes multi-episodic evaluation an important aspect for \ac{UX}.
 The multi-episodic terminology is described by \citet[p. 8]{roto_user_2011}, but missed to put it into context with prior work and do not present their definitions.
 
@@ -51,18 +52,16 @@ In the reported experiment participated 20 subjects evaluating also changes in t
 Both experiments showed that the usage and also emotions towards the product under investigation changes over time.
 In the beginning interaction is more playful and exploratory whereas it task-oriented and productive.
 
-
 \section{Average Perceived Quality \citep{duncanson_average_1969}}
 First work in direction on multi-episodic perceived quality was performed by \cite{duncanson_average_1969} for telecommunication services.
 Duncanson asked regular users of an oversea speech telephone service about the their experience with said service.
 He investigated, if their is a difference between \emph{a)} the \emph{perceived quality of a just finished call} with average performance and \emph{b)} the \emph{assumed quality} of a call with average performance.
 For this experiment Duncanson used a 4-point \ac{ACR} scale\footnote{\cite{duncanson_average_1969} applied a 4-point \ac{ACR} scale with the labels excellent (4), good (3), fair (2), and poor (1).} and \emph{Thurstone's Law of Categorical Judgment} and found in three experiments similar results.
 It could be shown that case a) is yields a higher \ac{MOS} than case b).
-Duncansons concludes ``that ratings of single, recent telephone calls yield results different from ratings of subjectively averaged, past telephone calls of the same type'' \citep[][p. 116]{duncanson_average_1969}.
+Duncanson concludes ``that ratings of single, recent telephone calls yield results different from ratings of subjectively averaged, past telephone calls of the same type'' \citep[][p. 116]{duncanson_average_1969}.
 
 Although Duncanson studied episodic perceived quality and assumed quality of an \emph{average usage episode}, it revealed an important aspect of multi-episodic perceived quality.
 It is indicated that the integration process of episodic perceived quality leads to a worse perceived quality and thus assumed quality judgment as the integration process does not equally weight all prior experiences with said service.
-%Reasons: IMPORTANCE? %Peak?
 
 \section{Assessment of Multi-episodic Perceived Quality}
 Prior work in direction of multi-episodic evaluation focuses on use, experience and perception of a service or product under realistic conditions.
