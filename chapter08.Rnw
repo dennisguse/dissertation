@@ -9,21 +9,21 @@ timeseries=timeseries[-which(timeseries$experiment == "E5" & timeseries$id != "1
 @
 
 \chapter{Multi-episodic Perceived Quality in Multiple Days}\label{chap:field}
-\begin{chapter-abstract}
-Here I present all studies that I conducted on multi-episodic QoE over several days.
-This will include studies with one service only, but also with two services (multi-service) part.
-
-\textit{Key question:} do field trials (longer timespan) yield similar effects as found in lab trials (chap 6).
-What are the differences? (If there are any)
-What services are technically feasible to deploy (or socially manageable)?
-How to conduct a study over several days (lab vs. field)?
-
-The main study will be the currently \textit{successfully} running Audio-on-demand study with BYOD.
-This study is complemented by QoMEX2014 study.
-This chapter will also include an overview of limitations and practical knowledge for \textit{successful} field trials.
-
-%TODO: \section{Digression: Retaining Information}%Can subjects recall
-\end{chapter-abstract}
+%\begin{chapter-abstract}
+%Here I present all studies that I conducted on multi-episodic QoE over several days.
+%This will include studies with one service only, but also with two services (multi-service) part.
+%
+%\textit{Key question:} do field trials (longer timespan) yield similar effects as found in lab trials (chap 6).
+%What are the differences? (If there are any)
+%What services are technically feasible to deploy (or socially manageable)?
+%How to conduct a study over several days (lab vs. field)?
+%
+%The main study will be the currently \textit{successfully} running Audio-on-demand study with BYOD.
+%This study is complemented by QoMEX2014 study.
+%This chapter will also include an overview of limitations and practical knowledge for \textit{successful} field trials.
+%
+%%TODO: \section{Digression: Retaining Information}%Can subjects recall
+%\end{chapter-abstract}
 
 \section{Introduction}
 The integration of perceived quality of distinct episodes into a multi-episodic perceived quality often does not cover one session alone, but rather episodes with one service occur regularly in general covering multiple days or longer usage periods.
@@ -300,7 +300,7 @@ Due to the fact that only two conditions were applied and, although the episodic
 Experiment \E6 complement the experiments on multi-episodic perceived quality in one session (\cf, \autoref{chap:lab}).
 In difference to experiment \E4 and \E5 only one service (\ac{AoD}) was used.
 Furthermore, technical distribution can be implemented in an error-robust manner as content is preprocessed.
-Experiment \E6 is a follow-up upon the laboratory experiments (\E1, \E2a, \EIIb, and \E3) but extending the usage period to \unit[7]{days} and only one usage episode per session.
+Experiment \E6 is a follow-up upon the laboratory experiments (\E1, \EIIb, \EIIb, and \E3) but extending the usage period to \unit[7]{days} and only one usage episode per session.
 The main goal of this experiment was to investigate, if the effects observed for multi-episodic \ac{QoE} in one session (\cf, \autoref{chap:lab}) can also be observed in longer usage periods with non-consecutive usage, or if differences are observed.
 Whereas in the former case, prognosis models could be applied to both situations, the latter case would require to implement custom prognosis models or add the length of usage period as a parameter.
 In experiment \E6 only a subset of hypotheses is investigated omitting those hypotheses with a relative small effect size, because it is likely that noise masks such effects especially due to the length of the overall usage period and less controllable, and potentially varying, usage situations.

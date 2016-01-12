@@ -22,7 +22,7 @@ These experiments follow the same procedure, but differ in usage situation and, 
 \begin{table}[h]
 	\begin{tabulary}{\textwidth}{C|C|C|C|C}
 	Experiment	& Service Type 		& Task					& Episodes	& Hypothesis \\
-	\hline
+	\midrule
 	E1			& Telephony	& Two-party conversation (\ac{SCT})	& 6 and 9	& \autoref{hypo:number}, \autoref{hypo:position}, \autoref{hypo:recovery}, \autoref{hypo:strength} \\
 	\hline
 	E2a		& Telephony	& 3rd-party listening (\ac{SCT})	& 6		& \autoref{hypo:number}, \autoref{hypo:position},  \autoref{hypo:consecutive}\\
@@ -225,7 +225,7 @@ In addition, could describe the experienced degradation in quantitative form.
 A multi-episodic judgment is taken after every three episodes on the 7-point \ac{CCR} scale.
 In this stage 6 to 12 episodes were presented.
 In \EIIa, \EIIb, and \E3 pre-processed content was presented varying from \unit[2]{min} to \unit[3]{min} in duration.
-In \E1 the duration was not controlled as the \acs{SCT} needed to be fulfilled in a two-party conversation resulting in varying duration.
+In \E1 the duration was not controlled as the \acp{SCT} needed to be fulfilled in a two-party conversation resulting in varying duration.
 
 In the \emph{fifth stage} final feedback about the fourth stage is collected.
 In all experiments the underlying question of the \ac{NPS} is collected.
@@ -246,10 +246,10 @@ Here it was assessed in a quantitative form, if episodes were degraded and if so
 In addition, it was asked, if all episodes were similar in length, and how long one episode was.
 
 \subsection{Content}
-In experiment \E1 six to nine \acs{SCT}, depending on the condition, were used as defined in \cite{itu-t_p.805:_2007}.
-For all conditions in this experiment the presentation order of the \acs{SCT} was kept constant.
+In experiment \E1 six to nine \acp{SCT}, depending on the condition, were used as defined in \cite{itu-t_p.805:_2007}.
+For all conditions in this experiment the presentation order of the \acp{SCT} was kept constant.
 In difference to \cite{itu-t_p.805:_2007} no \ac{SCT} needed to be solved beforehand, but participants were given a written and oral explanation using an exemplary \ac{SCT}.
-The actual order of the \acs{SCT} is given in \appendix \autoref{tab:appendix:labsct}.
+The actual order of the \acp{SCT} is given in \appendix \autoref{tab:appendix:labsct}.
 
 In \E1 the two-party conversations were recorded before applying the performance level for each speaker channel individually with a sampling rate of \unit[16]{kHz}.
 One recording for each episode 1 to 6 of those that have been presented in \ac{HP} was selected for experiment \EIIa and \EIIb.

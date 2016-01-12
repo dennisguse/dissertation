@@ -84,14 +84,14 @@
 
 \include{chapter01}
 
-%\chapter{Related Work and State of the Art}
-\part{Related Work and State-of-the-Art}\cleardoublepage %TODO Make one Chapter to rule them all!
-\include{chapter02}
-\include{chapter03}
-\include{chapter04}
-\include{chapter05}
+%\part{Related Work and State-of-the-Art}\cleardoublepage %TODO Make one Chapter to rule them all!
+\chapter{Related Work}
+\input{chapter02}
+\input{chapter03}
+\input{chapter04}
+\input{chapter05}
 
-\part{Towards Multi-episodic \ac{QoE}}\cleardoublepage
+%\part{Towards Multi-episodic \ac{QoE}}\cleardoublepage
 \include{chapter06}
 
 \include{chapter07}
@@ -100,7 +100,7 @@
 
 \include{chapter10}
 
-\pagenumbering{Roman}\setcounter{page}{1}\setcounter{chapter}{0}
+%\pagenumbering{Roman}\setcounter{page}{1}\setcounter{chapter}{0}
 \part{Appendix}\cleardoublepage\label{chap:appendix}
 \include{appendix}
 
