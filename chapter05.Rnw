@@ -6,6 +6,19 @@ source('R_plot.R')
 
 timeseries=timeseries[-which(timeseries$experiment == "E1" & timeseries$condition == "5a")]
 @
+Based upon the characteristics of the episodic the following definition of \ac{episode} has been derived focusing on 
+\begin{definition}[Episode]\label{def:episode}
+An episode is a distinct, meaningful, and self-contained interaction by user with a service or system to achieve his goal(s).
+\end{definition}
+
+Goal achievement as requirement for an episode follows the concept of utility and expected utility by \citet{kahneman_experienced_2000}.
+An evaluation of a complete episode can only be done in retrospection and is thus based upon memorized information.
+Following the notation of \emph{episodic memory}~\citet{tulving_episodic_1972}, an episode groups together experiences by their spatio-temporal relationship, \ie, time, location, goal, emotions and also situation.
+In fact, only a reduced representation is memorized and can thus be recalled in retrospective.
+A person recalling a prior episode is able re-experience it by re-creating a representation of the past reality based-upon recallable information about this specific episode \citep{tulving_episodic_1972}.
+For a retrospective evaluation of an episodic experience only recallable information can be used, which might not encompass all recallable information \citep{schacter_seven_2003}.
+With regard to episodic experience it was shown that not all parts of an episode are equally important \citep{kahneman_experienced_2000,ariely_combining_1998}.
+
 
 \chapter{Multi-episodic Perceived Quality}\label{chap:state-of-the-art}
 \begin{chapter-abstract}
@@ -35,6 +48,8 @@ One reason for this is that research in the field of perceived quality is techno
 This means that the major focus lies on the evaluation of new technologies, understanding of potential impairments, and the impact on perceived quality.
 The derived knowledge is then applied to enhance existing technologies.
 For applicability it is often sufficient to know the relationship between different performance parameters and the general effect on perceived quality, and neglect the influence of time, tasks and other factors on perceived quality.
+
+DEF!
 
 \section{Excurse: Multi-episodic usage in \acl{UX}}
 Multi-episodic evaluation has been done so far for the evaluation of \acf{UX}.
