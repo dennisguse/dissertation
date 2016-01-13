@@ -63,6 +63,15 @@
     \pdfbookmark[1]{Acronyms}{acronyms}
     \markboth{\spacedlowsmallcaps{Acronyms}}{\spacedlowsmallcaps{Acronyms}}
 
+%http://tex.stackexchange.com/questions/199972/start-a-new-chapter-without-heading
+%\makeatletter
+%\newcommand{\unchapter}[1]{%
+%  \begingroup
+%  \let\@makechapterhead\@gobble % make \@makechapterhead do nothing
+%  \chapter{#1}
+%  \endgroup
+%}
+
 \chapter*{Acronyms}
 \begin{acronym}[MUSHRA]
 \acro{UX}{User Experience}

@@ -100,9 +100,10 @@
 
 \include{chapter10}
 
-%\pagenumbering{Roman}\setcounter{page}{1}\setcounter{chapter}{0}
+\cleardoublepage
+\pagenumbering{Roman}\setcounter{page}{1}\setcounter{chapter}{0}
 %\part{Appendix}\cleardoublepage\label{chap:appendix}
-\include{appendix}
+\input{appendix}
 
 %********************************************************************
 % Other Stuff in the Back
