@@ -59,7 +59,7 @@ No additional audio processing was applied.
 For the experiments \E2a, \E2b, and \E3 audio signals were presented with a pair of \emph{Sennheiser HD 25-1}.
 For experiment \E2a, and \E3 those were connected to the internal sound card of a \emph{Microsoft Surface Pro} tablet computer whereas for experiment \E2b those were connected to the internal sound card of the used \emph{Nexus 7 (2013)}.
 In all three experiments the sound pressure level was calibrated to \unit[75]{dB20$\mu$Pa} using the \emph{HSM II.3} with babble noise and the experiments conducted in a sound-proof cabin following ITU-T~P.800~\citep{itu-t_p.800:_1996}.
-In experiment \E2b the \ac{VoD} service was presented on the display Nexus~7 (2013) showing videos horizontal in fullscreen.
+In experiment \E2b the \ac{VoD} service was presented on the display Nexus~7 (2013) showing videos horizontal in full screen.
 This \unit[7]{inch} display of this device was set to maximum brightness without applying any device related color adaption.
 
 In those three experiments non-degraded recordings of two-party conversations of experiment \E1 were selected.
