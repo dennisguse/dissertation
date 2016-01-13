@@ -1,5 +1,4 @@
-\newpage
-\section{Performance Fluctuations and Perceived Quality}\label{chap:04}
+\section{Perceived Quality and Macroscopic Fluctuations}\label{chap:04}
 %This is an overview chapter on \textit{related work}.
 %Here I will present the all prior work on QoE with regard to performance fluctuations/changes in a continuous usage (sub-episode/episode).
 %Performance fluctuations is not everything that yields varying, non-constant perception, but focuses on a noticeable change in an episode or sub-episode (e.g. codec/parameter changes, packet-loss, interactive delay, NOT speech induced noise or NOT broken echo canceler).
@@ -12,46 +11,102 @@
 %State the implicit assumption: Temporal perception AND memorization comparable over persons.
 %Describe temporal effects that were found in QoE research (include potential reasons, if known) and discuss relation-ship to human memory.
 
-The performance of telecommunication services is in general not constant, but often varies over time.
+The performance of telecommunication services is in general not constant but rather varies over time.
 Performance fluctuations can occur due to varying network transmission, but also due to applied lossy compression, or even signal processing.
-With regard to perceived quality only those fluctuations must be considered that lead to a noticeable difference and thus affect the quality formation process.
-The impact of varying performance on retrospective judgments of the perceived quality for rather short stimuli as well as individual episodes has already received some attention for different telecommunication services.
+With regard to perceived quality only those performance fluctuations must be considered that affect the quality formation process of a user.
+Fluctuations that affect the quality formation process are distinguished as \emph{microscopic} or \emph{macroscopic} \citep[\cf,][p. 72]{raake_short-_2006}
+\footnote{\citet{raake_short-_2006} distinguishes microscopic and macroscopic with regard to packet-loss behavior for speech telephony. The here used notation is derived from this differentiation but generalized independent of the actual source of fluctuations.}.
+Both microscopic and macroscopic focuses on performance fluctuations in one stimulus or episode.
+The former are fluctuations that are not perceived as variation in perceived quality.
+Such fluctuations are often rather short like non-bursty packet-loss in a \ac{VoIP} call \citep[\cf,][p. 72]{raake_short-_2006}.
+In difference to that \emph{macroscopic} fluctuations are perceived and judged as variation in perceived quality.
+For \emph{macroscopic} fluctuations can occur due to variation in encoding bandwidth, \eg, reduction in video encoding bandwidth.\footnote{All fluctuations that yield waiting times must are considered as macroscopic like re-buffering in a \ac{VoD} case.}
+
+The impact of \emph{macroscopic} performance fluctuations on retrospective judgments of the perceived quality for individual stimuli and episodes has already received some attention for different telecommunication services.
 Although some approaches have been undertaken, the impact of \emph{varying perceived quality} on a retrospective judgment and its prediction is not yet completely solved.
+An overview on the state of the art is given in the following starting with specialized assessment methods.
+Afterwards findings of prior work applying those methods is presented.
 
-In the following the state of the art on in-episodic varying performance with regard to a final retrospective judgment and its prediction is presented.
-This chapter closes with an overview on potential 
+\subsection{Quality Assessment of \emph{Macroscopic} Fluctuations}
+The perceived quality for \emph{macroscopic} performance fluctuations can be assessed by requesting a user to judge the quality of this experience in retrospective.
+A retrospective judgment can be used to deduce the actual experience, but especially for longer experiences a retrospective judgment might not contain all desired information about an experience.
+A final retrospective judgment can be complemented by \emph{momentary} judgments and \emph{intermediate} retrospective judgments.
 
-\subsection{Quality Assessment of Fluctuations}
-Perceived quality of performance fluctuations is also assessed by requesting a user to judge the quality of experience in retrospective.
-The retrospective description of the \emph{complete experience} is based upon memorized and recallable information.
-However, the final retrospective description often does not contain all information about the experience especially with especially regard to noticeability of certain fluctuations.
-A final retrospective judgment can be completed by \emph{momentary} judgments and \emph{intermediate} retrospective judgments.
 For momentary judgments the \emph{current} perceived quality is assessed continuously while experiencing.
-For intermediate judgments the experience is split into smaller parts and those assessed individually.
-This allows to derive detailed information, but taken info account that the experience is affected by taking such judgments while experiencing and thus likely affects the quality formation process.
-Those judgments can also be used to predict the retrospective judgment.
+This allows to investigate noticeability of fluctuations, which might not be deducible from a retrospective judgment of the stimulus alone.
+This method is called \ac{SSCQE} method ~\citep[][p. 137]{weiss_temporal_2014} and is often assessed using a slider.
+However, momentary judgments have the inherent disadvantage that conducting such judgments affect the experience.
+\citet{borowiak_long_2013} extended the \ac{SSCQE} method by not taken momentary judgments, but rather allow a user to react to \emph{macroscopic} performance fluctuations by adjusting the performance.
+Momentary judgments have the inherent limitation that those affect the actual experience as an additional task must be conducted while experiencing.
+
+The impact of macroscopic fluctuations can also be assessed by intermediate retrospective judgments.
+Here an episode is split into individual parts.
+Each part is presented individually and the retrospective judgments taken.
+The intermediate judgments allow a fine-grained analysis of the impact of those fluctuations.
+This has been extended for conversational telephony called \emph{simulated conversations} \citep{berger_estimation_2008}.
+An not completely solved issue for the assessment of the perceived quality of telephone conversation is the inherent dynamic in a conversation.
+The role of listener to talker are switched rather frequently and often in a not predictable manner.
+This is especially problematic for the assessment of macroscopic performance fluctuations.
+In some settings fluctuations might be perceived and severely affect perceived quality whereas in other situations not perceived at all depending on the users actual behavior.
+This limits the calculation of a \ac{MOS} as the enforcing the exact same user behavior is often not possible.
+The simulated conversation method splits an episode in individual parts and assess those individual.
+A part either consists of recorded listening-only material or requests a participant to speak a certain message.
+This allows to maintain a \emph{scripted} conversation and thus achieve a comparable performance for multiple participants as the conversation can be precisely reproduced by limiting the user behavior.
+
+\subsection{Effects on Retrospective Judgments}
+The impact of macroscopic performance fluctuations on retrospective judgments has been investigated mainly for video transmission and telephony while most recently also the loading process of websites were investigated.
+Similar to the retrospective judgments of general experience (\autoref{chap:03}), also for perceived quality temporal effects have been observed.
+Most often a recency effect could be observed and in sometimes peak-effect and duration neglect.
+Although temporal effects could be observed, this is not always the case.
+The reasons for this is still under investigation.
+
+For speech telephony \citet{gros_instantaneous_2001} 
 
 
 
 
+\cite{berger_estimation_2008}
+\cite{lewcio_methods_2008}
+\cite{weiss_modeling_2009}
+
+and \citet{hands_recency_2001}
+\cite{rimac-drlje_influence_2009}
+
+
+\cite{garcia_accuracy_2015}
+\cite{masry_cvqe:_2003}
+\cite{seufert_pool_2013}
+\cite{sackl_evaluating_2013}
+
+Initial work on perceived quality of website loading suggests an effect of recency.
+It is, however, not 
+\cite{sackl_quantifying_2015}
+\cite{strohmeier_importance_2013}
 
 
 
 
+%Belief-Adjustment
 
 
+\cite{belmudez_call_2013}
+
+\subsection{Prediction of Retrospective Judgments}
+The prediction of retrospective judgments has been 
+Based upon found effects retrospective judgments for performance fluctuations have been predicted based upon performance, momentary judgments and intermediate judgments.
+In addition also predicted momentary and intermediate judgments have been used.
+
+\cite{berger_estimation_2008}
+\cite{weiss_modeling_2009}
+\cite{belmudez_call_2013}
+\cite{garcia_accuracy_2015}
+\cite{seufert_pool_2013}
+\cite{gros_instantaneous_2001}
+\cite{masry_cvqe:_2003}
+\cite{rimac-drlje_influence_2009}
 
 
-
-
-
-
-
-
-
-
-
-\subsection{Performance fluctuations in sub-episode}
+\paragraph*{Performance fluctuations in sub-episode}
 \begin{itemize}
 \item listening-only speech transmission quality (non-stationary impairments)
 \item video-only (Neige-Garcia et al.)
@@ -74,7 +129,3 @@ This includes also passive (task-free) media (audio or video) studies where the 
 \item "long-term" Video
 \item Put Web-session in here?
 \end{itemize}
-
-
-\subsection{Prediction of Retrospective Judgments}
-%Here I will show how the found temporal effects are modeled and use this as basis for modeling approaches in \autoref{chap:09}.Keyword: Temporal pooling

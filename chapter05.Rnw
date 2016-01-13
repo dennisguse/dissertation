@@ -17,6 +17,9 @@ timeseries=timeseries[-which(timeseries$experiment == "E1" & timeseries$conditio
 %\end{chapter-abstract}
 
 %\section{Introduction}
+
+%\cite{staelens_assessing_2009}
+%\cite{schatz_vienna_2011}, 3 Weeks!
 Services are in general used on a regular basis by a user~\citep[\cf,][]{geerts_linking_2010}.
 The experiences of a usage episode lead to a perceived quality in the user of this very episode.
 The definition of \emph{episode} in the context of multi-episodic \ac{QoE} is derived from concepts of episodic memory (\cf, \autoref{chap:03}) focusing on usage of telecommunication systems.
@@ -46,7 +49,7 @@ Perceived quality and \ac{UX} conceptually overlap as both focus on experience i
 As interaction behavior towards technology often changes as a user learns how to use it and which tasks are well-suited, makes multi-episodic evaluation an important aspect for \ac{UX}.
 The multi-episodic terminology is described by \citet[p. 8]{roto_user_2011}, but missed to put it into context with prior work and do not present their definitions.
 
-\cite{karapanos_user_2009} investigated in an experiment with \unit[6]{subjects} how expectations and usage changes from before buying a smart phone and after an overall usage period of \unit[4]{weeks}. %RESULT?
+\cite{karapanos_user_2009} investigated in an experiment with \unit[6]{subjects} how expectations and usage changes from before buying a smart phone and after an overall usage period of 4 weeks. %RESULT?
 This is extended by \cite{kujala_ux_2011} with the newly presented \emph{UX Curve Method}.
 In this method a participant evaluates his experiences with a product or service in retrospective.
 The participant draws a line reflecting how is satisfaction changed over time and annotates the vertices with the reason for th change.
