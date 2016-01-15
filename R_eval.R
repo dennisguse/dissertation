@@ -12,6 +12,7 @@ participants <- function(experiment_filter, condition_filter=unique(timeseries$c
  length(unique(d))
 }
 participants("E1", 3)
+participants("E2b", "5a4")
 
 mos_qu_with_sd_by_condition <- function(experiment_filter, performance_level_filter=unique(timeseries$performance_level), condition_filter=unique(timeseries$condition), id_filter=unique(timeseries$id), service_filter=unique(timeseries$service)) {
  d = subset(timeseries$QU, experiment %in% experiment_filter & performance_level %in% performance_level_filter & condition %in% condition_filter & id %in% id_filter & service %in% service_filter)
@@ -19,6 +20,9 @@ mos_qu_with_sd_by_condition <- function(experiment_filter, performance_level_fil
  mean_sd(d)
 }
 mos_qu_with_sd_by_condition("E1", "HP", c(1:3), 1)
+mos_qu_with_sd_by_condition("E2b", "HP", c("5a"),  c(1:3), "telephony")
+mos_qu_with_sd_by_condition("E2b", "HP", c("5a0"),  c(1:6), "VoD")
+mos_qu_with_sd_by_condition("E2b", "LP", c("5a4"),  c(1:6), "VoD")
 
 mos_iqu_with_sd_by_condition <- function(experiment_filter, condition_filter=unique(timeseries$condition), id_filter=unique(timeseries$id), service_filter=unique(timeseries$service)) {
  d = subset(timeseries$IQU, experiment %in% experiment_filter & condition %in% condition_filter & id %in% id_filter & service %in% service_filter)
@@ -28,11 +32,12 @@ mos_iqu_with_sd_by_condition <- function(experiment_filter, condition_filter=uni
 mos_iqu_with_sd_by_condition("E1", 4, 3)
 mos_qu_with_sd_by_condition("E1", "LP", "2b", 5)
 
+mos_iqu_with_sd_by_condition("E2b", "5a", 6, "telephony")
 mos_iqu_with_sd_by_condition("E2b", "5a0", 6, "telephony")
 mos_iqu_with_sd_by_condition("E2b", "5a4", 6, "telephony")
 
-mos_iqu_with_sd_by_condition("E2b", "0", 6, "video")
-mos_iqu_with_sd_by_condition("E2b", "4", 6, "video")
+mos_iqu_with_sd_by_condition("E2b", "5a0", 6, "VoD")
+mos_iqu_with_sd_by_condition("E2b", "5a4", 6, "VoD")
 
 
 #####STATISTICS!
