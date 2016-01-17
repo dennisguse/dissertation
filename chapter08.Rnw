@@ -146,10 +146,10 @@ In fact, even between the two conditions no significant differences in multi-epi
 	Day & \multicolumn{2}{c}{Condition} & Statistics\\
 	& \C0 & \C9 \\
 	\midrule
-	4 & \Sexpr{mos_iqu_with_sd_by_condition("E4a", "A0", 5, "VoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E4a", "A1", 5, "VoD")} & \Sexpr{wilcox(IQU~condition, "E4a",  c("HP", "LP"), c("A0", "A1"), 5, "VoD", alternative="greater")} \\
-	7 & \Sexpr{mos_iqu_with_sd_by_condition("E4a", "A0", 8, "VoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E4a", "A1", 8, "VoD")} & \Sexpr{wilcox(IQU~condition, "E4a",  c("HP", "LP"), c("A0", "A1"), 8, "VoD", alternative="greater")}\\
-	10 & \Sexpr{mos_iqu_with_sd_by_condition("E4a", "A0", 11, "VoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E4a", "A1", 11, "VoD")} & \Sexpr{wilcox(IQU~condition, "E4a",  c("HP", "LP"), c("A0", "A1"), 11, "VoD", alternative="greater")}\\
-	14 & \Sexpr{mos_iqu_with_sd_by_condition("E4a", "A0", 15, "VoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E4a", "A1", 15, "VoD")} & \Sexpr{wilcox(IQU~condition, "E4a",  c("HP", "LP"), c("A0", "A1"), 15, "VoD", alternative="greater")}\\
+	4 & \Sexpr{mos_iqu_with_sd_by_condition("E4a", "A0", 4, "VoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E4a", "A1", 4, "VoD")} & \Sexpr{wilcox(IQU~condition, "E4a",  c("HP", "LP"), c("A0", "A1"), 4, "VoD", alternative="greater")} \\
+	7 & \Sexpr{mos_iqu_with_sd_by_condition("E4a", "A0", 7, "VoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E4a", "A1", 7, "VoD")} & \Sexpr{wilcox(IQU~condition, "E4a",  c("HP", "LP"), c("A0", "A1"), 7, "VoD", alternative="greater")}\\
+	10 & \Sexpr{mos_iqu_with_sd_by_condition("E4a", "A0", 10, "VoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E4a", "A1", 10, "VoD")} & \Sexpr{wilcox(IQU~condition, "E4a",  c("HP", "LP"), c("A0", "A1"), 10, "VoD", alternative="greater")}\\
+	14 & \Sexpr{mos_iqu_with_sd_by_condition("E4a", "A0", 14, "VoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E4a", "A1", 14, "VoD")} & \Sexpr{wilcox(IQU~condition, "E4a",  c("HP", "LP"), c("A0", "A1"), 14, "VoD", alternative="greater")}\\
 	\end{tabular}
 	\caption{\ac{MOS}  \E4{}.}
 	\label{tab:field:e4results}
