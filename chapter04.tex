@@ -83,7 +83,7 @@ The limitation of the state of the art is also limited due to the incomparabilit
 \subsection{Prediction of Retrospective Judgments}
 One practical goal of research on \ac{QoE} is the actual prediction of a \ac{QoE} judgments especially retrospective judgments.
 Retrospective judgments can be predicted using either momentary or intermediate judgments as well as prediction of those judgments.\footnote{If the momentary or intermediate judgments are different to the final retrospective judgment, for example using a different scale or assessing something different, those judgments must be first transformed before predicting the retrospective judgment.}
-An alternative is to omit prediction for those judgments ans use a parametric description of the whole experience to predict the final retrospective judgment directly.
+An alternative is to omit prediction for those judgments and use a parametric description of the whole experience to predict the final retrospective judgment directly.
 
 The \emph{baseline model} for temporal integration is based upon the assumption that no temporal effects occur, \ie, all individual parts of an experience are equally important, and is represented by the \emph{unweighted} arithmetic mean of all momentary or intermediate judgments.
 This baseline model can be improved by accounting for observed effects that result in deviation of the prediction and the to be predicted judgment.
@@ -92,18 +92,19 @@ Here a recency effect can be modeled by reducing the weight for earlier parts \c
 For recency a linear weighting also with lower boundary \citep[\eg,][]{weiss_modeling_2009} as well as exponential functions have been used \cite[\eg,][]{hamberg_time-varying_1999}.
 
 In a similar manner a peak effect and also duration neglect can be modeled properly.
-\cite{weiss_modeling_2009} models the peak effect beside the weighted arithmetic mean, by subtracting the difference of the arithmetic mean and the minimal intermediate judgment.
+With regard to 	peak effect \citet{weiss_modeling_2009} takes a different approach by modeling a \emph{relative peak effect}.
+Here the peak effect is modeled as difference between the average intermediate judgments and lowest intermediate judgment and subtracted from the weighted average.
 
-%A different approach towards modeling was conducted by \citet{hands_recency_2001} by using multiple regression
+%A duration neglect can be modeled by using by limiting the maximal accountable duration and setting following weights \citep[\cf,][]{hogarth_order_1992}.
 
 \subsection{Conclusion}
-It must be concluded that also the retrospective judgments of perceived quality for macroscopic performance fluctuations are affected by similar effects as the judgments of an experience.
+It must be concluded that also the retrospective judgments of perceived quality for macroscopic performance fluctuations seem to be affected by similar effects as the judgments of an experience.
 However, the findings with regard to \ac{QoE} remain so far inconclusive as effects are regularly observed, but rarely quantified.
-Here the major focus seems to lay on \emph{sufficient} prediction independent of the underlying reason of a retrospective judgment.
+Here the major focus seems to lay on \emph{sufficient} precise prediction independent of the underlying reason of a retrospective judgment.
 For example although a recency effect could be regularly observed, it is not (yet) known under which circumstance it occurs, \eg, minimal duration of an experience tending to recency.
 It is furthermore, not known if recency is affected by the usage situation, or modality (\eg, is visual presented affected similar to auditory content?) etc.
-Also duration neglect has only received limited attention whereas peak has been found useful for prediction.
+Also a peak has been observed, mainly useful for prediction, duration neglect has only received limited attention.
 
 In fact, research on \ac{QoE} has been and probably will remain mainly technology-driven investigating, current state of the art technology for media transmission and consumption.
-Especially, the wide variety of applications, technology and fast pacing technological changes limit the derived comparison and derivation of knowledge on retrospective judgments on perceived quality.
+Especially, the wide variety of applications, technology and fast pacing technological changes limit the  comparison and derivation of knowledge on retrospective judgments about quality formation of perceived quality for macroscopic performance fluctuations.
 Previous work anyhow shows that the quality formation process into a retrospective judgment is affected by temporal effects and thus not all parts an experience affect the final judgment in the same manner.
