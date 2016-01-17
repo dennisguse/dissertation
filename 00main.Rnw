@@ -85,7 +85,7 @@
 \include{chapter01}
 
 %\part{Related Work and State-of-the-Art}\cleardoublepage %TODO Make one Chapter to rule them all!
-\chapter{Related Work}
+\chapter{Related Work}\label{chap:02}
 \input{chapter02}
 \input{chapter03}
 \input{chapter04}
