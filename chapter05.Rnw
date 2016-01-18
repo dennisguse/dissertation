@@ -289,7 +289,7 @@ The multi-episodic perceived quality judgments, however, only provide limited in
 This might be due to the fact that the applied low performance did not represent a \emph{severe} enough degradation or that the number of degraded usage episodes was too small.
 
 An issue with this experiment is that the authors did not provide details about the service parameters, which is probably due to the use of (proprietary) technology provided by Skype.
-It is for example not clear how Skype distributed the defined transmission bandwidth between the audio and video channel, and if a part of the transmission bandwidth was used for \ac{FEC} or other mechanism to improve robustness against packet-loss.
+It is for example not clear how the Skype client distributed the defined transmission bandwidth between the audio and video channel, and if a part of the transmission bandwidth was used for \ac{FEC} or other mechanism to improve robustness against packet-loss.
 In fact, neither the resolution, frame rate, codecs, audio signal bandwidth, echo cancellation, etc. are reported.
 Also no recordings of the episodes or monitoring data about the actual network transmission is made available.
 The limited effect of \ac{LP} usage episodes on following multi-episodic perceived quality might be due to the applied degradations, which might have been not different enough to \ac{HP}.
