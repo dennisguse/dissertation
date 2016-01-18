@@ -22,152 +22,155 @@ timeseries=timeseries[-which(timeseries$experiment == "E1" & timeseries$conditio
 %\cite{schatz_vienna_2011}, 3 Weeks!
 Services are in general used on a regular basis by a user~\citep[\cf,][]{geerts_linking_2010}.
 The experiences of a usage episode lead to a perceived quality in the user of this very episode.
-The definition of \emph{episode} in the context of multi-episodic \ac{QoE} is derived from concepts of episodic memory (\cf, \autoref{chap:03}) focusing on usage of telecommunication systems.
-\begin{definition}[Episode]\label{def:episode}
+The definition of \emph{usage episode} in the context of multi-episodic \ac{QoE} is derived from concepts of episodic memory (\cf, \autoref{chap:03}) focusing on usage of telecommunication systems.
+\begin{definition}[Usage Episode]\label{def:episode}
 An episode is a distinct, meaningful, and self-contained interaction by user with a service or system to achieve his goal(s).
 \end{definition}
 Goal achievement as requirement for an episode follows the concept of utility and expected utility by \citet{kahneman_experienced_2000}.
 
 The multi-episodic perceived quality is the result of an \emph{integrating process} combining prior experiences and perceived qualities with said service.
-Prior experiences can affect the \emph{quality formation process} of a user and such a change affects the perceived quality of following usage episodes.
+Prior experiences can affect the \emph{quality formation process} of a user and thus might affect the perceived quality of following usage episodes.
+The user's behavior towards the service might also be affected by the perceived quality affecting usage frequency, task solving strategies, or even lead to abandoning the service completely.
 
-The user's behavior towards the service might also be affected by the perceived quality like usage frequency, task solving strategies, or even abandon the service completely.
-Multi-episodic perceived quality must be thus regarded as a sequential process in which the experienced order of usage episodes affect the outcome.
-Investigations on multi-episodic perceived quality can therefore only be undertaken in experiments adhering to a between-subject design, so that every subject is only exposed to one condition.
+Multi-episodic perceived quality must be thus regarded as a sequential process in which the order of usage episodes and their individual experiences affect the outcome.
+Investigations on multi-episodic perceived quality can therefore only be undertaken in experiments adhering to a between-subject design, so that every participants is only exposed to one condition.
 
 In the field of perceived quality multi-episodic perceived quality has so far only received limited attention.
 One reason for this is that research in the field of perceived quality is technology-driven.
 This means that the major focus lies on the evaluation of new technologies, understanding of potential impairments, and the impact on perceived quality.
 The derived knowledge is then applied to enhance existing technologies.
-For applicability it is often sufficient to know the relationship between different performance parameters and the general effect on perceived quality, and neglect the influence of time, tasks and other factors on perceived quality.
+For applicability it is often sufficient to understand the relationship between different performance parameters and the general effect on perceived quality, in the range of seconds up to some minutes, and neglect the influence of time, tasks and other factors on perceived quality.
 
-\subsection{Excurse: Multi-episodic usage in \acs{UX}}
+\subsection{Digression: Multi-episodic usage in \acs{UX}}
 Multi-episodic evaluation has been done so far for the evaluation of \ac{UX}.
-Perceived quality and \ac{UX} conceptually overlap as both focus on experience in general and, in many cases, experience with technology \citep[\cf,][]{book chap 3}.
-\ac{UX}, steaming from usability, focuses on the interaction with technology and how interactions affect usage, behavior, and emotions towards used technology.\footnote{For a longer discussion on similarities and difference between \ac{QoE} and \ac{UX} see \cite{book chapter 3} and also \cite{Hasenzahl 2008: towards user experience}.}
+Perceived quality and \ac{UX} conceptually overlap as both focus on experience in general and, in many cases, experience with technology \citep[\cf,][]{wechsung_quality_2014}.
+\ac{UX}, steaming from usability, focuses on the interaction with technology and how interactions affect usage, behavior, and emotions towards used technology.\footnote{For a longer discussion on similarities and difference between \ac{QoE} and \ac{UX} see \cite{wechsung_quality_2014} and also \cite{hassenzahl_user_2008}.}
 \cite{halpern_two_1990}
-As interaction behavior towards technology often changes as a user learns how to use it and which tasks are well-suited, makes multi-episodic evaluation an important aspect for \ac{UX}.
-The multi-episodic terminology is described by \citet[p. 8]{roto_user_2011}, but missed to put it into context with prior work and do not present their definitions.
+As interaction behavior towards technology often changes as a user learns how to use it and which tasks are well-suited, makes multi-episodic evaluation an important aspect of \ac{UX}.
+The multi-episodic terminology is described by \citet[p. 8]{roto_user_2011}, but it is missed to put it into context with prior work and do not present their definitions.
 
-\cite{karapanos_user_2009} investigated in an experiment with \unit[6]{subjects} how expectations and usage changes from before buying a smart phone and after an overall usage period of 4 weeks. %RESULT?
-This is extended by \cite{kujala_ux_2011} with the newly presented \emph{UX Curve Method}.
+\cite{karapanos_user_2009} investigated in an experiment with \unit[6]{subjects} how expectations and usage changes from before buying a smart phone and after an overall usage period of 4 weeks.
+This is extended by \cite{kujala_ux_2011} with the \emph{UX Curve Method}.
 In this method a participant evaluates his experiences with a product or service in retrospective.
-The participant draws a line reflecting how is satisfaction changed over time and annotates the vertices with the reason for th change.
-In the reported experiment participated 20 subjects evaluating also changes in their satisfaction with their mobile phone.
+The participant draws a line reflecting how is satisfaction changed over time and annotates the vertices with the reason for the change.
+Here also behavioral changes should be reported.
+In the reported experiment participated 20 subjects evaluating also changes in their satisfaction with a new mobile phone over a period of one year.
 Both experiments showed that the usage and also emotions towards the product under investigation changes over time.
 In the beginning interaction is more playful and exploratory whereas it task-oriented and productive.
 
 \subsection{Average Perceived Quality \citep{duncanson_average_1969}}
 First work in direction on multi-episodic perceived quality was performed by \cite{duncanson_average_1969} for telecommunication services.
 Duncanson asked regular users of an oversea speech telephone service about the their experience with said service.
-He investigated, if their is a difference between \emph{a)} the \emph{perceived quality of a just finished call} with average performance and \emph{b)} the \emph{assumed quality} of a call with average performance.
-For this experiment Duncanson used a 4-point \ac{ACR} scale\footnote{\cite{duncanson_average_1969} applied a 4-point \ac{ACR} scale with the labels excellent (4), good (3), fair (2), and poor (1).} and \emph{Thurstone's Law of Categorical Judgment} and found in three experiments similar results.
-It could be shown that case a) is yields a higher \ac{MOS} than case b).
+He investigated, if there is a difference between \emph{a)} the \emph{perceived quality of a just finished call} with average performance and \emph{b)} the \emph{assumed quality} of a call with average performance.
+For this experiment Duncanson used a 4-point \ac{ACR} scale\footnote{\cite{duncanson_average_1969} applied a 4-point \ac{ACR} scale with the labels excellent (4), good (3), fair (2), and poor (1).} and \emph{Thurstone's Law of Categorical Judgment}.
+It could be shown that judgments for case a) yields a score than case b).
 Duncanson concludes ``that ratings of single, recent telephone calls yield results different from ratings of subjectively averaged, past telephone calls of the same type'' \citep[][p. 116]{duncanson_average_1969}.
 
 Although Duncanson studied episodic perceived quality and assumed quality of an \emph{average usage episode}, it revealed an important aspect of multi-episodic perceived quality.
-It is indicated that the integration process of episodic perceived quality leads to a worse perceived quality and thus assumed quality judgment as the integration process does not equally weight all prior experiences with said service.
+It is indicated that the integration process of episodic perceived quality leads to a worse perceived quality as the integration process does not equally weight all prior experiences with said service but rather focuses of low performing episodes.
 
 \subsection{Assessment of Multi-episodic Perceived Quality}
 Prior work in direction of multi-episodic evaluation focuses on use, experience and perception of a service or product under realistic conditions.
-This is especially true for \ac{UX} as work in this area focuses on changes in behavior and emotions towards the system under investigation.
+This is especially true for \ac{UX} as work in this area focuses on changes in behavior and emotions towards the system under investigation, but also for initial work of \citet{moller_single-call_2011}.
 
-%ASSUME: MOS = average quality perception; ASSUMPTION: average quality perception over time!
-Investigating perceived quality for short stimuli as well as complete usage episodes is investigated by in general exposing multiple participants to same stimulus and assess the resulting quality perceptions \citep[\cf,][p. 11]{blauert_spatial_1996}. %MOELLER? JEKOSCH?
-The calculation of the \ac{MOS}, independent of the type of judgment or scale, results in an\emph{average perceived quality}.
-The \ac{MOS} is in general assumed to reflect the perceived quality judgment of \emph{the average participant}.
+Investigating perceived quality for short stimuli as well as complete usage episodes is investigated in general by exposing multiple participants to same stimulus and assess the resulting quality perceptions \citep[\cf,][p. 11]{blauert_spatial_1996}.
+The calculation of a \ac{MOS}, independent of the type of judgment or scale, results in the description of the \emph{average perceived quality}.
+The \ac{MOS} is in general assumed to reflect the perceived quality judgment of the \emph{average participant}.
 
 \paragraph*{Aspects}
-With regard to multi-episodic perceived quality and, perceived quality over time in general, it is required that only those judgments can be subjected to \ac{MOS} that result from similar a condition.
-For multi-episodic perceived quality the following factors are a minimal baseline that must be fulfilled, so the judgments can be evaluated with the \ac{MOS}.
-This implicitly states the assumption that effects over time are of judgments for the same condition for multiple participants are comparable.
-In experiments on perceived quality this \emph{temporal assumption} can in general be neglected as time frames under investigation are small in enough, \ie in the range of seconds up to some minutes.
-For multi-episodic perceived quality it must be taken into account as potential factor for noise in a \ac{MOS} evaluation. %considered as factor? its not really noise, or?
-
-Following factors are discussed that can affect multi-episodic perceived quality and thus should be kept constant, if a \ac{MOS} evaluation is applied.
+With regard to multi-episodic perceived quality and, perceived quality over time in general, it is required that only those judgments can be subjected to the \ac{MOS} assumption that result from experiencing similar conditions.
+In fact, this implicitly assumes that effects on retrospective judgments of the same condition for multiple participants are comparable, \ie, the same effects occur and the effects are similar.
+In experiments on perceived quality this assumption of \emph{temporal consistency} can in general be neglected as time frames under investigation are small in enough, \ie, in the range of seconds up to some minutes.
+For multi-episodic perceived quality it must be taken into account as a potential factor of noise as it is not yet known, if the integration process is \emph{universal} or affected by individual differences.
+In the following factors are discussed that might affect multi-episodic perceived quality and thus should be kept constant, if a \ac{MOS} evaluation is applied.
 
 \subparagraph*{Prior Knowledge and Expectations}
 Perceived quality is influenced by prior knowledge about a service under consideration (\cf, \autoref{chap:02}).
 Prior knowledges includes knowledge about the specific service and also about the type of service in general.
-For telecommunication services this includes knowledge and likely origins about service-specific degradations.
-Also promises about performance by a service provider as for example provided in advertisement is considered knowledge.
-Both might change expectations, attribution of degradations, and \emph{assumed quality} and thus can affect multi-episodic perceived quality.
-This is for example expressed in the \emph{E-Model} by the \emph{advantage factor \textbf{A}} \citep{itu-t_g.107:_2014}.
+For telecommunication services this includes knowledge and likely origins about service-specific performance fluctuations.
+Also promises about performance by a service provider as for example provided in advertisements is considered knowledge.
+The availability of such information might affect expectations, attribution of degradations, and \emph{assumed quality} and thus might affect multi-episodic perceived quality.
+This is for example expressed in the \emph{E-Model} by the \emph{advantage factor \textbf{A}} \citep{itu-t_g.107:_2014} that expresses a favorable judgment due to expected difficulty of service provision, \eg, use of a mobile phone in a remote area.
 
 \subparagraph*{Task, Task Importance and Task Solving Strategies}
 The \emph{quality formation process} is also affected by the user's behavior.
 This includes human factors like attention, but also to be fulfilled needs and to be solved task.
-By repeated use the user's behavior might adjust, if certain degradations are encountered, so that task solving is effective and efficient.
-Depending on the actual tasks, degradations might even not be noticeable like high delay in telephone conversation with rare turn-taking \citep[\cf,][]{schoenenberg_quality_2015}. %TODO Better ref.
-In fact, a degradation might also enforce a change in task solving strategy, \eg, reduced turn-taking due to high delay telephone conversation \citep[\cf,][]{schoenenberg_quality_2015}.
-As the evaluation of multi-episodic perceived quality relies on a retrospective judgment, factors that influence the likelihood to recall a specific usage episode are considered important.
-This also includes the importance of a task, task duration and its fulfillment for a user.
+By repeated use the user's behavior might adjust, if certain degradations are encountered, so task solving becomes effective and more efficient.
+Depending on the actual tasks, degradations might even not be noticeable.
+For example high delay in telephone conversation with rare turn-taking will be judged better than a conversation require more turn-taking \citep[\cf,][]{egger_it_2010, schoenenberg_quality_2015}.
+In fact, a degradation might also enforce an adaption of task solving strategy, \eg, reduced turn-taking due to high delay telephone conversation \citep[\cf,][]{schoenenberg_quality_2015}.
+In addition, the duration of an interaction and thus the exposure to a specific performance might affect multi-episodic perceived quality and thus should be kept constant or even comparable.
+Beside task, duration, and task solving strategy the importance of a task might affect the multi-episodic quality formation process.
+A higher importance of a usage episode might increase the likelihood to memorize and recall and thus this episode might have a higher impact on the multi-episodic judgment.
 For example an interviewee in a telephone job interview is likely to recall this specific usage episode and describe his perceived quality compared to call with a friend.
 
-Therefore the task, task solving strategies and also importance of a specific usage episode should be understood to assess its impact on the assessment of multi-episodic perceived quality.
+Therefore task, task solving strategies and task importance should be kept constant to avoid an undesired impact on multi-episodic perceived quality.
 
 \subparagraph*{Usage Pattern}
-Multi-episodic perceived quality can be affected by usage pattern.
-The usage pattern describes when a service is used.
-A usage pattern can be regular with a defined frequency, and also irregular with bursts of usage.
-The usage pattern, in fact, describes how often a user is exposed to the service's performance and thus acquire new information about the multi-episodic perceived quality.
-For the investigation of multi-episodic perceived quality, it is therefore required that usage pattern are similar.
+Beside prior knowledge and variations related to tasks also the actual usage pattern might affect multi-episodic judgments.
+A usage pattern describes when, for what and how a service is used.
+The usage pattern, in fact, describes how often a user is exposed to the service's performance and thus acquire a new perceived quality.
+A usage pattern can be regular with a defined frequency, but also irregular with bursts of usage.
+Different usage pattern might result in differences in the multi-episodic perceived quality formation process.
+This might be due to differences in memorization, but and also due decay of memorized information.
+Beside the usage pattern more important seems to be the experienced performance.
+In terms of multi-episodic perceived quality this refers to the performance of all individual episodes.
+If the experienced performance as well as the usage pattern are identical or similar enough, multi-episodic judgments of different participants can be directly compared.
 
 \paragraph*{Assessment Methodology}
 
 \subparagraph*{Free-use}
 Multi-episodic perceived quality can be assessed by observing user's interaction with a service without restricting their usage behavior.
-This approach has for example been taken \cite{duncanson_average_1969}.
-Here user's are free to select when and how to use a service, to abandon it, and also acquire new information about it. %e.g. adverstisements
+This approach has for example been taken \citep[\cf,][]{duncanson_average_1969}.
+Here user's are free to select when and how to use a service, to abandon it, and also acquire new information about it.
 Often information about per user usage pattern, service performance, tasks, goals, expectations, prior knowledge, and also personality cannot be acquired.
-This lack of information is often overcome by sampling a large amount of users to overcome.
-Another option to reduce the impact of this lack is to gather self-reported measures of users, or gather behavioral data (\eg, churn, likelihood to re-buy, monetization).
-
-Allowing user to decide themselves when and under which conditions a service is used, enables to investigate usage under "real conditions"\footnote{"Real conditions" means that the object under study is observed while interacting with his \emph{real} environment, which changes as well as the user. In fact, the term "real" does not describe precisely the actual condition, but is an imprecise umbrella term.}, \ie, how a user would behave in his current environment.
+This lack of information is often overcome by sampling a large amount of users.
+Another option to reduce the impact of this lack is to gather self-reported measures of users, or complement it with behavioral data (\eg, churn, likelihood to re-buy, monetization).
+Allowing users to decide themselves when and under which conditions a service is used, enables to investigate usage under "real conditions"\footnote{"Real conditions" means that the object under study is observed while interacting with his \emph{real} environment. In fact, the term "real" does not describe precisely the actual condition, but is an imprecise umbrella term.}, \ie, how a user would behave in his current environment in his current situation with regard to available information to him.
 
 \subparagraph*{Defined-use}\label{method:definedUse}
-Limiting the users freedom by defining how to interact with a service, allows to apply a \ac{MOS} evaluation.
-For multi-episodic perceived quality this requires to define the usage pattern for the service, and for each usage episode the task and service performance.
+Limiting the user's freedom by defining when and how to interact with a service, allows to apply a \ac{MOS} evaluation.
+For multi-episodic perceived quality this requires to define the usage pattern for the service, and for each usage episode the task as well as performance.
 This enforces that all users are exposed in a similar manner to the service.
 A task can be artificial, \ie, a user must not necessarily engage in such a task on his own, and should lead to a similar task solving strategy.
 For telecommunication services this could be a telephone call with defined content \citep[\cf,][]{itu-t_p.805:_2007}, or even listening to a recorded telephone call.
 
 To limit an influence of prior experiences and information about a service, it must made sure that users have a similar knowledge and exposure with the service.
 This can be achieved by a careful selection of users, or by creating a \emph{new service}.
-Creating a new service does not prevent that a user has prior knowledge about such a type of service, but avoids that prior experiences, especially with regard to perceived quality, affect the multi-episodic perceived quality.
+Creating a new service does not prevent a user from having prior knowledge and also expectations about such a type of service, but should limit the influence of prior experiences 
+with other, similar services.
+Enforcing a defined-use avoids variations in usage behavior and task solving behavior, but enables to expose multiple participants to similar conditions and thus investigate the impact on multi-episodic perceived quality for each condition individually.
+By varying only performance between conditions, the impact of the differences in performance can be investigated.
 
 \subparagraph*{Discussion}
 Both assessment methodologies are diametrically opposed. 
-Free-use allows studying multi-episodic perceived quality with existing user by observing their interaction with said service and optionally gather direct feedback, but is limited this non-intrusive methodology is, however, in general limited by information that can be gathered about a user.
+Free-use allows studying multi-episodic perceived quality with existing user by observing their interaction with said service and optionally gather direct feedback, but this non-intrusive methodology is, however, in general limited by information that can be gathered about a user.
 In addition, service performance cannot be controlled and desired performance might occur not reliably enough.
 Modifying the service performance on purpose, however, introduces ethical issues, if users are not informed about this and the underlying reason.
-The latter, actually, influences the quality formation process by setting expectations and thus affect multi-episodic perceived quality judgments.
-
-Defined-use, on the other hand, requires a large effort as a new service must be created.
-The deployed service be able to provide \emph{defined service performance} precise and reliable.
-This means that such a service must be able to introduce degradations, when defined, and prevent degradations, when none are defined, from a end-to-end perspective and on a per user basis.
-This is challenging task for telecommunication services especially due to the necessary data transmission and non-desired transmission-related degradations that often cannot be controlled in a reliable manner.
-In addition to technological challenges to deploy such a service, a user needs to solve artificial tasks at specific point in time.
-This is not an issue, if multi-episodic perceived quality is studied in one session, \eg several consecutive telephone calls.
-Investigating multi-episodic perceived quality over larger time-spans covering several days, weeks, or months, however, increases the required to effort for a user.
-This increases the need for compensation, which if served in monetary terms is costly.
-However, investigating multi-episodic perceived quality beyond one session alone enables to derive how usage episodes are recalled and perceived quality potentially forgotten.
+The latter might influences the quality formation process by setting expectations and thus affect multi-episodic perceived quality judgments.
+In fact, this applies also to defined-use as here users are instructed how to use a service.
+For this method a service must be either created or available that is able to provide a priori defined \emph{service performance} in a precise and reliable manner.
+This means that such a service must be able to introduce degradations, when defined, and prevent degradations, when none are defined, from an end-to-end perspective.
+This is challenging task for telecommunication services especially due to the necessary data transmission and often uncontrollable network performance.
+In addition to technological challenges in deployment of such a service, a user needs to solve artificial tasks at specific point in time.
+This is not an issue, if multi-episodic perceived quality is studied in one session, \eg, several consecutive usage episodes.
+Investigating multi-episodic perceived quality over larger time-spans covering several days, weeks, or months, however, increases the required to effort for a user to stick to the defined usage pattern.
 Larger time-spans also increase the likelihood that a defined usage pattern cannot be fulfilled by a user as each user must embedded service usage into their daily life.
+However, investigating multi-episodic perceived quality beyond one session is necessary to derive knowledge about the influence of time between usage episodes on multi-episodic perceived quality.
 
 \subsection{Initial work with Defined-use \citep{moller_single-call_2011}}
-The first work on multi-episodic perceived quality while applying the defined-use methodology was performed by \citet{moller_single-call_2011} in a field experiment.
+The first work on multi-episodic perceived quality while applying the defined-use methodology was performed by \citet{moller_single-call_2011}.
 
 \paragraph*{Design}
-In this experiment pairs of two participants that know each other used a video-telephony service over a study period of \unit[12]{days}.
-\citet{moller_single-call_2011} followed the premise that the service works in general, \ie, providing the best achievable performance, but sometimes usage episodes are degraded.
+In this experiment pairs of two participants used a video-telephony service over a study period of \unit[12]{days}.
+\citet{moller_single-call_2011}\footnote{It must be noted that \cite{moller_single-call_2011} use the term \emph{service quality} as synonym to multi-episodic perceived quality, rather than service quality in terms of \citet{parasuraman_conceptual_1985} (\cf, \autoref{chap:03}).} followed the premise that the service works in general, \ie, providing the best achievable performance, but sometimes usage episodes are only presented with reduced performance.
 The service needed to be used twice a day with the first call between \unit[6]{h} and \unit[15]{h} and the second call between \unit[15]{h} and midnight.
 For each of those \unit[24]{calls} a \ac{SCT}~\citep{itu-t_p.805:_2007} needed to be solved.
-%Furthermore, each pair of participants was allowed to use the service for private communication, if desired.
+Furthermore, each pair of participants was allowed to use the service for private communication, if desired.
 
 After finishing a call each participant rated the episodic quality of this usage episode.
-Multi-episodic judgments were taken after the 2nd call on the 2nd, 7th, and 12th day.
-For both the 7-point \ac{CCR} scale\footnote{The 7-point scale is, in fact, not an \ac{ACR} scale as also options between \emph{two} categories can be selected. However, this scale is expected to map the same answer space. For a conversation between discrete 5-point scale and 7-point continuous scale see \cite{koster_comparison_2015}.}. \citep[\cf,][p. 19]{itu-t_p.851:_2003} was used (\cf, \autoref{img:chap05:quality-scale}).
-It must be noted that \cite{moller_single-call_2011} use the term \emph{service quality} as synonym to multi-episodic perceived quality, rather than service quality in terms of \citet{parasuraman_conceptual_1985} (\cf, \autoref{chap:03}).
+Multi-episodic judgments were taken after the last call on the 2nd, 7th, and 12th day.
+The episodic and multi-episodic quality judgment were both taken on a 7-point \ac{CCR} scale\footnote{The 7-point scale is, in fact, not an \ac{ACR} scale as also options between \emph{two} categories can be selected. However, this scale is expected to map the same answer space. For a conversation between discrete 5-point scale and 7-point continuous scale see \cite{koster_comparison_2015}.} \citep[\cf,][p. 19]{itu-t_p.851:_2003} (\cf, \autoref{img:chap05:quality-scale}).
 
 \begin{figure}[h]
 	\includegraphics[width=1\textwidth]{figure/quality7pt_scale}
@@ -175,13 +178,18 @@ It must be noted that \cite{moller_single-call_2011} use the term \emph{service 
 	\label{img:chap05:quality-scale}
 \end{figure}
 
-In this experiment degradations were created by limiting the maximum transmission bandwidth for audio and video on a per day basis.
-This avoids impact of varying performance in a usage episode as the influence on episodic judgments are not yet fully understood.
-Three performance levels were applied: \unit[500]{kbit/s} (\ac{HP}), \unit[150]{kbit/s} (\ac{MP}), \unit[32]{kbit/s} (\ac{LP}).\footnote{A detailed description about the \emph{precise} technical parameters (\eg, codecs, bandwidth distribution, resolution) resulting from the bandwidth limitations was not published.}
-Five conditions were tested which all presented the first 
+In this experiment performance was varied limiting the maximum transmission bandwidth for audio and video per episode.
+This avoids impact of varying performance in a usage episode as the influence on episodic judgments of in-episodic macroscopic performance fluctuations is not yet fully understood and occurrence might also affect multi-episodic perceived quality.
+Three performance levels were applied: \unit[500]{kbit/s} (\ac{HP}), \unit[150]{kbit/s} (\ac{MP}), \unit[32]{kbit/s} (\ac{LP}).\footnote{A detailed description about the \emph{precise} technical parameters (\eg, codecs, bandwidth distribution, resolution) resulting from the bandwidth limitations was not published by \citet{moller_single-call_2011} limiting the reproducibility.}
+Performance of the service was varied on a per day basis, \ie, all usage episode of a day were presented with the same performance.
 \citet{moller_single-call_2011} tested five conditions (\cf, \autoref{tab:chap05:conditions}) with one or two performance levels.
+The five conditions are shown in \autoref{tab:chap05:conditions}.
 It must be noted that condition 5 differs as only \ac{MP} and \ac{LP} are applied and thus \ac{MP} represents the \emph{best performance}.
 Depending on the prior experiences of participants this might affect quality judgments as \ac{LP} can only be compared to \ac{MP}.
+
+For each usage episode a so-called \ac{SCT} was provided that both participants needed to solve together defined ITU-T P.805 \citep{itu-t_p.805:_2007}.
+\acp{SCT} enforce the content and structure of a conversation to limit the behavioral freedom of caller and callee.
+A detailed explanation is given in the following chapter.
 
 \begin{table}[h]
 	\centering
@@ -204,12 +212,16 @@ Depending on the prior experiences of participants this might affect quality jud
 \end{table}
 
 The experiment was conducted by the participants in their home environment using their private computer and broadband Internet connection.
+This limits the necessary effort for participants and allows them to embedded the conducted experiment into their daily life.
+In addition, each pair of participants was required to known each other beforehand to reduce their effort for this experiment.
+In this experiment participants were equipped with a headset and a webcam, so that recording equipment is similar and avoid an impact of varying equipment.
 
 \paragraph*{Results}
 This experiment was conducted with \unit[58]{participants}. % in Berlin, Germany. aging from 14 to \unit[64]{years}.
 Two participants were removed from further data analysis as the required bandwidth was not achieved.
-This left for condition 1 16 participants and for the other conditions 10 participants.
+This left 10 participants for each condition 2..5 and 16 participants for condition 1.
 In the following first episodic judgments and then the multi-episodic judgments are analyzed using the data of \citet{moller_single-call_2011}.
+Results are reported as \ac{MOS} ranging from 0 to 6.
 \autoref{img:state:MOLLERboxplot} shows the boxplot episodic judgments of condition 2 and \autoref{tab:state:MOLLERepisodic}.
 
 \begin{figure}
@@ -220,6 +232,27 @@ In the following first episodic judgments and then the multi-episodic judgments 
 	\caption{Boxplot of episodic judgments for condition 2 of \citet{moller_single-call_2011} (own illustration).}
 	\label{img:state:MOLLERboxplot}
 \end{figure}
+
+\subparagraph*{Episodic Judgments}
+For all conditions the episodic judgments reflect the applied episodic performance and it must thus be concluded that the setup worked as desired.
+%Condition 5 is evaluated alone as the absence of \ac{HP} might affect episodic and multi-episodic judgments
+However, episodic judgments for condition 1..4 are significant different for \ac{HP} (Kruskal-Wallis test: \Sexpr{kruskal(QU~condition, "MOELLER", "HP", c("S1", "S2", "S3", "S5"))}).
+A post-hoc test (pairwise Wilcoxon rank-sum test with Holms' correction) shows that all conditions except condition 2 and 3 are significant different ($p\leq0.0137$).
+For \ac{LP} episodic judgments are not significant different between conditions 2..4 (Kruskal-Wallis test: \Sexpr{kruskal(QU~condition, "MOELLER", "LP", c("S1", "S2", "S3"))}).
+In fact, the differences between those conditions are relatively small and likely an effect of the between-subject design.
+For condition 2..4 a significant difference between the two performance level is observed (Wilcoxon rank-sum test: \Sexpr{wilcox(QU~performance_level, "MOELLER", c("HP", "LP"), c("S1", "S2", "S3"))}).
+It must be noted that although \ac{HP} and \ac{LP} are different, \ac{LP} was still judged as "fair" and thus seem not to be perceived as a severe degradation.
+With regard to condition 5 judgments \ac{LP} judgments are close to \ac{LP} judgments for condition 2..4.
+Furthermore, \ac{MP} judgments are only slightly lower than \ac{HP} judgments for condition 1..4.
+As \ac{MP} and \ac{HP} were not presented together this might indicate either that the scale is used different.
+This also might indicate that either \ac{MP} and \ac{HP} were not perceived different, if not presented together.
+
+Nevertheless, the results show that episodic quality judgments reflect the desired performance, \ie, the setup functioned as desired and, more important, episodic judgments can be reliably taken in a field studies and the defined-use methodology applied.
+\cite{moller_single-call_2011} noted that episodic judgments of \ac{HP} episodes have a tendency to slowly increase over the usage period.
+Over all 5 conditions an increase of \unit[0.3]{pt} is reported.
+A similar tendency is observed for consecutive \ac{LP} episodes.
+In addition, it is reported that \ac{HP} episodes that follow \ac{LP} episodes seem to be negatively affected by precessing episodes with a recovery period of up to two usage episodes.
+A statistical analysis is omitted due to the relative small, potential difference and the high standard deviation.
 
 \begin{table}[h]
 	\centering
@@ -241,62 +274,45 @@ In the following first episodic judgments and then the multi-episodic judgments 
 	\label{tab:state:MOLLERepisodic}
 \end{table}
 
-\subparagraph*{Episodic Judgments}
-For all conditions the episodic judgments reflect the applied episodic performance and it must thus be concluded that the setup worked as desired.
-%Condition 5 is evaluated alone as the absence of \ac{HP} might affect episodic and multi-episodic judgments
-Episodic judgments for condition 1..4 are significant different for \ac{HP} (\Sexpr{kruskal(QU~condition, "MOELLER", "HP", c("S1", "S2", "S3", "S5"))}).
-A post-hoc test shows that all conditions except condition 2 and 3 are significant different ($p\leq0.0137$).
-For \ac{LP} episodic judgments are not significant different between conditions 2..4 (\Sexpr{kruskal(QU~condition, "MOELLER", "LP", c("S1", "S2", "S3"))}).
-In fact, the differences between those conditions are relatively small and likely an effect of the between-subject design.
-For condition 2..4 a significant difference between the two performance level is observed (\Sexpr{wilcox(QU~performance_level, "MOELLER", c("HP", "LP"), c("S1", "S2", "S3"))}).
-However, \ac{LP} was still judged with "fair" and thus was not perceived as a severe degradation.
-It must be noted that condition 5 yielded judgments for \ac{MP} that were rather close to \ac{HP} judgments to the other conditions and also \ac{LP} judgments are very similar in absolute numbers.
-This indicates that either \ac{MP} and \ac{HP} were not perceived different, if not presented together, or that the scale was used different.
-In the former case condition 2 and 4 can be considered equal whereas in latter case an absolute comparison is invalid.
-Nevertheless, the results show that episodic quality judgments reflect the desired performance, \ie, the setup functioned as desired and, more important, episodic judgments can be reliably taken in a field studies.
-
-\cite{moller_single-call_2011} noted that episodic judgments of \ac{HP} episodes have a tendency to slowly increase over the usage period.
-Over all 5 conditions an increase of \unit[0.3]{pt} is reported.
-A similar tendency is observed for consecutive \ac{LP} episodes.
-In addition, it is reported that \ac{HP} episodes that follow \ac{LP} episodes seem to be negatively affected by precessing episodes with recovery up to two usage episodes.
-A statistical analysis is omitted due to the relative small, potential difference and the high standard deviation.
-
 \subparagraph*{Multi-episodic Judgments}
-With regard to multi-episodic judgments the result of this experiment are rather limited as the multi-episodic judgments are rather close ranging from \Sexpr{mos_iqu_with_sd_by_condition("MOELLER", "S2", 14)} to \Sexpr{mos_iqu_with_sd_by_condition("MOELLER", "S5", 24)} especially, if the variation in episodic judgments is taken into account.
-In fact, even for condition 1, which presented only \ac{HP}, the multi-episodic judgments vary from \Sexpr{mos_iqu_with_sd_by_condition("MOELLER", "S5", 14)} to \Sexpr{mos_iqu_with_sd_by_condition("MOELLER", "S5", 24)}.
+With regard to multi-episodic judgments the result of this experiment are rather limited as the multi-episodic judgments are rather close ranging from \Sexpr{mos_iqu_with_sd_by_condition("MOELLER", "S2", 14)} to \Sexpr{mos_iqu_with_sd_by_condition("MOELLER", "S5", 24)}.
+In addition, the large variation of episodic and multi-episodic judgments limits the investigation of differences between conditions.
+%In fact, even for condition 1, which presented only \ac{HP}, the multi-episodic judgments vary from \Sexpr{mos_iqu_with_sd_by_condition("MOELLER", "S5", 14)} to \Sexpr{mos_iqu_with_sd_by_condition("MOELLER", "S5", 24)}.
 Furthermore, it must be noted that condition 5 provided multi-episodic judgments that were similar to the episodic judgments rather close to the other conditions.
 
 Thus, it must be concluded that the applied performance levels together with the varying number and distribution of \ac{LP} episodes did not affect the multi-episodic formation process in an observable manner.
 
 \subparagraph{Discussion}
-The experiment of \citet{moller_single-call_2011} showed it is possible to multi-episodic \ac{QoE} in a field trial with a usage period of \unit[12]{days} while applying the defined use methodology (\cf, \autoref{method:definedUse}).
-The episodic quality judgments are consistent with the desired performance levels.
-The multi-episodic perceived quality judgments, however, only provided limited insight as the differences between conditions were rather small.
-The reason cannot be derived from those judgments alone.
+\citet{moller_single-call_2011} successfully applied the defined-use assessment method for the assessment of multi-episodic \ac{QoE} in a field trial with a usage period of 12 days.
+The episodic quality judgments are consistent with the desired performance levels, showing that the deployed system could provide the performance in a reliable manner.
+The multi-episodic perceived quality judgments, however, only provide limited insight as the observed differences between conditions are rather small.
+This might be due to the fact that the applied low performance did not represent a \emph{severe} enough degradation or that the number of degraded usage episodes was too small.
 
-An issue with this study is that the authors of this publication did not provide details about the service parameters, which is probably due to the use of (proprietary) technology provided by Skype.
-It is for example not clear how Skype distributed the defined transmission bandwidth between the audio and video channel \citep[\cf,][]{moller_single-call_2011}, and if a part of the transmission bandwidth was used for \ac{FEC}.
-In fact, neither the resolution, frame rate, codecs, audio signal bandwidth, echo cancellation, etc. is reported.
-Also no recordings of the episodes or monitoring data about the actual network transmission is available.
-The limited effect of \ac{LP} usage episodes on following multi-episodic perceived quality might be due to the applied degradations, which might have been not different to \ac{HP}.
+An issue with this experiment is that the authors did not provide details about the service parameters, which is probably due to the use of (proprietary) technology provided by Skype.
+It is for example not clear how Skype distributed the defined transmission bandwidth between the audio and video channel, and if a part of the transmission bandwidth was used for \ac{FEC} or other mechanism to improve robustness against packet-loss.
+In fact, neither the resolution, frame rate, codecs, audio signal bandwidth, echo cancellation, etc. are reported.
+Also no recordings of the episodes or monitoring data about the actual network transmission is made available.
+The limited effect of \ac{LP} usage episodes on following multi-episodic perceived quality might be due to the applied degradations, which might have been not different enough to \ac{HP}.
 
 Another factor that might have influenced the results is the usage of a widely known service and thus influence expectations due to the presence of prior knowledge as well as experiences.
-In addition, in this experiment participants were allowed to use the service for personal communication beside the defined use.
-Some participants might have used the service more often than others in the study period, which might might affect the multi-episodic quality judgment and thus invalidate the \ac{MOS} assumption, because not all participants were exposed to the same service performance in a similar manner.
-%Did not enforce duration! Implicit assume duration neglect!
+In addition, in this experiment participants were allowed to use the service for personal communication beside the defined usage episodes.
+Some participants might have used the service more often than others, which might affect the multi-episodic quality judgments and thus (partly) invalidate the \ac{MOS} assumption, because not all participants were exposed to the same service performance in a similar manner.
 Selecting a two-party conversation (\ie, \ac{SCT}) might have been another issue.
 \acp{SCT} try to enforce a conversation flow, which is however influenced by the usage behavior of the two parties, and thus might affect the individual duration of usage episodes as reported by \cite{moller_single-call_2011}.
 This implicitly assumes a \emph{duration neglect} with regard to multi-episodic perceived quality.
-The effect of duration neglect, however, has not been verified so far for multi-episodic perceived quality.
+The effect of duration neglect, however, has not neither been proved nor disproved so far for multi-episodic perceived quality.
 
-The experiment of \cite{moller_single-call_2011} showed that multi-episodic perceived quality can be assessed with defined-use in field trial.
+The experiment of \cite{moller_single-call_2011} showed that multi-episodic perceived quality can be assessed with defined-use in a field trial.
 Although participants used the service in their home environment on their own, \ie, in an uncontrolled and to the researchers unknown setting, which is an additional source of noise, the especially the episodic results show that perceived quality can be assessed successfully with this methodology.
-With regard to multi-episodic perceived quality the results are limited.
-
-%DELAY WAS not reported/investigated? - Did it affect something?
-%AV-sync not reported
-
-%Limitation: no "training" and no supervised usage(?) 
-%NO imposter detection!, very expensive
 
 \section{Conclusion}
+Multi-episodic perceived quality has so far only received limited attention.
+The work of \citet{duncanson_average_1969} and \citet{moller_single-call_2011} can be used as a initial ground for the investigation of the multi-episodic quality formation process.
+Especially the defined-use method developed and tested by \citet{moller_single-call_2011} seems suited for this investigation.
+However, neither \citet{duncanson_average_1969} nor \citet{moller_single-call_2011} found effects on multi-episodic that affect the formation process.
+
+
+
+
+
+%Starting from effects on the retrospective judgments found in assessment of general experiences (\cf, \autoref{chap:03})

@@ -9,10 +9,10 @@ timeseries=timeseries[-which(timeseries$experiment == "E1" & timeseries$conditio
 
 %\addtocontents{toc}{\protect\newpage}
 \chapter{Multi-episodic Perceived Quality in One Session}\label{chap:lab}
-\begin{chapter-abstract}
-First question: can multi-episodic QoE be studied in "short" laboratory study?
-I with my laboratory studies on with one speech telephony service focusing on effects of position(s) of degraded usage episodes (the finished Journal paper) and the already finished extensions.
-\end{chapter-abstract}
+%\begin{chapter-abstract}
+%First question: can multi-episodic QoE be studied in "short" laboratory study?
+%I with my laboratory studies on with one speech telephony service focusing on effects of position(s) of degraded usage episodes (the finished Journal paper) and the already finished extensions.
+%\end{chapter-abstract}
 
 For the evaluation of the hypotheses with regard to multi-episodic perceived quality for sequential use in one session four experiments were conducted.
 These experiments follow the same procedure, but differ in usage situation and, respectively, service type as shown in \autoref{tab:lab:experiments}.
@@ -330,7 +330,7 @@ For none participants of the four experiments this criteria was met and thus non
 	\label{tab:lab:participants}
 \end{table}
 
-\section{Data Analysis}
+\section{Data Analysis}\label{method:statistic}
 First, episodic judgments are inspected with regard to consistency between conditions for each experiment individually, and then potential differences between the experiments are investigated.
 Second, multi-episodic judgments are evaluated with regard to the presented hypotheses (\cf, \autoref{chap:towards}).
 
