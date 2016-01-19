@@ -158,7 +158,7 @@ Investigating multi-episodic perceived quality over larger time-spans covering s
 Larger time-spans also increase the likelihood that a defined usage pattern cannot be fulfilled by a user as each user must embedded service usage into their daily life.
 However, investigating multi-episodic perceived quality beyond one session is necessary to derive knowledge about the influence of time between usage episodes on multi-episodic perceived quality.
 
-\subsection{Initial work with Defined-use \citep{moller_single-call_2011}}
+\subsection{Initial work with Defined-use \citep{moller_single-call_2011}}\label{prior:moeller}
 The first work on multi-episodic perceived quality while applying the defined-use methodology was performed by \citet{moller_single-call_2011}.
 
 \paragraph*{Design}
@@ -195,7 +195,7 @@ A detailed explanation is given in the following chapter.
 \begin{table}[h]
 	\centering
 	\begin{tabular}{c||c|c|c|c|c|c|c}
-	Condition & \multicolumn{7}{c}{Performance Level (per day)} \\
+	\multirow{2}{*}{Condition} & \multicolumn{7}{c}{Performance Level (per day)} \\
 		& 1..2 		& 3 & 4 & 5..8 & 9 & 10 & 11..12  \\
 	\midrule
 	1 & \ac{HP} & \ac{HP} & \ac{HP} & \ac{HP} & \ac{HP} & \ac{HP} & \ac{HP} \\
@@ -258,7 +258,7 @@ A statistical analysis is omitted due to the relative small, potential differenc
 \begin{table}[h]
 	\centering
 	\begin{tabular}{c||c|c|c||c|c|c}
-	\multirow{2}{*}{\rotatebox{90}{Cond.}} & \multicolumn{3}{c||}{Episodic judgments} &  \multicolumn{3}{c}{Multi-episodic judgments} \\
+	\multirow{2}{*}{\rotatebox{90}{Cond.}} & \multicolumn{3}{c||}{Episodic Judgments} &  \multicolumn{3}{c}{Multi-episodic Judgments} \\
 	  & \ac{HP}	& \ac{MP} & \ac{LP} & 2	& 7 & 12 \\
 	\midrule
 	1 			& \Sexpr{mos_qu_with_sd_by_condition("MOELLER", "HP", "S5")} & - & - & \Sexpr{mos_iqu_with_sd_by_condition("MOELLER", "S5", 4)} & \Sexpr{mos_iqu_with_sd_by_condition("MOELLER", "S5", 14)} & \Sexpr{mos_iqu_with_sd_by_condition("MOELLER", "S5", 24)} \\

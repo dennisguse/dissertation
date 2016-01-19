@@ -297,10 +297,12 @@ For none participants of the four experiments this criteria was met and thus non
 \begin{table}
 	\centering
 	\begin{tabular}{c|c|c|c|c}
-	Conditions & \multicolumn{4}{c}{Experiments} \\
+	\multirow{2}{*}{Conditions} & \multicolumn{4}{c}{Experiments} \\
 			& \E1{}	& \EIIa{} 	& \EIIb{} 	& \E3{}\\
 	\midrule
-	\C0			& -									& 	-						& 	\Sexpr{participants("E2b", "5a0")}	(with \ac{VoD}); 	\Sexpr{participants("E2b", "5a")} (without \ac{VoD}) &  - \\
+	-				&	-									&	-						& \Sexpr{participants("E2b", "5a")} (without \ac{VoD}) & - \\
+	\hline
+	\C0			& -									& 	-						& 	\Sexpr{participants("E2b", "5a0")}	 &  - \\
 	\hline
 	\C1{}		& \Sexpr{participants("E1", "1")}	&	\Sexpr{participants("E2a", "1")}	&	-	&  - \\
 	\hline
@@ -361,8 +363,8 @@ Such an effect could neither be directly observed for any of the four experiment
 
 \begin{table}
   \centering
-	\begin{tabular}{c|c|c|c|c}
-	Experiment	& Service & \multicolumn{3}{c}{Performance Level} \\
+	\begin{tabulary}{\textwidth}{c|c|c|c|c}
+	\multirow{2}{*}{Experiment}	& Service & \multicolumn{3}{c}{Performance Level} \\
 						& & \ac{HP}																	& \ac{MP}	& \ac{LP}\\
 	\hline
 	\E1{}				& Telephony (Conversation)	& \Sexpr{mos_qu_with_sd_by_condition("E1", "HP")} 	& \Sexpr{mos_qu_with_sd_by_condition("E1", "MP")}	& \Sexpr{mos_qu_with_sd_by_condition("E1", "LP")} \\
@@ -373,7 +375,7 @@ Such an effect could neither be directly observed for any of the four experiment
 	& \ac{VoD}															& \Sexpr{mos_qu_with_sd_by_condition("E2b", "HP", c("5a0", "5a4"), c(1:6), "VoD")} 	& - 														& \Sexpr{mos_qu_with_sd_by_condition("E2b", "LP", c("5a4"), c(1:6), "VoD")} \\
 	\hline
 	\E3{}				& \ac{AoD} 								& \Sexpr{mos_qu_with_sd_by_condition("E3", "HP")} 	& - 																					& \Sexpr{mos_qu_with_sd_by_condition("E3", "LP")} \\
-	\end{tabular}
+	\end{tabulary}
   \caption{Episodic judgments (\ac{MOS}) per performance levels for experiment \E1{}, \EIIa{}, \EIIb{}, and \E3{}.}
 	\label{img:lab:episodicMOS}
 \end{table}
@@ -542,7 +544,7 @@ Condition \CIIa{} and \C7{} are not significant different (\Sexpr{wilcox.pairwis
 \begin{table}[h!]
 \centering
  \begin{tabulary}{\columnwidth}{c|C|C|C}
-	Condition   & \multicolumn{2}{c|}{6th usage episode} & Multi-episodic Judgment\\
+	\multirow{2}{*}{Conditions}   & \multicolumn{2}{c|}{6th usage episode} & \multirow{2}{*}{Multi-episodic Judgment}\\
 	            & Performance 	& Episodic Judgment & \\
 	\midrule 
 	\CIIa{}		& \ac{HP}		& \Sexpr{mos_qu_with_sd_by_condition("E1", "HP", "2a", 6)}	& \Sexpr{mos_iqu_with_sd_by_condition("E1", "2a", 6)} \\
@@ -574,7 +576,7 @@ The final multi-episodic judgments of condition \CVb{} and condition \C7{} are s
 \begin{table}[h!]
 \centering
  \begin{tabulary}{\columnwidth}{c|C|C|C|C}
-	Condition	& Episodic Performance			& \multicolumn{3}{c}{Multi-episodic Judgments} \\
+	\multirow{2}{*}{Conditions}	& Episodic Performance			& \multicolumn{3}{c}{Multi-episodic Judgments} \\
 				&					 			& 3rd		& 6th		& 9th  \\
 	\midrule
 	\CVb{}			& 4:\ac{HP}, 5:\ac{LP}, 6:\ac{LP}	& \Sexpr{mos_iqu_with_sd_by_condition("E1", "5b", 3)}	& \Sexpr{mos_iqu_with_sd_by_condition("E1", "5b", 6)}	& \Sexpr{mos_iqu_with_sd_by_condition("E1", "5b", 9)}\\
@@ -603,7 +605,7 @@ The final multi-episodic judgments of the two conditions are also not significan
 \begin{table}[h!]
 \centering
  \begin{tabulary}{\columnwidth}{c|C|C|C}
-	Condition	& \multicolumn{2}{c|}{5th usage episode} & Multi-episodic Judgment\\
+	\multirow{2}{*}{Conditions}	& \multicolumn{2}{c|}{5th usage episode} &\multirow{2}{*}{Conditions}\\
 					& Duration 	& Episodic Judgment & \\
 	\midrule 
 	\CIIa{}			& similar 	& \Sexpr{mos_qu_with_sd_by_condition("E3", "LP", "2a", 5)}		& \Sexpr{mos_iqu_with_sd_by_condition("E3", "2a", 6)} \\
@@ -631,7 +633,7 @@ The multi-episodic judgments of the speech telephony service for \CVa{} are not 
 \begin{table}[h!]
 \centering
  \begin{tabulary}{\columnwidth}{c|C|C|C}
-	Experiment & Condition \ac{VoD}	& \multicolumn{2}{c}{Multi-episodic Judgment per Service} \\
+	\multirow{2}{*}{Experiment} & \multirow{2}{*}{Conditions \ac{VoD}}	& \multicolumn{2}{c}{Multi-episodic Judgment} \\
 					& 						& \ac{LST} 															& \ac{VoD} \\
 	\midrule 
 	\EIIa{}			& -					& \Sexpr{mos_iqu_with_sd_by_condition("E2a", "5a", 6, "telephony")}		& - \\

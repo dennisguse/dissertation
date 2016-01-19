@@ -56,11 +56,11 @@ However, the performance levels were different between the three experiments.
 	\midrule
 	E4		& Telephony	and \ac{VoD}	& Two-party conversation (\ac{SCT})	& 14		& \Sexpr{participants("E4a")}\\ %Study 1/E4a
 	\hline
-	E5		& \ac{VoD} and \ac{AoD}	& Audiobook	and Video consumption		& 14		& \Sexpr{participants("E5")} \\ %Study 3
+	E5		& \ac{VoD} and \ac{AoD}	& Audio book	and Video consumption		& 14		& \Sexpr{participants("E5")} \\ %Study 3
 	\hline
-	E6		& \ac{AoD}								& Audiobook													& 7		& \Sexpr{participants("E6a")} %Study 14
+	E6		& \ac{AoD}								& Audio book													& 7		& \Sexpr{participants("E6a")} %Study 14
 	\end{tabulary}
-	\caption{Experiments on multi-episodic QoE over multiple days.}
+	\caption{Conducted experiments on multi-episodic perceived quality over multiple days.}
 	\label{tab:field:experiments}
 \end{table}
 
@@ -143,7 +143,7 @@ In fact, even between the two conditions no significant differences in multi-epi
 \begin{table}[h!]
 \centering
  \begin{tabular}{c|c|c|c}
-	Day & \multicolumn{2}{c}{Condition} & Statistics\\
+	\multirow{2}{*}{Day} & \multicolumn{2}{c}{Condition} & Statistics\\
 	& \C0 & \C9 \\
 	\midrule
 	4 & \Sexpr{mos_iqu_with_sd_by_condition("E4a", "A0", 4, "VoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E4a", "A1", 4, "VoD")} & \Sexpr{wilcox(IQU~condition, "E4a",  c("HP", "LP"), c("A0", "A1"), 4, "VoD", alternative="greater")} \\

@@ -49,7 +49,7 @@
 % Hyphenation
 %*******************************************************
 %\hyphenation{put special hyphenation here}
-\include{hypenate.tex}
+\input{hypenate}
 \usepackage{multirow}
 % ********************************************************************
 % GO!GO!GO! MOVE IT!
