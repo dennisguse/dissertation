@@ -168,9 +168,9 @@ The service needed to be used twice a day with the first call between \unit[6]{h
 For each of those \unit[24]{calls} a \ac{SCT}~\citep{itu-t_p.805:_2007} needed to be solved.
 Furthermore, each pair of participants was allowed to use the service for private communication, if desired.
 
-After finishing a call each participant rated the episodic quality of this usage episode.
-Multi-episodic judgments were taken after the last call on the 2nd, 7th, and 12th day.
-The episodic and multi-episodic quality judgment were both taken on a 7-point \ac{CCR} scale\footnote{The 7-point scale is, in fact, not an \ac{ACR} scale as also options between \emph{two} categories can be selected. However, this scale is expected to map the same answer space. For a conversation between discrete 5-point scale and 7-point continuous scale see \cite{koster_comparison_2015}.} \citep[\cf,][p. 19]{itu-t_p.851:_2003} (\cf, \autoref{img:chap05:quality-scale}).
+After finishing a call each participant rated the perceived quality of this usage episode (\emph{episodic quality}).
+After the last call on the 2nd, 7th, and 12th day the perceived quality of all experienced usage episodes \emph{so far} is assessed (\emph{multi-episodic judgment}).
+The episodic and multi-episodic judgment were both taken on a 7-point \ac{CCR} scale\footnote{The 7-point scale is, in fact, not an \ac{ACR} scale as also options between \emph{two} categories can be selected. However, this scale is expected to map the same answer space. For a conversation between discrete 5-point scale and 7-point continuous scale see \cite{koster_comparison_2015}.} \citep[\cf,][p. 19]{itu-t_p.851:_2003} (\cf, \autoref{img:chap05:quality-scale}).
 
 \begin{figure}[h]
 	\includegraphics[width=1\textwidth]{figure/quality7pt_scale}
@@ -182,7 +182,8 @@ In this experiment performance was varied limiting the maximum transmission band
 This avoids impact of varying performance in a usage episode as the influence on episodic judgments of in-episodic macroscopic performance fluctuations is not yet fully understood and occurrence might also affect multi-episodic perceived quality.
 Three performance levels were applied: \unit[500]{kbit/s} (\ac{HP}), \unit[150]{kbit/s} (\ac{MP}), \unit[32]{kbit/s} (\ac{LP}).\footnote{A detailed description about the \emph{precise} technical parameters (\eg, codecs, bandwidth distribution, resolution) resulting from the bandwidth limitations was not published by \citet{moller_single-call_2011} limiting the reproducibility.}
 Performance of the service was varied on a per day basis, \ie, all usage episode of a day were presented with the same performance.
-\citet{moller_single-call_2011} tested five conditions (\cf, \autoref{tab:chap05:conditions}) with one or two performance levels.
+\citet{moller_single-call_2011} tested five conditions (\cf, \autoref{tab:chap05:conditions}) presenting usage episodes in one or two performance levels.
+Here condition represents the presentation including order of usage episodes with defined performance levels.
 The five conditions are shown in \autoref{tab:chap05:conditions}.
 It must be noted that condition 5 differs as only \ac{MP} and \ac{LP} are applied and thus \ac{MP} represents the \emph{best performance}.
 Depending on the prior experiences of participants this might affect quality judgments as \ac{LP} can only be compared to \ac{MP}.
@@ -194,7 +195,7 @@ A detailed explanation is given in the following chapter.
 \begin{table}[h]
 	\centering
 	\begin{tabular}{c||c|c|c|c|c|c|c}
-	Condition & \multicolumn{7}{c}{Performance Level} \\
+	Condition & \multicolumn{7}{c}{Performance Level (per day)} \\
 		& 1..2 		& 3 & 4 & 5..8 & 9 & 10 & 11..12  \\
 	\midrule
 	1 & \ac{HP} & \ac{HP} & \ac{HP} & \ac{HP} & \ac{HP} & \ac{HP} & \ac{HP} \\
@@ -222,7 +223,7 @@ Two participants were removed from further data analysis as the required bandwid
 This left 10 participants for each condition 2..5 and 16 participants for condition 1.
 In the following first episodic judgments and then the multi-episodic judgments are analyzed using the data of \citet{moller_single-call_2011}.
 Results are reported as \ac{MOS} ranging from 0 to 6.
-\autoref{img:state:MOLLERboxplot} shows the boxplot episodic judgments of condition 2 and \autoref{tab:state:MOLLERepisodic}.
+\autoref{img:state:MOLLERboxplot} shows the box plot episodic judgments of condition 4 and \autoref{tab:state:MOLLERepisodic}.
 
 \begin{figure}
 	\centering
