@@ -39,6 +39,7 @@
 % Note: Make all your adjustments in here
 %*******************************************************
 \input{support/classicthesis-config}
+\DeclareUnicodeCharacter{00A0}{ } %Unbreakable spaces
 
 %********************************************************************
 % Bibliographies
@@ -103,6 +104,7 @@
 \cleardoublepage
 \def\thechapter{\Roman{chapter}}\setcounter{chapter}{0}
 %\pagenumbering{Roman}\setcounter{page}{1}
+\addtocontents{toc}{\protect\newpage}
 \part*{Appendix}\cleardoublepage\label{chap:appendix}
 \include{appendix}
 

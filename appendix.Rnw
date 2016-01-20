@@ -58,7 +58,7 @@ In experiment \EIIb{} the \ac{VoD} service was presented on the display Nexus~7 
 This \unit[7]{inch} display of this device was set to maximum brightness without applying any device related color adaption.
 
 In those three experiments non-degraded recordings of two-party conversations of experiment \E1{} were selected.
-Those recordings were processed with the ITU-T STL2009 tools \cite{itu-t_g.191_2010} for coding with G.722 and with SOX for coding with LPC-10.
+Those recordings were processed with the ITU-T STL2009 tools \citep{itu-t_g.191_2010} for coding with G.722 and with SOX for coding with LPC-10.
 For experiment \EIIb{} the videos material was cut with \emph{Adobe Premiere 6} and exported with H.264 (\unit[1280x800]{px}, \unit[10]{Mbit/s}, two-pass coding) and \ac{AAC} (stereo, \unit[448]{kbit/s}).
 Afterwards it was processed with \emph{FFPMEG} to re-encode with desired \ac{QP} factor while leaving audio unchanged.
 
@@ -71,7 +71,7 @@ For recording and audio reproduction participants were provided a \emph{Logitech
 For conducting experiment \E4{} a public reachable \ac{VoIP} telephony service was setup.
 The service needed to be able to allow parallel two-party speech conversations and be able to insert packet-loss for individual conversations.
 For this service one server was installed in the data center of the \emph{TU Berlin} reachable by a public IPv4 address.
-As operating system \emph{FreeBSD 9.0} was selected, because it provides a built-in firewall with integrated traffic shaper called \emph{Dummynet}~\cite{rizzo_dummynet}.
+As operating system \emph{FreeBSD 9.0} was selected, because it provides a built-in firewall with integrated traffic shaper called \emph{Dummynet}~\citep{rizzo_dummynet_1997}.
 This traffic shaper allows allows to add network impairments like packet-loss, delay, and jitter per individual connection, \ie, protocol, port, source address, destination address and if a packet is incoming or outgoing.
 On this server the \ac{PBX} software \emph{Asterisk 10} was installed, which was configured to act as a \ac{SIP} registrar as well as \ac{RTP}-Proxy for the \ac{UDP}-based media streams.
 On call initiation of a client Asterisk informed Dummynet about the desired packet-loss rate for the media streams of this call.

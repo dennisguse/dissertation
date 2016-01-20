@@ -7,9 +7,7 @@ source('R_plot.R')
 timeseries=timeseries[-which(timeseries$experiment == "E1" & timeseries$condition == "5a")]
 @
 
-%\addtocontents{toc}{\protect\newpage}
 \chapter{Multi-episodic Perceived Quality in One Session}\label{chap:lab}
-
 For the evaluation of the hypotheses with regard to multi-episodic perceived quality for sequential use in one session four experiments were conducted.
 These experiments follow the same procedure, but differ in usage situation, task and, respectively, service type.
 An overview on the four experiment is given in \autoref{tab:lab:experiments} including the investigated hypotheses per experiment.
@@ -69,9 +67,9 @@ In addition, differences between usage situation and service type can be investi
  \hline
  \C1{}         & HP 	& \textbf{LP}& HP          & HP          & - \\
  \hline
- \CIIa{}        & HP 	& HP          & \textbf{LP} & HP          & - \\
+ \CIIa{}       & HP 	& HP          & \textbf{LP} & HP          & - \\
  \hline
- \CIIb{}        & HP 	& HP          & \textbf{LP}, long & HP    & - \\
+ \CIIb{}       & HP 	& HP          & \textbf{LP}, long & HP    & - \\
  \hline
  \C3{}         & HP 	& HP          & HP          & \textbf{LP} & - \\
  \hline
@@ -342,7 +340,7 @@ Non-parametric statistical methods are applied as the assumptions of parametric 
 \subsection{Episodic Judgments} 
 The episodic judgments of all conditions are compared to investigate for an influence of the applied between-subject design.
 In prior work a negative influence on the episodic judgment of \ac{HP} episodes is observed, when those directly follow \ac{LP} episode(s) \citep{moller_single-call_2011, guse_macro-temporal_2013}.
-Such an effect could not be observed in any of the four experiments.
+Such an effect could not be observed in the four experiments.
 
 \autoref{tab:lab:episodicMOS} shows \ac{MOS} of episodic judgments for all four experiments by performance level and service.
 %NOPE As such an effect cannot be ruled out, only episodic \ac{QoE} judgments of usage episodes 1-3 are compared, because non-\ac{HP} episodes are only presented for 4th to 6th episode.
@@ -352,10 +350,10 @@ Such an effect could not be observed in any of the four experiments.
 	\begin{tabulary}{\textwidth}{c|C|c|c|c}
 	\multirow{2}{*}{Experiment}	& \multirow{2}{*}{Service} & \multicolumn{3}{c}{Performance Level} \\
 						& & \ac{HP}																	& \ac{MP}	& \ac{LP}\\
-	\hline
+	\midrule
 	\E1{}				& Telephony (Conversation)	& \Sexpr{mos_qu_with_sd_by_condition("E1", "HP")} 	& \Sexpr{mos_qu_with_sd_by_condition("E1", "MP")}	& \Sexpr{mos_qu_with_sd_by_condition("E1", "LP")} \\
 	\hline
-	\EIIa{}			& Telephony (Listening) 		& \Sexpr{mos_qu_with_sd_by_condition("E2a", "HP")}	& - 																					& \Sexpr{mos_qu_with_sd_by_condition("E2a", "LP")} \\
+	\EIIa{}			& Telephony (Listening) 		& \Sexpr{mos_qu_with_sd_by_condition("E2a", "HP")}	& - 																				& \Sexpr{mos_qu_with_sd_by_condition("E2a", "LP")} \\
 	\hline
 	\multirow{2}{*}{\EIIb{}}	& Telephony (Listening)	& \Sexpr{mos_qu_with_sd_by_condition("E2b", "HP", c("5a0", "5a4"), c(1:6), "telephony")} 	& - 							& \Sexpr{mos_qu_with_sd_by_condition("E2b", "LP", c("5a", "5a0", "5a4"), c(1:6), "telephony")} \\
 	& \ac{VoD}															& \Sexpr{mos_qu_with_sd_by_condition("E2b", "HP", c("5a0", "5a4"), c(1:6), "VoD")} 	& - 														& \Sexpr{mos_qu_with_sd_by_condition("E2b", "LP", c("5a4"), c(1:6), "VoD")} \\
@@ -412,47 +410,58 @@ This indicates that the usage situation only seems to affect the quality formati
 This might be due to reduced intelligibility and thus higher effort, but also due to social behavior, \ie, need to repeat information.
 However, the effect is rather small and it can thus be concluded that the performance levels are perceived quite similar between the two usage situations.
 
-%\subsection{Impact of \acs{LP} episodes on the following \acs{HP} episode} 
-%TODO?
+%\subsection{Impact of \acs{LP} episodes on the following \acs{HP} episode} %TODO?
 %%Order effect (Moeller): HP following LP
 %%Increase (Moeller): 1 vs last
 
 \subsection{Multi-episodic Judgments}
 In the following the results for multi-episodic judgments are evaluated.
-First consistency between conditions is analyzed with regard to the multi-episodic judgment after the 3rd episode.
-Then the results are evaluated in detail with regard to the hypotheses under investigation.
+First, the consistency between conditions is analyzed with regard to the multi-episodic judgment after the 3rd episode.
+Then the hypotheses on multi-episodic perceived quality evaluated.
 
-\subsubsection{Consistency}
-In all four experiments the first three episodes are presented for all conditions in \ac{HP}.
-Thus the multi-episodic judgments after this episode should not yield differences between the conditions of each experiment.
+\subsubsection{Consistency and Effect}
+In all four experiments the first three episodes of a service were presented in \ac{HP}.
+Thus the multi-episodic judgments after this episode per experiment should not differ between conditions.
 
-For the multi-episodic judgment after the 3rd episode no significant differences between conditions are neither observed in experiment \E1{} (\Sexpr{kruskal(IQU~condition, "E1", "HP", unique(timeseries[["condition"]]), c(3))}), experiment \EIIa{} (\Sexpr{kruskal(IQU~condition, "E2a", "HP", unique(timeseries[["condition"]]), c(3))}), nor experiment \E3{}  (\Sexpr{wilcox(IQU~condition, "E3", "HP", unique(timeseries[["condition"]]), c(3))}).
-For experiment \EIIb{} neither the multi-episodic judgments of the telephony service (\Sexpr{kruskal(IQU~condition, "E2b", "HP", c("5a", "5a0", "5a4"), c(3), "telephony")} nor the \ac{VoD} service (\Sexpr{wilcox(IQU~condition, "E2b", "HP", c("5a0", "5a4"), c(3), "VoD")}) are significantly different between the conditions.
+For this judgment no significant differences are observed for \E1{} (\Sexpr{kruskal(IQU~condition, "E1", "HP", unique(timeseries[["condition"]]), c(3))}), \EIIa{} (\Sexpr{kruskal(IQU~condition, "E2a", "HP", unique(timeseries[["condition"]]), c(3))}), and \E3{}  (\Sexpr{wilcox(IQU~condition, "E3", "HP", unique(timeseries[["condition"]]), c(3))}).
+Also for \EIIb{} neither significant differences for the speech telephony service (\Sexpr{kruskal(IQU~condition, "E2b", "HP", c("5a", "5a0", "5a4"), c(3), "telephony")} nor the \ac{VoD} service (\Sexpr{wilcox(IQU~condition, "E2b", "HP", c("5a0", "5a4"), c(3), "VoD")}) are observed.
+This indicates that, as long as only \ac{HP} episodes are presented, the between-subject design did not affect this multi-episodic judgment.
 
-This indicates that, as long as only \ac{HP} episodes are presented, the between-subject design does not affect this multi-episodic judgments.
-
-%TODO Effect per condition? Appendix
+\begin{table}
+	\centering
+	\begin{tabulary}{\textwidth}{C|C|C|C|C|C}
+	Experiment & \E1{} & \EIIa{} &\EIIb{} (telephony) & \EIIb{}	(\ac{VoD})	& \E3{} \\
+	\midrule
+	Multi-episodic Judgment & \Sexpr{mos_iqu_with_sd_by_condition("E1", condition, 3)} & \Sexpr{mos_iqu_with_sd_by_condition("E2a", condition, 3)} & \Sexpr{mos_iqu_with_sd_by_condition("E2b", condition, 3, "telephony")}& \Sexpr{mos_iqu_with_sd_by_condition("E2b", condition, 3, "VoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E3", condition, 3)} \\
+	\end{tabulary}
+	\caption{}
+	\label{}
+\end{table}
 
 \subsubsection{\autoref{hypo:number}: Number of \ac{LP} Episodes}
 In \autoref{hypo:number} it is assumed that increasing the number of \ac{LP} episodes before a multi-episodic judgment results in a decrease of this judgment.
-This hypothesis can be evaluated by comparing the results multi-episodic judgments after the 6th episode between condition \C3{}, \C5{}, and \C6{}, which present one to three \ac{LP} episodes directly before the multi-episodic judgment (\cf, \autoref{tab:lab:hypothesesComparison}).
-Conditions \CIIa{} and \C4{} present one, respectively, two LP episodes followed by one HP episode before the multi-episodic judgment.
+This hypothesis can be evaluated by comparing the multi-episodic judgments after the 6th episode of \C3{}, \C5{}, and \C6{} as well as \CIIa{} and \C4{}.
+\C3{}, \C5{}, and \C6{} present one to three \ac{LP} episodes directly before this multi-episodic judgment while \CIIa{} and \C4{} present one and two \ac{LP} episode followed by one \ac{HP} episode.
 
-\autoref{tab:lab:hyponumber} shows the multi-episodic judgment after the 6th episode for these five conditions evaluated in experiment \E1{} and experiment \EIIa{}.
-Conditions \C3{}, \CVa{}, \CVb{}, and \C6{} are significant different for experiment \E1{} (\Sexpr{kruskal(IQU~condition, "E1", unique(timeseries[["performance_level"]]), c("3", "5b", "6"), c(6))}) and experiment \EIIa{} (\Sexpr{kruskal(IQU~condition, "E2a", unique(timeseries[["performance_level"]]), c("3", "5a", "6"), c(6))}).
-A post-hoc tests for experiment \E1{} shows that \C3{} and \CVb{} are significant different (\Sexpr{wilcox.pairwise.print(IQU~condition, "E1", unique(timeseries[["performance_level"]]), c("3", "5b", "6"), c("6"))[1,1]}) as well as \C3{} and \C6{} (\Sexpr{wilcox.pairwise.print(IQU~condition, "E1", unique(timeseries[["performance_level"]]), c("3", "5b", "6"), c("6"))[2,1]}), but \CVb{} and \C6{} are not significant different (\Sexpr{wilcox.pairwise.print(IQU~condition, "E1", unique(timeseries[["performance_level"]]), c("3", "5b", "6"), c("6"))[2,2]}).
-A post-hoc tests for experiment \EIIa{} shows that \C3{} and \CVa{} are significant different (\Sexpr{wilcox.pairwise.print(IQU~condition, "E2a", unique(timeseries[["performance_level"]]), c("3", "5a", "6"), c("6"))[1,1]}) as well as \C3{} and \C6{} (\Sexpr{wilcox.pairwise.print(IQU~condition, "E2a", unique(timeseries[["performance_level"]]), c("3", "5a", "6"), c("6"))[2,1]}), but \CVa{} and \C6{} are not significant different (\Sexpr{wilcox.pairwise.print(IQU~condition, "E2a", unique(timeseries[["performance_level"]]), c("3", "5a", "6"), c("6"))[2,2]}).
+\autoref{tab:lab:hyponumber} shows the multi-episodic judgment after the 6th episode for these five conditions evaluated in \E1{} and \EIIa{}.
+For \E1{} \C3{}, \CVb{}, and \C6{} are significant different (\Sexpr{kruskal(IQU~condition, "E1", unique(timeseries[["performance_level"]]), c("3", "5b", "6"), c(6))}).
+A post-hoc test finds that \C3{} and \CVb{} (\Sexpr{wilcox.pairwise.print(IQU~condition, "E1", unique(timeseries[["performance_level"]]), c("3", "5b", "6"), c("6"))[1,1]}) as well as \C3{} and \C6{} are significant different (\Sexpr{wilcox.pairwise.print(IQU~condition, "E1", unique(timeseries[["performance_level"]]), c("3", "5b", "6"), c("6"))[2,1]}), but not \CVb{} and \C6{} (\Sexpr{wilcox.pairwise.print(IQU~condition, "E1", unique(timeseries[["performance_level"]]), c("3", "5b", "6"), c("6"))[2,2]}).
+For \E1{} \CIIa{} and \C4{} are significant different (\Sexpr{wilcox(IQU~condition, "E1", unique(timeseries[["performance_level"]]), c("2a", "4"), c("6"), alternative="greater")}).
 
-The conditions \CIIa{} and \C4{} are significant different in experiment \E1{} (\Sexpr{wilcox(IQU~condition, "E1", unique(timeseries[["performance_level"]]), c("2a", "4"), c("6"), alternative="greater")}) and experiment \EIIa{} (\Sexpr{wilcox(IQU~condition, "E2a", unique(timeseries[["performance_level"]]), c("2a", "4"), c("6"), alternative="greater")}).
+For \EIIa{} \C3{}, \CVb{}, and \C6{} are also significant different (\Sexpr{kruskal(IQU~condition, "E2a", unique(timeseries[["performance_level"]]), c("3", "5a", "6"), c(6))}).
+A post-hoc test shows that \C3{} and \CVa{} (\Sexpr{wilcox.pairwise.print(IQU~condition, "E2a", unique(timeseries[["performance_level"]]), c("3", "5a", "6"), c("6"))[1,1]}) as well as \C3{} and \C6{} (\Sexpr{wilcox.pairwise.print(IQU~condition, "E2a", unique(timeseries[["performance_level"]]), c("3", "5a", "6"), c("6"))[2,1]}) are significant different, but not \CVa{} and \C6{} (\Sexpr{wilcox.pairwise.print(IQU~condition, "E2a", unique(timeseries[["performance_level"]]), c("3", "5a", "6"), c("6"))[2,2]}).
+Also \CIIa{} and \C4{} are significant different for \EIIa{} (\Sexpr{wilcox(IQU~condition, "E2a", unique(timeseries[["performance_level"]]), c("2a", "4"), c("6"), alternative="greater")}).
 
 \begin{table}[h!]
-\centering
- \begin{tabulary}{\columnwidth}{c|c|C|C}
-	Condition   & LP episode(s) 	& \E1{} 		& \EIIa{} \\
+	\centering
+	\begin{tabulary}{\textwidth}{c|c|C|C}
+	Condition   & \ac{LP} episode(s) 	& \E1{} 		& \EIIa{} \\
 	\midrule
+	-					&	-				&	\Sexpr{mos_iqu_with_sd_by_condition("E1", condition, 3)} & \Sexpr{mos_iqu_with_sd_by_condition("E2a", condition, 3)} \\
+	\hline
 	\C3{}			& 6				& \Sexpr{mos_iqu_with_sd_by_condition("E1", "3", 6)} 			& \Sexpr{mos_iqu_with_sd_by_condition("E2a", "3", 6)} \\
 	\hline
-	\CVa{} and \CVb{}	& 5..6			& \Sexpr{mos_iqu_with_sd_by_condition("E1", "5b", 6)}	& \Sexpr{mos_iqu_with_sd_by_condition("E2a", "5a", 6)} \\
+	\C5{} (a+b)	& 5..6			& \Sexpr{mos_iqu_with_sd_by_condition("E1", "5b", 6)}	& \Sexpr{mos_iqu_with_sd_by_condition("E2a", "5a", 6)} \\
 	\hline
 	\C6{}			& 4..6			& \Sexpr{mos_iqu_with_sd_by_condition("E1", "6", 6)} 			& \Sexpr{mos_iqu_with_sd_by_condition("E2a", "6", 6)} \\
 	\hline
@@ -460,10 +469,13 @@ The conditions \CIIa{} and \C4{} are significant different in experiment \E1{} (
 	\CIIa{}		& 5				& \Sexpr{mos_iqu_with_sd_by_condition("E1", "2a", 6)} 		& \Sexpr{mos_iqu_with_sd_by_condition("E2a", "2a", 6)} \\
 	\hline
 	\C4{}			& 4..5			& \Sexpr{mos_iqu_with_sd_by_condition("E1", "4", 6)} 			& \Sexpr{mos_iqu_with_sd_by_condition("E2a", "4", 6)} \\
- \end{tabulary}
- \caption{\autoref{hypo:number}: \ac{MOS} of multi-episodic judgments after the 6th episode for experiment \E1{} and \EIIa{}.}
+	\end{tabulary}
+	\caption{\autoref{hypo:number}: Multi-episodic judgments for \E1{} and \EIIa{}.}
 	\label{tab:lab:hyponumber}
 \end{table}
+
+With regard to the number of \ac{LP} episodes before a multi-episodic judgment, both experiments find similar effects.
+Increasing the number 
 
 %TODO Saturation!
 
@@ -476,7 +488,7 @@ Conditions \C4{} and \C5{} (a+b) present two consecutive \ac{LP} episodes with o
 \begin{table}[h!]
 \centering
  \begin{tabulary}{\columnwidth}{c|c|C|C}
-	Condition   & LP episode(s) 	& \E1{} & \EIIa{} \\
+	Condition   & \ac{LP} episode(s) 	& \E1{} & \EIIa{} \\
 	\midrule
 	\C1{}			& 4				& \Sexpr{mos_iqu_with_sd_by_condition("E1", "1", 6)} 		& \Sexpr{mos_iqu_with_sd_by_condition("E2a", "1", 6)} \\
 	\hline
