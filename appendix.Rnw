@@ -1,26 +1,23 @@
-\def\thechapter{\Roman{chapter}}
-\chapter{Appendix}\label{appendix:setups}
-
-\section{Experimental Setups}
+\chapter{Experimental Setups}
 The systems that were used in the conducted experiments are described focusing on the media processing and reproduction details.
-It must be noted that the systems for experiments \E1, \E2a, \E2b, and \E3 were designed especially for use in a controlled laboratory setting and thus precise reproduction of desired system performance was focused.
-The systems designed for experiments \E4, \E5, and \E6 were designed for use in field experiments and thus requiring ease-of-setup, needed rather to be reliable and robust than absolutely precise in system performance.
+It must be noted that the systems for experiments \E1{}, \EIIa{}, \EIIb{}, and \E3{} were designed especially for use in a controlled laboratory setting and thus precise reproduction of desired system performance was focused.
+The systems designed for experiments \E4{}, \E5{}, and \E6{} were designed for use in field experiments and thus requiring ease-of-setup, needed rather to be reliable and robust than absolutely precise in system performance.
 
-\subsection{Experiment \E1}
-For experiment \E1 two systems were required, one \ac{LOT} conducted as training for the presentation of telephony related degradations and their effect on speech, and a two-party speech telephony systems.
+\section{Experiment \E1{}}
+For experiment \E1{} two systems were required, one \ac{LOT} conducted as training for the presentation of telephony related degradations and their effect on speech, and a two-party speech telephony systems.
 
-\paragraph*{Listening-only Training}
-For the listening-only training conducted in experiment \E1 was conducted with a tablet computer (\emph{Fujitsu~Stylistic~ST6012}).
+\subsection{Listening-only Training}
+For the listening-only training conducted in experiment \E1{} was conducted with a tablet computer (\emph{Fujitsu~Stylistic~ST6012}).
 For binaural representation a pair of \emph{AKG~K-271} was connected to the internal sound card of the tablet computer.
 The system was calibrated using a \emph{HEAD acoustics} head and torso simulator \emph{HSM~II.3} to a sound pressure level of \unit[75]{dB20$\mu$Pa} for babble noise.
 
-For the generation of stimuli the ITU-T STL2009 tools \cite{itu-t_g.191_2010} and the audio-processing tool \emph{SOX} were used.
+For the generation of stimuli the ITU-T~STL2009 tools \cite{itu-t_g.191_2010} and the audio-processing tool \emph{SOX} were used.
 The STL2009 were used for coding G.711, G.722 and inserting packet-loss for G.722, whereas SOX was used for coding GSM-FR, and LPC-10 as well as filtering wideband, narrowband, and white noise.
 
-\paragraph*{Two-party Speech telephony}
-For the multi-episodic assessment of experiment \E1 a speech telephony speech telephony system for two-party conversations was required.
+\subsection{Two-party Speech telephony}
+For the multi-episodic assessment of experiment \E1{} a speech telephony speech telephony system for two-party conversations was required.
 
-\subparagraph*{Network-based Setup}
+\paragraph*{Network-based Setup}
 In the first part of the experiment a \ac{VoIP}-based system consisting of three computers was used.
 Those three computers were connected via Ethernet (CAT-5). 
 One computer (\emph{Lenovo X61}) acted as a Server running the open-source \ac{PBX} \emph{Asterisk 11}\footnote{\url{http://www.asterisk.org}}.
@@ -35,7 +32,7 @@ This system achieved a one-way end-to-end delay of \unit[120]{ms}.
 On each of the two client computers one \emph{Beyerdynamic~DT~790~Pro} headset connected to a \emph{Edirol~UA-25EX} was used for recording and binaural reproduction.
 The output on both systems was calibrated to a comfortable listening level.
 
-\subparagraph*{Sound card Setup}
+\paragraph*{Sound card Setup}
 In the second this system was replaced by a more elaborate system, which provides easier setup that less complex to verify.
 For this system only one computer without an actual network is used.
 Rather than transmitting the signals digital via Ethernet, an analogue transmission via audio cables is used.
@@ -48,30 +45,30 @@ As no speech codecs were not available in PureData, PureData was extended with t
 It was verified that the PureData setup provides similar characteristics as the Network-based setup.
 The overall system achieved a constant, glitch-free one-way end-to-end delay of \unit[70]{ms}.
 
-\subparagraph*{Additional Processing}
+\paragraph*{Additional Processing}
 Due to the performance of the \emph{Beyerdynamic~DT~790~Pro} headsets, which provide a pair of closed headphones as well as a directional microphone, neither echo cancellation nor denoising algorithms were applied.
 Both systems were configured to provide neither side tone nor comfort noise, if not introduced by the codec.
 No additional audio processing was applied.
 
-\subsection{Experiments \E2a, \E2b, and \E3}
-For the experiments \E2a, \E2b, and \E3 audio signals were presented with a pair of \emph{Sennheiser HD 25-1}.
-For experiment \E2a, and \E3 those were connected to the internal sound card of a \emph{Microsoft Surface Pro} tablet computer whereas for experiment \E2b those were connected to the internal sound card of the used \emph{Nexus 7 (2013)}.
-In all three experiments the sound pressure level was calibrated to \unit[75]{dB20$\mu$Pa} using the \emph{HSM II.3} with babble noise and the experiments conducted in a sound-proof cabin following ITU-T~P.800~\citep{itu-t_p.800:_1996}.
-In experiment \E2b the \ac{VoD} service was presented on the display Nexus~7 (2013) showing videos horizontal in full screen.
+\subsection{Experiments \EIIa{}, \EIIb{}, and \E3{}}
+For the experiments \EIIa{}, \EIIb{}, and \E3{} audio signals were presented with a pair of \emph{Sennheiser HD 25-1}.
+For experiment \EIIa{}, and \E3{} those were connected to the internal sound card of a \emph{Microsoft Surface Pro} tablet computer whereas for experiment \EIIb{} those were connected to the internal sound card of the used \emph{Nexus 7 (2013)}.
+In all three experiments the sound pressure level was calibrated to \unit[75]{dB20$\mu$Pa} using the \emph{HSM II.3} with babble noise and the experiments conducted in a sound-proof cabin following ITU-T~P.800 \citep{itu-t_p.800:_1996}.
+In experiment \EIIb{} the \ac{VoD} service was presented on the display Nexus~7 (2013) showing videos horizontal in full screen.
 This \unit[7]{inch} display of this device was set to maximum brightness without applying any device related color adaption.
 
-In those three experiments non-degraded recordings of two-party conversations of experiment \E1 were selected.
+In those three experiments non-degraded recordings of two-party conversations of experiment \E1{} were selected.
 Those recordings were processed with the ITU-T STL2009 tools \cite{itu-t_g.191_2010} for coding with G.722 and with SOX for coding with LPC-10.
-For experiment \E2b the videos material was cut with \emph{Adobe Premiere 6} and exported with H.264 (\unit[1280x800]{px}, \unit[10]{Mbit/s}, two-pass coding) and \ac{AAC} (stereo, \unit[448]{kbit/s}).
+For experiment \EIIb{} the videos material was cut with \emph{Adobe Premiere 6} and exported with H.264 (\unit[1280x800]{px}, \unit[10]{Mbit/s}, two-pass coding) and \ac{AAC} (stereo, \unit[448]{kbit/s}).
 Afterwards it was processed with \emph{FFPMEG} to re-encode with desired \ac{QP} factor while leaving audio unchanged.
 
-\subsection{Experiment \E4}
-Experiment \E4 was the first conducted experiment as a field experiment with a usage period of multiple days.
-For this experiment \E4 a speech telephony service and a \ac{VoD} service were implemented that could be used by participants with their own personal computer while using their Internet access.
+\section{Experiment \E4{}}
+Experiment \E4{} was the first conducted experiment as a field experiment with a usage period of multiple days.
+For this experiment \E4{} a speech telephony service and a \ac{VoD} service were implemented that could be used by participants with their own personal computer while using their Internet access.
 For recording and audio reproduction participants were provided a \emph{Logitech P120} headset.
 
-\paragraph*{Speech Telephony Service}
-For conducting experiment \E4 a public reachable \ac{VoIP} telephony service was setup.
+\subsection{Speech Telephony Service}
+For conducting experiment \E4{} a public reachable \ac{VoIP} telephony service was setup.
 The service needed to be able to allow parallel two-party speech conversations and be able to insert packet-loss for individual conversations.
 For this service one server was installed in the data center of the \emph{TU Berlin} reachable by a public IPv4 address.
 As operating system \emph{FreeBSD 9.0} was selected, because it provides a built-in firewall with integrated traffic shaper called \emph{Dummynet}~\cite{rizzo_dummynet}.
@@ -88,7 +85,7 @@ The performance of this connection could neither be estimated nor enforced, but 
 However, for the media streams no counter measures were taken against packet-loss as the used speech codec G.722 (\unit[64]{kbit/s}) was used with neither \ac{PLC} nor \ac{FEC} on \ac{UDP} connections without retransmission.
 Second, packet-loss was added by Dummynet in addition to packet-loss occurring due to connection issues resulting in potentially higher loss than desired.
 
-\paragraph*{\ac{VoD}}
+\subsection{\ac{VoD}}
 For the \ac{VoD} service an actual service was simulated offline rather than providing it as an online service.
 Here a video player was implemented with \emph{Microsoft Silverlight} that replicated a video streaming website including login procedure and initial buffering, which could only be executed in a web browser.
 This video player was bundled together with the preprocessed videos on a \ac{USB} flash drive.
@@ -97,16 +94,16 @@ Storing the content locally rather downloading it, if needed, avoided the setup 
 
 In difference to the speech telephony service, this system achieved the desired performance levels in a reliable manner.
 
-\subsection{Experiment \E5}
-Based upon the reliability of the simulation of a \ac{VoD} service for experiment \E4, an \ac{AoD} service and \ac{VoD} service were used in experiment \E5, but simulating both services.
+\section{Experiment \E5{}}
+Based upon the reliability of the simulation of a \ac{VoD} service for experiment \E4{}, an \ac{AoD} service and \ac{VoD} service were used in experiment \E5{}, but simulating both services.
 For this experiment ten \emph{Samsung Galaxy SII (GT-I9210)} mobile phones running \emph{Android 2.3} were available.
 This mobile phone has \unit[4.5]{inch} display with a resolution of \unit[480x800]{px}.
-A native Android application was implemented with the same functionality as the implementation used in experiment \E4, \ie, storing media content locally while providing login functionality and initial buffering.
+A native Android application was implemented with the same functionality as the implementation used in experiment \E4{}, \ie, storing media content locally while providing login functionality and initial buffering.
 For media playback the \ac{VoD} service presented the video horizontally in full screen while the \ac{AoD} presented an equalizer.
 In addition to the mobile phone each participant received a pair of \emph{Shure 240} headphones.
 
-\subsection{Experiment \E6}
-For experiment \E6 only an \ac{AoD} service was used.
+\section{Experiment \E6{}}
+For experiment \E6{} only an \ac{AoD} service was used.
 For this experiment it chosen not to provide any equipment for participants, but rather let participants use their own equipment.
 Rather than installing a software on the participant's computer, the \ac{AoD} service was implemented as a website available online.
 This website used HTML5 multi-media features to download and playback the audio content.

@@ -190,86 +190,81 @@ Here a \emph{Nexus 7 (2013)} is used which provides a 7~inch screen with a resol
 For \ac{HP} video content is downscaled to a resolution of $1280×800$ in H.264 with 25~\ac{FPS} and audio mixed to two channels encoded with \ac{AAC} with \unit[48]{kHz}.
 For \ac{LP} the video signal is further degraded by setting the \ac{QP} factor to 50.
 Setting a higher \ac{QP} increases the blockiness of a frame as less information is encoded.
-In difference to limiting the encoding bandwidth, \ac{QP} results in a near constant degradation over multiple frames. 
+In difference to limiting the encoding bandwidth, this leads to near constant degradation over multiple frames. 
 Degrading the video channel of the \ac{VoD} service only is chosen over degrading the audio or both modalities as then both services present present degradations in different modalities.
 Thus a direct comparison of the presented degradations between the two services is not possible.
 In fact,the audio modality of the \ac{VoD} service might still be used for comparison while evaluating the perceived quality of the telephony service.
 
-In all experiments a binaural representation is provided using a pair of headphones and, if needed, audio capturing using a headset.
-The experimental setups are described in \appendix{} in \autoref{appendix:setups}.
+In all experiments a binaural representation is provided using a pair of headphones and in \E1{} a headset was used.
+The experimental setups are described in detail in the \appendix{} (\autoref{appendix:setups}).
 
 \subsection{Procedure}\label{sec:training}
-The four experiments consists of 5 stages with an overall duration of from \unit[45...90]{min}.
-In the \emph{first stage} a participant was informed about this experiment, his task(s), and the experimental procedure.
-In this stage also participant filled a questionnaire with demographic data and signed a consent form.
-%\E1{}: Telefonpartner bekannt
+The four experiments consists of 5 stages with an overall duration of \unit[45...90]{min}.
+In the \emph{first stage} a participant was informed about the experiment, the task(s), and the experimental procedure.
+In this stage participant filled a questionnaire with demographic data and signed a consent form.
 
 In the second stage participant were checked for hearing impairments using an audiometer for the frequency \unit[125]{Hz}, \unit[250]{Hz}, \unit[500]{Hz}, \unit[1]{kHz}, \unit[2]{kHz}, \unit[4]{kHz}, and \unit[8]{kHz} covering the spectrum for wideband.
 This procedure was conducted with an \emph{Ear 1.7} audiometer connected to a pair of \emph{Sennheiser HDA 200}.
-In \E3{} no audiometry was conducted.
+This stage was skipped in \E2b{} and \E3{}.
 
-In the \emph{third stage} participants conducted a training to present typical speech telephony degradations.
+In the \emph{third stage} typical speech telephony degradations were presented in a listening-only assessment.
 %Presenting a training showing a range of potential degradations is expect to reduce intra-personal variations.
-In all experiments participants rated 27 speech stimuli with a duration of circa \unit[8]{sec}.
+Here participants assessed the perceived quality of 27 speech stimuli with a duration of circa \unit[8]{sec}.
 In each stimuli one speaker presented two sentences.
-Three different speakers were used: two male and one female speaker.
-Those stimuli contained different signal bandwidths (wideband, narrowband), codecs (G.711, G.722, GSM-FR, LPC-10), white noise (fullband without codec), and random packet-loss with G.722 no \ac{PLC} (with 2\%, and 5\%).
-In \EIIb{} an additional training was included for the \ac{VoD} service.
+%Three different speakers were used: two male and one female speaker.
+Those stimuli contained different signal bandwidths (wideband, narrowband), codecs (G.711, G.722, GSM-FR, LPC-10), white noise (fullband without codec), and random packet-loss with G.722 without \ac{PLC} (2\%, and 5\%).
+In \EIIb{} also degradations for the \ac{VoD} service were presented.
 Here, 22 videos with an approximate duration of \unit[8]{sec} were used.
 As degradations only the \ac{QP} factor was varied (0, 42, 47, and 50) while audio was left unchanged.
-After the presentation of a stimulus the \emph{overall perceived quality} needed to be judged on the 7-point \ac{CCR} scale.\footnote{The question was phrased in German: "Wie bewerten Sie die Gesamtqualität der gehörten Audioaufnahme?" for speech-based training and "Wie bewerten Sie die Gesamtqualität des gerade gesehenen Videos?" in case of the video training.}
+After the presentation of a stimulus the \emph{overall perceived quality} needed to be judged on the 7-point \ac{CCR} scale. %\footnote{The question was phrased in German: "Wie bewerten Sie die Gesamtqualität der gehörten Audioaufnahme?" for speech telephony training and "Wie bewerten Sie die Gesamtqualität des gerade gesehenen Videos?" in case of the video training.}
 
 In the \emph{fourth stage} the multi-episodic part was conducted consisting of sequential use of said service(s).
-In all four experiments the participants judged directly after finishing an episode their episodic quality on the 7-point \ac{CCR} scale.
-In addition, could describe the experienced degradation in quantitative form.
-A multi-episodic judgment is taken after every three episodes on the 7-point \ac{CCR} scale.
+Directly after finishing an episode participants judged their episodic quality on the 7-point \ac{CCR} scale.
+In addition, a participant could describe the experienced degradation in quantitative form.
+The multi-episodic quality was assessed following the episodic judgment after every 3rd usage episode with each service.
 In this stage 6 to 12 episodes were presented.
 In \EIIa{}, \EIIb{}, and \E3{} pre-processed content was presented varying from \unit[2]{min} to \unit[3]{min} in duration.
-In \E1{} the duration was not controlled as the \acp{SCT} needed to be fulfilled in a two-party conversation resulting in varying duration.
+In \E1{} the duration was not controlled as the \acp{SCT} needed to be fulfilled in a two-party conversation, which leads varying duration.
 
 In the \emph{fifth stage} final feedback about the fourth stage is collected.
-In all experiments the underlying question of the \ac{NPS} is collected.
-The \ac{NPS} has been proposed as the one sufficient question indicating business success~\citep[\cf,][]{reichheld_one_2003}.
-This score assessed on 11-point discrete scale ranging from 0 to 10 and is phrased as "How likely is it that you would recommend our company/product/service to a friend or colleague?"~\citep[][p. 5]{reichheld_one_2003}.
-In this study it was rephrased to "On scale ranging from 0 (unlikely) to 10 (likely), how likely is it that you would recommend the service to a friend or colleague?"\footnote{The question was phrased in German: "Auf einer Skala von 0 (unwahrscheinlich) bis 10 (wahrscheinlich), wie wahrscheinlich ist es, dass Sie das System einem Freund oder Kollegen weiterempfehlen werden?".}.
+%In all experiments the underlying question of the \ac{NPS} is collected.
+%The \ac{NPS} has been proposed as the one sufficient question indicating business success~\citep[\cf,][]{reichheld_one_2003}.
+%This score assessed on 11-point discrete scale ranging from 0 to 10 and is phrased as "How likely is it that you would recommend our company/product/service to a friend or colleague?"~\citep[][p. 5]{reichheld_one_2003}.
+%In this study it was rephrased to "On scale ranging from 0 (unlikely) to 10 (likely), how likely is it that you would recommend the service to a friend or colleague?"\footnote{The question was phrased in German: "Auf einer Skala von 0 (unwahrscheinlich) bis 10 (wahrscheinlich), wie wahrscheinlich ist es, dass Sie das System einem Freund oder Kollegen weiterempfehlen werden?".}.
 In \E1{}, \EIIa{}, \EIIb{}, and \E3{} requested to answer the following questions, if degradations have been perceived.
 First the total count of degraded episodes needed to be answered, followed by request to denote the exact episodes with degradations.
-It was furthermore asked, if degradations were temporary in degraded episodes. 
-In \E3{} those three questions were asked separate for the speech service and \ac{VoD} service.
-Those questions can be used as integrity check for participants.
+It was furthermore asked, if macroscopic performance fluctuations occurred within individual episodes.
+In \EIIb{} those three questions were asked separate for the speech service and \ac{VoD} service.
+%Those questions can be used as integrity check for participants.
 %Telefonie (Papier; PEAK: digital);- Anzahl gestoerter Telefonate (Freitext vs. 0-9)
 %- Welche (Freitext vs. 0-9)?
 %- Dauer der Stoerung (Ja/Nein)
-
-In \E3{} different questions were asked in the fifth stage due to the focus on duration neglect.
-Here it was assessed in a quantitative form, if episodes were degraded and if so, which one.
-In addition, it was asked, if all episodes were similar in length, and how long one episode was.
+In \E3{} it was in addition assessed, if all episodes were similar in length and and how long one episode was.
 
 \subsection{Content}
-In experiment \E1{} six to nine \acp{SCT}, depending on the condition, were used as defined in \cite{itu-t_p.805:_2007}.
+In experiment \E1{} six to nine \acp{SCT}, depending on the condition, were used as defined in ITU-T~P.805 \citet{itu-t_p.805:_2007}.
 For all conditions in this experiment the presentation order of the \acp{SCT} was kept constant.
-In difference to \cite{itu-t_p.805:_2007} no \ac{SCT} needed to be solved beforehand, but participants were given a written and oral explanation using an exemplary \ac{SCT}.
-The actual order of the \acp{SCT} is given in \appendix \autoref{tab:appendix:labsct}.
+%In difference to \citet{itu-t_p.805:_2007} no \ac{SCT} needed to be solved beforehand, but participants were given a written and oral explanation using an exemplary \ac{SCT}.
 
-In \E1{} the two-party conversations were recorded before applying the performance level for each speaker channel individually with a sampling rate of \unit[16]{kHz}.
-One recording for each episode 1 to 6 of those that have been presented in \ac{HP} was selected for experiment \EIIa{} and \EIIb{}.
-The recordings common task solving behavior with several speaker changes and only with little double talk.
-Furthermore, no emotional reaction like laughing should be present and not contain any degradations due to other sound sources like breathing sounds, but only clear and clean speech.
-Male and female speakers were selected.
-The selected recordings had an average duration of \unit[153]{sec} ranging from \unit[128]{sec} to \unit[194]{sec}.
-The individual speech signals of each speaker were normalized, mixed into one channel and then encoded with G.722 or, respectively, LPC-10.
+In \E1{} the two-party conversations with a sampling rate of \unit[16]{kHz} before applying the performance level.
+For experiment \EIIa{} and \EIIb{} one recording for each of the episodes 1..6, which was presented in \ac{HP} was selected.
+Those contain little double talk and a common task solving behavior.
+%Furthermore, no emotional reaction like laughing should be present and not contain any degradations due to other sound sources like breathing sounds, but only clear and clean speech.
+%Male and female speakers were selected.
+The duration ranged from \unit[128]{sec} to \unit[194]{sec} ($\mu=$\unit[153]{sec}).
+The recordings were normalized per speaker, mixed into one channel and encoded with G.722 or, respectively, LPC-10.
 The six selected recordings were presented in \EIIa{} and \EIIb{} in the same order as in \E1{}.
 
-For the \ac{VoD} service that was to be simulated in \EIIb{}, scenes from one sitcom were taken.
+For the \ac{VoD} service in \EIIb{} parts of a sitcom were selected.
 Here scenes were taken from \emph{The Big Bang Theory} (Season One, BluRay Version, German).
-Those scenes were selected in a way that the duration of the two-party conversational recordings were closely matched.
-Furthermore, scenes needed to be itself meaningful as well as self-contained and are likely candidates for usage episode, \ie, such a scene would be watched out of context.
-The episodes had an average duration of \unit[166]{sec} ranging from \unit[134]{sec} to \unit[198]{sec}.
+Those scenes were selected, so the duration of the two-party conversational recordings were closely matched.
+Furthermore, scenes needed to be in itself meaningful, self-contained and likely candidates for usage episode, \ie, such a scene would be watched out of context.
+The episodes ranged from \unit[134]{sec} to \unit[198]{sec} ($\mu=$\unit[166]{sec})
 
 For the simulation of an \ac{AoD} service in experiment \E3{} an audio book was selected.
 Here Isabel Allende's \emph{"City of the Beats"}  was used, spoken by Marc Oliver Schulze a male German native speaker.\footnote{The audio book is sold as 24 CD collection: Isabel Allende: \emph{Die Stadt der wilden Götter / Im Reich des goldenen Drachen / Im Bann der Masken}, ISBN: 978-86717-191-5.}.
 Scenes were selected according to the same criteria applied for the video content used in \EIIb{}.
-The episodes had an average duration of \unit[184]{sec} ranging from \unit[174]{sec} to \unit[199]{sec}.
+The episodes ranged from \unit[174]{sec} to \unit[199]{sec} ($\mu=$\unit[184]{sec})
 
 %In all experiments the content is completely in German.
 %In case of the \ac{VoD} content the German-dubbed version was used.
@@ -277,7 +272,7 @@ The episodes had an average duration of \unit[184]{sec} ranging from \unit[174]{
 
 \section{Participants}
 All four experiments were conducted in Berlin, Germany.
-Participants were required to have no hearing impairments for all of the four experiments.
+Participants were required to have no hearing impairments.
 For participation in \EIIb{} normal vision was in addition mandatory.
 
 Experiment \E1{} was conducted  with \unit[59]{female} and \unit[40]{male} participants aging from 19 to \unit[53]{years} ($\mu=27.2$, $\sigma=6.5$). %TODO Ist falsch!
@@ -287,7 +282,7 @@ This experiment was conducted from August 2014 until March 2015.
 In experiment \E1{} participants received \unit[20]{EUR} as compensation and participation in experiments \EIIa{}, \EIIb{}, and \E3{} was compensated with \unit[10]{EUR}.
 
 In all experiments each participant was individually checked for inconsistent episodic judgments.
-A participant is considered inconsistent, if more than two episodic judgments are exceeding the 1.5 $\times$ \emph{interquartile range} of the performance levels of this condition. %TODO REF
+A participant is considered inconsistent, if more than two episodic judgments are exceeding the 1.5 $\times$ \emph{interquartile range} of the performance levels of this condition.
 The interquartile range is, in fact, a rather conservative criteria.
 However, due to the lack of ground-truth on episodic judgments in a usage multi-episodic case, participants should be only removed, if severe differences occur.
 For none participants of the four experiments this criteria was met and thus none was excluded from the data analysis.

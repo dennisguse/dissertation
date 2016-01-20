@@ -25,7 +25,7 @@ timeseries=timeseries[-which(timeseries$experiment == "E5" & timeseries$id != "1
 %%TODO: \section{Digression: Retaining Information}%Can subjects recall
 %\end{chapter-abstract}
 
-\section{Introduction}
+%\section{Introduction}
 The integration of perceived quality of distinct episodes into a multi-episodic perceived quality often does not cover one session alone, but rather episodes with one service occur regularly in general covering multiple days or longer usage periods.
 In difference to consecutive usage in one session alone, here the time that passes between two usage episodes is longer.
 It is, however, so far unknown how and if at all the time between episodes affect the quality formation process of multi-episodic perceived quality and thus multi-episodic judgments.
