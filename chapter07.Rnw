@@ -273,13 +273,13 @@ The episodes ranged from \unit[174]{sec} to \unit[199]{sec} ($\mu=$\unit[184]{se
 \section{Participants}
 All four experiments were conducted in Berlin, Germany.
 Participants were required to have no hearing impairments.
-For participation in \EIIb{} normal vision was in addition mandatory.
+In \EIIb{} normal vision was also mandatory.
 
-Experiment \E1{} was conducted  with \unit[59]{female} and \unit[40]{male} participants aging from 19 to \unit[53]{years} ($\mu=27.2$, $\sigma=6.5$). %TODO Ist falsch!
-This experiment was conducted from April 2014 until December 2015.
-Experiment \EIIa{} was conducted with \unit[65]{female} and \unit[35]{male} participants aging from of 18 to \unit[50]{years} ($\mu=26.1$, $\sigma=4.6$). %TODO Ist falsch!
-This experiment was conducted from August 2014 until March 2015.
-In experiment \E1{} participants received \unit[20]{EUR} as compensation and participation in experiments \EIIa{}, \EIIb{}, and \E3{} was compensated with \unit[10]{EUR}.
+\E1{} was conducted with 78~female and 51~male participants aging from 18~to 53~years ($\mu=26.7$, $\sigma=5.9$) in April~2014 until December~2015. %mean(subset(data, data$Study == "Lab-TEL" & data$Condtion != "5a")$Age), nrow(subset(data, data$Study == "Lab-LST" & data$Sex == "female")) 
+From August~2014 until March~2015 \EIIa{} was conducted with 75~female and 40~male participants aging from 18~to 50~years ($\mu=26.2$, $\sigma=4.6$).
+In January~2016 \EIIb{} was conducted with 20~female and 13~male participants aging from 19~to 34~years ($\mu=26.6$, $\sigma=4.3$). 
+\E3{} was conducted from October~2015 until November~2015 with 20~female and 16~male participants aging from 18~to 32~years ($\mu=25.0$, $\sigma=3.9$). .
+Participation in \E1{} was compensated with 20~EUR, in \EIIa{} and \E3{} with 10~EUR, and in \EIIb{} with 15~EUR.
 
 In all experiments each participant was individually checked for inconsistent episodic judgments.
 A participant is considered inconsistent, if more than two episodic judgments are exceeding the 1.5 $\times$ \emph{interquartile range} of the performance levels of this condition.
@@ -289,13 +289,13 @@ For none participants of the four experiments this criteria was met and thus non
 
 \autoref{tab:lab:participants} gives an overview on the number of participants per condition for the four experiments.
 
-\begin{table}
+\begin{table} %TODO Appendix
 	\centering
 	\begin{tabular}{c|c|c|c|c}
 	\multirow{2}{*}{Conditions} & \multicolumn{4}{c}{Experiments} \\
 			& \E1{}	& \EIIa{} 	& \EIIb{} 	& \E3{}\\
 	\midrule
-	-				&	-									&	-						& \Sexpr{participants("E2b", "5a")} (without \ac{VoD}) & - \\
+	-				&	-									&	-						& \Sexpr{participants("E2b", "5a")} (no \ac{VoD}) & - \\
 	\hline
 	\C0			& -									& 	-						& 	\Sexpr{participants("E2b", "5a0")}	 &  - \\
 	\hline
@@ -326,20 +326,24 @@ For none participants of the four experiments this criteria was met and thus non
 \end{table}
 
 \section{Data Analysis}\label{method:statistic}
-First, episodic judgments are inspected with regard to consistency between conditions for each experiment individually, and then potential differences between the experiments are investigated.
-Second, multi-episodic judgments are evaluated with regard to the presented hypotheses (\cf, \autoref{chap:towards}).
+In the following the results of the experiments are analyzed.
+First, episodic judgments are inspected with regard to consistency between conditions for each experiment individually.
+Then differences between experiments are investigated to assess an impact of task and usage situation.
+Finally, multi-episodic judgments are evaluated with regard to the presented hypotheses (\cf, \autoref{chap:towards}).
 
 All results are reported as \ac{MOS} ranging from 0 to 6 (for the scale \cf, Figure~\ref{img:qualityScale}).
-For statistic evaluation of two unpaired samples a \emph{Wilcoxon rank-sum test} is conducted.
-More than two unpaired samples are compared by conducting a \emph{Kruskal-Wallis test} and, if significant differences are found, a \emph{pairwise Wilcoxon rank-sum test with Holms' correction} as post-hoc test is conducted.
+Beside the \ac{MOS} a statistical evaluation is conducted.
+Two unpaired samples are evaluated with a \emph{Wilcoxon rank-sum test}.
+More than two unpaired samples are compared with a \emph{Kruskal-Wallis test} and, if significant differences are found, a \emph{pairwise Wilcoxon rank-sum test with Holms' correction} as post-hoc test.
 Paired samples are evaluated with a \emph{Wilcoxon signed-rank test}.
-%Episodic judgments could be interpreted as paired samples -> then Friedmanm.mc should be used instead
-Non-parametric statistical methods are applied, because the assumptions of parametric methods are likely violated especially due to the limited number of subjects per condition and the applied between-subject design.
+Non-parametric statistical methods are applied as the assumptions of parametric methods are likely to be violated due to the limited number of subjects per condition and the applied between-subject design.
 
 \subsection{Episodic Judgments} 
-For both studies each condition was individually checked for inconsistent subject.
-A subject is considered inconsistent, if more than two episodic \ac{QoE} judgments are beyond 1.5 $\times$ \emph{interquartile range}.
-No participant met this criteria and thus none was excluded from further data analysis.
+The episodic \ac{QoE} judgments of all conditions are compared to investigate for an influence of the applied between-subject design.
+In prior work a negative influence on the episodic judgment of \ac{HP} episodes is observed, when those directly follow \ac{LP} episode(s) \citep{moller_single-call_2011, guse_macro-temporal_2013}.
+Such an effect could neither be directly observed in any of the four experiments.
+\autoref{tab:lab:episodicMOS} shows the results per service and performance level for all four experiments.
+%NOPE As such an effect cannot be ruled out, only episodic \ac{QoE} judgments of usage episodes 1-3 are compared, because non-\ac{HP} episodes are only presented for 4th to 6th episode.
 
 \begin{figure}
 	\centering
@@ -350,11 +354,6 @@ No participant met this criteria and thus none was excluded from further data an
 	\label{img:lab:E1condition7boxplot}
 \end{figure}
 
-Then episodic \ac{QoE} judgments of all conditions are compared to investigate for an influence of the applied between-subject design.
-In prior work a negative influence on the episodic judgment of \ac{HP} episodes is observed, when those directly follow \ac{LP} episode(s) \citep{moller_single-call_2011, guse_macro-temporal_2013}.
-Such an effect could neither be directly observed for any of the four experiments \E1{}, \EIIa{}, \EIIb{}, and \E3{}.
-\autoref{tab:lab:episodicMOS} shows the results per service and performance level for all four experiments.
-%NOPE As such an effect cannot be ruled out, only episodic \ac{QoE} judgments of usage episodes 1-3 are compared, because non-\ac{HP} episodes are only presented for 4th to 6th episode.
 
 \begin{table}
   \centering
