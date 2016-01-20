@@ -101,8 +101,11 @@ wilcox.pairwise.print <- function(formula=IQU~condition, experiment_filter, perf
  
  f = all.names(formula, functions=F)
  p = pairwise.wilcox.test(d[[f[1]]], d[[f[2]]], exact=F, alternative = alternative, paired = paired)$p.value
- result = apply(p, c(1, 2), function(x) {sprintf("$p=%.3f$", x)})
-  
+ result = apply(p, c(1, 2), function(x) {
+  if (!is.na(x) && x < 0.001) sprintf("$p<0.001$", x)
+  else  sprintf("$p=%.3f$", x)
+  })
+
  return (result)
 # estimate = pairwise.wilcox.estimate(d[[f[1]]], d[[f[2]]], exact=F, alternative = alternative, paired = paired)$p.value
  

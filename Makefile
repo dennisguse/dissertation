@@ -7,6 +7,8 @@ build: tex
 tex: 00main.tex chapter05.tex chapter07.tex chapter08.tex chapter09.tex appendix.tex
 	echo "Done"
 
+%.Rnw : R_eval.R R_plot.R
+
 %.tex : %.Rnw
 	Rscript -e "library(knitr); knit('$<')" || (rm $@ && exit -1)
 
