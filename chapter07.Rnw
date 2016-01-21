@@ -436,6 +436,7 @@ For \EIIb{} neither significant differences  are observed for the speech telepho
 This indicates that, as long as only \ac{HP} episodes are presented, the between-subject design did not affect this multi-episodic judgment.
 \autoref{tab:lab:multiconsistency} shows the multi-episodic judgment after the third episode.
 This judgment can be used as reference point to assess the impact of the presented \ac{LP} episodes on following multi-episodic judgments.
+It is in the following denoted as \emph{reference}.
 Although not directly comparable due to differences in usage situation as well as services, it must be noted that the judgments are rather close.
 In fact, for the speech telephony in \E1{}, \EIIa{}, \EIIb{} this judgment is not significant different (\Sexpr{kruskal(IQU~experiment, c("E1", "E2a", "E2b"), "HP", condition, 3, "telephony")}).
 
