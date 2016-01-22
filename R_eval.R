@@ -81,7 +81,6 @@ wilcox(QU~performance, "E1",  c("HP", "LP"), alternative="greater")
 wilcox(QU~performance, "E1",  c("HP", "LP"), alternative="less")
 wilcox(QU~condition, "E1", "HP", c("4", "7"), c(1:3), diffOnly=T)
 
-wilcox(IQU~condition, "E1", "HP", c("4", "5b"), c(6))
 
 
 

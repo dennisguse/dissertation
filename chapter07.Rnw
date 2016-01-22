@@ -550,7 +550,7 @@ For \EIIa{} a recency effect can only observed for two \ac{LP} episodes, but not
 This indicates that the usage situation, \ie, passive third-party listening, affects the multi-episodic formation process.
 However, the actual reason for this cannot be deduced from experiment \EIIb{}.
 
-Thus \autoref{hypo:position} can be accepted for two-party conversations, but only partly accepted for third-party listening.
+Thus, \autoref{hypo:position} can be accepted for two-party conversations, but only partly accepted for third-party listening.
 
 \subsubsection{\autoref{hypo:consecutive}: Consecutive vs. Non-consecutive \ac{LP} Episodes}
 In \autoref{hypo:consecutive} it is assumed that consecutive \ac{LP} episodes yield a better multi-episodic judgment than the same number of \ac{LP} episodes presented non-consecutively.
@@ -562,7 +562,7 @@ The latter presents the 4th and 6th episode in \ac{LP}.
 \begin{table}[h!]
 \centering
  \begin{tabulary}{\columnwidth}{c|c|C}
-	Condition   & LP episode(s) 	& \EIIa{} \\
+	Condition   & \ac{LP} episode(s) 	& \EIIa{} \\
 	\midrule
 	\C4{}			& 4..5			& \Sexpr{mos_iqu_with_sd_by_condition("E2a", "4", 6)}\\
 	\hline
@@ -577,29 +577,30 @@ The latter presents the 4th and 6th episode in \ac{LP}.
 The multi-episodic judgments of those three conditions are not significant different (\Sexpr{kruskal(IQU~condition, "E2a", unique(timeseries[["performance_level"]]), c("4", "8", "5a"), c(6))}).
 In fact, the multi-episodic judgment of \CVa{} and \C8{} are rather close compared to \C4{}, which indicates a higher impact of the very last episode that was presented in the former case in \ac{LP} whereas in the latter in \ac{HP}.
 
-Thus \autoref{hypo:consecutive} can neither be accepted nor rejected based upon the results of \EIIa{}.
+Thus, \autoref{hypo:consecutive} can neither be accepted nor rejected based upon the results of \EIIa{}.
 It must be concluded that either such an effect does not exists, or is to small and thus hidden by variance.
 In fact, the closeness of \C4{} and \C8{} could also be explained by a recency effect.
 
 \subsubsection{\autoref{hypo:strength}: Strength of Degradation}
 In \autoref{hypo:strength} it is assumed that the lowest episodic performance (here \ac{LP}) has a stronger negative effect on the multi-episodic judgments whereas lesser degraded episode(s) (here \ac{MP}) yield a lower effect or no effect at all.
 
-This is evaluated for \E1{} by comparing \CIIa{}, \CVb{} and \C7{} as those conditions only differ in the performance of the 6th usage episode (\cf, \autoref{tab:lab:hypothesesComparison}).
+This is evaluated for two-party conversation only in \E1{}.
+Here \CIIa{}, \CVb{} and \C7{} differ only in the performance level of the 6th usage episode (\cf, \autoref{tab:lab:hypothesesComparison}).
 The results for episodic judgments after the 6th usage episode and multi-episodic judgments are shown in \autoref{tab:lab:hypostrength}.
-The episodic judgments for this episode are significant different between the three conditions (\Sexpr{kruskal(QU~condition, "E1", unique(timeseries[["performance_level"]]), c("2a", "5b", "7"), c(6))}).
-A one-sided post-hoc test shows a significant difference between all three performance levels (\ac{HP} vs. \ac{MP}: \Sexpr{wilcox.pairwise.print(QU~condition, "E1", unique(timeseries[["performance_level"]]), c("2a", "5b", "7"), c(6))[2,1]}, \ac{HP} vs. \ac{LP}: \Sexpr{wilcox.pairwise.print(QU~condition, "E1", unique(timeseries[["performance_level"]]), c("2a", "5b", "7"), c(6))[1,1]}, \ac{MP} vs. \ac{LP}: \Sexpr{wilcox.pairwise.print(QU~condition, "E1", unique(timeseries[["performance_level"]]), c("2a", "5b", "7"), c(6))[2,2]}).
+The episodic judgments for this episode are significant different between the three conditions (\Sexpr{kruskal(QU~condition, "E1", performance_level, c("2a", "5b", "7"), c(6))}).
+A one-sided post-hoc test shows a significant difference between all three performance levels (\ac{HP} vs. \ac{MP}: \Sexpr{wilcox.pairwise.print(QU~condition, "E1", performance_level, c("2a", "5b", "7"), c(6))[2,1]}, \ac{HP} vs. \ac{LP}: \Sexpr{wilcox.pairwise.print(QU~condition, "E1", performance_level, c("2a", "5b", "7"), c(6))[1,1]}, \ac{MP} vs. \ac{LP}: \Sexpr{wilcox.pairwise.print(QU~condition, "E1", performance_level, c("2a", "5b", "7"), c(6))[2,2]}).
 
-The multi-episodic judgments of those three conditions are significant different (\Sexpr{kruskal(IQU~condition, "E1", unique(timeseries[["performance_level"]]), c("2a", "5b", "7"), c(6))}).
-A one-sided post-hoc shows significant differences for conditions \CIIa and \CVb{} (\Sexpr{wilcox.pairwise.print(IQU~condition, "E1", unique(timeseries[["performance_level"]]), c("2a", "5b", "7"), c(6))[1,1]}) as well as conditions \CVb{} and \C7{} (\Sexpr{wilcox.pairwise.print(IQU~condition, "E1", unique(timeseries[["performance_level"]]), c("2a", "5b", "7"), c(6))[2,2]}).
-Condition \CIIa{} and \C7{} are not significant different (\Sexpr{wilcox.pairwise.print(IQU~condition, "E1", unique(timeseries[["performance_level"]]), c("2a", "5b", "7"), c(6))[2,1]}).
+The multi-episodic judgments of those three conditions are significant different (\Sexpr{kruskal(IQU~condition, "E1", performance_level, c("2a", "5b", "7"), c(6))}).
+A one-sided post-hoc shows significant differences for conditions \CIIa{} and \CVb{} (\Sexpr{wilcox.pairwise.print(IQU~condition, "E1", performance_level, c("2a", "5b", "7"), c(6))[1,1]}) as well as conditions \CVb{} and \C7{} (\Sexpr{wilcox.pairwise.print(IQU~condition, "E1", performance_level, c("2a", "5b", "7"), c(6))[2,2]}).
+However, \CIIa{} and \C7{} are not significant different (\Sexpr{wilcox.pairwise.print(IQU~condition, "E1", performance_level, c("2a", "5b", "7"), c(6))[2,1]}).
 
 \begin{table}[h!]
 \centering
- \begin{tabulary}{\columnwidth}{c|C|C|C}
-	\multirow{2}{*}{Conditions}   & \multicolumn{2}{c|}{6th usage episode} & \multirow{2}{*}{Multi-episodic Judgment}\\
+ \begin{tabulary}{\columnwidth}{C|C|C|C}
+	\multirow{2}{*}{Conditions}   & \multicolumn{2}{c|}{6th usage episode} & \multirow{2}{*}{Multi-episodic \newline Judgment}\\
 	            & Performance 	& Episodic Judgment & \\
 	\midrule 
-	\CIIa{}		& \ac{HP}		& \Sexpr{mos_qu_with_sd_by_condition("E1", "HP", "2a", 6)}	& \Sexpr{mos_iqu_with_sd_by_condition("E1", "2a", 6)} \\
+	\CIIa{}	& \ac{HP}		& \Sexpr{mos_qu_with_sd_by_condition("E1", "HP", "2a", 6)}	& \Sexpr{mos_iqu_with_sd_by_condition("E1", "2a", 6)} \\
 	\hline
 	\C7{}		& \ac{MP}		& \Sexpr{mos_qu_with_sd_by_condition("E1", "MP", "7", 6)} 	& \Sexpr{mos_iqu_with_sd_by_condition("E1", "7", 6)} \\
 	\hline
@@ -610,25 +611,25 @@ Condition \CIIa{} and \C7{} are not significant different (\Sexpr{wilcox.pairwis
 \end{table}
 
 This indicates that presenting the 6th episode either in \ac{MP} or \ac{HP} does not affect the multi-episodic judgment although the episodic judgments are different.
+It can thus be concluded that \autoref{hypo:strength} is verified.
 This is in line with prior work on retrospective episodic experiences \citep[e.g.,][]{kahneman_experienced_2000} as well as episodic \ac{QoE} \citep[e.g.,][]{weiss_modeling_2009}, where it is denoted as (negative) peak effect.
 
 \subsubsection{\autoref{hypo:recovery}: Recovery after \ac{LP} Episodes}
-%TODO Choose Friedman? Or one-sided?
 In \autoref{hypo:recovery} the recovery of multi-episodic is investigated.
-This is examined in \E1{} by comparing condition \CVb{} and \C7{}, which consists of nine episodes, where non-\ac{HP} episodes are only presented as 5th and 6th episode (\cf, \autoref{tab:lab:hypothesesComparison}).
-Multi-episodic judgment is assessed for those two conditions after the 3rd, 6th and 9th episode.
-\autoref{tab:lab:hyporecovery} shows the multi-episodic QoE judgments for condition \CVb{} and \C7{}.
+This can be investigated in \E1{} by comparing condition \CVb{} and \C7{}.
+Both present nine episodes while all except the 5th and 6th are presented in \ac{HP}.
+\autoref{tab:lab:hyporecovery} shows the three the multi-episodic judgments of those conditions.
 
-For multi-episodic judgments significant differences are found for condition \CVb{} (\Sexpr{kruskal(IQU~id, "E1", unique(timeseries[["performance_level"]]),"5b", c(3, 6, 9))}) and \C7{} (\Sexpr{kruskal(IQU~id, "E1", unique(timeseries[["performance_level"]]),"7", c(3, 6, 9))}).
-A paired post-hoc tests finds significant differences for condition \CVb{} (3rd and 6th: \Sexpr{wilcox.pairwise.print(QU~id, "E1", unique(timeseries[["performance_level"]]), "5b", c(3, 6, 9), paired=T)[1,1]}, 3rd and 9th: \Sexpr{wilcox.pairwise.print(QU~id, "E1", unique(timeseries[["performance_level"]]), "5b", c(3, 6, 9), paired=T)[2,1]} as well as 3rd and 9th: \Sexpr{wilcox.pairwise.print(QU~id, "E1", unique(timeseries[["performance_level"]]), "5b", c(3, 6, 9), paired=T)[2,2]}).
-For condition \C7{} significant differences are found between the 3rd and 6th judgment (\Sexpr{wilcox.pairwise.print(QU~id, "E1", unique(timeseries[["performance_level"]]), "5b", c(3, 6, 9), paired=T)[2,2]}) as well as between the 6th and 9th judgment (\Sexpr{wilcox.pairwise.print(QU~id, "E1", unique(timeseries[["performance_level"]]), "5b", c(3, 6, 9), paired=T)[1,1]}).
-The 3rd and 9th judgment are not significant different (\Sexpr{wilcox.pairwise.print(QU~id, "E1", unique(timeseries[["performance_level"]]), "5b", c(3, 6, 9), paired=T)[2,1]}).
-The final multi-episodic judgments of condition \CVb{} and condition \C7{} are significant different ( \Sexpr{wilcox(IQU~condition, "E1", unique(timeseries[["performance_level"]]), c("5b", "7"), c(9))}).
+For each condition the three multi-episodic judgments are significant different (\CVb{}: \Sexpr{kruskal(IQU~id, "E1", performance_level,"5b", c(3, 6, 9))}, \C7{}: \Sexpr{kruskal(IQU~id, "E1", performance_level, "7", c(3, 6, 9))}).
+For \CVb{} a paired post-hoc test shows significant differences between the judgment after the 3rd and 6th episode (\Sexpr{wilcox.pairwise.print(QU~id, "E1", performance_level, "5b", c(3, 6, 9), paired=T)[1,1]}) and the 6th and 9th episode (\Sexpr{wilcox.pairwise.print(QU~id, "E1", performance_level, "5b", c(3, 6, 9), paired=T)[2,2]}).
+The judgment after the 3rd and 9th are not significant different (\Sexpr{wilcox.pairwise.print(QU~id, "E1", performance_level, "5b", c(3, 6, 9), paired=T)[2,1]}).
+A paired post-hoc test for \C7{} is similar (3rd vs. 6th: \Sexpr{wilcox.pairwise.print(QU~id, "E1", performance_level, "7", c(3, 6, 9), paired=T)[1,1]}, 6th vs. 9th: \Sexpr{wilcox.pairwise.print(QU~id, "E1", performance_level, "7", c(3, 6, 9), paired=T)[2,2]}) and 3rd vs. 9th: \Sexpr{wilcox.pairwise.print(QU~id, "E1", performance_level, "7", c(3, 6, 9), paired=T)[2,1]}).
+Between those two conditions the judgment after the 6th (\Sexpr{wilcox(IQU~condition, "E1", performance_level, c("5b", "7"), c(6))}) and the 9th episodes (\Sexpr{wilcox(IQU~condition, "E1", performance_level, c("5b", "7"), c(9))}) are significant different.
 
 \begin{table}[h!]
 \centering
  \begin{tabulary}{\columnwidth}{c|C|C|C|C}
-	\multirow{2}{*}{Conditions}	& Episodic Performance			& \multicolumn{3}{c}{Multi-episodic Judgments} \\
+	\multirow{2}{*}{Conditions}	& \multirow{2}{*}{Episodic Performance}			& \multicolumn{3}{c}{Multi-episodic Judgments} \\
 				&					 			& 3rd		& 6th		& 9th  \\
 	\midrule
 	\CVb{}			& 4:\ac{HP}, 5:\ac{LP}, 6:\ac{LP}	& \Sexpr{mos_iqu_with_sd_by_condition("E1", "5b", 3)}	& \Sexpr{mos_iqu_with_sd_by_condition("E1", "5b", 6)}	& \Sexpr{mos_iqu_with_sd_by_condition("E1", "5b", 9)}\\
@@ -639,20 +640,22 @@ The final multi-episodic judgments of condition \CVb{} and condition \C7{} are s
  \label{tab:lab:hyporecovery}
 \end{table}
 
-In both conditions an increase in the multi-episodic judgment is observed, if additional HP usage episodes are presented after the affected multi-episodic judgment.
-For condition \C7{} a negative effect on the last multi-episodic  judgment due to the presentation of non-\ac{HP} usage episodes cannot be observed.
-For condition \C5{} an improvement is observed, but the final multi-episodic judgment is still affected by the presented \ac{LP} episodes resulting.
+Both conditions show similar results with regard to \autoref{hypo:recovery}.
+Here an increase in the final multi-episodic judgment is observed due to the three additional \ac{HP} episodes.
+In fact, both conditions no significant different do not show a significant difference between the first and final multi-episodic judgment.
+Although for both conditions a small effect of the non-\ac{HP} episodes on the final judgment is indicated as both judgments remain slightly lower than the first judgment.
+The found difference between the final judgments of both conditions might be attributed to the different performance level of the 6th episode.
+
+It must be concluded that the multi-episodic judgment recovers, if three additional \ac{HP} episodes are presented, and thus \autoref{hypo:recovery} is accepted.
+However, from the two conditions alone it cannot be deduced, if a recency effect occurred here.
 
 \subsubsection{\autoref{hypo:duration}: Duration of \ac{LP} Episode}
-In experiment \E3{} the impact of varying duration of one \ac{LP} episode on the following multi-episodic judgment is investigated (\cf, \autoref{hypo:duration}).
+In \E3{} the impact of varying duration of one \ac{LP} episode on the following multi-episodic judgment is investigated (\cf, \autoref{hypo:duration}).
 It is hypothesized that increasing the duration of an \ac{LP} episode will lead to a higher reduction in multi-episodic judgment than presenting a shorter duration.
-The two conditions \CIIa{} and \CIIb{} both present the 5th episode in \ac{LP}.
-In \CIIa{} all six episodes have similar duration.
-\CIIb{} is similar to \CIIa{} except that the 5th episode has longer duration, \eg, doubled.
-\autoref{tab:lab:hypoduration} shows the episodic judgment of this episode and the final multi-episodic of the two conditions.
-The episodic judgments of the 5th episode are not significant different between the two conditions (\Sexpr{wilcox(QU~condition, "E3", unique(timeseries[["performance_level"]]), c("2a", "2b"), c(5))}).
-The final multi-episodic judgments of the two conditions are also not significant different (
-\Sexpr{wilcox(IQU~condition, "E3", unique(timeseries[["performance_level"]]), c("2a", "2b"), c(6))}).
+In this experiment condition \CIIa{} and \CIIb{} both present the 5th episode in \ac{LP} but in a different duration.
+All episodes except the 5th episodes are presented identically in both condition each similar in duration.
+In case of \CIIa{} the 5th episode is presented with a similar duration than all other episodes whereas in \CIIb{} the duration is doubled.
+The episodic judgment for this condition and the multi-episodic judgments are shown \autoref{tab:lab:hypoduration}.
 
 \begin{table}[h!]
 \centering
@@ -668,69 +671,94 @@ The final multi-episodic judgments of the two conditions are also not significan
  \label{tab:lab:hypoduration}
 \end{table}
 
+Significant differences are neither observed between the episodic judgments of the 5th episode (\Sexpr{wilcox(QU~condition, "E3", performance_level, c("2a", "2b"), c(5))}) nor the final multi-episodic judgments (\Sexpr{wilcox(IQU~condition, "E3", performance_level, c("2a", "2b"), c(6))}) of both conditions.
+This leads to the conclusion that \autoref{hypo:duration} can be accepted as even doubling the duration of an degraded episode without macroscopic performance fluctuations does not affect the multi-episodic judgment, \ie, the duration the experience is not sufficiently reflected in the retrospective judgment.
+This is in line with findings for retrospective assessment of pain \citep{fredrickson_duration_1993}.
+In fact, it must be noted that duration neglect occurs for the episodic judgment as well as the multi-episodic judgment.
+This indicates that the episodic judgment sufficiently describes the experiences.
+
 %TODO Add statements? + Duration length + Different in length?
 
 \subsubsection{\autoref{hypo:independent}: Services are Judged Independent}
-In experiment \EIIb{} the two services speech telephony and \ac{VoD} have been used on the same device.
-It is assumed that the multi-episodic judgments per service are independent of each other (\autoref{hypo:independent}).
-In \EIIb{} the speech telephony service is always presented in condition \CVa{} whereas the \ac{VoD} is presented either in condition \C0{} or condition \C4{}.
+In \EIIb{} it is investigated, if the multi-episodic judgments of two services affect each other or are rather independent (\autoref{hypo:independent}).
+This is investigated by presenting beside the speech telephony service a \ac{VoD} service while both service are used alternating for one usage episode.
+The speech telephony service is always presented in \CVa{} whereas the \ac{VoD} service is not presented or presented in \C0{} or \C4{}.
 This allows to investigate a potential impact of a well-working service and respectively a degraded service on the multi-episodic judgments of the first service.
-The episodic judgments and multi-episodic judgments for both experiments are shown in \autoref{tab:lab:hypoindependent}.
-In fact, no significant difference has been found between experiment \EIIa{} and experiment \EIIb{} for between the two performance levels (\cf, \autoref{chap:lab:sec:expE2})
+The episodic judgments and multi-episodic judgments are shown in \autoref{tab:lab:hypoindependent}.
 
-The multi-episodic judgment of the \ac{VoD} service is significant different between the two conditions (\Sexpr{wilcox(IQU~condition, "E2b", unique(timeseries[["performance_level"]]), c("5a0", "5a4"), c(6), "VoD")}).
-For the multi-episodic judgment of the speech telephony service no significant difference is found (\Sexpr{kruskal(IQU~condition, "E2b", unique(timeseries[["performance_level"]]), c("5a", "5a0", "5a4"), c(6), "telephony")}).
-The multi-episodic judgments of the speech telephony service for \CVa{} are not significant different between experiment \EIIa{} and experiment \EIIb{} (\Sexpr{wilcox(IQU~experiment, c("E2a", "E2b"), unique(timeseries[["performance_level"]]), c("5a", "5a0", "5a4"), c(6), "telephony")}). %TODO: "less" is not really nice here :D
+The final multi-episodic judgment of the \ac{VoD} service is significant different between \C0{} and \C4{} (\Sexpr{wilcox(IQU~condition, "E2b", performance_level, c("5a0", "5a4"), c(6), "VoD")}).
+This shows that the two \ac{LP} episodes affect the multi-episodic judgment of this service.
+With regard to the speech telephony service no significant difference on the final multi-episodic judgment is found (\Sexpr{kruskal(IQU~condition, "E2b", performance_level, c("5a", "5a0", "5a4"), c(6), "telephony")}).
 
 \begin{table}[h!]
 \centering
- \begin{tabulary}{\columnwidth}{c|C|C|C}
-	\multirow{2}{*}{Experiment} & \multirow{2}{*}{Conditions \ac{VoD}}	& \multicolumn{2}{c}{Multi-episodic Judgment} \\
+ \begin{tabulary}{\columnwidth}{C|C|C|C}
+	\multirow{2}{*}{Conditions \ac{VoD}}	& \multicolumn{2}{c}{Multi-episodic Judgment} \\
 					& 						& \ac{LST} 															& \ac{VoD} \\
 	\midrule 
-	\EIIa{}			& -					& \Sexpr{mos_iqu_with_sd_by_condition("E2a", "5a", 6, "telephony")}		& - \\
-	\hline 
-	\EIIb{}			& -					& \Sexpr{mos_iqu_with_sd_by_condition("E2b", "5a", 6, "telephony")}		& - \\
+	 -					& \Sexpr{mos_iqu_with_sd_by_condition("E2b", "5a", 6, "telephony")}		& - \\
 	\hline
-	\EIIb{}			& \C0{}					& \Sexpr{mos_iqu_with_sd_by_condition("E2b", "5a0", 6, "telephony")}	& \Sexpr{mos_iqu_with_sd_by_condition("E2b", "5a0", 6, "VoD")}\\
+	\C0{}					& \Sexpr{mos_iqu_with_sd_by_condition("E2b", "5a0", 6, "telephony")}	& \Sexpr{mos_iqu_with_sd_by_condition("E2b", "5a0", 6, "VoD")}\\
 	\hline
-	\EIIb{}			& \C4{}					& \Sexpr{mos_iqu_with_sd_by_condition("E2b", "5a4", 6, "telephony")}	& \Sexpr{mos_iqu_with_sd_by_condition("E2b", "5a4", 6, "VoD")}\\
+	\C4{}					& \Sexpr{mos_iqu_with_sd_by_condition("E2b", "5a4", 6, "telephony")}	& \Sexpr{mos_iqu_with_sd_by_condition("E2b", "5a4", 6, "VoD")}\\
  \end{tabulary}
- \caption{\autoref{hypo:independent}: \ac{MOS} of multi-episodic judgment after the 6th usage episode for \EIIa{} and \EIIb{}.}
+ \caption{\autoref{hypo:independent}: \ac{MOS} of multi-episodic judgment after the 6th usage episode for \EIIb{}.}
  \label{tab:lab:hypoindependent}
 \end{table}
 
-\subsection{Discussion}
-%\section{Digression: Cross-Service Quality} TODO
+As the multi-episodic judgments of the speech telephony service is not different if a \ac{VoD} service is present or not, it can be concluded that a second service does not affect the multi-episodic judgment of another first service.
+In fact, participant could only use the content and presentation modality to differentiate the two services as both were presented on the same device without providing further cues for differentiation.
+Furthermore, it must be noted that \ac{VoD} service was only degraded in the video modality while audio was presented always without impairments.
+However, although the audio was not degraded and thus could be used as reference for the judgment of the speech service presented impairment, such an effect is not present. 
 
-\section{Conclusion}
-The four experiment showed that multi-episodic \ac{QoE} can be assessed in one session with duration of \unit[90]{min}.
+\section{Discussion and Conclusion}
+The four experiment show that multi-episodic \ac{QoE} can be assessed in one session.
+Here the duration of multi-episodic experiences in one session with a duration of \unit[30..45]{min} was investigated.
+Although the selected degradation for \ac{LP} (LPC-10) is artificial as it is not used for speech telephony, it must be noted that the presentation it resulted in observable effects on following multi-episodic judgments.
+This allowed to investigate the formation process of multi-episodic perceived quality by not presenting "realistic" degradations.
 
 It could be consistently shown increasing the number of \ac{LP} episodes leads to a reduction in multi-episodic judgments (\autoref{hypo:number}).
-An effect of saturation is observed, if two or three \ac{LP} episodes are presented.
+An effect of saturation is observed if two or three \ac{LP} episodes are presented.
 Here the multi-episodic judgment does not decrease further although more \ac{LP} episodes are experienced.
 It was expected that the saturation would occur, if the multi-episodic judgment reaches the same level as the episodic judgments of \ac{LP} episodes.
-However, the multi-episodic judgments did not reach this threshold indicating that previous experiences with \ac{HP} episodes are still accounted in the multi-episodic judgments.
+However, the multi-episodic judgments did not reach this threshold.
+This indicates that previous experiences with \ac{HP} episodes are still accounted in the multi-episodic judgments.
+This was observed for the two-party conversation as well as third-party listening task.
+Such an effect has so far not been found for retrospective assessment of perceived quality.
 
-Varying the position of \ac{LP} episodes with regard to the following multi-episodic judgment (\autoref{hypo:position}), it could be shown that this affect the multi-episodic judgments reducing the reduction if more \ac{HP} episodes follow one or more \ac{LP} episodes.
-However, in experiment \EIIa{} for one \ac{LP} episode only, such an effect was not observable, indicating that the usage situation affect the formation process of multi-episodic perceived quality.
-In \EIIa{} participants experienced a listening-only situation whereas in experiment \E1{} a two-party conversation was used.
+In addition, a potential recency effect was investigated in \E1{} and \EIIa{} (\autoref{hypo:position}).
+Here the position of one and two \ac{LP} episode(s) towards the following multi-episodic judgment was varied.
+In \E1{} the presentation \ac{HP} episode(s) before increased the multi-episodic judgment.
+In \EIIa{} this could only be indicated for two \ac{LP} episodes.
+This indicates that the usage situation affects the multi-episodic formation process.
+In \EIIa{} participants experienced a listening-only situation whereas in \E1{} a two-party conversation was used.
 In the latter case participants might require more mental resources and thus forgive/forget the experience of the \ac{LP} episode faster if \ac{HP} episode(s) are presented afterwards.
-In experiment \E1{} also potential recovery was investigated (\autoref{hypo:recovery}), showing that presenting four \ac{HP} episodes after one \ac{LP} episode no negative effect on multi-episodic judgments is observed.
-For two \ac{LP} episodes, however, presenting additional three \ac{HP} episodes afterwards, a negative effect can still be observed.
-The comparison of consecutive vs. non-consecutive episodes in experiment \E1{} indicated that the very last episode has a higher impact on the multi-episodic judgment if presented in \ac{LP} than the previous \ac{LP} episode, but that the first \ac{LP} episode is still remembered even if one \ac{HP} episode is presented in between.
 
-In experiment \E1{} also a potential peak-effect was investigated (\autoref{hypo:strength}).
-It could that \ac{MP} is reflected in episodic judgments, but does not affect the multi-episodic judgment different than presenting this very episode in \ac{HP}.
-This indicates that a only severe degradations affect multi-episodic judgments whereas less severe degradations only have a limited to no impact on multi-episodic judgment, \ie, indicating a peak-effect.
+In \E1{} also recovery of multi-episodic judgments was investigated (\autoref{hypo:recovery}).
+Here three \ac{HP} episodes were presented after two non-\ac{HP} episodes.
+The results show that the negative effect on multi-episodic diminishes already for the final judgment.
+For two \ac{LP} episodes a small, non-significant influence is still indicated.
+With regard to consecutive vs. non-consecutive \ac{LP} episodes (\autoref{hypo:consecutive}) the results are inconclusive.
+It is indicated that non-consecutive \ac{LP} episodes are judged slightly better.
+However, this might also be an artifact due to a recency effect and thus \autoref{hypo:recovery} must be left unanswered.
 
-In experiment \E3{} the duration of the one \ac{LP} episode was varied.
+In \E1{} also a (negative) peak-effect was investigated (\autoref{hypo:strength}).
+It could be shown that episodic judgments for \ac{MP} are significant different to \ac{HP} and \ac{LP}.
+However, no the multi-episodic judgments for this condition are not different that presenting this episode in \ac{HP}.
+It can be thus concluded that a peak-effect occurs as the \ac{MP} 
+This indicates that a peak-effect is occurs also in multi-episodic perceived quality as severe degradations only have a limited to no impact on the multi-episodic judgment.
+Thus \autoref{hypo:strength} can be accepted.
+
+In \E3{} the duration of the one \ac{LP} episode was varied.
 It was expected that presenting this episode with approximately a doubled duration would lead to higher reduction of the multi-episodic judgments than presenting this episode with normal duration (\autoref{hypo:duration}).
-However, no significant difference has between observed between the two conditions indicating that the actual duration of an episode does not affect the formation process of multi-episodic perceived quality.
-In fact, this might be related to the fact that near constant performance was applied per episode rather than performance variations.
+However, no significant difference has between observed between the two conditions.
+This indicates that the actual duration of an episode does not affect the formation process of multi-episodic perceived quality and thus \autoref{hypo:duration} must be rejected in this case.
+In fact, this might be related to the fact that near constant performance was applied per episode rather than macroscopic performance fluctuations.
 In the latter case, the actual duration might be easier to remember and thus overcome the impact of duration neglect to a certain degree.
 
-In experiment \EIIb{} it was assessed, if a 2nd service affects the multi-episodic judgment of the 1st service (\autoref{hypo:independent}).
-It could be shown that the presentation of the 2nd service results in an increase of the multi-episodic judgment of the 1st service.
-This effect was not affect by the actual condition of the 2nd service, \ie, only \ac{HP} episodes vs. two \ac{LP} episodes.
-In fact, both services were presented on the same device encouraging confounding of services.
+In \EIIb{} it was investigated, if the presentation of a second service affects the multi-episodic judgment of the primary service (\autoref{hypo:independent}).
+The results show that episodic judgments and multi-episodic judgments are assessed independently per service.
+Thus \autoref{hypo:independent} can be accepted.
+
+The results show that multi-episodic judgments for in one session are affected by several effects.
+Here a recency effect, a peak effect and also a duration similar to retrospective judgments could be observed.
