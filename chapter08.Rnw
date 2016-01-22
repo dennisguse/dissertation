@@ -93,7 +93,7 @@ For \ac{HP} a video bandwidth of \unit[2]{Mbit/s} and for \ac{LP} a video bandwi
 However, the video was always played in full screen independent of the actual screen size or resolution.
 For audio reproduction and recording a \emph{Logitech PC120} headset was provided for each participant.
 Participants were instructed to use the headset for the speech telephony service as well as the \ac{VoD} service.
-The full description of the technical setup can be found in the \appendix \autoref{appendix:setup}.
+A complete description of the technical setup can be found in the \appendix{} (\autoref{appendix:setup}).
 
 In this experiment two conditions were applied varying the performance level.
 In the first one all episodes for both services were presented in \ac{HP} (denoted as \C0).

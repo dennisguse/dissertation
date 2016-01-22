@@ -81,15 +81,17 @@ wilcox(QU~performance, "E1",  c("HP", "LP"), alternative="greater")
 wilcox(QU~performance, "E1",  c("HP", "LP"), alternative="less")
 wilcox(QU~condition, "E1", "HP", c("4", "7"), c(1:3), diffOnly=T)
 
+wilcox(IQU~condition, "E1", "HP", c("4", "5b"), c(6))
+
 
 
 wilcox.pairwise.print <- function(formula=IQU~condition, experiment_filter, performance_level_filter=unique(timeseries$performance_level), condition_filter=unique(timeseries$condition), id_filter=unique(timeseries$id), service_filter=unique(timeseries$service), alternative="two.sided", paired=F, reference=F) { #, alternative="two.sided", paired=F, p.adjust.method = "holm"
  d = subset(timeseries, experiment %in% experiment_filter & performance_level %in% performance_level_filter & condition %in% condition_filter & service %in% service_filter)
  if (reference) {
   d$condition = as.character(d$condition)
-  d[d$id == 3, ]$condition = -1
+  d[d$id == 3, ]$condition = "000"
   d$condition = as.factor(d$condition)
-  d$id[d$condition == -1 & d$id == "3"] = 6
+  d$id[d$condition == "000" & d$id == "3"] = 6
  }
  d = subset(d, id %in% id_filter)
  
@@ -99,7 +101,6 @@ wilcox.pairwise.print <- function(formula=IQU~condition, experiment_filter, perf
   if (!is.na(x) && x < 0.001) sprintf("$p<0.001$", x)
   else  sprintf("$p=%.3f$", x)
   })
-
  return (result)
 # estimate = pairwise.wilcox.estimate(d[[f[1]]], d[[f[2]]], exact=F, alternative = alternative, paired = paired)$p.value
  
@@ -115,7 +116,6 @@ wilcox.pairwise.print <- function(formula=IQU~condition, experiment_filter, perf
 #   }
 #  return (result)
  #result = as.data.frame(outer(r, estimate, function(x, y) {return (paste(x, ": ", y))} ))
- 
 }
 
 pairwise.wilcox.estimate <-function (x, g, p.adjust.method = p.adjust.methods, paired = FALSE, ...) {
