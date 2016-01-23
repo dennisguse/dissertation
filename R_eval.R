@@ -62,6 +62,14 @@ kruskal(QU~condition, "E2b", "HP", c("5a0", "5a4"), c(1:3))
 kruskal(IQU~condition, "E1", unique(timeseries[["performance_level"]]), c("3", "5b", "6"), c(6))
 kruskal(IQU~condition, "E1", unique(timeseries[["performance_level"]]), c("3", "5b", "6"), c(6), reference=T)
 
+friedman <- function(formula=QU~condition, experiment_filter, performance_level_filter=unique(timeseries$performance_level), condition_filter=unique(timeseries$condition), id_filter=unique(timeseries$id), service_filter=unique(timeseries$service)) {
+ d = subset(timeseries, experiment %in% experiment_filter & performance_level %in% performance_level_filter & condition %in% condition_filter & service %in% service_filter, id %in% id_filter)
+
+ r = friedman.test(formula, d)
+ if (r$p.value < 0.001) paste0("$H(", r$parameter, ")=", round(r$statistic, 4), "$, $p<0.001$") 
+ else paste0("$H(", r$parameter, ")=", round(r$statistic, 4), "$, $p=", round(r$p.value, 4), "$") 
+}
+
 wilcox <- function(formula=QU~condition, experiment_filter, performance_level_filter=unique(timeseries$performance_level), condition_filter=unique(timeseries$condition), id_filter=unique(timeseries$id), service_filter=unique(timeseries$service), alternative="two.sided", paired=F, diffOnly = F) {
  d = subset(timeseries, experiment %in% experiment_filter & performance_level %in% performance_level_filter & condition %in% condition_filter & service %in% service_filter & id %in% id_filter)
  

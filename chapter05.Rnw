@@ -194,7 +194,7 @@ A detailed explanation is given in the following chapter.
 
 \begin{table}[h]
 	\centering
-	\begin{tabular}{c||c|c|c|c|c|c|c}
+	\begin{tabular}{c|c|c|c|c|c|c|c}
 	\multirow{2}{*}{Condition} & \multicolumn{7}{c}{Performance Level (per day)} \\
 		& 1..2 		& 3 & 4 & 5..8 & 9 & 10 & 11..12  \\
 	\midrule

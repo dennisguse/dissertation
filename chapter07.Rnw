@@ -61,7 +61,7 @@ In addition, an influence of the different usage situations and service types ca
 
 \begin{table}
  \centering
- \begin{tabulary}{\textwidth}{C|C||C|C|C||C||}
+ \begin{tabulary}{\textwidth}{C|C|C|C|C|C}
  \multirow{2}{*}{Condition}& \multicolumn{5}{c|}{Episodic Performance}        \\
            	& 1-3	& 4			& 5           & 6           & 7-9 \\
  \midrule
@@ -87,7 +87,7 @@ In addition, an influence of the different usage situations and service types ca
  \hline
  \C8{}         & HP 	& \textbf{LP} & HP          & \textbf{LP} & - \\
  \end{tabulary}
- \caption{Overview of all conditions with the episodic performance of all usages episodes.
+ \caption[Episodic performance for all conditions for one session]{Episodic performance for all conditions for one session.
  Non-\ac{HP} episodes are in \textbf{bold} (\ac{LP}) and \textit{italic} (\ac{MP}).}
  \label{tab:lab:hypothesesComparison}
 \end{table}
@@ -139,7 +139,7 @@ This can be achieved for digital transmission systems in the encoding and compre
 
 \ac{HP} can be properly chosen by selecting a current configuration that provides state-of-the-art performance level.
 For speech telephony this is at the time of this writing the transmission in wideband with proper loudness, but without temporal clipping, noise, echo, reverberation or other negative factors.
-For digital transmission of wideband speech the codec \emph{G.722} (Mode 1, \unit[64]{kbit/s})~\citep{itu-t_g.722} is often used as reference condition, because it achieves very similar quality judgments like pure wideband filtered speech signals. %TODO Add refs, Moeller, Raake, Marcel
+For digital transmission of wideband speech the codec \emph{G.722} (Mode 1, \unit[64]{kbit/s})~\citep{itu-t_g.722:_2012} is often used as reference condition, because it achieves very similar quality judgments like pure wideband filtered speech signals. %TODO Add refs, Moeller, Raake, Marcel
 %Furthermore, this codec is although it is rather old, but still in active use.
 In subjective listening-only experiments G.722 with Mode~1 typically achieves a \ac{MOS} of 4.5~on the 5-point \ac{ACR} scale.
 
@@ -151,7 +151,7 @@ In fact, this codec has not been used for speech telephony, but codecs that are 
 Even the worst codec, \ie, \ac{MELP}, only results in a 5-point \ac{MOS} of 3.0 \citep[][]. 
 LPC-10 is therefore useful for the investigation of multi-episodic perceived quality, because it allows to create severe reduction in performance alone.
 
-For \ac{MP} \emph{G.711}~\cite{itu-t_g.711} is selected, because this is the common reference condition for narrowband speech telephony.
+For \ac{MP} \emph{G.711}~\citep{itu-t_g.711:_1988} is selected, because this is the common reference condition for narrowband speech telephony.
 Compared to G.722 the difference between narrowband and wideband is measurable.
 However, in comparison to LPC-10 the re-synthesized speech signal contains far less artifacts.
 
@@ -259,7 +259,7 @@ For the \ac{VoD} service in \EIIb{} parts of a sitcom were selected.
 Here scenes were taken from \emph{The Big Bang Theory} (Season One, BluRay Version, German).
 Those scenes were selected, so the duration of the two-party conversational recordings were closely matched.
 Furthermore, scenes needed to be in itself meaningful, self-contained and likely candidates for usage episode, \ie, such a scene would be watched out of context.
-The episodes ranged from \unit[134]{sec} to \unit[198]{sec} ($\mu=$\unit[166]{sec})
+The episodes ranged from \unit[134]{sec} to \unit[198]{sec} ($\mu=$\unit[166]{sec}).
 
 For the simulation of an \ac{AoD} service in experiment \E3{} an audio book was selected.
 Here Isabel Allende's \emph{"City of the Beats"} was used, spoken by Marc Oliver Schulze a male German native speaker.\footnote{The audio book is sold as 24 CD collection: Isabel Allende: \emph{Die Stadt der wilden Götter / Im Reich des goldenen Drachen / Im Bann der Masken}, ISBN: 978-86717-191-5.}
@@ -331,7 +331,7 @@ First, episodic judgments are inspected with regard to consistency between condi
 Then differences between experiments are investigated to assess an impact of task and usage situation.
 Finally, multi-episodic judgments are evaluated with regard to the presented hypotheses (\cf, \autoref{chap:towards}).
 
-All results are reported as \ac{MOS} ranging from 0 to 6 (for the scale \cf, Figure~\ref{img:qualityScale}) with standard deviation in brackets.
+All results are reported as \ac{MOS} ranging from 0 to 6 (for the scale \cf, Figure~\ref{img:chap05:quality-scale}) with standard deviation in brackets.
 Beside the \ac{MOS} a statistical evaluation is conducted.
 Two unpaired samples are evaluated with a \emph{Wilcoxon rank-sum test}.
 More than two unpaired samples are compared with a \emph{Kruskal-Wallis test} and, if significant differences are found, a \emph{pairwise Wilcoxon rank-sum test with Holms' correction} as post-hoc test.
@@ -350,7 +350,7 @@ Such an effect could not be observed in the four experiments.
 \begin{table}
   \centering
 	\begin{tabulary}{\textwidth}{c|C|c|c|c}
-	\multirow{2}{*}{Experiment}	& \multirow{2}{*}{Service} & \multicolumn{3}{c}{Performance Level} \\
+	\multirow{2}{*}{Experiment}	& \multirow{2}{*}{Service} & \multicolumn{3}{c}{Episodic Judgment} \\
 						& & \ac{HP}																	& \ac{MP}	& \ac{LP}\\
 	\midrule
 	\E1{}				& Telephony (Conversation)	& \Sexpr{mos_qu_with_sd_by_condition("E1", "HP")} 	& \Sexpr{mos_qu_with_sd_by_condition("E1", "MP")}	& \Sexpr{mos_qu_with_sd_by_condition("E1", "LP")} \\
@@ -362,7 +362,7 @@ Such an effect could not be observed in the four experiments.
 	\hline
 	\E3{}				& \ac{AoD} 								& \Sexpr{mos_qu_with_sd_by_condition("E3", "HP")} 	& - 																					& \Sexpr{mos_qu_with_sd_by_condition("E3", "LP")} \\
 	\end{tabulary}
-  \caption{Episodic judgments (\ac{MOS}) per performance levels for experiment \E1{}, \EIIa{}, \EIIb{}, and \E3{}.}
+  \caption{Episodic judgments per performance levels for \E1{}, \EIIa{}, \EIIb{}, and \E3{}.}
 	\label{img:lab:episodicMOS}
 \end{table}
 
@@ -438,7 +438,7 @@ For \EIIb{} neither significant differences  are observed for the speech telepho
 This indicates that, as long as only \ac{HP} episodes are presented, the between-subject design did not affect this multi-episodic judgment.
 \autoref{tab:lab:multiconsistency} shows the multi-episodic judgment after the third episode, which is used as \ac{HP}-only reference.
 Although not directly comparable due to differences in usage situation as well as services, it must be noted that the judgments are rather close.
-In fact, for the speech telephony in \E1{}, \EIIa{}, \EIIb{} this judgment is not significant different (\Sexpr{kruskal(IQU~experiment, c("E1", "E2a", "E2b"), "HP", condition, 3, "telephony")}).
+In fact, for the speech telephony in \E1{}, \EIIa{}, and \EIIb{} this judgment is not significant different (\Sexpr{kruskal(IQU~experiment, c("E1", "E2a", "E2b"), "HP", condition, 3, "telephony")}).
 
 \begin{table}[h]
 	\centering
@@ -476,7 +476,7 @@ A one-sided post-hoc test finds that the reference is significant different to \
 	Condition   & \ac{LP} episode(s) 	& \multicolumn{2}{c}{Multi-episodic Judgment} \\
 	   & 	& \E1{} 		& \EIIa{} \\
 	\midrule
-	Reference	(3rd episode)	&	-				&	\Sexpr{mos_iqu_with_sd_by_condition("E1", condition, 3)} & \Sexpr{mos_iqu_with_sd_by_condition("E2a", condition, 3)} \\
+	Reference	(\ac{HP} only)	&	-				&	\Sexpr{mos_iqu_with_sd_by_condition("E1", condition, 3)} & \Sexpr{mos_iqu_with_sd_by_condition("E2a", condition, 3)} \\
 	\hline
 	\hline
 	\C3{}			& 6						& \Sexpr{mos_iqu_with_sd_by_condition("E1", "3", 6)} 			& \Sexpr{mos_iqu_with_sd_by_condition("E2a", "3", 6)} \\
@@ -490,7 +490,7 @@ A one-sided post-hoc test finds that the reference is significant different to \
 	\hline
 	\C4{}			& 4..5			& \Sexpr{mos_iqu_with_sd_by_condition("E1", "4", 6)} 			& \Sexpr{mos_iqu_with_sd_by_condition("E2a", "4", 6)} \\
 	\end{tabulary}
-	\caption{\autoref{hypo:number}: Multi-episodic judgments for \E1{} and \EIIa{}.}
+	\caption{Multi-episodic judgments after the 6th episode for \autoref{hypo:number}.} %	for \E1{} and \EIIa{}
 	\label{tab:lab:hyponumber}
 \end{table}
 
@@ -534,11 +534,11 @@ In \autoref{hypo:position} it is hypothesized that presenting \ac{HP} episodes a
 	\hline
 	\C5{} (a+b) 	& 5..6	& \Sexpr{mos_iqu_with_sd_by_condition("E1", "5b", 6)}		& \Sexpr{mos_iqu_with_sd_by_condition("E2a", "5a", 6)} \\
  \end{tabulary}
- \caption{\autoref{hypo:position}: \ac{MOS} of multi-episodic judgment after the 6th usage episode for experiment \E1{} and \EIIa{}.}
+ \caption{: Multi-episodic judgment after the 6th episode for \autoref{hypo:position}.}
  \label{tab:lab:hypoposition}
 \end{table}
 
-For \E1{} the multi-episodic judgment is significant different between the \C1{}, \CIIa{}, and \C3{}(\Sexpr{kruskal(IQU~condition, "E1", performance_level, c("1", "2a", "3"), c(6),)}).
+For \E1{} the multi-episodic judgment is significant different between the \C1{}, \CIIa{}, and \C3{} (\Sexpr{kruskal(IQU~condition, "E1", performance_level, c("1", "2a", "3"), c(6),)}).
 A one-sided post-hoc tests shows that \C1{} is significant different to \CIIa{} and \C3{} (each \Sexpr{wilcox.pairwise.print(IQU~condition, "E1", performance_level, c("1", "2a", "3"), c(6), alternative="less")[1,1]}), but \CIIa and \C3{} are not significant different (\Sexpr{wilcox.pairwise.print(IQU~condition, "E1", performance_level, c("1", "2a", "3"), c(6), alternative="less")[2,2]}).
 For \E1{} also \C4{}, and \CVb{} are also significant different (\Sexpr{wilcox(IQU~condition, "E1", unique(performance_level), c("4", "5b"), c(6), alternative="greater")}).
 
@@ -570,7 +570,7 @@ The latter presents the 4th and 6th episode in \ac{LP}.
 	\hline
 	\CVa{}			& 5..6			& \Sexpr{mos_iqu_with_sd_by_condition("E2a", "5a", 6)}\\
  \end{tabulary}
- \caption{\autoref{hypo:consecutive}: \ac{MOS} of multi-episodic judgment after the 6th usage episode for experiment \EIIa{}.}
+ \caption{: Multi-episodic judgment after the 6th episode for \autoref{hypo:consecutive}.}
  \label{tab:lab:hypoconsecutive}
 \end{table}
 
@@ -597,7 +597,7 @@ However, \CIIa{} and \C7{} are not significant different (\Sexpr{wilcox.pairwise
 \begin{table}[h!]
 \centering
  \begin{tabulary}{\columnwidth}{C|C|C|C}
-	\multirow{2}{*}{Conditions}   & \multicolumn{2}{c|}{6th usage episode} & \multirow{2}{*}{Multi-episodic \newline Judgment}\\
+	\multirow{2}{*}{Conditions}   & \multicolumn{2}{c|}{6th usage episode} & \multirow{2}{*}{Multi-episodic Judgment}\\
 	            & Performance 	& Episodic Judgment & \\
 	\midrule 
 	\CIIa{}	& \ac{HP}		& \Sexpr{mos_qu_with_sd_by_condition("E1", "HP", "2a", 6)}	& \Sexpr{mos_iqu_with_sd_by_condition("E1", "2a", 6)} \\
@@ -606,7 +606,7 @@ However, \CIIa{} and \C7{} are not significant different (\Sexpr{wilcox.pairwise
 	\hline
 	\CVb{}		& \ac{LP}		& \Sexpr{mos_qu_with_sd_by_condition("E1", "LP", "5b", 6)} 	& \Sexpr{mos_iqu_with_sd_by_condition("E1", "5b", 6)} \\
  \end{tabulary}
- \caption{\autoref{hypo:strength}: \ac{MOS} of multi-episodic judgment after the 6th usage episode for \E1{}.}
+ \caption{Multi-episodic judgment after the 6th usage episode for \autoref{hypo:strength}.}
  \label{tab:lab:hypostrength}
 \end{table}
 
@@ -614,7 +614,7 @@ This indicates that presenting the 6th episode either in \ac{MP} or \ac{HP} does
 It can thus be concluded that \autoref{hypo:strength} is verified.
 This is in line with prior work on retrospective episodic experiences \citep[e.g.,][]{kahneman_experienced_2000} as well as episodic \ac{QoE} \citep[e.g.,][]{weiss_modeling_2009}, where it is denoted as (negative) peak effect.
 
-\subsubsection{\autoref{hypo:recovery}: Recovery after \ac{LP} Episodes}
+\subsubsection{\autoref{hypo:recovery}: Recovery after \ac{LP} Episodes}\label{lab:result:recovery}
 In \autoref{hypo:recovery} the recovery of multi-episodic is investigated.
 This can be investigated in \E1{} by comparing condition \CVb{} and \C7{}.
 Both present nine episodes while all except the 5th and 6th are presented in \ac{HP}.
@@ -636,7 +636,7 @@ Between those two conditions the judgment after the 6th (\Sexpr{wilcox(IQU~condi
 	\hline
 	\C7{}			& 4:\ac{HP}, 5:\ac{LP}, 6:\ac{MP}	& \Sexpr{mos_iqu_with_sd_by_condition("E1", "7", 3)}	& \Sexpr{mos_iqu_with_sd_by_condition("E1", "7", 6)} & \Sexpr{mos_iqu_with_sd_by_condition("E1", "7", 9)}\\
  \end{tabulary}
- \caption{\autoref{hypo:recovery}: \ac{MOS} of multi-episodic judgments after the 3rd, 6th and 9th usage episode for \E1{}.}
+ \caption{Multi-episodic judgments after the 3rd, 6th and 9th episode for \autoref{hypo:recovery}.}
  \label{tab:lab:hyporecovery}
 \end{table}
 
@@ -667,7 +667,7 @@ The episodic judgment for this condition and the multi-episodic judgments are sh
 	\hline
 	\CIIb{}			& doubled	& \Sexpr{mos_qu_with_sd_by_condition("E3", "LP", "2b", 5)} 	& \Sexpr{mos_iqu_with_sd_by_condition("E3", "2b", 6)} \\
  \end{tabulary}
- \caption{\autoref{hypo:duration}: \ac{MOS} of multi-episodic judgment after the 6th usage episode for \E3{}.}
+ \caption{Multi-episodic judgment after the 6th episode for \autoref{hypo:duration}.}
  \label{tab:lab:hypoduration}
 \end{table}
 
@@ -702,7 +702,7 @@ With regard to the speech telephony service no significant difference on the fin
 	\hline
 	\C4{}					& \Sexpr{mos_iqu_with_sd_by_condition("E2b", "5a4", 6, "telephony")}	& \Sexpr{mos_iqu_with_sd_by_condition("E2b", "5a4", 6, "VoD")}\\
  \end{tabulary}
- \caption{\autoref{hypo:independent}: \ac{MOS} of multi-episodic judgment after the 6th usage episode for \EIIb{}.}
+ \caption{Multi-episodic judgment after the 6th episode for \autoref{hypo:independent}.}
  \label{tab:lab:hypoindependent}
 \end{table}
 
