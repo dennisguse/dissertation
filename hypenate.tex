@@ -8,5 +8,21 @@
 \hyphenation{judg-ment}
 \hyphenation{judg-ments}
 
+%\hyphenation{UA\-25EX}
+%\hyphenation{CAT\-5}
+%\hyphenation{ITU\-T}
+
+
 %multi-episodic
 %state of the art
+
+\makeatletter
+    \titleformat{\chapter}[display]%             
+        {\relax}{\raggedleft{\color{halfgray}\chapterNumber\thechapter} \\ }{0pt}%
+        {\titlerule\vspace*{.9\baselineskip}\raggedright\spacedallcaps}[\normalsize\vspace*{.8\baselineskip}\titlerule]%
+        
+    \titleformat{\paragraph}
+        {\normalfont\normalsize}{\theparagraph}{1em}{\spacedlowsmallcaps} 
+    \titleformat{\subparagraph}[runin]
+        {\normalfont\normalsize}{\thesubparagraph}{1em}{\spacedlowsmallcaps} 
+\makeatother

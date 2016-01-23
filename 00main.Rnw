@@ -46,14 +46,6 @@
 %*******************************************************
 \addbibresource{Bibliography.bib}
 
-    %subparagraph
-\makeatletter
-    \titleformat{\paragraph}
-        {\normalfont\normalsize}{\theparagraph}{1em}{\spacedlowsmallcaps} 
-    \titleformat{\subparagraph}[runin]
-        {\normalfont\normalsize}{\thesubparagraph}{1em}{\spacedlowsmallcaps} 
-\makeatother
-
 %********************************************************************
 % Hyphenation
 %*******************************************************
@@ -91,6 +83,7 @@
 \pagenumbering{arabic}\setcounter{page}{1}
 %TODO \part{Introduction and State of the Art}\cleardoublepage
 
+\part*{Thesis}\cleardoublepage
 \include{chapter01}
 
 %\part{Related Work and State-of-the-Art}\cleardoublepage %TODO Make one Chapter to rule them all!
@@ -110,9 +103,12 @@
 \include{chapter10}
 
 \cleardoublepage
-\def\thechapter{\Roman{chapter}}\setcounter{chapter}{0}
+%\setcounter{chapter}{0}
+%\renewcommand{\theHchapter}{\Roman{chapter}}
+%\renewcommand{\thechapter}{\Roman{chapter}}
+
 %\pagenumbering{Roman}\setcounter{page}{1}
-\addtocontents{toc}{\protect\newpage}
+%\addtocontents{toc}{\protect\newpage}
 \part*{Appendix}\cleardoublepage\label{chap:appendix}
 \include{appendix}
 
