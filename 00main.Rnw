@@ -46,6 +46,14 @@
 %*******************************************************
 \addbibresource{Bibliography.bib}
 
+    %subparagraph
+\makeatletter
+    \titleformat{\paragraph}
+        {\normalfont\normalsize}{\theparagraph}{1em}{\spacedlowsmallcaps} 
+    \titleformat{\subparagraph}[runin]
+        {\normalfont\normalsize}{\thesubparagraph}{1em}{\spacedlowsmallcaps} 
+\makeatother
+
 %********************************************************************
 % Hyphenation
 %*******************************************************
