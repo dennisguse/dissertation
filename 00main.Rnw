@@ -83,7 +83,7 @@
 \pagenumbering{arabic}\setcounter{page}{1}
 %TODO \part{Introduction and State of the Art}\cleardoublepage
 
-\part*{Thesis}\cleardoublepage
+%\part*{Thesis}\cleardoublepage
 \include{chapter01}
 
 %\part{Related Work and State-of-the-Art}\cleardoublepage %TODO Make one Chapter to rule them all!
@@ -109,7 +109,7 @@
 
 %\pagenumbering{Roman}\setcounter{page}{1}
 %\addtocontents{toc}{\protect\newpage}
-\part*{Appendix}\cleardoublepage\label{chap:appendix}
+%\part*{Appendix}\cleardoublepage\label{chap:appendix}
 \include{appendix}
 
 %********************************************************************

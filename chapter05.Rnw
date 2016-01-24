@@ -16,41 +16,39 @@ timeseries=timeseries[-which(timeseries$experiment == "E1" & timeseries$conditio
 %At the end of this chapter I must have made clear what methodologies are used and also made clear what their respective target is.
 %\end{chapter-abstract}
 
-%\section{Introduction}
-
 %\cite{staelens_assessing_2009}
 %\cite{schatz_vienna_2011}, 3 Weeks!
 Services are in general used on a regular basis by a user~\citep[\cf,][]{geerts_linking_2010}.
 The experiences of a usage episode lead to a perceived quality in the user of this very episode.
 The definition of \emph{usage episode} in the context of multi-episodic \ac{QoE} is derived from concepts of episodic memory (\cf, \autoref{chap:03}) focusing on usage of telecommunication systems.
 \begin{definition}[Usage Episode]\label{def:episode}
-An episode is a distinct, meaningful, and self-contained interaction by user with a service or system to achieve his goal(s).
+A usage episode is a distinct, meaningful, and self-contained interaction by a user with a service or system to achieve his goal(s).
 \end{definition}
-Goal achievement as requirement for an episode follows the concept of utility and expected utility by \citet{kahneman_experienced_2000}.
-
-The multi-episodic perceived quality is the result of an \emph{integrating process} combining prior experiences and perceived qualities with said service.
+Goal achievement, as requirement for an episode, follows the concept of utility and expected utility by \citet{kahneman_experienced_2000}.
+The multi-episodic perceived quality is the result of an \emph{integrating process} combining prior experiences and perceived qualities with one service.
 Prior experiences can affect the \emph{quality formation process} of a user and thus might affect the perceived quality of following usage episodes.
 The user's behavior towards the service might also be affected by the perceived quality affecting usage frequency, task solving strategies, or even lead to abandoning the service completely.
 
-Multi-episodic perceived quality must be thus regarded as a sequential process in which the order of usage episodes and their individual experiences affect the outcome.
+Multi-episodic perceived quality is thus a sequential process in which the order of usage episodes and their individual experiences affect the outcome.
 Investigations on multi-episodic perceived quality can therefore only be undertaken in experiments adhering to a between-subject design, so that every participants is only exposed to one condition.
 
-In the field of perceived quality multi-episodic perceived quality has so far only received limited attention.
+In the field of perceived quality, multi-episodic perceived quality has so far only received limited attention.
 One reason for this is that research in the field of perceived quality is technology-driven.
 This means that the major focus lies on the evaluation of new technologies, understanding of potential impairments, and the impact on perceived quality.
 The derived knowledge is then applied to enhance existing technologies.
-For applicability it is often sufficient to understand the relationship between different performance parameters and the general effect on perceived quality, in the range of seconds up to some minutes, and neglect the influence of time, tasks and other factors on perceived quality.
+For practical use, it is often sufficient to understand the relationship between different performance parameters and the general effect on perceived quality in the range of seconds up to some minutes.
+Thus an influence of time, tasks and other factors on perceived quality is often neglected.
 
-\subsection{Digression: Multi-episodic usage in \acs{UX}}
+\subsection{Excursus: Multi-episodic usage in \acs{UX}}
 Multi-episodic evaluation has been done so far for the evaluation of \ac{UX}.
 Perceived quality and \ac{UX} conceptually overlap as both focus on experience in general and, in many cases, experience with technology \citep[\cf,][]{wechsung_quality_2014}.
-\ac{UX}, steaming from usability, focuses on the interaction with technology and how interactions affect usage, behavior, and emotions towards used technology.\footnote{For a longer discussion on similarities and difference between \ac{QoE} and \ac{UX} see \cite{wechsung_quality_2014} and also \cite{hassenzahl_user_2008}.}
+\ac{UX}, steaming from usability, focuses on the interaction with technology and how interactions affect usage, behavior, and emotions towards used technology.\footnote{For a longer discussion on similarities and difference between \ac{QoE} and \ac{UX} see \citet{wechsung_quality_2014} and also \citet{hassenzahl_user_2008}.}
 \cite{halpern_two_1990}
 As interaction behavior towards technology often changes as a user learns how to use it and which tasks are well-suited, makes multi-episodic evaluation an important aspect of \ac{UX}.
-The multi-episodic terminology is described by \citet[p. 8]{roto_user_2011}, but it is missed to put it into context with prior work and do not present their definitions.
+The multi-episodic terminology is described by \citet[][p. 8]{roto_user_2011}, but it is missed to put it into context with prior work and do not present their definitions.
 
-\cite{karapanos_user_2009} investigated in an experiment with \unit[6]{subjects} how expectations and usage changes from before buying a smart phone and after an overall usage period of 4 weeks.
-This is extended by \cite{kujala_ux_2011} with the \emph{UX Curve Method}.
+\citet{karapanos_user_2009} investigated in an experiment with \unit[6]{subjects} how expectations and usage changes from before buying a smart phone and after an overall usage period of 4 weeks.
+This is extended by \citet{kujala_ux_2011} with the \emph{UX Curve Method}.
 In this method a participant evaluates his experiences with a product or service in retrospective.
 The participant draws a line reflecting how is satisfaction changed over time and annotates the vertices with the reason for the change.
 Here also behavioral changes should be reported.
