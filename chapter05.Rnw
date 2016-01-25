@@ -166,7 +166,7 @@ However, investigating multi-episodic perceived quality beyond one session is ne
 The first work on multi-episodic perceived quality while applying the defined-use methodology was performed by \citet{moller_single-call_2011}.
 
 \paragraph*{Design}
-In this experiment, pairs of two participants used a video-telephony service over a study period of \unit[12]{days}.
+In this experiment, pairs of two participants used a video-telephony service over a usage period of \unit[12]{days}.
 \citet{moller_single-call_2011}\footnote{It must be noted that \citet{moller_single-call_2011} uses the term \emph{service quality} as synonym to multi-episodic perceived quality, rather than service quality in terms of \citet{parasuraman_conceptual_1985} (\cf, \autoref{chap:03}).} followed the premise that the service works in general, \ie, providing the best achievable performance, but sometimes usage episodes are only presented with reduced performance.
 The service needed to be used twice a day with the first call between \unit[6]{h} and \unit[15]{h} and the second call between \unit[15]{h} and midnight.
 For each of those \unit[24]{calls} a \ac{SCT} \citep[ITU-T~P.805][]{itu-t_p.805:_2007} needed to be solved.
@@ -248,7 +248,7 @@ With regard to condition~5, the episodic judgments of \ac{LP} episodes are close
 Furthermore, \ac{MP} judgments are only slightly lower than \ac{HP} judgments for condition 1..4.
 As \ac{MP} and \ac{HP} were not presented together this might indicate that the scale is used different or were even not perceived different.
 
-The results show that defined-use methodology could be applied successful, because episodic judgments could be taken reliably even in a field study.
+The results show that defined-use methodology could be applied successful, because episodic judgments could be taken reliably even in a field experiment.
 \citet{moller_single-call_2011} noted that episodic judgments of \ac{HP} episodes have a tendency to slowly increase over the usage period.
 Here an increase of \unit[0.3]{pt} of \ac{MOS} is reported over all 5 conditions.
 A similar tendency is observed for consecutive \ac{LP} episodes.
@@ -285,7 +285,7 @@ Thus, it must be concluded that the applied conditions did not affect the multi-
 %performance levels together with the varying number and distribution of \ac{LP} episodes
 
 \subparagraph{Discussion}
-\citet{moller_single-call_2011} successfully applied the defined-use assessment method for the assessment of multi-episodic \ac{QoE} in a field study with a usage period of 12 days.
+\citet{moller_single-call_2011} successfully applied the defined-use assessment method for the assessment of multi-episodic \ac{QoE} in a field experiment with a usage period of 12 days.
 The episodic quality judgments are consistent with the desired performance levels, showing that the deployed system could provide the performance in a reliable manner.
 However, the multi-episodic perceived quality judgments only provide limited insight, because the observed differences between conditions are rather small.
 This might be due to the fact that the applied low performance did not represent a \emph{severe} enough degradation or that the number of degraded usage episodes was too small.
@@ -305,7 +305,7 @@ Selecting a two-party conversation (\ie, \ac{SCT}) might have been another issue
 This implicitly assumes a \emph{duration neglect} with regard to multi-episodic perceived quality.
 The effect of duration neglect, however, has not neither been proved nor disproved so far for multi-episodic perceived quality.
 
-The experiment of \citet{moller_single-call_2011} showed that multi-episodic perceived quality can be assessed with defined-use in a field study.
+\citet{moller_single-call_2011} showed that multi-episodic perceived quality can be assessed with defined-use in a field experiment.
 Although participants used the service in their home environment on their own, \ie, in an uncontrolled and to the researchers unknown setting, which is an additional source of noise, the episodic results show that perceived quality can be assessed successfully with this methodology.
 
 \section{Conclusion}
