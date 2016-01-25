@@ -199,15 +199,15 @@ Depending on the prior experiences of participants, this might affect quality ju
 	\multirow{2}{*}{Condition} & \multicolumn{7}{c}{Performance Level (per day)} \\
 		& 1..2 		& 3 & 4 & 5..8 & 9 & 10 & 11..12  \\
 	\midrule
-	1 & \ac{HP} & \ac{HP} & \ac{HP} & \ac{HP} & \ac{HP} & \ac{HP} & \ac{HP} \\
+	1 & \ac{HP} & \acs{HP} & \acs{HP} & \acs{HP} & \acs{HP} & \acs{HP} & \acs{HP} \\
 	\hline
-	2 & \ac{HP} & \textbf{\ac{LP}} & \ac{HP} & \ac{HP} & \ac{HP} & \ac{HP} & \ac{HP} \\
+	2 & \ac{HP} & \textbf{\acs{LP}} & \acs{HP} & \acs{HP} & \acs{HP} & \acs{HP} & \acs{HP} \\
 	\hline
-	3 & \ac{HP} & \textbf{\ac{LP}} & \ac{HP} & \ac{HP} & \textbf{\ac{LP}} & \ac{HP} & \ac{HP} \\
+	3 & \ac{HP} & \textbf{\acs{LP}} & \acs{HP} & \acs{HP} & \textbf{\acs{LP}} & \acs{HP} & \acs{HP} \\
 	\hline
-	4 & \ac{HP} & \textbf{\ac{LP}} & \textbf{\ac{LP}} & \ac{HP} & \textbf{\ac{LP}} & \textbf{\ac{LP}} & \ac{HP} \\
+	4 & \ac{HP} & \textbf{\acs{LP}} & \textbf{\acs{LP}} & \acs{HP} & \textbf{\acs{LP}} & \textbf{\acs{LP}} & \acs{HP} \\
 	\hline
-	5 & \textit{\ac{MP}} & \textbf{\ac{LP}} & \textit{\ac{MP}} & \textit{\ac{MP}} & \textbf{\ac{LP}} & \textit{\ac{MP}} & \textit{\ac{MP}} \\
+	5 & \textit{\ac{MP}} & \textbf{\acs{LP}} & \textit{\acs{MP}} & \textit{\acs{MP}} & \textbf{\acs{LP}} & \textit{\acs{MP}} & \textit{\acs{MP}} \\
 	\end{tabular}
 	\caption{Conditions applied by \citet{moller_single-call_2011} with performance level per day.}
 	\label{tab:chap05:conditions}
@@ -231,7 +231,7 @@ Results are reported as \ac{MOS} ranging from 0~to~6.
 	<<plotMOLLER, echo=F, fig.height=3>>=
 		ggplot_timeseries_create(subset(timeseries, experiment=="MOELLER" & condition=="S2")) + geom_boxplot(aes(factor(id), y=QU), na.rm=T) + scale_x_discrete(breaks=seq(1, 24, by=2), labels=c(1:12)) + xlab("Day")
 	@
-	\caption[Box plot of episodic judgments for condition 2 of \citet{moller_single-call_2011}.]{Box plot of episodic judgments for condition 2 of \citet{moller_single-call_2011} (own illustration).}
+	\caption[Box plot of episodic judgments for condition~2 of \citet{moller_single-call_2011}.]{Box plot of episodic judgments for condition~2 of \citet{moller_single-call_2011} (own illustration).}
 	\label{img:state:MOLLERboxplot}
 \end{figure}
 
@@ -245,7 +245,7 @@ In fact, the differences between those conditions are relatively small and likel
 For condition~2..4 a significant difference between the two performance level is observed (Wilcoxon rank-sum test: \Sexpr{wilcox(QU~performance_level, "MOELLER", c("HP", "LP"), c("S1", "S2", "S3"))}).
 It must be noted that although \ac{HP} and \ac{LP} are different, \ac{LP} was still judged as "fair" and thus seems not to be perceived as a severe degradation.
 With regard to condition~5, the episodic judgments of \ac{LP} episodes are close to condition~2..4.
-Furthermore, \ac{MP} judgments are only slightly lower than \ac{HP} judgments for condition 1..4.
+Furthermore, \ac{MP} judgments are only slightly lower than \ac{HP} judgments for condition~1..4.
 As \ac{MP} and \ac{HP} were not presented together this might indicate that the scale is used different or were even not perceived different.
 
 The results show that defined-use methodology could be applied successful, because episodic judgments could be taken reliably even in a field experiment.

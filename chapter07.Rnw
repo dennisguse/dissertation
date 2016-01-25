@@ -65,30 +65,30 @@ In addition, an influence of the different usage situations and service types ca
  \multirow{2}{*}{Condition}& \multicolumn{5}{c|}{Episodic Performance}        \\
            	& 1-3	& 4			& 5           & 6           & 7-9 \\
  \midrule
- \C0{}		   		& HP	& HP		& HP			& HP		  & - \\
+ \C0{}		   		 & \ac{HP}	& \ac{HP}		& \ac{HP}			& \ac{HP}		  & - \\
  \hline
- \C1{}         & HP 	& \textbf{LP}& HP          & HP          & - \\
+ \C1{}         & \ac{HP} 	& \textbf{\ac{LP}}& \ac{HP}          & \ac{HP}          & - \\
  \hline
- \CIIa{}       & HP 	& HP          & \textbf{LP} & HP          & - \\
+ \CIIa{}       & \ac{HP} 	& \ac{HP}          & \textbf{\ac{LP}} & \ac{HP}          & - \\
  \hline
- \CIIb{}       & HP 	& HP          & \textbf{LP}, long & HP    & - \\
+ \CIIb{}       & \ac{HP} 	& \ac{HP}          & \textbf{\ac{LP}}, long & \ac{HP}    & - \\
  \hline
- \C3{}         & HP 	& HP          & HP          & \textbf{LP} & - \\
+ \C3{}         & \ac{HP} 	& \ac{HP}          & \ac{HP}          & \textbf{\ac{LP}} & - \\
  \hline
- \C4{}         & HP 	& \textbf{LP} & \textbf{LP} & HP          & - \\
+ \C4{}         & \ac{HP} 	& \textbf{\ac{LP}} & \textbf{\ac{LP}} & HP          & - \\
  \hline
- \CVa{}        & HP 	& HP          & \textbf{LP} & \textbf{LP} & - \\
+ \CVa{}        & \ac{HP} 	& \ac{HP}          & \textbf{\ac{LP}} & \textbf{\ac{LP}} & - \\
  \hline
- \CVb{}        & HP 	& HP          & \textbf{LP} & \textbf{LP} & HP \\
+ \CVb{}        & \ac{HP} 	& \ac{HP}          & \textbf{\ac{LP}} & \textbf{\ac{LP}} & \ac{HP} \\
  \hline
- \C6{}         & HP 	& \textbf{LP} & \textbf{LP} & \textbf{LP} & - \\
+ \C6{}         & \ac{HP} 	& \textbf{\ac{LP}} & \textbf{\ac{LP}} & \textbf{\ac{LP}} & - \\
  \hline
- \C7{}         & HP 	& HP          & \textbf{LP} & \textit{MP} & HP \\
+ \C7{}         & \ac{HP} 	& \ac{HP}          & \textbf{\ac{LP}} & \textit{\ac{MP}} & \ac{HP} \\
  \hline
- \C8{}         & HP 	& \textbf{LP} & HP          & \textbf{LP} & - \\
+ \C8{}         & \ac{HP} 	& \textbf{\ac{LP}} & \ac{HP}          & \textbf{\ac{LP}} & - \\
  \end{tabulary}
  \caption[Episodic performance for all conditions for one session]{Episodic performance for all conditions for one session.
- Non-\ac{HP} episodes are in \textbf{bold} (\ac{LP}) and \textit{italic} (\ac{MP}).}
+ Non-\acs{HP} episodes are in \textbf{bold} (\acs{LP}) and \textit{italic} (\acs{MP}).}
  \label{tab:lab:hypothesesComparison}
 \end{table}
 
@@ -165,7 +165,7 @@ It must be noted that LPC-10 results is very different to G.722 and G.711 as onl
 \begin{table}[h]
  \centering
  \begin{tabulary}{\columnwidth}{C|C|C|C}
-   Performance & Signal bandwidth & Codec & \ac{MOS} (\ac{POLQA})\\
+   Performance & Signal bandwidth & Codec & \acs{MOS} (\acs{POLQA})\\
    \midrule
    \ac{HP} & 50...\unit[7000]{Hz}  & G.722, Mode~1 & 4.0 \\ %MOS1-5: 3.9
    \hline
@@ -174,7 +174,7 @@ It must be noted that LPC-10 results is very different to G.722 and G.711 as onl
    \ac{LP} & 300...\unit[3400]{Hz} & LPC-10        & 1.9 \\ %MOS1-5: 2.0
    \end{tabulary}
    \caption[Comparison of the selected codecs for performance levels with \acs{POLQA}].{Comparison of the selected codecs for\acs{HP}, \acs{MP}, and \acs{LP} with \acs{POLQA}.
-   The prediction was transformed on the 7-point \ac{CCR} scale shown by applying the transformation described by \citet{koster_comparison_2015}.}
+   The prediction was transformed on the 7-point \acs{CCR} scale shown by applying the transformation described by \citet{koster_comparison_2015}.}
    \label{tab:lab:performance}
 \end{table}
 
@@ -321,7 +321,7 @@ For none participants this criteria was met and thus none was excluded from the 
 	\end{tabular}
 	\caption{
 	Overview on conditions for the experiments \E1{}, \EIIa{}, \EIIb{}, and \E3{} incl. number of participants per condition.
-	For \EIIb{} the conditions of the \ac{VoD} are shown whereas the telephony service was always presented in \CVa{} for all participants.}
+	For \EIIb{} the conditions of the \acs{VoD} are shown whereas the telephony service was always presented in \CVa{} for all participants.}
 	\label{tab:lab:participants}
 \end{table}
 
@@ -534,7 +534,7 @@ In \autoref{hypo:position} it is hypothesized that presenting \ac{HP} episodes a
 	\hline
 	\C5{} (a+b) 	& 5..6	& \Sexpr{mos_iqu_with_sd_by_condition("E1", "5b", 6)}		& \Sexpr{mos_iqu_with_sd_by_condition("E2a", "5a", 6)} \\
  \end{tabulary}
- \caption{: Multi-episodic judgment after the 6th episode for \autoref{hypo:position}.}
+ \caption{Multi-episodic judgment after the 6th episode for \autoref{hypo:position}.}
  \label{tab:lab:hypoposition}
 \end{table}
 

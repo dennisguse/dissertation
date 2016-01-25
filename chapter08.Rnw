@@ -124,7 +124,7 @@ An analysis of the speech telephony service is omitted here as the implemented s
 	<<plotE4C0, echo=F, fig.height=3>>=
 		ggplot_timeseries_create(subset(timeseries, experiment=="E4a" & condition=="A1" & service == "telephony")) + geom_boxplot(aes(factor(id), y=QU), na.rm=T)
 	@
-	\caption{Boxplot of episodic judgments for \E4{} condition \C0{}.}
+	\caption{Box plot of episodic judgments for \E4{} condition \C0{}.}
 	\label{img:field:E4conditionA1TELboxplot}
 \end{figure}
 
@@ -235,7 +235,7 @@ In this experiment no increase of episodic judgments for \ac{HP} episodes as in 
 	<<plotE5C9, echo=F, fig.height=3>>=
 		ggplot_timeseries_create(subset(timeseries, experiment=="E5" & condition=="P2")) + geom_boxplot(aes(factor(id), y=QU), na.rm=T)
 	@
-	\caption{Boxplot of episodic judgments in experiment \E5{} for condition \C9{} (left) and \CX{} (right).}
+	\caption{Box plot of episodic judgments in  \E5{} for \C9{} (left) and \CX{} (right).}
 	\label{img:field:boxplotE5}
 \end{figure}
 
@@ -281,7 +281,7 @@ In fact, this judgment is the only one for the \ac{VoD} service that significant
 	\hline
 	14	& \Sexpr{wilcox(IQU~condition, "E5",  c("HP", "LP"), c("P1", "P2"), 15, "AoD")} & \Sexpr{wilcox(IQU~condition, "E5",  c("HP", "LP"), c("P1", "P2"), 15, "VoD")} \\
 	\end{tabular}
-	\caption{Multi-episodic Judgments of \E6{} by condition and service.}
+	\caption{Multi-episodic judgments of \E6{} by condition and service.}
 	\label{tab:field:e5results}
 \end{table}
 
@@ -503,7 +503,7 @@ The three conditions, however, are not significant different with regard to the 
 	\hline
 	\C5{}			& 5..6			& \Sexpr{mos_iqu_with_sd_by_condition("E6a", "5a", 14)}\\
  \end{tabular}
- \caption{Multi-episodic judgment after the 6th day for \ac{MOS}.}
+ \caption{Multi-episodic judgment after the 6th day for \acs{MOS}.}
  \label{tab:field:hypoconsecutive}
 \end{table}
 
