@@ -179,7 +179,7 @@ It must be noted that LPC-10 results is very different to G.722 and G.711 as onl
 \end{table}
 
 In \E1{} two-party conversation is used, where the end-to-end delay is an additional factor influencing perceived quality.
-Providing a proper one-way delay up to \unit[100]{ms} is rarely noticeable and thus not perceived as degradation~\citep[\cf,][p. 9]{itu-t_g.107:_2005}.
+Providing a proper one-way delay up to \unit[100]{ms} is rarely noticeable and thus not perceived as degradation~\citep[\cf,][p.~9]{itu-t_g.107:_2005}.
 LPC-10 requires a look-ahead of \unit[90]{ms} while a frame size of \unit[22.5]{ms} is applied resulting in an delay of up to \unit[112.5]{ms} for encoding alone.
 G.711 and G.722 provide a algorithmic delay without look-ahead of \unit[0.125]{ms} and, respectively, while both codecs can be run with minimal frame size of \unit[10]{ms}.
 Thus LPC-10 alone might introduce a noticeable difference due to the additional introduced delay, which might result in a slight reduction in perceived quality in a conversational case.
@@ -229,7 +229,7 @@ In \E1{} the duration was not controlled as the \acp{SCT} needed to be fulfilled
 In the \emph{fifth stage} final feedback about the fourth stage is collected.
 %In all experiments the underlying question of the \ac{NPS} is collected.
 %The \ac{NPS} has been proposed as the one sufficient question indicating business success~\citep[\cf,][]{reichheld_one_2003}.
-%This score assessed on 11-point discrete scale ranging from 0 to 10 and is phrased as "How likely is it that you would recommend our company/product/service to a friend or colleague?"~\citep[][p. 5]{reichheld_one_2003}.
+%This score assessed on 11-point discrete scale ranging from 0 to 10 and is phrased as "How likely is it that you would recommend our company/product/service to a friend or colleague?"~\citep[][p.~5]{reichheld_one_2003}.
 %In this study it was rephrased to "On scale ranging from 0 (unlikely) to 10 (likely), how likely is it that you would recommend the service to a friend or colleague?"\footnote{The question was phrased in German: "Auf einer Skala von 0 (unwahrscheinlich) bis 10 (wahrscheinlich), wie wahrscheinlich ist es, dass Sie das System einem Freund oder Kollegen weiterempfehlen werden?".}.
 In \E1{}, \EIIa{}, \EIIb{}, and \E3{} requested to answer the following questions, if degradations have been perceived.
 First the total count of degraded episodes needed to be answered, followed by request to denote the exact episodes with degradations.
