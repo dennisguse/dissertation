@@ -3,7 +3,8 @@ ggplot_timeseries_create <- function(timeseries) {
  p <- ggplot(timeseries, aes(id, y=id)) + coord_cartesian(ylim=c(-0.3, 6.3), xlim=c(min(timeseries$id)-0.5, max(timeseries$id)+0.5)) 
  
  #  p <- p + ylab("QoE") + xlab("Episode") 
- p <- p + theme(axis.title.x = element_blank(), axis.title.y = element_blank())
+ #p <- p + theme(axis.title.x = element_blank(), axis.title.y = element_blank())
+ p <- p + theme(axis.title.y = element_blank())
  p <- p + theme(axis.text.x=element_text(colour="black"))
  
  #  p <- p + scale_y_continuous(labels=c("extrem schlecht (0)","schlecht (1)","dürftig (2)", "ordentlich (3)", "gut (4)", "ausgezeichnet (5)", "ideal (6)"), breaks=0:6)
