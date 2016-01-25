@@ -145,7 +145,7 @@ In subjective listening-only experiments G.722 with Mode~1 typically achieves a 
 
 For \ac{LP} the speech signal the \emph{LPC-10}\footnote{LPC-10 is also known as \emph{FS-1015} and \emph{STANAG 4198}.} codec is selected.
 This codec is designed for low bit rate radio transmission focusing on intelligibility rather than naturalness.
-The re-synthesized speech sounds very unnatural and is often described as robotic, and muddy with a hissing background noise.\cite{}
+The re-synthesized speech sounds very unnatural and is often described as robotic, and muddy with a hissing background noise.\citet{}
 LPC-10 achieves a 5-point $\ac{MOS}$ of 2.3 \citep[][]{gibson_multimedia_2000} while requiring only \unit[2.4]{kbit/s} transmission bandwidth. %Gibson J.D. (ed.)-Multimedia Communications_ Directions and Innovations (2001).pdf
 In fact, this codec has not been used for speech telephony, but codecs that are designed for speech telephony achieve rather good perceived quality.
 Even the worst codec, \ie, \ac{MELP}, only results in a 5-point \ac{MOS} of 3.0 \citep[][]. 

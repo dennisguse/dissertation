@@ -65,7 +65,7 @@ However, the performance levels were different between the three experiments.
 \end{table}
 
 \section{Experiment E4}
-Experiment \E4{}\footnote{The results of experiment \E4{} are published in \cite{guse_macro-temporal_2013}.} was inspired by \citet{moller_single-call_2011} but rather using two services instead of one service.
+Experiment \E4{}\footnote{The results of experiment \E4{} are published in \citet{guse_macro-temporal_2013}.} was inspired by \citet{moller_single-call_2011} but rather using two services instead of one service.
 In fact, the experiment of \citet{moller_single-call_2011} showed only little, not significant variation of multi-episodic judgments between different conditions although the number of degraded episodes was varied.
 This might be either to the the limited number of degraded episodes per condition, or that the applied performance level for degraded episode were not severe enough compared to non-degraded episodes.
 
@@ -78,7 +78,7 @@ Second, an additional service to additionally assess the integration of perceive
 In this experiment a speech telephony service and a \ac{VoD} service needed to be used for the usage period of \unit[14]{days}.
 A pair participants conducted the experiment together by solving daily two \acs{SCT} with the speech telephony service.
 The first \ac{SCT} needed to be solved between \unit[6]{am} and \unit[1]{pm} and the second one between \unit[3]{pm} and midnight.
-For this experiment all \acs{SCT} defined in \cite{itu-t_p.805:_2007} were used and complement by self-developed but similar \acs{SCT}.
+For this experiment all \acs{SCT} defined in \citet{itu-t_p.805:_2007} were used and complement by self-developed but similar \acs{SCT}.
 
 The \ac{VoD} needed to be used daily between \unit[1]{pm} and midnight by each participant alone.
 As content for the \ac{VoD} service episodes 1..8 of \emph{Friends Season 3} were used.
@@ -165,7 +165,7 @@ However, with regard to multi-episodic \ac{QoE} the results are limited for two 
 Most prominent is that the implemented speech telephony service did not provide the desired performance levels in a reliable manner and as participants were not exposed the same condition a \ac{MOS} cannot be derived.
 This failure showed that an experimental telephony setup that works reliable under in a controlled laboratory settings cannot be used without modification in a field experiment, but must be made robust against potential failures.
 Although, the \ac{VoD} service was able to provide the desired performance level as shown by the episodic judgments, the results are limited.
-For condition \C0{}, although not significant and rather small, a slight of the episodic judgment of the first to the last episode is indicated as observed by \cite{moller_single-call_2011}.
+For condition \C0{}, although not significant and rather small, a slight of the episodic judgment of the first to the last episode is indicated as observed by \citet{moller_single-call_2011}.
 With regard to the multi-episodic judgments no significant differences between the two conditions could be found.
 In fact, the final judgment are nearly identical between the two conditions.
 This indicated that the applied performance for \ac{LP} was not severe enough, which is also indicated by the rather small difference between \ac{HP} and \ac{LP}.

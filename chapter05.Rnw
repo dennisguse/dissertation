@@ -10,7 +10,7 @@ timeseries=timeseries[-which(timeseries$experiment == "E1" & timeseries$conditio
 \section{Multi-episodic Perceived Quality}\label{chap:state-of-the-art}
 %\begin{chapter-abstract}
 %%NOTE: This chapter might be too small, consider merging with previous chapter.
-%Here I present the state-of-the-art on multi-episodic QoE \cite{duncanson_average_1969}, and \cite{moller_single-call_2011}.
+%Here I present the state-of-the-art on multi-episodic QoE \citet{duncanson_average_1969}, and \citet{moller_single-call_2011}.
 %It is important to state again the research question (How do subjects integrate low episodic quality into an overall experience?) for this domain and introduce methodologies.
 %Major point here is the research method (task-driven, defined usage behavior, limited freedom in usage behavior).
 %At the end of this chapter I must have made clear what methodologies are used and also made clear what their respective target is.
@@ -18,8 +18,8 @@ timeseries=timeseries[-which(timeseries$experiment == "E1" & timeseries$conditio
 
 %\section{Introduction}
 
-%\cite{staelens_assessing_2009}
-%\cite{schatz_vienna_2011}, 3 Weeks!
+%\citet{staelens_assessing_2009}
+%\citet{schatz_vienna_2011}, 3 Weeks!
 Services are in general used on a regular basis by a user~\citep[\cf,][]{geerts_linking_2010}.
 The experiences of a usage episode lead to a perceived quality in the user of this very episode.
 The definition of \emph{usage episode} in the context of multi-episodic \ac{QoE} is derived from concepts of episodic memory (\cf, \autoref{chap:03}) focusing on usage of telecommunication systems.
@@ -44,7 +44,7 @@ For applicability it is often sufficient to understand the relationship between 
 \subsection{Digression: Multi-episodic usage in \acs{UX}}
 Effects of multi-episodic usage while focusing on changes in user behavior have been evaluated in \ac{UX}.
 Perceived quality and \ac{UX} conceptually overlap as both focus on experience in general and, in many cases, experience with technology \citep[\cf,][]{wechsung_quality_2014}.
-\ac{UX}, steaming from usability, focuses on the interaction with technology and how interactions affect usage, behavior, and emotions towards used technology.\footnote{For a longer discussion on similarities and difference between \ac{QoE} and \ac{UX} see \cite{wechsung_quality_2014} and also \cite{hassenzahl_user_2008}.}
+\ac{UX}, steaming from usability, focuses on the interaction with technology and how interactions affect usage, behavior, and emotions towards used technology.\footnote{For a longer discussion on similarities and difference between \ac{QoE} and \ac{UX} see \citet{wechsung_quality_2014} and also \citet{hassenzahl_user_2008}.}
 Multi-episodic evaluation is an important aspect of \ac{UX}, because user behavior towards technology changes as a user learns how to use the technology and which tasks are well-suited.
 The multi-episodic terminology is described by \citet[p.~8]{roto_user_2011}, but missed to put it into context with prior work and present their definitions.
 
@@ -271,7 +271,7 @@ A statistical analysis is omitted due to the relative small (potential) differen
 	\hline
 	5 			& -	& \Sexpr{mos_qu_with_sd_by_condition("MOELLER", "MP", "S4")} & \Sexpr{mos_qu_with_sd_by_condition("MOELLER", "LP", "S4")} & \Sexpr{mos_iqu_with_sd_by_condition("MOELLER", "S4", 4)} & \Sexpr{mos_iqu_with_sd_by_condition("MOELLER", "S4", 14)} & \Sexpr{mos_iqu_with_sd_by_condition("MOELLER", "S4", 24)} \\
 	\end{tabular}
-	\caption[Episodic and multi-episodic judgments by \cite{moller_single-call_2011}.]{Episodic and multi-episodic judgments by \cite{moller_single-call_2011}. Reported as \ac{MOS} with standard deviation in brackets.}
+	\caption[Episodic and multi-episodic judgments by \citet{moller_single-call_2011}.]{Episodic and multi-episodic judgments by \citet{moller_single-call_2011}. Reported as \ac{MOS} with standard deviation in brackets.}
 	\label{tab:state:MOLLERepisodic}
 \end{table}
 
@@ -305,7 +305,7 @@ Selecting a two-party conversation (\ie, \ac{SCT}) might have been another issue
 This implicitly assumes a \emph{duration neglect} with regard to multi-episodic perceived quality.
 The effect of duration neglect, however, has not neither been proved nor disproved so far for multi-episodic perceived quality.
 
-The experiment of \cite{moller_single-call_2011} showed that multi-episodic perceived quality can be assessed with defined-use in a field study.
+The experiment of \citet{moller_single-call_2011} showed that multi-episodic perceived quality can be assessed with defined-use in a field study.
 Although participants used the service in their home environment on their own, \ie, in an uncontrolled and to the researchers unknown setting, which is an additional source of noise, the episodic results show that perceived quality can be assessed successfully with this methodology.
 
 \section{Conclusion}
