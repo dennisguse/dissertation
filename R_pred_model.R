@@ -6,21 +6,21 @@
 #Static
 dg_model_static_create <- function(IQU) {
  return (function(id, timeseries) {
-  dg_model_static_create(id, timeseries, IQU)
+  dg_model_static(id, timeseries, IQU)
  })
 }
-dg_model_static_create <- function(id, timeseries, IQU) {
+dg_model_static <- function(id, timeseries, IQU) {
  return (IQU)
 }
 
 #Identity
 dg_model_identity_create <- function() {
  return (function(id, timeseries) {
-  dg_model_static_create()
+  dg_model_identity(id, timeseries)
  })
 }
-dg_model_static_create <- function(id, timeseries, IQU) {
- return (timeseries$IQU[nrow(timeseries)])
+dg_model_identity <- function(id, timeseries) {
+ return (timeseries$IQU[id])
 }
 
 
@@ -33,10 +33,10 @@ dg_model_average_weighted_create <- function(fun_weight) {
 }
 
 dg_model_average_weighted <- function(id, timeseries, fun_weight) {
- historictimeseries = timeseries[(timeseries$id <= id),]
- historictimeseries$weight = fun_weight(historictimeseries)
+ historicTimeseries = timeseries[(timeseries$id <= id),]
+ historicTimeseries = fun_weight(historicTimeseries)
  
- result = weighted.mean(x = historicTimeseries$QU, w = historictimeseries$weight, na.rm = TRUE)
+ result = weighted.mean(x = historicTimeseries$QU, w = historicTimeseries$weight, na.rm = TRUE)
  
  return (result)
 }
@@ -84,10 +84,4 @@ if (FALSE) {
  
  weight_linear_3 = dg_weight_linear_create(3)
  weight_linear_3(timeseries)
- 
- 
- dg_model_mean_window(2, timeseries, 1)
- dg_model_mean_window(10, timeseries, 10) #3.8
- 
- dg_model_id(5, timeseries, 3) #3 :D
 }
