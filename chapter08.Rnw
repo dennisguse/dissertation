@@ -433,7 +433,7 @@ A detailed analysis did not yield a reason for the difference, and it is thus co
 For the multi-episodic judgment after the 3rd day in experiment \E6{} no significant differences between conditions are observed (\Sexpr{kruskal(IQU~condition, "E6a", "HP", unique(timeseries[["condition"]]), c(8))}).
 This indicates that, as long as only \ac{HP} episodes are presented, the between-subject design does not affect multi-episodic judgments.
 
-\subsubsection{\autoref{hypo:number}: Number of \ac{LP} Episodes}
+\subsubsection{\autoref{hypo:number}: Number of \acs{LP} Episodes}
 In \autoref{hypo:number} it is assumed that increasing the number of \ac{LP} episodes before a multi-episodic judgment results in a decrease of this judgment.
 This hypothesis can be evaluated by comparing the results multi-episodic judgments after the 6th episode between condition \C3{}, \C5{}, and \C6{}.
 Those present one to three days with each two \ac{LP} episodes before the multi-episodic judgment.
@@ -458,7 +458,7 @@ A post-hoc tests shows that \C3{} and \C5{} are significant different (\Sexpr{wi
 	\label{tab:field:hyponumber}
 \end{table}
 
-\subsubsection{\autoref{hypo:position}: Impact of Position}
+\subsubsection{\autoref{hypo:position}: Position of \acs{LP} Episode(s)}
 In \autoref{hypo:position} it is assumed that presenting \ac{HP} episodes after \ac{LP} episodes reduces the negative impact on the directly following multi-episodic judgment.
 In condition \C{}1 and \C3{} present each one day with two \ac{LP} episodes wither either two or no days presenting \ac{HP} episodes before the final multi-episodic judgment (\cf, \autoref{tab:lab:hypothesesComparison}).
 Conditions \C4{} and \C5{} present two days in \ac{LP} with either one or no days in \ac{HP} episode before this judgment.
@@ -484,7 +484,7 @@ In this experiment neither conditions \C1{} and \C3{} (\Sexpr{wilcox(IQU~conditi
  \label{tab:field:hypoposition}
 \end{table}
 
-\subsubsection{\autoref{hypo:consecutive}: Consecutive vs. Non-consecutive \ac{LP} Episodes}
+\subsubsection{\autoref{hypo:consecutive}: Consecutive vs. Non-consecutive \acs{LP} Episodes}
 In \autoref{hypo:consecutive} it is assumed that consecutive \ac{LP} episodes yield a better multi-episodic judgment than the same number of \ac{LP} episodes presented non-consecutively.
 This hypothesis can be evaluated by comparing \C4{} and \C5{}, for which it has already been shown that those two conditions yield a different result (\cf, \autoref{hypo:position}), with condition \C8{}.
 The former present two days in \ac{LP} consecutively whereas the latter presents two days in \ac{LP} , but presents between those two days one day in \ac{HP}.

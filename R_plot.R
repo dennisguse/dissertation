@@ -1,4 +1,10 @@
+#http://www.r-bloggers.com/change-fonts-in-ggplot2-and-create-xkcd-style-graphs/
+#install.packages("extrafont")
+#font_import()
+#library(extrafont) 
+
 suppressMessages(library(ggplot2))
+
 ggplot_timeseries_create <- function(timeseries) {
  p <- ggplot(timeseries, aes(id, y=id)) + coord_cartesian(ylim=c(-0.3, 6.3), xlim=c(min(timeseries$id)-0.5, max(timeseries$id)+0.5)) 
  

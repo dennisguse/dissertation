@@ -451,7 +451,7 @@ In fact, for the speech telephony in \E1{}, \EIIa{}, and \EIIb{} this judgment i
 	\label{tab:lab:multiconsistency}
 \end{table}
 
-\subsubsection{\autoref{hypo:number}: Number of \ac{LP} Episodes}
+\subsubsection{\autoref{hypo:number}: Number of \acs{LP} Episodes}
 In \autoref{hypo:number} it is assumed that increasing the number of \ac{LP} episodes before a multi-episodic judgment results in a decrease of this judgment.
 This hypothesis can be evaluated by comparing the multi-episodic judgments after the 6th episode of \C3{}, \C5{}, and \C6{} as well as \CIIa{} and \C4{}.
 \C3{}, \C5{} (a+b), and \C6{} present one to three \ac{LP} episodes directly before this multi-episodic judgment while \CIIa{} and \C4{} present one and two \ac{LP} episode followed by one \ac{HP} episode.
@@ -511,7 +511,7 @@ In fact, saturation occurs before the multi-episodic judgment reaches the level 
 
 As both experiments similar effects results, the difference in usage situation does not seem to affect the multi-episodic judgment with regard to increasing the number of \ac{LP} episodes and the applied performance levels.
 
-\subsubsection{\autoref{hypo:position}: Position of \ac{LP} Episode(s)}
+\subsubsection{\autoref{hypo:position}: Position of \acs{LP} Episode(s)}
 In \autoref{hypo:position} it is hypothesized that presenting \ac{HP} episodes after one or \ac{LP} episode(s) reduces the negative impact on the following multi-episodic judgment.
 \C1{}, \CIIa{}, and \C3{} present each one \ac{LP} episode with either two, one or no \ac{HP} episode(s) before this judgment.
 \C4{} and \C5{} (a+b) present two consecutive \ac{LP} episodes while one or no \ac{HP} episode are presented before this judgment.
@@ -552,7 +552,7 @@ However, the actual reason for this cannot be deduced from experiment \EIIb{}.
 
 Thus, \autoref{hypo:position} can be accepted for two-party conversations, but only partly accepted for third-party listening.
 
-\subsubsection{\autoref{hypo:consecutive}: Consecutive vs. Non-consecutive \ac{LP} Episodes}
+\subsubsection{\autoref{hypo:consecutive}: Consecutive vs. Non-consecutive \acs{LP} Episodes}
 In \autoref{hypo:consecutive} it is assumed that consecutive \ac{LP} episodes yield a better multi-episodic judgment than the same number of \ac{LP} episodes presented non-consecutively.
 This hypothesis is investigated in \EIIa{} only.
 It can be evaluated by comparing the final multi-episodic judgment of \C4{} and \CVa{} with \C8{}. %, for which it has already been shown that those two conditions yield a different result (\cf, \autoref{hypo:position}),
@@ -614,7 +614,7 @@ This indicates that presenting the 6th episode either in \ac{MP} or \ac{HP} does
 It can thus be concluded that \autoref{hypo:strength} is verified.
 This is in line with prior work on retrospective episodic experiences \citep[e.g.,][]{kahneman_experienced_2000} as well as episodic \ac{QoE} \citep[e.g.,][]{weiss_modeling_2009}, where it is denoted as (negative) peak effect.
 
-\subsubsection{\autoref{hypo:recovery}: Recovery after \ac{LP} Episodes}\label{lab:result:recovery}
+\subsubsection{\autoref{hypo:recovery}: Recovery after \acs{LP} Episodes}\label{lab:result:recovery}
 In \autoref{hypo:recovery} the recovery of multi-episodic is investigated.
 This can be investigated in \E1{} by comparing condition \CVb{} and \C7{}.
 Both present nine episodes while all except the 5th and 6th are presented in \ac{HP}.
@@ -649,7 +649,7 @@ The found difference between the final judgments of both conditions might be att
 It must be concluded that the multi-episodic judgment recovers, if three additional \ac{HP} episodes are presented, and thus \autoref{hypo:recovery} is accepted.
 However, from the two conditions alone it cannot be deduced, if a recency effect occurred here.
 
-\subsubsection{\autoref{hypo:duration}: Duration of \ac{LP} Episode}
+\subsubsection{\autoref{hypo:duration}: Duration of \acs{LP} Episode}
 In \E3{} the impact of varying duration of one \ac{LP} episode on the following multi-episodic judgment is investigated (\cf, \autoref{hypo:duration}).
 It is hypothesized that increasing the duration of an \ac{LP} episode will lead to a higher reduction in multi-episodic judgment than presenting a shorter duration.
 In this experiment condition \CIIa{} and \CIIb{} both present the 5th episode in \ac{LP} but in a different duration.
