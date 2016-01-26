@@ -1,5 +1,4 @@
 library("Hmisc")
-source("##IQU/dg_model_IQU.R")
 
 #Calculates the performance of a model_impl for the given dataSet: correlation and RMSD
 #The dataSet is splitted by schedule and username (if more than one)
