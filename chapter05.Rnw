@@ -177,7 +177,7 @@ After finishing a call, each participant rated the perceived quality of this usa
 After the last call on the 2nd, 7th, and 12th day the perceived quality of all experienced usage episodes \emph{so far} is assessed (\emph{multi-episodic judgment}).
 The episodic and multi-episodic judgment were both taken on a 7-point \ac{CCR} scale\footnote{The 7-point scale is, in fact, not an \ac{ACR} scale as also options between \emph{two} categories can be selected. However, this scale is expected to map the same answer space. For a comparison between discrete 5-point scale and 7-point scale see \citet{koster_comparison_2015}.} \citep[\cf,][p.~18]{itu-t_p.851:_2003} (\cf, \autoref{img:chap05:quality-scale}).
 
-\begin{figure}[h]
+\begin{figure}
 	\includegraphics[width=1\textwidth]{figure/quality7pt_scale}
 	\caption{7-point \acs{CCR} scale with German labels; labels from left-to-right: extremely bad~(0), bad~(1), poor~(2), fair~(3), good~(4), excellent~(5) and ideal~(6) \citep{itu-t_p.851:_2003} (own illustration).}
 	\label{img:chap05:quality-scale}

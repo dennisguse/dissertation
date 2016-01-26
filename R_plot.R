@@ -1,7 +1,7 @@
 #http://www.r-bloggers.com/change-fonts-in-ggplot2-and-create-xkcd-style-graphs/
-#install.packages("extrafont")
-#font_import()
-#library(extrafont) 
+#XXXinstall.packages("extrafont")
+#XXXfont_import()
+#XXXsuppressMessages(library(extrafont))
 
 suppressMessages(library(ggplot2))
 

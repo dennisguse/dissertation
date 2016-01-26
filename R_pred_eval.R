@@ -1,4 +1,4 @@
-library("Hmisc") # %in%
+suppressMessages(library("Hmisc")) # %in%
 
 performance <- function(model, timeseries, id=NULL) {
  #Performance for all?

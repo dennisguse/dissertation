@@ -660,7 +660,7 @@ The episodic judgment for this condition and the multi-episodic judgments are sh
 \begin{table}[h!]
 \centering
  \begin{tabulary}{\columnwidth}{c|C|C|C}
-	\multirow{2}{*}{Conditions}	& \multicolumn{2}{c|}{5th usage episode} &\multirow{2}{*}{Conditions}\\
+	\multirow{2}{*}{Conditions}	& \multicolumn{2}{c|}{5th usage episode} &\multirow{2}{*}{Multi-episodic Judgment}\\
 					& Duration 	& Episodic Judgment & \\
 	\midrule 
 	\CIIa{}			& similar 	& \Sexpr{mos_qu_with_sd_by_condition("E3", "LP", "2a", 5)}		& \Sexpr{mos_iqu_with_sd_by_condition("E3", "2a", 6)} \\
