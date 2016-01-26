@@ -1,34 +1,49 @@
 <<setup, echo=F, cache=F, results='hide'>>=
 opts_knit$set(progress = TRUE, verbose = TRUE)
-timeseries = read.csv("data/data.csv")
-source('R_eval.R')
-source('R_plot.R')
+timeseries = read.csv("data/data_minimal.csv")
+source('R_pred_model.R')
+source('R_pred_eval.R')
 
 timeseries=timeseries[-which(timeseries$experiment == "E1" & timeseries$condition == "5a")]
 @
 
 \chapter{Prediction of multi-episodic QoE}\label{chap:modeling}
-\begin{chapter-abstract}
-Using data presented in previous studies and the found effects, I will present here my modeling approach.
-As a baseline I take the average over full history.
-The approach will be analytical and not numerical, i.e. I will model effects found (hopefully all significant) and not number crunching.
-This will also include modeling multi-service (for one provider) QoE.
+%\begin{chapter-abstract}
+%Using data presented in previous studies and the found effects, I will present here my modeling approach.
+%As a baseline I take the average over full history.
+%The approach will be analytical and not numerical, i.e. I will model effects found (hopefully all significant) and not number crunching.
+%This will also include modeling multi-service (for one provider) QoE.
+%
+%Note: modeling using lab studies will be more fancy than field trials (latter has lesser conditions and more noise).
+%\end{chapter-abstract}
 
-Note: modeling using lab studies will be more fancy than field trials (latter has lesser conditions and more noise).
-\end{chapter-abstract}
+\section{Temporal Effects}
+% Episode neglect (saturation)
+% Recency
+% Peak
+
+\section{Model Types}
+%Baseline (full)
+%Windowed
+%Linear moving average (Recency)
+%Windowed + Peak (Weiss)
+
+%Episode neglect?
+
+\section{Performance Metrics}
+
+\section{Evaluation: One Session} 
 
 
-\section{Multi-episodic QoE with one service}
-\textit{Model parts} I take into account are:
-\begin{itemize}
-\item Recency: average over limited history + linear forgetting
-\item Negative Peak: weighted peak + full average
-\item Positive Peak? (Waiting for lab study results)
-\end{itemize}
+\section{Evaluation: Multiple Days}
 
-\section{Multi-episodic QoE with multiple services}
-Baseline: Multi-service QoE: (Service A+Service B) / 2
 
-HOWEVER: So far in no study found to be different.
-Question: Is there something as "service importance" or is this "service-type" (AoD, VoD etc.) specific?
-TODO: How could we trigger this in a study? and conduct a lab study about it?
+
+%\section{Multi-episodic QoE with multiple services}
+%Baseline: Multi-service QoE: (Service A+Service B) / 2
+%
+%HOWEVER: So far in no study found to be different.
+%Question: Is there something as "service importance" or is this "service-type" (AoD, VoD etc.) specific?
+%TODO: How could we trigger this in a study? and conduct a lab study about it?
+
+\section{Conclusion}
