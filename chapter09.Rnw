@@ -37,13 +37,4 @@ timeseries=timeseries[-which(timeseries$experiment == "E1" & timeseries$conditio
 
 \section{Evaluation: Multiple Days}
 
-
-
-%\section{Multi-episodic QoE with multiple services}
-%Baseline: Multi-service QoE: (Service A+Service B) / 2
-%
-%HOWEVER: So far in no study found to be different.
-%Question: Is there something as "service importance" or is this "service-type" (AoD, VoD etc.) specific?
-%TODO: How could we trigger this in a study? and conduct a lab study about it?
-
 \section{Conclusion}
