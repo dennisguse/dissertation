@@ -154,7 +154,7 @@ For condition \C0{} no significant differences in multi-episodic judgments are f
 Also for condition \C9{} no significant differences are observed (\Sexpr{kruskal(IQU~id, "E4a", c("HP", "LP"), "A1", unique(timeseries[["id"]]), "VoD")}).
 In fact, even between the two conditions no significant differences in multi-episodic judgments are observed (\cf, \autoref{tab:field:e4results}).
 
-\begin{table}[h!]
+\begin{table}
 \centering
  \begin{tabular}{c|c|c}
 	\multirow{2}{*}{Day} & \multicolumn{2}{c}{Multi-episodic Judgment} \\
@@ -476,7 +476,7 @@ In addition, \C3{} and \C5{} (\Sexpr{wilcox.pairwise.print(IQU~condition, "E6a",
 \begin{table}
 \centering
  \begin{tabulary}{\columnwidth}{c|c|C}
-	Condition	& \ac{LP} episode(s) 	& Multi-episodic Judgments\\
+	Condition	& \ac{LP} episode(s) 	& Multi-episodic Judgment\\
 	\midrule
 	reference	& - 				& \Sexpr{mos_iqu_with_sd_by_condition("E6a", condition, 8)} \\
 	\hline

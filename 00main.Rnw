@@ -103,20 +103,23 @@
 \include{chapter09}
 
 \include{chapter10}
-
 \cleardoublepage
-%\setcounter{chapter}{0}
-%\renewcommand{\theHchapter}{\Roman{chapter}}
-%\renewcommand{\thechapter}{\Roman{chapter}}
 
-%\pagenumbering{Roman}\setcounter{page}{1}
+\bookmarksetup{startatroot}
+\setcounter{chapter}{0}
+
+\renewcommand{\theHchapter}{\Roman{chapter}}
+\renewcommand{\thechapter}{\Roman{chapter}}
+\pagenumbering{Roman}\setcounter{page}{1}
 %\addtocontents{toc}{\protect\newpage}
-%\part*{Appendix}\cleardoublepage\label{chap:appendix}
+
+\part*{Appendix}%\cleardoublepage\label{chap:appendix}
 \include{appendix}
 
 %********************************************************************
 % Other Stuff in the Back
 %*******************************************************
+\bookmarksetup{startatroot}
 \cleardoublepage\include{support/FrontBackmatter/Bibliography}
 %\cleardoublepage\include{FrontBackmatter/Declaration}
 %\cleardoublepage\include{FrontBackmatter/Colophon}
