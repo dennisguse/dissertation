@@ -41,6 +41,8 @@
 \input{support/classicthesis-config}
 \DeclareUnicodeCharacter{00A0}{ } %Unbreakable spaces
 
+\setlength\overfullrule{5pt}
+
 %********************************************************************
 % Bibliographies
 %*******************************************************
