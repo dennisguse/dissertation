@@ -125,8 +125,6 @@ This avoids issues due initial buffering by providing a constant waiting time.
 
 \chapter{Results}
 
-\section{Effect of Condition}
-
 \begin{table}
 	\centering
 	\begin{tabulary}{\textwidth}{C|C|C|C|C|C}
@@ -179,7 +177,7 @@ This avoids issues due initial buffering by providing a constant waiting time.
 	\E3{} & \CIIb{} & \Sexpr{mos_iqu_with_sd_by_condition("E3", "2b", 3)} 	& \Sexpr{mos_iqu_with_sd_by_condition("E3", "2b", 6)} 	& - & \Sexpr{wilcox(IQU~id, "E3", c("HP", "LP"), "2b", c(3,6), paired=T,alternative="greater")} \\
 	\end{tabulary}
 	\caption{Multi-episodic judgments per condition and experiment for \E1{}, \EIIa{}, \EIIb{}, \E3{}.}
-	\label{appendix:multiepisodicResult}
+	\label{appendix:lab:multiepisodicResult}
 \end{table}
 
 %\section{Data}

@@ -7,7 +7,7 @@ source('R_pred_eval.R')
 timeseries=timeseries[-which(timeseries$experiment == "E1" & timeseries$condition == "5a")]
 @
 
-\chapter{Prediction of multi-episodic QoE}\label{chap:modeling}
+\chapter{Prediction of Multi-episodic Judgments}\label{chap:modeling}
 %\begin{chapter-abstract}
 %Using data presented in previous studies and the found effects, I will present here my modeling approach.
 %As a baseline I take the average over full history.
@@ -29,6 +29,35 @@ timeseries=timeseries[-which(timeseries$experiment == "E1" & timeseries$conditio
 %Windowed + Peak (Weiss)
 
 %Episode neglect?
+
+\begin{equation}
+\hat{m_n}=\frac{\sum\limits_{i=1}^{n}a_i*e_i}{\sum\limits_{i=1}^{n}a_i}
+\end{equation}
+
+%Baseline
+\begin{equation}
+a_i = 1
+\end{equation}
+
+%Window
+\begin{equation}
+a_i= \left\{
+\begin{array}{lr}
+  1 & : i - w \geq 0 \\
+  0 & : i - w < 0
+\end{array}
+\right.
+\end{equation}
+
+%Linear
+\begin{equation}
+a_i= \left\{
+\begin{array}{lr}
+  \frac{n-i}{w} & : i - w \geq 0 \\
+  0 & : i - w < 0
+\end{array}
+\right.
+\end{equation}
 
 \section{Performance Metrics}
 

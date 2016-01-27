@@ -95,6 +95,20 @@ wilcox(QU~performance, "E1",  c("HP", "LP"), alternative="greater")
 wilcox(QU~performance, "E1",  c("HP", "LP"), alternative="less")
 wilcox(QU~condition, "E1", "HP", c("4", "7"), c(1:3), diffOnly=T)
 
+wilcox.short <- function(formula=QU~condition, experiment_filter, performance_level_filter=unique(timeseries$performance_level), condition_filter=unique(timeseries$condition), id_filter=unique(timeseries$id), service_filter=unique(timeseries$service), alternative="two.sided", paired=F, diffOnly = F) {
+ d = subset(timeseries, experiment %in% experiment_filter & performance_level %in% performance_level_filter & condition %in% condition_filter & service %in% service_filter & id %in% id_filter)
+ 
+ r = wilcox.test(formula, d, exact = F, conf.int = T, alternative = alternative, paired = paired)
+ if (diffOnly == T) {
+  paste0("$\\triangle=", format(round(r$estimate, 2), nsmall=2), "$")
+ } else {
+  r$alternative = ""
+  
+  if (r$p.value > 0.001) sprintf("$W=%.2f$, $p=%.3f$%s", r$statistic, r$p.value, r$alternative)
+  else sprintf("$W=%.2f$, $p<0.001$%s", r$statistic, r$alternative)
+ }
+}
+
 
 
 
