@@ -187,7 +187,7 @@ Thus LPC-10 alone might introduce a noticeable difference due to the additional 
 In \EIIb{} both services are presented on a mobile tablet computer.
 Presenting both services on the same device rather than different devices, prevents that participants associate each service with an individual device and use the device as cue for recall.
 Here a \emph{Nexus 7 (2013)} is used which provides a 7~inch screen with a resolution of $1920x1200$.
-For \ac{HP} video content is downscaled to a resolution of $1280x800$ in H.264 with 25~\ac{FPS} and audio mixed to two channels encoded with \ac{AAC} with \unit[48]{kHz}.
+For \ac{HP} video content is downscaled to a resolution of $1280x800$ in \ac{H.264} with 25~\ac{FPS} and audio mixed to two channels encoded with \ac{AAC} with \unit[48]{kHz}.
 For \ac{LP} the video signal is further degraded by setting the \ac{QP} factor to 50.
 Setting a higher \ac{QP} increases the blockiness of a frame as less information is encoded.
 In difference to limiting the encoding bandwidth, this leads to near constant degradation over multiple frames. 
@@ -597,7 +597,7 @@ However, \CIIa{} and \C7{} are not significant different (\Sexpr{wilcox.pairwise
 \begin{table}[h!]
 \centering
  \begin{tabulary}{\columnwidth}{C|C|C|C}
-	\multirow{2}{*}{Conditions}   & \multicolumn{2}{c|}{6th usage episode} & \multirow{2}{*}{Multi-episodic Judgment}\\
+	Conditions   & \multicolumn{2}{c|}{6th usage episode} & Multi-episodic Judgment\\
 	            & Performance 	& Episodic Judgment & \\
 	\midrule 
 	\CIIa{}	& \ac{HP}		& \Sexpr{mos_qu_with_sd_by_condition("E1", "HP", "2a", 6)}	& \Sexpr{mos_iqu_with_sd_by_condition("E1", "2a", 6)} \\

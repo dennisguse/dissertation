@@ -43,11 +43,17 @@ mos_iqu_with_sd_by_condition("E2b", "5a4", 6, "VoD")
 #####STATISTICS!
 kruskal <- function(formula=QU~condition, experiment_filter, performance_level_filter=unique(timeseries$performance_level), condition_filter=unique(timeseries$condition), id_filter=unique(timeseries$id), service_filter=unique(timeseries$service), reference=F) {
  d = subset(timeseries, experiment %in% experiment_filter & performance_level %in% performance_level_filter & condition %in% condition_filter & service %in% service_filter)
- if (reference) {
+ if (reference == TRUE) {
   d$condition = as.character(d$condition)
   d[d$id == 3, ]$condition = -1
   d$condition = as.factor(d$condition)
   d$id[d$condition == -1 & d$id == "3"] = 6
+ }
+ if (is.numeric(reference)) {
+  d$condition = as.character(d$condition)
+  d[d$id == 8, ]$condition = -1
+  d$condition = as.factor(d$condition)
+  d$id[d$condition == -1 & d$id == 8] = 14
  }
  d = subset(d, id %in% id_filter)
  
@@ -94,11 +100,17 @@ wilcox(QU~condition, "E1", "HP", c("4", "7"), c(1:3), diffOnly=T)
 
 wilcox.pairwise.print <- function(formula=IQU~condition, experiment_filter, performance_level_filter=unique(timeseries$performance_level), condition_filter=unique(timeseries$condition), id_filter=unique(timeseries$id), service_filter=unique(timeseries$service), alternative="two.sided", paired=F, reference=F) { #, alternative="two.sided", paired=F, p.adjust.method = "holm"
  d = subset(timeseries, experiment %in% experiment_filter & performance_level %in% performance_level_filter & condition %in% condition_filter & service %in% service_filter)
- if (reference) {
+ if (reference == TRUE) {
   d$condition = as.character(d$condition)
-  d[d$id == 3, ]$condition = "000"
+  d[d$id == 3, ]$condition = -1
   d$condition = as.factor(d$condition)
-  d$id[d$condition == "000" & d$id == "3"] = 6
+  d$id[d$condition == -1 & d$id == "3"] = 6
+ }
+ if (is.numeric(reference)) {
+  d$condition = as.character(d$condition)
+  d[d$id == 8, ]$condition = -1
+  d$condition = as.factor(d$condition)
+  d$id[d$condition == -1 & d$id == 8] = 14
  }
  d = subset(d, id %in% id_filter)
  

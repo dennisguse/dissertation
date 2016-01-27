@@ -7,13 +7,15 @@ source('R_plot.R')
 timeseries=timeseries[-which(timeseries$experiment == "E1" & timeseries$condition == "5a")]
 @
 
-\chapter{Experimental Setups}
+\chapter{Experimental Setups}\autoref{appendix:setup}
 The systems that were used in the conducted experiments are described focusing on the media processing and reproduction details.
 It must be noted that the systems for experiments \E1{}, \EIIa{}, \EIIb{}, and \E3{} were designed especially for use in a controlled laboratory setting and thus precise reproduction of desired system performance was focused.
 The systems designed for experiments \E4{}, \E5{}, and \E6{} were designed for use in field experiments and thus requiring ease-of-setup, needed rather to be reliable and robust than absolutely precise in system performance.
 
 \section{Experiment E1}
-For experiment \E1{} two systems were required, one \ac{LOT} conducted as training for the presentation of telephony related degradations and their effect on speech, and a two-party speech telephony systems.
+For experiment \E1{} two systems were required.
+First, a listening-only training was conducted, presenting typical speech telephony degradations.
+For the multi-episodic assessment a two-party speech telephony was required.
 
 \subsection{Listening-only Training}
 For the listening-only training conducted in experiment \E1{} was conducted with a tablet computer (\emph{Fujitsu~Stylistic~ST6012}).
@@ -21,7 +23,7 @@ For binaural representation a pair of \emph{AKG~K-271} was connected to the inte
 The system was calibrated using a \emph{HEAD acoustics} head and torso simulator \emph{HSM~II.3} to a sound pressure level of \unit[75]{dB20$\mu$Pa} for babble noise.
 
 For the generation of stimuli the ITU-T~STL2009 tools \citet{itu-t_g.191:_2010} and the audio-processing tool \emph{SOX} were used.
-The STL2009 were used for coding G.711, G.722 (Mode 1) and inserting packet-loss for G.722 (Mode~1), whereas SOX was used for coding GSM-FR, and LPC-10 as well as filtering wideband, narrowband, and white noise.
+The STL2009 were used for coding G.711, G.722~(Mode~1) and inserting packet-loss for G.722 (Mode~1), whereas SOX was used for coding GSM-FR, and LPC-10 as well as filtering wideband, narrowband, and white noise.
 
 \subsection{Two-party Speech telephony}
 For the multi-episodic assessment of experiment \E1{} a speech telephony speech telephony system for two-party conversations was required.
@@ -61,14 +63,14 @@ No additional audio processing was applied.
 
 \subsection{Experiments E2a, E2b, and E3}
 For the experiments \EIIa{}, \EIIb{}, and \E3{} audio signals were presented with a pair of \emph{Sennheiser~HD~25-1}.
-For experiment \EIIa{}, and \E3{} those were connected to the internal sound card of a \emph{Microsoft Surface Pro} tablet computer whereas for experiment \EIIb{} those were connected to the internal sound card of the used \emph{Nexus 7 (2013)}.
+For \EIIa{} and \E3{} those were connected to the internal sound card of a \emph{Microsoft Surface Pro} tablet computer whereas for experiment \EIIb{} those were connected to the internal sound card of the used \emph{Nexus 7 (2013)}.
 In all three experiments the sound pressure level was calibrated to \unit[75]{dB20$\mu$Pa} using the \emph{HSM~II.3} with babble noise and the experiments conducted in a sound-proof cabin following ITU-T~P.800 \citep{itu-t_p.800:_1996}.
 In experiment \EIIb{} the \ac{VoD} service was presented on the display Nexus~7 (2013) showing videos horizontal in full screen.
 This \unit[7]{inch} display of this device was set to maximum brightness without applying any device related color adaption.
 
 In those three experiments non-degraded recordings of two-party conversations of experiment \E1{} were selected.
-Those recordings were processed with the ITU-T STL2009 tools \citep{itu-t_g.191:_2010} for coding with G.722 and with SOX for coding with LPC-10.
-For experiment \EIIb{} the videos material was cut with \emph{Adobe Premiere 6} and exported with H.264 (\unit[1280x800]{px}, \unit[10]{Mbit/s}, two-pass coding) and \ac{AAC} (stereo, \unit[448]{kbit/s}).
+Those recordings were processed with the ITU-T~STL2009 tools \citep{itu-t_g.191:_2010} for coding with G.722 and with SOX for coding with LPC-10.
+For \EIIb{} the videos material was cut with \emph{Adobe Premiere 6} and exported with \ac{H.264} (\unit[1280x800]{px}, \unit[10]{Mbit/s}, two-pass coding) and \ac{AAC} (stereo, \unit[448]{kbit/s}).
 Afterwards it was processed with \emph{FFPMEG} to re-encode with desired \ac{QP} factor while leaving audio unchanged.
 
 \section{Experiment E4}
