@@ -31,9 +31,9 @@ For the multi-episodic assessment of experiment \E1{} a speech telephony speech 
 \paragraph*{Network-based Setup}
 In the first part of the experiment a \ac{VoIP}-based system consisting of three computers was used.
 Those three computers were connected via Ethernet (CAT-5). 
-One computer (\emph{Lenovo X61}) acted as a Server running the open-source \ac{PBX} \emph{Asterisk 11}\footnote{\url{http://www.asterisk.org}}.
-Two \emph{Fujitsu Lifebook S761} were running each a custom client based-upon \emph{PJSIP~2.1}\footnote{PJSIP is an open-source library for \ac{SIP}-based \ac{VoIP}.}, which were connected via \ac{SIP} with the server.
-The custom client presented only a minimal \ac{UI} consisting of one button for call initiation and hangup, one button to set the current presence status, and an image presenting the presence status of the other client.
+One computer (\emph{Lenovo~X61}) acted as a Server running the open-source \ac{PBX} \emph{Asterisk 11}\footnote{The Asterisk project is hosted under \url{http://www.asterisk.org}.}.
+Two \emph{Fujitsu~Lifebook~S761} were running each a custom client based-upon \emph{PJSIP~2.1}\footnote{PJSIP is an open-source library for \ac{SIP}-based \ac{VoIP} (\url{http://www.pjsip.org)).}, which were connected via \ac{SIP} with the server.
+The custom client presented only a minimal user interface consisting of one button for call initiation and hangup, one button to set the current presence status, and an image presenting the presence status of the other client.
 Call initiation was only possible, if both clients set their presence status to available.
 The two clients did not communicate directly with each other, but the Asterisk server acted as a proxy providing transcoding functionality.
 Transmission of the speech signal between Asterisk and clients in both direction was lossless by using the \emph{L16} codec with a sample rate of \unit[16]{kHz} resulting in a unidirectional net transmission rate of \unit[256]{kbit/s}.
@@ -48,7 +48,7 @@ In the second this system was replaced by a more elaborate system, which provide
 For this system only one computer without an actual network is used.
 Rather than transmitting the signals digital via Ethernet, an analogue transmission via audio cables is used.
 In this system also the \emph{Beyerdynamic~DT~790~Pro} headsets were used.
-The two headsets were connected to the processing computer (\emph{Lenovo X61}) with one \emph{Edirol~UA-25EX}.
+The two headsets were connected to the processing computer (\emph{Lenovo~X61}) with one \emph{Edirol~UA-25EX}.
 As the individual signals were transmitted using analogue audio cables with a length of \unit[10]{m}, the microphone signals were amplified beforehand using a \emph{RME QuadMic II} microphone preamplifier to avoid a degradation of the signal due to the cable length.
 
 On the computer \emph{PureData}, an open-source audio processing program, is used to modify the speech signals.
@@ -74,8 +74,8 @@ For \EIIb{} the videos material was cut with \emph{Adobe Premiere 6} and exporte
 Afterwards it was processed with \emph{FFPMEG} to re-encode with desired \ac{QP} factor while leaving audio unchanged.
 
 \section{Experiment E4}
-Experiment \E4{} was the first conducted experiment as a field experiment with a usage period of multiple days.
-For this experiment \E4{} a speech telephony service and a \ac{VoD} service were implemented that could be used by participants with their own personal computer while using their Internet access.
+\E4{} was the first conducted experiment as a field experiment with a usage period of multiple days.
+For \E4{}, a speech telephony service and a \ac{VoD} service were implemented that could be used by participants with their own personal computer while using their Internet access.
 For recording and audio reproduction participants were provided a \emph{Logitech~P120} headset.
 
 \subsection{Speech Telephony Service}
@@ -93,7 +93,7 @@ While the speech telephony server was running well while testing, it was not abl
 Two limitations have been observed while using the overall system.
 First of all, participants connected using their own Internet access, required to be \ac{DSL} with at least \unit[6]{MBit/s}, often using a \ac{WLAN}.
 The performance of this connection could neither be estimated nor enforced, but for some calls severe, often bursty, packet-loss was observed.
-However, for the media streams no counter measures were taken against packet-loss as the used speech codec G.722 (\unit[64]{kbit/s}) was used with neither \ac{PLC} nor \ac{FEC} on \ac{UDP} connections without retransmission.
+However, for the media streams no counter measures were taken against packet-loss as the used speech codec G.722 (Mode~1, \unit[64]{kbit/s}) was used with neither \ac{PLC} nor \ac{FEC} on \ac{UDP} connections without retransmission.
 Second, packet-loss was added by Dummynet in addition to packet-loss occurring due to connection issues resulting in potentially higher loss than desired.
 
 \subsection{\ac{VoD}}
