@@ -538,7 +538,7 @@ In \autoref{hypo:position} it is hypothesized that presenting \ac{HP} episodes a
  \label{tab:lab:hypoposition}
 \end{table}
 
-For \E1{} the multi-episodic judgment is significant different between the \C1{}, \CIIa{}, and \C3{} (\Sexpr{kruskal(IQU~condition, "E1", performance_level, c("1", "2a", "3"), c(6),)}).
+For \E1{} the multi-episodic judgment is significant different between the \C1{}, \CIIa{}, and \C3{} (\Sexpr{kruskal(IQU~condition, "E1", performance_level, c("1", "2a", "3"), c(6))}).
 A one-sided post-hoc tests shows that \C1{} is significant different to \CIIa{} and \C3{} (each \Sexpr{wilcox.pairwise.print(IQU~condition, "E1", performance_level, c("1", "2a", "3"), c(6), alternative="less")[1,1]}), but \CIIa and \C3{} are not significant different (\Sexpr{wilcox.pairwise.print(IQU~condition, "E1", performance_level, c("1", "2a", "3"), c(6), alternative="less")[2,2]}).
 For \E1{} also \C4{}, and \CVb{} are also significant different (\Sexpr{wilcox(IQU~condition, "E1", unique(performance_level), c("4", "5b"), c(6), alternative="greater")}).
 
@@ -574,7 +574,7 @@ The latter presents the 4th and 6th episode in \ac{LP}.
  \label{tab:lab:hypoconsecutive}
 \end{table}
 
-The multi-episodic judgments of those three conditions are not significant different (\Sexpr{kruskal(IQU~condition, "E2a", unique(timeseries[["performance_level"]]), c("4", "8", "5a"), c(6))}).
+The multi-episodic judgments of those three conditions are not significant different (\Sexpr{kruskal(IQU~condition, "E2a", performance_level, c("4", "8", "5a"), c(6))}).
 In fact, the multi-episodic judgment of \CVa{} and \C8{} are rather close compared to \C4{}, which indicates a higher impact of the very last episode that was presented in the former case in \ac{LP} whereas in the latter in \ac{HP}.
 
 Thus, \autoref{hypo:consecutive} can neither be accepted nor rejected based upon the results of \EIIa{}.
@@ -582,13 +582,21 @@ It must be concluded that either such an effect does not exists, or is to small 
 In fact, the closeness of \C4{} and \C8{} could also be explained by a recency effect.
 
 \subsubsection{\autoref{hypo:strength}: Strength of Degradation}
+
+<<peak, echo=F, cache=F, results='hide'>>=
+timeseries_E1_peak=subset(timeseries, experiment == "E1" & condition %in% c("2a", "5b", 7) & id == 6)
+timeseries_E1_peak$condition[timeseries_E1_peak$condition == "7"] = 4
+wilcox_episodic_peak = pairwise.wilcox.test(timeseries_E1_peak$QU, timeseries_E1_peak$condition, exact=F, alternative="less")
+@
+
 In \autoref{hypo:strength} it is assumed that the lowest episodic performance (here \ac{LP}) has a stronger negative effect on the multi-episodic judgments whereas lesser degraded episode(s) (here \ac{MP}) yield a lower effect or no effect at all.
 
 This is evaluated for two-party conversation only in \E1{}.
 Here \CIIa{}, \CVb{} and \C7{} differ only in the performance level of the 6th usage episode (\cf, \autoref{tab:lab:hypothesesComparison}).
 The results for episodic judgments after the 6th usage episode and multi-episodic judgments are shown in \autoref{tab:lab:hypostrength}.
 The episodic judgments for this episode are significant different between the three conditions (\Sexpr{kruskal(QU~condition, "E1", performance_level, c("2a", "5b", "7"), c(6))}).
-A one-sided post-hoc test shows a significant difference between all three performance levels (\ac{HP} vs. \ac{MP}: \Sexpr{wilcox.pairwise.print(QU~condition, "E1", performance_level, c("2a", "5b", "7"), c(6))[2,1]}, \ac{HP} vs. \ac{LP}: \Sexpr{wilcox.pairwise.print(QU~condition, "E1", performance_level, c("2a", "5b", "7"), c(6))[1,1]}, \ac{MP} vs. \ac{LP}: \Sexpr{wilcox.pairwise.print(QU~condition, "E1", performance_level, c("2a", "5b", "7"), c(6))[2,2]}).
+A one-sided post-hoc test shows a significant difference between \ac{LP} and \ac{MP} ($p<0.001$) as well as \ac{LP} and \ac{HP} ($p<0.001$). %wilcox_episodic_peak[["p.value"]][2,2] and [1,2]
+However, \ac{HP} and \ac{MP} are not significantly different ($p=\Sexpr{round(wilcox_episodic_peak[["p.value"]][1,1], 2)}$).
 
 The multi-episodic judgments of those three conditions are significant different (\Sexpr{kruskal(IQU~condition, "E1", performance_level, c("2a", "5b", "7"), c(6))}).
 A one-sided post-hoc shows significant differences for conditions \CIIa{} and \CVb{} (\Sexpr{wilcox.pairwise.print(IQU~condition, "E1", performance_level, c("2a", "5b", "7"), c(6))[1,1]}) as well as conditions \CVb{} and \C7{} (\Sexpr{wilcox.pairwise.print(IQU~condition, "E1", performance_level, c("2a", "5b", "7"), c(6))[2,2]}).
@@ -610,9 +618,15 @@ However, \CIIa{} and \C7{} are not significant different (\Sexpr{wilcox.pairwise
  \label{tab:lab:hypostrength}
 \end{table}
 
-This indicates that presenting the 6th episode either in \ac{MP} or \ac{HP} does not affect the multi-episodic judgment although the episodic judgments are different.
-It can thus be concluded that \autoref{hypo:strength} is verified.
-This is in line with prior work on retrospective episodic experiences \citep[e.g.,][]{kahneman_experienced_2000} as well as episodic \ac{QoE} \citep[e.g.,][]{weiss_modeling_2009}, where it is denoted as (negative) peak effect.
+With regard to the interpretation it is problematic that the episodic judgments for \ac{HP} and \ac{MP} are not significant different.
+However, it is indicated that \ac{MP} episodes were perceived and judged slightly worse.
+This leaves to possible interpretations.
+Either \ac{HP} and \ac{MP} were not judged different and thus the multi-episodic judgments between \CIIa{} and \C7{} are not different, or \ac{HP} and \ac{MP} were judged different but this did not affect the multi-episodic judgment.
+Based upon the experimental results, it cannot be concluded, if a peak-effect occurs for multi-episodic perceived quality.
+Thus, \autoref{hypo:strength} must be left unanswered.
+%This indicates that presenting the 6th episode either in \ac{MP} or \ac{HP} does not affect the multi-episodic judgment although the episodic judgments are different.
+%It can thus be concluded that \autoref{hypo:strength} is verified.
+%This is in line with prior work on retrospective episodic experiences \citep[\eg,][]{kahneman_experienced_2000} as well as episodic \ac{QoE} \citep[\eg,][]{weiss_modeling_2009}, where it is denoted as (negative) peak effect.
 
 \subsubsection{\autoref{hypo:recovery}: Recovery after \acs{LP} Episodes}\label{lab:result:recovery}
 In \autoref{hypo:recovery} the recovery of multi-episodic is investigated.

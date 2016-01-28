@@ -32,7 +32,7 @@ For the multi-episodic assessment of experiment \E1{} a speech telephony speech 
 In the first part of the experiment a \ac{VoIP}-based system consisting of three computers was used.
 Those three computers were connected via Ethernet (CAT-5). 
 One computer (\emph{Lenovo~X61}) acted as a Server running the open-source \ac{PBX} \emph{Asterisk 11}\footnote{The Asterisk project is hosted under \url{http://www.asterisk.org}.}.
-Two \emph{Fujitsu~Lifebook~S761} were running each a custom client based-upon \emph{PJSIP~2.1}\footnote{PJSIP is an open-source library for \ac{SIP}-based \ac{VoIP} (\url{http://www.pjsip.org)).}, which were connected via \ac{SIP} with the server.
+Two \emph{Fujitsu~Lifebook~S761} were running each a custom client based-upon \emph{PJSIP~2.1}\footnote{PJSIP is an open-source library for \ac{SIP}-based \ac{VoIP} (\url{http://www.pjsip.org}).}, which were connected via \ac{SIP} with the server.
 The custom client presented only a minimal user interface consisting of one button for call initiation and hangup, one button to set the current presence status, and an image presenting the presence status of the other client.
 Call initiation was only possible, if both clients set their presence status to available.
 The two clients did not communicate directly with each other, but the Asterisk server acted as a proxy providing transcoding functionality.
