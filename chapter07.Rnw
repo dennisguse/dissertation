@@ -331,7 +331,7 @@ First, episodic judgments are inspected with regard to consistency between condi
 Then differences between experiments are investigated to assess an impact of task and usage situation.
 Finally, multi-episodic judgments are evaluated with regard to the presented hypotheses (\cf, \autoref{chap:towards}).
 
-All results are reported as \ac{MOS} ranging from 0 to 6 (for the scale \cf, Figure~\ref{img:chap05:quality-scale}) with standard deviation in brackets.
+All results are reported as \ac{MOS} ranging from 0 to 6 (for the scale see \autoref{img:chap05:quality-scale}) with standard deviation in brackets.
 Beside the \ac{MOS} a statistical evaluation is conducted.
 Two unpaired samples are evaluated with a \emph{Wilcoxon rank-sum test}.
 More than two unpaired samples are compared with a \emph{Kruskal-Wallis test} and, if significant differences are found, a \emph{pairwise Wilcoxon rank-sum test with Holms' correction} as post-hoc test.
