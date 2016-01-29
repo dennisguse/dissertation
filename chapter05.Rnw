@@ -140,17 +140,17 @@ This can be achieved by a careful selection of users, or by creating a \emph{new
 Creating a new service does not prevent a user from having prior knowledge and also expectations about such a type of service.
 However it should limit the influence of prior experiences with other, similar services.
 Enforcing defined-use limits variations in usage behavior and task solving behavior, but enables to expose multiple participants to similar conditions.
-Thus, this methodology allows to investigate the impact on multi-episodic perceived quality for defined condition.
+Thus, this method allows to investigate the impact on multi-episodic perceived quality for defined condition.
 By varying only performance between conditions, the impact of the differences in performance can be investigated.
 
 \subparagraph*{Discussion}
 Both assessment methodologies are diametrically opposed. 
 Free-use allows studying multi-episodic perceived quality with existing users by observing their interaction with said service and optionally gather direct feedback.
-This non-intrusive methodology is, however, in general limited by information that can be gathered about a user.
+This non-intrusive method is, however, in general limited by information that can be gathered about a user.
 In addition, service performance cannot be controlled and desired performance might occur not reliably enough.
 Modifying the service performance on purpose, however, introduces ethical issues, if users are not informed about this and the underlying reason.
 The latter might influences the quality formation process by setting expectations and thus affects multi-episodic perceived quality judgments.
-In fact, this applies also to the defined-use methodology as here users are instructed how to use a service.
+In fact, this applies also to the defined-use method as here users are instructed how to use a service.
 For this method, a service must be available that is able to provide performance per usage episode in a precise and reliable manner.
 This means that such a service must be able to introduce degradations, when defined, and prevent degradations, when none are defined, from an end-to-end perspective.
 This is a challenging task for telecommunication services especially due to the necessary data transmission and often uncontrollable network performance.
@@ -162,7 +162,7 @@ Larger time-spans also increase the likelihood that a defined usage pattern cann
 However, investigating multi-episodic perceived quality beyond one session is necessary to derive knowledge about the influence of time between usage episodes on multi-episodic perceived quality.
 
 \subsection{Application of Defined-use Method \citep{moller_single-call_2011}}\label{prior:moeller}
-The first work on multi-episodic perceived quality while applying the defined-use methodology was performed by \citet{moller_single-call_2011}.
+The first work on multi-episodic perceived quality while applying the defined-use method was performed by \citet{moller_single-call_2011}.
 
 \paragraph*{Design}
 In this experiment, pairs of two participants used a video-telephony service over a usage period of \unit[12]{days}.
@@ -237,9 +237,9 @@ Results are reported as \ac{MOS} ranging from 0~to~6.
 \subparagraph*{Episodic Judgments}
 For all conditions the episodic judgments reflect the applied episodic performance and it must thus be concluded that the setup worked as desired.
 %Condition 5 is evaluated alone as the absence of \ac{HP} might affect episodic and multi-episodic judgments
-However, episodic judgments for condition 1..4 are significant different for \ac{HP} (Kruskal-Wallis test: \Sexpr{kruskal(QU~condition, "MOELLER", "HP", c("S1", "S2", "S3", "S5"))}).
-A post-hoc test (pairwise Wilcoxon rank-sum test with Holms' correction) shows that all conditions except condition~2 and~3 are significant different ($p\leq0.137$).
-For \ac{LP} episodic judgments are not significant different between conditions 2..4 (Kruskal-Wallis test: \Sexpr{kruskal(QU~condition, "MOELLER", "LP", c("S1", "S2", "S3"))}).
+However, episodic judgments for condition 1..4 are significantly different for \ac{HP} (Kruskal-Wallis test: \Sexpr{kruskal(QU~condition, "MOELLER", "HP", c("S1", "S2", "S3", "S5"))}).
+A post-hoc test (pairwise Wilcoxon rank-sum test with Holms' correction) shows that all conditions except condition~2 and~3 are significantly different ($p\leq0.137$).
+For \ac{LP} episodic judgments are not significantly different between conditions 2..4 (Kruskal-Wallis test: \Sexpr{kruskal(QU~condition, "MOELLER", "LP", c("S1", "S2", "S3"))}).
 In fact, the differences between those conditions are relatively small and likely an effect of the between-subject design.
 For condition~2..4 a significant difference between the two performance level is observed (Wilcoxon rank-sum test: \Sexpr{wilcox(QU~performance_level, "MOELLER", c("HP", "LP"), c("S1", "S2", "S3"))}).
 It must be noted that although \ac{HP} and \ac{LP} are different, \ac{LP} was still judged as "fair" and thus seems not to be perceived as a severe degradation.
@@ -247,7 +247,7 @@ With regard to condition~5, the episodic judgments of \ac{LP} episodes are close
 Furthermore, \ac{MP} judgments are only slightly lower than \ac{HP} judgments for condition~1..4.
 As \ac{MP} and \ac{HP} were not presented together this might indicate that the scale is used different or were even not perceived different.
 
-The results show that defined-use methodology could be applied successful, because episodic judgments could be taken reliably even in a field experiment.
+The results show that defined-use method could be applied successful, because episodic judgments could be taken reliably even in a field experiment.
 \citet{moller_single-call_2011} noted that episodic judgments of \ac{HP} episodes have a tendency to slowly increase over the usage period.
 Here an increase of \unit[0.3]{pt} of \ac{MOS} is reported over all 5 conditions.
 A similar tendency is observed for consecutive \ac{LP} episodes.
@@ -305,7 +305,7 @@ This implicitly assumes a \emph{duration neglect} with regard to multi-episodic 
 The effect of duration neglect, however, has not neither been proved nor disproved so far for multi-episodic perceived quality.
 
 \citet{moller_single-call_2011} showed that multi-episodic perceived quality can be assessed with defined-use in a field experiment.
-Although participants used the service in their home environment on their own, \ie, in an uncontrolled and to the researchers unknown setting, which is an additional source of noise, the episodic results show that perceived quality can be assessed successfully with this methodology.
+Although participants used the service in their home environment on their own, \ie, in an uncontrolled and to the researchers unknown setting, which is an additional source of noise, the episodic results show that perceived quality can be assessed successfully with this method.
 
 \section{Conclusion}
 Multi-episodic perceived quality has so far only received limited attention.

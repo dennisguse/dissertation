@@ -379,42 +379,42 @@ Such an effect could not be observed in the four experiments.
 \subsubsection{Experiment \E1{}}
 In \E1{} significant differences between episodic judgment of \ac{HP} episodes are found (\Sexpr{kruskal(QU~condition, "E1", "HP")}).
 A post-hoc test shows a significant difference (\Sexpr{wilcox.pairwise.print(QU~condition, "E1", "HP")[7,2]}) between \CIIa{} (\ac{MOS}: $\Sexpr{mos_qu_with_sd_by_condition("E1", "HP", "2a")}$) and \C7{} (\ac{MOS}: $\Sexpr{mos_qu_with_sd_by_condition("E1", "HP", "7")}$).
-For the episodic judgments of \ac{LP} episodes no significant differences between conditions are found (\Sexpr{kruskal(QU~condition, "E1", "LP", unique(timeseries[["condition"]]))}).
-Between the performance levels the episodic judgments are significant different  (\Sexpr{kruskal(QU~performance_level, "E1")}).
+For the episodic judgments of \ac{LP} episodes no significant differences between conditions are found (\Sexpr{kruskal(QU~condition, "E1", "LP", condition)}).
+Between the performance levels the episodic judgments are significantly different  (\Sexpr{kruskal(QU~performance_level, "E1")}).
 A post-hoc tests shows that all three performance levels are significantly different (\ac{HP} vs. \ac{MP}: \Sexpr{wilcox.pairwise.print(QU~performance_level, "E1")[2,1]}, \ac{HP} vs. \ac{LP}: \Sexpr{wilcox.pairwise.print(QU~performance_level, "E1")[1,1]}, and \ac{HP} vs. \ac{MP}: \Sexpr{wilcox.pairwise.print(QU~performance_level, "E1")[2,2]}).
 
-Although \ac{HP} episodes were significant different between conditions, a detailed analysis did not yield a reason for the difference
+Although \ac{HP} episodes were significantly different between conditions, a detailed analysis did not yield a reason for the difference.
 It is thus considered an artifact due to the between-subject design.
 In the following it is assumed that this does not affect the multi-episodic hypotheses testing.
 It can thus be concluded that \E1{} with regard to episodic judgments achieved the desired performance levels.
 
 \subsubsection{Experiment \EIIa{} and \EIIb{}}\label{chap:lab:sec:expE2}
-For \EIIa{} episodic judgments of \ac{HP} episodes are significant different between conditions (\Sexpr{kruskal(QU~condition, "E2a", "HP")}).
+For \EIIa{} episodic judgments of \ac{HP} episodes are significantly different between conditions (\Sexpr{kruskal(QU~condition, "E2a", "HP")}).
 However, a post-hoc does not find significant differences.
-%A post-hoc test shows a significant difference between condition \C4{} and \C6{} (\Sexpr{wilcox.pairwise.print(QU~condition, "E2a", "HP", unique(timeseries[["condition"]]))[5,4]}).
+%A post-hoc test shows a significant difference between condition \C4{} and \C6{} (\Sexpr{wilcox.pairwise.print(QU~condition, "E2a", "HP", condition)[5,4]}).
 %Again an analysis did not yield a reason for the difference, which seems to be an artifact due the between-subject design.
 For episodic judgments of \ac{LP} episodes no difference between conditions is observed (\Sexpr{kruskal(QU~condition, "E2a", "LP")}).
-The episodic judgments of \ac{HP} and \ac{LP} episodes are significant different (\Sexpr{wilcox(QU~performance_level, "E2a")})
+The episodic judgments of \ac{HP} and \ac{LP} episodes are significantly different (\Sexpr{wilcox(QU~performance_level, "E2a")}).
 
-In \EIIb{} the episodic judgments of the telephony service are neither significant different between the three conditions for \ac{HP} (\Sexpr{kruskal(QU~condition, "E2b", "HP", c("5a", "5a0", "5a4"), id, "telephony")}) nor \ac{LP} episodes (\Sexpr{kruskal(QU~condition, "E2b", "LP", c("5a", "5a0", "5a4"), id, "telephony")}).
-For the \ac{VoD} service \ac{HP} are not judged significant different (\Sexpr{wilcox(QU~condition, "E2b", "HP", c("5a0", "5a4"), id, "VoD")}).
-The episodic judgment of \ac{HP} and \ac{LP} episodes are significant different for the telephony service (\Sexpr{wilcox(QU~performance_level, "E2b", performance_level, condition, id, "telephony")}) as well as the \ac{VoD} service (\Sexpr{wilcox(QU~performance_level, "E2b", performance_level, condition, id, "VoD")}).
+In \EIIb{} the episodic judgments of the telephony service are neither significantly different between the three conditions for \ac{HP} (\Sexpr{kruskal(QU~condition, "E2b", "HP", c("5a", "5a0", "5a4"), id, "telephony")}) nor \ac{LP} episodes (\Sexpr{kruskal(QU~condition, "E2b", "LP", c("5a", "5a0", "5a4"), id, "telephony")}).
+For the \ac{VoD} service \ac{HP} are not judged significantly different (\Sexpr{wilcox(QU~condition, "E2b", "HP", c("5a0", "5a4"), id, "VoD")}).
+The episodic judgment of \ac{HP} and \ac{LP} episodes are significantly different for the telephony service (\Sexpr{wilcox(QU~performance_level, "E2b", performance_level, condition, id, "telephony")}) as well as the \ac{VoD} service (\Sexpr{wilcox(QU~performance_level, "E2b", performance_level, condition, id, "VoD")}).
 
-Comparing \EIIa{} and \EIIb{} with regard to the speech telephony service the judgments of \ac{LP} episodes are not significant different (\Sexpr{wilcox(QU~experiment, c("E2a", "E2b"), "LP", condition, id, "telephony")}), but for \ac{HP} a significant difference is found (\Sexpr{wilcox(QU~experiment, c("E2a", "E2b"), "HP", condition, id, "telephony")}).
+Comparing \EIIa{} and \EIIb{} with regard to the speech telephony service the judgments of \ac{LP} episodes are not significantly different (\Sexpr{wilcox(QU~experiment, c("E2a", "E2b"), "LP", condition, id, "telephony")}), but for \ac{HP} a significant difference is found (\Sexpr{wilcox(QU~experiment, c("E2a", "E2b"), "HP", condition, id, "telephony")}).
 This might be attributed to differences to the differences in the used audio equipment as for both experiments different setups were used.
 
 Although differences between the two experiments are observed, both yield in itself consistent judgments and thus allowing to investigate each the desired hypotheses.
 
 \subsubsection{Experiment \E3{}}
 In \E3{} no significant differences between the two conditions for \ac{HP} episodes (\Sexpr{wilcox(QU~condition, "E3", "HP")}) and \ac{LP} are found (\Sexpr{wilcox(QU~condition, "E3", "LP")}).
-The two performance levels are significant different (\Sexpr{wilcox(QU~performance_level, "E3")}).
+The two performance levels are significantly different (\Sexpr{wilcox(QU~performance_level, "E3")}).
 It must be noted that judgments of the \ac{LP} episode are not different, although both conditions differ in the duration of this episode.
-\CIIa (simple) resulted in a \ac{MOS} of \Sexpr{mos_qu_with_sd_by_condition("E3", "LP", "2a")} whereas \CIIb (doubled) resulted in \Sexpr{mos_qu_with_sd_by_condition("E3", "LP", "2b")}.
+\CIIa{} (simple) resulted in a \ac{MOS} of \Sexpr{mos_qu_with_sd_by_condition("E3", "LP", "2a")} whereas \CIIb{} (doubled) resulted in \Sexpr{mos_qu_with_sd_by_condition("E3", "LP", "2b")}.
 It must thus be concluded that the duration did not affect the episodic judgment, \ie, a duration neglect is found.
 
 \subsubsection{Impact of Usage Situation: Experiment \E1{} vs. \EIIa{}}
 By comparing the episodic judgments between experiment \E1{} and \EIIa{}, a potential impact of the usage situation,  \eg, two-party conversation versus passive listening, on episodic judgments can be investigated.
-Between the two experiments the episodic judgments of \ac{HP} episodes are not significant different (\Sexpr{wilcox(QU~experiment, c("E1", "E2a"), "HP")}), but different for \ac{LP} episodes (\Sexpr{wilcox(QU~experiment, c("E1", "E2a"), "LP",condition)}).
+Between the two experiments the episodic judgments of \ac{HP} episodes are not significantly different (\Sexpr{wilcox(QU~experiment, c("E1", "E2a"), "HP")}), but different for \ac{LP} episodes (\Sexpr{wilcox(QU~experiment, c("E1", "E2a"), "LP",condition)}).
 
 This indicates that the usage situation only seems to affect the quality formation process of \ac{LP} episode that are coded with LPC-10.
 This might be due to reduced intelligibility and thus higher effort, but also due to social behavior, \ie, need to repeat information.
@@ -438,9 +438,9 @@ For \EIIb{} neither significant differences  are observed for the speech telepho
 This indicates that, as long as only \ac{HP} episodes are presented, the between-subject design did not affect this multi-episodic judgment.
 \autoref{tab:lab:multiconsistency} shows the multi-episodic judgment after the third episode, which is used as \ac{HP}-only reference.
 Although not directly comparable due to differences in usage situation as well as services, it must be noted that the judgments are rather close.
-In fact, for the speech telephony in \E1{}, \EIIa{}, and \EIIb{} this judgment is not significant different (\Sexpr{kruskal(IQU~experiment, c("E1", "E2a", "E2b"), "HP", condition, 3, "telephony")}).
+In fact, for the speech telephony in \E1{}, \EIIa{}, and \EIIb{} this judgment is not significantly different (\Sexpr{kruskal(IQU~experiment, c("E1", "E2a", "E2b"), "HP", condition, 3, "telephony")}).
 
-\begin{table}[h]
+\begin{table}
 	\centering
 	\begin{tabulary}{\textwidth}{C|C|C|C|C|C}
 	Experiment & \E1{} & \EIIa{} &\EIIb{} (telephony) & \EIIb{}	(\ac{VoD})	& \E3{} \\
@@ -458,17 +458,17 @@ This hypothesis can be evaluated by comparing the multi-episodic judgments after
 This is investigated in \E1{} and \EIIa{}.
 The multi-episodic judgments of those 5 conditions after the 6th episode are shown in \autoref{tab:lab:hyponumber} including the judgment after the 3rd episodes as reference.
 
-For \E1{} \C3{}, \CVb{}, \C6{}, and the reference are significant different (\Sexpr{kruskal(IQU~condition, "E1", performance_level, c("3", "5b", "6"), c(6), reference=T)}).
-A one-sided post-hoc test finds that the reference is significant different to those three conditions (\Sexpr{wilcox.pairwise.print(IQU~condition, "E1", performance_level, c("3", "5b", "6"), c("6"), reference=T, alternative="less")[1,1]}).
-In addition, \C3{} and \CVb{} (\Sexpr{wilcox.pairwise.print(IQU~condition, "E1", performance_level, c("3", "5b", "6"), c("6"), reference=T)[2,2]}) as well as \C3{} and \C6{} are significant different (\Sexpr{wilcox.pairwise.print(IQU~condition, "E1", performance_level, c("3", "5b", "6"), c("6"), reference=T)[3,2]}), but not \CVb{} and \C6{} (\Sexpr{wilcox.pairwise.print(IQU~condition, "E1", performance_level, c("3", "5b", "6"), c("6"), reference=T, alternative="less")[3,3]}).
-For \E1{} \CIIa{}, \C4{} and the reference are significant different (\Sexpr{kruskal(IQU~condition, "E1", performance_level, c("2a", "4"), c("6"), reference=T)}).
-A post-hoc test finds that the reference is significant different to \CIIa{} and \C4{} (\Sexpr{wilcox.pairwise.print(IQU~condition, "E1", performance_level, c("2a", "4"), c("6"), reference=T)[1,1]}) and that \CIIa{} is significant different than \C4{} (\Sexpr{wilcox.pairwise.print(IQU~condition, "E1", performance_level, c("2a", "4"), c("6"), reference=T)[2,2]}).
+For \E1{} \C3{}, \CVb{}, \C6{}, and the reference are significantly different (\Sexpr{kruskal(IQU~condition, "E1", performance_level, c("3", "5b", "6"), c(6), reference=T)}).
+A one-sided post-hoc test finds that the reference is significantly different to those three conditions (\Sexpr{wilcox.pairwise.print(IQU~condition, "E1", performance_level, c("3", "5b", "6"), c("6"), reference=T, alternative="less")[1,1]}).
+In addition, \C3{} and \CVb{} (\Sexpr{wilcox.pairwise.print(IQU~condition, "E1", performance_level, c("3", "5b", "6"), c("6"), reference=T)[2,2]}) as well as \C3{} and \C6{} are significantly different (\Sexpr{wilcox.pairwise.print(IQU~condition, "E1", performance_level, c("3", "5b", "6"), c("6"), reference=T)[3,2]}), but not \CVb{} and \C6{} (\Sexpr{wilcox.pairwise.print(IQU~condition, "E1", performance_level, c("3", "5b", "6"), c("6"), reference=T, alternative="less")[3,3]}).
+For \E1{} \CIIa{}, \C4{} and the reference are significantly different (\Sexpr{kruskal(IQU~condition, "E1", performance_level, c("2a", "4"), c("6"), reference=T)}).
+A one-sided post-hoc test finds that the reference is significantly different to \CIIa{} and \C4{} (\Sexpr{wilcox.pairwise.print(IQU~condition, "E1", performance_level, c("2a", "4"), c("6"), alternative="less", reference=T)[1,1]}) and that \CIIa{} is significantly different than \C4{} (\Sexpr{wilcox.pairwise.print(IQU~condition, "E1", performance_level, c("2a", "4"), c("6"), alternative="less", reference=T)[2,2]}).
 
-For \EIIa{} \C3{}, \CVa{}, \C6{}, and the reference are also significant different (\Sexpr{kruskal(IQU~condition, "E2a", performance_level, c("3", "5a", "6"), c(6), reference=T)}).
-A one-sided post-hoc test finds that the reference is significant different to those three conditions (\C3{}: \Sexpr{wilcox.pairwise.print(IQU~condition, "E2a", performance_level, c("3", "5a", "6"), c("6"), reference=T, alternative="less")[1,1]}, \CVa{} and \C6{} \Sexpr{wilcox.pairwise.print(IQU~condition, "E2a", performance_level, c("3", "5a", "6"), c("6"), reference=T, alternative="less")[2,1]}).
-Also \C3{} and \CVa{} (\Sexpr{wilcox.pairwise.print(IQU~condition, "E2a",performance_level, c("3", "5a", "6"), c("6"), reference=T)[2,2]}) as well as \C3{} and \C6{} (\Sexpr{wilcox.pairwise.print(IQU~condition, "E2a",performance_level, c("3", "5a", "6"), c("6"), reference=T)[3,2]}) are significant different, but not \CVa{} and \C6{} (\Sexpr{wilcox.pairwise.print(IQU~condition, "E2a",performance_level, c("3", "5a", "6"), c("6"), reference=T, alternative="less")[3,3]}).
-\CIIa{}, \C4{} and the reference are significant different (\Sexpr{kruskal(IQU~condition, "E2a", performance_level, c("2a", "4"), c("6"), reference=T)}).
-A one-sided post-hoc test finds that the reference is significant different to \CIIa{} and \C4{} (\Sexpr{wilcox.pairwise.print(IQU~condition, "E2a", performance_level, c("2a", "4"), c("6"), reference=T, alternative="less")[1,1]}) and \CIIa{} is significant different than \C4{} (\Sexpr{wilcox.pairwise.print(IQU~condition, "E2a", performance_level, c("2a", "4"), c("6"), reference=T, alternative="less")[2,2]}).
+For \EIIa{} \C3{}, \CVa{}, \C6{}, and the reference are also significantly different (\Sexpr{kruskal(IQU~condition, "E2a", performance_level, c("3", "5a", "6"), c(6), reference=T)}).
+A one-sided post-hoc test finds that the reference is significantly different to those three conditions (\C3{}: \Sexpr{wilcox.pairwise.print(IQU~condition, "E2a", performance_level, c("3", "5a", "6"), c("6"), reference=T, alternative="less")[1,1]}, \CVa{} and \C6{} \Sexpr{wilcox.pairwise.print(IQU~condition, "E2a", performance_level, c("3", "5a", "6"), c("6"), reference=T, alternative="less")[2,1]}).
+Also \C3{} and \CVa{} (\Sexpr{wilcox.pairwise.print(IQU~condition, "E2a",performance_level, c("3", "5a", "6"), c("6"), reference=T, alternative="less")[2,2]}) as well as \C3{} and \C6{} (\Sexpr{wilcox.pairwise.print(IQU~condition, "E2a",performance_level, c("3", "5a", "6"), c("6"), reference=T, alternative="less")[3,2]}) are significantly different, but not \CVa{} and \C6{} (\Sexpr{wilcox.pairwise.print(IQU~condition, "E2a",performance_level, c("3", "5a", "6"), c("6"), reference=T, alternative="less")[3,3]}).
+\CIIa{}, \C4{} and the reference are significantly different (\Sexpr{kruskal(IQU~condition, "E2a", performance_level, c("2a", "4"), c("6"), reference=T)}).
+A one-sided post-hoc test finds that the reference is significantly different to \CIIa{} and \C4{} (\Sexpr{wilcox.pairwise.print(IQU~condition, "E2a", performance_level, c("2a", "4"), c("6"), reference=T, alternative="less")[1,1]}) and \CIIa{} is significantly different than \C4{} (\Sexpr{wilcox.pairwise.print(IQU~condition, "E2a", performance_level, c("2a", "4"), c("6"), reference=T, alternative="less")[2,2]}).
 
 \begin{table}[h!]
 	\centering
@@ -538,11 +538,11 @@ In \autoref{hypo:position} it is hypothesized that presenting \ac{HP} episodes a
  \label{tab:lab:hypoposition}
 \end{table}
 
-For \E1{} the multi-episodic judgment is significant different between the \C1{}, \CIIa{}, and \C3{} (\Sexpr{kruskal(IQU~condition, "E1", performance_level, c("1", "2a", "3"), c(6))}).
-A one-sided post-hoc tests shows that \C1{} is significant different to \CIIa{} and \C3{} (each \Sexpr{wilcox.pairwise.print(IQU~condition, "E1", performance_level, c("1", "2a", "3"), c(6), alternative="less")[1,1]}), but \CIIa and \C3{} are not significant different (\Sexpr{wilcox.pairwise.print(IQU~condition, "E1", performance_level, c("1", "2a", "3"), c(6), alternative="less")[2,2]}).
-For \E1{} also \C4{}, and \CVb{} are also significant different (\Sexpr{wilcox(IQU~condition, "E1", unique(performance_level), c("4", "5b"), c(6), alternative="greater")}).
+For \E1{} the multi-episodic judgment is significantly different between the \C1{}, \CIIa{}, and \C3{} (\Sexpr{kruskal(IQU~condition, "E1", performance_level, c("1", "2a", "3"), c(6))}).
+A one-sided post-hoc tests shows that \C1{} is significantly different to \CIIa{} and \C3{} (each \Sexpr{wilcox.pairwise.print(IQU~condition, "E1", performance_level, c("1", "2a", "3"), c(6), alternative="less")[1,1]}), but \CIIa and \C3{} are not significantly different (\Sexpr{wilcox.pairwise.print(IQU~condition, "E1", performance_level, c("1", "2a", "3"), c(6), alternative="less")[2,2]}).
+For \E1{} also \C4{}, and \CVb{} are also significantly different (\Sexpr{wilcox(IQU~condition, "E1", unique(performance_level), c("4", "5b"), c(6), alternative="greater")}).
 
-For \EIIa{} \C1{}, \CIIa{}, and \C3{} are not significant different (\Sexpr{kruskal(IQU~condition, "E2a", performance_level, c("1", "2a", "3"), c(6))}), whereas condition \C4{} and \CVa{} are significant different (\Sexpr{wilcox(IQU~condition, "E2a", unique(performance_level), c("4", "5a"), c(6), alternative = "greater")}).
+For \EIIa{} \C1{}, \CIIa{}, and \C3{} are not significantly different (\Sexpr{kruskal(IQU~condition, "E2a", performance_level, c("1", "2a", "3"), c(6))}), whereas condition \C4{} and \CVa{} are significantly different (\Sexpr{wilcox(IQU~condition, "E2a", unique(performance_level), c("4", "5a"), c(6), alternative = "greater")}).
 
 With regard to \autoref{hypo:position} both experiments yield differences for one \ac{LP} episode.
 For \E1{} presenting the \ac{LP} episode(s) earlier reduces the impact on the final judgment and thus indicating a recency effect for one and two \ac{LP} episodes.
@@ -574,7 +574,7 @@ The latter presents the 4th and 6th episode in \ac{LP}.
  \label{tab:lab:hypoconsecutive}
 \end{table}
 
-The multi-episodic judgments of those three conditions are not significant different (\Sexpr{kruskal(IQU~condition, "E2a", performance_level, c("4", "8", "5a"), c(6))}).
+The multi-episodic judgments of those three conditions are not significantly different (\Sexpr{kruskal(IQU~condition, "E2a", performance_level, c("4", "8", "5a"), c(6))}).
 In fact, the multi-episodic judgment of \CVa{} and \C8{} are rather close compared to \C4{}, which indicates a higher impact of the very last episode that was presented in the former case in \ac{LP} whereas in the latter in \ac{HP}.
 
 Thus, \autoref{hypo:consecutive} can neither be accepted nor rejected based upon the results of \EIIa{}.
@@ -594,13 +594,13 @@ In \autoref{hypo:strength} it is assumed that the lowest episodic performance (h
 This is evaluated for two-party conversation only in \E1{}.
 Here \CIIa{}, \CVb{} and \C7{} differ only in the performance level of the 6th usage episode (\cf, \autoref{tab:lab:hypothesesComparison}).
 The results for episodic judgments after the 6th usage episode and multi-episodic judgments are shown in \autoref{tab:lab:hypostrength}.
-The episodic judgments for this episode are significant different between the three conditions (\Sexpr{kruskal(QU~condition, "E1", performance_level, c("2a", "5b", "7"), c(6))}).
+The episodic judgments for this episode are significantly different between the three conditions (\Sexpr{kruskal(QU~condition, "E1", performance_level, c("2a", "5b", "7"), c(6))}).
 A one-sided post-hoc test shows a significant difference between \ac{LP} and \ac{MP} ($p<0.001$) as well as \ac{LP} and \ac{HP} ($p<0.001$). %wilcox_episodic_peak[["p.value"]][2,2] and [1,2]
 However, \ac{HP} and \ac{MP} are not significantly different ($p=\Sexpr{round(wilcox_episodic_peak[["p.value"]][1,1], 2)}$).
 
-The multi-episodic judgments of those three conditions are significant different (\Sexpr{kruskal(IQU~condition, "E1", performance_level, c("2a", "5b", "7"), c(6))}).
+The multi-episodic judgments of those three conditions are significantly different (\Sexpr{kruskal(IQU~condition, "E1", performance_level, c("2a", "5b", "7"), c(6))}).
 A one-sided post-hoc shows significant differences for conditions \CIIa{} and \CVb{} (\Sexpr{wilcox.pairwise.print(IQU~condition, "E1", performance_level, c("2a", "5b", "7"), c(6))[1,1]}) as well as conditions \CVb{} and \C7{} (\Sexpr{wilcox.pairwise.print(IQU~condition, "E1", performance_level, c("2a", "5b", "7"), c(6))[2,2]}).
-However, \CIIa{} and \C7{} are not significant different (\Sexpr{wilcox.pairwise.print(IQU~condition, "E1", performance_level, c("2a", "5b", "7"), c(6))[2,1]}).
+However, \CIIa{} and \C7{} are not significantly different (\Sexpr{wilcox.pairwise.print(IQU~condition, "E1", performance_level, c("2a", "5b", "7"), c(6))[2,1]}).
 
 \begin{table}[h!]
 \centering
@@ -618,7 +618,7 @@ However, \CIIa{} and \C7{} are not significant different (\Sexpr{wilcox.pairwise
  \label{tab:lab:hypostrength}
 \end{table}
 
-With regard to the interpretation it is problematic that the episodic judgments for \ac{HP} and \ac{MP} are not significant different.
+With regard to the interpretation it is problematic that the episodic judgments for \ac{HP} and \ac{MP} are not significantly different.
 However, it is indicated that \ac{MP} episodes were perceived and judged slightly worse.
 This leaves to possible interpretations.
 Either \ac{HP} and \ac{MP} were not judged different and thus the multi-episodic judgments between \CIIa{} and \C7{} are not different, or \ac{HP} and \ac{MP} were judged different but this did not affect the multi-episodic judgment.
@@ -634,11 +634,11 @@ This can be investigated in \E1{} by comparing condition \CVb{} and \C7{}.
 Both present nine episodes while all except the 5th and 6th are presented in \ac{HP}.
 \autoref{tab:lab:hyporecovery} shows the three the multi-episodic judgments of those conditions.
 
-For each condition the three multi-episodic judgments are significant different (\CVb{}: \Sexpr{kruskal(IQU~id, "E1", performance_level,"5b", c(3, 6, 9))}, \C7{}: \Sexpr{kruskal(IQU~id, "E1", performance_level, "7", c(3, 6, 9))}).
+For each condition the three multi-episodic judgments are significantly different (\CVb{}: \Sexpr{kruskal(IQU~id, "E1", performance_level,"5b", c(3, 6, 9))}, \C7{}: \Sexpr{kruskal(IQU~id, "E1", performance_level, "7", c(3, 6, 9))}).
 For \CVb{} a paired post-hoc test shows significant differences between the judgment after the 3rd and 6th episode (\Sexpr{wilcox.pairwise.print(QU~id, "E1", performance_level, "5b", c(3, 6, 9), paired=T)[1,1]}) and the 6th and 9th episode (\Sexpr{wilcox.pairwise.print(QU~id, "E1", performance_level, "5b", c(3, 6, 9), paired=T)[2,2]}).
-The judgment after the 3rd and 9th are not significant different (\Sexpr{wilcox.pairwise.print(QU~id, "E1", performance_level, "5b", c(3, 6, 9), paired=T)[2,1]}).
+The judgment after the 3rd and 9th are not significantly different (\Sexpr{wilcox.pairwise.print(QU~id, "E1", performance_level, "5b", c(3, 6, 9), paired=T)[2,1]}).
 A paired post-hoc test for \C7{} is similar (3rd vs. 6th: \Sexpr{wilcox.pairwise.print(QU~id, "E1", performance_level, "7", c(3, 6, 9), paired=T)[1,1]}, 6th vs. 9th: \Sexpr{wilcox.pairwise.print(QU~id, "E1", performance_level, "7", c(3, 6, 9), paired=T)[2,2]}) and 3rd vs. 9th: \Sexpr{wilcox.pairwise.print(QU~id, "E1", performance_level, "7", c(3, 6, 9), paired=T)[2,1]}).
-Between those two conditions the judgment after the 6th (\Sexpr{wilcox(IQU~condition, "E1", performance_level, c("5b", "7"), c(6))}) and the 9th episodes (\Sexpr{wilcox(IQU~condition, "E1", performance_level, c("5b", "7"), c(9))}) are significant different.
+Between those two conditions the judgment after the 6th (\Sexpr{wilcox(IQU~condition, "E1", performance_level, c("5b", "7"), c(6))}) and the 9th episodes (\Sexpr{wilcox(IQU~condition, "E1", performance_level, c("5b", "7"), c(9))}) are significantly different.
 
 \begin{table}[h!]
 \centering
@@ -656,7 +656,7 @@ Between those two conditions the judgment after the 6th (\Sexpr{wilcox(IQU~condi
 
 Both conditions show similar results with regard to \autoref{hypo:recovery}.
 Here an increase in the final multi-episodic judgment is observed due to the three additional \ac{HP} episodes.
-In fact, both conditions no significant different do not show a significant difference between the first and final multi-episodic judgment.
+In fact, both conditions no significantly different do not show a significant difference between the first and final multi-episodic judgment.
 Although for both conditions a small effect of the non-\ac{HP} episodes on the final judgment is indicated as both judgments remain slightly lower than the first judgment.
 The found difference between the final judgments of both conditions might be attributed to the different performance level of the 6th episode.
 
@@ -700,7 +700,7 @@ The speech telephony service is always presented in \CVa{} whereas the \ac{VoD} 
 This allows to investigate a potential impact of a well-working service and respectively a degraded service on the multi-episodic judgments of the first service.
 The episodic judgments and multi-episodic judgments are shown in \autoref{tab:lab:hypoindependent}.
 
-The final multi-episodic judgment of the \ac{VoD} service is significant different between \C0{} and \C4{} (\Sexpr{wilcox(IQU~condition, "E2b", performance_level, c("5a0", "5a4"), c(6), "VoD")}).
+The final multi-episodic judgment of the \ac{VoD} service is significantly different between \C0{} and \C4{} (\Sexpr{wilcox(IQU~condition, "E2b", performance_level, c("5a0", "5a4"), c(6), "VoD")}).
 This shows that the two \ac{LP} episodes affect the multi-episodic judgment of this service.
 With regard to the speech telephony service no significant difference on the final multi-episodic judgment is found (\Sexpr{kruskal(IQU~condition, "E2b", performance_level, c("5a", "5a0", "5a4"), c(6), "telephony")}).
 
@@ -757,7 +757,7 @@ It is indicated that non-consecutive \ac{LP} episodes are judged slightly better
 However, this might also be an artifact due to a recency effect and thus \autoref{hypo:recovery} must be left unanswered.
 
 In \E1{} also a (negative) peak-effect was investigated (\autoref{hypo:strength}).
-It could be shown that episodic judgments for \ac{MP} are significant different to \ac{HP} and \ac{LP}.
+It could be shown that episodic judgments for \ac{MP} are significantly different to \ac{HP} and \ac{LP}.
 However, no the multi-episodic judgments for this condition are not different that presenting this episode in \ac{HP}.
 It can be thus concluded that a peak-effect occurs as the \ac{MP} 
 This indicates that a peak-effect is occurs also in multi-episodic perceived quality as severe degradations only have a limited to no impact on the multi-episodic judgment.
