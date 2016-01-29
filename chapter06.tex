@@ -96,75 +96,92 @@ In the following, I present the service types and tasks, which I will use in my 
 Speech telephony services provide live communication between two or more remote parties for spoken interaction.
 This is a well established and, in fact, classic telecommunication service.
 The quality perception and underlying influence factors for speech telephony are well understood and standardized evaluation methods have been developed for evaluation of perceived quality \citep[\eg,][]{itu_handbook_1992}.
-Furthermore, first work on multi-episodic perceived quality was conducted by \citet{moller_single-call_2011} using video telephony service.
+%In addition, first work on multi-episodic perceived quality was conducted with video telephony
+%Furthermore, first work on multi-episodic perceived quality was conducted by \citet{moller_single-call_2011} for conversational system.
 
 \paragraph*{Two-party Conversation}
-Speech telephony is most often used for the communication between two remote parties, who engage in an conversation.
-A conversation is in itself interactive as in general roles of speaker and listener are changing while caller and callee speak with each to exchange information \citep[\eg,][]{hopper_telephone_1992}.
-The interaction behavior of caller and callee, in fact, can affect the perceived quality for both parties \citep[\cf,][]{schoenenberg_why_2014}.
+Speech telephony is most often used for the communication between two remote parties, who engage in a conversation.
+A telephony conversation is an interactive exchange of information with changing roles of speaker and listener between caller and callee \citep[][]{hopper_telephone_1992}.
+The interaction behavior of caller and callee can affect the perceived quality for both parties \citep[\eg,][]{schoenenberg_why_2014, egger_it_2010}.
 
-For the evaluation of perceived quality standardized methods have been developed to achieve a comparable interaction behavior in a conversation and thus limited the impact of variance due to differences in usage behavior.
-The \acp{SCT} have been especially developed to simulate typical conversational tasks that caller and callee need to solve together \citep[\cf,][p.~76]{moller_assessment_2000}.
-Here caller and callee need to exchange a defined set of information while a conversation structure is suggested.
-The \acp{SCT} mimic a common situation in which the caller has a demand with specific requirements, which he tries to fulfill by initiating the telephone conversation and informing the callee about his needs.
-Based upon this information the callee selects the appropriate option or information and presents this to the caller.
-If the presented option or information fulfills the requirements of the caller and is confirmed by him, a second information transfer is initiated in which the callee provides the caller information, so that he can finally fulfill the requirement using the selected option.
-The standardized \acp{SCT} \citep{itu-t_p.805:_2007} usually result in a conversation duration of 3~to 7 min.
+Methods have been developed to achieve a comparable interaction behavior in a conversation and thus limited the impact of different behavior.
+Most prominent are the \acp{SCT}, where caller and callee need to solve a typical task together \citep[][p.~76]{moller_assessment_2000}.
+Here, caller and callee need to exchange a defined set of information while a conversational structure is suggested.
+A common situation is mimicked in which the caller has a demand with specific requirements, which he tries to fulfill by initiating the conversation and informing the callee about his demand.
+Based upon this information, the callee selects an appropriate pre-defined option, or information and presents this to the caller.
+If this fulfills the requirements of the caller, a second information transfer is initiated.
+Here, the callee provides information to the caller, so that the caller can finally fulfill this requirement.
+For this method, standardized scenarios are defined in ITU-T~P.805 \citep{itu-t_p.805:_2007}.
+The standardized \acp{SCT} \citep{itu-t_p.805:_2007} usually result in a conversation duration of 3~min to 7~min.
 
-While conversations and the resulting perceived quality is affected by varying user behavior, it allows to study the whole range of degradations for speech telephony and also determine how those degradations \emph{affect} the usage behavior.
+While a conversation and the resulting perceived quality is affected by varying user behavior, it allows to study the whole range of degradations for speech telephony.
+Here, also degradations can be assessed that \emph{affect} the usage behavior. %REF?
 Furthermore, an active conversation allows to investigate the impact of degradations in a setting, in which a speech telephony service is actually used.
-
-Beside the advantages the evaluation of perceived quality in an active conversation requires a large effort, because \emph{a)} a service that can provide desired performance levels reliable must be available and \emph{b)} the varying user behavior is an additional factor influencing in quality judgments.
+Beside the advantages, the evaluation of perceived quality in an active conversation requires a large effort.
+First, a service must be available that can provide desired performance.
+This is especially problematic in non-laboratory environment (\cf, experiment \E4{}).
+Second, variations in user behavior can affect quality perception and thus quality judgments.
+This additional influence might be problematic for the investigation of multi-episodic perceived quality.
 
 \paragraph*{Third-party Listening}
-Perceived quality of speech telephony to a certain degree can be assessed in a passive situation.
-Here a participant listens to a two-party conversation and thus is not an actual part of this conversation, \ie, his behavior cannot affect the conversation.
-This is denoted as third-party listening \citep[\cf,][p.~13]{itu-t_p.832:_2000}.
-This is, in fact, an uncommon situation as it rarely occurs in a two-party conversation, but is not a uncommon situation in multi-party conferencing.
-The elimination of user behavior allows to use recordings of conversations and thus present the exact same material to multiple participants.
-If the degradations under considerations do not affect the user behavior, \eg, Lombard speech, the degradations can be inserted in a post-processing stage to the recordings of the conversation.
-In fact, using recordings alone avoids requiring a technical system that can provide required performance in real-time.
+Perceived quality of speech telephony can be assessed  to a certain degree in a passive situation.
+Here, a participant listens to a recorded conversation and thus is not an actual part of this conversation, \ie, his behavior cannot affect the conversation.
+If a two-party conversation is used, this is denoted as third-party listening \citep[][p.~13]{itu-t_p.832:_2000}.
+This is, in fact, an artificial situation, because it cannot occur in a two-party conversation.
+Here, only a monologue of one conversation partner might occur as part of a conversation.
+For multi-party conferencing, however, this is a likely situation.
+Anyhow, using recordings of complete two-party conversation is here considered to be a usage episode.
 
-A passive listening-only has one major limitation beside the inability to assess the impact of degradations on the speaking phase.
-A passive observer is not forced to follow a conversation, if it is known to him beforehand that the content is not relevant for him.
+The elimination of user behavior allows to use recordings of conversations and thus present the exact same stimuli to multiple participants.
+If degradations do not affect user behavior, \eg, Lombard speech (\citep[][p.~161]{moller_assessment_2000), those can be inserted in a post-processing step rather than while recording.
+
+A listening-only has one major limitation beside the inability to assess the impact of degradations on the speaking phase \cite{gueguin_evaluation_2008}.
+In fact, a passive observer is not even forced to follow a conversation, because he does not have to react to the content.
 This can be avoided by applying a task, which requires to follow the conversation.
-If conversations are based upon \acp{SCT}, a note taking task can be applied.
-Here the task is to write down all information exchanged between caller and callee, and vice versa.
-As standardized \acp{SCT} contain similar content, this task can be structured by asking content-specific questions like \emph{"What is the name of the caller/callee?"}, or \emph{"What does the callee want?"}.
+For conversations based upon \acp{SCT}, a note taking task can be applied.
+In fact, for \ac{SCT} the actual task of caller and callee is to exchange a specific set of information, \ie, each one need to answer specific questions.
+Those implicit questions are similar for the standardized \acp{SCT} \citep{itu-t_p.805:_2007}.
+These questions can be used as a task in a listening-only situation while presenting recordings of \ac{SCT}.
+This forces participants to follow conversation to successfully solve the task.
+%those questions like \emph{"What is the name of the caller/callee?"}, or \emph{"What does the callee want?"}.
 %In a \ac{SCT} induced conversation those question are implicitly answered by caller and callee.
 
 For the assessment of multi-episodic perceived quality, third-party listening has some advantages over two-party conversation although the usage situation is artificial.
-Most important the task can be solved by one subject alone and thus eliminating the need of a conversation partner.
-Furthermore, the same conversation with preprocessed performance can be presented to multiple participants in exactly the same manner.
+Most important the task can be solved by a participant alone.
+This eliminates the need of a conversation partner and the same conversation with preprocessed performance can be presented to multiple participants in exactly the same manner.
+Here, even the duration of usage episodes can be defined beforehand without user behavior specific variations.
+Also, the technical complexity is reduced, because neither live transmission nor processing is required.
 %In this case also the length of a usage episode is known beforehand, allowing to investigate the impact episode duration on retrospective judgments.
 
-\subsubsection{Entertainment Media Consumption: Audio and Audiovisual Services}
+\subsubsection{Entertainment Media Consumption}
 Telecommunication services for media consumption provide a unidirectional transmission of (multi-)media content to a user on his request.
-This can be unimodal content like audio, or speech, as well as multi-modal content like audiovisual content.
+This can be unimodal content like audio, or even speech, and multi-modal content like audiovisual content.
 
 A typical usage scenario is the provision of media content for entertainment purpose.
-Services that provide media content on-demand are denoted \ac{AoD} for audio-only and \ac{VoD} for audiovisual content.
-Here a user can select from available content, the currently desired item, which is then transmitted to him.
+Services that provide media content on-demand are denoted \ac{AoD} for audio-only content and \ac{VoD} for audiovisual content.
+For such a service, a user can select from available content the currently desired one, which is then transmitted to him.
 %A common use case for media-on-demand services is the consumption of a series content-related parts like a TV series.
-
-While the media selection procedure is often interactive as a user can select the desired content, the actual media consumption only provides limited interactivity.
-Here a user might be allowed to pause, seek or abort the consumption.
-However, this interactivity can limited completely by presenting predefined content and not allow in-presentation interaction.
-
+While the media selection procedure is often interactive, the actual media consumption only provides limited interactivity.
+Here, a user might be allowed to pause, seek or abort the consumption.
+In fact, the interactivity of an on-demand service can completely limited by presenting predefined content and not allow in-presentation interaction.
 %In fact, a third-party listening could be considered as a special case of media consumption, \ie, consumption of recorded two-party speech conversation.
 %However, third-party listening focuses on the simulation of multi-party conferencing in which the observer takes a passive part of the conversation whereas media consumption focus on the media consumption alone.
 In difference to telephony, media consumption focuses on the consumption of pre-produced content.
-This allows to use high-end recording equipment, adequate post-processing, and efficient but time consuming compression.
-This, in general, limits the sources of severe degradations in general to transmission as well as reproduction.
+This allows to use high-end recording equipment and adequate post-processing. %, and efficient but time consuming compression.
+This limits the sources of severe degradations in general to transmission and reproduction.
 %Recently, media-on-demand services have been widely deployed that adapt to the current network conditions to avoid stalling at a reduced service performance, \eg, limiting transmission bandwidth.
 %For a usage episode this can either happen while content is consumed resulting in performance fluctuations, or beforehand trying to achieve a constant service performance.
 
-Media-on-demand services are well-suited for investigation multi-episodic perceived quality, because those can be setup in a non-interactive way and thus avoid impact of user behavior especially on duration of usage episodes.
-Furthermore, media-on-demand services are nowadays widely used in mobile as well as in stationary usage situations, \ie, home entertainment. 
+Media-on-demand services are well-suited for investigation multi-episodic perceived quality.
+First, such a service can be setup in a non-interactive way and thus avoids impact of user behavior.
+Second, content can be provided that is interesting for participants and thus limit the effort for them.
+And also stimuli can be pre-processed completely and thus limiting technical complexity.
 
 \section{Hypotheses}
-Based upon prior work on retrospective experiences (\cf, \autoref{chap:03}) and quality assessment (\cf, \autoref{chap:04}), I derived 7 hypotheses to provide information about the formation process.
-Those hypotheses are presented in the following.
+Based upon prior work on retrospective experiences (\cf, \autoref{chap:03}) and quality assessment (\cf, \autoref{chap:04}), I derived 7~hypotheses to derive knowledge about the formation process.
+The experimental investigation of those hypotheses will be used for the implement a prediction model for multi-episodic perceived quality in \autoref{chap:09}.
+The major goal here is to investigated, if am weighted average model is sufficient, or edge cases found, requiring a more sophisticated model.
+The hypotheses are presented in the following.
 
 \subsection{\emph{Hypothesis}: Number of Consecutive \acs{LP} Episodes}
 \begin{hypothesis}[\autoref{hypo:number}]\label{hypo:number}
@@ -173,78 +190,93 @@ Increasing the number of \ac{LP} episodes before a multi-episodic judgment decre
 
 The presentation of \ac{LP} episode(s) is expected to result in a reduction in multi-episodic judgment compared to the presentation of those usage episode(s) in \ac{HP}.
 When presenting all episodes in \ac{HP}, then the multi-episodic judgment should be sufficiently reflected by averaging all prior episodic judgments \citep[\cf,][]{moller_single-call_2011}.
-The more \ac{LP} episode(s) are presented, the higher is the expected reduction until multi-episodic judgments reach the same level as the episodic judgments of \ac{LP} usage episodes.
-This is expected to be a lower boundary.
+The more \ac{LP} episode(s) are presented, the higher is the expected reduction of multi-episodic judgments.
+Here, a lower boundary is expected to be set by the episodic judgments for \ac{LP} episodes.
+
+Based upon this hypothesis also the impact of \ac{LP} episodes can be quantified.
+This is important for the parameter of a prediction model.
+
 
 \subsection{\emph{Hypothesis}: Position of \acs{LP} Episode(s)}
 \begin{hypothesis}[\autoref{hypo:position}]\label{hypo:position}
 Increasing the number of \ac{HP} episode(s), which follow one or more \ac{LP} episode(s), results in a lower reduction of the multi-episodic judgment.
 \end{hypothesis}
 
-A \emph{recency effect} has been observed in sequential learning, retrospective judgments of experiences in general, and for perceived quality with one stimulus containing macroscopic performance fluctuations.
-If an effect of recency affect multi-episodic perceived quality, then episodes with close temporal proximity to this judgment must have a higher impact on it.
-By varying the position of \ac{LP} episode(s) before this judgment, the existence of a recency effect can be investigated.
+A \emph{recency effect} has been observed in sequential learning and retrospective judgments of episodic experiences.
+With regard to perceived quality an effect of recency could be observed in stimuli with macroscopic performance fluctuations, if a stimuli is long enough.
+If an effect of recency occurs for multi-episodic perceived quality, then usage episodes with close temporal proximity to a multi-episodic judgment have a higher impact than episodes that occurred earlier.
+By varying the position of a defined number of \ac{LP} episode(s) before a multi-episodic judgment, the existence of a recency effect can be investigated.
 If a recency effect occurs, conditions that present \ac{LP} episode(s) closer to the multi-episodic judgment will result in a lower multi-episodic judgment than those conditions that present more \ac{HP} episodes following the \ac{LP} episode(s).
 
 \subsection{\emph{Hypothesis}: Non- vs. Consecutive \acs{LP} Episodes}
 \begin{hypothesis}[\autoref{hypo:consecutive}]\label{hypo:consecutive}
-The presentation of non-consecutive \ac{LP} episodes lead a higher reduction in multi-episodic judgments than the number as consecutive \ac{LP} episodes.
+The presentation of non-consecutive \ac{LP} episodes lead a higher reduction of multi-episodic judgments than presenting the the number of \ac{LP} episodes consecutively.
 \end{hypothesis}
 
-Presenting consecutive \ac{LP} episodes is expected to produce higher multi-episodic judgments than the same number of non-consecutive \ac{LP} episodes, because in the latter case the service performance varies more often.
-It is thus not reliable and less predictable for the user than in the former case.
+With this hypothesis it is investigated, if the number of performance changes between episodes affects a multi-episodic judgment.
+Here, it is expected that increasing the number of changes results in higher reduction, because the performance is less predictable for participants.
+This can be investigated by presenting the same number of \ac{LP} episode either consecutive or non-consecutive before a multi-episodic judgment.
+In fact, if the impact is small or not existing, then it might be hidden by potentially by a recency effect.
+This is because the position before the multi-episodic judgment must be varied, \ie, in the non-consecutive case non-\ac{HP} must be presented closer to this judgment than in the consecutive case.
 
 \subsection{\emph{Hypothesis}: Strength of one \acs{LP} Episode}
 \begin{hypothesis}[\autoref{hypo:strength}]\label{hypo:strength}
-The \emph{lowest} experienced episodic performance has a higher impact on multi-episodic judgment.
+The lowest experienced episodic performance has a higher impact on multi-episodic judgment.
 \end{hypothesis}
 
-The so-called peak effect, which has been observed in retrospective assessment of episodic experiences, denotes the higher impact of the worst part of an experience on this judgment (\cf, \autoref{chap:03}).
-Such an effect has been observed for perceived quality of one stimulus as well as for one usage episode affecting the quality formation process.
-Such an effect might also occur for multi-episodic perceived quality, but has so far not been investigated.
-It can be investigating by presenting more than two performance levels, which result in different episodic judgments.
-If a no difference in multi-episodic judgments can be observed, this indicates a peak effect.
+The so-called peak effect, which has been observed in retrospective assessment of episodic experiences, denotes a higher impact of the worst part of an experience on a retrospective judgment (\cf, \autoref{chap:03}).
+Such an effect has been observed for perceived quality of one stimulus and for one usage episode affecting the quality formation process (\cf, \autoref{chap:04}).
+The existence of such an an effect has not been investigated for multi-episodic perceived quality.
+It can be investigating by presenting more than two performance levels.
+In fact, those performance levels must result in a different perceived quality.
+For this, the performance level \ac{MP} is used in addition to \ac{LP} and \ac{HP}.
+If a peak-effect exists, then a condition, which presents some usage episode in \ac{MP}, should be judged similar to a condition, which presents those episode in \ac{HP} and all other with equal performance level.
+
+In fact, a peak-effect has found been very useful for implementation of prediction models for perceived quality of macroscopic performance fluctuations.
 
 \subsection{\emph{Hypothesis}: Recovery after \acs{LP} Episodes}
 \begin{hypothesis}[\autoref{hypo:recovery}]\label{hypo:recovery}
-Presenting additional \ac{HP} episodes after a negatively affected multi-episodic judgment, increases the following multi-episodic judgment.
+Presenting additional \ac{HP} episodes after a negatively affected multi-episodic judgment, results in an increase the following multi-episodic judgment.
 \end{hypothesis}
 
-This hypothesis is similar to \autoref{hypo:position}, but focuses on the recovery of a negatively affected multi-episodic judgments.
-Presenting after this judgment and before the next multi-episodic judgment only \ac{HP} episodes, should result in an increase of the final multi-episodic judgment.
-If enough \ac{HP} episodes are presented, the final judgment should reach the same level as if no \ac{LP} episodes were presented at all.
+This hypothesis is similar to \autoref{hypo:position}, but focuses on the recovery after a negatively affected multi-episodic judgment.
+Recovery can be investigated by presenting only \ac{HP} episodes after an affected multi-episodic judgment.
+This should result in an increase of the final multi-episodic judgment.
+If enough \ac{HP} episodes are presented, the final judgment should reach a similar level as if no \ac{LP} episodes were presented at all.
+%The expected increase might be the result of a recency effect, or the increased number of \ac{HP} episodes.
 
 \subsection{\emph{Hypothesis}: Duration of \acs{LP} Episode}
 \begin{hypothesis}[\autoref{hypo:duration}]\label{hypo:duration}
-\ac{LP} episodes with a longer duration have a higher impact on multi-episodic perceived quality than shorter \ac{LP} episode, because the experienced duration the performance level \ac{LP} is longer.
+\ac{LP} episodes with a much longer duration result in higher reduction of multi-episodic judgments than shorter \ac{LP} episodes.
 \end{hypothesis}
 
-For retrospective judgments of episodic experiences with variations a \emph{duration neglect} could be observed, \ie, the actual duration of a variations in an episodic experience is not reflected in the retrospective judgment (\cf, \autoref{chap:03}).
-Such an effect must not necessarily occur for multi-episodic perceived quality.
-In \autoref{hypo:number} the number of \ac{LP} episodes and the impact on multi-episodic judgment is investigated.
+For retrospective judgments of episodic experiences with variations a \emph{duration neglect} could be observed (\cf, \autoref{chap:03}).
+However, such an effect must not necessarily occur for multi-episodic perceived quality.
+In fact, in \autoref{hypo:number} the number of \ac{LP} episodes and the impact on multi-episodic judgment is investigated.
 For an increasing number of \ac{LP} episodes, a longer overall duration of \ac{LP} is experienced.
 This, however, leaves open, if the formation process of multi-episodic perceived quality relies \emph{a)} on the overall duration of \ac{LP} episode(s), \emph{b)} the number of \ac{LP} episode(s), or \emph{c)} both.
-In fact, for near constant performance the actual duration has been found to have a constant positive but rather small effect on a retrospective judgments, if the duration is longer than \unit[30]{sec} \citep[\cf,][]{frohlich_qoe_2012}.
-However, the shift is constant suggesting an impact of usage situation rather than an encoding of duration into the episodic judgment.
-In case of a) and c) episodic judgments alone would not contain all information for prediction of the multi-episodic judgment.\footnote{\citet[p.~2]{moller_single-call_2011} did not define the duration of \ac{LP} usage episodes and thus implicitly assumed a duration neglect in the formation process of multi-episodic perceived quality.}
-
-The impact of the duration of \ac{LP} episodes on multi-episodic perceived quality can be investigated by comparing the multi-episodic judgment of at least two conditions with the same number and positions of \ac{LP} episode(s) with varying duration of the \ac{LP} episode(s).
+%In fact, for constant performance the actual duration has been found to have a constant positive but rather small effect on a retrospective judgments, if the duration is longer than \unit[30]{sec} \citep[\cf,][]{frohlich_qoe_2012}.
+%However, the shift is constant suggesting an impact of usage situation rather than an encoding of duration into the episodic judgment.
+In case of a) and c), episodic judgments alone would not contain all information for prediction of the multi-episodic judgment.
+%\citet[p.~2]{moller_single-call_2011} did not define the duration of \ac{LP} usage episodes and thus implicitly assumed a duration neglect in the formation process of multi-episodic perceived quality.
+A duration neglect can be investigated by comparing the results two conditions that are similar with regard to performance level while while varying duration of the \ac{LP} episode(s).
 
 \subsection{\emph{Hypothesis}: Services are Judged Independent}
 \begin{hypothesis}[\autoref{hypo:independent}]\label{hypo:independent}
-The multi-episodic judgment for one service is not affected not affected by the presentation of a second service in the same usage period.
+The multi-episodic judgment for one service is not affected by the presentation of a second service in the same usage period.
 \end{hypothesis}
 
-The quality formation process is affected by expectations, knowledge, and prior experiences, which also change the encoding of the perceived quality into a judgment.
-With regard to multi-episodic perceived quality, however, the use of another service might affect the multi-episodic judgment of the assessed service.
-Here participants might either use one service as reference of even might not be able to attribute perceived quality to a service for the multi-episodic judgment.
-This might especially occur, if services are very similar.
-While for studying multi-episodic perceived quality in one session alone, such an effect can be prevent by using one service alone.
-In a usage period covering several days, this can hardly be prevented.
-It is therefore important to understand, if the use of other services affect this multi-episodic judgment of a service under multi-episodic quality assessment.
+Multi-episodic perceived quality can only be assessed in retrospective by evaluating prior, recallable experiences of a service and form the judgment.
+If in the same usage period multiple, similar services have been used this might be problematic.
+The multi-episodic judgment of a service could be affected by the presence of other service(s).
+Here, an assessor might fail to attribute perceived quality correctly to a service, or other service(s) might affect expectations.
+For investigating multi-episodic perceived quality in one session alone, this is not problematic, because the exposure to other services can be controlled.
+However, for a usage period covering several days, this can hardly be prevented.
+It is therefore important to understand, if the use of other services affect this multi-episodic judgment of a service.
 
 \section{Conclusion}
-In this chapter I first presented the aspects that I will base my investigation of multi-episodic perceived quality on.
-This included the different judgments, performance levels and also service types.
-In the second part I presented the hypotheses I that I used to design experiments.
-In the following chapter the experiments on multi-episodic perceived quality in one session are presented while in \autoref{chap:field} presents the experiments covering a usage period of multiple days.
+In this chapter, I first presented the service types, tasks, and performance levels that will be used for the investigation of multi-episodic perceived quality.
+Then, I presented my hypotheses of the quality formation process for multi-episodic judgments.
+Those form the basis for the experimental investigation.
+In the following chapter, the experiments on multi-episodic perceived quality in one session are presented.
+In \autoref{chap:field}, I present the experiments covering a usage period of multiple days. 
