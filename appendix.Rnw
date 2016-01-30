@@ -7,7 +7,7 @@ source('R_plot.R')
 timeseries=timeseries[-which(timeseries$experiment == "E1" & timeseries$condition == "5a")]
 @
 
-\chapter{Experimental Setups}\autoref{appendix:setups}
+\chapter{Experimental Setups}\label{appendix:setups}
 The systems that were used in the conducted experiments are described focusing on the media processing and reproduction details.
 It must be noted that the systems for experiments \E1{}, \EIIa{}, \EIIb{}, and \E3{} were designed especially for use in a controlled laboratory setting and thus precise reproduction of desired system performance was focused.
 The systems designed for experiments \E4{}, \E5{}, and \E6{} were designed for use in field experiments and thus requiring ease-of-setup, needed rather to be reliable and robust than absolutely precise in system performance.
