@@ -61,7 +61,7 @@ Due to the performance of the \emph{Beyerdynamic~DT~790~Pro} headsets, which pro
 Both systems were configured to provide neither side tone nor comfort noise, if not introduced by the codec.
 No additional audio processing was applied.
 
-\subsection{Experiments E2a, E2b, and E3}
+\section{Experiments E2a, E2b, and E3}
 For the experiments \EIIa{}, \EIIb{}, and \E3{} audio signals were presented with a pair of \emph{Sennheiser~HD~25-1}.
 For \EIIa{} and \E3{} those were connected to the internal sound card of a \emph{Microsoft Surface Pro} tablet computer whereas for experiment \EIIb{} those were connected to the internal sound card of the used \emph{Nexus 7 (2013)}.
 In all three experiments the sound pressure level was calibrated to \unit[75]{dB20$\mu$Pa} using the \emph{HSM~II.3} with babble noise and the experiments conducted in a sound-proof cabin following ITU-T~P.800 \citep{itu-t_p.800:_1996}.
