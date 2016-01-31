@@ -8,36 +8,46 @@ timeseries=timeseries[-which(timeseries$experiment == "E1" & timeseries$conditio
 @
 
 \chapter{Prediction of Multi-episodic Judgments}\label{chap:modeling}
-%\begin{chapter-abstract}
-%Using data presented in previous studies and the found effects, I will present here my modeling approach.
-%As a baseline I take the average over full history.
-%The approach will be analytical and not numerical, i.e. I will model effects found (hopefully all significant) and not number crunching.
-%This will also include modeling multi-service (for one provider) QoE.
-%
-%Note: modeling using lab studies will be more fancy than field trials (latter has lesser conditions and more noise).
-%\end{chapter-abstract}
+An initial approach on prediction of multi-episodic judgments has been conducted by \citet{moller_single-call_2011}.
+Here, all prior episodic judgments are averaged as predictor.
+\citet{moller_single-call_2011} evaluated the precision of this predictor with their \unit[14]{day} experiment (\cf, \autoref{prior:moeller}).
+In this experiment multi-episodic judgments have been taken after the 2nd day, the 7th day and the 14th day.
+With regard to the five conditions, it could be shown that the predictor is precise for the 2nd day.
+Precision decreases for later multi-episodic judgments.
 
-\section{Temporal Effects}
-% Episode neglect (saturation)
-% Recency
-% Peak
+This chapter starts with an overview of observed effects in the conducted experiments.
+Based-upon this potential approaches towards modeling are derived.
+With regard to modeling \E1{}, \EIIa{}, and \E6{} provide a large set of conditions.
+All other experiments can be used for verification of an implemented model.
 
-\section{Model Types}
-%Baseline (full)
-%Windowed
-%Linear moving average (Recency)
-%Windowed + Peak (Weiss)
+\section{Effects on Multi-episodic Judgments}
+%\subsection{Number of degraded Episodes}
+In the conducted experiments several effects have been observed.
+Most prominent is the decrease in multi-episodic judgments, if the number of degraded usage episodes is increased ( \autoref{hypo:number}).
+This has been observed in \E1{}, \EIIa{}, and \E3{}.
+In all three experiments a decrease is observed until a saturation occurred.
+Here, multi-episodic judgments do not decrease further, if three consecutive \ac{LP} episode/days are presented.
+Even if saturation is occurs, the multi-episodic judgment still remains above the episodic judgments of \ac{LP}.
+The multi-episodic judgment is still affected by previous episodes, which were presented in \ac{HP}.
+Thus, a longer integration interval must be considered.
 
-%Episode neglect?
+In \E1{} and \EIIa{} a recency effect could be observed.
+Although, not finally proven, such an effect was indicated in \E6{}.
+Here, the importance of a usage episode on a following multi-episodic judgment decreases, the more usage episodes occurred afterwards.
 
-\begin{equation}
+%Duration  neglect
+% Peak - NOPE!
+
+\section{Types of Model}
+%For the prediction of retrospective quality judgment based upon momentary judgments the average has been found useful (\cf, \autoref{chap:03}).
+
+For the implementation of a prediction model the weighted average is used (\autoref{eq:average}).
+A weighted average 
+
+\begin{equation}\label{eq:average}
 \hat{m_n}=\frac{\sum\limits_{i=1}^{n}a_i*e_i}{\sum\limits_{i=1}^{n}a_i}
 \end{equation}
 
-%Baseline
-\begin{equation}
-a_i = 1
-\end{equation}
 
 %Window
 \begin{equation}

@@ -111,9 +111,10 @@
 \renewcommand{\theHchapter}{\Roman{chapter}}
 \renewcommand{\thechapter}{\Roman{chapter}}
 \pagenumbering{Roman}\setcounter{page}{1}
-%\addtocontents{toc}{\protect\newpage}
+\addtocontents{toc}{\protect\newpage}
 
-\part*{Appendix}%\cleardoublepage\label{chap:appendix}
+\part{Appendix}
+\label{chap:appendix}
 \include{appendix}
 
 %********************************************************************

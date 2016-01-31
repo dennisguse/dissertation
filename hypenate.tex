@@ -23,11 +23,20 @@
 %defined-use
 %high-end
 %LPC-10
+%post-processing
+%one-session
 
+%\makeatletter
+%    \titleformat{\chapter}[display]%             
+%       {\relax}{\raggedleft{\color{halfgray}\chapterNumber\thechapter} \\ }{0pt}%
+%       {\titlerule\vspace*{.9\baselineskip}\raggedright\spacedallcaps}[\normalsize\vspace*{.8\baselineskip}\titlerule]
+        
 \makeatletter
-    \titleformat{\chapter}[display]%             
-        {\relax}{\raggedleft{\color{halfgray}\chapterNumber\thechapter} \\ }{0pt}%
-        {\titlerule\vspace*{.9\baselineskip}\raggedright\spacedallcaps}[\normalsize\vspace*{.8\baselineskip}\titlerule]%
+\let\chapterNumber\@undefined
+\makeatother
+\newfont{\chapterNumber}{cmr17 scaled 7000}
+        
+       
         
     \titleformat{\paragraph}
         {\normalfont\normalsize}{\theparagraph}{1em}{\spacedlowsmallcaps} 
