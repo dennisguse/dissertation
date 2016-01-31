@@ -496,7 +496,7 @@ Although, not directly comparable due to differences between experiments, it mus
 	\label{tab:lab:multiconsistency}
 \end{table}
 
-\subsubsection{\autoref{hypo:number}: Number of \acs{LP} Episodes}
+\subsubsection{\autoref{hypo:number}: Number of Consecutive \acs{LP} Episodes}
 In \autoref{hypo:number} it is assumed that increasing the number of \ac{LP} episodes before a multi-episodic judgment results in a decrease of this judgment.
 This hypothesis can be evaluated by comparing the multi-episodic judgments after the 3rd episode as reference with multi-episodic judgments after the 6th episode of \C3{}, \C5{}, and \C6{} as well as \CIIa{} and \C4{}.
 \C3{}, \C5{}, and \C6{} present one to three \ac{LP} episodes directly before this multi-episodic judgment while \CIIa{} and \C4{} present one or two \ac{LP} episode followed by one \ac{HP} episode.
@@ -604,7 +604,7 @@ However, the actual reason for this cannot be deduced from experiment \EIIb{}.
 
 Thus, \autoref{hypo:position} can be accepted for two-party conversations, but only partly accepted for third-party listening.
 
-\subsubsection{\autoref{hypo:consecutive}: Consecutive vs. Non-consecutive \acs{LP} Episodes}
+\subsubsection{\autoref{hypo:consecutive}: Non- vs. Consecutive \acs{LP} Episodes}
 In \autoref{hypo:consecutive} it is assumed that consecutive \ac{LP} episodes yield a better multi-episodic judgment than the same number of \ac{LP} episodes presented non-consecutively.
 This hypothesis is investigated in \EIIa{} only.
 It can be evaluated by comparing the final multi-episodic judgment of \C4{} and \CVa{} with \C8{}. %, for which it has already been shown that those two conditions yield a different result (\cf, \autoref{hypo:position}),
@@ -642,7 +642,7 @@ wilcox_episodic_peak = pairwise.wilcox.test(timeseries_E1_peak$QU, timeseries_E1
 @
 
 In \autoref{hypo:strength} it is assumed that the lowest episodic performance (here \ac{LP}) has a stronger negative effect on the multi-episodic judgments whereas lesser degraded episode(s) (here \ac{MP}) yield a smaller effect or no effect at all.
-
+The later case, would indicate the occurrence of a peak-effect.
 This is evaluated in \E1{} only by comparing \CIIa{}, \CVb{}, and \C7{}.
 These present the 5th episode in \ac{LP}, but differ in the performance level of the 6th usage episode (\autoref{tab:lab:hypothesesComparison}).
 \autoref{tab:lab:hypostrength} shows the multi-episodic judgments after the 6th usage episode as well as the episodic judgment of this episode.
@@ -715,7 +715,7 @@ This is supported by the found difference between the final judgments of both co
 It must be concluded that the multi-episodic judgment recovers, if three additional \ac{HP} episodes are presented, and thus \autoref{hypo:recovery} is accepted.
 However, from the two conditions alone it cannot be deduced, if a recency effect occurred or the increased number of \ac{HP} episodes alone lead to the increase.
 
-\subsubsection{\autoref{hypo:duration}: Duration of \acs{LP} Episode}
+\subsubsection{\autoref{hypo:duration}: Duration of a \acs{LP} Episode}
 In \E3{} the impact of varying duration of one \ac{LP} episode on the following multi-episodic judgment is investigated (\autoref{hypo:duration}).
 It is hypothesized that increasing the duration of an \ac{LP} episode will lead to a higher reduction in multi-episodic judgments.
 In this experiment \CIIa{} and \CIIb{} both present the 5th episode in \ac{LP}.
