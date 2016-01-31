@@ -26,20 +26,20 @@
 %post-processing
 %one-session
 
-%\makeatletter
-%    \titleformat{\chapter}[display]%             
-%       {\relax}{\raggedleft{\color{halfgray}\chapterNumber\thechapter} \\ }{0pt}%
-%       {\titlerule\vspace*{.9\baselineskip}\raggedright\spacedallcaps}[\normalsize\vspace*{.8\baselineskip}\titlerule]
-        
 \makeatletter
-\let\chapterNumber\@undefined
-\makeatother
-\newfont{\chapterNumber}{cmr17 scaled 7000}
-        
-       
-        
+    \titleformat{\chapter}[display]%             
+       {\relax}{\raggedleft{\color{halfgray}\chapterNumber\thechapter} \\ }{0pt}%
+       {\titlerule\vspace*{.9\baselineskip}\raggedright\spacedallcaps}[\normalsize\vspace*{.8\baselineskip}\titlerule]
+
     \titleformat{\paragraph}
         {\normalfont\normalsize}{\theparagraph}{1em}{\spacedlowsmallcaps} 
     \titleformat{\subparagraph}[runin]
         {\normalfont\normalsize}{\thesubparagraph}{1em}{\spacedlowsmallcaps} 
 \makeatother
+
+\makeatletter
+\let\chapterNumber\@undefined
+\makeatother
+%\newfont{\chapterNumber}{eurb10 scaled 7000}
+\newfont{\chapterNumber}{cmr17 scaled 7000}
+%\newfont{\chapterNumber}{garamond scaled 7000}
