@@ -65,12 +65,12 @@ No additional audio processing was applied.
 For the experiments \EIIa{}, \EIIb{}, and \E3{} audio signals were presented with a pair of \emph{Sennheiser~HD~25-1}.
 For \EIIa{} and \E3{} those were connected to the internal sound card of a \emph{Microsoft Surface Pro} tablet computer whereas for experiment \EIIb{} those were connected to the internal sound card of the used \emph{Nexus 7 (2013)}.
 In all three experiments the sound pressure level was calibrated to \unit[75]{dB20$\mu$Pa} using the \emph{HSM~II.3} with babble noise and the experiments conducted in a sound-proof cabin following ITU-T~P.800 \citep{itu-t_p.800:_1996}.
-In experiment \EIIb{} the \ac{VoD} service was presented on the display Nexus~7 (2013) showing videos horizontal in full screen.
+In experiment \EIIb{} the \ac{VoD} service was presented on the display Nexus~7~(2013) showing videos horizontal in full screen.
 This \unit[7]{inch} display of this device was set to maximum brightness without applying any device related color adaption.
 
 In those three experiments non-degraded recordings of two-party conversations of experiment \E1{} were selected.
 Those recordings were processed with the ITU-T~STL2009 tools \citep{itu-t_g.191:_2010} for coding with G.722 and with SOX for coding with LPC-10.
-For \EIIb{} the videos material was cut with \emph{Adobe Premiere 6} and exported with \ac{H.264} (\unit[1280x800]{px}, \unit[10]{Mbit/s}, two-pass coding) and \ac{AAC} (stereo, \unit[448]{kbit/s}).
+For \EIIb{} the videos material was cut with \emph{Adobe Premiere 6} and exported with \ac{H.264} (\unit[1280x720]{px}, \unit[5]{Mbit/s}, two-pass) and \ac{AAC} (\unit[448]{kbit/s}, stereo).
 Afterwards it was processed with \emph{FFPMEG} to re-encode with desired \ac{QP} factor while leaving audio unchanged.
 
 \section{Experiment E4}
@@ -93,7 +93,7 @@ While the speech telephony server was running well while testing, it was not abl
 Two limitations have been observed while using the overall system.
 First of all, participants connected using their own Internet access, required to be \ac{DSL} with at least \unit[6]{MBit/s}, often using a \ac{WLAN}.
 The performance of this connection could neither be estimated nor enforced, but for some calls severe, often bursty, packet-loss was observed.
-However, for the media streams no counter measures were taken against packet-loss as the used speech codec G.722 (Mode~1, \unit[64]{kbit/s}) was used with neither \ac{PLC} nor \ac{FEC} on \ac{UDP} connections without retransmission.
+However, for the media streams no counter measures were taken against packet-loss as the used speech codec G.722 (Mode~1) was used with neither \ac{PLC} nor \ac{FEC} on \ac{UDP} connections without retransmission.
 Second, packet-loss was added by Dummynet in addition to packet-loss occurring due to connection issues resulting in potentially higher loss than desired.
 
 \subsection{\ac{VoD}}

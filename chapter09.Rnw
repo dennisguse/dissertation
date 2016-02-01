@@ -11,32 +11,64 @@ timeseries=timeseries[-which(timeseries$experiment == "E1" & timeseries$conditio
 An initial approach on prediction of multi-episodic judgments has been conducted by \citet{moller_single-call_2011}.
 Here, all prior episodic judgments are averaged as predictor.
 \citet{moller_single-call_2011} evaluated the precision of this predictor with their \unit[14]{day} experiment (\cf, \autoref{prior:moeller}).
-In this experiment multi-episodic judgments have been taken after the 2nd day, the 7th day and the 14th day.
+In this experiment multi-episodic judgments have been taken after the 2nd, 7th and 14th day.
 With regard to the five conditions, it could be shown that the predictor is precise for the 2nd day.
 Precision decreases for later multi-episodic judgments.
 
-This chapter starts with an overview of observed effects in the conducted experiments.
-Based-upon this potential approaches towards modeling are derived.
-With regard to modeling \E1{}, \EIIa{}, and \E6{} provide a large set of conditions.
-All other experiments can be used for verification of an implemented model.
+This chapter starts with an overview of observed effects in the conducted experiments that are relevant for prediction of multi-episodic judgments.
+Based-upon this necessary characteristics that a model must fulfill are derived.
+Then, model parameters are fitted based upon \E1{}, \EIIa{}, and \E6{}.
+Those experiments yielded a large data set in itself consistent data set.
+All other experiments can be used for verification of an implemented model.\footnote{An approach towards modeling based upon the experiment of \citet{moller_single-call_2011} and \E5{} is published in \citet{guse_modelling_2014}.}
 
 \section{Effects on Multi-episodic Judgments}
-%\subsection{Number of degraded Episodes}
 In the conducted experiments several effects have been observed.
-Most prominent is the decrease in multi-episodic judgments, if the number of degraded usage episodes is increased ( \autoref{hypo:number}).
-This has been observed in \E1{}, \EIIa{}, and \E3{}.
+
+First, it must be noted that multi-episodic judgment is very similar to episodic judgments, if no degraded episodes are presented.
+This has been observed by \citet{moller_single-call_2011}, all one-session experiments, and field experiments.
+With regard to \citet{moller_single-call_2011} and also \E4{} showed a slight increase of episodic judgments over the usage period, if no degraded episodes were presented.
+However, the effect is rather small and the actual reason for this could not be deduced.
+It is thus not considered for the creation of a prediction model.
+
+%\paragraph*{Number of degraded Episodes}
+Most prominent is the decrease in multi-episodic judgments, if the number of degraded usage episodes is increased (\autoref{hypo:number}).
+Here, a large effect has been observed in \E1{}, \EIIa{}, and \E6{}.
 In all three experiments a decrease is observed until a saturation occurred.
 Here, multi-episodic judgments do not decrease further, if three consecutive \ac{LP} episode/days are presented.
 Even if saturation is occurs, the multi-episodic judgment still remains above the episodic judgments of \ac{LP}.
 The multi-episodic judgment is still affected by previous episodes, which were presented in \ac{HP}.
 Thus, a longer integration interval must be considered.
+Beside the integration interval, this indicates that one of the three \ac{LP} episodes/day did not contribute to the final multi-episodic judgment.
 
-In \E1{} and \EIIa{} a recency effect could be observed.
-Although, not finally proven, such an effect was indicated in \E6{}.
+Beside the increase of \ac{LP} episode before a multi-episodic judgment, a position effect has been observed (\autoref{hypo:position}).
+This has been investigated in \E1{}, \EIIa{}, and also \E6{}.
+An impact of position and thus recency effect could be observed in \E1{} and \EIIa{}.
 Here, the importance of a usage episode on a following multi-episodic judgment decreases, the more usage episodes occurred afterwards.
+While \E1{}, showed such an effect in both cases, \ie, one and two \ac{LP} episodes, it was only present in \EIIa{} for two \ac{LP} episodes.
+The difference can be attributed to usage situation.
+In \E1{} a two-party conversation was used whereas \EIIa{} used third-party listening.
+Although, not statistically significant, a recency effect was indicated in \E6{} for both cases, \ie, one or two days presented in \ac{LP}.
+In \E1{} and \E6{} also the impact of non-consecutive \ac{LP} presentation was investigated.
+An effect could not be observed in both experiments and thus the number of performance changes is assumed to be neglectable.
 
-%Duration  neglect
-% Peak - NOPE!
+Beside number and position, recovery was investigated in \E1{} (\autoref{hypo:recovery}).
+Here, additional \ac{HP} episodes are presented after a negatively affected multi-episodic judgment and the improvement assessed.
+For the investigated two conditions, a recovery could observed.
+Here, nine usage episodes were presented while non-\ac{HP} episodes were presented after as 5th and 6th usage episode.
+The multi-episodic judgment after the 6th usage episode showed a negative effect, but the the judgments after the 3rd and 9th usage episode were not significant different.
+However, in both conditions a slight negative is still indicated in the final judgment.
+This finding can be explained by a recency effect, but might also due to the increased number of \ac{HP} episodes.
+
+In the one-session experiments, also a duration neglect (\autoref{hypo:duration}) has been investigated.
+In \E3{} a potential duration neglect could be shown.
+Here, doubling the duration of a \ac{LP} episode did not negatively affect a following multi-episodic judgment.
+In fact, even episodic judgments were not negatively affect.
+It can thus be concluded that duration neglect occurs as long no macroscopic performance fluctuations occur.
+Therefore, the duration of an episode must not be considered in a multi-episodic prediction model.
+
+In one-session experiments also the independence of multi-episodic judgments between two services has been investigated (\autoref{hypo:independent}).
+This has been investigated in \EIIb{}.
+However, no impact of the presentation of a second service could be observed independent if the service was presented wit or without \ac{LP} episodes.
 
 \section{Types of Model}
 %For the prediction of retrospective quality judgment based upon momentary judgments the average has been found useful (\cf, \autoref{chap:03}).

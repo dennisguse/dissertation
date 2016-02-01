@@ -594,10 +594,10 @@ The three conditions are not significantly different with regard to the last mul
  \label{tab:field:hypoconsecutive}
 \end{table}
 
-Thus, \autoref{hypo:consecutive} cannot be answered.
+Thus, \autoref{hypo:consecutive} must be rejected, because no significant difference is observed.
 In fact, the results indicate that non-consecutive \ac{LP} days are judged not different to consecutive presentation.
 However, the slight improvement judgment can also be explained by a recency effect.
-Similar findings were indicated in \E5{} as well as \EIIa{}.
+This is similar to \EIIa{} and was also indicated in \E5{}.
 
 \subsection{Discussion}
 In this experiment three hypothesis were investigated complementing the one-session experiments on multi-episodic \ac{QoE}.
@@ -637,9 +637,9 @@ This indicates that the integration interval is longer than \unit[3]{days}.
 With regard to \autoref{hypo:position} an effect is indicated (non-significant).
 Here, a recency effect seems to occur.
 This is line with the results of \E1{} and \EIIa{}.
-\autoref{hypo:consecutive} could not be answered in \E6{}.
+\autoref{hypo:consecutive} is rejected in \E6{}.
 Similar to \EIIa{} no significant difference is observed between the non-consecutive and consecutive presentation of two \ac{LP} days.
-The observed difference might also be attributed to a recency effect.
+The indicated difference might also be attributed to a recency effect.
 Thus, non-consecutive presentation seems to be similar to consecutive presentation, or a potential effect size rather small.
 
 It must be noted that in \E6{} yielded effects were observed and indicated as found in the one-session experiments.

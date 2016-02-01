@@ -221,9 +221,9 @@ This might result in a reduction in perceived quality in a conversational case a
 The \ac{VoD} service for \EIIb{} was presented on a tablet computer.
 %Presenting both services on the same device rather than different devices, prevents that participants associate each service with an individual device and use the device as cue for recall.
 Here, a \emph{Nexus 7 (2013)} is used, which provides a 7~inch screen with a resolution of $1920x1200$.
-For \ac{HP}, content is downscaled to a resolution of $1280x800$ and encoded with \ac{H.264} at 25~\ac{FPS}.
+For \ac{HP}, content is downscaled to a resolution of $1280x720$ and encoded with \ac{H.264} (25~\ac{FPS}, \unit[5]{Mbit/s}, two-pass).
 For \ac{LP}, the video signal is degraded by setting the \ac{QP} factor to 50.
-This results in a constant blockiness.
+This results in a constant blockiness for \ac{LP}.
 %In difference to limiting the encoding bandwidth, this leads to near constant degradation over multiple frames. 
 The audio channel is encoded with \ac{AAC} (\unit[48]{kHz}, stereo) for both performance levels.
 Degrading the video channel only is chosen to prevent a direct comparison of degradations between the two services.
@@ -630,8 +630,8 @@ The multi-episodic judgments of those three conditions are not significantly dif
 In fact, the multi-episodic judgment of \CVa{} and \C8{} are rather close compared to \C4{}.
 This might indicate a higher impact of the very last episode in terms of a recency effect.
 
-Thus, \autoref{hypo:consecutive} can neither be accepted nor rejected based upon the results of \EIIa{}.
-It must be concluded that either such an effect does not exists, or it is to small to observed with the limited number of participants.
+Thus, \autoref{hypo:consecutive} is rejected, \ie, because the non-consecutive presentation is not judged different enough to a sequential presentation of \ac{LP} episodes.
+It must be concluded that either such an effect does not exists, or it is to small to be observed.
 
 \subsubsection{\autoref{hypo:strength}: Strength of Degradation}
 
@@ -683,7 +683,7 @@ Thus, \autoref{hypo:strength} must be left unanswered.
 
 \subsubsection{\autoref{hypo:recovery}: Recovery after \acs{LP} Episodes}\label{lab:result:recovery}
 In \autoref{hypo:recovery} the recovery of multi-episodic is investigated.
-This can be investigated in \E1{} by comparing \CVb{} and \C7{}.
+This is investigated in \E1{} by comparing \CVb{} and \C7{}.
 Both present nine episodes while non-\ac{HP} is presented for the 5th and 6th usage episode.
 \autoref{tab:lab:hyporecovery} shows the three the multi-episodic judgments of those conditions.
 
