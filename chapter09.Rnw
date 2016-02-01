@@ -111,7 +111,8 @@ This is in the following denoted as \emph{baseline}.
 In fact, a fixed window is a rather unlikely case for an integration function.
 To account for a recency effect, a linear weighting is selected.
 Here, also a window is defined.
-However, the weight of a usage episode decreases with the increasing distance to $n$.
+However, the weight of a usage episode decreases with the increasing distance of a usage episode to multi-episodic judgment.
+To avoid overfitting $w$ is limited to $0 < w \leg 2*n$.
 \begin{equation}\label{eq:weight:linear}  %\frac{n-i}{w} & :i - n + w > 0 \\
 a_i= \left\{
 \begin{array}{cr}
@@ -124,7 +125,7 @@ a_i= \left\{
 Employing a weighted average is expected to enable an increase in prediction accuracy, because a recency effect can modeled.
 However, for one observed effect a weighted average will necessarily produce a deviation.
 In case of the observed saturation effect both weighting functions will be too negative.
-Here, three \ac{LP} episodes/days are not judged worse than two \ac{LP}.
+Here, three \ac{LP} episodes, or days are not judged worse than two \ac{LP}.
 The implication of this is that one \ac{LP} episode is not judged different than one \ac{HP} episode with regard to the multi-episodic judgment.
 This can be modeled in two ways.
 On the one hand, the weight of one of the three \ac{LP} episode can be set to zero, and and the weight of \ac{HP} episodes increased.
@@ -134,13 +135,26 @@ Here, the judgment of this episode would be changed to an \ac{HP} episode.
 Then, the weighting function does not need to be changed to model this effect.
 The second option seems more elegant and is more likely to reflect a characteristic of the quality formation process.
 
-A modeling an explicit peak-effect is omitted here, because such an effect could not be observed in the conducted experiments.
+A modeling a peak-effect is omitted here, because such an effect could not be observed in the conducted experiments.
+Even, if in \E1{} \C7{} a peak-effect occurred, the influence on the final judgment seems to be rather small.
 
-\section{Performance Metrics}
+\section{Prediction Accuracy}
+In the following, the prediction accuracy is evaluated using two metrics.
+Here, the \ac{RMSD} (\autoref{eq:rmsd}) and the Pearson correlation is used.
 
-\section{Evaluation: One Session} 
+\begin{equation}\label{eq:rmsd}
+RMSD: \sqrt{\frac{1}{N} \sum\limits_{i=1}^{N}(x_i-\hat{x}_i)^2}
+\end{equation}
+
+For modeling fitting, \ie, selection of best suiting parameter, both metrics are equally used.
+In a perfect case an \ac{RMSD} of 0 and correlation coefficient of 1 should reached.
+In fact, a parameter set is preferred that suits most conditions rather than only explain individual conditions.
+
+\section{Evaluation}
 
 
-\section{Evaluation: Multiple Days}
+\subsection{One Session}
+
+\subsection{Multiple Days}
 
 \section{Conclusion}
