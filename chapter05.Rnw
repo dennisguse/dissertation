@@ -84,7 +84,7 @@ For multi-episodic perceived quality it must be taken into account as a potentia
 In the following, factors are discussed that might affect multi-episodic perceived quality and thus should be kept constant, if a \ac{MOS} evaluation is applied.
 
 \subparagraph*{Prior Knowledge and Expectations}
-Perceived quality is influenced by prior knowledge about a service under consideration (\cf, \autoref{method:perceivedQuality}).
+Perceived quality is influenced by prior knowledge about a service under consideration (\cf, \autoref{related:perceivedQuality}).
 Prior knowledge includes knowledge about the specific service and also about the type of service in general.
 For telecommunication services this includes knowledge and likely origins about service-specific performance fluctuations.
 Also, promises about performance by a service provider as for example provided in advertisements is considered knowledge.

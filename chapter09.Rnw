@@ -122,10 +122,19 @@ a_i= \left\{
 \end{equation}
 
 Employing a weighted average is expected to enable an increase in prediction accuracy, because a recency effect can modeled.
-However, for one observed effect a weighted average will necessarily produce deviations.
+However, for one observed effect a weighted average will necessarily produce a deviation.
+In case of the observed saturation effect both weighting functions will be too negative.
+Here, three \ac{LP} episodes/days are not judged worse than two \ac{LP}.
+The implication of this is that one \ac{LP} episode is not judged different than one \ac{HP} episode with regard to the multi-episodic judgment.
+This can be modeled in two ways.
+On the one hand, the weight of one of the three \ac{LP} episode can be set to zero, and and the weight of \ac{HP} episodes increased.
+The later would be necessary to counter a reduction due to the lower number of \ac{HP} episodes.
+On the other hand, the episodic judgment of one \ac{LP} episode could be adjusted.
+Here, the judgment of this episode would be changed to an \ac{HP} episode.
+Then, the weighting function does not need to be changed to model this effect.
+The second option seems more elegant and is more likely to reflect a characteristic of the quality formation process.
 
 A modeling an explicit peak-effect is omitted here, because such an effect could not be observed in the conducted experiments.
-
 
 \section{Performance Metrics}
 
