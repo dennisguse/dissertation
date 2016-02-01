@@ -68,38 +68,64 @@ Therefore, the duration of an episode must not be considered in a multi-episodic
 
 In one-session experiments also the independence of multi-episodic judgments between two services has been investigated (\autoref{hypo:independent}).
 This has been investigated in \EIIb{}.
-However, no impact of the presentation of a second service could be observed independent if the service was presented wit or without \ac{LP} episodes.
+Here, the presentation of a second service did not affect the multi-episodic judgments of the first service.
+This was found for the presentation of the second service with and without \ac{LP} episodes.
+Thus, the presence of a second service must not be considered for prediction of multi-episodic judgments of one service.
 
-\section{Types of Model}
-%For the prediction of retrospective quality judgment based upon momentary judgments the average has been found useful (\cf, \autoref{chap:03}).
+\section{Model Type}
+The modeling approach of \citet{moller_single-call_2011} is extended.
+They proposed to the use the average of all prior episodic judgments to predict a multi-episodic judgment.
+This model provides accurate prediction for earlier multi-episodic judgments, but prediction accuracy decreases, if longer sequences of multi-episodic use are predicted.
 
-For the implementation of a prediction model the weighted average is used (\autoref{eq:average}).
-A weighted average 
+Here, a weighted average model is proposed to increase prediction accuracy. %(\autoref{eq:average})
+This allows to assign an individual weight to each episodic judgment and thus model the influence on to be predicted multi-episodic judgment.
+In the following, episodic judgments are denoted as $e_i$ and multi-episodic judgments are denoted as $m_n$.
+$i$ denotes the usage episode and $n$ denotes the usage episode/day after which a multi-episodic judgment was taken.
+The weight for a usage episode is denoted as $a_i$.
+Thus, the prediction model for $\hat{m}_n$ is defined as: 
 
-\begin{equation}\label{eq:average}
-\hat{m_n}=\frac{\sum\limits_{i=1}^{n}a_i*e_i}{\sum\limits_{i=1}^{n}a_i}
+\begin{equation}\label{eq:average} %\widehat? \nicefrac
+\hat{m}_n=\frac{\sum\limits_{i=1}^{n}a_i*e_i}{\sum\limits_{i=1}^{n}a_i} 
 \end{equation}
 
+In fact, the weighted average model is in itself a rather simple model, because it can only parametrized with a weighting function.
+However, selecting a suiting weighting function is not a simple task, because overfitting is a serious issue.
+Following Occam's Razor, two weighting functions are proposed.
+Both can account for a recency effect, if desired.
 
-%Window
-\begin{equation}
+The first weighting function is a window function.
+This function is parametrized by the window parameter $w$.
+Here, $w$ is limited to $w~\in~\mathbb{N}$ and $0~<~w~\leq~n$.
+All usage episode in this window are assigned a weighting factor of 1 and all before a weighting factor of 0:
+\begin{equation}\label{eq:weight:window}
 a_i= \left\{
 \begin{array}{lr}
-  1 & : i - w \geq 0 \\
-  0 & : i - w < 0
+  1 & : i - n + w > 0 \\
+  0 & : i - n + w \leq 0
+\end{array}
+\right.
+\end{equation}
+Setting $w := n$, the model becomes an average over all prior episodic judgments.
+This is in the following denoted as \emph{baseline}.
+
+In fact, a fixed window is a rather unlikely case for an integration function.
+To account for a recency effect, a linear weighting is selected.
+Here, also a window is defined.
+However, the weight of a usage episode decreases with the increasing distance to $n$.
+\begin{equation}\label{eq:weight:linear}  %\frac{n-i}{w} & :i - n + w > 0 \\
+a_i= \left\{
+\begin{array}{cr}
+	i-n & : i - n + w > 0 \\
+  0 & : i - n + w \leq 0
 \end{array}
 \right.
 \end{equation}
 
-%Linear
-\begin{equation}
-a_i= \left\{
-\begin{array}{lr}
-  \frac{n-i}{w} & : i - w \geq 0 \\
-  0 & : i - w < 0
-\end{array}
-\right.
-\end{equation}
+Employing a weighted average is expected to enable an increase in prediction accuracy, because a recency effect can modeled.
+However, for one observed effect a weighted average will necessarily produce deviations.
+
+A modeling an explicit peak-effect is omitted here, because such an effect could not be observed in the conducted experiments.
+
 
 \section{Performance Metrics}
 
