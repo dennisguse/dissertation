@@ -31,7 +31,6 @@ model_average_weighted_create <- function(fun_weight) {
   return(model_average_weighted(id, timeseries, fun_weight))
  })
 }
-
 model_average_weighted <- function(id, timeseries, fun_weight) {
  historicTimeseries = timeseries[(timeseries$id <= id),]
  historicTimeseries = fun_weight(historicTimeseries)

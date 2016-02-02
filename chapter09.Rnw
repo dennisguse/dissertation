@@ -11,7 +11,7 @@ timeseries=timeseries[-which(timeseries$experiment == "E1" & timeseries$conditio
 An initial approach on prediction of multi-episodic judgments has been conducted by \citet{moller_single-call_2011}.
 Here, all prior episodic judgments are averaged as predictor.
 \citet{moller_single-call_2011} evaluated the precision of this predictor with their \unit[14]{day} experiment (\cf, \autoref{prior:moeller}).
-In this experiment multi-episodic judgments have been taken after the 2nd, 7th and 14th day.
+In this experiment multi-episodic judgments have been taken after the 2nd, 7th and 14th~day.
 With regard to the five conditions, it could be shown that the predictor is precise for the 2nd day.
 Precision decreases for later multi-episodic judgments.
 
@@ -112,7 +112,7 @@ In fact, a fixed window is a rather unlikely case for an integration function.
 To account for a recency effect, a linear weighting is selected.
 Here, also a window is defined.
 However, the weight of a usage episode decreases with the increasing distance of a usage episode to multi-episodic judgment.
-To avoid overfitting $w$ is limited to $0 < w \leg 2*n$.
+To avoid overfitting $w$ is limited to $0 < w \leq 2*n+1$ and must be an odd.
 \begin{equation}\label{eq:weight:linear}  %\frac{n-i}{w} & :i - n + w > 0 \\
 a_i= \left\{
 \begin{array}{cr}
@@ -135,26 +135,41 @@ Here, the judgment of this episode would be changed to an \ac{HP} episode.
 Then, the weighting function does not need to be changed to model this effect.
 The second option seems more elegant and is more likely to reflect a characteristic of the quality formation process.
 
-A modeling a peak-effect is omitted here, because such an effect could not be observed in the conducted experiments.
-Even, if in \E1{} \C7{} a peak-effect occurred, the influence on the final judgment seems to be rather small.
+A modeling of a peak-effect is omitted here, because such an effect could not be observed in the conducted experiments.
+Even, if in \C7{} of \E1{} a peak-effect occurred, then the influence on the final judgment seems to be rather small.
+
+In the following, a \emph{model} denotes the selected weighting function with the defined parameter.
 
 \section{Prediction Accuracy}
-In the following, the prediction accuracy is evaluated using two metrics.
-Here, the \ac{RMSD} (\autoref{eq:rmsd}) and the Pearson correlation is used.
-
+The prediction accuracy of a model is evaluated using two metrics.
+Here, the \ac{RMSD} is used to estimate the \emph{absolute} deviation of the predicted value and actual value.
 \begin{equation}\label{eq:rmsd}
 RMSD: \sqrt{\frac{1}{N} \sum\limits_{i=1}^{N}(x_i-\hat{x}_i)^2}
 \end{equation}
 
+The \ac{RMSD} is complemented by the Pearson correlation.
+The Pearson correlation evaluates the linear dependency of two variables.
 For modeling fitting, \ie, selection of best suiting parameter, both metrics are equally used.
-In a perfect case an \ac{RMSD} of 0 and correlation coefficient of 1 should reached.
-In fact, a parameter set is preferred that suits most conditions rather than only explain individual conditions.
+In a perfect case a \ac{RMSD} of 0, \ie, no deviation, and correlation coefficient of 1, \ie, perfect linear relationship, should reached.
+Here, a model is preferable that explains a higher number of conditions, rather than individual conditions only.
 
 \section{Evaluation}
+In the following, modeling is done individually for each the \E1{}, \EIIa{}, and \E6{}.
+This is necessary as \E1{} and \EIIa{} differ in their usage situation while \E6{} focused on a different usage period.
+The evaluation is conducted based upon individual judgments, \ie, for each participants, rather than on a \ac{MOS}.
+This is applied due to the limited conditions, number of participants, and between-subject design.
 
+\subsection{One Session: E1}
 
-\subsection{One Session}
+\paragraph*{Recovery}
+%9
 
-\subsection{Multiple Days}
+\subsection{One Session: E2a}
+
+\subsection{Multiple Days: E6}
+
+\subsection{Conclusion}
+
+\section{Verification}
 
 \section{Conclusion}

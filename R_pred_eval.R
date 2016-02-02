@@ -3,7 +3,8 @@ suppressMessages(library("Hmisc")) # %in%
 performance <- function(model, timeseries, id=NULL) {
  #Performance for all?
  if (!is.null(id)) timeseries$IQU[which(timeseries$id %nin% id)] = NA
-
+ if (nrow(timeseries) == 0) return (c(NA, NA))
+ 
  timeseries$IQU_approx = NA  
  
  ##SPLIT
@@ -26,18 +27,13 @@ performance <- function(model, timeseries, id=NULL) {
  timeseries$residuals = timeseries$IQU_approx - timeseries$IQU   #1. Calculate residuals
  RMSD = sqrt(sum(timeseries$residuals^2, na.rm=T)/sum(!is.na(timeseries$residuals)))
  
- return (list(timeseries=timeseries, model=model, RMSD=RMSD, correlation=correlation))
+ #return (list(timeseries=timeseries, model=model, RMSD=RMSD, correlation=correlation))
+ return (c(RMSD, correlation))
 }
 
 
 performance_by_experiment_and_condition <- function(model, id=NULL, experiment_filter=experiment, condition_filter=condition) {
  d = subset(timeseries, experiment %in% experiment_filter & condition %in% condition_filter)
- result = performance(model, d, id)
- sprintf("$RMSD=%f, Cor=%f$", result$RMSD, result$correlation)
-}
-
-performanceAVG_by_experiment_and_condition <- function(model, id=NULL, experiment_filter=timeseries_avg$experiment, condition_filter=timeseries_avg$condition) {
- d = subset(timeseries_avg, timeseries_avg$experiment %in% experiment_filter & timeseries_avg$condition %in% condition_filter)
  result = performance(model, d, id)
  sprintf("$RMSD=%f, Cor=%f$", result$RMSD, result$correlation)
 }
@@ -54,7 +50,7 @@ if (FALSE) {
  experiment=rep(1, 10)
  service=rep(1, 10)
  
- timeseries = data.frame(id, QU, IQU, username, condition, study, service)
+ timeseries = data.frame(id, QU, IQU, username, condition, service)
  
  model_identity(10, timeseries)
  model_static(10, timeseries, 4)
