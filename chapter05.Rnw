@@ -117,7 +117,7 @@ Beside the usage pattern, more important seems to be the experienced performance
 In terms of multi-episodic perceived quality this refers to the performance of all individual episodes.
 If the experienced performance as well as the usage pattern are identical or similar enough, multi-episodic judgments of different participants can be directly compared.
 
-\paragraph{Assessment Methodologies} %TODO Different structure to avoid looking like a subsection without number
+\paragraph{Assessment Methods} %TODO Different structure to avoid looking like a subsection without number
 
 \subparagraph*{Free-use}
 Multi-episodic perceived quality can be assessed by observing user's interaction with a service without restricting their usage behavior.
