@@ -1,6 +1,6 @@
 suppressMessages(library("Hmisc")) # %in%
 
-performance <- function(model, timeseries, id=NULL) {
+eval_performance <- function(model, timeseries, id=NULL) {
  #Performance for all?
  if (!is.null(id)) timeseries$IQU[which(timeseries$id %nin% id)] = NA
  if (nrow(timeseries) == 0) return (c(NA, NA))
@@ -32,9 +32,9 @@ performance <- function(model, timeseries, id=NULL) {
 }
 
 
-performance_by_experiment_and_condition <- function(model, id=NULL, experiment_filter=experiment, condition_filter=condition) {
- d = subset(timeseries, experiment %in% experiment_filter & condition %in% condition_filter)
- result = performance(model, d, id)
+performance_by_experiment_and_condition <- function(model, id=NULL, experiment_filter=experiment, condition_filter=condition, service_filter=service) {
+ d = subset(timeseries, experiment %in% experiment_filter & condition %in% condition_filter & service %in% service_filter)
+ result = eval_performance(model, d, id)
  sprintf("$RMSD=%f, Cor=%f$", result$RMSD, result$correlation)
 }
 
