@@ -107,13 +107,13 @@
 \cleardoublepage
 
 \newpage
+\thispagestyle{empty}
 \vspace*{3cm}
 \begin{center}
 So long, and thanks for all the fish
 \\ \medskip
     --- Douglas Adams
 \end{center}
-
 
 \cleardoublepage
 
