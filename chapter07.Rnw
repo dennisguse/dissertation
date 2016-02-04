@@ -317,7 +317,7 @@ Participation in \E1{} was compensated with 20~EUR, in \EIIa{} and \E3{} with 10
 
 The conducted audiometry in \E1{} and \EIIa{} did not find for any participants hearing impairments.
 All participants were individually checked for inconsistent episodic judgments.
-A participant is considered inconsistent, if more than two episodic judgments exceed the 1.5 $\times$ \emph{interquartile range} per usage episode of the condition.
+A participant is considered inconsistent, if more than two episodic judgments exceed the 1.5~$\times$~\emph{interquartile range} per usage episode of the condition.
 The interquartile range is, in fact, a rather conservative criteria.
 However, due to the lack of ground-truth on episodic judgments in multi-episodic case, participants should only be removed, if severe differences occur.
 This criteria was met for no participant and thus none was excluded from the data analysis.
