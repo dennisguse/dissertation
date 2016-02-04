@@ -1,21 +1,9 @@
+timeseries = read.csv("data_minimal.csv")
+attach(timeseries)
+
+
 #timeseries=timeseries[-which(timeseries$experiment == "E1" & timeseries$condition == "5a")]
 #timeseries=timeseries[-which(timeseries$experiment == "E6a" & timeseries$id < 3)]
-
-
-# exp = "E1"
-# performance_by_experiment_and_condition(model_average_weighted_create(weight_window_create(3)), 3, exp)
-# 
-# performance_by_experiment_and_condition(model_average_weighted_create(weight_window_create(6)), 6, exp, "1")
-# performance_by_experiment_and_condition(model_average_weighted_create(weight_window_create(6)), 6, exp, "2a")
-# performance_by_experiment_and_condition(model_average_weighted_create(weight_window_create(6)), 6, exp, 3)
-# performance_by_experiment_and_condition(model_average_weighted_create(weight_window_create(6)), 6, exp, 4)
-# performance_by_experiment_and_condition(model_average_weighted_create(weight_window_create(6)), 6, exp, "5b")
-# performance_by_experiment_and_condition(model_average_weighted_create(weight_window_create(6)), 6, exp, "6")
-# performance_by_experiment_and_condition(model_average_weighted_create(weight_window_create(6)), 6, exp, "7")
-# 
-# 
-# performance()
-# t(apply(timeseries, 1,  function(x) {return (c(x[["id"]], x[["QU"]]))}))
 
 
 overview=read.csv("../R_modeling.csv", stringsAsFactors = F)
