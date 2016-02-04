@@ -106,6 +106,17 @@
 \include{chapter10}
 \cleardoublepage
 
+\newpage
+\vspace*{3cm}
+\begin{center}
+So long, and thanks for all the fish
+\\ \medskip
+    --- Douglas Adams
+\end{center}
+
+
+\cleardoublepage
+
 \bookmarksetup{startatroot}
 \setcounter{chapter}{0}
 
