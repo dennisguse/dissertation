@@ -44,6 +44,7 @@
 \setlength\overfullrule{5pt}
 \renewcommand{\myVersion}{\Sexpr{system("git rev-parse HEAD", intern=T)}}
 
+\DeclareNameAlias{sortname}{last-first}
 %********************************************************************
 % Bibliographies
 %*******************************************************
