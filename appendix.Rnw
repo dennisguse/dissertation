@@ -96,7 +96,7 @@ The performance of this connection could neither be estimated nor enforced, but 
 However, for the media streams no counter measures were taken against packet-loss as the used speech codec G.722 (Mode~1) was used with neither \ac{PLC} nor \ac{FEC} on \ac{UDP} connections without retransmission.
 Second, packet-loss was added by Dummynet in addition to packet-loss occurring due to connection issues resulting in potentially higher loss than desired.
 
-\subsection{\ac{VoD}}
+\subsection{\acl{VoD}}
 For the \ac{VoD} service an actual service was simulated offline rather than providing it as an online service.
 Here a video player was implemented with \emph{Microsoft Silverlight} that replicated a video streaming website including login procedure and initial buffering, which could only be executed in a web browser.
 This video player was bundled together with the preprocessed videos on a \ac{USB} flash drive.

@@ -20,6 +20,9 @@ Both differ in usage situation, \ie, an active conversation vs. third-party list
 \label{E1}\label{E2a}\label{E2b}\label{E2}\label{E3}
 %Overview on Experiments
 \begin{table}[h]
+	\centering
+	\caption{Conducted one session experiments on multi-episodic perceived quality.}
+	\label{tab:lab:experiments}
 	\begin{tabulary}{\textwidth}{C|C|C|C|C}
 	Experiment	& Service Type(s)	& Task					& Episodes	& Hypothesis \\
 	\midrule
@@ -31,8 +34,6 @@ Both differ in usage situation, \ie, an active conversation vs. third-party list
 	\hline
 	\E3{}			& \ac{AoD}		& Audio book				& 6		& \autoref{hypo:duration}\\
 	\end{tabulary}
-	\caption{Conducted one session experiments on multi-episodic perceived quality.}
-	\label{tab:lab:experiments}
 \end{table}
 
 In the following, first the experimental design that is shared between the four experiments is presented.
@@ -75,6 +76,9 @@ In addition, an influence of the different usage situations and service types ca
 
 \begin{table}
  \centering
+ \caption[Episodic performance for all conditions for one session]{Episodic performance for all conditions for one session.
+ Non-\acs{HP} episodes are in \textbf{bold} (\acs{LP}) and \textit{italic} (\acs{MP}).}
+ \label{tab:lab:hypothesesComparison}
  \begin{tabulary}{\textwidth}{C|C|C|C|C|C}
  \multirow{2}{*}{Condition}& \multicolumn{5}{c}{Episodic Performance}        \\
            	& 1-3	& 4			& 5           & 6           & 7-9 \\
@@ -101,9 +105,6 @@ In addition, an influence of the different usage situations and service types ca
  \hline
  \C8{}         & \ac{HP} 	& \textbf{\ac{LP}} & \ac{HP}          & \textbf{\ac{LP}} & - \\
  \end{tabulary}
- \caption[Episodic performance for all conditions for one session]{Episodic performance for all conditions for one session.
- Non-\acs{HP} episodes are in \textbf{bold} (\acs{LP}) and \textit{italic} (\acs{MP}).}
- \label{tab:lab:hypothesesComparison}
 \end{table}
 
 All hypotheses except \autoref{hypo:recovery} are investigated with regard to the multi-episodic judgment after the 6th usage episode.
@@ -195,6 +196,9 @@ It on only achieves a \ac{MOS} of 1.9 (\unit[7]{pt}~\ac{CCR}).
 
 \begin{table}
  \centering
+ \caption[Comparison of the selected codecs for performance levels with \acs{POLQA}.]{Comparison of the selected codecs for \acs{HP}, \acs{MP}, and \acs{LP} with \acs{POLQA}.
+ The prediction was transformed to the 7-point \acs{CCR} scale \citep{koster_comparison_2015}.}
+ \label{tab:lab:performance}
  \begin{tabulary}{\columnwidth}{C|C|C|C}
    Performance & Signal bandwidth & Codec & \acs{POLQA}\\
    \midrule
@@ -204,9 +208,6 @@ It on only achieves a \ac{MOS} of 1.9 (\unit[7]{pt}~\ac{CCR}).
    \hline
    \ac{LP} & 300...\unit[3400]{Hz} & LPC-10        & 1.9 \\ %MOS1-5: 2.0
    \end{tabulary}
-   \caption[Comparison of the selected codecs for performance levels with \acs{POLQA}.]{Comparison of the selected codecs for \acs{HP}, \acs{MP}, and \acs{LP} with \acs{POLQA}.
-   The prediction was transformed to the 7-point \acs{CCR} scale \citep{koster_comparison_2015}.}
-   \label{tab:lab:performance}
 \end{table}
 
 End-to-end delay is an additional factor influencing perceived quality.
@@ -329,6 +330,9 @@ A higher number of participants were used for \C7{} (\E1{}) to precisely quantif
 
 \begin{table} %TODO Appendix
 	\centering
+	\caption[Participants per condition for \E1{}, \EIIa{}, and \EIIb{}.]{Participants per condition for \E1{}, \EIIa{}, and \EIIb{}.
+	For \EIIb{} the conditions of the \acs{VoD} are shown as the telephony service was always presented in \CVa{}.}
+	\label{tab:lab:participants}
 	\begin{tabular}{c|c|c|c|c}
 	\multirow{2}{*}{Conditions} & \multicolumn{4}{c}{Experiments} \\
 			& \E1{}	& \EIIa{} 	& \EIIb{} 	& \E3{}\\
@@ -357,9 +361,6 @@ A higher number of participants were used for \C7{} (\E1{}) to precisely quantif
 %	\midrule
 %	$\sum$ 	& \Sexpr{participants("E1", c("1", "2a", "3", "4", "5b", "6", "7"))}		&	\Sexpr{participants("E2a")}			&	\Sexpr{participants("E2b")} 	& \Sexpr{participants("E3")} \\
 	\end{tabular}
-	\caption[Participants per condition for \E1{}, \EIIa{}, and \EIIb{}.]{Participants per condition for \E1{}, \EIIa{}, and \EIIb{}.
-	For \EIIb{} the conditions of the \acs{VoD} are shown as the telephony service was always presented in \CVa{}.}
-	\label{tab:lab:participants}
 \end{table}
 
 \section{Data Analysis}\label{method:statistic}
@@ -389,6 +390,8 @@ In the following, the differences in episodic judgments between conditions are i
 
 \begin{table}
   \centering
+  \caption{Episodic judgments per performance levels for the one-session experiments.}
+	\label{tab:lab:episodicMOS}
 	\begin{tabulary}{\textwidth}{c|C|c|c|c}
 	\multirow{2}{*}{Experiment}	& \multirow{2}{*}{Service} & \multicolumn{3}{c}{Episodic Judgment} \\
 						& & \ac{HP}																	& \ac{MP}	& \ac{LP}\\
@@ -402,8 +405,6 @@ In the following, the differences in episodic judgments between conditions are i
 	\hline
 	\E3{}				& \ac{AoD} 								& \Sexpr{mos_qu_with_sd_by_condition("E3", "HP")} 	& - 																					& \Sexpr{mos_qu_with_sd_by_condition("E3", "LP")} \\
 	\end{tabulary}
-  \caption{Episodic judgments per performance levels for the one-session experiments.}
-	\label{tab:lab:episodicMOS}
 \end{table}
 
 %An exemplary plot of episodic judgments is shown in \autoref{img:lab:E1condition7boxplot} for \E1{} \C7{} showing the difference between the three performance levels.
@@ -487,13 +488,13 @@ Although, not directly comparable due to differences between experiments, it mus
 
 \begin{table}[h]
 	\centering
+	\caption{Multi-episodic judgments after the 3rd episode for the one-session experiments.} %HP only
+	\label{tab:lab:multiconsistency}
 	\begin{tabulary}{\textwidth}{C|C|C|C|C|C}
 	Experiment & \E1{} & \EIIa{} &\EIIb{} (telephony) & \EIIb{}	(\ac{VoD})	& \E3{} \\
 	\midrule
 	Multi-episodic Judgment & \Sexpr{mos_iqu_with_sd_by_condition("E1", condition, 3)} & \Sexpr{mos_iqu_with_sd_by_condition("E2a", condition, 3)} & \Sexpr{mos_iqu_with_sd_by_condition("E2b", condition, 3, "telephony")}& \Sexpr{mos_iqu_with_sd_by_condition("E2b", condition, 3, "VoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E3", condition, 3)} \\
 	\end{tabulary}
-	\caption{Multi-episodic judgments after the 3rd episode for the one-session experiments.} %HP only
-	\label{tab:lab:multiconsistency}
 \end{table}
 
 \subsubsection{\autoref{hypo:number}: Number of Consecutive \acs{LP} Episodes}
@@ -519,6 +520,8 @@ A one-sided post-hoc test finds that the reference is significantly different to
 
 \begin{table}[h!]
 	\centering
+	\caption{Multi-episodic judgments after the 6th episode for \autoref{hypo:number}.} %	for \E1{} and \EIIa{}
+	\label{tab:lab:hyponumber}
 	\begin{tabulary}{\textwidth}{C|c|C|C}
 	Condition   & \ac{LP} episode(s) 	& \multicolumn{2}{c}{Multi-episodic Judgment} \\
 	   & 	& \E1{} 		& \EIIa{} \\
@@ -537,8 +540,6 @@ A one-sided post-hoc test finds that the reference is significantly different to
 	\hline
 	\C4{}			& 4..5			& \Sexpr{mos_iqu_with_sd_by_condition("E1", "4", 6)} 			& \Sexpr{mos_iqu_with_sd_by_condition("E2a", "4", 6)} \\
 	\end{tabulary}
-	\caption{Multi-episodic judgments after the 6th episode for \autoref{hypo:number}.} %	for \E1{} and \EIIa{}
-	\label{tab:lab:hyponumber}
 \end{table}
 
 With regard to the number of \ac{LP} episodes before a multi-episodic judgment, both experiments yield similar findings.
@@ -569,7 +570,9 @@ In \autoref{hypo:position} it is hypothesized that presenting \ac{HP} episodes a
 \autoref{tab:lab:hypoposition} shows the multi-episodic judgments for those conditions.
 
 \begin{table}[h]
-\centering
+	\centering
+	\caption{Multi-episodic judgment after the 6th episode for \autoref{hypo:position}.}
+	\label{tab:lab:hypoposition}
 	\begin{tabulary}{\textwidth}{C|c|C|C}
 	Condition   & \ac{LP} episode(s) 	& \multicolumn{2}{c}{Multi-episodic Judgment} \\
 	   & 	& \E1{} 		& \EIIa{} \\
@@ -585,8 +588,6 @@ In \autoref{hypo:position} it is hypothesized that presenting \ac{HP} episodes a
 	\hline
 	\C5{} (a+b) 	& 5..6	& \Sexpr{mos_iqu_with_sd_by_condition("E1", "5b", 6)}		& \Sexpr{mos_iqu_with_sd_by_condition("E2a", "5a", 6)} \\
  \end{tabulary}
- \caption{Multi-episodic judgment after the 6th episode for \autoref{hypo:position}.}
- \label{tab:lab:hypoposition}
 \end{table}
 
 For \E1{} the multi-episodic judgment is significantly different between the \C1{}, \CIIa{}, and \C3{} (\Sexpr{kruskal(IQU~condition, "E1", performance_level, c("1", "2a", "3"), c(6))}).
@@ -612,7 +613,9 @@ The latter presents the 4th and 6th episode in \ac{LP}.
 \autoref{tab:lab:hypoconsecutive} shows the multi-episodic judgments for those three conditions.
 
 \begin{table}[h!]
-\centering
+ \centering
+ \caption{: Multi-episodic judgment after the 6th episode for \autoref{hypo:consecutive}.}
+ \label{tab:lab:hypoconsecutive} 
  \begin{tabulary}{\columnwidth}{c|c|C}
 	Condition   & \ac{LP} episode(s) 	& \EIIa{} \\
 	\midrule
@@ -622,8 +625,6 @@ The latter presents the 4th and 6th episode in \ac{LP}.
 	\hline
 	\CVa{}			& 5..6			& \Sexpr{mos_iqu_with_sd_by_condition("E2a", "5a", 6)}\\
  \end{tabulary}
- \caption{: Multi-episodic judgment after the 6th episode for \autoref{hypo:consecutive}.}
- \label{tab:lab:hypoconsecutive}
 \end{table}
 
 The multi-episodic judgments of those three conditions are not significantly different (\Sexpr{kruskal(IQU~condition, "E2a", performance_level, c("4", "8", "5a"), c(6))}).
@@ -656,7 +657,9 @@ A one-sided post-hoc shows significant differences for \CIIa{} and \CVb{} (\Sexp
 \CIIa{} and \C7{} are not significantly different (\Sexpr{wilcox.pairwise.print(IQU~condition, "E1", performance_level, c("2a", "5b", "7"), c(6))[2,1]}).
 
 \begin{table}[h!]
-\centering
+ \centering
+ \caption{Multi-episodic judgment after the 6th usage episode for \autoref{hypo:strength}.}
+ \label{tab:lab:hypostrength}
  \begin{tabulary}{\columnwidth}{C|C|C|C}
 	Conditions   & \multicolumn{2}{c|}{6th usage episode} & Multi-episodic Judgment\\
 	            & Performance 	& Episodic Judgment & \\
@@ -667,8 +670,6 @@ A one-sided post-hoc shows significant differences for \CIIa{} and \CVb{} (\Sexp
 	\hline
 	\CVb{}		& \ac{LP}		& \Sexpr{mos_qu_with_sd_by_condition("E1", "LP", "5b", 6)} 	& \Sexpr{mos_iqu_with_sd_by_condition("E1", "5b", 6)} \\
  \end{tabulary}
- \caption{Multi-episodic judgment after the 6th usage episode for \autoref{hypo:strength}.}
- \label{tab:lab:hypostrength}
 \end{table}
 
 With regard to the interpretation it is problematic that the episodic judgments for \ac{HP} and \ac{MP} are not significantly different.
@@ -694,7 +695,9 @@ A paired post-hoc test for \C7{} yields similar findings (3rd vs. 6th: \Sexpr{wi
 Between those two conditions the judgment after the 6th (\Sexpr{wilcox(IQU~condition, "E1", performance_level, c("5b", "7"), c(6))}) and the 9th episodes (\Sexpr{wilcox(IQU~condition, "E1", performance_level, c("5b", "7"), c(9))}) are significantly different.
 
 \begin{table}[h!]
-\centering
+ \centering
+ \caption{Multi-episodic judgments after the 3rd, 6th and 9th episode for \autoref{hypo:recovery}.}
+ \label{tab:lab:hyporecovery}
  \begin{tabulary}{\columnwidth}{c|C|C|C|C}
 	\multirow{2}{*}{Conditions}	& \multirow{2}{*}{Episodic Performance}			& \multicolumn{3}{c}{Multi-episodic Judgments} \\
 				&					 			& 3rd		& 6th		& 9th  \\
@@ -703,8 +706,6 @@ Between those two conditions the judgment after the 6th (\Sexpr{wilcox(IQU~condi
 	\hline
 	\C7{}			& 4:\ac{HP}, 5:\ac{LP}, 6:\ac{MP}	& \Sexpr{mos_iqu_with_sd_by_condition("E1", "7", 3)}	& \Sexpr{mos_iqu_with_sd_by_condition("E1", "7", 6)} & \Sexpr{mos_iqu_with_sd_by_condition("E1", "7", 9)}\\
  \end{tabulary}
- \caption{Multi-episodic judgments after the 3rd, 6th and 9th episode for \autoref{hypo:recovery}.}
- \label{tab:lab:hyporecovery}
 \end{table}
 
 Both conditions show an increase in the final multi-episodic judgment due to the three additional \ac{HP} episodes.
@@ -724,17 +725,17 @@ In \CIIa{} the 5th episodes has a duration of \unit[3:10]{min} and for \CIIb{} o
 The episodic judgment for these conditions and the multi-episodic judgments are shown \autoref{tab:lab:hypoduration}.
 
 \begin{table}[h!]
-\centering
+ \centering
+ \caption{Multi-episodic judgment after the 6th episode for \autoref{hypo:duration}.}
+ \label{tab:lab:hypoduration} 
  \begin{tabulary}{\columnwidth}{c|C|C|C}
-	\multirow{2}{*}{Conditions}	& \multicolumn{2}{c|}{5th usage episode} &\multirow{2}{*}{Multi-episodic Judgment}\\
+ \multirow{2}{*}{Conditions}	& \multicolumn{2}{c|}{5th usage episode} &\multirow{2}{*}{Multi-episodic Judgment}\\
 					& Duration 	& Episodic Judgment & \\
 	\midrule 
 	\CIIa{}			& similar 	& \Sexpr{mos_qu_with_sd_by_condition("E3", "LP", "2a", 5)}		& \Sexpr{mos_iqu_with_sd_by_condition("E3", "2a", 6)} \\
 	\hline
 	\CIIb{}			& doubled	& \Sexpr{mos_qu_with_sd_by_condition("E3", "LP", "2b", 5)} 	& \Sexpr{mos_iqu_with_sd_by_condition("E3", "2b", 6)} \\
  \end{tabulary}
- \caption{Multi-episodic judgment after the 6th episode for \autoref{hypo:duration}.}
- \label{tab:lab:hypoduration}
 \end{table}
 
 Between the two conditions the multi-episodic judgment of the 5th episode is not significant different (see \autoref{lab:episodic:e2}).
@@ -756,7 +757,9 @@ This shows that the two \ac{LP} episodes affect the multi-episodic judgment of t
 With regard to the speech telephony service no significant difference on the final multi-episodic judgment is found (\Sexpr{kruskal(IQU~condition, "E2b", performance_level, c("5a", "5a0", "5a4"), c(6), "telephony")}).
 
 \begin{table}[h!]
-\centering
+ \centering
+ \caption{Multi-episodic judgment after the 6th episode for \autoref{hypo:independent}.}
+ \label{tab:lab:hypoindependent}
  \begin{tabulary}{\columnwidth}{C|C|C|C}
 	Conditions \ac{VoD}	& \multicolumn{2}{c}{Multi-episodic Judgment} \\
 					& 						& Telephony 															& \ac{VoD} \\
@@ -767,8 +770,6 @@ With regard to the speech telephony service no significant difference on the fin
 	\hline
 	\C4{}					& \Sexpr{mos_iqu_with_sd_by_condition("E2b", "5a4", 6, "telephony")}	& \Sexpr{mos_iqu_with_sd_by_condition("E2b", "5a4", 6, "VoD")}\\
  \end{tabulary}
- \caption{Multi-episodic judgment after the 6th episode for \autoref{hypo:independent}.}
- \label{tab:lab:hypoindependent}
 \end{table}
 
 As the multi-episodic judgments of the speech telephony service is not different if a \ac{VoD} service is present or not, it can be concluded the speech telephony service was assessed based upon on the usage episodes with the service.
