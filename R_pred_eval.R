@@ -35,9 +35,8 @@ eval_performance <- function(model, timeseries, id=NULL) {
 #1. Computes adjusted condition 6: id=4/9,10 are replaced by average of all previous
 #2. MOS per experiment and condition; are added as new conditions: X_averaged
 eval_prepare <- function(timeseries) {
- attach(timeseries)
  #Add condition 6_adjusted: here, the 4th or 9th, and 10th episodic judgment is replaced by the average of all prior judgments.
- timeseries_c6 = subset(timeseries, condition == 6 & ((experiment %in% c("E1", "E2a") &  id < 4) | (experiment == "E6a" & id %in% 3:8)))
+ timeseries_c6 = subset(timeseries, condition == 6 & ((timeseries$experiment %in% c("E1", "E2a") &  id < 4) | (timeseries$experiment == "E6a" & id %in% 3:8)))
  timeseries_c6_estimate=aggregate(timeseries_c6[c("QU")], by=list(experiment=timeseries_c6$experiment, username=timeseries_c6$username), FUN=function(x) {return (round(mean(x, na.rm=T), 1))})
  
  timeseries_c6_estimate$id = 4 #E1, E2a
@@ -54,16 +53,15 @@ eval_prepare <- function(timeseries) {
  
  timeseries_org = timeseries
  timeseries = rbind(timeseries, timeseries_c6)
- attach(timeseries)
- 
+
  #Add average per condition as new condition
- timeseries_avg = aggregate(timeseries[c("QU", "IQU", "NPS")], by=list(experiment=experiment, duration=duration, service=service, condition=condition, id=id, performance=performance, performance_level=performance_level), FUN=function(x) {return (mean(x, na.rm=T))})
+ timeseries_avg = aggregate(timeseries[c("QU", "IQU", "NPS")], by=list(experiment=timeseries$experiment, duration=timeseries$duration, service=timeseries$service, condition=timeseries$condition, id=timeseries$id, performance_level=timeseries$performance_level), FUN=function(x) {return (mean(x, na.rm=T))})
  timeseries_avg$username = "average"
  timeseries_avg$condition = paste(timeseries_avg$condition, "average", sep = "_")
  
+ timeseries_avg$performance = NA
  timeseries = rbind(timeseries, timeseries_avg)
- attach(timeseries)
- 
+
  return (timeseries)
 }
 

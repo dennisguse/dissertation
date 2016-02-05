@@ -112,7 +112,9 @@ In fact, a fixed window is a rather unlikely case for an integration function.
 To account for a recency effect, a linear weighting is selected.
 Here, also a window is defined.
 However, the weight of a usage episode decreases with the increasing distance of a usage episode to multi-episodic judgment.
-To avoid overfitting $w$ is limited to $0 < w \leq 2*n+1$ and must be an odd.
+$w$ is limited to $w~\in~\mathbb{N}$, $0~<~w~\leq~2*n$, and it must be odd.
+A longer window than the actual sequence is allowed, so that the very first usage episode can be considered by this model, \ie, assigning a weight of 0.5.
+The oddness requirement is added, so the parameter space for both models is similar.
 \begin{equation}\label{eq:weight:linear}  %\frac{n-i}{w} & :i - n + w > 0 \\
 a_i= \left\{
 \begin{array}{cr}
