@@ -40,9 +40,9 @@ eval_prepare <- function(timeseries) {
  timeseries_c6_estimate=aggregate(timeseries_c6[c("QU")], by=list(experiment=timeseries_c6$experiment, username=timeseries_c6$username), FUN=function(x) {return (round(mean(x, na.rm=T), 1))})
  
  timeseries_c6_estimate$id = 4 #E1, E2a
- timeseries_c6_estimate$id[timeseries_c6_estimate$experiment == "E6a"] = 8
+ timeseries_c6_estimate$id[timeseries_c6_estimate$experiment == "E6a"] = 9
  timeseries_c6_estimate_e2a = timeseries_c6_estimate[timeseries_c6_estimate$experiment == "E6a", ]
- timeseries_c6_estimate_e2a$id = 9
+ timeseries_c6_estimate_e2a$id = 10
  timeseries_c6_estimate=rbind(timeseries_c6_estimate, timeseries_c6_estimate_e2a)
  
  timeseries_c6 = subset(timeseries, condition == 6 & experiment %in% c("E1", "E2a", "E6a"))

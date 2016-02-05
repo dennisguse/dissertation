@@ -138,11 +138,9 @@ Then, the weighting function does not need to be changed to model this effect.
 The second option seems more elegant and is more likely to reflect a characteristic of the quality formation process.
 
 A modeling of a peak-effect is omitted here, because such an effect could not be observed in the conducted experiments.
-Even, if in \C7{} of \E1{} a peak-effect occurred, then the influence on the final judgment seems to be rather small.
+Even, if in \C7{} of \E1{} a peak-effect occurred, the influence on the final judgment seems to be rather small.
 
 In the following, a \emph{model} denotes the selected weighting function with the defined parameter.
-
-\section{Prediction Accuracy}
 The prediction accuracy of a model is evaluated using two metrics.
 Here, the \ac{RMSD} is used to estimate the \emph{absolute} deviation of the predicted value and actual value.
 \begin{equation}\label{eq:rmsd}
@@ -152,7 +150,7 @@ RMSD: \sqrt{\frac{1}{N} \sum\limits_{i=1}^{N}(x_i-\hat{x}_i)^2}
 The \ac{RMSD} is complemented by the Pearson correlation.
 The Pearson correlation evaluates the linear dependency of two variables.
 For modeling fitting, \ie, selection of best suiting parameter, both metrics are equally used.
-In a perfect case a \ac{RMSD} of 0, \ie, no deviation, and correlation coefficient of 1, \ie, perfect linear relationship, should reached.
+In a perfect case a \ac{RMSD}~of~0, \ie, no deviation, and correlation coefficient~$R$~of~1, \ie, perfect linear relationship, should reached.
 Here, a model is preferable that explains a higher number of conditions, rather than individual conditions only.
 
 \section{Evaluation}
@@ -161,17 +159,20 @@ This is necessary as \E1{} and \EIIa{} differ in their usage situation while \E6
 The evaluation is conducted based upon individual judgments, \ie, for each participants, rather than on a \ac{MOS}.
 This is applied due to the limited conditions, number of participants, and between-subject design.
 
-\subsection{One Session: E1}
+\subsection{Baseline}
+%NO CLEAR PREFERENCE, ALL WORK
 
-\paragraph*{Recovery}
-%9
+\subsection{Saturation}
+%IMPROVES
 
-\subsection{One Session: E2a}
+\subsection{One Session: \E1{} and \EIIa{}}
+
+\subparagraph*{Recovery}
+
+
 
 \subsection{Multiple Days: E6}
 
-\subsection{Conclusion}
-
-\section{Verification}
+\subsubsection{Saturation}
 
 \section{Conclusion}

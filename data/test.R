@@ -14,6 +14,15 @@ evaluate <- function(line) {
  data = subset(timeseries, experiment %in% line["experiment"] & condition %in% line["condition"])
  eval_performance(model, data, as.numeric(line["id"]))
 }
+# if (FALSE) {
+#  weight_fun = do.call("weight_window_create", list(1))
+#  model = model_average_weighted_create(weight_fun)
+#  data = subset(timeseries, experiment == "E6a" & condition =="6_adjusted_average")
+#  data = subset(timeseries, experiment == "E6a" & condition =="6_average")
+#  weight_fun(data)
+#  
+#  eval_performance(model, data, 14)
+# }
 
 if (FALSE) {
  #ONE SESSION
@@ -49,6 +58,8 @@ if (FALSE) {
  #COMPUTE
  ptm <- proc.time()
  c=cbind(to_model_parameter, t(apply(to_model_parameter, 1, evaluate)))
+ names(c)[6] = "RMSD"
+ names(c)[7] = "PEARSON"
  proc.time() - ptm
 }
 

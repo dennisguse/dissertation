@@ -49,7 +49,7 @@ weight_window_create <- function(window) {
 weight_window <- function(timeseries, window) {
  timeseries$weight = 0
  
- timeseries$weight[timeseries$id - length(timeseries$id) > -(window)] = 1
+ timeseries$weight[timeseries$id - max(timeseries$id) > -(window)] = 1
  
  return (timeseries)
 }
@@ -78,9 +78,9 @@ if (FALSE) {
  
  timeseries = data.frame(id, QU, IQU)
  
- weight_window_3 = weight_window_create(3)
+ weight_window_3 = weight_window_create(10)
  weight_window_3(timeseries)
  
- weight_linear_3 = weight_linear_create(3)
+ weight_linear_3 = weight_linear_create(10)
  weight_linear_3(timeseries)
 }
