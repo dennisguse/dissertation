@@ -194,6 +194,8 @@ Depending on the prior experiences of participants, this might affect quality ju
 
 \begin{table}[h]
 	\centering
+	\caption{Conditions applied by \citet{moller_single-call_2011} with performance level per day.}
+	\label{tab:chap05:conditions}
 	\begin{tabular}{c|c|c|c|c|c|c|c}
 	\multirow{2}{*}{Condition} & \multicolumn{7}{c}{Performance Level (per day)} \\
 		& 1..2 		& 3 & 4 & 5..8 & 9 & 10 & 11..12  \\
@@ -208,8 +210,6 @@ Depending on the prior experiences of participants, this might affect quality ju
 	\hline
 	5 & \textit{\ac{MP}} & \textbf{\acs{LP}} & \textit{\acs{MP}} & \textit{\acs{MP}} & \textbf{\acs{LP}} & \textit{\acs{MP}} & \textit{\acs{MP}} \\
 	\end{tabular}
-	\caption{Conditions applied by \citet{moller_single-call_2011} with performance level per day.}
-	\label{tab:chap05:conditions}
 \end{table}
 
 The experiment was conducted by the participants in their home environment using their private computer and broadband Internet connection.
@@ -256,6 +256,8 @@ A statistical analysis is omitted due to the relative small (potential) differen
 
 \begin{table}[h]
 	\centering
+	\caption[Episodic and multi-episodic judgments by \citet{moller_single-call_2011}.]{Episodic and multi-episodic judgments by \citet{moller_single-call_2011}. Reported as \ac{MOS} with standard deviation in brackets.}
+	\label{tab:state:MOLLERepisodic}
 	\begin{tabular}{c||c|c|c||c|c|c}
 	\multirow{2}{*}{\rotatebox{90}{Cond.}} & \multicolumn{3}{c||}{Episodic Judgments} &  \multicolumn{3}{c}{Multi-episodic Judgments} \\
 	  & \ac{HP}	& \ac{MP} & \ac{LP} & 2	& 7 & 12 \\
@@ -270,8 +272,6 @@ A statistical analysis is omitted due to the relative small (potential) differen
 	\hline
 	5 			& -	& \Sexpr{mos_qu_with_sd_by_condition("MOELLER", "MP", "S4")} & \Sexpr{mos_qu_with_sd_by_condition("MOELLER", "LP", "S4")} & \Sexpr{mos_iqu_with_sd_by_condition("MOELLER", "S4", 4)} & \Sexpr{mos_iqu_with_sd_by_condition("MOELLER", "S4", 14)} & \Sexpr{mos_iqu_with_sd_by_condition("MOELLER", "S4", 24)} \\
 	\end{tabular}
-	\caption[Episodic and multi-episodic judgments by \citet{moller_single-call_2011}.]{Episodic and multi-episodic judgments by \citet{moller_single-call_2011}. Reported as \ac{MOS} with standard deviation in brackets.}
-	\label{tab:state:MOLLERepisodic}
 \end{table}
 
 \subparagraph*{Multi-episodic Judgments}

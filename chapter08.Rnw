@@ -60,6 +60,9 @@ However, the performance levels were different between the three experiments.
 
 \label{E4}\label{E5}\label{E6}
 \begin{table}[h]
+	\centering
+	\caption{Overview on experiments on multi-episodic perceived quality over several days.}
+	\label{tab:field:experiments}
 	\begin{tabulary}{\textwidth}{C|C|C|C|C}
 	Experiment	& Service Type 		& Tasks															& Days	& Participants \\
 	\midrule
@@ -69,8 +72,6 @@ However, the performance levels were different between the three experiments.
 	\hline
 	\E6{}		& \ac{AoD}								& Audio book													& 7		& \Sexpr{participants("E6a")} %Study 14
 	\end{tabulary}
-	\caption{Overview on experiments on multi-episodic perceived quality over several days.}
-	\label{tab:field:experiments}
 \end{table}
 
 \autoref{tab:field:experiments} gives an overview of the experiments including services types, tasks and number of participants.
@@ -170,8 +171,10 @@ In fact, even between the two conditions no differences in multi-episodic judgme
 Statistical evaluation for this is omitted due to the sample size, high variance and closeness of judgments.
 
 \begin{table}
-\centering
- \begin{tabular}{c|c|c}
+	\centering
+	\caption[Multi-episodic judgments for the \ac{VoD} service of \E4{} by condition]{Multi-episodic judgments for the \ac{VoD} service of \E4{} with evaluation of statistical differences.}
+	\label{tab:field:e4results}
+	\begin{tabular}{c|c|c}
 	\multirow{2}{*}{Day} & \multicolumn{2}{c}{Multi-episodic Judgment} \\
 	& \C0{} & \C9{} \\
 	\midrule
@@ -183,8 +186,6 @@ Statistical evaluation for this is omitted due to the sample size, high variance
 	\hline
 	14 & \Sexpr{mos_iqu_with_sd_by_condition("E4a", "A0", 14, "VoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E4a", "A1", 14, "VoD")} \\
 	\end{tabular}
-	\caption[Multi-episodic judgments for the \ac{VoD} service of \E4{} by condition]{Multi-episodic judgments for the \ac{VoD} service of \E4{} with evaluation of statistical differences.}
-	\label{tab:field:e4results}
 \end{table}
 
 \subsection{Discussion}
@@ -301,8 +302,10 @@ For \CX{}, a post-hoc test shows that the multi-episodic judgment after the 2nd 
 Between the two conditions, only the judgments after the 2nd day are significantly different (\Sexpr{wilcox(IQU~condition, "E5",  c("HP", "LP"), c("P1", "P2"), 3, "VoD")}).
 
 \begin{table}[h]
-\centering
- \begin{tabular}{c|c|c||c|c}
+	\centering
+	\caption{Multi-episodic judgments of \E5{} by condition and service.}
+	\label{tab:field:e5results}
+	\begin{tabular}{c|c|c||c|c}
 	Day & \multicolumn{4}{c}{Multi-episodic Judgment} \\
 	 			& \multicolumn{2}{c}{\ac{AoD}} & \multicolumn{2}{c}{\ac{VoD}} \\
  	& \C9{} & \CX{} & \C9{} & \CX{} \\
@@ -313,12 +316,12 @@ Between the two conditions, only the judgments after the 2nd day are significant
 	11 & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P1", 12, "AoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P2", 12, "AoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P1", 12, "VoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P2", 12, "VoD")} \\
 	14 & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P1", 15, "AoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P2", 15, "AoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P1", 15, "VoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P2", 15, "VoD")} \\
 	\end{tabular}
-	\caption{Multi-episodic judgments of \E5{} by condition and service.}
-	\label{tab:field:e5results}
 \end{table}
 
 %\begin{table}
-%\centering
+%	\centering
+%	\caption{Multi-episodic judgments of \E6{} by condition and service.}
+%	\label{tab:field:e5results}
 % \begin{tabular}{c|c|c}
 %	Day & \multicolumn{2}{c}{Multi-episodic Judgments} \\
 %			& \ac{AoD} & \ac{VoD} \\
@@ -333,8 +336,6 @@ Between the two conditions, only the judgments after the 2nd day are significant
 %	\hline
 %	14	& \Sexpr{wilcox(IQU~condition, "E5",  c("HP", "LP"), c("P1", "P2"), 15, "AoD")} & \Sexpr{wilcox(IQU~condition, "E5",  c("HP", "LP"), c("P1", "P2"), 15, "VoD")} \\
 %	\end{tabular}
-%	\caption{Multi-episodic judgments of \E6{} by condition and service.}
-%	\label{tab:field:e5results}
 %\end{table}
 
 \subsection{Discussion}
@@ -436,6 +437,8 @@ content$x = content$x + aggregate(timeseriesE6[["AnswerBool2"]], by=timeseriesE6
 
 %\begin{table}[h]
 %	\centering
+%	\caption{Overview on conditions for the \E6{} with number of participants per condition.}
+%	\label{tab:field:e6:participants}
 %	\begin{tabular}{c|c|c}
 %	Conditions 	& \ac{LP} days & Number of Participants\\
 %	\midrule
@@ -451,8 +454,6 @@ content$x = content$x + aggregate(timeseriesE6[["AnswerBool2"]], by=timeseriesE6
 %	\hline
 %	\C8		& 4, 6	& \Sexpr{participants("E6a", "8")} \\
 %	\end{tabular}
-%	\caption{Overview on conditions for the \E6{} with number of participants per condition.}
-%	\label{tab:field:e6:participants}
 %\end{table}
 
 Similar to the laboratory experiments, each participant was individually checked for inconsistent episodic judgments.
@@ -486,6 +487,8 @@ A detailed analysis did not yield a reason for the difference, and it is thus co
 
 \begin{table}
 	\centering
+	\caption{Overview on conditions of \E6{} with number of participants and episodic judgments per performance level.}
+	\label{tab:field:e6episodic}
 	\begin{tabulary}{\textwidth}{C|C|C|C|C}
 	Condition & \ac{LP} days & Participants &  \ac{HP} & \ac{LP} \\
 	\midrule
@@ -501,8 +504,6 @@ A detailed analysis did not yield a reason for the difference, and it is thus co
 	\hline
 	\C8	& 4, 6	& \Sexpr{participants("E6a", "8")} & \Sexpr{mos_qu_with_sd_by_condition("E6a", "HP", "8")}		& \Sexpr{mos_qu_with_sd_by_condition("E6a", "LP", "8")} \\
 	\end{tabulary}
-	\caption{Overview on conditions of \E6{} with number of participants and episodic judgments per performance level.}
-	\label{tab:field:e6episodic}
 \end{table}
 
 For the multi-episodic judgment after the 3rd day, no significant differences between conditions are observed (\Sexpr{kruskal(IQU~condition, "E6a", "HP", condition, c(8))}).
@@ -520,8 +521,10 @@ In addition, \C3{} and \C5{} (\Sexpr{wilcox.pairwise.print(IQU~condition, "E6a",
 For \C5{} and \C6{} no significant difference is found (\Sexpr{wilcox.pairwise.print(IQU~condition, "E6a", performance_level, c("3", "5a", "6"), 14, reference=14)[3,3]}).
 
 \begin{table}[h]
-\centering
- \begin{tabulary}{\columnwidth}{c|c|C}
+	\centering
+	\caption{Multi-episodic judgments after the 6th day for  \autoref{hypo:number}.}
+	\label{tab:field:hyponumber}
+	\begin{tabulary}{\columnwidth}{c|c|C}
 	Condition	& \ac{LP} episode(s) 	& Multi-episodic Judgment\\
 	\midrule
 	Reference	(\ac{HP} only) & - & \Sexpr{mos_iqu_with_sd_by_condition("E6a", condition, 8)} \\
@@ -531,9 +534,7 @@ For \C5{} and \C6{} no significant difference is found (\Sexpr{wilcox.pairwise.p
 	\C5{}			& 5..6			& \Sexpr{mos_iqu_with_sd_by_condition("E6a", "5a", 14)}\\
 	\hline
 	\C6{}			& 4..6			& \Sexpr{mos_iqu_with_sd_by_condition("E6a", "6", 14)}\\
- \end{tabulary}
- \caption{Multi-episodic judgments after the 6th day for  \autoref{hypo:number}.}
-	\label{tab:field:hyponumber}
+	\end{tabulary}
 \end{table}
 
 The results show that increasing the number \ac{LP} days directly before the multi-episodic judgment results in a reduction of this judgment.
@@ -551,9 +552,12 @@ In \autoref{hypo:position} it is assumed that presenting \ac{HP} episodes after 
 This can be investigated for one day in \ac{LP} with \C1{} and \C3{}.
 For two days with \C4{} and \C5{}.
 \autoref{tab:field:hypoposition} shows the final multi-episodic judgments for those four conditions.
+
 \begin{table}[h]
-\centering
- \begin{tabulary}{\columnwidth}{c|c|C}
+	\centering
+	\caption{Multi-episodic judgment after the 6th day for \autoref{hypo:position}.}
+	\label{tab:field:hypoposition}
+	\begin{tabulary}{\columnwidth}{c|c|C}
 	Condition   & \ac{LP} episode(s) 	& Multi-episodic Judgment \\
 	\midrule
 	\C1{}			& 4				& \Sexpr{mos_iqu_with_sd_by_condition("E6a", "1", 14)}\\
@@ -563,10 +567,8 @@ For two days with \C4{} and \C5{}.
 	\hline
 	\C4{}			& 4..5			& \Sexpr{mos_iqu_with_sd_by_condition("E6a", "4", 14)}\\
 	\hline
-	\C5{} 		& 5..6			& \Sexpr{mos_iqu_with_sd_by_condition("E6a", "5a", 14)}\\
- \end{tabulary}
- \caption{Multi-episodic judgment after the 6th day for \autoref{hypo:position}.}
- \label{tab:field:hypoposition}
+	\C5{} 			& 5..6			& \Sexpr{mos_iqu_with_sd_by_condition("E6a", "5a", 14)}\\
+	\end{tabulary}
 \end{table}
 
 With regard to the final multi-episodic judgment neither \C1{} and \C3{} (\Sexpr{wilcox(IQU~condition, "E6a", c("HP", "LP"), c("1", "3"), 14, alternative="greater")}) nor \C4 and \C5 (\Sexpr{wilcox(IQU~condition, "E6a", c("HP", "LP"), c("4", "5a"), 14, alternative="greater")}) are significantly different.
@@ -580,8 +582,10 @@ This hypothesis can be evaluated by comparing \C4{} and \C5{} with \C8{}.
 The three conditions are not significantly different with regard to the last multi-episodic judgment (\Sexpr{kruskal(IQU~condition, "E6a", c("HP", "LP"), c("4", "5a", "8"), 14)}).
 
 \begin{table}[h]
-\centering
- \begin{tabular}{c|c|c}
+	\centering
+	\begin{tabular}{c|c|c}
+	\caption{Multi-episodic judgment after the 6th day for \acs{MOS}.}
+	\label{tab:field:hypoconsecutive}
 	Condition   & \ac{LP} episode(s) 	& Multi-episodic Judgment \\
 	\midrule
 	\C4{}			& 4..5			& \Sexpr{mos_iqu_with_sd_by_condition("E6a", "4", 14)}\\
@@ -590,8 +594,6 @@ The three conditions are not significantly different with regard to the last mul
 	\hline
 	\C5{}			& 5..6			& \Sexpr{mos_iqu_with_sd_by_condition("E6a", "5a", 14)}\\
  \end{tabular}
- \caption{Multi-episodic judgment after the 6th day for \acs{MOS}.}
- \label{tab:field:hypoconsecutive}
 \end{table}
 
 Thus, \autoref{hypo:consecutive} must be rejected, because no significant difference is observed.
