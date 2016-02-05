@@ -26,9 +26,9 @@ Both differ in usage situation, \ie, an active conversation vs. third-party list
 	\begin{tabulary}{\textwidth}{C|C|C|C|C}
 	Experiment	& Service Type(s)	& Task					& Episodes	& Hypothesis \\
 	\midrule
-	\E1{}			& Telephony	& Two-party conversation (\ac{SCT})	& 6 and 9	& \autoref{hypo:number}, \autoref{hypo:position}, \autoref{hypo:strength}, \autoref{hypo:recovery} \\
+	\E1{}			& Telephony	& Two-party conversation (\ac{SCS})	& 6 and 9	& \autoref{hypo:number}, \autoref{hypo:position}, \autoref{hypo:strength}, \autoref{hypo:recovery} \\
 	\hline
-	\EIIa{}		& Telephony	& 3rd-party listening (\ac{SCT})	& 6		& \autoref{hypo:number}, \autoref{hypo:position}, \autoref{hypo:consecutive}\\
+	\EIIa{}		& Telephony	& 3rd-party listening (\ac{SCS})	& 6		& \autoref{hypo:number}, \autoref{hypo:position}, \autoref{hypo:consecutive}\\
 	\hline
 	\EIIb{}		& Telephony and \ac{VoD}& E2a with Movie			& 12		& \autoref{hypo:independent}\\
 	\hline
@@ -262,7 +262,7 @@ In addition, a participants could describe the experienced degradation in quanti
 After every 3rd usage episode per service, a multi-episodic judgment is taken on the same scale.
 %In \EIIa{}, \EIIb{}, and \E3{}, pre-processed content was presented
 % varying from \unit[2]{min} to \unit[3]{min} in duration.
-%In \E1{} the duration was not controlled as the \acp{SCT} needed to be fulfilled in a two-party conversation, which leads varying duration.
+%In \E1{} the duration was not controlled as the \acp{SCS} needed to be fulfilled in a two-party conversation, which leads varying duration.
 
 %In the \emph{fifth stage} final feedback about the fourth stage is collected.
 %In all experiments the underlying question of the \ac{NPS} is collected.
@@ -280,9 +280,9 @@ After every 3rd usage episode per service, a multi-episodic judgment is taken on
 %In \E3{} it was in addition assessed, if all episodes were similar in length and and how long one episode was.
 
 \subsection{Content}
-To achieve comparable two-party conversations in \E1{}, one \ac{SCT} (\citep{itu-t_p.805:_2007}) per usage episode needed to be solved.
-Here, the presentation order of \acp{SCT} was kept constant for all conditions.
-%In difference to \citet{itu-t_p.805:_2007} no \ac{SCT} needed to be solved beforehand, but participants were given a written and oral explanation using an exemplary \ac{SCT}.
+To achieve comparable two-party conversations in \E1{}, one \ac{SCS} (\citep{itu-t_p.805:_2007}) per usage episode needed to be solved.
+Here, the presentation order of \acp{SCS} was kept constant for all conditions.
+%In difference to \citet{itu-t_p.805:_2007} no \ac{SCS} needed to be solved beforehand, but participants were given a written and oral explanation using an exemplary \ac{SCS}.
 In this experiment, all conversations were recorded before applying the performance level.
 For \EIIa{} and \EIIb{}, one recording for each of the episodes 1..6 was selected.
 Those were required to show common task solving behavior.

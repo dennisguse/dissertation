@@ -168,8 +168,8 @@ The first work on multi-episodic perceived quality while applying the defined-us
 In this experiment, pairs of two participants used a video-telephony service over a usage period of \unit[12]{days}.
 \citet{moller_single-call_2011}\footnote{It must be noted that \citet{moller_single-call_2011} uses the term \emph{service quality} as synonym to multi-episodic perceived quality, rather than service quality in terms of \citet{parasuraman_conceptual_1985} (\cf, \autoref{chap:03}).} followed the premise that the service works in general, \ie, providing the best achievable performance, but sometimes usage episodes are only presented with reduced performance.
 The service needed to be used twice a day with the first call between \unit[6]{h} and \unit[15]{h} and the second call between \unit[15]{h} and midnight.
-For each of those \unit[24]{calls} a \ac{SCT} \citep[ITU-T~P.805][]{itu-t_p.805:_2007} needed to be solved.
-\acp{SCT} enforce the content and structure of a conversation to limit the behavioral freedom of caller and callee.
+For each of those \unit[24]{calls} a \ac{SCS} \citep[ITU-T~P.805][]{itu-t_p.805:_2007} needed to be solved.
+\acp{SCS} enforce the content and structure of a conversation to limit the behavioral freedom of caller and callee.
 A detailed explanation is given in the following chapter.
 Furthermore, each pair of participants was allowed to use the service for private communication, if desired.
 
@@ -299,8 +299,8 @@ Another factor that might have influenced the results is the usage of a widely k
 This might have influenced expectations due prior knowledge and experiences.
 In addition, in this experiment participants were allowed to use the service for personal communication beside the defined usage episodes.
 Some participants might have used the service more often than others, which might affected the multi-episodic quality judgments due to different number of exposure to the performance levels.
-Selecting a two-party conversation (\ie, \ac{SCT}) might have been another issue.
-\acp{SCT} try to enforce a conversation flow, which is however influenced by the usage behavior of the two parties, and thus might affect the individual duration of usage episodes as reported by \citet{moller_single-call_2011}.
+Selecting a two-party conversation (\ie, \ac{SCS}) might have been another issue.
+\acp{SCS} try to enforce a conversation flow, which is however influenced by the usage behavior of the two parties, and thus might affect the individual duration of usage episodes as reported by \citet{moller_single-call_2011}.
 This implicitly assumes a \emph{duration neglect} with regard to multi-episodic perceived quality.
 The effect of duration neglect, however, has not neither been proved nor disproved so far for multi-episodic perceived quality.
 

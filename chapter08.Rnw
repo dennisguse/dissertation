@@ -66,7 +66,7 @@ However, the performance levels were different between the three experiments.
 	\begin{tabulary}{\textwidth}{C|C|C|C|C}
 	Experiment	& Service Type 		& Tasks															& Days	& Participants \\
 	\midrule
-	\E4{}		& Telephony	and \ac{VoD}	& Two-party conversation (\ac{SCT})	& 14		& \Sexpr{participants("E4a")}\\ %Study 1/E4a
+	\E4{}		& Telephony	and \ac{VoD}	& Two-party conversation (\ac{SCS})	& 14		& \Sexpr{participants("E4a")}\\ %Study 1/E4a
 	\hline
 	\E5{}		& \ac{VoD} and \ac{AoD}	& Audio book	and Video consumption		& 14		& \Sexpr{participants("E5")} \\ %Study 3
 	\hline
@@ -91,7 +91,7 @@ Second, two services are used to investigate the integration of multi-episodic p
 In this experiment a speech telephony service and a \ac{VoD} service were selected.
 The two services needed to be used daily over a usage period of \unit[14]{days}.
 The telephony service was used by a pair of participants together.
-Each pair needed to solve two \acp{SCT} per day.%\footnote{For \E4{} all \acp{SCT} defined in ITU-T P.805 \citep{itu-t_p.805:_2007} were used and complement by self-developed but similar \acp{SCT}.}
+Each pair needed to solve two \acp{SCS} per day.%\footnote{For \E4{} all \acp{SCS} defined in ITU-T P.805 \citep{itu-t_p.805:_2007} were used and complement by self-developed but similar \acp{SCS}.}
 The first one between \unit[6]{am} and \unit[1]{pm}, and the second one between \unit[3]{pm} and midnight.
 For the \ac{VoD} service \emph{Friends Season 3} episode 1 to 8 were used.
 Each original episode was split into two parts while not disturbing the storyline.
