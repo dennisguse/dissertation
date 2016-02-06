@@ -1,10 +1,9 @@
 <<setup, echo=F, cache=F, results='hide'>>=
 opts_knit$set(progress = TRUE, verbose = TRUE)
-timeseries = read.csv("data/data_minimal.csv")
-source('R_pred_model.R')
-source('R_pred_eval.R')
+data = read.csv("data/data_modeling.csv")
+#source('R_pred_model.R')
 
-timeseries=timeseries[-which(timeseries$experiment == "E1" & timeseries$condition == "5a")]
+data=subset(data,  grepl("average", data$condition))
 @
 
 \chapter{Prediction of Multi-episodic Judgments}\label{chap:modeling}
@@ -72,7 +71,7 @@ Here, the presentation of a second service did not affect the multi-episodic jud
 This was found for the presentation of the second service with and without \ac{LP} episodes.
 Thus, the presence of a second service must not be considered for prediction of multi-episodic judgments of one service.
 
-\section{Model Type}
+\section{Types of Model}
 The modeling approach of \citet{moller_single-call_2011} is extended.
 They proposed to the use the average of all prior episodic judgments to predict a multi-episodic judgment.
 This model provides accurate prediction for earlier multi-episodic judgments, but prediction accuracy decreases, if longer sequences of multi-episodic use are predicted.
@@ -105,26 +104,30 @@ a_i= \left\{
 \end{array}
 \right.
 \end{equation}
-Setting $w := n$, the model becomes an average over all prior episodic judgments.
-This is in the following denoted as \emph{baseline}.
+Setting $w := n$, the model becomes the average over all prior episodic judgments.
+This is in the following denoted as \emph{baseline model}.
 
 In fact, a fixed window is a rather unlikely case for an integration function.
 To account for a recency effect, a linear weighting is selected.
 Here, also a window is defined.
-However, the weight of a usage episode decreases with the increasing distance of a usage episode to multi-episodic judgment.
-$w$ is limited to $w~\in~\mathbb{N}$, $0~<~w~\leq~2*n$, and it must be odd.
-A longer window than the actual sequence is allowed, so that the very first usage episode can be considered by this model, \ie, assigning a weight of 0.5.
-The oddness requirement is added, so the parameter space for both models is similar.
+The weight of a usage episode decreases with the increasing distance of a usage episode to multi-episodic judgment.
+%$w$ is limited to $w~\in~\mathbb{N}$, $0~<~w~\leq~2*n$, and it must be odd.
+%A longer window than the actual sequence is allowed, so that the very first usage episode can be considered by this model, \ie, assigning a weight of 0.5.
+%The oddness requirement is added, so the parameter space for both models is similar.
 \begin{equation}\label{eq:weight:linear}  %\frac{n-i}{w} & :i - n + w > 0 \\
 a_i= \left\{
 \begin{array}{cr}
-	i-n & : i - n + w > 0 \\
-  0 & : i - n + w \leq 0
+	i-n & : i - n + 2*w > 0 \\
+  0 & : i - n + 2*w \leq 0
 \end{array}
 \right.
 \end{equation}
+%	i-n & : i - n + w > 0 \\
+%  0 & : i - n + w \leq 0
+Here, $w$ is also limited to $w~\in~\mathbb{N}$ and $0~<~w~\leq~n$.
+However, the actual window is increased by $2*w$, so that the very first usage episode can be considered by this model type, \ie, assigning a maximum weight of 0.5.
 
-Employing a weighted average is expected to enable an increase in prediction accuracy, because a recency effect can modeled.
+Employing a weighted average is expected to increase prediction accuracy, because a recency effect can modeled.
 However, for one observed effect a weighted average will necessarily produce a deviation.
 In case of the observed saturation effect both weighting functions will be too negative.
 Here, three \ac{LP} episodes, or days are not judged worse than two \ac{LP}.
@@ -154,13 +157,17 @@ In a perfect case a \ac{RMSD}~of~0, \ie, no deviation, and correlation coefficie
 Here, a model is preferable that explains a higher number of conditions, rather than individual conditions only.
 
 \section{Evaluation}
-In the following, modeling is done individually for each the \E1{}, \EIIa{}, and \E6{}.
-This is necessary as \E1{} and \EIIa{} differ in their usage situation while \E6{} focused on a different usage period.
-The evaluation is conducted based upon individual judgments, \ie, for each participants, rather than on a \ac{MOS}.
-This is applied due to the limited conditions, number of participants, and between-subject design.
+%The evaluation is conducted based upon individual judgments, \ie, for each participants, rather than on a \ac{MOS}.
+%This is applied due to the limited conditions, number of participants, and between-subject design.
 
-\subsection{Baseline}
+In the following, modeling is done individually for each the \E1{}, \EIIa{}, and \E6{}.
+This is necessary as \E1{} and \EIIa{} differ in their usage situation while in \E6{} a different usage period, \ie, 6~days, was investigated.
+Modeling is conducted using the \ac{MOS} rather than on individual judgments per participants.
+
+\subsection{No \acs{LP} episodes}
 %NO CLEAR PREFERENCE, ALL WORK
+
+
 
 \subsection{Saturation}
 %IMPROVES
