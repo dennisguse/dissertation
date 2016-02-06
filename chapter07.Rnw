@@ -5,6 +5,7 @@ source('R_eval.R')
 source('R_plot.R')
 
 timeseries=timeseries[-which(timeseries$experiment == "E1" & timeseries$condition == "5a")]
+attach(timeseries)
 @
 
 \chapter{Multi-episodic Perceived Quality in One Session}\label{chap:lab}

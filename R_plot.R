@@ -17,6 +17,9 @@ ggplot_timeseries_create <- function(timeseries) {
  p <- p + scale_y_continuous(labels=c("Extremely\nbad (0)","Bad (1)", "Poor (2)", "Fair (3)", "Good (4)", "Excellent (5)", "Ideal (6)"), breaks=0:6)
  p <- p + theme(axis.text.y=element_text(colour="black"))
  
+ p <- p + xlab("Usage Episode")
+ p <- p + ylab("Episodic Judgment")
+ 
  p <- p + theme(legend.position="none")
  
  #Shift x-axis (if needed)

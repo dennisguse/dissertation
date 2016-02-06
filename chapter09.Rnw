@@ -87,10 +87,10 @@ This model provides accurate prediction for earlier multi-episodic judgments, bu
 
 Here, a weighted average model is proposed to increase prediction accuracy. %(\autoref{eq:average})
 This allows to assign an individual weight to each episodic judgment and thus model the influence on to be predicted multi-episodic judgment.
-In the following, episodic judgments are denoted as $e_i$ and multi-episodic judgments are denoted as $m_n$.
-$i$ denotes the usage episode and $n$ denotes the usage episode/day after which a multi-episodic judgment was taken.
-The weight for a usage episode is denoted as $a_i$.
-Thus, the prediction model for $\hat{m}_n$ is defined as: 
+In the following, episodic judgments are denoted as $\mathit{e_i}$ and multi-episodic judgments are denoted as $\mathit{m_n}$.
+$\mathit{i}$ denotes the usage episode and $\mathit{n}$ denotes the usage episode/day after which a multi-episodic judgment was taken.
+The weight for a usage episode is denoted as $\mathit{a_i}$.
+Thus, the prediction model for $\mathit{\hat{m}_n}$ is defined as: 
 
 \begin{equation}\label{eq:average} %\widehat? \nicefrac
 \hat{m}_n=\frac{\sum\limits_{i=1}^{n}a_i*e_i}{\sum\limits_{i=1}^{n}a_i} 
@@ -102,8 +102,8 @@ Following Occam's Razor, two weighting functions are proposed.
 Both can account for a recency effect, if desired.
 
 The first weighting function is a window function.
-This function is parametrized by the window parameter $w$.
-Here, $w$ is limited to $w~\in~\mathbb{N}$ and $0~<~w~\leq~n$.
+This function is parametrized by the window parameter $\mathit{w}$.
+Here, $\mathit{w}$ is limited to $\mathit{w}~\in~\mathbb{N}$ and $0~<~\mathit{w}~\leq~\mathit{n}$.
 All usage episode in this window are assigned a weighting factor of 1 and all before a weighting factor of 0:
 \begin{equation}\label{eq:weight:window}
 a_i= \left\{
@@ -113,7 +113,7 @@ a_i= \left\{
 \end{array}
 \right.
 \end{equation}
-Setting $w := n$, the model becomes the average over all prior episodic judgments.
+Setting $\mathit{w := n}$, the model becomes the average over all prior episodic judgments.
 This is in the following denoted as \emph{baseline model}.
 
 In fact, a fixed window is a rather unlikely case for an integration function.
@@ -133,8 +133,8 @@ a_i= \left\{
 \end{equation}
 %	i-n & : i - n + w > 0 \\
 %  0 & : i - n + w \leq 0
-Here, $w$ is also limited to $w~\in~\mathbb{N}$ and $0~<~w~\leq~n$.
-However, the actual window is increased by $2*w$, so that the very first usage episode can be considered by this model type, \ie, assigning a maximum weight of 0.5.
+Here, $\mathit{w}$ is also limited to $\mathit{w}~\in~\mathbb{N}$ and $0~<~\mathit{w}~\leq~\mathit{n}$.
+However, the actual window is increased by $\mathit{2*w}$, so that the very first usage episode can be considered by this model type, \ie, assigning a maximum weight of 0.5.
 
 Employing a weighted average is expected to increase prediction accuracy, because a recency effect can modeled.
 However, for one observed effect a weighted average will necessarily produce a deviation.
@@ -184,6 +184,7 @@ Modeling is conducted using the \ac{MOS} rather than on individual judgments per
 \subsection{One Session: \E1{} and \EIIa{}}
 
 \begin{figure}
+	\centering
 <<plotE1BASE, echo=F, fig.height=3>>=
 ggplot_model_create(subset(data_nonadjusted, data_nonadjusted$experiment == "E1" & data_nonadjusted$id == 3), 0.25) + 
  geom_line(aes(x=parameter, y=RMSD, linetype=condition, size=condition, colour=condition)) + facet_grid(. ~ model_FACET) + 
@@ -195,6 +196,7 @@ ggplot_model_create(subset(data_nonadjusted, data_nonadjusted$experiment == "E1"
 
 
 \begin{figure}
+	\centering
 <<plotE1PRED, echo=F, fig.height=3>>=
 ggplot_model_create(subset(data_nonadjusted, data_nonadjusted$experiment == "E1" & data_nonadjusted$id == 6), 1.9) + 
  geom_line(aes(x=parameter, y=RMSD, linetype=condition, size=condition, colour=condition)) + facet_grid(. ~ model_FACET) + 
@@ -205,6 +207,7 @@ ggplot_model_create(subset(data_nonadjusted, data_nonadjusted$experiment == "E1"
 \end{figure}
 
 \begin{figure}
+	\centering
 <<plotE1PRED9, echo=F, fig.height=3>>=
 ggplot_model_create(subset(data_nonadjusted, data_nonadjusted$experiment == "E1" & data_nonadjusted$id == 9 & data_nonadjusted$condition != "All"), 0.75) + 
 	geom_line(aes(x=parameter, y=RMSD, linetype=condition)) + facet_grid(. ~ model_FACET) + 
@@ -218,6 +221,7 @@ ggplot_model_create(subset(data_nonadjusted, data_nonadjusted$experiment == "E1"
 %E2A
 
 \begin{figure}
+	\centering
 <<plotE2BASE, echo=F, fig.height=3>>=
 ggplot_model_create(subset(data_nonadjusted, data_nonadjusted$experiment == "E2a" & data_nonadjusted$id == 3), 0.4) + 
  geom_line(aes(x=parameter, y=RMSD, linetype=condition, size=condition, colour=condition)) + facet_grid(. ~ model_FACET) + 
@@ -228,6 +232,7 @@ ggplot_model_create(subset(data_nonadjusted, data_nonadjusted$experiment == "E2a
 \end{figure}
 
 \begin{figure}
+	\centering
 <<plotE2PRED, echo=F, fig.height=3>>=
 ggplot_model_create(subset(data_nonadjusted, data_nonadjusted$experiment == "E2a" & data_nonadjusted$id == 6), 1.8) + 
 	geom_line(aes(x=parameter, y=RMSD, linetype=condition, size=condition, colour=condition)) + facet_grid(. ~ model_FACET) + 
@@ -243,6 +248,7 @@ ggplot_model_create(subset(data_nonadjusted, data_nonadjusted$experiment == "E2a
 \subsection{Multiple Days: E6}
 
 \begin{figure}
+	\centering
 <<plotE6BASE, echo=F, fig.height=3>>=
 ggplot_model_create(subset(data_nonadjusted, data_nonadjusted$experiment == "E6a" & data_nonadjusted$id == 8), 0.3) + 
 	geom_line(aes(x=parameter, y=RMSD, linetype=condition, size=condition, colour=condition)) + facet_grid(. ~ model_FACET) + 
@@ -253,6 +259,7 @@ ggplot_model_create(subset(data_nonadjusted, data_nonadjusted$experiment == "E6a
 \end{figure}
 
 \begin{figure}
+	\centering
 <<plotE6PRED, echo=F, fig.height=3>>=
 ggplot_model_create(subset(data_nonadjusted, data_nonadjusted$experiment == "E6a" & data_nonadjusted$id == 14)) + 
 	geom_line(aes(x=parameter, y=RMSD, linetype=condition, size=condition, colour=condition)) + facet_grid(. ~ model_FACET) + 
@@ -264,6 +271,7 @@ ggplot_model_create(subset(data_nonadjusted, data_nonadjusted$experiment == "E6a
 
 \subsection{Saturation}
 \begin{figure}
+	\centering
 <<plotE1SAT, echo=F, fig.height=3>>=
 ggplot_model_create(subset(data_adjusted, data_adjusted$experiment == "E1" & data_adjusted$id == 6)) + 
 	geom_line(aes(x=parameter, y=RMSD, linetype=condition, size=condition, colour=condition)) + facet_grid(. ~ model_FACET) + 
@@ -274,6 +282,7 @@ ggplot_model_create(subset(data_adjusted, data_adjusted$experiment == "E1" & dat
 \end{figure}
 
 \begin{figure}
+	\centering
 <<plotE2SAT, echo=F, fig.height=3>>=
 ggplot_model_create(subset(data_adjusted, data_adjusted$experiment == "E2a" & data_adjusted$id == 6)) + 
 	geom_line(aes(x=parameter, y=RMSD, linetype=condition, size=condition, colour=condition)) + facet_grid(. ~ model_FACET) + 
@@ -284,6 +293,7 @@ ggplot_model_create(subset(data_adjusted, data_adjusted$experiment == "E2a" & da
 \end{figure}
 
 \begin{figure}
+	\centering
 <<plotE6SAT, echo=F, fig.height=3>>=
 ggplot_model_create(subset(data_adjusted, data_adjusted$experiment == "E6a" & data_adjusted$id == 14)) + 
 	geom_line(aes(x=parameter, y=RMSD, linetype=condition, size=condition, colour=condition)) + facet_grid(. ~ model_FACET) + 

@@ -5,6 +5,7 @@ source('R_eval.R')
 source('R_plot.R')
 
 timeseries=timeseries[-which(timeseries$experiment == "E1" & timeseries$condition == "5a")]
+attach(timeseries)
 @
 
 \chapter{Experimental Setups}\label{appendix:setups}
@@ -31,7 +32,7 @@ For the multi-episodic assessment of experiment \E1{} a speech telephony speech 
 \paragraph*{Network-based Setup}
 In the first part of the experiment a \ac{VoIP}-based system consisting of three computers was used.
 Those three computers were connected via Ethernet (CAT-5). 
-One computer (\emph{Lenovo~X61}) acted as a Server running the open-source \ac{PBX} \emph{Asterisk 11}\footnote{The Asterisk project is hosted under \url{http://www.asterisk.org}.}.
+One computer (\emph{Lenovo~X61}) acted as a Server running the open-source telephony software \emph{Asterisk 11}\footnote{The Asterisk project is hosted under \url{http://www.asterisk.org}.}.
 Two \emph{Fujitsu~Lifebook~S761} were running each a custom client based-upon \emph{PJSIP~2.1}\footnote{PJSIP is an open-source library for \ac{SIP}-based \ac{VoIP} (\url{http://www.pjsip.org}).}, which were connected via \ac{SIP} with the server.
 The custom client presented only a minimal user interface consisting of one button for call initiation and hangup, one button to set the current presence status, and an image presenting the presence status of the other client.
 Call initiation was only possible, if both clients set their presence status to available.
@@ -180,19 +181,47 @@ This avoids issues due initial buffering by providing a constant waiting time.
 	\label{appendix:lab:multiepisodicResult}
 \end{table}
 
-%\section{Data}
-%\begin{landscape}
-%
-%\begin{table}
-%	\centering
-%	\begin{tabulary}{\textwidth}{C|C|C|C|C|C|C|C|C|C|C}
-%	Experiment & Service & Task & Duration & \multicolumn{3}{c|}{Episodic Judgment} & Condition &  \multicolumn{3}{c}{Multi-episodic Judgment} \\
-%	& & & & \ac{HP} & \ac{MP} & \ac{LP} & & 3 & 6 & 9 \\
-%	\midrule
-%	\E1{} & Speech Telephony & Two-party conversation \ac{SCS} & 3..7 min & \Sexpr{mos_qu_with_sd} \\
-%	\end{tabulary}
-%\end{table}
-%\end{landscape}
+\section{}
+
+\begin{figure}
+	\centering
+	<<plotE1, echo=F, fig.height=14>>=
+		ggplot_timeseries_create(subset(timeseries, experiment=="E1")) + geom_boxplot(aes(factor(id), y=QU), na.rm=T) + facet_grid(condition ~ .) + xlab("Usage Episode")
+	@
+	\caption{}
+\end{figure}
+
+\begin{figure}
+	\centering
+	<<plotE2a, echo=F, fig.height=14>>=
+		ggplot_timeseries_create(subset(timeseries, experiment=="E2a")) + geom_boxplot(aes(factor(id), y=QU), na.rm=T) + facet_grid(condition ~ .) + xlab("Usage Episode")
+	@
+	\caption{}	
+\end{figure}
+
+\begin{figure}
+	\centering
+	<<plotE2b, echo=F, fig.height=14>>=
+		ggplot_timeseries_create(subset(timeseries, experiment=="E2b" & service != "bundle")) + geom_boxplot(aes(factor(id), y=QU), na.rm=T) + facet_grid(condition + service~ .) + xlab("Usage Episode")
+	@
+	\caption{}
+\end{figure}
+
+\begin{figure}
+	\centering
+	<<plotE3, echo=F, fig.height=6>>=
+		ggplot_timeseries_create(subset(timeseries, experiment=="E3")) + geom_boxplot(aes(factor(id), y=QU), na.rm=T) + facet_grid(condition ~ .) + xlab("Usage Episode")
+	@
+	\caption{}
+\end{figure}
+
+\begin{figure}
+	\centering
+	<<plotE6, echo=F, fig.height=14>>=
+		ggplot_timeseries_create(subset(timeseries, experiment=="E6a")) + geom_boxplot(aes(factor(id), y=QU), na.rm=T) + facet_grid(condition ~ .) + xlab("Usage Episode")
+	@
+	\caption{}
+\end{figure}
 
 %\chapter{Content}
 %\section{\acs{SCS} used in \E1, \E2a, \E2b, and E3}

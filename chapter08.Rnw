@@ -6,6 +6,7 @@ source('R_plot.R')
 
 timeseries=timeseries[-which(timeseries$experiment == "E1" & timeseries$condition == "5a")]
 timeseries=timeseries[-which(timeseries$experiment == "E5" & timeseries$id != "1")]
+attach(timeseries)
 @
 
 \chapter{Multi-episodic Perceived Quality in Multiple Days}\label{chap:field}
