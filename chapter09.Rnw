@@ -134,7 +134,11 @@ a_i= \left\{
 %	i-n & : i - n + w > 0 \\
 %  0 & : i - n + w \leq 0
 Here, $\mathit{w}$ is also limited to $\mathit{w}~\in~\mathbb{N}$ and $0~<~\mathit{w}~\leq~\mathit{n}$.
+<<<<<<< HEAD
 However, the actual window is increased by $\mathit{2*w}$, so that the very first usage episode can be considered by this model type, \ie, assigning a maximum weight of 0.5.
+=======
+However, the actual window is increased by $mathit\{2*w}$, so that the very first usage episode can be considered by this model type, \ie, assigning a maximum weight of 0.5.
+>>>>>>> cf86369a5f25933c08e1348f3fad0d0b6791e5a4
 
 Employing a weighted average is expected to increase prediction accuracy, because a recency effect can modeled.
 However, for one observed effect a weighted average will necessarily produce a deviation.
