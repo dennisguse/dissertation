@@ -1,9 +1,18 @@
 <<setup, echo=F, cache=F, results='hide'>>=
 opts_knit$set(progress = TRUE, verbose = TRUE)
 data = read.csv("data/data_modeling.csv")
-#source('R_pred_model.R')
+source('R_plot.R')
 
-data=subset(data,  grepl("average", data$condition))
+#We only do \ac{MOS}
+data=subset(data,  grepl("average", data$condition) & data$experiment %in% c("E1", "E2a", "E6a"))
+
+#Label stuff.
+data$model_FACET = factor(data$model == "weight_linear_create", labels=c("Window", "Linear")) #label and order; FALSE will be first; then attach labels for FACET
+data$condition = factor(data$condition, labels=c("C1", "C2a", "C3", "C4", "C5a", "C5b", "C6 (adjusted)", "C6", "C7", "C8", "All"))
+
+data_nonadjusted=subset(data, !grepl("adjusted", data$condition))
+
+data_adjusted=subset(data, grepl("adjusted", data$condition) | data$condition %in% c("C5a", "C5b", "C6"))
 @
 
 \chapter{Prediction of Multi-episodic Judgments}\label{chap:modeling}
@@ -174,12 +183,115 @@ Modeling is conducted using the \ac{MOS} rather than on individual judgments per
 
 \subsection{One Session: \E1{} and \EIIa{}}
 
-\subparagraph*{Recovery}
+\begin{figure}
+<<plotE1BASE, echo=F, fig.height=3>>=
+ggplot_model_create(subset(data_nonadjusted, data_nonadjusted$experiment == "E1" & data_nonadjusted$id == 3), 0.25) + 
+ geom_line(aes(x=parameter, y=RMSD, linetype=condition, size=condition, colour=condition)) + facet_grid(. ~ model_FACET) + 
+ scale_linetype_manual(values=c("solid", "solid", "solid", "solid", "solid", "solid", "solid", "dashed")) +
+ scale_size_manual(values=c(1, 1, 1, 1, 1, 1, 1, 1.5))
+@
+	\caption{}
+\end{figure}
+
+
+\begin{figure}
+<<plotE1PRED, echo=F, fig.height=3>>=
+ggplot_model_create(subset(data_nonadjusted, data_nonadjusted$experiment == "E1" & data_nonadjusted$id == 6), 1.9) + 
+ geom_line(aes(x=parameter, y=RMSD, linetype=condition, size=condition, colour=condition)) + facet_grid(. ~ model_FACET) + 
+ scale_linetype_manual(values=c("solid", "solid", "solid", "solid", "solid", "solid", "solid", "dashed")) +
+ scale_size_manual(values=c(1, 1, 1, 1, 1, 1, 1, 1.5))
+@
+	\caption{}
+\end{figure}
+
+\begin{figure}
+<<plotE1PRED9, echo=F, fig.height=3>>=
+ggplot_model_create(subset(data_nonadjusted, data_nonadjusted$experiment == "E1" & data_nonadjusted$id == 9 & data_nonadjusted$condition != "All"), 0.75) + 
+	geom_line(aes(x=parameter, y=RMSD, linetype=condition)) + facet_grid(. ~ model_FACET) + 
+	scale_linetype_manual(values=c("solid", "dashed"))
+@
+	\caption{}
+\end{figure}
+
+
+
+%E2A
+
+\begin{figure}
+<<plotE2BASE, echo=F, fig.height=3>>=
+ggplot_model_create(subset(data_nonadjusted, data_nonadjusted$experiment == "E2a" & data_nonadjusted$id == 3), 0.4) + 
+ geom_line(aes(x=parameter, y=RMSD, linetype=condition, size=condition, colour=condition)) + facet_grid(. ~ model_FACET) + 
+ scale_linetype_manual(values=c("solid", "solid", "solid", "solid", "solid", "solid", "solid", "dashed")) +
+ scale_size_manual(values=c(1, 1, 1, 1, 1, 1, 1, 1.5))
+@
+	\caption{}
+\end{figure}
+
+\begin{figure}
+<<plotE2PRED, echo=F, fig.height=3>>=
+ggplot_model_create(subset(data_nonadjusted, data_nonadjusted$experiment == "E2a" & data_nonadjusted$id == 6), 1.8) + 
+	geom_line(aes(x=parameter, y=RMSD, linetype=condition, size=condition, colour=condition)) + facet_grid(. ~ model_FACET) + 
+	scale_linetype_manual(values=c("solid", "solid", "solid", "solid", "solid", "solid", "solid", "dashed")) +
+	scale_size_manual(values=c(1, 1, 1, 1, 1, 1, 1, 1.5))
+@
+	\caption{}
+\end{figure}
+
 
 
 
 \subsection{Multiple Days: E6}
 
-\subsubsection{Saturation}
+\begin{figure}
+<<plotE6BASE, echo=F, fig.height=3>>=
+ggplot_model_create(subset(data_nonadjusted, data_nonadjusted$experiment == "E6a" & data_nonadjusted$id == 8), 0.3) + 
+	geom_line(aes(x=parameter, y=RMSD, linetype=condition, size=condition, colour=condition)) + facet_grid(. ~ model_FACET) + 
+	scale_linetype_manual(values=c("solid", "solid", "solid", "solid", "solid", "solid", "dashed")) +
+	scale_size_manual(values=c(1, 1, 1, 1, 1, 1, 1.5))
+@
+	\caption{}
+\end{figure}
+
+\begin{figure}
+<<plotE6PRED, echo=F, fig.height=3>>=
+ggplot_model_create(subset(data_nonadjusted, data_nonadjusted$experiment == "E6a" & data_nonadjusted$id == 14)) + 
+	geom_line(aes(x=parameter, y=RMSD, linetype=condition, size=condition, colour=condition)) + facet_grid(. ~ model_FACET) + 
+	scale_linetype_manual(values=c("solid", "solid", "solid", "solid", "solid", "solid", "dashed")) +
+	scale_size_manual(values=c(1, 1, 1, 1, 1, 1, 1.5))
+@
+	\caption{}
+\end{figure}
+
+\subsection{Saturation}
+\begin{figure}
+<<plotE1SAT, echo=F, fig.height=3>>=
+ggplot_model_create(subset(data_adjusted, data_adjusted$experiment == "E1" & data_adjusted$id == 6)) + 
+	geom_line(aes(x=parameter, y=RMSD, linetype=condition, size=condition, colour=condition)) + facet_grid(. ~ model_FACET) + 
+	scale_linetype_manual(values=c("solid", "solid", "dashed")) +
+	scale_size_manual(values=c(1, 1, 1))
+@
+	\caption{}
+\end{figure}
+
+\begin{figure}
+<<plotE2SAT, echo=F, fig.height=3>>=
+ggplot_model_create(subset(data_adjusted, data_adjusted$experiment == "E2a" & data_adjusted$id == 6)) + 
+	geom_line(aes(x=parameter, y=RMSD, linetype=condition, size=condition, colour=condition)) + facet_grid(. ~ model_FACET) + 
+	scale_linetype_manual(values=c("solid", "solid", "dashed")) +
+	scale_size_manual(values=c(1, 1, 1))
+@
+	\caption{}
+\end{figure}
+
+\begin{figure}
+<<plotE6SAT, echo=F, fig.height=3>>=
+ggplot_model_create(subset(data_adjusted, data_adjusted$experiment == "E6a" & data_adjusted$id == 14)) + 
+	geom_line(aes(x=parameter, y=RMSD, linetype=condition, size=condition, colour=condition)) + facet_grid(. ~ model_FACET) + 
+	scale_linetype_manual(values=c("solid", "solid", "dashed")) +
+	scale_size_manual(values=c(1, 1, 1))
+@
+	\caption{}
+\end{figure}
+
 
 \section{Conclusion}

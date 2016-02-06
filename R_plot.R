@@ -33,6 +33,8 @@ ggplot_model_create <- function(data, ylim=2.4) {
  p <- p + theme(axis.text.y=element_text(colour="black"))
  
  p <- p + xlab("RMSD") + xlab("w")
+ p <- p + guides(fill=guide_legend(title="Condition"))
+ 
  
  p <- p + theme(legend.position="bottom")
  
