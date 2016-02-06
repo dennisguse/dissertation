@@ -56,7 +56,7 @@ weight_window <- function(timeseries, window) {
 
 weight_linear_create <- function(window) {
  return (function(timeseries) {
-  return(weight_linear(timeseries, window))
+  return(weight_linear(timeseries, 2*window))
  })
 }
 weight_linear <- function(timeseries, window) {
@@ -81,6 +81,6 @@ if (FALSE) {
  weight_window_3 = weight_window_create(10)
  weight_window_3(timeseries)
  
- weight_linear_3 = weight_linear_create(10)
+ weight_linear_3 = weight_linear_create(1)
  weight_linear_3(timeseries)
 }

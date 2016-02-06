@@ -117,7 +117,7 @@ The weight of a usage episode decreases with the increasing distance of a usage 
 \begin{equation}\label{eq:weight:linear}  %\frac{n-i}{w} & :i - n + w > 0 \\
 a_i= \left\{
 \begin{array}{cr}
-	i-n & : i - n + 2*w > 0 \\
+	i - n + w & : i - n + 2*w > 0 \\
   0 & : i - n + 2*w \leq 0
 \end{array}
 \right.
@@ -129,7 +129,7 @@ However, the actual window is increased by $2*w$, so that the very first usage e
 
 Employing a weighted average is expected to increase prediction accuracy, because a recency effect can modeled.
 However, for one observed effect a weighted average will necessarily produce a deviation.
-In case of the observed saturation effect both weighting functions will be too negative.
+In case of the observed saturation effect, both weighting functions will be too negative.
 Here, three \ac{LP} episodes, or days are not judged worse than two \ac{LP}.
 The implication of this is that one \ac{LP} episode is not judged different than one \ac{HP} episode with regard to the multi-episodic judgment.
 This can be modeled in two ways.

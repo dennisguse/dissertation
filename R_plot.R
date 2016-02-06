@@ -25,3 +25,16 @@ ggplot_timeseries_create <- function(timeseries) {
  return (p)
 }
 
+ggplot_model_create <- function(data, ylim=2.4) {
+ p <- ggplot(data) + coord_cartesian(ylim=c(0, ylim), xlim=c(min(data$parameter)-0.4, max(data$parameter)+0.4))
+ p <- p+ scale_x_continuous(breaks = 1:max(data$parameter))
+ p <- p + theme(axis.title.y = element_blank())
+ p <- p + theme(axis.text.x=element_text(colour="black"))
+ p <- p + theme(axis.text.y=element_text(colour="black"))
+ 
+ p <- p + xlab("RMSD") + xlab("w")
+ 
+ p <- p + theme(legend.position="bottom")
+ 
+ return (p)
+}
