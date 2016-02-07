@@ -134,11 +134,7 @@ a_i= \left\{
 %	i-n & : i - n + w > 0 \\
 %  0 & : i - n + w \leq 0
 Here, $\mathit{w}$ is also limited to $\mathit{w}~\in~\mathbb{N}$ and $0~<~\mathit{w}~\leq~\mathit{n}$.
-<<<<<<< HEAD
 However, the actual window is increased by $\mathit{2*w}$, so that the very first usage episode can be considered by this model type, \ie, assigning a maximum weight of 0.5.
-=======
-However, the actual window is increased by $mathit\{2*w}$, so that the very first usage episode can be considered by this model type, \ie, assigning a maximum weight of 0.5.
->>>>>>> cf86369a5f25933c08e1348f3fad0d0b6791e5a4
 
 Employing a weighted average is expected to increase prediction accuracy, because a recency effect can modeled.
 However, for one observed effect a weighted average will necessarily produce a deviation.
@@ -192,8 +188,11 @@ Modeling is conducted using the \ac{MOS} rather than on individual judgments per
 <<plotE1BASE, echo=F, fig.height=3>>=
 ggplot_model_create(subset(data_nonadjusted, data_nonadjusted$experiment == "E1" & data_nonadjusted$id == 3), 0.25) + 
  geom_line(aes(x=parameter, y=RMSD, linetype=condition, size=condition, colour=condition)) + facet_grid(. ~ model_FACET) + 
- scale_linetype_manual(values=c("solid", "solid", "solid", "solid", "solid", "solid", "solid", "dashed")) +
- scale_size_manual(values=c(1, 1, 1, 1, 1, 1, 1, 1.5))
+ scale_linetype_manual(values=c("solid", "solid", "solid", "solid", "solid", "solid", "solid", "dotted")) +
+ scale_color_manual(values=c("#00BFC4", "#00BE67", "#7CAE00", "#00A9FF", "#CD9600", "#F8766D", "#C77CFF", "#000000")) + 
+ scale_size_manual(values=c(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 1))
+ # scale_size_manual(values=c(1, 1, 1, 1, 1, 1, 1, 1.5))
+
 @
 	\caption{}
 \end{figure}
@@ -214,8 +213,8 @@ ggplot_model_create(subset(data_nonadjusted, data_nonadjusted$experiment == "E1"
 	\centering
 <<plotE1PRED9, echo=F, fig.height=3>>=
 ggplot_model_create(subset(data_nonadjusted, data_nonadjusted$experiment == "E1" & data_nonadjusted$id == 9 & data_nonadjusted$condition != "All"), 0.75) + 
-	geom_line(aes(x=parameter, y=RMSD, linetype=condition)) + facet_grid(. ~ model_FACET) + 
-	scale_linetype_manual(values=c("solid", "dashed"))
+	geom_line(aes(x=parameter, y=RMSD, colour=condition)) + facet_grid(. ~ model_FACET) 
+#	scale_linetype_manual(values=c("solid", "dashed"))
 @
 	\caption{}
 \end{figure}

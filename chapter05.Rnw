@@ -90,7 +90,7 @@ Prior knowledge includes knowledge about the specific service and also about the
 For telecommunication services this includes knowledge and likely origins about service-specific performance fluctuations.
 Also, promises about performance by a service provider as for example provided in advertisements is considered knowledge.
 The availability of such information might affect expectations, attribution of degradations, and \emph{assumed quality} and thus might affect multi-episodic perceived quality.
-This is for example expressed in the \emph{E-Model} by the \emph{advantage factor} \citep{itu-t_g.107:_2014} that expresses a favorable judgment due to expected difficulty of service provision, \eg, use of a mobile phone in a remote area.
+This is for example expressed in the \emph{E-Model} by the \emph{advantage factor} \citep{itu-t_g.107:_2015} that expresses a favorable judgment due to expected difficulty of service provision, \eg, use of a mobile phone in a remote area.
 
 \subparagraph*{Task, Task Importance and Task Solving Strategies}
 The \emph{quality formation process} is also affected by the user's behavior.
