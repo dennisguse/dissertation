@@ -30,7 +30,7 @@ ggplot_timeseries_create <- function(timeseries) {
  
  p <- p + theme(legend.position="none")
 
- p <- p + theme(plot.margin=unit(c(1, 1, 10,  10), "lines"))
+# p <- p + theme(plot.margin=unit(c(1, 1, 10,  10), "lines"))
  
  #Shift x-axis (if needed)
  #  timeseries$id = timeseries$id + 1
