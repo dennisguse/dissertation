@@ -78,10 +78,11 @@ The actual experience and resulting perceived quality is affected by influence f
 \begin{definition}[Influence Factor]
 ``Any characteristic of a user, system, service, application, or context whose actual state or setting may have influence on the \ac{QoE} for the user.''~\citep[][p.~56]{reiter_quality_2014}
 \end{definition}
-Especially contextual factors, which include task, user behavior, and usage situation~\citep[][p.~56]{reiter_quality_2014}, are important as those are often not invariant.
+Contextual factors, which include task, user behavior, and usage situation~\citep[][p.~56]{reiter_quality_2014}, are important as those are often not invariant.
 For example, high delay might not be noticed in a two-party telephone conversation, if only one speaker is talking.
+It thus not perceived as degradation and does not affect the quality formation process. %TODO REF
 
-The formation process of perceived quality is still under investigation, because it is not yet fully understood.
+The formation process of perceived quality is still under investigation, because it is not yet fully understood. %TODO REF
 In fact, assessment methods for perceived quality and the broader concept of \ac{QoE} are still under development.
 
 \subsection{Assessment Methods}
@@ -97,20 +98,28 @@ In the latter case, also judgments between two labels can be expressed.
 %Note that the term stimulus is misleading as it suggests an observer rather than an actor, which in some cases might be correct but not in general.
 
 Based upon the judgments, a \acf{MOS} can be derived by averaging of all judgments per stimuli \citep{itu-t_p.800.2:_2013}.
-The \ac{MOS} is assumed to reflect the judgment of an \emph{average actor} for this stimuli.
-Judgments can either be taken during the experience, which is denoted as \emph{momentary judgment}, or after an experience denoted as \emph{retrospective judgment}~\citep[\cf,][]{weiss_temporal_2014}.
-Momentary judgments might affect the perception and quality formation process, but allows to investigate the impact of varying performance especially with regard to noticeability.
-A retrospective judgment requires that characteristics about the experience can be memorized while experiencing and later recalled for the judgment.
-It has been observed that not all parts of an experience affect a retrospective judgment in a similar manner (\cf, \autoref{chap:04}).
+The \ac{MOS} is assumed to reflect the judgment of an \emph{average actor} for this stimuli and the resulting experience.
+Judgments of an experience can either be taken while experiencing, which are denoted as \emph{momentary judgments}, or after an experience.
+Taking momentary judgments might affect the perceptual process, because the assessment task must be conducted in parallel. %TODO REF
+However, momentary judgments allow to investigate the impact of varying performance in a stimuli.
+This allows to investigated especially noticeability of varying performance.
+Assessing the perceived quality of an experience after this experience is denoted as \emph{retrospective judgment}~\citep[][]{weiss_temporal_2014}.
+A retrospective judgment is based upon recallable characteristics of an experience.
+It has been observed that not all parts of one experience affect a retrospective judgment in a similar manner (\cf, \autoref{chap:04}).
 %For the investigation of the impact of small differences between stimuli often paired comparison methodologies are applied, which present multiple stimuli and request to judge them with regard to each other or select the \emph{better} one.
 
 It must be noted that a judgment cannot be considered as absolute in terms of universal, because it is the result of the quality formation process and description process.
-These processes are affected by differences in the so-called internal reference, which might lead to biases \citep[\cf,][]{zielinski_biases_2008, pitrey_aligning_2011}.
-For example the presentation of narrowband speech stimuli are judged better on the same scales, if no wideband stimuli are presented \citep[\cf,][]{koster_comparison_2015}.
+These processes are affected by differences in the so-called internal reference, which might lead to biases \citep[][]{zielinski_biases_2008, pitrey_aligning_2011}.
+For example narrowband speech stimuli are judged better, if no wideband stimuli are presented \citep[][]{koster_comparison_2015}.
 
 \subsection{Prediction of Perceived Quality}
-One major goal of research on \ac{QoE}, beyond understanding the underlying processes in detail, is the algorithmic prediction of judgments.
-This is especially important as the evaluation by human actors is an expensive procedure and thus limiting the number of evaluations.
+Beyond understanding the underlying processes in detail, one major goal of research on \ac{QoE} is the algorithmic prediction of judgments.
+This is especially important as the evaluation by human actors is an expensive procedure and thus limits the number of evaluations.
+In addition, continuous evaluation, as required for network monitoring, is not feasible in this manner.
+
+An algorithmic predictor is called a \emph{model}.
+A model maps the input, often a stimulus or an abstract reduced presentation of a stimulus, to an expected judgment.
+The necessary information to create a model can be derived with subjective experiments, \ie, selecting \emph{representative} stimuli and let participants judge the perceived quality.
 A model can be applied for automatic evaluation, which is for example useful for development of new lossy coding algorithms.
 Especially for telecommunication services models have been developed for planning purposes, \eg, \emph{E-Model} \citep{itu-t_g.107:_2015}.
 
@@ -120,7 +129,6 @@ Especially for telecommunication services models have been developed for plannin
 %Depending on the purpose of a model, different input and outputs are desired.
 %Input might also include beside technical performance-related characteristics, information about the influence factors.
 
-A model maps the input, often a stimulus or an abstract reduced presentation of a stimulus, to an expected judgment.
-However, a model is limited to the underlying data that lead to the selection of the model parts and parameters.
-As those judgments were taken from a limited number of human actors in a specific situation for a limited set of stimuli, a model must be carefully applied to the implied restrictions.
+In fact, a model is inherently limited by underlying data, which lead to the selection of the model's parts and parameters.
+A model must be carefully applied to the implied restrictions resulting from the limited data.
 Using it outside its designed scope, might result in invalid predictions.

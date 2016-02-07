@@ -149,8 +149,8 @@ Here, the judgment of this episode would be changed to an \ac{HP} episode.
 Then, the weighting function does not need to be changed to model this effect.
 The second option seems more elegant and is more likely to reflect a characteristic of the quality formation process.
 
-A modeling of a peak-effect is omitted here, because such an effect could not be observed in the conducted experiments.
-Even, if in \C7{} of \E1{} a peak-effect occurred, the influence on the final judgment seems to be rather small.
+A modeling of a peak effect is omitted here, because such an effect could not be observed in the conducted experiments.
+Even, if in \C7{} of \E1{} a peak effect occurred, the influence on the final judgment seems to be rather small.
 
 In the following, a \emph{model} denotes the selected weighting function with the defined parameter.
 The prediction accuracy of a model is evaluated using two metrics.
