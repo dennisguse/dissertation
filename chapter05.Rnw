@@ -222,7 +222,7 @@ The first two days are presented in each condition with the best performance lev
 
 \begin{table}[h]
 	\centering
-	\caption{Conditions applied by \citet{moller_single-call_2011} with performance level per day.}
+	\caption[Conditions applied by \citet{moller_single-call_2011}]{Conditions applied by \citet{moller_single-call_2011} with performance level per day.}
 	\label{tab:chap05:conditions}
 	\begin{tabular}{c|c|c|c|c|c|c|c}
 	\multirow{2}{*}{Condition} & \multicolumn{7}{c}{Performance Level (per day)} \\
@@ -289,7 +289,7 @@ A statistical analysis is omitted due to the relative small (potential) differen
 
 \begin{table}[h]
 	\centering
-	\caption[Episodic and multi-episodic judgments by \citet{moller_single-call_2011}.]{Episodic and multi-episodic judgments by \citet{moller_single-call_2011}. Reported as \ac{MOS} with standard deviation in brackets.}
+	\caption[Episodic judgments and multi-episodic judgments by \citet{moller_single-call_2011}.]{Episodic judgments and multi-episodic judgments by \citet{moller_single-call_2011}. Reported as \ac{MOS} with standard deviation in brackets.}
 	\label{tab:state:MOLLERepisodic}
 	\begin{tabular}{c||c|c|c||c|c|c}
 	\multirow{2}{*}{\rotatebox{90}{Cond.}} & \multicolumn{3}{c||}{Episodic Judgments} &  \multicolumn{3}{c}{Multi-episodic Judgments} \\

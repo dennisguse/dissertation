@@ -38,6 +38,7 @@
 %********************************************************************
 % Note: Make all your adjustments in here
 %*******************************************************
+
 \input{support/classicthesis-config}
 \DeclareUnicodeCharacter{00A0}{ } %Unbreakable spaces
 

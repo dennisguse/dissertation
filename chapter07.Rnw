@@ -22,7 +22,7 @@ Both differ in usage situation, \ie, an active conversation vs. third-party list
 %Overview on Experiments
 \begin{table}[h]
 	\centering
-	\caption{Conducted one session experiments on multi-episodic perceived quality.}
+	\caption{Overview on conducted one-session experiments: \E1{}, \EIIa{}, \EIIb{}, and \E3{}.}
 	\label{tab:lab:experiments}
 	\begin{tabulary}{\textwidth}{C|C|C|C|C}
 	Experiment	& Service Type(s)	& Task					& Episodes	& Hypothesis \\
@@ -77,7 +77,7 @@ In addition, an influence of the different usage situations and service types ca
 
 \begin{table}
  \centering
- \caption[Episodic performance for all conditions for one session]{Episodic performance for all conditions for one session.
+ \caption[One-session experiments: overview on conditions]{One-session experiments: overview on conditions
  Non-\acs{HP} episodes are in \textbf{bold} (\acs{LP}) and \textit{italic} (\acs{MP}).}
  \label{tab:lab:hypothesesComparison}
  \begin{tabulary}{\textwidth}{C|C|C|C|C|C}
@@ -129,7 +129,7 @@ This is investigated by introducing a third performance level \ac{MP}.
 This should provide a performance and perceived quality worse than \ac{HP} but better than \ac{LP}.
 Comparing the multi-episodic judgment after the 6th usage episode of \C7{} with \C5{} and \CIIa{}, allows to investigate this hypotheses.
 Those three conditions differ only in the performance level of the 6th episode presenting it in \ac{MP}, \ac{HP}, and \ac{LP}.
-If a peak effect occurs for multi-episodic perceived quality, the result of condition \C7{} should be closer to \CIIa{}.
+If a peak-effect occurs for multi-episodic perceived quality, the result of condition \C7{} should be closer to \CIIa{}.
 
 \autoref{hypo:recovery} is closely related to \autoref{hypo:position}.
 Here, the recovery between two multi-episodic judgments due to presentation of additional \ac{HP} episodes is investigated.
@@ -197,7 +197,7 @@ It on only achieves a \ac{MOS} of 1.9 (\unit[7]{pt}~\ac{CCR}).
 
 \begin{table}
  \centering
- \caption[Comparison of the selected codecs for performance levels with \acs{POLQA}.]{Comparison of the selected codecs for \acs{HP}, \acs{MP}, and \acs{LP} with \acs{POLQA}.
+ \caption[Performance levels: Comparison of the selected codecs with \acs{POLQA}.]{Performance levels: Comparison of the selected codecs with  for \acs{HP}, \acs{MP}, and \acs{LP} with \acs{POLQA}.
  The prediction was transformed to the 7-point \acs{CCR} scale \citep{koster_comparison_2015}.}
  \label{tab:lab:performance}
  \begin{tabulary}{\columnwidth}{C|C|C|C}
@@ -391,7 +391,7 @@ In the following, the differences in episodic judgments between conditions are i
 
 \begin{table}
   \centering
-  \caption{Episodic judgments per performance levels for the one-session experiments.}
+  \caption{One-session experiments: episodic judgments per performance level.}
 	\label{tab:lab:episodicMOS}
 	\begin{tabulary}{\textwidth}{c|C|c|c|c}
 	\multirow{2}{*}{Experiment}	& \multirow{2}{*}{Service} & \multicolumn{3}{c}{Episodic Judgment} \\
@@ -489,7 +489,7 @@ Although, not directly comparable due to differences between experiments, it mus
 
 \begin{table}[h]
 	\centering
-	\caption{Multi-episodic judgments after the 3rd episode for the one-session experiments.} %HP only
+	\caption{One-session experiments: multi-episodic judgments after the 3rd episode.} %HP only
 	\label{tab:lab:multiconsistency}
 	\begin{tabulary}{\textwidth}{C|C|C|C|C|C}
 	Experiment & \E1{} & \EIIa{} &\EIIb{} (telephony) & \EIIb{}	(\ac{VoD})	& \E3{} \\
@@ -521,7 +521,7 @@ A one-sided post-hoc test finds that the reference is significantly different to
 
 \begin{table}[h!]
 	\centering
-	\caption{Multi-episodic judgments after the 6th episode for \autoref{hypo:number}.} %	for \E1{} and \EIIa{}
+	\caption{One-session experiments: Multi-episodic judgments after the 6th episode for \autoref{hypo:number}.} %	for \E1{} and \EIIa{}
 	\label{tab:lab:hyponumber}
 	\begin{tabulary}{\textwidth}{C|c|C|C}
 	Condition   & \ac{LP} episode(s) 	& \multicolumn{2}{c}{Multi-episodic Judgment} \\
@@ -572,7 +572,7 @@ In \autoref{hypo:position} it is hypothesized that presenting \ac{HP} episodes a
 
 \begin{table}[h]
 	\centering
-	\caption{Multi-episodic judgment after the 6th episode for \autoref{hypo:position}.}
+	\caption{One-session experiments: Multi-episodic judgment after the 6th episode for \autoref{hypo:position}.}
 	\label{tab:lab:hypoposition}
 	\begin{tabulary}{\textwidth}{C|c|C|C}
 	Condition   & \ac{LP} episode(s) 	& \multicolumn{2}{c}{Multi-episodic Judgment} \\
@@ -615,7 +615,7 @@ The latter presents the 4th and 6th episode in \ac{LP}.
 
 \begin{table}[h!]
  \centering
- \caption{: Multi-episodic judgment after the 6th episode for \autoref{hypo:consecutive}.}
+ \caption{One-session experiments: Multi-episodic judgment after the 6th episode for \autoref{hypo:consecutive}.}
  \label{tab:lab:hypoconsecutive} 
  \begin{tabulary}{\columnwidth}{c|c|C}
 	Condition   & \ac{LP} episode(s) 	& \EIIa{} \\
@@ -644,7 +644,7 @@ wilcox_episodic_peak = pairwise.wilcox.test(timeseries_E1_peak$QU, timeseries_E1
 @
 
 In \autoref{hypo:strength} it is assumed that the lowest episodic performance (here \ac{LP}) has a stronger negative effect on the multi-episodic judgments whereas lesser degraded episode(s) (here \ac{MP}) yield a smaller effect or no effect at all.
-The later case, would indicate the occurrence of a peak effect.
+The later case, would indicate the occurrence of a peak-effect.
 This is evaluated in \E1{} only by comparing \CIIa{}, \CVb{}, and \C7{}.
 These present the 5th episode in \ac{LP}, but differ in the performance level of the 6th usage episode (\autoref{tab:lab:hypothesesComparison}).
 \autoref{tab:lab:hypostrength} shows the multi-episodic judgments after the 6th usage episode as well as the episodic judgment of this episode.
@@ -659,7 +659,7 @@ A one-sided post-hoc shows significant differences for \CIIa{} and \CVb{} (\Sexp
 
 \begin{table}[h!]
  \centering
- \caption{Multi-episodic judgment after the 6th usage episode for \autoref{hypo:strength}.}
+ \caption{One-session experiments: Multi-episodic judgment after the 6th usage episode for \autoref{hypo:strength}.}
  \label{tab:lab:hypostrength}
  \begin{tabulary}{\columnwidth}{C|C|C|C}
 	Conditions   & \multicolumn{2}{c|}{6th usage episode} & Multi-episodic Judgment\\
@@ -677,7 +677,7 @@ With regard to the interpretation it is problematic that the episodic judgments 
 In fact, it is indicated that \ac{MP} episodes were perceived and judged slightly worse.
 %However, it must be noted that the episodic judgment of 6th episode in \CIIa{} is judged almost 0.6pt lower than the episodic \ac{MOS} for all \ac{HP} episodes in this experiment (\Sexpr{mos_qu_with_sd_by_condition("E1", "HP")}).
 This leaves three interpretations.
-Either this is an artifact of the required between-subject design, \ac{HP} and \ac{MP} were not different enough, or a peak effect could be observed.
+Either this is an artifact of the required between-subject design, \ac{HP} and \ac{MP} were not different enough, or a peak-effect could be observed.
 Thus, \autoref{hypo:strength} must be left unanswered.
 %This indicates that presenting the 6th episode either in \ac{MP} or \ac{HP} does not affect the multi-episodic judgment although the episodic judgments are different.
 %It can thus be concluded that \autoref{hypo:strength} is verified.
@@ -697,7 +697,7 @@ Between those two conditions the judgment after the 6th (\Sexpr{wilcox(IQU~condi
 
 \begin{table}[h!]
  \centering
- \caption{Multi-episodic judgments after the 3rd, 6th and 9th episode for \autoref{hypo:recovery}.}
+ \caption{One-session experiments: Multi-episodic judgments after the 3rd, 6th and 9th episode for \autoref{hypo:recovery}.}
  \label{tab:lab:hyporecovery}
  \begin{tabulary}{\columnwidth}{c|C|C|C|C}
 	\multirow{2}{*}{Conditions}	& \multirow{2}{*}{Episodic Performance}			& \multicolumn{3}{c}{Multi-episodic Judgments} \\
@@ -727,7 +727,7 @@ The episodic judgment for these conditions and the multi-episodic judgments are 
 
 \begin{table}[h!]
  \centering
- \caption{Multi-episodic judgment after the 6th episode for \autoref{hypo:duration}.}
+ \caption{One-session experiments: Multi-episodic judgment after the 6th episode for \autoref{hypo:duration}.}
  \label{tab:lab:hypoduration} 
  \begin{tabulary}{\columnwidth}{c|C|C|C}
  \multirow{2}{*}{Conditions}	& \multicolumn{2}{c|}{5th usage episode} &\multirow{2}{*}{Multi-episodic Judgment}\\
@@ -759,7 +759,7 @@ With regard to the speech telephony service no significant difference on the fin
 
 \begin{table}[h!]
  \centering
- \caption{Multi-episodic judgment after the 6th episode for \autoref{hypo:independent}.}
+ \caption{One-session experiment: Multi-episodic judgment after the 6th episode for \autoref{hypo:independent}.}
  \label{tab:lab:hypoindependent}
  \begin{tabulary}{\columnwidth}{C|C|C|C}
 	Conditions \ac{VoD}	& \multicolumn{2}{c}{Multi-episodic Judgment} \\
@@ -807,7 +807,7 @@ Thus, \autoref{hypo:consecutive} cannot be accepted.
 %It is indicated that non-consecutive \ac{LP} episodes are judged slightly better.
 %However, this might also be an artifact due to a recency effect.
 
-In \E1{} also a (negative) peak effect was investigated (\autoref{hypo:strength}).
+In \E1{} also a (negative) peak-effect was investigated (\autoref{hypo:strength}).
 However, the results are inconclusive and thus this hypothesis is left unanswered.
 
 In \E1{} also recovery of multi-episodic judgments was investigated (\autoref{hypo:recovery}).
@@ -828,7 +828,7 @@ The results show that episodic judgments and multi-episodic judgments are assess
 
 The results show that multi-episodic judgments in one session are affected by several effects.
 Here a recency effect, and a duration neglect could be observed.
-The existence of a peak effect could not be proven.
+The existence of a peak-effect could not be proven.
 
 The experimental results, beyond analysis of occurring effects, to derive a prediction model.
 Here, the large number of conditions in \E1{} and \EIIa{} are well suited while \EIIb{} and \E3{} can be used for verification.
