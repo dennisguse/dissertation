@@ -207,12 +207,12 @@ With regard to the multi-episodic judgment after the 6th usage episode, both mod
 \autoref{fig:pred:E1pred6} shows the \ac{RMSD} for the 6th usage episode for both model types.
 Here, window performs better with an increasing window size up until~3 is similar to~4.
 However, the prediction accuracy to largely depends on the considered condition.
-For example, \C3{} is far off for $w=1$ and improves until~3 while \C4{} is best predicted with~5.
+For example, \C3{} is far off for $\mathit{w}=1$ and improves until~3 while \C4{} is best predicted with~5.
 Linear outperforms window in prediction accuracy and is more consistent.
-The best accuracy is observed by setting $w$~to~2.
+The best accuracy is observed by setting $\mathit{w}$~to~2.
 All conditions except \C4{} and \C6{} yield here the minimal \ac{RMSD}.
-In fact, \C4{} and \C6{} reach their minimum at~3, but accuracy is already sufficient at $w=2$.
-It must be noted that \ac{RMSD} is in the best case close to \Sexpr{round(min(subset(data_nonadjusted, data_nonadjusted[["experiment"]] == "E1" & data_nonadjusted[["id"]] == 6 & data_nonadjusted[["model"]] == "weight_linear_create" & data_nonadjusted[["condition"]] == "All")[["RMSD"]]), 1)} (linear, $w=2$).
+In fact, \C4{} and \C6{} reach their minimum at~3, but accuracy is already sufficient at $\mathit{w}=2$.
+It must be noted that \ac{RMSD} is in the best case close to \Sexpr{round(min(subset(data_nonadjusted, data_nonadjusted[["experiment"]] == "E1" & data_nonadjusted[["id"]] == 6 & data_nonadjusted[["model"]] == "weight_linear_create" & data_nonadjusted[["condition"]] == "All")[["RMSD"]]), 1)} (linear, $\mathit{w}=2$).
 This is well close to the prediction accuracy for presenting \ac{HP} only.
 
 \begin{figure}[h]
@@ -231,8 +231,8 @@ ggplot_model_create(subset(data_nonadjusted, data_nonadjusted$experiment == "E1"
 With regard to the recovery (\autoref{hypo:recovery}) two conditions were investigated.
 The \ac{RMSD} is shown for both model types is shown in \autoref{fig:pred:E1pred9}.
 In this case a linear weight is preferable over a window weight.
-In fact, the latter provides provides near perfect accuracy for $w=4$, but is otherwise far off.
-A linear weight performs very well for \CVb{} with $w \geq 3$ and very similar for \C7{} over the whole range.
+In fact, the latter provides provides near perfect accuracy for $\mathit{w}=4$, but is otherwise far off.
+A linear weight performs very well for \CVb{} with $\mathit{w} \geq 3$ and very similar for \C7{} over the whole range.
 Thus, the linear weight is preferable, because it has a higher robustness.
 
 \begin{figure}[h]
@@ -250,9 +250,9 @@ ggplot_model_create(subset(data_nonadjusted, data_nonadjusted$experiment == "E1"
 This experiment complemented \E1{} with a passive usage situation while sharing the same performance levels.
 With regard to prediction of \ac{HP} only usage episodes results are slightly different than \E1{}.
 The prediction accuracy for the multi-episodic judgment after the 3rd usage episode is shown in \autoref{fig:pred:E2pred3}.
-Here, the prediction accuracy increases with an increasing $w$.
+Here, the prediction accuracy increases with an increasing $\mathit{w}$.
 However, this is due to strong deviation of \C3{} alone. 
-Omitting \C3{} shows similar results to \E1{}, \ie, prediction accuracy is not affected by $w$.
+Omitting \C3{} shows similar results to \E1{}, \ie, prediction accuracy is not affected by $\mathit{w}$.
 In fact, \ac{RMSD} reaches a similar than for \E1{}.
 
 \begin{figure}[h]
@@ -270,7 +270,7 @@ ggplot_model_create(subset(data_nonadjusted, data_nonadjusted$experiment == "E2a
 
 With regard to prediction to of the multi-episodic judgment after the 6th usage episode results closely resemble \E1{}.
 The \ac{RMSD} is shown in \autoref{fig:pred:E2pred3}.
-For window a minimum is reached at 3~to~4 and for linear at $w=2$.
+For window a minimum is reached at 3~to~4 and for linear at $\mathit{w}=2$.
 In fact, the found parameters are identical to \E1{}.
 Furthermore, even the \ac{RMSD} behaves similar for individual conditions.
 
@@ -292,9 +292,9 @@ For prediction of multi-episodic judgments in one session both model types perfo
 Notably, for both experiments the same parameters were found although the usage situation is different.
 With regard to accuracy the linear weighting is preferable over the window function.
 Besides, linear weighting seems also to be more robust against selected parameter.
-For both experiments a minimal \ac{RMSD} could be achieved for $w=2$.
-The multi-episodic judgments after the 9th usage episode is optimal for $w=3$ (only \E1{}). 
-However, as only two conditions were adjusting $w$ seems improper.
+For both experiments a minimal \ac{RMSD} could be achieved for $\mathit{w}=2$.
+The multi-episodic judgments after the 9th usage episode is optimal for $\mathit{w}=3$ (only \E1{}). 
+However, as only two conditions were adjusting $\mathit{w}$ seems improper.
 
 \subsection{Multiple Days: E6}
 In \E6{} a usage period of 6~days was investigated for use of a \ac{AoD} service.
@@ -302,9 +302,9 @@ This service was used twice per day.
 In this experiment the first three days (six usage episodes) were presented in \ac{HP} only.
 Afterwards the multi-episodic perceived quality is assessed.
 Prediction accuracy for this judgment is shown in \autoref{fig:pred:E6pred6}
-Here, increasing $w$ results in an increase in prediction accuracy.
+Here, increasing $\mathit{w}$ results in an increase in prediction accuracy.
 This is more prevalent for window than for linear.
-Window achieves its minimal \ac{RMSD} with $w=6$ while linear provides only a slight decrease after $w=3$.
+Window achieves its minimal \ac{RMSD} with $\mathit{w}=6$ while linear provides only a slight decrease after $\mathit{w}=3$.
 
 \begin{figure}[h]
 	\centering
@@ -321,7 +321,7 @@ ggplot_model_create(subset(data_nonadjusted, data_nonadjusted$experiment == "E6a
 
 With regard to prediction the multi-episodic judgment after the 6th day, both model types perform different.
 \autoref{fig:pred:E6pred12} shows the \ac{RMSD} for both model types.
-While linear reaches a minimum at $w=4$, window achieves its minimum not until $w=8$.
+While linear reaches a minimum at $\mathit{w}=4$, window achieves its minimum not until $\mathit{w}=8$.
 In addition, linear achieves a minimal \ac{RMSD} of \Sexpr{round(min(subset(data_nonadjusted, data_nonadjusted[["experiment"]] == "E6a" & data_nonadjusted[["id"]] == 14 & data_nonadjusted[["model"]] == "weight_linear_create" & data_nonadjusted[["condition"]] == "All")[["RMSD"]]), 1)} while window only achieves a minimal \ac{RMSD} of
 \Sexpr{round(min(subset(data_nonadjusted, data_nonadjusted[["experiment"]] == "E6a" & data_nonadjusted[["id"]] == 14 & data_nonadjusted[["model"]] == "weight_window_create" & data_nonadjusted[["condition"]] == "All")[["RMSD"]]), 1)}.
 
@@ -339,7 +339,7 @@ ggplot_model_create(subset(data_nonadjusted, data_nonadjusted$experiment == "E6a
 \end{figure}
 
 With regard to \E6a{} a linear weighting is preferable to a window function, because a higher prediction accuracy is achieved.
-A linear weighting performs best for $w=4$.
+A linear weighting performs best for $\mathit{w}=4$.
 
 \subsection{Saturation}
 In all three experiments a saturation effect could be observed.
@@ -370,7 +370,7 @@ In case of window weight, the minimal \ac{RMSD} shifts from~4~to~3 for both expe
 Linear weight shows a similar effect.
 Here, the minimum shifts from~3~to~2.
 It is notable in for both experiments that the adjustment leads to a similar shape of \ac{RMSD} for \C5{} and \C6{}~(adjusted).
-Furthermore, it is notable that the minimal \ac{RMSD} is reached earlier, but that increasing the $w$ further is worse for \C6{}~(adjusted) than \C6{}.
+Furthermore, it is notable that the minimal \ac{RMSD} is reached earlier, but that increasing the $\mathit{w}$ further is worse for \C6{}~(adjusted) than \C6{}.
 \begin{figure}[h]
 	\centering
 <<plotE2SAT, echo=F, fig.height=3>>=
@@ -402,8 +402,8 @@ ggplot_model_create(subset(data_adjusted, data_adjusted$experiment == "E6a" & da
 \end{figure}
 
 It can thus be concluded that the saturation effect can be modeled using the proposed method.
-This allows to reduce $w$.
-In fact, for all three experiments $w$ is reduced to the optimal found solution for all conditions (see \autoref{results:prediction}).
+This allows to reduce $\mathit{w}$.
+In fact, for all three experiments $\mathit{w}$ is reduced to the optimal found solution for all conditions (see \autoref{results:prediction}).
 
 \section{Conclusion}
 In this chapter, two model types for prediction multi-episodic perceived quality were presented.
@@ -412,7 +412,7 @@ In fact, if \ac{LP} were presented both models outperform the baseline, \ie, the
 Comparing window and linear, the latter shows the prediction accuracy.
 This is observed for all three experiments.
 With regard to one-session experiments one interesting observation is made.
-Here, both model types show the highest prediction accuracy for the same $w$.
+Here, both model types show the highest prediction accuracy for the same $\mathit{w}$.
 Furthermore, \E6{} shows a very interesting effect compared to \E1{} and \EIIa{}.
 For \E6{} best prediction accuracy is achieved for 6 (window) and 4 (linear).
 In fact, this is identical to \E1{} and \EIIa{}, when considering that two episodes were presented per day.
