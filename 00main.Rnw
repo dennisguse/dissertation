@@ -61,6 +61,7 @@
 % GO!GO!GO! MOVE IT!
 %*******************************************************
 \begin{document}
+\include{support/shade}
 \frenchspacing
 \raggedbottom
 \selectlanguage{american} % american ngerman
@@ -80,15 +81,12 @@
 \cleardoublepage\include{support/FrontBackmatter/Publications}
 %\cleardoublepage\include{support/FrontBackmatter/Acknowledgments}
 \pagestyle{scrheadings}
+
 \cleardoublepage\include{support/FrontBackmatter/Contents}
 %********************************************************************
 % Mainmatter
 %*******************************************************
-\include{support/shade}
 \pagenumbering{arabic}\setcounter{page}{1}
-%TODO \part{Introduction and State of the Art}\cleardoublepage
-
-%\part*{Thesis}\cleardoublepage
 \include{chapter01}
 
 %\part{Related Work and State-of-the-Art}\cleardoublepage %TODO Make one Chapter to rule them all!
