@@ -386,6 +386,7 @@ Such an effect could not be observed in the one-session experiments.
 
 \autoref{tab:lab:episodicMOS} shows \ac{MOS} of episodic judgments for all four experiments by performance level and service.
 In the following, the differences in episodic judgments between conditions are investigated for each experiment.
+Box plots for all conditions per experiments are in the \appendix{} (see \autoref{appendix:results}).
 
 \begin{table}
   \centering

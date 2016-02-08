@@ -56,6 +56,7 @@
 %*******************************************************
 %\hyphenation{put special hyphenation here}
 \input{hypenate}
+\usepackage{float}
 \usepackage{multirow}
 % ********************************************************************
 % GO!GO!GO! MOVE IT!
