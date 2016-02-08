@@ -109,7 +109,7 @@ In difference to the speech telephony service, this system achieved the desired 
 \section{Experiment E5}
 Based upon the reliability of the simulation of a \ac{VoD} service for experiment \E4{}, an \ac{AoD} service and \ac{VoD} service were used in experiment \E5{}, but simulating both services.
 For this experiment ten \emph{Samsung~Galaxy~SII~(GT-I9210)} mobile phones running \emph{Android~2.3} were available.
-This mobile phone has \unit[4.5]{inch} display with a resolution of \unit[480x800]{px}.
+This mobile phone has \unit[4.5]{inch} display with a resolution of $\unit[480x800]{px}$.
 A native Android application was implemented with the same functionality as the implementation used in experiment \E4{}, \ie, storing media content locally while providing login functionality and initial buffering.
 For media playback the \ac{VoD} service presented the video horizontally in full screen while the \ac{AoD} presented an equalizer.
 In addition to the mobile phone each participant received a pair of \emph{Shure~240} headphones.
