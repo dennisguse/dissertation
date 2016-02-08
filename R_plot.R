@@ -4,7 +4,7 @@
 #XXXsuppressMessages(library(extrafont))
 
 suppressMessages(library(ggplot2))
-
+suppressMessages(library(grid))
 ggplot_timeseries_create <- function(timeseries) {
  p <- ggplot(timeseries, aes(id, y=id)) + coord_cartesian(ylim=c(-0.3, 6.3), xlim=c(min(timeseries$id)-0.5, max(timeseries$id)+0.5)) 
  
@@ -16,7 +16,7 @@ ggplot_timeseries_create <- function(timeseries) {
  p <- p + theme(axis.text.y=element_text(colour="black"))
  
  p <- p + theme(text=element_text(family="Palatino"))
- p <- p + theme(strip.background = element_rect(colour="white", fill="white"), strip.text=element_text(size=15)) 
+ p <- p + theme(strip.background = element_rect(colour="white", fill="white"), strip.text=element_text(size=12)) 
  
  p <- p + theme(panel.background=element_rect(fill="white", color="white"))
  # p <- p + theme(plot.background=element_rect(fill="white", color="white"))
@@ -46,7 +46,7 @@ ggplot_model_create <- function(data, ylim=2.4) {
  p <- p + theme(axis.text.y=element_text(colour="black"))
  
  p <- p + theme(text=element_text(family="Palatino"))
- p <- p + theme(strip.background = element_rect(colour="white", fill="white"), strip.text=element_text(size=15)) 
+ p <- p + theme(strip.background = element_rect(colour="white", fill="white"), strip.text=element_text(size=12)) 
   
  p <- p + theme(panel.background=element_rect(fill="white", color="white"))
 # p <- p + theme(plot.background=element_rect(fill="white", color="white"))
@@ -56,8 +56,8 @@ ggplot_model_create <- function(data, ylim=2.4) {
 
  p <- p + ylab("RMSD") + xlab("w")
  p <- p + guides(fill=guide_legend(title="Condition"))
- p <- p + theme(legend.position="bottom", legend.key = element_rect(fill = "white"))
- 
+ p <- p + theme(legend.position="top", legend.key = element_rect(fill = "white"))
+ p <- p + theme(legend.margin=unit(-0.6,"cm")) 
   
  return (p)
 }

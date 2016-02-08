@@ -110,7 +110,6 @@
 
 \newpage
 \thispagestyle{empty}
-%\thispagestyle{empty}
 \vspace*{3cm}
 \begin{center}
 So long, and thanks for all the fish
@@ -130,7 +129,6 @@ So long, and thanks for all the fish
 \renewcommand{\theHsubsection}{\Roman{chapter}.\Roman{section}.\Roman{subsection}}
 \renewcommand{\thesubsection}{\Roman{chapter}.\Roman{section}.\Roman{subsection}}
 \pagenumbering{Roman}\setcounter{page}{1}
-
 \part*{Appendix}\label{chap:appendix}\cleardoublepage
 
 \include{appendix}

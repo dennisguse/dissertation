@@ -1,5 +1,5 @@
-source('R_pred_model.R')
-source('R_pred_eval.R')
+source('../R_pred_model.R')
+source('../R_pred_eval.R')
 
 timeseries = read.csv("data_minimal.csv")
 
@@ -64,12 +64,5 @@ if (FALSE) {
  names(to_model_parameter)[7] = "PEARSON"
  proc.time() - ptm
  
- to_model_parameter_avg = aggregate(to_model_parameter$RMSD, by=list(experiment=to_model_parameter$experiment, model=to_model_parameter$model, parameter=to_model_parameter$parameter, id=to_model_parameter$id), FUN=mean)
- names(to_model_parameter_avg)[5] = "RMSD"
- to_model_parameter_avg$condition = "EXPERIMENT_average"
- to_model_parameter_avg$PEARSON = NA
- 
- to_model_parameter = rbind(to_model_parameter, to_model_parameter_avg)
- 
- write.csv(to_model_parameter, "data_modeling.csv")
+ write.csv(to_model_parameter, "data_modeling.csv", row.names=FALSE)
 }

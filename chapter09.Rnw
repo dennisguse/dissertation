@@ -6,6 +6,12 @@ source('R_plot.R')
 #We only do \ac{MOS}
 data=subset(data,  grepl("average", data$condition) & data$experiment %in% c("E1", "E2a", "E6a"))
 
+data_avg = aggregate(data$RMSD, by=list(experiment=data$experiment, model=data$model, parameter=data$parameter, id=data$id), FUN=mean)
+names(data_avg)[5] = "RMSD"
+data_avg$condition = "EXPERIMENT_average"
+data_avg$PEARSON = NA
+data = rbind(data, data_avg)
+
 #Label stuff.
 data$model_FACET = factor(data$model == "weight_linear_create", labels=c("Window", "Linear")) #label and order; FALSE will be first; then attach labels for FACET
 data$condition = factor(data$condition, labels=c("C1", "C2a", "C3", "C4", "C5a", "C5b", "C6 (adjusted)", "C6", "C7", "C8", "All"))
@@ -129,8 +135,7 @@ a_i= \left\{
 %	i-n & : i - n + w > 0 \\
 %  0 & : i - n + w \leq 0
 Here, $\mathit{w}$ is also limited to $\mathit{w}~\in~\mathbb{N}$ and $0~<~\mathit{w}~\leq~\mathit{n}$.
-However, the actual window is increased by $\mathit{2*w}$, so the very first usage episode can be considered with a maximum weight  $\geq 0.5$.\footnote{
-Please note that normalization due to the weighting function is handled by the weighting average.}
+However, the actual window is increased by $\mathit{2*w}$, so the very first usage episode can be considered with a maximum weight  $\geq 0.5$.\footnote{Please note that normalization due to the weighting function is handled by the weighting average.}
 Limiting $\mathit{w}$ for both models to the same values, allows to compare the accuracy if both models directly.
 
 Employing a weighted average is expected to increase prediction accuracy, because a recency effect can modeled.
@@ -170,8 +175,20 @@ Beside a low \ac{RMSD}, a shorter window is preferable, because this reduces the
 In the following, modeling is done individually for \E1{}, \EIIa{}, and \E6{}.
 This is necessary as \E1{} and \EIIa{} differ in their usage situation while in \E6{} a different usage period, \ie, 6~days, was investigated.
 Modeling is conducted using the \ac{MOS} rather than on individual judgments per participants.
+For each experiment first the standard condition, \ie, \ac{HP} only usage episodes, is evaluated.
+Then, the prediction accuracy is evaluated.
+Afterwards, the improvement due to accounting for a saturation effect is investigated for all experiments together.
 
-\subsection{One Session: \E1{}}
+\subsection{One Session}\label{results:prediction}
+
+\subparagraph*{Experiment \E1{}}
+In \E1{} two-party conversation was investigated with 6 to 9 usage episodes.
+With regard to the multi-episodic judgment after the 3rd usage episode, \ie, \ac{HP} only, both model types perform very similar.
+\autoref{fig:pred:E1base} shows the \ac{RMSD} for both model types with regard to $\mathit{w}$ for each condition.
+The black dashed line represents the average \ac{RMSD} for this experiment.
+For both model types the accuracy remains nearly constant on independent of $\mathit{w}$.
+It is notable that the accuracy depends on the condition, \ie, \C7{} yields a very low \ac{RMSD} while \C1{} is far higher.
+This is likely an artifact due the between-subject design.
 
 \begin{figure}[h]
 	\centering
@@ -183,8 +200,20 @@ ggplot_model_create(subset(data_nonadjusted, data_nonadjusted$experiment == "E1"
  scale_size_manual(values=c(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 1))
 @
 	\caption[One session (\E1{}): prediction accuracy for \ac{HP} only episodes]{One session (\E1{}): prediction accuracy for \ac{HP} only episodes (3rd usage episode).}
+	\label{fig:pred:E1base}
 \end{figure}
 
+With regard to the multi-episodic judgment after the 6th usage episode, both model types perform slightly different.
+\autoref{fig:pred:E1pred6} shows the \ac{RMSD} for the 6th usage episode for both model types.
+Here, window performs better with an increasing window size up until~3 is similar to~4.
+However, the prediction accuracy to largely depends on the considered condition.
+For example, \C3{} is far off for $w=1$ and improves until~3 while \C4{} is best predicted with~5.
+Linear outperforms window in prediction accuracy and is more consistent.
+The best accuracy is observed by setting $w$~to~2.
+All conditions except \C4{} and \C6{} yield here the minimal \ac{RMSD}.
+In fact, \C4{} and \C6{} reach their minimum at~3, but accuracy is already sufficient at $w=2$.
+It must be noted that \ac{RMSD} is in the best case close to \Sexpr{round(min(subset(data_nonadjusted, data_nonadjusted[["experiment"]] == "E1" & data_nonadjusted[["id"]] == 6 & data_nonadjusted[["model"]] == "weight_linear_create" & data_nonadjusted[["condition"]] == "All")[["RMSD"]]), 1)} (linear, $w=2$).
+This is well close to the prediction accuracy for presenting \ac{HP} only.
 
 \begin{figure}[h]
 	\centering
@@ -196,7 +225,15 @@ ggplot_model_create(subset(data_nonadjusted, data_nonadjusted$experiment == "E1"
  scale_size_manual(values=c(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 1))
  @
 	\caption[One session (\E1{}): prediction accuracy for all conditions]{One session (\E1{}): prediction accuracy for all conditions (6th usage episode).}
+	\label{fig:pred:E1pred6}
 \end{figure}
+
+With regard to the recovery (\autoref{hypo:recovery}) two conditions were investigated.
+The \ac{RMSD} is shown for both model types is shown in \autoref{fig:pred:E1pred9}.
+In this case a linear weight is preferable over a window weight.
+In fact, the latter provides provides near perfect accuracy for $w=4$, but is otherwise far off.
+A linear weight performs very well for \CVb{} with $w \geq 3$ and very similar for \C7{} over the whole range.
+Thus, the linear weight is preferable, because it has a higher robustness.
 
 \begin{figure}[h]
 	\centering
@@ -206,9 +243,17 @@ ggplot_model_create(subset(data_nonadjusted, data_nonadjusted$experiment == "E1"
   scale_size_manual(values=c(0.5, 0.5))
 @
 	\caption[One session (\E1{}): prediction accuracy for recovery]{One session (\E1{}): prediction accuracy for recovery (9th usage episode).}
+	\label{fig:pred:E1pred9}
 \end{figure}
 
-\subsection{One session: \EIIa{}}
+\subparagraph*{Experiment \EIIa{}}
+This experiment complemented \E1{} with a passive usage situation while sharing the same performance levels.
+With regard to prediction of \ac{HP} only usage episodes results are slightly different than \E1{}.
+The prediction accuracy for the multi-episodic judgment after the 3rd usage episode is shown in \autoref{fig:pred:E2pred3}.
+Here, the prediction accuracy increases with an increasing $w$.
+However, this is due to strong deviation of \C3{} alone. 
+Omitting \C3{} shows similar results to \E1{}, \ie, prediction accuracy is not affected by $w$.
+In fact, \ac{RMSD} reaches a similar than for \E1{}.
 
 \begin{figure}[h]
 	\centering
@@ -220,7 +265,14 @@ ggplot_model_create(subset(data_nonadjusted, data_nonadjusted$experiment == "E2a
  scale_size_manual(values=c(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 1))
  @
 	\caption[One session (\EIIa{}): prediction accuracy for \ac{HP} only episodes]{One session (\EIIa{}): prediction accuracy for \ac{HP} only episodes (3rd usage episode).}
+	\label{fig:pred:E2pred3}
 \end{figure}
+
+With regard to prediction to of the multi-episodic judgment after the 6th usage episode results closely resemble \E1{}.
+The \ac{RMSD} is shown in \autoref{fig:pred:E2pred3}.
+For window a minimum is reached at 3~to~4 and for linear at $w=2$.
+In fact, the found parameters are identical to \E1{}.
+Furthermore, even the \ac{RMSD} behaves similar for individual conditions.
 
 \begin{figure}[h]
 	\centering
@@ -232,10 +284,27 @@ ggplot_model_create(subset(data_nonadjusted, data_nonadjusted$experiment == "E2a
 	scale_size_manual(values=c(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 1))
  @
 	\caption[One session (\EIIa{}): prediction accuracy for all conditions]{One session (\EIIa{}): prediction accuracy for all conditions (6th usage episode).}
+	\label{fig:pred:E2pred6}
 \end{figure}
 
+\subparagraph*{Conclusion}
+For prediction of multi-episodic judgments in one session both model types perform quite well.
+Notably, for both experiments the same parameters were found although the usage situation is different.
+With regard to accuracy the linear weighting is preferable over the window function.
+Besides, linear weighting seems also to be more robust against selected parameter.
+For both experiments a minimal \ac{RMSD} could be achieved for $w=2$.
+The multi-episodic judgments after the 9th usage episode is optimal for $w=3$ (only \E1{}). 
+However, as only two conditions were adjusting $w$ seems improper.
 
-\subsection{Multiple Days: \E6{}}
+\subsection{Multiple Days: E6}
+In \E6{} a usage period of 6~days was investigated for use of a \ac{AoD} service.
+This service was used twice per day.
+In this experiment the first three days (six usage episodes) were presented in \ac{HP} only.
+Afterwards the multi-episodic perceived quality is assessed.
+Prediction accuracy for this judgment is shown in \autoref{fig:pred:E6pred6}
+Here, increasing $w$ results in an increase in prediction accuracy.
+This is more prevalent for window than for linear.
+Window achieves its minimal \ac{RMSD} with $w=6$ while linear provides only a slight decrease after $w=3$.
 
 \begin{figure}[h]
 	\centering
@@ -247,7 +316,14 @@ ggplot_model_create(subset(data_nonadjusted, data_nonadjusted$experiment == "E6a
 	scale_size_manual(values=c(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 1))
 @
 	\caption[Multiple days (\E6{}): prediction accuracy for \ac{HP} only episodes]{Multiple days (\E6{}): prediction accuracy for \ac{HP} only episodes (3rd day).}
+	\label{fig:pred:E6pred6}
 \end{figure}
+
+With regard to prediction the multi-episodic judgment after the 6th day, both model types perform different.
+\autoref{fig:pred:E6pred12} shows the \ac{RMSD} for both model types.
+While linear reaches a minimum at $w=4$, window achieves its minimum not until $w=8$.
+In addition, linear achieves a minimal \ac{RMSD} of \Sexpr{round(min(subset(data_nonadjusted, data_nonadjusted[["experiment"]] == "E6a" & data_nonadjusted[["id"]] == 14 & data_nonadjusted[["model"]] == "weight_linear_create" & data_nonadjusted[["condition"]] == "All")[["RMSD"]]), 1)} while window only achieves a minimal \ac{RMSD} of
+\Sexpr{round(min(subset(data_nonadjusted, data_nonadjusted[["experiment"]] == "E6a" & data_nonadjusted[["id"]] == 14 & data_nonadjusted[["model"]] == "weight_window_create" & data_nonadjusted[["condition"]] == "All")[["RMSD"]]), 1)}.
 
 \begin{figure}[h]
 	\centering
@@ -259,45 +335,87 @@ ggplot_model_create(subset(data_nonadjusted, data_nonadjusted$experiment == "E6a
 	scale_size_manual(values=c(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 1))
 	@
 	\caption[Multiple days (\E6{}): prediction accuracy for all conditions]{Multiple days (\E6{}): prediction accuracy for all conditions (6th day).}
+	\label{fig:pred:E6pred12}
 \end{figure}
 
+With regard to \E6a{} a linear weighting is preferable to a window function, because a higher prediction accuracy is achieved.
+A linear weighting performs best for $w=4$.
 
 \subsection{Saturation}
+In all three experiments a saturation effect could be observed.
+Here, multi-episodic judgments remain on the same level independent if two or three \ac{LP} episodes/days are presented.
+Beside modifying the weighting function to decrease the weight of \ac{LP} episode(s) and increase the weight of \ac{HP} episodes for this special case, also the episodic judgments can be adjusted.
+
+It is here proposed to replace the judgment of the first encountered \ac{LP} episode with the average of \ac{HP} episodic judgments.
+This should resemble a sufficient approximation to account for the saturation effect.
+This adjustment should actually modifies \C6{} to be similar to \C5{}, which only differ in the performance level of the 4th episode/day.
+In the following the prediction accuracy of both model types between \C5{}, \C6{}, and \C6{}~(adjusted) is presented.
+For \E1{} and \EIIa{} this is shown in \autoref{fig:pred:SAT:E1} and, respectively \autoref{fig:pred:SAT:E2a}.
+
 \begin{figure}[h]
 	\centering
 <<plotE1SAT, echo=F, fig.height=3>>=
-ggplot_model_create(subset(data_adjusted, data_adjusted$experiment == "E1" & data_adjusted$id == 6)) + 
+ggplot_model_create(subset(data_adjusted, data_adjusted$experiment == "E1" & data_adjusted$id == 6), 1.25) + 
 	geom_line(aes(x=parameter, y=RMSD, linetype=condition, size=condition, colour=condition)) + facet_grid(. ~ model_FACET) + 
 	scale_linetype_manual(values=c("solid", "twodash", "solid")) +
 	scale_color_manual(values=c("#00BFC4", "#7CAE00", "#7CAE00")) +
 	scale_size_manual(values=c(0.5, 0.5, 0.5))
 @
-	\caption{}
-\end{figure}
+	\caption{One session (\E1{}): prediction accuracy for saturation effect.}
+	\label{fig:pred:SAT:E1}
+\end{figure}Also
 
+For both experiments the adjustment results in a shift of the minimum for the two model types.
+In case of window weight, the minimal \ac{RMSD} shifts from~4~to~3 for both experiments.
+Linear weight shows a similar effect.
+Here, the minimum shifts from~3~to~2.
+It is notable in for both experiments that the adjustment leads to a similar shape of \ac{RMSD} for \C5{} and \C6{}~(adjusted).
+Furthermore, it is notable that the minimal \ac{RMSD} is reached earlier, but that increasing the $w$ further is worse for \C6{}~(adjusted) than \C6{}.
 \begin{figure}[h]
 	\centering
 <<plotE2SAT, echo=F, fig.height=3>>=
-ggplot_model_create(subset(data_adjusted, data_adjusted$experiment == "E2a" & data_adjusted$id == 6)) + 
+ggplot_model_create(subset(data_adjusted, data_adjusted$experiment == "E2a" & data_adjusted$id == 6), 1.0) + 
 	geom_line(aes(x=parameter, y=RMSD, linetype=condition, size=condition, colour=condition)) + facet_grid(. ~ model_FACET) + 
 	scale_linetype_manual(values=c("solid", "twodash", "solid")) +
 	scale_color_manual(values=c("#00BFC4", "#7CAE00", "#7CAE00")) +
 	scale_size_manual(values=c(0.5, 0.5, 0.5))
 @
-	\caption{}
+	\caption{One session (\EIIa{}): prediction accuracy for saturation effect.}
+	\label{fig:pred:SAT:E2a}
 \end{figure}
+
+With regard to \E6{} similar effects are observed.
+Here, the minimal \ac{RMSD} shifts from 9~to~6 for window and for linear from~7 to~4.
+In addition, \C6{}~(adjusted) resembles \C5{} closely.
 
 \begin{figure}[h]
 	\centering
 <<plotE6SAT, echo=F, fig.height=3>>=
-ggplot_model_create(subset(data_adjusted, data_adjusted$experiment == "E6a" & data_adjusted$id == 14)) + 
+ggplot_model_create(subset(data_adjusted, data_adjusted$experiment == "E6a" & data_adjusted$id == 14), 2.0) + 
 	geom_line(aes(x=parameter, y=RMSD, linetype=condition, size=condition, colour=condition)) + facet_grid(. ~ model_FACET) + 
 	scale_linetype_manual(values=c("solid", "twodash", "solid")) +
 	scale_color_manual(values=c("#00BFC4", "#7CAE00", "#7CAE00")) +
 	scale_size_manual(values=c(0.5, 0.5, 0.5))
 @
-	\caption{}
+	\caption{Multiple days (\E6{}): prediction accuracy for saturation effect.}
+	\label{fig:pred:SAT:E6}
 \end{figure}
 
+It can thus be concluded that the saturation effect can be modeled using the proposed method.
+This allows to reduce $w$.
+In fact, for all three experiments $w$ is reduced to the optimal found solution for all conditions (see \autoref{results:prediction}).
 
 \section{Conclusion}
+In this chapter, two model types for prediction multi-episodic perceived quality were presented.
+It could be shown that a weighted average using either a window function or a linear weighting function enable to predict multi-episodic judgments.
+In fact, if \ac{LP} were presented both models outperform the baseline, \ie, the unweighted average of all prior episodic judgments.
+Comparing window and linear, the latter shows the prediction accuracy.
+This is observed for all three experiments.
+With regard to one-session experiments one interesting observation is made.
+Here, both model types show the highest prediction accuracy for the same $w$.
+Furthermore, \E6{} shows a very interesting effect compared to \E1{} and \EIIa{}.
+For \E6{} best prediction accuracy is achieved for 6 (window) and 4 (linear).
+In fact, this is identical to \E1{} and \EIIa{}, when considering that two episodes were presented per day.
+This suggests two important results.
+First, in \E6{} likely a daywise integration of perceived quality could be observed.
+Second, that that the multi-episodic perceived quality seems to be similar for one session, or multiple days, when considering a daywise integration.
