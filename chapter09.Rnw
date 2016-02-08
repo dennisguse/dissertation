@@ -24,17 +24,16 @@ With regard to the five conditions, it could be shown that the predictor is prec
 Precision decreases for later multi-episodic judgments.
 
 This chapter starts with an overview of observed effects in the conducted experiments that are relevant for prediction of multi-episodic judgments.
-Based-upon this necessary characteristics that a model must fulfill are derived.
+This allows to derive necessary characteristics that model should fulfill.
 Then, model parameters are fitted based upon \E1{}, \EIIa{}, and \E6{}.
-Those experiments yielded a large data set in itself consistent data set.
-All other experiments can be used for verification of an implemented model.\footnote{An approach towards modeling based upon the experiment of \citet{moller_single-call_2011} and \E5{} is published in \citet{guse_modelling_2014}.}
+Those experiments yielded a large data set in itself consistent data set.\footnote{An approach towards modeling based upon the experiment of \citet{moller_single-call_2011} and \E5{} is published in \citet{guse_modelling_2014}.}
+%All other experiments can be used for verification of an implemented model.
 
 \section{Effects on Multi-episodic Judgments}
 In the conducted experiments several effects have been observed.
-
-First, it must be noted that multi-episodic judgment is very similar to episodic judgments, if no degraded episodes are presented.
-This has been observed by \citet{moller_single-call_2011}, all one-session experiments, and field experiments.
-With regard to \citet{moller_single-call_2011} and also \E4{} showed a slight increase of episodic judgments over the usage period, if no degraded episodes were presented.
+First, it must be noted that multi-episodic judgments are very similar to episodic judgments, if no degraded episodes are presented.
+This has been observed by \citet{moller_single-call_2011}, and also all here conducted experiments.
+If no \ac{LP} episodes were presented the experiment of \citet{moller_single-call_2011} and \E4{} indicated a slight increase of episodic judgments over the usage period.
 However, the effect is rather small and the actual reason for this could not be deduced.
 It is thus not considered for the creation of a prediction model.
 
@@ -42,40 +41,40 @@ It is thus not considered for the creation of a prediction model.
 Most prominent is the decrease in multi-episodic judgments, if the number of degraded usage episodes is increased (\autoref{hypo:number}).
 Here, a large effect has been observed in \E1{}, \EIIa{}, and \E6{}.
 In all three experiments a decrease is observed until a saturation occurred.
-Here, multi-episodic judgments do not decrease further, if three consecutive \ac{LP} episode/days are presented.
-Even if saturation is occurs, the multi-episodic judgment still remains above the episodic judgments of \ac{LP}.
-The multi-episodic judgment is still affected by previous episodes, which were presented in \ac{HP}.
-Thus, a longer integration interval must be considered.
-Beside the integration interval, this indicates that one of the three \ac{LP} episodes/day did not contribute to the final multi-episodic judgment.
+Then multi-episodic judgments do not decrease further, if three consecutive \ac{LP} episode/days are presented.
+In fact, multi-episodic judgments still remain above the episodic judgments of \ac{LP}.
+This shows that multi-episodic judgments are still affected by previous \ac{HP} episodes.
+Thus, a longer integration interval than 3~usage episodes or, respectively, 3~days must be considered.
+Beside the integration interval, this indicates that one of the three \ac{LP} episodes/days did not contribute to the final multi-episodic judgment.
 
 Beside the increase of \ac{LP} episode before a multi-episodic judgment, a position effect has been observed (\autoref{hypo:position}).
 This has been investigated in \E1{}, \EIIa{}, and also \E6{}.
 An impact of position and thus recency effect could be observed in \E1{} and \EIIa{}.
 Here, the importance of a usage episode on a following multi-episodic judgment decreases, the more usage episodes occurred afterwards.
-While \E1{}, showed such an effect in both cases, \ie, one and two \ac{LP} episodes, it was only present in \EIIa{} for two \ac{LP} episodes.
-The difference can be attributed to usage situation.
-In \E1{} a two-party conversation was used whereas \EIIa{} used third-party listening.
+While \E1{}, showed such an effect in both cases, \ie, for one and two \ac{LP} episodes, it was only present in \EIIa{} for two \ac{LP} episodes.
+This might be attributed to the different usage situation.
+In \E1{} a two-party conversation was used whereas \EIIa{} applied a third-party listening task.
 Although, not statistically significant, a recency effect was indicated in \E6{} for both cases, \ie, one or two days presented in \ac{LP}.
+
 In \E1{} and \E6{} also the impact of non-consecutive \ac{LP} presentation was investigated.
 An effect could not be observed in both experiments and thus the number of performance changes is assumed to be neglectable.
 
-Beside number and position, recovery was investigated in \E1{} (\autoref{hypo:recovery}).
-Here, additional \ac{HP} episodes are presented after a negatively affected multi-episodic judgment and the improvement assessed.
-For the investigated two conditions, a recovery could observed.
+In \E1{} also the recovery of a negatively affect multi-episodic judgment was investigated (\autoref{hypo:recovery}).
+%Here, additional \ac{HP} episodes are presented after a negatively affected multi-episodic judgment and the improvement assessed.
+This was investigated in two conditions and both showed a recovery.
 Here, nine usage episodes were presented while non-\ac{HP} episodes were presented after as 5th and 6th usage episode.
 The multi-episodic judgment after the 6th usage episode showed a negative effect, but the the judgments after the 3rd and 9th usage episode were not significant different.
-However, in both conditions a slight negative is still indicated in the final judgment.
+However, in both conditions a slight negative impact is still indicated on the final judgment.
 This finding can be explained by a recency effect, but might also due to the increased number of \ac{HP} episodes.
 
-In the one-session experiments, also a duration neglect (\autoref{hypo:duration}) has been investigated.
-In \E3{} a potential duration neglect could be shown.
-Here, doubling the duration of a \ac{LP} episode did not negatively affect a following multi-episodic judgment.
+For one-session also a duration neglect was investigated (\autoref{hypo:duration}). 
+This was investigated in \E3{}.
+Here, doubling the duration of a \ac{LP} episode did not negatively affect a following multi-episodic judgments.
 In fact, even episodic judgments were not negatively affect.
-It can thus be concluded that duration neglect occurs as long no macroscopic performance fluctuations occur.
+It can thus be concluded that duration neglect occurs.
 Therefore, the duration of an episode must not be considered in a multi-episodic prediction model.
 
-In one-session experiments also the independence of multi-episodic judgments between two services has been investigated (\autoref{hypo:independent}).
-This has been investigated in \EIIb{}.
+Finally, in \EIIb{} the independence of multi-episodic judgments of two services has been investigated (\autoref{hypo:independent}).
 Here, the presentation of a second service did not affect the multi-episodic judgments of the first service.
 This was found for the presentation of the second service with and without \ac{LP} episodes.
 Thus, the presence of a second service must not be considered for prediction of multi-episodic judgments of one service.
@@ -83,9 +82,10 @@ Thus, the presence of a second service must not be considered for prediction of 
 \section{Types of Model}
 The modeling approach of \citet{moller_single-call_2011} is extended.
 They proposed to the use the average of all prior episodic judgments to predict a multi-episodic judgment.
-This model provides accurate prediction for earlier multi-episodic judgments, but prediction accuracy decreases, if longer sequences of multi-episodic use are predicted.
+This model provides accurate prediction for earlier multi-episodic judgments.
+However, prediction accuracy decreases, if longer sequences of multi-episodic use are predicted.
 
-Here, a weighted average model is proposed to increase prediction accuracy. %(\autoref{eq:average})
+In this thesis, a weighted average model is proposed to increase prediction accuracy. %(\autoref{eq:average})
 This allows to assign an individual weight to each episodic judgment and thus model the influence on to be predicted multi-episodic judgment.
 In the following, episodic judgments are denoted as $\mathit{e_i}$ and multi-episodic judgments are denoted as $\mathit{m_n}$.
 $\mathit{i}$ denotes the usage episode and $\mathit{n}$ denotes the usage episode/day after which a multi-episodic judgment was taken.
@@ -96,14 +96,12 @@ Thus, the prediction model for $\mathit{\hat{m}_n}$ is defined as:
 \hat{m}_n=\frac{\sum\limits_{i=1}^{n}a_i*e_i}{\sum\limits_{i=1}^{n}a_i} 
 \end{equation}
 
-In fact, the weighted average model is in itself a rather simple model, because it can only parametrized with a weighting function.
+The weighted average model is in itself a rather simple model, because it can only parametrized with a weighting function.
 However, selecting a suiting weighting function is not a simple task, because overfitting is a serious issue.
-Following Occam's Razor, two weighting functions are proposed.
-Both can account for a recency effect, if desired.
+Following Occam's Razor, two weighting functions are proposed, which both can account for a recency effect.
 
 The first weighting function is a window function.
 This function is parametrized by the window parameter $\mathit{w}$.
-Here, $\mathit{w}$ is limited to $\mathit{w}~\in~\mathbb{N}$ and $0~<~\mathit{w}~\leq~\mathit{n}$.
 All usage episode in this window are assigned a weighting factor of 1 and all before a weighting factor of 0:
 \begin{equation}\label{eq:weight:window}
 a_i= \left\{
@@ -113,16 +111,13 @@ a_i= \left\{
 \end{array}
 \right.
 \end{equation}
+Here, $\mathit{w}$ is limited to $\mathit{w}~\in~\mathbb{N}$ and $0~<~\mathit{w}~\leq~\mathit{n}$.
 Setting $\mathit{w := n}$, the model becomes the average over all prior episodic judgments.
 This is in the following denoted as \emph{baseline model}.
 
-In fact, a fixed window is a rather unlikely case for an integration function.
-To account for a recency effect, a linear weighting is selected.
-Here, also a window is defined.
-The weight of a usage episode decreases with the increasing distance of a usage episode to multi-episodic judgment.
-%$w$ is limited to $w~\in~\mathbb{N}$, $0~<~w~\leq~2*n$, and it must be odd.
-%A longer window than the actual sequence is allowed, so that the very first usage episode can be considered by this model, \ie, assigning a weight of 0.5.
-%The oddness requirement is added, so the parameter space for both models is similar.
+In fact, a fixed window is a rather unlikely case for a weighting function as a fixed threshold for importance is used.
+To overcome this a linear weighting function is proposed here.
+This function decreases the weight for usage episodes linearly with increasing distance.
 \begin{equation}\label{eq:weight:linear}  %\frac{n-i}{w} & :i - n + w > 0 \\
 a_i= \left\{
 \begin{array}{cr}
@@ -134,174 +129,172 @@ a_i= \left\{
 %	i-n & : i - n + w > 0 \\
 %  0 & : i - n + w \leq 0
 Here, $\mathit{w}$ is also limited to $\mathit{w}~\in~\mathbb{N}$ and $0~<~\mathit{w}~\leq~\mathit{n}$.
-However, the actual window is increased by $\mathit{2*w}$, so that the very first usage episode can be considered by this model type, \ie, assigning a maximum weight of 0.5.
+However, the actual window is increased by $\mathit{2*w}$, so the very first usage episode can be considered with a maximum weight  $\geq 0.5$.\footnote{
+Please note that normalization due to the weighting function is handled by the weighting average.}
+Limiting $\mathit{w}$ for both models to the same values, allows to compare the accuracy if both models directly.
 
 Employing a weighted average is expected to increase prediction accuracy, because a recency effect can modeled.
 However, for one observed effect a weighted average will necessarily produce a deviation.
 In case of the observed saturation effect, both weighting functions will be too negative.
-Here, three \ac{LP} episodes, or days are not judged worse than two \ac{LP}.
+Here, three \ac{LP} episodes, or days are not judged worse than two.
 The implication of this is that one \ac{LP} episode is not judged different than one \ac{HP} episode with regard to the multi-episodic judgment.
 This can be modeled in two ways.
 On the one hand, the weight of one of the three \ac{LP} episode can be set to zero, and and the weight of \ac{HP} episodes increased.
-The later would be necessary to counter a reduction due to the lower number of \ac{HP} episodes.
+The later would be necessary to counter a reduction due to the reduced number of \ac{HP} episodes.
 On the other hand, the episodic judgment of one \ac{LP} episode could be adjusted.
 Here, the judgment of this episode would be changed to an \ac{HP} episode.
-Then, the weighting function does not need to be changed to model this effect.
+Then, the weighting function must not be adjusted to model this effect.
 The second option seems more elegant and is more likely to reflect a characteristic of the quality formation process.
 
 A modeling of a peak effect is omitted here, because such an effect could not be observed in the conducted experiments.
 Even, if in \C7{} of \E1{} a peak effect occurred, the influence on the final judgment seems to be rather small.
 
-In the following, a \emph{model} denotes the selected weighting function with the defined parameter.
-The prediction accuracy of a model is evaluated using two metrics.
-Here, the \ac{RMSD} is used to estimate the \emph{absolute} deviation of the predicted value and actual value.
+In the following, a \emph{model} denotes the selected weighting function with the defined parameter $\mathit{w}$.
+The prediction accuracy of a model is evaluated using the \ac{RMSD}:
 \begin{equation}\label{eq:rmsd}
 RMSD: \sqrt{\frac{1}{N} \sum\limits_{i=1}^{N}(x_i-\hat{x}_i)^2}
 \end{equation}
 
-The \ac{RMSD} is complemented by the Pearson correlation.
-The Pearson correlation evaluates the linear dependency of two variables.
-For modeling fitting, \ie, selection of best suiting parameter, both metrics are equally used.
-In a perfect case a \ac{RMSD}~of~0, \ie, no deviation, and correlation coefficient~$R$~of~1, \ie, perfect linear relationship, should reached.
-Here, a model is preferable that explains a higher number of conditions, rather than individual conditions only.
+In a perfect case, a \ac{RMSD}~of~0, \ie, no deviation, can be achieved.
+A model is preferable that explains a higher number of conditions rather than individual conditions only.
+Beside a low \ac{RMSD}, a shorter window is preferable, because this reduces the amount of information available to a model.
+%The \ac{RMSD} is complemented by the Pearson correlation.
+%The Pearson correlation evaluates the linear dependency of two variables.
+%For modeling fitting, \ie, selection of best suiting parameter, both metrics are equally used.
+%In a perfect case a \ac{RMSD}~of~0, \ie, no deviation, and correlation coefficient~$R$~of~1, \ie, perfect linear relationship, should reached.
 
 \section{Evaluation}
 %The evaluation is conducted based upon individual judgments, \ie, for each participants, rather than on a \ac{MOS}.
 %This is applied due to the limited conditions, number of participants, and between-subject design.
 
-In the following, modeling is done individually for each the \E1{}, \EIIa{}, and \E6{}.
+In the following, modeling is done individually for \E1{}, \EIIa{}, and \E6{}.
 This is necessary as \E1{} and \EIIa{} differ in their usage situation while in \E6{} a different usage period, \ie, 6~days, was investigated.
 Modeling is conducted using the \ac{MOS} rather than on individual judgments per participants.
 
-\subsection{No \acs{LP} episodes}
-%NO CLEAR PREFERENCE, ALL WORK
+\subsection{One Session: \E1{}}
 
-
-
-\subsection{Saturation}
-%IMPROVES
-
-\subsection{One Session: \E1{} and \EIIa{}}
-
-\begin{figure}
+\begin{figure}[h]
 	\centering
 <<plotE1BASE, echo=F, fig.height=3>>=
-ggplot_model_create(subset(data_nonadjusted, data_nonadjusted$experiment == "E1" & data_nonadjusted$id == 3), 0.25) + 
+ggplot_model_create(subset(data_nonadjusted, data_nonadjusted$experiment == "E1" & data_nonadjusted$id == 3), 0.26) + 
  geom_line(aes(x=parameter, y=RMSD, linetype=condition, size=condition, colour=condition)) + facet_grid(. ~ model_FACET) + 
- scale_linetype_manual(values=c("solid", "solid", "solid", "solid", "solid", "solid", "solid", "dotted")) +
+ scale_linetype_manual(values=c("solid", "solid", "solid", "solid", "solid", "solid", "solid", "dashed")) +
  scale_color_manual(values=c("#00BFC4", "#00BE67", "#7CAE00", "#00A9FF", "#CD9600", "#F8766D", "#C77CFF", "#000000")) + 
  scale_size_manual(values=c(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 1))
- # scale_size_manual(values=c(1, 1, 1, 1, 1, 1, 1, 1.5))
-
 @
-	\caption{}
+	\caption[One session (\E1{}): prediction accuracy for \ac{HP} only episodes]{One session (\E1{}): prediction accuracy for \ac{HP} only episodes (3rd usage episode).}
 \end{figure}
 
 
-\begin{figure}
+\begin{figure}[h]
 	\centering
 <<plotE1PRED, echo=F, fig.height=3>>=
 ggplot_model_create(subset(data_nonadjusted, data_nonadjusted$experiment == "E1" & data_nonadjusted$id == 6), 1.9) + 
  geom_line(aes(x=parameter, y=RMSD, linetype=condition, size=condition, colour=condition)) + facet_grid(. ~ model_FACET) + 
  scale_linetype_manual(values=c("solid", "solid", "solid", "solid", "solid", "solid", "solid", "dashed")) +
- scale_size_manual(values=c(1, 1, 1, 1, 1, 1, 1, 1.5))
-@
-	\caption{}
+ scale_color_manual(values=c("#00BFC4", "#00BE67", "#7CAE00", "#00A9FF", "#CD9600", "#F8766D", "#C77CFF", "#000000")) + 
+ scale_size_manual(values=c(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 1))
+ @
+	\caption[One session (\E1{}): prediction accuracy for all conditions]{One session (\E1{}): prediction accuracy for all conditions (6th usage episode).}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[h]
 	\centering
 <<plotE1PRED9, echo=F, fig.height=3>>=
 ggplot_model_create(subset(data_nonadjusted, data_nonadjusted$experiment == "E1" & data_nonadjusted$id == 9 & data_nonadjusted$condition != "All"), 0.75) + 
-	geom_line(aes(x=parameter, y=RMSD, colour=condition)) + facet_grid(. ~ model_FACET) 
-#	scale_linetype_manual(values=c("solid", "dashed"))
+	geom_line(aes(x=parameter, y=RMSD, colour=condition)) + facet_grid(. ~ model_FACET)  + 
+  scale_size_manual(values=c(0.5, 0.5))
 @
-	\caption{}
+	\caption[One session (\E1{}): prediction accuracy for recovery]{One session (\E1{}): prediction accuracy for recovery (9th usage episode).}
 \end{figure}
 
+\subsection{One session: \EIIa{}}
 
-
-%E2A
-
-\begin{figure}
+\begin{figure}[h]
 	\centering
 <<plotE2BASE, echo=F, fig.height=3>>=
 ggplot_model_create(subset(data_nonadjusted, data_nonadjusted$experiment == "E2a" & data_nonadjusted$id == 3), 0.4) + 
  geom_line(aes(x=parameter, y=RMSD, linetype=condition, size=condition, colour=condition)) + facet_grid(. ~ model_FACET) + 
  scale_linetype_manual(values=c("solid", "solid", "solid", "solid", "solid", "solid", "solid", "dashed")) +
- scale_size_manual(values=c(1, 1, 1, 1, 1, 1, 1, 1.5))
-@
-	\caption{}
+ scale_color_manual(values=c("#00BFC4", "#00BE67", "#7CAE00", "#00A9FF", "#CD9600", "#F8766D", "#C77CFF", "#000000")) + 
+ scale_size_manual(values=c(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 1))
+ @
+	\caption[One session (\EIIa{}): prediction accuracy for \ac{HP} only episodes]{One session (\EIIa{}): prediction accuracy for \ac{HP} only episodes (3rd usage episode).}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[h]
 	\centering
 <<plotE2PRED, echo=F, fig.height=3>>=
 ggplot_model_create(subset(data_nonadjusted, data_nonadjusted$experiment == "E2a" & data_nonadjusted$id == 6), 1.8) + 
 	geom_line(aes(x=parameter, y=RMSD, linetype=condition, size=condition, colour=condition)) + facet_grid(. ~ model_FACET) + 
 	scale_linetype_manual(values=c("solid", "solid", "solid", "solid", "solid", "solid", "solid", "dashed")) +
-	scale_size_manual(values=c(1, 1, 1, 1, 1, 1, 1, 1.5))
-@
-	\caption{}
+	scale_color_manual(values=c("#00BFC4", "#00BE67", "#7CAE00", "#00A9FF", "#CD9600", "#F8766D", "#C77CFF", "#000000")) + 
+	scale_size_manual(values=c(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 1))
+ @
+	\caption[One session (\EIIa{}): prediction accuracy for all conditions]{One session (\EIIa{}): prediction accuracy for all conditions (6th usage episode).}
 \end{figure}
 
 
+\subsection{Multiple Days: \E6{}}
 
-
-\subsection{Multiple Days: E6}
-
-\begin{figure}
+\begin{figure}[h]
 	\centering
 <<plotE6BASE, echo=F, fig.height=3>>=
 ggplot_model_create(subset(data_nonadjusted, data_nonadjusted$experiment == "E6a" & data_nonadjusted$id == 8), 0.3) + 
 	geom_line(aes(x=parameter, y=RMSD, linetype=condition, size=condition, colour=condition)) + facet_grid(. ~ model_FACET) + 
 	scale_linetype_manual(values=c("solid", "solid", "solid", "solid", "solid", "solid", "dashed")) +
-	scale_size_manual(values=c(1, 1, 1, 1, 1, 1, 1.5))
+	scale_color_manual(values=c("#00BFC4", "#00BE67", "#7CAE00", "#00A9FF", "#CD9600", "#F8766D", "#000000")) + 
+	scale_size_manual(values=c(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 1))
 @
-	\caption{}
+	\caption[Multiple days (\E6{}): prediction accuracy for \ac{HP} only episodes]{Multiple days (\E6{}): prediction accuracy for \ac{HP} only episodes (3rd day).}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[h]
 	\centering
 <<plotE6PRED, echo=F, fig.height=3>>=
 ggplot_model_create(subset(data_nonadjusted, data_nonadjusted$experiment == "E6a" & data_nonadjusted$id == 14)) + 
 	geom_line(aes(x=parameter, y=RMSD, linetype=condition, size=condition, colour=condition)) + facet_grid(. ~ model_FACET) + 
 	scale_linetype_manual(values=c("solid", "solid", "solid", "solid", "solid", "solid", "dashed")) +
-	scale_size_manual(values=c(1, 1, 1, 1, 1, 1, 1.5))
-@
-	\caption{}
+	scale_color_manual(values=c("#00BFC4", "#00BE67", "#7CAE00", "#00A9FF", "#CD9600", "#F8766D", "#000000")) + 
+	scale_size_manual(values=c(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 1))
+	@
+	\caption[Multiple days (\E6{}): prediction accuracy for all conditions]{Multiple days (\E6{}): prediction accuracy for all conditions (6th day).}
 \end{figure}
 
+
 \subsection{Saturation}
-\begin{figure}
+\begin{figure}[h]
 	\centering
 <<plotE1SAT, echo=F, fig.height=3>>=
 ggplot_model_create(subset(data_adjusted, data_adjusted$experiment == "E1" & data_adjusted$id == 6)) + 
 	geom_line(aes(x=parameter, y=RMSD, linetype=condition, size=condition, colour=condition)) + facet_grid(. ~ model_FACET) + 
-	scale_linetype_manual(values=c("solid", "solid", "dashed")) +
-	scale_size_manual(values=c(1, 1, 1))
+	scale_linetype_manual(values=c("solid", "twodash", "solid")) +
+	scale_color_manual(values=c("#00BFC4", "#7CAE00", "#7CAE00")) +
+	scale_size_manual(values=c(0.5, 0.5, 0.5))
 @
 	\caption{}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[h]
 	\centering
 <<plotE2SAT, echo=F, fig.height=3>>=
 ggplot_model_create(subset(data_adjusted, data_adjusted$experiment == "E2a" & data_adjusted$id == 6)) + 
 	geom_line(aes(x=parameter, y=RMSD, linetype=condition, size=condition, colour=condition)) + facet_grid(. ~ model_FACET) + 
-	scale_linetype_manual(values=c("solid", "solid", "dashed")) +
-	scale_size_manual(values=c(1, 1, 1))
+	scale_linetype_manual(values=c("solid", "twodash", "solid")) +
+	scale_color_manual(values=c("#00BFC4", "#7CAE00", "#7CAE00")) +
+	scale_size_manual(values=c(0.5, 0.5, 0.5))
 @
 	\caption{}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[h]
 	\centering
 <<plotE6SAT, echo=F, fig.height=3>>=
 ggplot_model_create(subset(data_adjusted, data_adjusted$experiment == "E6a" & data_adjusted$id == 14)) + 
 	geom_line(aes(x=parameter, y=RMSD, linetype=condition, size=condition, colour=condition)) + facet_grid(. ~ model_FACET) + 
-	scale_linetype_manual(values=c("solid", "solid", "dashed")) +
-	scale_size_manual(values=c(1, 1, 1))
+	scale_linetype_manual(values=c("solid", "twodash", "solid")) +
+	scale_color_manual(values=c("#00BFC4", "#7CAE00", "#7CAE00")) +
+	scale_size_manual(values=c(0.5, 0.5, 0.5))
 @
 	\caption{}
 \end{figure}

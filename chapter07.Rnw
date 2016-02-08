@@ -55,7 +55,7 @@ The four experiments consisted of at least 6 usage episodes in which each usage 
 In fact, all experiments except \E1{} apply a passive situation and thus usage duration can be defined beforehand.
 
 Except for \EIIa{} only two performance levels are used per experiment, \ie, \acf{HP} and \acf{LP}.
-For all experiments the first three episodes were presented with the best service performance.
+For all experiments the first three episodes were presented with the best performance.
 This enables participants to experience the service in a well-working setting and similar to \citet[][]{moller_single-call_2011}.
 Non-\ac{HP} were only introduced per service for episode 4, 5, and 6.
 
@@ -197,7 +197,7 @@ It on only achieves a \ac{MOS} of 1.9 (\unit[7]{pt}~\ac{CCR}).
 
 \begin{table}
  \centering
- \caption[Performance levels: Comparison of the selected codecs with \acs{POLQA}.]{Performance levels: Comparison of the selected codecs with  for \acs{HP}, \acs{MP}, and \acs{LP} with \acs{POLQA}.
+ \caption[Performance levels: Comparison of the selected codecs with \acs{POLQA}]{Performance levels: Comparison of the selected codecs with  for \acs{HP}, \acs{MP}, and \acs{LP} with \acs{POLQA}.
  The prediction was transformed to the 7-point \acs{CCR} scale \citep{koster_comparison_2015}.}
  \label{tab:lab:performance}
  \begin{tabulary}{\columnwidth}{C|C|C|C}
@@ -331,7 +331,7 @@ A higher number of participants were used for \C7{} (\E1{}) to precisely quantif
 
 \begin{table} %TODO Appendix
 	\centering
-	\caption[Participants per condition for \E1{}, \EIIa{}, and \EIIb{}.]{Participants per condition for \E1{}, \EIIa{}, and \EIIb{}.
+	\caption[One-session experiments: participants per condition]{Participants per condition for \E1{}, \EIIa{}, \EIIb{}, and \E3{}.
 	For \EIIb{} the conditions of the \acs{VoD} are shown as the telephony service was always presented in \CVa{}.}
 	\label{tab:lab:participants}
 	\begin{tabular}{c|c|c|c|c}
@@ -521,7 +521,7 @@ A one-sided post-hoc test finds that the reference is significantly different to
 
 \begin{table}[h!]
 	\centering
-	\caption{One-session experiments: Multi-episodic judgments after the 6th episode for \autoref{hypo:number}.} %	for \E1{} and \EIIa{}
+	\caption{One-session experiments: multi-episodic judgments after the 6th episode for \autoref{hypo:number}.} %	for \E1{} and \EIIa{}
 	\label{tab:lab:hyponumber}
 	\begin{tabulary}{\textwidth}{C|c|C|C}
 	Condition   & \ac{LP} episode(s) 	& \multicolumn{2}{c}{Multi-episodic Judgment} \\
@@ -572,7 +572,7 @@ In \autoref{hypo:position} it is hypothesized that presenting \ac{HP} episodes a
 
 \begin{table}[h]
 	\centering
-	\caption{One-session experiments: Multi-episodic judgment after the 6th episode for \autoref{hypo:position}.}
+	\caption{One-session experiments: multi-episodic judgment after the 6th episode for \autoref{hypo:position}.}
 	\label{tab:lab:hypoposition}
 	\begin{tabulary}{\textwidth}{C|c|C|C}
 	Condition   & \ac{LP} episode(s) 	& \multicolumn{2}{c}{Multi-episodic Judgment} \\
@@ -615,7 +615,7 @@ The latter presents the 4th and 6th episode in \ac{LP}.
 
 \begin{table}[h!]
  \centering
- \caption{One-session experiments: Multi-episodic judgment after the 6th episode for \autoref{hypo:consecutive}.}
+ \caption{One-session experiments: multi-episodic judgment after the 6th episode for \autoref{hypo:consecutive}.}
  \label{tab:lab:hypoconsecutive} 
  \begin{tabulary}{\columnwidth}{c|c|C}
 	Condition   & \ac{LP} episode(s) 	& \EIIa{} \\
@@ -659,7 +659,7 @@ A one-sided post-hoc shows significant differences for \CIIa{} and \CVb{} (\Sexp
 
 \begin{table}[h!]
  \centering
- \caption{One-session experiments: Multi-episodic judgment after the 6th usage episode for \autoref{hypo:strength}.}
+ \caption{One-session experiments: multi-episodic judgment after the 6th usage episode for \autoref{hypo:strength}.}
  \label{tab:lab:hypostrength}
  \begin{tabulary}{\columnwidth}{C|C|C|C}
 	Conditions   & \multicolumn{2}{c|}{6th usage episode} & Multi-episodic Judgment\\
@@ -697,7 +697,7 @@ Between those two conditions the judgment after the 6th (\Sexpr{wilcox(IQU~condi
 
 \begin{table}[h!]
  \centering
- \caption{One-session experiments: Multi-episodic judgments after the 3rd, 6th and 9th episode for \autoref{hypo:recovery}.}
+ \caption{One-session experiments: multi-episodic judgments after the 3rd, 6th and 9th episode for \autoref{hypo:recovery}.}
  \label{tab:lab:hyporecovery}
  \begin{tabulary}{\columnwidth}{c|C|C|C|C}
 	\multirow{2}{*}{Conditions}	& \multirow{2}{*}{Episodic Performance}			& \multicolumn{3}{c}{Multi-episodic Judgments} \\
@@ -727,7 +727,7 @@ The episodic judgment for these conditions and the multi-episodic judgments are 
 
 \begin{table}[h!]
  \centering
- \caption{One-session experiments: Multi-episodic judgment after the 6th episode for \autoref{hypo:duration}.}
+ \caption{One-session experiments: multi-episodic judgment after the 6th episode for \autoref{hypo:duration}.}
  \label{tab:lab:hypoduration} 
  \begin{tabulary}{\columnwidth}{c|C|C|C}
  \multirow{2}{*}{Conditions}	& \multicolumn{2}{c|}{5th usage episode} &\multirow{2}{*}{Multi-episodic Judgment}\\
@@ -759,7 +759,7 @@ With regard to the speech telephony service no significant difference on the fin
 
 \begin{table}[h!]
  \centering
- \caption{One-session experiment: Multi-episodic judgment after the 6th episode for \autoref{hypo:independent}.}
+ \caption{One-session experiments: multi-episodic judgment after the 6th episode for \autoref{hypo:independent}.}
  \label{tab:lab:hypoindependent}
  \begin{tabulary}{\columnwidth}{C|C|C|C}
 	Conditions \ac{VoD}	& \multicolumn{2}{c}{Multi-episodic Judgment} \\
