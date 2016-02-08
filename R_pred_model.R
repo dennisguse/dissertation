@@ -61,7 +61,7 @@ weight_linear_create <- function(window) {
 }
 weight_linear <- function(timeseries, window) {
  timeseries$relative_id = timeseries$id - length(timeseries$id) + window
- timeseries$weight[timeseries$relative_id > 0] =  timeseries$relative_id[timeseries$relative_id > 0] / window
+ timeseries$weight[timeseries$relative_id > 0] =  timeseries$relative_id[timeseries$relative_id > 0] #/ window
  timeseries$weight[timeseries$relative_id <= 0] = 0
  
  return (timeseries)
@@ -81,6 +81,7 @@ if (FALSE) {
  weight_window_3 = weight_window_create(10)
  weight_window_3(timeseries)
  
+ timeseries = subset(timeseries, timeseries$ id <= 2)
  weight_linear_3 = weight_linear_create(1)
  weight_linear_3(timeseries)
 }

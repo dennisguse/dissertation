@@ -148,7 +148,7 @@ Thus, a \ac{MOS} evaluation cannot be conducted as participants were exposed to 
 	<<plotE4C0, echo=F, fig.height=3>>=
 ggplot_timeseries_create(subset(timeseries, experiment=="E4a" & condition=="A1" & service == "VoD" & id != 0)) + geom_boxplot(aes(factor(id), y=QU), na.rm=T) + xlab("Day")
 	@
-	\caption{Multiple days: Episodic judgments for \E4{} for the \ac{VoD} service in \C9{}.}
+	\caption{Multiple days (\E4{}): Episodic judgments for the \ac{VoD} service in \C9{}.}
 	\label{img:field:E4conditionA1TELboxplot}
 \end{figure}
 
@@ -173,7 +173,7 @@ Statistical evaluation for this is omitted due to the sample size, high variance
 
 \begin{table}
 	\centering
-	\caption{Multiple days: Multi-episodic judgments for the \ac{VoD} service of \E4{}}
+	\caption{Multiple days (\E4{}): multi-episodic judgments for the \ac{VoD} service.}
 	\label{tab:field:e4results}
 	\begin{tabular}{c|c|c}
 	\multirow{2}{*}{Day} & \multicolumn{2}{c}{Multi-episodic Judgment} \\
@@ -288,7 +288,7 @@ In this experiment no increase of episodic judgments for \ac{HP} episodes is obs
 	<<plotE5C9, echo=F, fig.height=3>>=
 		ggplot_timeseries_create(subset(timeseries, experiment=="E5" & condition=="P2")) + geom_boxplot(aes(factor(id), y=QU), na.rm=T) + xlab("Day")
 	@
-	\caption[Multiple days: Box plot of episodic judgments in \E5{} for \C9{} and \CX{}]{Multiple days: Box plot of episodic judgments in \E5{} for \C9{} (top) and \CX{} (bottom).}
+	\caption[Multiple days (\E5{}): Box plot of episodic judgments for \C9{} and \CX{}]{Multiple days: Box plot of episodic judgments in \E5{} for \C9{} (top) and \CX{} (bottom).}
 	\label{img:field:boxplotE5}
 \end{figure}
 
@@ -304,7 +304,7 @@ Between the two conditions, only the judgments after the 2nd day are significant
 
 \begin{table}[h]
 	\centering
-	\caption{Multiple days: Multi-episodic judgments of \E5{} by condition and service.}
+	\caption{Multiple days (\E5{}): Multi-episodic judgments by condition and service.}
 	\label{tab:field:e5results}
 	\begin{tabular}{c|c|c||c|c}
 	Day & \multicolumn{4}{c}{Multi-episodic Judgment} \\
@@ -488,7 +488,7 @@ A detailed analysis did not yield a reason for the difference, and it is thus co
 
 \begin{table}
 	\centering
-	\caption{Multiple days (\E6{}): Overview on conditions.}
+	\caption{Multiple days (\E6{}): overview on conditions.}
 	\label{tab:field:e6episodic}
 	\begin{tabulary}{\textwidth}{C|C|C|C|C}
 	Condition & \ac{LP} days & Participants &  \ac{HP} & \ac{LP} \\
@@ -523,7 +523,7 @@ For \C5{} and \C6{} no significant difference is found (\Sexpr{wilcox.pairwise.p
 
 \begin{table}[h]
 	\centering
-	\caption{Multiple days (\E6{}): Multi-episodic judgments after the 6th day for \autoref{hypo:number}.}
+	\caption{Multiple days (\E6{}): multi-episodic judgments after the 6th day for \autoref{hypo:number}.}
 	\label{tab:field:hyponumber}
 	\begin{tabulary}{\columnwidth}{c|c|C}
 	Condition	& \ac{LP} episode(s) 	& Multi-episodic Judgment\\
@@ -556,7 +556,7 @@ For two days with \C4{} and \C5{}.
 
 \begin{table}[h]
 	\centering
-	\caption{Multiple days (\E6{}): Multi-episodic judgment after the 6th day for \autoref{hypo:position}.}
+	\caption{Multiple days (\E6{}): multi-episodic judgment after the 6th day for \autoref{hypo:position}.}
 	\label{tab:field:hypoposition}
 	\begin{tabulary}{\columnwidth}{c|c|C}
 	Condition   & \ac{LP} episode(s) 	& Multi-episodic Judgment \\
@@ -584,7 +584,7 @@ The three conditions are not significantly different with regard to the last mul
 
 \begin{table}[h]
 	\centering
-	\caption{Multiple days (\E6{}): Multi-episodic judgment after the 6th day for \autoref{hypo:consecutive}.}
+	\caption{Multiple days (\E6{}): multi-episodic judgment after the 6th day for \autoref{hypo:consecutive}.}
 	\label{tab:field:hypoconsecutive}
 	\begin{tabular}{c|c|c}
 	Condition   & \ac{LP} episode(s) 	& Multi-episodic Judgment \\

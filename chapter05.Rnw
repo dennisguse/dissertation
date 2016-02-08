@@ -222,7 +222,7 @@ The first two days are presented in each condition with the best performance lev
 
 \begin{table}[h]
 	\centering
-	\caption[Conditions applied by \citet{moller_single-call_2011}]{Conditions applied by \citet{moller_single-call_2011} with performance level per day.}
+	\caption[\citet{moller_single-call_2011}: overview on conditions]{Conditions applied by \citet{moller_single-call_2011} with performance level per day.}
 	\label{tab:chap05:conditions}
 	\begin{tabular}{c|c|c|c|c|c|c|c}
 	\multirow{2}{*}{Condition} & \multicolumn{7}{c}{Performance Level (per day)} \\
@@ -261,7 +261,7 @@ An exemplary box plot of episodic judgments is shown for condition~4 in \autoref
 	<<plotMOLLER, echo=F, fig.height=3>>=
 		ggplot_timeseries_create(subset(timeseries, experiment=="MOELLER" & condition=="S2")) + geom_boxplot(aes(factor(id), y=QU), na.rm=T) + scale_x_discrete(breaks=seq(1, 24, by=2), labels=c(1:12)) + xlab("Day")
 	@
-	\caption[Box plot of episodic judgments for condition~4 of \citet{moller_single-call_2011}.]{Box plot of episodic judgments for condition~2 of \citet{moller_single-call_2011} (own illustration).}
+	\caption[\citet{moller_single-call_2011}: box plot of episodic judgments for condition~4 of.]{Box plot of episodic judgments for condition~2 of \citet{moller_single-call_2011} (own illustration).}
 	\label{img:state:MOLLERboxplot}
 \end{figure}
 
@@ -289,7 +289,7 @@ A statistical analysis is omitted due to the relative small (potential) differen
 
 \begin{table}[h]
 	\centering
-	\caption[Episodic judgments and multi-episodic judgments by \citet{moller_single-call_2011}.]{Episodic judgments and multi-episodic judgments by \citet{moller_single-call_2011}. Reported as \ac{MOS} with standard deviation in brackets.}
+	\caption[\citet{moller_single-call_2011}: episodic judgments and multi-episodic judgments.]{Episodic judgments and multi-episodic judgments by \citet{moller_single-call_2011}. Reported as \ac{MOS} with standard deviation in brackets.}
 	\label{tab:state:MOLLERepisodic}
 	\begin{tabular}{c||c|c|c||c|c|c}
 	\multirow{2}{*}{\rotatebox{90}{Cond.}} & \multicolumn{3}{c||}{Episodic Judgments} &  \multicolumn{3}{c}{Multi-episodic Judgments} \\
