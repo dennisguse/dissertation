@@ -363,7 +363,7 @@ ggplot_model_create(subset(data_adjusted, data_adjusted$experiment == "E1" & dat
 @
 	\caption{One session (\E1{}): prediction accuracy for saturation effect.}
 	\label{fig:pred:SAT:E1}
-\end{figure}Also
+\end{figure}
 
 For both experiments the adjustment results in a shift of the minimum for the two model types.
 In case of window weight, the minimal \ac{RMSD} shifts from~4~to~3 for both experiments.

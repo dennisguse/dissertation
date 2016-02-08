@@ -51,15 +51,17 @@ However, the results were inconclusive as no definite effect could be observed.
 One reason for this might be the applied between subject design.
 
 Beside the investigation of potential effects, the large number of conditions are useful to implement a prediction model.
-In this thesis, I developed a two-stage prediction model that sufficiently estimates multi-episodic judgments.
-In the first stage the episodic judgments are adjusted to account for the observed saturation effect.
+In this thesis, I applied a weighted average to implement a prediction model.
+Here, a window function and a linear weighting was applied.
+The results show that a linear weighting function outperforms the window function.
+In fact, it provides a higher robustness for parameter selecting.
+For one-session experiments (\E1{}, and \EIIa{}) a $\mathit{w}$~of~2 and multiple days (\E6{}) a $\mathit{w}$~of~4  has been found best suiting.
+In addition, for the observed saturation was accounted by adjusting the episodic judgments rather than the weighting function.
 If three consecutive \emph{similar} degraded episodes/day occur, then episodic judgments of the first episode/day are set to the average judgments of all prior non-degraded episodes.
-This allows to account for the saturation effect without complex manipulation of the weighting function for this specific case.
-In the second stage, a weighted average is computed either with a windowed function, or a linear window function.
-Both models provide sufficient prediction performance considering the limited number of conditions.
-In fact, both weighting functions limit the potential overfitting of more complex models.
+It could be shown that for these three experiments prediction accuracy is increased.
+Here, it is observed that for this condition the model parameter is adjusted to the optimum already found.
+It can be concluded that the modeling approach is successful while using rather simple model types.
 
-\emph{TODO: Modeling: which one is better?}
 
 \section{Discussion}
 The results of the conducted experiments showed that multi-episodic perceived quality can be assessed in one-session and over multiple days while using the defined-use method.
