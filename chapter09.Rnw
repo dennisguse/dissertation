@@ -1,24 +1,38 @@
 <<setup, echo=F, cache=F, results='hide'>>=
 opts_knit$set(progress = TRUE, verbose = TRUE)
-data = read.csv("data/data_modeling.csv")
 source('R_plot.R')
 
-#We only do \ac{MOS}
-data=subset(data,  grepl("average", data$condition) & data$experiment %in% c("E1", "E2a", "E6a"))
+data = read.csv("data/data_modeling.csv")
+data$model_FACET = factor(data$model == "weight_linear_create", labels=c("Window (WW)", "Linear (LI)")) #label and order; FALSE will be first; then attach labels for FACET
 
-data_avg = aggregate(data$RMSD, by=list(experiment=data$experiment, model=data$model, parameter=data$parameter, id=data$id), FUN=mean)
-names(data_avg)[5] = "RMSD"
-data_avg$condition = "EXPERIMENT_average"
-data_avg$PEARSON = NA
-data = rbind(data, data_avg)
+#We only do \ac{MOS} for non-adjusted
+data_nonadjusted = subset(data,  grepl("average", data$condition) & !grepl("adjusted", data$condition) & data$experiment %in% c("E1", "E2a", "E6a"))
 
-#Label stuff.
-data$model_FACET = factor(data$model == "weight_linear_create", labels=c("Window", "Linear")) #label and order; FALSE will be first; then attach labels for FACET
-data$condition = factor(data$condition, labels=c("C1", "C2a", "C3", "C4", "C5a", "C5b", "C6 (adjusted)", "C6", "C7", "C8", "All"))
+data_nonadjusted_avg = aggregate(data_nonadjusted$RMSD, by=list(experiment=data_nonadjusted$experiment, model=data_nonadjusted$model, parameter=data_nonadjusted$parameter, id=data_nonadjusted$id), FUN=mean)
+names(data_nonadjusted_avg)[5] = "RMSD"
+data_nonadjusted_avg$condition = "EXPERIMENT_average"
+data_nonadjusted_avg$PEARSON = NA
+data_nonadjusted_avg$model_FACET = factor(data_nonadjusted_avg$model == "weight_linear_create", labels=c("Window (WW)", "Linear (LI)")) #label and order; FALSE will be first; then attach labels for FACET
+data_nonadjusted = rbind(data_nonadjusted, data_nonadjusted_avg)
 
-data_nonadjusted=subset(data, !grepl("adjusted", data$condition))
+data_nonadjusted$condition = factor(data_nonadjusted$condition, labels=c("C1", "C2a", "C3", "C4", "C5a", "C5b", "C6", "C7", "C8", "All"))
 
-data_adjusted=subset(data, grepl("adjusted", data$condition) | data$condition %in% c("C5a", "C5b", "C6"))
+
+
+
+#We only do \ac{MOS} for adjusted!
+data_adjusted_only=subset(data, data$condition %in% c("5a_average", "5b_average", "6_average", "6_adjusted_average"))
+
+data_adjusted=subset(data,  grepl("average", data$condition) & data$condition != "6_average" & data$experiment %in% c("E1", "E2a", "E6a"))
+
+data_adjusted_avg = aggregate(data_adjusted$RMSD, by=list(experiment=data_adjusted$experiment, model=data_adjusted$model, parameter=data_adjusted$parameter, id=data_adjusted$id), FUN=mean)
+names(data_adjusted_avg)[5] = "RMSD"
+data_adjusted_avg$condition = "EXPERIMENT_average"
+data_adjusted_avg$PEARSON = NA
+data_adjusted_avg$model_FACET = factor(data_adjusted_avg$model == "weight_linear_create", labels=c("Window (WW)", "Linear (LI)")) #label and order; FALSE will be first; then attach labels for FACET
+data_adjusted = rbind(data_adjusted, data_adjusted_avg)
+
+data_adjusted$condition = factor(data_adjusted$condition, labels=c("C1", "C2a", "C3", "C4", "C5a", "C5b", "C6", "C7", "C8", "All"))
 @
 
 \chapter{Prediction of Multi-episodic Judgments}\label{chap:modeling}
@@ -212,14 +226,14 @@ ggplot_model_create(subset(data_nonadjusted, data_nonadjusted$experiment == "E1"
 
 With regard to the multi-episodic judgment after the 6th usage episode, both model types perform slightly different.
 \autoref{fig:pred:E1pred6} shows the \ac{RMSD} for the 6th usage episode for both model types.
-Here, WW performs better while increasing $\mathit{w}$ until~3, and ~4.
+Here, WW performs better while increasing $\mathit{w}=4$.
 However, the prediction accuracy depends on the considered condition.
 For example, \C3{} is far off for $\mathit{w}=1$ and improves until~3 while \C4{} is best predicted with~$\mathit{w}=5$.
 LI outperforms WI in prediction accuracy and is, furthermore, more consistent.
 The best accuracy is observed for $\mathit{w}=2$.
 All conditions except \C4{} and \C6{} yield here the minimal \ac{RMSD}.
 In fact, \C4{} and \C6{} reach their minimum at~$\mathit{w}=3$.
-It must be noted that \ac{RMSD} is in the best case close to \Sexpr{round(min(subset(data_nonadjusted, data_nonadjusted[["experiment"]] == "E1" & data_nonadjusted[["id"]] == 6 & data_nonadjusted[["model"]] == "weight_linear_create" & data_nonadjusted[["condition"]] == "All")[["RMSD"]]), 1)} (linear, $\mathit{w}=2$).
+It must be noted that \ac{RMSD} is in the best case close to \Sexpr{round(min(subset(data_nonadjusted, data_nonadjusted[["experiment"]] == "E1" & data_nonadjusted[["id"]] == 6 & data_nonadjusted[["model"]] == "weight_linear_create" & data_nonadjusted[["condition"]] == "All")[["RMSD"]]), 2)} (linear, $\mathit{w}=2$).
 This is close to the prediction accuracy for presenting \ac{HP} only.
 
 \begin{figure}[h]
@@ -278,8 +292,8 @@ ggplot_model_create(subset(data_nonadjusted, data_nonadjusted$experiment == "E2a
 
 With regard to prediction to of the multi-episodic judgment after the 6th usage episode results closely resemble \E1{}.
 The \ac{RMSD} is shown in \autoref{fig:pred:E2pred3}.
-For WW a minimum is reached at $\mathit{w}=3$ and $\mathit{w}=4$ (\Sexpr{round(min(subset(data_nonadjusted, data_nonadjusted[["experiment"]] == "E2a" & data_nonadjusted[["id"]] == 6 & data_nonadjusted[["model"]] == "weight_window_create" & data_nonadjusted[["condition"]] == "All")[["RMSD"]]), 1)}).
-For LI the minimal \ac{RMSD} is achieved at $\mathit{w}=2$ (\Sexpr{round(min(subset(data_nonadjusted, data_nonadjusted[["experiment"]] == "E2a" & data_nonadjusted[["id"]] == 6 & data_nonadjusted[["model"]] == "weight_linear_create" & data_nonadjusted[["condition"]] == "All")[["RMSD"]]), 1)}).
+For WW a minimum is reached at $\mathit{w}=3$ and $\mathit{w}=4$ (\Sexpr{round(min(subset(data_nonadjusted, data_nonadjusted[["experiment"]] == "E2a" & data_nonadjusted[["id"]] == 6 & data_nonadjusted[["model"]] == "weight_window_create" & data_nonadjusted[["condition"]] == "All")[["RMSD"]]), 2)}).
+For LI the minimal \ac{RMSD} is achieved at $\mathit{w}=2$ (\Sexpr{round(min(subset(data_nonadjusted, data_nonadjusted[["experiment"]] == "E2a" & data_nonadjusted[["id"]] == 6 & data_nonadjusted[["model"]] == "weight_linear_create" & data_nonadjusted[["condition"]] == "All")[["RMSD"]]), 2)}).
 In fact, the found parameters are identical to \E1{}.
 Furthermore, even the \ac{RMSD} behaves similar for individual conditions.
 
@@ -332,7 +346,7 @@ With regard to prediction the multi-episodic judgment after the 6th day, both we
 \autoref{fig:pred:E6pred12} shows the \ac{RMSD} for both weighting functions.
 While LI reaches a minimal \ac{RMSD} at $\mathit{w}=4$, WW achieves its minimal \ac{RMSD} not until $\mathit{w}=8$.
 In addition, LI achieves a minimal \ac{RMSD} of \Sexpr{round(min(subset(data_nonadjusted, data_nonadjusted[["experiment"]] == "E6a" & data_nonadjusted[["id"]] == 14 & data_nonadjusted[["model"]] == "weight_linear_create" & data_nonadjusted[["condition"]] == "All")[["RMSD"]]), 1)} while WW only achieves a minimal \ac{RMSD} of
-\Sexpr{round(min(subset(data_nonadjusted, data_nonadjusted[["experiment"]] == "E6a" & data_nonadjusted[["id"]] == 14 & data_nonadjusted[["model"]] == "weight_window_create" & data_nonadjusted[["condition"]] == "All")[["RMSD"]]), 1)}.
+\Sexpr{round(min(subset(data_nonadjusted, data_nonadjusted[["experiment"]] == "E6a" & data_nonadjusted[["id"]] == 14 & data_nonadjusted[["model"]] == "weight_window_create" & data_nonadjusted[["condition"]] == "All")[["RMSD"]]), 2)}.
 With regard to \E6{}, LI is preferable to WW, because a higher prediction accuracy is achieved.
 Furthermore, LI requires a smaller $\mathit{w}$ and provides a higher robustness for choosing $\mathit{w}$.
 
@@ -363,7 +377,7 @@ For \E1{} and \EIIa{}, this is shown in \autoref{fig:pred:SAT:E1} and, respectiv
 \begin{figure}[h]
 	\centering
 <<plotE1SAT, echo=F, fig.height=3>>=
-ggplot_model_create(subset(data_adjusted, data_adjusted$experiment == "E1" & data_adjusted$id == 6), 1.25) + 
+ggplot_model_create(subset(data_adjusted_only, data_adjusted_only$experiment == "E1" & data_adjusted_only$id == 6), 1.25) + 
 	geom_line(aes(x=parameter, y=RMSD, linetype=condition, size=condition, colour=condition)) + facet_grid(. ~ model_FACET) + 
 	scale_linetype_manual(values=c("solid", "twodash", "solid")) +
 	scale_color_manual(values=c("#00BFC4", "#7CAE00", "#7CAE00")) +
@@ -382,7 +396,7 @@ Furthermore, the minimal \ac{RMSD} is reached earlier, but that increasing $\mat
 \begin{figure}[h]
 	\centering
 <<plotE2SAT, echo=F, fig.height=3>>=
-ggplot_model_create(subset(data_adjusted, data_adjusted$experiment == "E2a" & data_adjusted$id == 6), 1.0) + 
+ggplot_model_create(subset(data_adjusted_only, data_adjusted_only$experiment == "E2a" & data_adjusted_only$id == 6), 1.0) + 
 	geom_line(aes(x=parameter, y=RMSD, linetype=condition, size=condition, colour=condition)) + facet_grid(. ~ model_FACET) + 
 	scale_linetype_manual(values=c("solid", "twodash", "solid")) +
 	scale_color_manual(values=c("#00BFC4", "#7CAE00", "#7CAE00")) +
@@ -399,7 +413,7 @@ Here, \C6{}~(adjusted) also resembles \C5{} closely (see \autoref{fig:pred:SAT:E
 \begin{figure}[h]
 	\centering
 <<plotE6SAT, echo=F, fig.height=3>>=
-ggplot_model_create(subset(data_adjusted, data_adjusted$experiment == "E6a" & data_adjusted$id == 14), 2.0) + 
+ggplot_model_create(subset(data_adjusted_only, data_adjusted_only$experiment == "E6a" & data_adjusted_only$id == 14), 2.0) + 
 	geom_line(aes(x=parameter, y=RMSD, linetype=condition, size=condition, colour=condition)) + facet_grid(. ~ model_FACET) + 
 	scale_linetype_manual(values=c("solid", "twodash", "solid")) +
 	scale_color_manual(values=c("#00BFC4", "#7CAE00", "#7CAE00")) +
@@ -413,6 +427,18 @@ It can thus be concluded that the saturation effect can be accounted for using t
 In all three experiments this resulted in a reduction of $\mathit{w}$.
 %In fact, $\mathit{w}$ is reduced to the optimal found solution for each experiment, when evaluating all conditions (see \autoref{results:prediction}).
 Although, the \ac{RMSD} is increased in some cases, $\mathit{w}$ is reduced to the optimal solution found for all conditions without saturation adjustment (see \autoref{results:prediction}).
+A reduction in \ac{RMSD} with LI for all conditions is observed (\E1{}: 0.02, for \EIIa{} of 0.03, and for \E6{} of 0.08).
+In fact, this overall reduction is rather small and it can thus be concluded that, although accounting for saturation improves prediction accuracy, this improvement is rather small for, when considering all conditions.
+
+%round(min(subset(data_nonadjusted, data_nonadjusted[["experiment"]] == "E6a" & data_nonadjusted[["id"]] == 14 & data_nonadjusted[["model"]] == "weight_linear_create" & data_nonadjusted[["condition"]] == "All")[["RMSD"]]), 2)
+%round(min(subset(data_adjusted, data_adjusted[["experiment"]] == "E6a" & data_adjusted[["id"]] == 14 & data_adjusted[["model"]] == "weight_linear_create" & data_adjusted[["condition"]] == "All")[["RMSD"]]), 2)
+
+%round(min(subset(data_nonadjusted, data_nonadjusted[["experiment"]] == "E1" & data_nonadjusted[["id"]] == 6 & data_nonadjusted[["model"]] == "weight_linear_create" & data_nonadjusted[["condition"]] == "All")[["RMSD"]]), 2)
+%round(min(subset(data_adjusted, data_adjusted[["experiment"]] == "E1" & data_adjusted[["id"]] == 6 & data_adjusted[["model"]] == "weight_linear_create" & data_adjusted[["condition"]] == "All")[["RMSD"]]), 2)
+
+%round(min(subset(data_nonadjusted, data_nonadjusted[["experiment"]] == "E2a" & data_nonadjusted[["id"]] == 6 & data_nonadjusted[["model"]] == "weight_linear_create" & data_nonadjusted[["condition"]] == "All")[["RMSD"]]), 2)
+%round(min(subset(data_adjusted, data_adjusted[["experiment"]] == "E2a" & data_adjusted[["id"]] == 6 & data_adjusted[["model"]] == "weight_linear_create" & data_adjusted[["condition"]] == "All")[["RMSD"]]), 2)
+
 
 \section{Conclusion}
 In this chapter, two model types based upon the weighted average for prediction multi-episodic perceived quality were presented.
