@@ -22,7 +22,7 @@ Both differ in usage situation, \ie, an active conversation vs. third-party list
 %Overview on Experiments
 \begin{table}[h]
 	\centering
-	\caption{Overview on conducted one-session experiments: \E1{}, \EIIa{}, \EIIb{}, and \E3{}.}
+	\caption{Conducted one-session experiments: \E1{}, \EIIa{}, \EIIb{}, and \E3{}.}
 	\label{tab:lab:experiments}
 	\begin{tabulary}{\textwidth}{C|C|C|C|C}
 	Experiment	& Service Type(s)	& Task					& Episodes	& Hypothesis \\
@@ -390,7 +390,7 @@ Box plots for all conditions per experiments are in the \appendix{} (see \autore
 
 \begin{table}
   \centering
-  \caption{One-session experiments: episodic judgments per performance level.}
+  \caption{One-session experiments: episodic judgments.}
 	\label{tab:lab:episodicMOS}
 	\begin{tabulary}{\textwidth}{c|C|c|c|c}
 	\multirow{2}{*}{Experiment}	& \multirow{2}{*}{Service} & \multicolumn{3}{c}{Episodic Judgment} \\

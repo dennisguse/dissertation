@@ -85,7 +85,7 @@ The service needed to be able to allow parallel two-party speech conversations a
 For this service one server was installed in the data center of the \emph{TU Berlin} reachable by a public IPv4 address.
 As operating system \emph{FreeBSD~9.0} was selected, because it provides a built-in firewall with integrated traffic shaper called \emph{Dummynet}~\citep{rizzo_dummynet:_1997}.
 This traffic shaper allows allows to add network impairments like packet-loss, delay, and jitter per individual connection, \ie, protocol, port, source address, destination address and if a packet is incoming or outgoing.
-On this server the \ac{PBX} software \emph{Asterisk~10} was installed, which was configured to act as a \ac{SIP} registrar as well as \ac{RTP}-Proxy for the \ac{UDP}-based media streams.
+On this server the \ac{VoIP} software \emph{Asterisk~10} was installed, which was configured to act as a \ac{SIP} registrar as well as \ac{RTP}-Proxy for the \ac{UDP}-based media streams.
 On call initiation of a client Asterisk informed Dummynet about the desired packet-loss rate for the media streams of this call.
 Packet-loss was not added to the \ac{SIP} connections between clients and server, because this affects the reactivity telephony system and might lead call drops.
 As client the multi-platform client \emph{Jitsi~1.0} was installed on each participant's computer.
@@ -137,7 +137,7 @@ Finally, all multi-episodic judgments per experiment and condition are presented
 	<<plotE1, echo=F, fig.height=12>>=
 		ggplot_timeseries_create(subset(timeseries, experiment=="E1")) + geom_boxplot(aes(factor(id), y=QU), na.rm=T) + facet_grid(condition ~ .) + xlab("Usage Episode")
 	@
-	\caption{One-session experiments (\E1{}): box plot of episodic judgments.}
+	\caption{One session (\E1{}): box plot of episodic judgments.}
 \end{figure}
 
 \begin{figure}[H]
@@ -145,7 +145,7 @@ Finally, all multi-episodic judgments per experiment and condition are presented
 	<<plotE2a, echo=F, fig.height=10.5>>=
 		ggplot_timeseries_create(subset(timeseries, experiment=="E2a")) + geom_boxplot(aes(factor(id), y=QU), na.rm=T) + facet_grid(condition ~ .) + xlab("Usage Episode")
 	@
-	\caption{One-session experiments (\EIIa{}): box plot of episodic judgments.}	
+	\caption{One session (\EIIa{}): box plot of episodic judgments.}	
 \end{figure}
 
 \begin{figure}[H]
@@ -153,7 +153,7 @@ Finally, all multi-episodic judgments per experiment and condition are presented
 	<<plotE2b, echo=F, fig.height=7.5>>=
 		ggplot_timeseries_create(subset(timeseries, experiment=="E2b" & service != "bundle")) + geom_boxplot(aes(factor(id), y=QU), na.rm=T) + facet_grid(condition + service~ .) + xlab("Usage Episode")
 	@
-	\caption{One-session experiments (\EIIa{}): box plot of episodic judgments.}
+	\caption{One session (\EIIa{}): box plot of episodic judgments.}
 \end{figure}
 
 \begin{figure}[H]
@@ -161,7 +161,7 @@ Finally, all multi-episodic judgments per experiment and condition are presented
 	<<plotE3, echo=F, fig.height=3>>=
 		ggplot_timeseries_create(subset(timeseries, experiment=="E3")) + geom_boxplot(aes(factor(id), y=QU), na.rm=T) + facet_grid(condition ~ .) + xlab("Usage Episode")
 	@
-	\caption{One-session experiments (\E3{}): box plot of episodic judgments.}
+	\caption{One session (\E3{}): box plot of episodic judgments.}
 \end{figure}
 
 \begin{figure}[H]
@@ -169,7 +169,7 @@ Finally, all multi-episodic judgments per experiment and condition are presented
 	<<plotE6, echo=F, fig.height=9>>=
 		ggplot_timeseries_create(subset(timeseries, experiment=="E6a")) + geom_boxplot(aes(factor(id), y=QU), na.rm=T) + facet_grid(condition ~ .) + xlab("Usage Episode")
 	@
-	\caption{One-session experiments (\E6{}): box plot of episodic judgments.}
+	\caption{One session (\E6{}): box plot of episodic judgments.}
 \end{figure}
 
 \section{Multi-episodic Judgments}

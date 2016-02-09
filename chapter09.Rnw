@@ -22,6 +22,7 @@ data_nonadjusted$condition = factor(data_nonadjusted$condition, labels=c("C1", "
 
 #We only do \ac{MOS} for adjusted!
 data_adjusted_only=subset(data, data$condition %in% c("5a_average", "5b_average", "6_average", "6_adjusted_average"))
+data_adjusted_only$condition = factor(data_adjusted_only$condition, labels=c("C5a", "C5b", "C6 (adjusted)", "C6"))
 
 data_adjusted=subset(data,  grepl("average", data$condition) & data$condition != "6_average" & data$experiment %in% c("E1", "E2a", "E6a"))
 
@@ -282,9 +283,9 @@ Here, no difference between~WW and~LI is observed.
 <<plotE2BASE, echo=F, fig.height=3>>=
 ggplot_model_create(subset(data_nonadjusted, data_nonadjusted$experiment == "E2a" & data_nonadjusted$id == 3), 0.4) + 
  geom_line(aes(x=parameter, y=RMSD, linetype=condition, size=condition, colour=condition)) + facet_grid(. ~ model_FACET) + 
- scale_linetype_manual(values=c("solid", "solid", "solid", "solid", "solid", "solid", "solid", "dashed")) +
- scale_color_manual(values=c("#00BFC4", "#00BE67", "#7CAE00", "#00A9FF", "#CD9600", "#F8766D", "#C77CFF", "#000000")) + 
- scale_size_manual(values=c(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 1))
+ scale_linetype_manual(name="Condition", values=c("solid", "solid", "solid", "solid", "solid", "solid", "solid", "dashed")) +
+ scale_color_manual(name="Condition", values=c("#00BFC4", "#00BE67", "#7CAE00", "#00A9FF", "#CD9600", "#F8766D", "#C77CFF", "#000000")) + 
+ scale_size_manual(name="Condition", values=c(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 1))
  @
 	\caption[One session (\EIIa{}): prediction accuracy for \ac{HP} only episodes]{One session (\EIIa{}): prediction accuracy for \ac{HP} only episodes (3rd usage episode).}
 	\label{fig:pred:E2pred3}
@@ -302,9 +303,9 @@ Furthermore, even the \ac{RMSD} behaves similar for individual conditions.
 <<plotE2PRED, echo=F, fig.height=3>>=
 ggplot_model_create(subset(data_nonadjusted, data_nonadjusted$experiment == "E2a" & data_nonadjusted$id == 6), 1.8) + 
 	geom_line(aes(x=parameter, y=RMSD, linetype=condition, size=condition, colour=condition)) + facet_grid(. ~ model_FACET) + 
-	scale_linetype_manual(values=c("solid", "solid", "solid", "solid", "solid", "solid", "solid", "dashed")) +
-	scale_color_manual(values=c("#00BFC4", "#00BE67", "#7CAE00", "#00A9FF", "#CD9600", "#F8766D", "#C77CFF", "#000000")) + 
-	scale_size_manual(values=c(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 1))
+	scale_linetype_manual(name="Condition", values=c("solid", "solid", "solid", "solid", "solid", "solid", "solid", "dashed")) +
+	scale_color_manual(name="Condition", values=c("#00BFC4", "#00BE67", "#7CAE00", "#00A9FF", "#CD9600", "#F8766D", "#C77CFF", "#000000")) + 
+	scale_size_manual(name="Condition", values=c(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 1))
  @
 	\caption[One session (\EIIa{}): prediction accuracy for all conditions]{One session (\EIIa{}): prediction accuracy for all conditions (6th usage episode).}
 	\label{fig:pred:E2pred6}
@@ -334,9 +335,9 @@ WW achieves its minimal \ac{RMSD} with $\mathit{w}=6$ while LI provides only a s
 <<plotE6BASE, echo=F, fig.height=3>>=
 ggplot_model_create(subset(data_nonadjusted, data_nonadjusted$experiment == "E6a" & data_nonadjusted$id == 8), 0.3) + 
 	geom_line(aes(x=parameter, y=RMSD, linetype=condition, size=condition, colour=condition)) + facet_grid(. ~ model_FACET) + 
-	scale_linetype_manual(values=c("solid", "solid", "solid", "solid", "solid", "solid", "dashed")) +
-	scale_color_manual(values=c("#00BFC4", "#00BE67", "#7CAE00", "#00A9FF", "#CD9600", "#F8766D", "#000000")) + 
-	scale_size_manual(values=c(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 1))
+	scale_linetype_manual(name="Condition", values=c("solid", "solid", "solid", "solid", "solid", "solid", "dashed")) +
+	scale_color_manual(name="Condition", values=c("#00BFC4", "#00BE67", "#7CAE00", "#00A9FF", "#CD9600", "#F8766D", "#000000")) + 
+	scale_size_manual(name="Condition", values=c(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 1))
 @
 	\caption[Multiple days (\E6{}): prediction accuracy for \ac{HP} only episodes]{Multiple days (\E6{}): prediction accuracy for \ac{HP} only episodes (3rd day).}
 	\label{fig:pred:E6pred6}
@@ -355,9 +356,9 @@ Furthermore, LI requires a smaller $\mathit{w}$ and provides a higher robustness
 <<plotE6PRED, echo=F, fig.height=3>>=
 ggplot_model_create(subset(data_nonadjusted, data_nonadjusted$experiment == "E6a" & data_nonadjusted$id == 14)) + 
 	geom_line(aes(x=parameter, y=RMSD, linetype=condition, size=condition, colour=condition)) + facet_grid(. ~ model_FACET) + 
-	scale_linetype_manual(values=c("solid", "solid", "solid", "solid", "solid", "solid", "dashed")) +
-	scale_color_manual(values=c("#00BFC4", "#00BE67", "#7CAE00", "#00A9FF", "#CD9600", "#F8766D", "#000000")) + 
-	scale_size_manual(values=c(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 1))
+	scale_linetype_manual(name="Condition", values=c("solid", "solid", "solid", "solid", "solid", "solid", "dashed")) +
+	scale_color_manual(name="Condition", values=c("#00BFC4", "#00BE67", "#7CAE00", "#00A9FF", "#CD9600", "#F8766D", "#000000")) + 
+	scale_size_manual(name="Condition", values=c(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 1))
 	@
 	\caption[Multiple days (\E6{}): prediction accuracy for all conditions]{Multiple days (\E6{}): prediction accuracy for all conditions (6th day).}
 	\label{fig:pred:E6pred12}
@@ -379,9 +380,9 @@ For \E1{} and \EIIa{}, this is shown in \autoref{fig:pred:SAT:E1} and, respectiv
 <<plotE1SAT, echo=F, fig.height=3>>=
 ggplot_model_create(subset(data_adjusted_only, data_adjusted_only$experiment == "E1" & data_adjusted_only$id == 6), 1.25) + 
 	geom_line(aes(x=parameter, y=RMSD, linetype=condition, size=condition, colour=condition)) + facet_grid(. ~ model_FACET) + 
-	scale_linetype_manual(values=c("solid", "twodash", "solid")) +
-	scale_color_manual(values=c("#00BFC4", "#7CAE00", "#7CAE00")) +
-	scale_size_manual(values=c(0.5, 0.5, 0.5))
+	scale_linetype_manual(name="Condition", values=c("solid", "twodash", "solid")) +
+	scale_color_manual(name="Condition", values=c("#00BFC4", "#7CAE00", "#7CAE00")) +
+	scale_size_manual(name="Condition", values=c(0.5, 0.5, 0.5))
 @
 	\caption{One session (\E1{}): prediction accuracy for saturation effect.}
 	\label{fig:pred:SAT:E1}
@@ -398,9 +399,9 @@ Furthermore, the minimal \ac{RMSD} is reached earlier, but that increasing $\mat
 <<plotE2SAT, echo=F, fig.height=3>>=
 ggplot_model_create(subset(data_adjusted_only, data_adjusted_only$experiment == "E2a" & data_adjusted_only$id == 6), 1.0) + 
 	geom_line(aes(x=parameter, y=RMSD, linetype=condition, size=condition, colour=condition)) + facet_grid(. ~ model_FACET) + 
-	scale_linetype_manual(values=c("solid", "twodash", "solid")) +
-	scale_color_manual(values=c("#00BFC4", "#7CAE00", "#7CAE00")) +
-	scale_size_manual(values=c(0.5, 0.5, 0.5))
+	scale_linetype_manual(name="Condition", values=c("solid", "twodash", "solid")) +
+	scale_color_manual(name="Condition", values=c("#00BFC4", "#7CAE00", "#7CAE00")) +
+	scale_size_manual(name="Condition", values=c(0.5, 0.5, 0.5))
 @
 	\caption{One session (\EIIa{}): prediction accuracy for saturation effect.}
 	\label{fig:pred:SAT:E2a}
@@ -415,9 +416,9 @@ Here, \C6{}~(adjusted) also resembles \C5{} closely (see \autoref{fig:pred:SAT:E
 <<plotE6SAT, echo=F, fig.height=3>>=
 ggplot_model_create(subset(data_adjusted_only, data_adjusted_only$experiment == "E6a" & data_adjusted_only$id == 14), 2.0) + 
 	geom_line(aes(x=parameter, y=RMSD, linetype=condition, size=condition, colour=condition)) + facet_grid(. ~ model_FACET) + 
-	scale_linetype_manual(values=c("solid", "twodash", "solid")) +
-	scale_color_manual(values=c("#00BFC4", "#7CAE00", "#7CAE00")) +
-	scale_size_manual(values=c(0.5, 0.5, 0.5))
+	scale_linetype_manual(name="Condition", values=c("solid", "twodash", "solid")) +
+	scale_color_manual(name="Condition",values=c("#00BFC4", "#7CAE00", "#7CAE00")) +
+	scale_size_manual(name="Condition", values=c(0.5, 0.5, 0.5))
 @
 	\caption{Multiple days (\E6{}): prediction accuracy for saturation effect.}
 	\label{fig:pred:SAT:E6}

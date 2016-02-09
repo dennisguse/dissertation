@@ -205,7 +205,7 @@ The episodic and multi-episodic judgment were both taken on a 7-point \ac{CCR} s
 
 \begin{figure}
 	\includegraphics[width=1\textwidth]{figure/quality7pt_scale}
-	\caption{7-point \acs{CCR} scale with German labels; labels from left-to-right: extremely bad~(0), bad~(1), poor~(2), fair~(3), good~(4), excellent~(5) and ideal~(6) \citep{itu-t_p.851:_2003} (own illustration).}
+	\caption[7-point \acs{CCR} scale]{7-point \acs{CCR} scale with German labels; labels from left-to-right: extremely bad~(0), bad~(1), poor~(2), fair~(3), good~(4), excellent~(5) and ideal~(6) \citep{itu-t_p.851:_2003} (own illustration).}
 	\label{img:chap05:quality-scale}
 \end{figure}
 

@@ -240,7 +240,7 @@ The audio signal was treated like the \ac{AoD} service.
 The video signal was encoded to the native resolution of the mobile device ($800x480$ at 4.3~inch) with 25~\ac{FPS} with \ac{H.264} (two-pass).
 For \ac{HP} a video encoding bandwidth was set to \unit[3]{Mbit/s} and for \ac{LP} to \unit[0.25]{Mbit/s}.
 Degradation both modalities done to increase the perceptual difference between \ac{HP} and \ac{LP}.
-Details of the technical setup are described in the \appendix{} \autoref{appendix:setup}.
+Details of the technical setup are described in the \appendix{} (see \autoref{appendix:setups}).
 
 Episodic judgments are taken on the 7-point \ac{CCR} scale after every episode.
 Multi-episodic judgments per service are taken at the 2nd, 5th, 8th, 11th and 14th day.
@@ -304,7 +304,7 @@ Between the two conditions, only the judgments after the 2nd day are significant
 
 \begin{table}[h]
 	\centering
-	\caption{Multiple days (\E5{}): Multi-episodic judgments by condition and service.}
+	\caption{Multiple days (\E5{}): Multi-episodic judgments.}
 	\label{tab:field:e5results}
 	\begin{tabular}{c|c|c||c|c}
 	Day & \multicolumn{4}{c}{Multi-episodic Judgment} \\
