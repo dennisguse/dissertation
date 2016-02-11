@@ -54,8 +54,13 @@ ggplot_model_create <- function(data, ylim=2.4) {
  p <- p + theme(panel.grid.major=element_line(color="darkgray",size=.25))
  p <- p + theme(panel.grid.minor=element_line(color="gray",size=.25))
 
- p <- p + ylab("RMSD") + xlab("w")
- p <- p + guides(fill=guide_legend(title="Condition"))
+ p <- p + ylab("RMSD") + xlab("Parameter w")
+#  p <- p + scale_colour_hue(name = "Model 1")
+#  p <- p + scale_colour_discrete(name  ="Payer")
+#  p <- p + scale_shape_discrete(name  ="Payer")
+#  p <- p + scale_linetype_discrete(name  ="Payer")
+ 
+
  p <- p + theme(legend.position="top", legend.key = element_rect(fill = "white"))
  p <- p + theme(legend.margin=unit(-0.6,"cm")) 
   

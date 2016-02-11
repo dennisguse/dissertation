@@ -12,7 +12,7 @@ attach(timeseries)
 Four experiments were conducted for the evaluation of the seven hypotheses on multi-episodic perceived quality.
 These experiments follow the same procedure, but differ in usage situation, task and, respectively, service type.
 %In all four experiments speech-based services are used.
-An overview on the four experiment is given in \autoref{tab:lab:experiments}.
+An overview on the four experiments is given in \autoref{tab:lab:experiments}.
 In fact, in each experiment only a subset of hypotheses are investigated.
 \E1{} and \E2a{} are the main experiments, focusing most important on \autoref{hypo:number} and \autoref{hypo:position}.
 Both differ in usage situation, \ie, an active conversation vs. third-party listening.
@@ -22,7 +22,7 @@ Both differ in usage situation, \ie, an active conversation vs. third-party list
 %Overview on Experiments
 \begin{table}[h]
 	\centering
-	\caption{Overview on conducted one-session experiments: \E1{}, \EIIa{}, \EIIb{}, and \E3{}.}
+	\caption{Conducted one-session experiments: \E1{}, \EIIa{}, \EIIb{}, and \E3{}.}
 	\label{tab:lab:experiments}
 	\begin{tabulary}{\textwidth}{C|C|C|C|C}
 	Experiment	& Service Type(s)	& Task					& Episodes	& Hypothesis \\
@@ -31,7 +31,7 @@ Both differ in usage situation, \ie, an active conversation vs. third-party list
 	\hline
 	\EIIa{}		& Telephony	& 3rd-party listening (\ac{SCS})	& 6		& \autoref{hypo:number}, \autoref{hypo:position}, \autoref{hypo:consecutive}\\
 	\hline
-	\EIIb{}		& Telephony and \ac{VoD}& E2a with Movie			& 12		& \autoref{hypo:independent}\\
+	\EIIb{}		& Telephony and \ac{VoD}& 3rd-party listening (\ac{SCS}) with Movie			& 12		& \autoref{hypo:independent}\\
 	\hline
 	\E3{}			& \ac{AoD}		& Audio book				& 6		& \autoref{hypo:duration}\\
 	\end{tabulary}
@@ -47,7 +47,7 @@ For the investigation of multi-episodic perceived quality in one session, servic
 Using unimodal rather than multi-modal service types omits considering multi-modal integration for the quality formation process.
 \E1{}, \EIIa{}, and \EIIb{} focus on speech telephony.
 Two-party conversation is used in \E1{} while third-party listening is used in \EIIa{} and \EIIb{}.
-An \ac{AoD} service is used in \E3{} while presenting speech-only audio book.
+An \ac{AoD} service is used in \E3{} while presenting a speech-only audio book.
 For the investigation on the impact of a second service (\autoref{hypo:independent}), a multi-modal service is used for \EIIb{} as a second service.
 Here, a \ac{VoD} service is used.
 
@@ -173,21 +173,19 @@ For digital transmission of wideband speech the codec \emph{G.722} (Mode~1)~\cit
 This codec achieves very similar judgments like uncompressed wideband speech signals. %TODO Add refs, Moeller, Raake, Marcel
 %In subjective listening-only experiments G.722 typically achieves a \ac{MOS} of 4.5~on the 5-point \ac{ACR} scale.
 
-For \ac{LP} the speech signal the \emph{LPC-10}\footnote{LPC-10 is also known as \emph{FS-1015} and \emph{STANAG 4198}.} codec is selected.
+For \ac{LP}, the speech signal is coded with \emph{LPC-10}\footnote{LPC-10 is also known as \emph{FS-1015} and \emph{STANAG 4198}.}.
 This codec is designed for low bit rate radio transmission while providing intelligibility rather than natural reproduction.
 The re-synthesized speech sounds very unnatural and is described as robotic, and muddy with a hissing background noise.\citet{}
 %LPC-10 achieves a 5-point $\ac{MOS}$ of 2.3 \citep[][]{gibson_multimedia_2000} while requiring only \unit[2.4]{kbit/s} transmission bandwidth. %Gibson J.D. (ed.)-Multimedia Communications_ Directions and Innovations (2001).pdf
 In fact, this codec is not used for speech telephony.
-However, speech telephony codecs achieve rather good perceived quality.
-Even the worst codec, \ie, \ac{MELP}, only results in a 5-point \ac{MOS} of 3.0 \citep[][]{}. 
-LPC-10 is therefore useful for the investigation of multi-episodic perceived quality, because it allows to create severe reduction in performance while providing a understandable speech signal.
+However, LPC-10 is useful for the investigation of multi-episodic perceived quality, because it allows to create severe reduction in performance while providing a understandable speech signal.
 
 For \ac{MP}, \emph{G.711}~\citep{itu-t_g.711:_1988} is selected.
 This codec is the common reference condition for narrowband speech telephony.
 Compared to G.722 the difference between narrowband and wideband is measurable. %TODO
 In comparison to LPC-10, the re-synthesized speech signal contains far less artifacts.
 
-As LPC-10 is rarely compared to G.711 or G.722, an objective evaluation using \ac{POLQA} \citep{itu-t_p.863:_2014} has been conducted.
+As LPC-10 is rarely compared to G.711 or G.722, a technical evaluation using \ac{POLQA} \citep{itu-t_p.863:_2014} has been conducted.
 \ac{POLQA} estimates the \ac{MOS} for the 5-point \ac{ACR} scale.
 \citet{koster_comparison_2015} presented a transformation function that allows to transform judgments from the 5-point \ac{ACR} scale to the 7-point \ac{CCR} scale.
 For the evaluation \unit[12]{sec} German speech samples have been processed with all three codecs and then evaluated with \ac{POLQA} in super-wideband mode.
@@ -203,11 +201,11 @@ It on only achieves a \ac{MOS} of 1.9 (\unit[7]{pt}~\ac{CCR}).
  \begin{tabulary}{\columnwidth}{C|C|C|C}
    Performance & Signal bandwidth & Codec & \acs{POLQA}\\
    \midrule
-   \ac{HP} & 50...\unit[7000]{Hz}  & G.722, Mode~1 & 4.0 \\ %MOS1-5: 3.9
+   \ac{HP} & 50..\unit[7000]{Hz}  & G.722, Mode~1 & 4.0 \\ %MOS1-5: 3.9
    \hline
-   \ac{MP} & 300...\unit[3400]{Hz} & G.711         & 3.3 \\ %MOS1-5: 3.3
+   \ac{MP} & 300..\unit[3400]{Hz} & G.711         & 3.3 \\ %MOS1-5: 3.3
    \hline
-   \ac{LP} & 300...\unit[3400]{Hz} & LPC-10        & 1.9 \\ %MOS1-5: 2.0
+   \ac{LP} & 300..\unit[3400]{Hz} & LPC-10        & 1.9 \\ %MOS1-5: 2.0
    \end{tabulary}
 \end{table}
 
@@ -222,8 +220,8 @@ This might result in a reduction in perceived quality in a conversational case a
 
 The \ac{VoD} service for \EIIb{} was presented on a tablet computer.
 %Presenting both services on the same device rather than different devices, prevents that participants associate each service with an individual device and use the device as cue for recall.
-Here, a \emph{Nexus 7 (2013)} is used, which provides a 7~inch screen with a resolution of $1920x1200$.
-For \ac{HP}, content is downscaled to a resolution of $1280x720$ and encoded with \ac{H.264} (25~\ac{FPS}, \unit[5]{Mbit/s}, two-pass).
+Here, a \emph{Nexus 7 (2013)} is used, which provides a 7~inch screen with a resolution of \unit[$1920x1200$]{px}.
+For \ac{HP}, content is downscaled to a resolution of \unit[$1280x720$]{px} and encoded with \ac{H.264} (25~\ac{FPS}, \unit[5]{Mbit/s}, two-pass).
 For \ac{LP}, the video signal is degraded by setting the \ac{QP} factor to 50.
 This results in a constant blockiness for \ac{LP}.
 %In difference to limiting the encoding bandwidth, this leads to near constant degradation over multiple frames. 
@@ -248,7 +246,7 @@ This stage was skipped in \EIIb{} and \E3{}.
 In the \emph{third stage}, typical speech telephony degradations were presented.
 %Presenting a training showing a range of potential degradations is expect to reduce intra-personal variations.
 Here, participants assessed the perceived quality of 27 speech stimuli with a duration of circa \unit[8]{sec}.
-In each stimuli two sentences are presented by one speaker.
+In each stimuli two sentences are presented by one human speaker.
 %Three different speakers were used: two male and one female speaker.
 Those stimuli contained different signal bandwidths (wideband, narrowband), codecs (G.711, G.722, GSM-FR, LPC-10), white noise (fullband without codec), and random packet-loss (2\%, and 5\%; G.722, Mode~1, no \ac{PLC}).
 In \EIIb{}, also degradations for the \ac{VoD} service were presented.
@@ -259,7 +257,7 @@ After the presentation of a stimulus, the perceived quality was assessed using t
 In the \emph{fourth stage} the multi-episodic part was conducted.
 Here, usage episodes were presented one after the other.
 Directly after finishing an episode, participants judged the episodic quality on the 7-point \ac{CCR} scale.
-In addition, a participants could describe the experienced degradation in quantitative form.
+In addition, participants could describe the experienced degradation in qualitative form.
 After every 3rd usage episode per service, a multi-episodic judgment is taken on the same scale.
 %In \EIIa{}, \EIIb{}, and \E3{}, pre-processed content was presented
 % varying from \unit[2]{min} to \unit[3]{min} in duration.
@@ -281,7 +279,7 @@ After every 3rd usage episode per service, a multi-episodic judgment is taken on
 %In \E3{} it was in addition assessed, if all episodes were similar in length and and how long one episode was.
 
 \subsection{Content}
-To achieve comparable two-party conversations in \E1{}, one \ac{SCS} (\citep{itu-t_p.805:_2007}) per usage episode needed to be solved.
+To achieve comparable two-party conversations in \E1{}, one \ac{SCS} \citep{itu-t_p.805:_2007} per usage episode needed to be solved.
 Here, the presentation order of \acp{SCS} was kept constant for all conditions.
 %In difference to \citet{itu-t_p.805:_2007} no \ac{SCS} needed to be solved beforehand, but participants were given a written and oral explanation using an exemplary \ac{SCS}.
 In this experiment, all conversations were recorded before applying the performance level.
@@ -294,20 +292,20 @@ The duration of the selected conversations ranged from \unit[128]{sec} to \unit[
 
 For the \ac{VoD} service used in \EIIb{}, scenes of a sitcom were selected.
 Scenes were taken from \emph{The Big Bang Theory} (Season One, BluRay Version, German).
-Those scenes were selected to be meaningful and self-contained.
+The scenes were selected to be meaningful and self-contained.
 Those scenes were selected, so the duration of the two-party conversational recordings were closely matched.
 For each episode one scene was presented.
-Those ranged from \unit[134]{sec} to \unit[198]{sec} ($\mu=$\unit[166]{sec}).
+Those ranged from \unit[134]{s} to \unit[198]{s} with average duration of \unit[166]{s}.
 For \E3{}, an audio book was selected.
 Here, Isabel Allende's \emph{"City of the Beats"} was used, spoken by Marc Oliver Schulze a male German native speaker.\footnote{The audio book is sold as 24 CD collection: Isabel Allende: \emph{Die Stadt der wilden Götter / Im Reich des goldenen Drachen / Im Bann der Masken}, ISBN: 978-86717-191-5.}
-Usage episode varied in duration from \unit[174]{sec} to \unit[199]{sec} ($\mu=$\unit[184]{sec}).
+Usage episode varied in duration from \unit[174]{s} to \unit[199]{s} with average duration of \unit[184]{s}.
 
 %In all experiments the content is completely in German.
 %In case of the \ac{VoD} content the German-dubbed version was used.
 %Versuchspersonenanzahl per Condition (15)?
 
 \section{Participants}
-All four experiments were conducted in Berlin, Germany.
+All four experiments were conducted at TU~Berlin, Germany.
 Participants were required to have no hearing impairments.
 In \EIIb{} normal vision was also mandatory.
 
@@ -367,7 +365,7 @@ A higher number of participants were used for \C7{} (\E1{}) to precisely quantif
 \section{Data Analysis}\label{method:statistic}
 In the following, the results of the experiments are analyzed.
 First, episodic judgments are inspected with regard to consistency between conditions for each experiment.
-Then differences between \E1{} and \EIIa{} the different usage situation.
+Then differences between the usage situation are investigated with \E1{} and \EIIa{}.
 Finally, multi-episodic judgments are evaluated with regard to the presented hypotheses (\autoref{chap:towards}).
 
 All results are reported as \ac{MOS} ranging from 0 to 6 (for the scale see \pageref{img:chap05:quality-scale}) with standard deviation in brackets.
@@ -388,10 +386,11 @@ Such an effect could not be observed in the one-session experiments.
 
 \autoref{tab:lab:episodicMOS} shows \ac{MOS} of episodic judgments for all four experiments by performance level and service.
 In the following, the differences in episodic judgments between conditions are investigated for each experiment.
+Box plots for all conditions per experiments are in the \appendix{} (see \autoref{appendix:results}).
 
 \begin{table}
   \centering
-  \caption{One-session experiments: episodic judgments per performance level.}
+  \caption{One-session experiments: episodic judgments.}
 	\label{tab:lab:episodicMOS}
 	\begin{tabulary}{\textwidth}{c|C|c|c|c}
 	\multirow{2}{*}{Experiment}	& \multirow{2}{*}{Service} & \multicolumn{3}{c}{Episodic Judgment} \\
@@ -418,7 +417,7 @@ In the following, the differences in episodic judgments between conditions are i
 %	\label{img:lab:E1condition7boxplot}
 %\end{figure}
 
-\subsubsection{Experiment \E1{}}\label{lab:episodic:e1}
+\subparagraph*{Experiment \E1{}}\label{lab:episodic:e1}
 In \E1{}, significant differences between episodic judgment of \ac{HP} episodes are found (\Sexpr{kruskal(QU~condition, "E1", "HP")}).
 A post-hoc test shows that \CIIa{} (\ac{MOS}: $\Sexpr{mos_qu_with_sd_by_condition("E1", "HP", "2a")}$) and \C7{} (\ac{MOS}: $\Sexpr{mos_qu_with_sd_by_condition("E1", "HP", "7")}$) are significantly different (\Sexpr{wilcox.pairwise.print(QU~condition, "E1", "HP")[7,2]}).
 For the episodic judgments of \ac{LP} episodes no significant differences between conditions are found (\Sexpr{kruskal(QU~condition, "E1", "LP", condition)}).
@@ -431,7 +430,7 @@ The episodic judgments show that the performance level that \ac{HP} (\Sexpr{mos_
 
 It can thus be concluded that \E1{} is itself consistent.
 
-\subsubsection{Experiment \EIIa{} and \EIIb{}}\label{lab:episodic:e2}
+\subparagraph*{Experiment \EIIa{} and \EIIb{}}\label{lab:episodic:e2}
 For \EIIa{}, episodic judgments of \ac{HP} episodes are significantly different between conditions (\Sexpr{kruskal(QU~condition, "E2a", "HP")}).
 However, conducting a post-hoc does not show significant differences.
 %A post-hoc test shows a significant difference between condition \C4{} and \C6{} (\Sexpr{wilcox.pairwise.print(QU~condition, "E2a", "HP", condition)[5,4]}).
@@ -445,10 +444,10 @@ The episodic judgment of \ac{HP} and \ac{LP} episodes are significantly differen
 
 Comparing \EIIa{} and \EIIb{} with regard to the speech telephony service, the judgments of \ac{LP} episodes are not significantly different (\Sexpr{wilcox(QU~experiment, c("E2a", "E2b"), "LP", condition, id, "telephony")}), but a significant difference is found for \ac{HP} (\Sexpr{wilcox(QU~experiment, c("E2a", "E2b"), "HP", condition, id, "telephony")}).
 This might be due to the differences in the used audio equipment (\appendix{}).
+Here, differences between experiments are observed.
+Nevertheless, both experiments yield in itself consistent judgments.
 
-Although differences between the two experiments are observed, both yield in itself consistent judgments.
-
-\subsubsection{Experiment \E3{}}
+\subparagraph*{Experiment \E3{}}
 In \E3{} no significant differences between the two conditions for episodic judgments of \ac{HP} (\Sexpr{wilcox(QU~condition, "E3", "HP")}) and \ac{LP} are found (\Sexpr{wilcox(QU~condition, "E3", "LP")}).
 The two performance levels are significantly different (\Sexpr{wilcox(QU~performance_level, "E3")}).
 
@@ -457,13 +456,13 @@ It must be noted that judgments of the \ac{LP} episode are not different, althou
 It is thus concluded that the duration did not affect the episodic judgment.
 Thus, a duration neglect for episodic judgments is observed.
 
-\subsubsection{Impact of Usage Situation: Experiment \E1{} vs. \EIIa{}}
+\subparagraph*{Impact of Usage Situation: Experiment \E1{} vs. \EIIa{}}
 By comparing the episodic judgments between \E1{} and \EIIa{}, a potential impact of the usage situation can be investigated.
 Between the two experiments, the episodic judgments for \ac{HP} are not significantly different (\Sexpr{wilcox(QU~experiment, c("E1", "E2a"), "HP")}).
 With regard to \ac{LP}, both experiments show a significant difference (\Sexpr{wilcox(QU~experiment, c("E1", "E2a"), "LP",condition)}).
 
 This indicates that the usage situation without macroscopic performance fluctuations only affects the perception of \ac{LP}.
-The two-party conversation is 0.3pt \ac{MOS} lower than in the third-party listening situation.
+The two-party conversation shows a \unit[0.3]{pt} lower \ac{MOS} value than in the third-party listening situation.
 This might be due to reduced intelligibility and thus higher effort, but also due to differences in user behavior, \ie, need to repeat information.
 However, the effect is rather small.
 
@@ -474,7 +473,7 @@ However, the effect is rather small.
 \subsection{Multi-episodic Judgments}
 In the following the results for multi-episodic judgments are evaluated.
 First, the consistency between conditions is analyzed with regard to the multi-episodic judgment after the 3rd episode.
-Then the hypotheses on multi-episodic perceived quality evaluated.
+Then the hypotheses on multi-episodic perceived quality is evaluated.
 
 \subsubsection{Consistency}
 In all four experiments the first three episodes of a service were presented in \ac{HP}.
@@ -552,11 +551,11 @@ Rather than decreasing further, the multi-episodic judgments seems to saturate.
 In both experiments a decrease of circa \unit[1]{pt} is also observed, if a \ac{HP} episode follows one \ac{LP} episode(s).
 For two episodes, only a decrease less than \unit[0.5]{pt} is observed in both experiments.
 
-It can thus be concluded that \autoref{hypo:number} is partly true.
-A decrease can be observed, if zero up to two \ac{LP} episodes are presented.
+It can thus be concluded that \autoref{hypo:number} is only partly true.
+A decrease can be observed, if up to two \ac{LP} episodes are presented.
 Presenting a third \ac{LP} episode does not seem have an effect on the multi-episodic judgment.
 In fact, the multi-episodic judgment remains above the episodic judgments of \ac{LP} episodes.
-this occurs before the multi-episodic judgment reaches the level of episodic judgment for \ac{LP} (\Sexpr{mos_qu_with_sd_by_condition("E1", "LP")}).
+This occurs before the multi-episodic judgment reaches the level of episodic judgment for \ac{LP} (\Sexpr{mos_qu_with_sd_by_condition("E1", "LP")}).
 This indicates that prior presented \ac{HP} episodes still attribute to this multi-episodic judgment.
 
 \autoref{hypo:number} can be partly accepted.
@@ -600,7 +599,7 @@ For \EIIa{}, \C1{}, \CIIa{}, and \C3{} are not significantly different (\Sexpr{k
 With regard to \autoref{hypo:position}, both experiments yield similarities and difference while varying the position of one or two \ac{LP} episodes.
 For \E1{} presenting the \ac{LP} episode(s) earlier, reduces the impact on the final judgment.
 Thus, a recency effect is observed.
-This can for \EIIa{} only observed with two \ac{LP} episodes, but not for one \ac{LP} episode.
+This can for \EIIa{} only be observed with two \ac{LP} episodes, but not for one \ac{LP} episode.
 This indicates that the usage situation affects the multi-episodic formation process.
 However, the actual reason for this cannot be deduced from experiment \EIIb{}.
 
@@ -779,8 +778,8 @@ Nevertheless, participants were able to attribute the usage episodes and their e
 %Furthermore, it must be noted that \ac{VoD} service was only degraded in the video modality.
 
 \section{Discussion and Conclusion}
-The four experiment show that multi-episodic \ac{QoE} can be assessed in one session.
-Here, the judgment of a multi-episodic experiences in one session with a duration of \unit[30..45]{min} was investigated.
+The four experiments show that multi-episodic \ac{QoE} can be assessed in one session.
+Here, the judgment of a multi-episodic experience in one session with a duration of \unit[30..45]{min} was investigated.
 Although the selected degradation for \ac{LP} (LPC-10) is not used for speech telephony, its presentation resulted in observable effects on following multi-episodic judgments.
 This allowed to investigate the formation process of multi-episodic perceived quality.
 
@@ -828,7 +827,6 @@ The results show that episodic judgments and multi-episodic judgments are assess
 
 The results show that multi-episodic judgments in one session are affected by several effects.
 Here a recency effect, and a duration neglect could be observed.
-The existence of a peak-effect could not be proven.
-
-The experimental results, beyond analysis of occurring effects, to derive a prediction model.
-Here, the large number of conditions in \E1{} and \EIIa{} are well suited while \EIIb{} and \E3{} can be used for verification.
+The existence of a peak-effect could not be proven. 
+The experimental results, beyond analysis of occurring effects, allow to derive a prediction model.
+Here, the large number of conditions in \E1{} and \EIIa{} are well suited.

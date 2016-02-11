@@ -210,7 +210,7 @@ This is in line with \citet{moller_single-call_2011}.
 In addition, here also a slight increase of episodic judgments over the usage period is indicated.
 The reason for this unknown and cannot be deduced from the experiments alone.
 
-With regard to multi-episodic \ac{QoE} the gathered data is not sufficient for creation of a prediction model, but can be used to evaluate the performance of a model.
+With regard to multi-episodic \ac{QoE} the gathered data is not sufficient for creation of a prediction model.
 
 \section{Experiment E5}
 Based upon the practical insights of \E4{} in \E5{} only media-consumption was used.
@@ -240,7 +240,7 @@ The audio signal was treated like the \ac{AoD} service.
 The video signal was encoded to the native resolution of the mobile device ($800x480$ at 4.3~inch) with 25~\ac{FPS} with \ac{H.264} (two-pass).
 For \ac{HP} a video encoding bandwidth was set to \unit[3]{Mbit/s} and for \ac{LP} to \unit[0.25]{Mbit/s}.
 Degradation both modalities done to increase the perceptual difference between \ac{HP} and \ac{LP}.
-Details of the technical setup are described in the \appendix{} \autoref{appendix:setup}.
+Details of the technical setup are described in the \appendix{} (see \autoref{appendix:setups}).
 
 Episodic judgments are taken on the 7-point \ac{CCR} scale after every episode.
 Multi-episodic judgments per service are taken at the 2nd, 5th, 8th, 11th and 14th day.
@@ -304,7 +304,7 @@ Between the two conditions, only the judgments after the 2nd day are significant
 
 \begin{table}[h]
 	\centering
-	\caption{Multiple days (\E5{}): Multi-episodic judgments by condition and service.}
+	\caption{Multiple days (\E5{}): Multi-episodic judgments.}
 	\label{tab:field:e5results}
 	\begin{tabular}{c|c|c||c|c}
 	Day & \multicolumn{4}{c}{Multi-episodic Judgment} \\
@@ -485,6 +485,7 @@ For \ac{LP} significant differences between conditions are also found for \ac{LP
 A post-hoc tests shows that \C5{} is significantly different to \C1{}, \C4{}, and \C8{} ($p<0.05$). %wilcox.pairwise.print(QU~condition, "E6a", "LP")
 It must be noted that episodic judgments of \C5{} resulted in the highest \ac{MOS} for \ac{HP} and in the lowest for \ac{LP}.
 A detailed analysis did not yield a reason for the difference, and it is thus considered an artifact due to the between-subject design.
+Box plots for all conditions can be found in the \appendix{} (see \autoref{appendix:results}).
 
 \begin{table}
 	\centering
@@ -651,8 +652,6 @@ However, a direct comparison of the experiments cannot be conducted due to the d
 
 In difference to \E4{} and \E5{}, \E6{} does provide a large data set (6~conditions, 95~participants).
 This is used in following to create a prediction model for multi-episodic judgments based upon episodic judgments.
-The data of \E4{}, and \E5{} can be used to a limited degree for the performance evaluation.
-
 
 
 %OPTIONAL!
