@@ -194,18 +194,18 @@ In the following first the experimental design is presented and then the results
 In this experiment, pairs of two participants used a video-telephony service over a usage period of \unit[12]{days}.
 \citet{moller_single-call_2011}\footnote{It must be noted that \citet{moller_single-call_2011} uses the term \emph{service quality} as synonym to multi-episodic perceived quality, rather than service quality in terms of \citet{parasuraman_conceptual_1985} (\cf, \autoref{chap:03}).} followed the premise that the service works in general, \ie, providing the best achievable performance, but sometimes usage episodes are only presented with reduced performance.
 The service needed to be used twice a day with the first call between \unit[6]{h} and \unit[15]{h} and the second call between \unit[15]{h} and midnight.
-For each of those \unit[24]{calls} a \ac{SCS} \citep[ITU-T~P.805][]{itu-t_p.805:_2007} needed to be solved.
+For each of those \unit[24]{calls} a \ac{SCS} \citep{itu-t_recommendation_p.805_subjective_2007} needed to be solved.
 \acp{SCS} suggest a conversational structure to limit the behavioral freedom of caller and callee.
 A detailed explanation see see \autoref{method:sct}.
 Furthermore, each pair of participants was allowed to use the service for private communication, if desired.
 
 After finishing a call, each participant rated the perceived quality of this usage episode (\emph{episodic quality}).
 After the last call on the 2nd, 7th, and 12th day the perceived quality of all experienced usage episodes \emph{so far} is assessed (\emph{multi-episodic judgment}).
-The episodic and multi-episodic judgment were both taken on a 7-point \ac{CCR} scale\footnote{For a comparison between discrete 5-point \ac{ACR} scale and 7-point \ac{CCR} scale see \citet{koster_comparison_2015}.} \citep[][p.~18]{itu-t_p.851:_2003}. The scale is shown in \autoref{img:chap05:quality-scale}.
+The episodic and multi-episodic judgment were both taken on a 7-point \ac{CCR} scale\footnote{For a comparison between discrete 5-point \ac{ACR} scale and 7-point \ac{CCR} scale see \citet{koster_comparison_2015}.} \citep[][p.~18]{itu-t_recommendation_p.832_subjective_2000}. The scale is shown in \autoref{img:chap05:quality-scale}.
 
 \begin{figure}
 	\includegraphics[width=1\textwidth]{figure/quality7pt_scale}
-	\caption[7-point \acs{CCR} scale]{7-point \acs{CCR} scale with German labels; labels from left-to-right: extremely bad~(0), bad~(1), poor~(2), fair~(3), good~(4), excellent~(5) and ideal~(6) \citep{itu-t_p.851:_2003} (own illustration).}
+	\caption[7-point \acs{CCR} scale]{7-point \acs{CCR} scale with German labels; labels from left-to-right: extremely bad~(0), bad~(1), poor~(2), fair~(3), good~(4), excellent~(5) and ideal~(6) \citep{itu-t_recommendation_p.832_subjective_2000} (own illustration).}
 	\label{img:chap05:quality-scale}
 \end{figure}
 
