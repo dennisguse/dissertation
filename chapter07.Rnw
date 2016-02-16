@@ -169,7 +169,7 @@ For digital telecommunication services this can be achieved in the compression s
 
 \ac{HP} should provide state of the art performance.
 For speech telephony this is at the time of this writing the transmission in wideband with proper loudness, but without temporal clipping, noise, echo or other negative factors.
-For digital transmission of wideband speech the codec \emph{G.722} (Mode~1)~\citep{itu-t_g.722:_2012} is often used as reference condition.
+For digital transmission of wideband speech the codec \emph{G.722} (Mode~1)~\citep{itu-t_recommendation_g.722_7khz_2012} is often used as reference condition.
 This codec achieves very similar judgments like uncompressed wideband speech signals. %TODO Add refs, Moeller, Raake, Marcel
 %In subjective listening-only experiments G.722 typically achieves a \ac{MOS} of 4.5~on the 5-point \ac{ACR} scale.
 
@@ -180,12 +180,12 @@ The re-synthesized speech sounds very unnatural and is described as robotic, and
 In fact, this codec is not used for speech telephony.
 However, LPC-10 is useful for the investigation of multi-episodic perceived quality, because it allows to create severe reduction in performance while providing a understandable speech signal.
 
-For \ac{MP}, \emph{G.711}~\citep{itu-t_g.711:_1988} is selected.
+For \ac{MP}, \emph{G.711}~\citep{itu-t_recommendation_g.711_pulse_1988} is selected.
 This codec is the common reference condition for narrowband speech telephony.
 Compared to G.722 the difference between narrowband and wideband is measurable. %TODO
 In comparison to LPC-10, the re-synthesized speech signal contains far less artifacts.
 
-As LPC-10 is rarely compared to G.711 or G.722, a technical evaluation using \ac{POLQA} \citep{itu-t_p.863:_2014} has been conducted.
+As LPC-10 is rarely compared to G.711 or G.722, a technical evaluation using \ac{POLQA} \citep{itu-t_recommendation_p.863_perceptual_2014} has been conducted.
 \ac{POLQA} estimates the \ac{MOS} for the 5-point \ac{ACR} scale.
 \citet{koster_comparison_2015} presented a transformation function that allows to transform judgments from the 5-point \ac{ACR} scale to the 7-point \ac{CCR} scale.
 For the evaluation \unit[12]{sec} German speech samples have been processed with all three codecs and then evaluated with \ac{POLQA} in super-wideband mode.
@@ -211,7 +211,7 @@ It on only achieves a \ac{MOS} of 1.9 (\unit[7]{pt}~\ac{CCR}).
 
 End-to-end delay is an additional factor influencing perceived quality.
 This is important for \E1{} due to the use of a conversational task.
-A one-way delay up to \unit[100]{ms} is rarely noticeable and thus not perceived as degradation~\citep[][p.~9]{itu-t_g.107:_2005}.
+A one-way delay up to \unit[100]{ms} is rarely noticeable and thus not perceived as degradation~\citep[][p.~9]{itu-t_recommendation_g.107_e-model_2015}.
 LPC-10 requires a look-ahead of \unit[90]{ms} while a frame duration of \unit[22.5]{ms} is applied.
 This results in coding delay alone of up to \unit[112.5]{ms}.
 G.711 and G.722 provide a algorithmic delay without look-ahead of \unit[0.125]{ms} and both codecs can be used with a minimal frame duration of \unit[10]{ms}.
@@ -279,9 +279,9 @@ After every 3rd usage episode per service, a multi-episodic judgment is taken on
 %In \E3{} it was in addition assessed, if all episodes were similar in length and and how long one episode was.
 
 \subsection{Content}
-To achieve comparable two-party conversations in \E1{}, one \ac{SCS} \citep{itu-t_p.805:_2007} per usage episode needed to be solved.
+To achieve comparable two-party conversations in \E1{}, one \ac{SCS} \citep{itu-t_recommendation_p.805_subjective_2007} per usage episode needed to be solved.
 Here, the presentation order of \acp{SCS} was kept constant for all conditions.
-%In difference to \citet{itu-t_p.805:_2007} no \ac{SCS} needed to be solved beforehand, but participants were given a written and oral explanation using an exemplary \ac{SCS}.
+%In difference to \citet{itu-t_recommendation_g.107_e-model_2015} no \ac{SCS} needed to be solved beforehand, but participants were given a written and oral explanation using an exemplary \ac{SCS}.
 In this experiment, all conversations were recorded before applying the performance level.
 For \EIIa{} and \EIIb{}, one recording for each of the episodes 1..6 was selected.
 Those were required to show common task solving behavior.
