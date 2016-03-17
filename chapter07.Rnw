@@ -4,19 +4,19 @@ timeseries = read.csv("data/data_minimal.csv")
 source('R_eval.R')
 source('R_plot.R')
 
-timeseries=timeseries[-which(timeseries$experiment == "E1" & timeseries$condition == "5a")]
+timeseries=timeseries[-which(timeseries$experiment == "E1" & timeseries$condition == "5a"), ]
 attach(timeseries)
 @
 
 \chapter{Multi-episodic Perceived Quality in One Session}\label{chap:lab}
-Four experiments were conducted for the evaluation of the seven hypotheses on multi-episodic perceived quality.
-These experiments follow the same procedure, but differ in usage situation, task and, respectively, service type.
+Four experiments were conducted for the evaluation of the seven hypotheses on multi-episodic perceived quality in one session with a time-span of up to~\unit[45]{min}.
+These experiments follow the same procedure, but differ in usage situation, task, and service type, respectively.
 %In all four experiments speech-based services are used.
 An overview on the four experiments is given in \autoref{tab:lab:experiments}.
-In fact, in each experiment only a subset of hypotheses are investigated.
-\E1{} and \E2a{} are the main experiments, focusing most important on \autoref{hypo:number} and \autoref{hypo:position}.
+In fact, in each experiment only a subset of hypotheses is investigated.
+\E1{} and \EIIa{} are the main experiments, focusing most importantly on \autoref{hypo:number} and \autoref{hypo:position}.
 Both differ in usage situation, \ie, an active conversation vs. third-party listening.
-\E2b{} and \E3{} are especially designed for the investigation of \autoref{hypo:independent} and, respectively, \autoref{hypo:duration}.
+\EIIb{} and \E3{} are especially designed for the investigation of \autoref{hypo:independent} and \autoref{hypo:duration}, respectively.
 
 \label{E1}\label{E2a}\label{E2b}\label{E2}\label{E3}
 %Overview on Experiments
@@ -52,21 +52,21 @@ For the investigation on the impact of a second service (\autoref{hypo:independe
 Here, a \ac{VoD} service is used.
 
 The four experiments consisted of at least 6 usage episodes in which each usage episode should have a minimal duration of 2 min.
-In fact, all experiments except \E1{} apply a passive situation and thus usage duration can be defined beforehand.
+In fact, all experiments except \E1{} apply a passive situation and thus the usage duration can be defined beforehand.
 
 Except for \EIIa{} only two performance levels are used per experiment, \ie, \acf{HP} and \acf{LP}.
 For all experiments the first three episodes were presented with the best performance.
-This enables participants to experience the service in a well-working setting and similar to \citet[][]{moller_single-call_2011}.
+This enables participants to experience the service in a well-working setting,l similar to \citet[][]{moller_single-call_2011}.
 Non-\ac{HP} were only introduced per service for episode 4, 5, and 6.
 
-In all experiments, a multi-episodic judgment on the 7-point \ac{CCR} scale is taken after every third episode per service.
+In all experiments, a multi-episodic judgment on the 7-point \ac{CCR} scale is taken after every third  episode with the service.
 Thus, the first multi-episodic judgment is taken after presenting only \ac{HP} episodes and is similar between all conditions.
-This allows to investigate potential impact of the between-subject design, because this judgment should be similar for conditions.
-Furthermore, this judgment can be used as reference to assess the impact of presented \ac{LP} episode(s) on following multi-episodic judgments.
+This allows to investigate potential impact of the between-subject design, because this judgment should be similar for between all conditions.
+Furthermore, this judgment can be used as a reference to assess the impact of the presented \ac{LP} episode(s) on following multi-episodic judgments.
 %It is assumed that multi-episodic judgments do not change, if the same performance level is presented only.
 %This judgment can thus be used as \emph{reference}.
 %In fact, it can be assumed that as long as only \ac{HP} episodes are presented, the multi-episodic judgment would not change.
-This judgment is in the following denoted as \emph{reference}.
+This judgment is in the following denoted as the \emph{reference}.
 
 \subsection{Conditions}\label{C0}\label{C1}\label{C2}\label{C2a}\label{C2b}\label{C3}\label{C4}\label{C5}\label{C5a}\label{C5b}\label{C6}\label{C7}\label{C8}
 Overall 11 conditions were created that allow to investigate the seven hypotheses in detail.
@@ -113,12 +113,12 @@ Condition \C0{}, which presents only \ac{HP} usage episode, is only conducted in
 For all other cases, this condition is omitted.
 Here, the reference is used as approximation for the multi-episodic judgment after the 6th usage episode of \C0{}.
 
-\autoref{hypo:number}, \ie, increasing the number of \ac{LP} episodes reduces the following multi-episodic judgment, can be investigated by comparing the multi-episodic judgment after the 6th usage episode for \C3{}, \C5{}\footnote{With regard to the multi-episodic judgment after the 6th usage episode, it is not differentiated between \C5a{} and \C5b{}, because both are identical until this judgment.} and \C6{} as well as \CIIa{} and \C4{}.
+\autoref{hypo:number}, \ie, increasing the number of \ac{LP} episodes reduces the following multi-episodic judgment, can be investigated by comparing the multi-episodic judgment after the 6th usage episode for \C3{}, \C5{}\footnote{With regard to the multi-episodic judgment after the 6th usage episode, it is not differentiated between \CVa{} and \CVb{}, because both are identical until this judgment.}, and \C6{} as well as \CIIa{} and \C4{}.
 The former presents an increasing number of \ac{LP} episodes directly before the multi-episodic judgment whereas the latter presents the last episode before the multi-episodic judgment in \ac{HP}.
 
 \autoref{hypo:position} focuses on the position of the \ac{LP} episodes towards the following multi-episodic judgment.
 Based upon the recency effect, it is expected that increasing the number of \ac{HP} episodes before the multi-episodic judgment reduces the negative effect of presented \ac{LP} episodes.
-This can be investigated by comparing the multi-episodic judgment of conditions \C1{}, \CIIa{}, and \C3{} as well as conditions \C4{} and \C5{} (a+b) for one and, respectively, two \ac{LP} usage episodes.
+This can be investigated by comparing the multi-episodic judgment of conditions \C1{}, \CIIa{}, and \C3{} as well as conditions \C4{} and \C5{} (a+b) for one and two \ac{LP} usage episodes, respectively.
 
 In \autoref{hypo:consecutive}, it is assumed that consecutive \ac{LP} episodes are preferred over the same number of non-consecutive \ac{LP} episodes, because the performance varies less often.
 This should lead to higher multi-episodic judgments for the consecutive case.
@@ -127,7 +127,7 @@ This hypothesis can be investigated by comparing \C8{} with \C4{} and \C5{}.
 \autoref{hypo:strength} focuses on the investigation of a peak effect, \ie, a multi-episodic judgment is more affected by the lowest episodic performance. 
 This is investigated by introducing a third performance level \ac{MP}.
 This should provide a performance and perceived quality worse than \ac{HP} but better than \ac{LP}.
-Comparing the multi-episodic judgment after the 6th usage episode of \C7{} with \C5{} and \CIIa{}, allows to investigate this hypotheses.
+Comparing the multi-episodic judgment after the 6th usage episode of \C7{} with \C5{} and \CIIa{}, allows to investigate this hypothesis.
 Those three conditions differ only in the performance level of the 6th episode presenting it in \ac{MP}, \ac{HP}, and \ac{LP}.
 If a peak-effect occurs for multi-episodic perceived quality, the result of condition \C7{} should be closer to \CIIa{}.
 
@@ -142,15 +142,15 @@ This is evaluated by comparing \CIIa{} and \CIIb{}, which both present the 5th u
 All episodes in \CIIa{} and \CIIb{} have a similar duration, except the 5th episode of \CIIb{}.
 The duration of this episode is doubled.
 Doubling the duration should enforce a measurable effect, if duration is not neglected.
-The 5th episode is used for this, so the difference in duration between episodes is less obvious to participants.
+The 5th episode is used for this, so the difference in duration between episodes is less obvious to participants for their multi-episodic judgment after the 6th usage episode.
 %In fact, \CIIb{} is similar to \C4{}.
 %Both present the same overall duration of \ac{LP}, which is split in \C4{} into two episodes, followed by one \ac{HP} episode before the multi-episodic judgment.
 
 In \autoref{hypo:independent} it is hypothesized that multi-episodic perceived quality is judged on a per-service basis, \ie, usage of other service(s) in the same usage period does not affect the multi-episodic judgment.
 This can be be investigated by presenting a second service in the same session.
-Following the experimental approach of sequential usage episodes, this can be investigated by using both services alternating.
+Following the experimental approach of sequential usage episodes, this can be investigated by using both services alternatingly.
 This is investigated in \EIIb{} presenting a speech telephony service in \C5{}.
-Here, a second service is either presented in \C0{}, \C4{}, or not.
+Here, a second service is either presented in \C0{}, \C4{}, or not at all.
 The 2nd service is presented in two conditions to investigate, if the condition of the 2nd service affect the judgment the to be assessed service.
 As second service a \ac{VoD} service is used.
 
@@ -175,7 +175,7 @@ This codec achieves very similar judgments like uncompressed wideband speech sig
 
 For \ac{LP}, the speech signal is coded with \emph{LPC-10}\footnote{LPC-10 is also known as \emph{FS-1015} and \emph{STANAG 4198}.}.
 This codec is designed for low bit rate radio transmission while providing intelligibility rather than natural reproduction.
-The re-synthesized speech sounds very unnatural and is described as robotic, and muddy with a hissing background noise.\citet{}
+The re-synthesized speech signal sounds very unnatural and is described as robotic, and muddy with a hissing background noise.\citet{}
 %LPC-10 achieves a 5-point $\ac{MOS}$ of 2.3 \citep[][]{gibson_multimedia_2000} while requiring only \unit[2.4]{kbit/s} transmission bandwidth. %Gibson J.D. (ed.)-Multimedia Communications_ Directions and Innovations (2001).pdf
 In fact, this codec is not used for speech telephony.
 However, LPC-10 is useful for the investigation of multi-episodic perceived quality, because it allows to create severe reduction in performance while providing a understandable speech signal.
@@ -191,7 +191,7 @@ As LPC-10 is rarely compared to G.711 or G.722, a technical evaluation using \ac
 For the evaluation \unit[12]{sec} German speech samples have been processed with all three codecs and then evaluated with \ac{POLQA} in super-wideband mode.
 The results are shown in \autoref{tab:lab:performance}.
 It must be noted that LPC-10 is very different to G.722 and G.711.
-It on only achieves a \ac{MOS} of 1.9 (\unit[7]{pt}~\ac{CCR}).
+It only achieves a \ac{MOS} of 1.9 on the 7-point~\ac{CCR}.
 
 \begin{table}
  \centering
@@ -231,8 +231,8 @@ However, both services are presented on the same device.
 %The audio modality of the \ac{VoD} service might still be used in the evaluation of 
 % might still be used for comparison while evaluating the perceived quality of the telephony service.
 
-In all experiments, a binaural representation is provided using a pair of headphones.
-The experimental setups are described in the \appendix{} (\pageref{appendix:setups}).
+In all experiments, a diotic representation is provided using a pair of headphones.
+The experimental setups are described in the \appendix{}~\ref{appendix:setups} (p.~\pageref{appendix:setups}).
 
 \subsection{Procedure}\label{sec:training}
 The one-session experiments consist of 4 stages with an overall duration of \unit[45...90]{min}.
@@ -245,7 +245,7 @@ This stage was skipped in \EIIb{} and \E3{}.
 
 In the \emph{third stage}, typical speech telephony degradations were presented.
 %Presenting a training showing a range of potential degradations is expect to reduce intra-personal variations.
-Here, participants assessed the perceived quality of 27 speech stimuli with a duration of circa \unit[8]{sec}.
+Here, participants assessed the perceived quality of 27~speech~stimuli with a duration of approximately~\unit[8]{sec}.
 In each stimuli two sentences are presented by one human speaker.
 %Three different speakers were used: two male and one female speaker.
 Those stimuli contained different signal bandwidths (wideband, narrowband), codecs (G.711, G.722, GSM-FR, LPC-10), white noise (fullband without codec), and random packet-loss (2\%, and 5\%; G.722, Mode~1, no \ac{PLC}).
@@ -286,7 +286,7 @@ In this experiment, all conversations were recorded before applying the performa
 For \EIIa{} and \EIIb{}, one recording for each of the episodes 1..6 was selected.
 Those were required to show common task solving behavior.
 %Furthermore, no emotional reaction like laughing should be present and not contain any degradations due to other sound sources like audible breathing, but only clear and clean speech.
-The duration of the selected conversations ranged from \unit[128]{sec} to \unit[194]{sec} ($\mu=$\unit[153]{sec}).
+The duration of the selected conversations ranged from \unit[128]{sec} to \unit[194]{sec} with an average of \unit[153]{s}.
 %The recordings were normalized per speaker, mixed into one channel and encoded with G.722 or, respectively, LPC-10.
 %The six selected recordings were presented in \EIIa{} and \EIIb{} in the same order as in \E1{}.
 
@@ -297,8 +297,8 @@ Those scenes were selected, so the duration of the two-party conversational reco
 For each episode one scene was presented.
 Those ranged from \unit[134]{s} to \unit[198]{s} with average duration of \unit[166]{s}.
 For \E3{}, an audio book was selected.
-Here, Isabel Allende's \emph{"City of the Beats"} was used, spoken by Marc Oliver Schulze a male German native speaker.\footnote{The audio book is sold as 24 CD collection: Isabel Allende: \emph{Die Stadt der wilden Götter / Im Reich des goldenen Drachen / Im Bann der Masken}, ISBN: 978-86717-191-5.}
-Usage episode varied in duration from \unit[174]{s} to \unit[199]{s} with average duration of \unit[184]{s}.
+Here, Isabel Allende's \emph{"City of the Beats"} was used, spoken by Marc Oliver Schulze, a male German native speaker.\footnote{The audio book is sold as 24 CD collection: Isabel Allende: \emph{Die Stadt der wilden Götter / Im Reich des goldenen Drachen / Im Bann der Masken}, ISBN: 978-86717-191-5.}
+Usage episodes varied in duration from \unit[174]{s} to \unit[199]{s} with an average duration of \unit[184]{s}.
 
 %In all experiments the content is completely in German.
 %In case of the \ac{VoD} content the German-dubbed version was used.
@@ -309,10 +309,10 @@ All four experiments were conducted at TU~Berlin, Germany.
 Participants were required to have no hearing impairments.
 In \EIIb{} normal vision was also mandatory.
 
-\E1{} was conducted from April~2014 to December~2015 with 78~female and 51~male participants aging from 18~to 53~years ($\mu=26.7$, $\sigma=5.9$). %mean(subset(data, data$Study == "Lab-TEL" & data$Condtion != "5a")$Age), nrow(subset(data, data$Study == "Lab-LST" & data$Sex == "female")) 
-\EIIa{} was conducted from August~2014 to March~2015 with 75~female and 40~male participants aging from 18~to 50~years ($\mu=26.2$, $\sigma=4.6$).
-\EIIb{} was conducted in January with 20~female and 13~male participants aging from 19~to 34~years ($\mu=26.6$, $\sigma=4.3$). 
-\E3{} was conducted in October and November~2015 with 20~female and 16~male participants aging from 18~to 32~years ($\mu=25.0$, $\sigma=3.9$).
+\E1{} was conducted from April~2014 to December~2015 with 78~female and 51~male participants aging from 18~to 53~years (${\mu=26.7}$, ${\sigma=5.9}$). %mean(subset(data, data$Study == "Lab-TEL" & data$Condtion != "5a")$Age), nrow(subset(data, data$Study == "Lab-LST" & data$Sex == "female")) 
+\EIIa{} was conducted from August~2014 to March~2015 with 75~female and 40~male participants aging from 18~to 50~years (${\mu=26.2}$, ${\sigma=4.6}$).
+\EIIb{} was conducted in January~2016 with 20~female and 13~male participants aging from 19~to 34~years (${\mu=26.6}$, ${\sigma=4.3}$). 
+\E3{} was conducted in October and November~2015 with 20~female and 16~male participants aging from 18~to 32~years (${\mu=25.0}$, ${\sigma=3.9}$).
 Participation in \E1{} was compensated with 20~EUR, in \EIIa{} and \E3{} with 10~EUR, and in \EIIb{} with 15~EUR.
 
 The conducted audiometry in \E1{} and \EIIa{} did not find for any participants hearing impairments.
@@ -368,7 +368,7 @@ First, episodic judgments are inspected with regard to consistency between condi
 Then differences between the usage situation are investigated with \E1{} and \EIIa{}.
 Finally, multi-episodic judgments are evaluated with regard to the presented hypotheses (\autoref{chap:towards}).
 
-All results are reported as \ac{MOS} ranging from 0 to 6 (for the scale see \pageref{img:chap05:quality-scale}) with standard deviation in brackets.
+All results are reported as \ac{MOS} ranging from 0 to 6 (for the scale see p.~\pageref{img:chap05:quality-scale}) with standard deviation in brackets.
 In addition, a statistical evaluation is conducted.
 Two unpaired samples are evaluated with a \emph{Wilcoxon rank-sum test}.
 More than two unpaired samples are compared with a \emph{Kruskal-Wallis test}.
@@ -379,7 +379,7 @@ For tests, a significance level of 5\% is applied.
 
 Non-parametric statistical tests are chosen over parametric tests, because the applied assumptions of parametric tests are likely to be violated. % due to the between subject design.
 
-\subsection{Episodic Judgments} 
+\subsection{Episodic Judgments}\label{lab:episodic}
 The episodic judgments of all conditions are compared to investigate for an influence of the applied between-subject design.
 In prior work a negative influence on the episodic judgment of \ac{HP} episodes is observed, if those directly follow \ac{LP} episode(s) \citep{moller_single-call_2011}.
 Such an effect could not be observed in the one-session experiments.
@@ -417,20 +417,20 @@ Box plots for all conditions per experiments are in the \appendix{} (see \autore
 %	\label{img:lab:E1condition7boxplot}
 %\end{figure}
 
-\subparagraph*{Experiment \E1{}}\label{lab:episodic:e1}
+\subparagraph*{Experiment \E1{}}
 In \E1{}, significant differences between episodic judgment of \ac{HP} episodes are found (\Sexpr{kruskal(QU~condition, "E1", "HP")}).
-A post-hoc test shows that \CIIa{} (\ac{MOS}: $\Sexpr{mos_qu_with_sd_by_condition("E1", "HP", "2a")}$) and \C7{} (\ac{MOS}: $\Sexpr{mos_qu_with_sd_by_condition("E1", "HP", "7")}$) are significantly different (\Sexpr{wilcox.pairwise.print(QU~condition, "E1", "HP")[7,2]}).
+A post-hoc test shows that \CIIa{} (\ac{MOS}: $\Sexpr{mos_qu_with_sd_by_condition("E1", "HP", "2a")}$) and \C7{} (\ac{MOS}: $\Sexpr{mos_qu_with_sd_by_condition("E1", "HP", "7")}$) are significantly different (\Sexpr{wilcox.pairwise.print(QU~condition, "E1", "HP")[6,2]}).
 For the episodic judgments of \ac{LP} episodes no significant differences between conditions are found (\Sexpr{kruskal(QU~condition, "E1", "LP", condition)}).
 Although \ac{HP} episodes were significantly different between conditions, an analysis did not yield a reason for the difference.
 It is thus considered an artifact of the between-subject design due to the larger sample size of \C7{}.
 The episodic judgments are significantly different between \ac{HP} and \ac{LP} (\Sexpr{wilcox(QU~performance_level, "E1", c("HP", "LP"))}).
 A comparison of \ac{MP} is done for the evaluation of \autoref{hypo:strength}, because it was only presented in \C7{}.
 
-The episodic judgments show that the performance level that \ac{HP} (\Sexpr{mos_qu_with_sd_by_condition("E1", "HP")}) and \ac{LP} (\Sexpr{mos_qu_with_sd_by_condition("E1", "LP")}) are perceived very different.
+The episodic judgments show that the performance levels \ac{HP}, \Sexpr{mos_qu_with_sd_by_condition("E1", "HP")}, and \ac{LP}, \Sexpr{mos_qu_with_sd_by_condition("E1", "LP")}, are perceived differently.
 
-It can thus be concluded that \E1{} is itself consistent.
+It can thus be concluded that \E1{} is consistent.
 
-\subparagraph*{Experiment \EIIa{} and \EIIb{}}\label{lab:episodic:e2}
+\subparagraph*{Experiment \EIIa{} and \EIIb{}}
 For \EIIa{}, episodic judgments of \ac{HP} episodes are significantly different between conditions (\Sexpr{kruskal(QU~condition, "E2a", "HP")}).
 However, conducting a post-hoc does not show significant differences.
 %A post-hoc test shows a significant difference between condition \C4{} and \C6{} (\Sexpr{wilcox.pairwise.print(QU~condition, "E2a", "HP", condition)[5,4]}).
@@ -445,7 +445,7 @@ The episodic judgment of \ac{HP} and \ac{LP} episodes are significantly differen
 Comparing \EIIa{} and \EIIb{} with regard to the speech telephony service, the judgments of \ac{LP} episodes are not significantly different (\Sexpr{wilcox(QU~experiment, c("E2a", "E2b"), "LP", condition, id, "telephony")}), but a significant difference is found for \ac{HP} (\Sexpr{wilcox(QU~experiment, c("E2a", "E2b"), "HP", condition, id, "telephony")}).
 This might be due to the differences in the used audio equipment (\appendix{}).
 Here, differences between experiments are observed.
-Nevertheless, both experiments yield in itself consistent judgments.
+Nevertheless, both experiments yield consistent judgments.
 
 \subparagraph*{Experiment \E3{}}
 In \E3{} no significant differences between the two conditions for episodic judgments of \ac{HP} (\Sexpr{wilcox(QU~condition, "E3", "HP")}) and \ac{LP} are found (\Sexpr{wilcox(QU~condition, "E3", "LP")}).
@@ -473,17 +473,17 @@ However, the effect is rather small.
 \subsection{Multi-episodic Judgments}
 In the following the results for multi-episodic judgments are evaluated.
 First, the consistency between conditions is analyzed with regard to the multi-episodic judgment after the 3rd episode.
-Then the hypotheses on multi-episodic perceived quality is evaluated.
+Then the hypotheses on multi-episodic perceived quality are evaluated.
 
 \subsubsection{Consistency}
 In all four experiments the first three episodes of a service were presented in \ac{HP}.
 Thus, the multi-episodic judgments taken directly after this episode should be similar for all conditions of an experiment.
 
-For this judgment, no significant differences are observed for \E1{} (\Sexpr{kruskal(IQU~condition, "E1", "HP", condition, c(3))}), \EIIa{} (\Sexpr{kruskal(IQU~condition, "E2a", "HP", condition, c(3))}), and \E3{}  (\Sexpr{wilcox(IQU~condition, "E3", "HP", condition, c(3))}).
+For this judgment, no significant differences are observed for \E1{} (\Sexpr{kruskal(IQU~condition, "E1", "HP", condition, c(3))}), \EIIa{} (\Sexpr{kruskal(IQU~condition, "E2a", "HP", condition, c(3))}), and \E3{} (\Sexpr{wilcox(IQU~condition, "E3", "HP", condition, c(3))}).
 For \EIIb{} neither significant differences are observed for the speech telephony service (\Sexpr{kruskal(IQU~condition, "E2b", "HP", condition, c(3), "telephony")} nor the \ac{VoD} service (\Sexpr{wilcox(IQU~condition, "E2b", "HP", condition, c(3), "VoD")}).
 This indicates that, as long as only \ac{HP} episodes are presented, the between-subject design did not affect this multi-episodic judgment.
 \autoref{tab:lab:multiconsistency} shows the multi-episodic judgment after the third episode.
-Although, not directly comparable due to differences between experiments, it must be noted that the judgments are rather close.
+Although not directly comparable due to differences between experiments, it must be noted that the judgments are rather close.
 %In fact, for the speech telephony in \E1{}, \EIIa{}, and \EIIb{} this judgment is not significantly different (\Sexpr{kruskal(IQU~experiment, c("E1", "E2a", "E2b"), "HP", condition, 3, "telephony")}).
 
 \begin{table}[h]
@@ -509,10 +509,10 @@ A one-sided post-hoc test finds that the reference is significantly different to
 Also, \C3{} and \CVb{} (\Sexpr{wilcox.pairwise.print(IQU~condition, "E1", performance_level, c("3", "5b", "6"), c("6"), reference=T)[2,2]}) as well as \C3{} and \C6{} are significantly different (\Sexpr{wilcox.pairwise.print(IQU~condition, "E1", performance_level, c("3", "5b", "6"), c("6"), reference=T)[3,2]}).
 No significant difference is found between \CVb{} and \C6{} (\Sexpr{wilcox.pairwise.print(IQU~condition, "E1", performance_level, c("3", "5b", "6"), c("6"), reference=T, alternative="less")[3,3]}).
 The reference, \CIIa{}, and \C4{} are significantly different (\Sexpr{kruskal(IQU~condition, "E1", performance_level, c("2a", "4"), c("6"), reference=T)}).
-A one-sided post-hoc test finds that the reference is significantly different to \CIIa{} and \C4{} (\Sexpr{wilcox.pairwise.print(IQU~condition, "E1", performance_level, c("2a", "4"), c("6"), alternative="less", reference=T)[1,1]}) and that \CIIa{} is significantly different than \C4{} (\Sexpr{wilcox.pairwise.print(IQU~condition, "E1", performance_level, c("2a", "4"), c("6"), alternative="less", reference=T)[2,2]}).
+A one-sided post-hoc test finds that the reference is significantly different to \CIIa{} and \C4{} (\Sexpr{wilcox.pairwise.print(IQU~condition, "E1", performance_level, c("2a", "4"), c("6"), alternative="less", reference=T)[1,1]}) and that \CIIa{} is significantly different from \C4{} (\Sexpr{wilcox.pairwise.print(IQU~condition, "E1", performance_level, c("2a", "4"), c("6"), alternative="less", reference=T)[2,2]}).
 
 For \EIIa{}, the reference, \C3{}, \CVa{}, and \C6{}, are also significantly different (\Sexpr{kruskal(IQU~condition, "E2a", performance_level, c("3", "5a", "6"), c(6), reference=T)}).
-A one-sided post-hoc test finds that the reference is significantly different to those three conditions (\C3{}: \Sexpr{wilcox.pairwise.print(IQU~condition, "E2a", performance_level, c("3", "5a", "6"), c("6"), reference=T, alternative="less")[1,1]}, \CVa{} and \C6{} \Sexpr{wilcox.pairwise.print(IQU~condition, "E2a", performance_level, c("3", "5a", "6"), c("6"), reference=T, alternative="less")[2,1]}).
+A one-sided post-hoc test finds that the reference is significantly different to those three conditions (\C3{}: \Sexpr{wilcox.pairwise.print(IQU~condition, "E2a", performance_level, c("3", "5a", "6"), c("6"), reference=T, alternative="less")[1,1]}; \CVa{} and \C6{}: \Sexpr{wilcox.pairwise.print(IQU~condition, "E2a", performance_level, c("3", "5a", "6"), c("6"), reference=T, alternative="less")[2,1]}).
 Also, \C3{} and \CVa{} (\Sexpr{wilcox.pairwise.print(IQU~condition, "E2a",performance_level, c("3", "5a", "6"), c("6"), reference=T, alternative="less")[2,2]}) as well as \C3{} and \C6{} (\Sexpr{wilcox.pairwise.print(IQU~condition, "E2a",performance_level, c("3", "5a", "6"), c("6"), reference=T, alternative="less")[3,2]}) are significantly different.
 No significant difference is found for \CVa{} and \C6{} (\Sexpr{wilcox.pairwise.print(IQU~condition, "E2a",performance_level, c("3", "5a", "6"), c("6"), reference=T, alternative="less")[3,3]}).
 The reference, \CIIa{}, and \C4{} are significantly different (\Sexpr{kruskal(IQU~condition, "E2a", performance_level, c("2a", "4"), c("6"), reference=T)}).
@@ -555,7 +555,7 @@ It can thus be concluded that \autoref{hypo:number} is only partly true.
 A decrease can be observed, if up to two \ac{LP} episodes are presented.
 Presenting a third \ac{LP} episode does not seem have an effect on the multi-episodic judgment.
 In fact, the multi-episodic judgment remains above the episodic judgments of \ac{LP} episodes.
-This occurs before the multi-episodic judgment reaches the level of episodic judgment for \ac{LP} (\Sexpr{mos_qu_with_sd_by_condition("E1", "LP")}).
+This occurs before the multi-episodic judgment reaches the level of episodic judgment for \ac{LP}, \Sexpr{mos_qu_with_sd_by_condition("E1", "LP")}.
 This indicates that prior presented \ac{HP} episodes still attribute to this multi-episodic judgment.
 
 \autoref{hypo:number} can be partly accepted.
@@ -591,12 +591,12 @@ In \autoref{hypo:position} it is hypothesized that presenting \ac{HP} episodes a
 \end{table}
 
 For \E1{} the multi-episodic judgment is significantly different between the \C1{}, \CIIa{}, and \C3{} (\Sexpr{kruskal(IQU~condition, "E1", performance_level, c("1", "2a", "3"), c(6))}).
-A one-sided post-hoc tests shows that \C1{} is significantly different to \CIIa{} and \C3{} (each \Sexpr{wilcox.pairwise.print(IQU~condition, "E1", performance_level, c("1", "2a", "3"), c(6), alternative="less")[1,1]}), but \CIIa{} and \C3{} are not significantly different (\Sexpr{wilcox.pairwise.print(IQU~condition, "E1", performance_level, c("1", "2a", "3"), c(6), alternative="less")[2,2]}).
+A one-sided post-hoc test shows that \C1{} is significantly different to \CIIa{} and \C3{} (each \Sexpr{wilcox.pairwise.print(IQU~condition, "E1", performance_level, c("1", "2a", "3"), c(6), alternative="less")[1,1]}), but \CIIa{} and \C3{} are not significantly different (\Sexpr{wilcox.pairwise.print(IQU~condition, "E1", performance_level, c("1", "2a", "3"), c(6), alternative="less")[2,2]}).
 In this experiment also \C4{}, and \CVb{} are significantly different (\Sexpr{wilcox(IQU~condition, "E1", unique(performance_level), c("4", "5b"), c(6), alternative="greater")}).
 
 For \EIIa{}, \C1{}, \CIIa{}, and \C3{} are not significantly different (\Sexpr{kruskal(IQU~condition, "E2a", performance_level, c("1", "2a", "3"), c(6))}), whereas \C4{} and \CVa{} are significantly different (\Sexpr{wilcox(IQU~condition, "E2a", unique(performance_level), c("4", "5a"), c(6), alternative = "greater")}).
 
-With regard to \autoref{hypo:position}, both experiments yield similarities and difference while varying the position of one or two \ac{LP} episodes.
+With regard to \autoref{hypo:position}, both experiments yield similarities and differences while varying the position of one or two \ac{LP} episodes.
 For \E1{} presenting the \ac{LP} episode(s) earlier, reduces the impact on the final judgment.
 Thus, a recency effect is observed.
 This can for \EIIa{} only be observed with two \ac{LP} episodes, but not for one \ac{LP} episode.
@@ -605,7 +605,7 @@ However, the actual reason for this cannot be deduced from experiment \EIIb{}.
 
 Thus, \autoref{hypo:position} can be accepted for two-party conversations, but only partly accepted for third-party listening.
 
-\subsubsection{\autoref{hypo:consecutive}: Non- vs. Consecutive \acs{LP} Episodes}
+\subsubsection{\autoref{hypo:consecutive}: Non-consecutive vs. Consecutive \acs{LP} Episodes}
 In \autoref{hypo:consecutive} it is assumed that consecutive \ac{LP} episodes yield a better multi-episodic judgment than the same number of \ac{LP} episodes presented non-consecutively.
 This hypothesis is investigated in \EIIa{} only.
 It can be evaluated by comparing the final multi-episodic judgment of \C4{} and \CVa{} with \C8{}. %, for which it has already been shown that those two conditions yield a different result (\cf, \autoref{hypo:position}),
@@ -631,8 +631,8 @@ The multi-episodic judgments of those three conditions are not significantly dif
 In fact, the multi-episodic judgment of \CVa{} and \C8{} are rather close compared to \C4{}.
 This might indicate a higher impact of the very last episode in terms of a recency effect.
 
-Thus, \autoref{hypo:consecutive} is rejected, \ie, because the non-consecutive presentation is not judged different enough to a sequential presentation of \ac{LP} episodes.
-It must be concluded that either such an effect does not exists, or it is to small to be observed.
+Thus, \autoref{hypo:consecutive} is rejected, \ie, the non-consecutive presentation is not judged differently enough to a sequential presentation of \ac{LP} episodes.
+It must be concluded that either such an effect does not exists, or it is too small to be observed.
 
 \subsubsection{\autoref{hypo:strength}: Strength of Degradation}
 
@@ -683,12 +683,12 @@ Thus, \autoref{hypo:strength} must be left unanswered.
 %This is in line with prior work on retrospective episodic experiences \citep[\eg,][]{kahneman_experienced_2000} as well as episodic \ac{QoE} \citep[\eg,][]{weiss_modeling_2009}, where it is denoted as (negative) peak effect.
 
 \subsubsection{\autoref{hypo:recovery}: Recovery after \acs{LP} Episodes}\label{lab:result:recovery}
-In \autoref{hypo:recovery} the recovery of multi-episodic is investigated.
+In \autoref{hypo:recovery} the recovery of the multi-episodic judgment is investigated.
 This is investigated in \E1{} by comparing \CVb{} and \C7{}.
 Both present nine episodes while non-\ac{HP} is presented for the 5th and 6th usage episode.
-\autoref{tab:lab:hyporecovery} shows the three the multi-episodic judgments of those conditions.
+\autoref{tab:lab:hyporecovery} shows the three multi-episodic judgments of those conditions.
 
-For each condition, the three multi-episodic judgments are significantly different (\CVb{}: \Sexpr{kruskal(IQU~id, "E1", performance_level,"5b", c(3, 6, 9))}, \C7{}: \Sexpr{kruskal(IQU~id, "E1", performance_level, "7", c(3, 6, 9))}).
+For each condition, the three multi-episodic judgments are significantly different (\CVb{}: \Sexpr{kruskal(IQU~id, "E1", performance_level,"5b", c(3, 6, 9))}; \C7{}: \Sexpr{kruskal(IQU~id, "E1", performance_level, "7", c(3, 6, 9))}).
 For \CVb{}, a paired post-hoc test shows significant differences between the judgment after the 3rd and 6th episode (\Sexpr{wilcox.pairwise.print(QU~id, "E1", performance_level, "5b", c(3, 6, 9), paired=T)[1,1]}) and the 6th and 9th episode (\Sexpr{wilcox.pairwise.print(QU~id, "E1", performance_level, "5b", c(3, 6, 9), paired=T)[2,2]}).
 The judgment after the 3rd and 9th are not significantly different (\Sexpr{wilcox.pairwise.print(QU~id, "E1", performance_level, "5b", c(3, 6, 9), paired=T)[2,1]}).
 A paired post-hoc test for \C7{} yields similar findings (3rd vs. 6th: \Sexpr{wilcox.pairwise.print(QU~id, "E1", performance_level, "7", c(3, 6, 9), paired=T)[1,1]}, 6th vs. 9th: \Sexpr{wilcox.pairwise.print(QU~id, "E1", performance_level, "7", c(3, 6, 9), paired=T)[2,2]}) and 3rd vs. 9th: \Sexpr{wilcox.pairwise.print(QU~id, "E1", performance_level, "7", c(3, 6, 9), paired=T)[2,1]}).
@@ -720,8 +720,8 @@ However, from the two conditions alone it cannot be deduced, if a recency effect
 In \E3{} the impact of varying duration of one \ac{LP} episode on the following multi-episodic judgment is investigated (\autoref{hypo:duration}).
 It is hypothesized that increasing the duration of an \ac{LP} episode will lead to a higher reduction in multi-episodic judgments.
 In this experiment \CIIa{} and \CIIb{} both present the 5th episode in \ac{LP}.
-while all other episodes are presented with a similar this duration, this episodes is presented \CIIb{} with approximately the doubled duration.
-In \CIIa{} the 5th episodes has a duration of \unit[3:10]{min} and for \CIIb{} of \unit[6]{min}.
+While all other episodes are presented with a similar duration, the 5th episode is presented in \CIIb{} with approximately the doubled duration.
+In \CIIa{} the 5th episodes has a duration of \unit[3:10]{min} and for \CIIb{} of \unit[6:00]{min}.
 The episodic judgment for these conditions and the multi-episodic judgments are shown \autoref{tab:lab:hypoduration}.
 
 \begin{table}[h!]
@@ -738,7 +738,7 @@ The episodic judgment for these conditions and the multi-episodic judgments are 
  \end{tabulary}
 \end{table}
 
-Between the two conditions the multi-episodic judgment of the 5th episode is not significant different (see \autoref{lab:episodic:e2}).
+Between the two conditions the episodic judgments of the 5th episode are not significant differently (see \autoref{lab:episodic:e2}).
 The multi-episodic judgment after the 6th usage episode are not significant different (\Sexpr{wilcox(IQU~condition, "E3", performance_level, c("2a", "2b"), c(6))}).
 Thus, \autoref{hypo:duration} can be considered true, \ie, a duration neglect is observed, because even doubling the duration did not produce a measurable effect.
 In fact, the duration seems to be neglected for the episodic judgment and the multi-episodic judgment.
@@ -747,7 +747,7 @@ It can thus be concluded that the episodic judgment sufficiently describes the i
 \subsubsection{\autoref{hypo:independent}: Services are Judged Independent}
 In \EIIb{} it is investigated, if the multi-episodic judgments of two services are independent (\autoref{hypo:independent}).
 This is investigated by presenting beside the speech telephony service a \ac{VoD} service. 
-Both services are used alternating.
+Both services are used alternatingly.
 The speech telephony service is always presented in \CVa{}.
 The \ac{VoD} service presented in \C0{} or \C4{}, or not presented at all.
 The episodic judgments and multi-episodic judgments are shown in \autoref{tab:lab:hypoindependent}.
@@ -760,9 +760,9 @@ With regard to the speech telephony service no significant difference on the fin
  \centering
  \caption{One-session experiments: multi-episodic judgment after the 6th episode for \autoref{hypo:independent}.}
  \label{tab:lab:hypoindependent}
- \begin{tabulary}{\columnwidth}{C|C|C|C}
+ \begin{tabulary}{\columnwidth}{C|C|C}
 	Conditions \ac{VoD}	& \multicolumn{2}{c}{Multi-episodic Judgment} \\
-					& 						& Telephony 															& \ac{VoD} \\
+					 						& Telephony 															& \ac{VoD} \\
 	\midrule 
 	 -					& \Sexpr{mos_iqu_with_sd_by_condition("E2b", "5a", 6, "telephony")}		& - \\
 	\hline
@@ -773,7 +773,7 @@ With regard to the speech telephony service no significant difference on the fin
 \end{table}
 
 As the multi-episodic judgments of the speech telephony service is not different if a \ac{VoD} service is present or not, it can be concluded the speech telephony service was assessed based upon on the usage episodes with the service.
-In fact, participant could only use the content, degradation, and presentation modality to differentiate the two services, because both services were presented on the same device.
+In fact, the participants could only use the content, degradation, and presentation modality to differentiate the two services, because both services were presented on the same device.
 Nevertheless, participants were able to attribute the usage episodes and their experience to each service, \ie, \autoref{hypo:independent} can be accepted.
 %Furthermore, it must be noted that \ac{VoD} service was only degraded in the video modality.
 
@@ -798,7 +798,7 @@ In \E1{} the presentation of \ac{HP} episode(s) before the multi-episodic judgme
 In \EIIa{} this could only be observed for two \ac{LP} episodes.
 This indicates that the usage situation affects the multi-episodic formation process.
 Participants experienced a listening-only situation in \EIIa{} whereas in \E1{} a two-party conversation was used.
-The latter task might be more mental demanding and thus forgive/forget the experience of the \ac{LP} episode faster, if \ac{HP} episode(s) are presented afterwards.
+The latter task might be more mentally demanding and thus the participants forgive or even forget the experience of the \ac{LP} episode faster, if \ac{HP} episode(s) are presented afterwards.
 
 With regard to consecutive vs. non-consecutive \ac{LP} episodes (\autoref{hypo:consecutive}) the results are inconclusive.
 The three conditions yielded similar multi-episodic judgments.
@@ -808,12 +808,11 @@ Thus, \autoref{hypo:consecutive} cannot be accepted.
 
 In \E1{} also a (negative) peak-effect was investigated (\autoref{hypo:strength}).
 However, the results are inconclusive and thus this hypothesis is left unanswered.
-
 In \E1{} also recovery of multi-episodic judgments was investigated (\autoref{hypo:recovery}).
 Here three \ac{HP} episodes were presented after two non-\ac{HP} episodes.
 The results show that the negative effect on multi-episodic diminishes for the final judgment.
 
-In \E3{} the duration of the one \ac{LP} episode was varied.
+In \E3{} the duration of one \ac{LP} episode was varied.
 It was expected that presenting this episode with doubled duration, would lead to higher reduction of the multi-episodic judgments than normal duration (\autoref{hypo:duration}).
 However, no significant difference has between observed between the two conditions.
 This indicates that the actual duration of an episode does not affect the formation process of multi-episodic perceived quality.

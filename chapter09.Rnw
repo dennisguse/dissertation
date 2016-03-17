@@ -79,7 +79,7 @@ Here, the impact of \ac{LP} episode(s) on a following multi-episodic judgment de
 While \E1{}, showed such an effect in both cases, \ie, for one and two \ac{LP} episodes, it was only present in \EIIa{} for two \ac{LP} episodes.
 This might be attributed to the passive usage situation.
 In \E1{} a two-party conversation was used whereas \EIIa{} applied a third-party listening task.
-Although, not statistically significant, a recency effect was indicated in \E6{} for both cases, \ie, one or two days presented in \ac{LP}.
+Although not statistically significant, a recency effect was indicated in \E6{} for both cases, \ie, one or two days presented in \ac{LP}.
 
 In \E1{} and \E6{} also the impact of non-consecutive \ac{LP} presentation was investigated (\autoref{hypo:consecutive}).
 An effect could not be observed in both experiments and thus the number of performance changes is assumed to be neglectable for prediction.
@@ -427,7 +427,7 @@ ggplot_model_create(subset(data_adjusted_only, data_adjusted_only$experiment == 
 It can thus be concluded that the saturation effect can be accounted for using the proposed algorithm.
 In all three experiments this resulted in a reduction of $\mathit{w}$.
 %In fact, $\mathit{w}$ is reduced to the optimal found solution for each experiment, when evaluating all conditions (see \autoref{results:prediction}).
-Although, the \ac{RMSD} is increased in some cases, $\mathit{w}$ is reduced to the optimal solution found for all conditions without saturation adjustment (see \autoref{results:prediction}).
+Although the \ac{RMSD} is increased in some cases, $\mathit{w}$ is reduced to the optimal solution found for all conditions without saturation adjustment (see \autoref{results:prediction}).
 A reduction in \ac{RMSD} with LI for all conditions is observed (\E1{}: 0.02, for \EIIa{} of 0.03, and for \E6{} of 0.08).
 In fact, this overall reduction is rather small and it can thus be concluded that, although accounting for saturation improves prediction accuracy, this improvement is rather small for, when considering all conditions.
 
