@@ -69,7 +69,7 @@ Then multi-episodic judgments do not decrease further.
 This occurred, if more than two \ac{LP} episode/days were presented.
 In fact, multi-episodic judgments still remain above the episodic judgments of \ac{LP}.
 This shows that multi-episodic judgments are still affected by previous \ac{HP} episodes.
-This indicates a longer integration interval than 3~usage episodes or, respectively, 3~days.
+This indicates a longer integration interval than 3~usage episodes or 3~days, respectively.
 Beside the integration interval, this indicates that one of the three \ac{LP} episodes/days did not contribute to the final multi-episodic judgment.
 
 Beside the increase of \ac{LP} episode before a multi-episodic judgment, a position effect has been observed (\autoref{hypo:position}).

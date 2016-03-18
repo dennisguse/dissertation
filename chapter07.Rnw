@@ -287,7 +287,7 @@ For \EIIa{} and \EIIb{}, one recording for each of the episodes 1..6 was selecte
 Those were required to show common task solving behavior.
 %Furthermore, no emotional reaction like laughing should be present and not contain any degradations due to other sound sources like audible breathing, but only clear and clean speech.
 The duration of the selected conversations ranged from \unit[128]{sec} to \unit[194]{sec} with an average of \unit[153]{s}.
-%The recordings were normalized per speaker, mixed into one channel and encoded with G.722 or, respectively, LPC-10.
+%The recordings were normalized per speaker, mixed into one channel and encoded with G.722 or LPC-10, respectively.
 %The six selected recordings were presented in \EIIa{} and \EIIb{} in the same order as in \E1{}.
 
 For the \ac{VoD} service used in \EIIb{}, scenes of a sitcom were selected.
@@ -674,7 +674,7 @@ A one-sided post-hoc shows significant differences for \CIIa{} and \CVb{} (\Sexp
 
 With regard to the interpretation it is problematic that the episodic judgments for \ac{HP} and \ac{MP} are not significantly different.
 In fact, it is indicated that \ac{MP} episodes were perceived and judged slightly worse.
-%However, it must be noted that the episodic judgment of 6th episode in \CIIa{} is judged almost 0.6pt lower than the episodic \ac{MOS} for all \ac{HP} episodes in this experiment (\Sexpr{mos_qu_with_sd_by_condition("E1", "HP")}).
+%However, it must be noted that the episodic judgment of 6th episode in \CIIa{} is judged almost \unit[0.6]{pt} lower than the episodic \ac{MOS} for all \ac{HP} episodes in this experiment (\Sexpr{mos_qu_with_sd_by_condition("E1", "HP")}).
 This leaves three interpretations.
 Either this is an artifact of the required between-subject design, \ac{HP} and \ac{MP} were not different enough, or a peak-effect could be observed.
 Thus, \autoref{hypo:strength} must be left unanswered.

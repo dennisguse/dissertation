@@ -544,7 +544,7 @@ For \C5{} and \C6{} no significant difference is found (\Sexpr{wilcox.pairwise.p
 The results show that increasing the number \ac{LP} days directly before the multi-episodic judgment results in a reduction of this judgment.
 Here, a reduction of approximately \unit[1]{pt} for none to one and one to two days is observed.
 However, no further decrease can be observed, if three days are presented in \ac{LP}.
-It must be noted that the multi-episodic judgments remain 1pt higher than the episodic judgment of \ac{LP} episodes.
+It must be noted that the multi-episodic judgments remain \unit[1]{pt} higher than the episodic judgment of \ac{LP} episodes.
 With regard to \autoref{hypo:number} the results are in line the one-session experiments \E1{} and \EIIa{}.
 In both usage periods, the multi-episodic judgments decrease until three episodes/days are presented in \ac{LP}.
 Then, the judgment remains on the same level.
