@@ -58,6 +58,10 @@
 \input{hypenate}
 \usepackage{float}
 \usepackage{multirow}
+
+\usepackage{chngcntr}
+\counterwithout{footnote}{chapter}
+
 % ********************************************************************
 % GO!GO!GO! MOVE IT!
 %*******************************************************

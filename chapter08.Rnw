@@ -124,7 +124,7 @@ For audio reproduction and recording a \emph{Logitech~PC120} headset was provide
 The video was always played in full screen independent of the actual screen size or resolution.
 The speech telephony was implemented as a \ac{VoIP} service while the \ac{VoD} service was only simulated.
 The latter only played local preprocessed content.
-A complete description of the technical setup can be found in the \appendix{} (\autoref{appendix:setups}).
+A complete description of the technical setup can be found in the \appendix{}~\ref{appendix:setups} (p.~\pageref{appendix:setups}).
 
 On the day before starting the \unit[14]{day} usage period, an introductory session was conducted with each pair of participants.
 In this session participants received detailed instructions for the experiment and provided demographic data.
@@ -487,7 +487,7 @@ For \ac{LP} significant differences between conditions are also found (\Sexpr{kr
 A post-hoc tests shows that \C5{} is significantly different to \C1{}, \C4{}, and \C8{} ($p<0.05$). %wilcox.pairwise.print(QU~condition, "E6a", "LP")
 It must be noted that episodic judgments of \C5{} resulted in the highest \ac{MOS} for \ac{HP} and in the lowest for \ac{LP}.
 A detailed analysis did not yield a reason for the difference, and it is thus considered an artifact due to the between-subject design.
-Box plots for all conditions can be found in the \appendix{} (see \autoref{appendix:results}).
+Box plots for all conditions can be found in the \appendix{}~\ref{appendix:results} (p.~\pageref{appendix:results}).
 
 \begin{table}
 	\centering
