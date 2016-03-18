@@ -16,10 +16,10 @@ The systems designed for experiments \E4{}, \E5{}, and \E6{} were designed for u
 \section{Experiment E1}
 For experiment \E1{} two systems were required.
 First, a listening-only training was conducted, presenting typical speech telephony degradations.
-For the multi-episodic assessment a two-party speech telephony was required.
+For the multi-episodic assessment a two-party speech telephony system was required.
 
 \subsection{Listening-only Training}
-For the listening-only training conducted in experiment \E1{} was conducted with a tablet computer (\emph{Fujitsu~Stylistic~ST6012}).
+The listening-only training conducted in experiment \E1{} was conducted with a tablet computer (\emph{Fujitsu~Stylistic~ST6012}).
 For binaural representation a pair of \emph{AKG~K-271} was connected to the internal sound card of the tablet computer.
 The system was calibrated using a \emph{HEAD acoustics} head and torso simulator \emph{HSM~II.3} to a sound pressure level of \unit[75]{dB20$\mu$Pa} for babble noise.
 
@@ -27,7 +27,7 @@ For the generation of stimuli the ITU-T~STL2009 tools \citep{itu-t_recommendatio
 The STL2009 were used for coding G.711, G.722~(Mode~1) and inserting packet-loss for G.722 (Mode~1), whereas SOX was used for coding GSM-FR, and LPC-10 as well as filtering wideband, narrowband, and white noise.
 
 \subsection{Two-party Speech telephony}
-For the multi-episodic assessment of experiment \E1{} a speech telephony speech telephony system for two-party conversations was required.
+For the multi-episodic assessment of experiment \E1{} a speech telephony system for two-party conversations was required.
 
 \paragraph*{Network-based Setup}
 In the first part of the experiment a \ac{VoIP}-based system consisting of three computers was used.
@@ -37,23 +37,23 @@ Two \emph{Fujitsu~Lifebook~S761} were running each a custom client based-upon \e
 The custom client presented only a minimal user interface consisting of one button for call initiation and hangup, one button to set the current presence status, and an image presenting the presence status of the other client.
 Call initiation was only possible, if both clients set their presence status to available.
 The two clients did not communicate directly with each other, but the Asterisk server acted as a proxy providing transcoding functionality.
-Transmission of the speech signal between Asterisk and clients in both direction was lossless by using the \emph{L16} codec with a sample rate of \unit[16]{kHz} resulting in a unidirectional net transmission rate of \unit[256]{kbit/s}.
+Transmission of the speech signal between Asterisk and clients in both directions was lossless by using the \emph{L16} codec with a sample rate of \unit[16]{kHz} resulting in a unidirectional net transmission rate of \unit[256]{kbit/s}.
 Asterisk applied the desired performance level, \ie, codec, by compression the signal and immediately decompressing it before relaying the signal.\footnote{The performance levels were set by using the transcoding capability of Asterisk. On an incoming call coded with L16, Asterisk initiated a call to himself with the desired codec (\ie, G.722, or LPC-10). The later call triggered an outgoing call to the callee encoded in L16.}
 This system achieved a one-way end-to-end delay of \unit[120]{ms}.
 
-On each of the two client computers one \emph{Beyerdynamic~DT~790~Pro} headset connected to a \emph{Edirol~UA-25EX} was used for recording and binaural reproduction.
+On each of the two client computers one \emph{Beyerdynamic~DT~790~Pro} headset connected to a \emph{Edirol~UA-25EX} sound card was used for recording and binaural reproduction.
 The output on both systems was calibrated to a comfortable listening level.
 
 \paragraph*{Sound card Setup}
-In the second this system was replaced by a more elaborate system, which provides easier setup that less complex to verify.
+Later in \E1{}, the speech telephony system was replaced by a more elaborate system, which provides easier setup that less complex to verify.
 For this system only one computer without an actual network is used.
-Rather than transmitting the signals digital via Ethernet, an analogue transmission via audio cables is used.
+Rather than transmitting the signals digitally via Ethernet, an analogue transmission via audio cables is used.
 In this system also the \emph{Beyerdynamic~DT~790~Pro} headsets were used.
 The two headsets were connected to the processing computer (\emph{Lenovo~X61}) with one \emph{Edirol~UA-25EX}.
 As the individual signals were transmitted using analogue audio cables with a length of \unit[10]{m}, the microphone signals were amplified beforehand using a \emph{RME QuadMic II} microphone preamplifier to avoid a degradation of the signal due to the cable length.
 
 On the computer \emph{PureData}, an open-source audio processing program, is used to modify the speech signals.
-As no speech codecs were not available in PureData, PureData was extended with the speech codecs G.711, G.722~(Mode~1) and LPC-10.
+As no speech codecs were available in PureData, PureData was extended with the speech codecs G.711, G.722~(Mode~1) and LPC-10.
 It was verified that the PureData setup provides similar characteristics as the Network-based setup.
 The overall system achieved a constant, glitch-free one-way end-to-end delay of \unit[70]{ms}.
 
@@ -63,31 +63,31 @@ Both systems were configured to provide neither side tone nor comfort noise, if 
 No additional audio processing was applied.
 
 \section{Experiments E2a, E2b, and E3}
-For the experiments \EIIa{}, \EIIb{}, and \E3{} audio signals were presented with a pair of \emph{Sennheiser~HD~25-1}.
+For the experiments \EIIa{}, \EIIb{}, and \E3{} audio signals were presented with a pair of \emph{Sennheiser~HD~25-1} headphones.
 For \EIIa{} and \E3{} those were connected to the internal sound card of a \emph{Microsoft Surface Pro} tablet computer whereas for experiment \EIIb{} those were connected to the internal sound card of the used \emph{Nexus 7 (2013)}.
 In all three experiments the sound pressure level was calibrated to \unit[75]{dB20$\mu$Pa} using the \emph{HSM~II.3} with babble noise and the experiments conducted in a sound-proof cabin following \citet{itu-t_recommendation_p.800_methods_1996}.
-In experiment \EIIb{} the \ac{VoD} service was presented on the display Nexus~7~(2013) showing videos horizontal in full screen.
+In \EIIb{} the \ac{VoD} service was presented on the display of the Nexus~7~(2013) showing videos horizontally in full screen.
 This \unit[7]{inch} display of this device was set to maximum brightness without applying any device related color adaption.
 
 In those three experiments non-degraded recordings of two-party conversations of experiment \E1{} were selected.
 Those recordings were processed with the ITU-T~STL2009 tools \citep{itu-t_recommendation_g.191_software_2010} for coding with G.722 and with SOX for coding with LPC-10.
-For \EIIb{} the videos material was cut with \emph{Adobe Premiere 6} and exported with \ac{H.264} (\unit[1280x720]{px}, \unit[5]{Mbit/s}, two-pass) and \ac{AAC} (\unit[448]{kbit/s}, stereo).
-Afterwards it was processed with \emph{FFPMEG} to re-encode with desired \ac{QP} factor while leaving audio unchanged.
+For \EIIb{} the video material was cut with \emph{Adobe Premiere 6} and exported with \ac{H.264} (\unit[1280x720]{px}, \unit[5]{Mbit/s}, two-pass) and \ac{AAC} (\unit[448]{kbit/s}, stereo).
+Afterwards it was processed with \emph{FFmpeg}\footnote{The FFmpeg project is available at \url{https://www.ffmpeg.org/}.} to re-encode with the desired \ac{QP} factor while leaving the audio unchanged.
 
 \section{Experiment E4}
-\E4{} was the first conducted experiment as a field experiment with a usage period of multiple days.
+\E4{} was the first experiment conducted as a field experiment with a usage period of multiple days.
 For \E4{}, a speech telephony service and a \ac{VoD} service were implemented that could be used by participants with their own personal computer while using their Internet access.
 For recording and audio reproduction participants were provided a \emph{Logitech~P120} headset.
 
 \subsection{Speech Telephony Service}
-For conducting experiment \E4{} a public reachable \ac{VoIP} telephony service was setup.
+For conducting \E4{} a publicly reachable \ac{VoIP} telephony service was set up.
 The service needed to be able to allow parallel two-party speech conversations and be able to insert packet-loss for individual conversations.
-For this service one server was installed in the data center of the \emph{TU~Berlin} reachable by a public IPv4 address.
+For this service one server was installed in the data center of \emph{TU~Berlin} reachable by a public IPv4 address.
 As operating system \emph{FreeBSD~9.0} was selected, because it provides a built-in firewall with integrated traffic shaper called \emph{Dummynet}~\citep{rizzo_dummynet_1997}.
-This traffic shaper allows allows to add network impairments like packet-loss, delay, and jitter per individual connection, \ie, protocol, port, source address, destination address and if a packet is incoming or outgoing.
+This traffic shaper allows to add network impairments like packet-loss, delay, and jitter per individual connection, \ie, protocol, port, source address, destination address and if a packet is incoming or outgoing.
 On this server the \ac{VoIP} software \emph{Asterisk~10} was installed, which was configured to act as a \ac{SIP} registrar as well as \ac{RTP}-Proxy for the \ac{UDP}-based media streams.
 On call initiation of a client Asterisk informed Dummynet about the desired packet-loss rate for the media streams of this call.
-Packet-loss was not added to the \ac{SIP} connections between clients and server, because this affects the reactivity telephony system and might lead call drops.
+Packet-loss was not inserted to the \ac{SIP} connections between clients and server, because this affects the reactivity of the telephony system and might lead to call drops.
 As client the multi-platform client \emph{Jitsi~1.0} was installed on each participant's computer.
 
 While the speech telephony server was running well while testing, it was not able to fulfill the desired performance levels in the experiment.
@@ -109,23 +109,23 @@ In difference to the speech telephony service, this system achieved the desired 
 \section{Experiment E5}
 Based upon the reliability of the simulation of a \ac{VoD} service for experiment \E4{}, an \ac{AoD} service and \ac{VoD} service were used in experiment \E5{}, but simulating both services.
 For this experiment ten \emph{Samsung~Galaxy~SII~(GT-I9210)} mobile phones running \emph{Android~2.3} were available.
-This mobile phone has \unit[4.5]{inch} display with a resolution of $\unit[480x800]{px}$.
+This mobile phone has a \unit[4.5]{inch} display with a resolution of $\unit[480x800]{px}$.
 A native Android application was implemented with the same functionality as the implementation used in experiment \E4{}, \ie, storing media content locally while providing login functionality and initial buffering.
 For media playback the \ac{VoD} service presented the video horizontally in full screen while the \ac{AoD} presented an equalizer.
 In addition to the mobile phone each participant received a pair of \emph{Shure~240} headphones.
 
 \section{Experiment E6}
-For experiment \E6{} only an \ac{AoD} service was used.
-For this experiment it chosen not to provide any equipment for participants, but rather let participants use their own equipment.
+For \E6{} only an \ac{AoD} service was used.
+For this experiment it was chosen not to provide any equipment for participants, but rather let participants use their own equipment.
 Rather than installing a software on the participant's computer, the \ac{AoD} service was implemented as a website available online.
 This website used HTML5 multi-media features to download and playback the audio content.
-Participants were only required to use as web browser either \emph{Google Chrome} or \emph{Chromium} to limit and testing effort for the website.
-As the buffering strategy for media content cannot be controlled by website using standardized HTML5, the preloading was initiated, when the website was loaded while presenting a loading animation of \unit[5]{sec}.
-This avoids issues due initial buffering by providing a constant waiting time.
+Participants were only required to use as web browser either \emph{Google Chrome} or \emph{Chromium} to limit the testing effort for the website.
+As the buffering strategy for media content cannot be controlled by a website using standardized HTML5, the preloading was initiated, when the website was loaded while presenting a loading animation of \unit[5]{sec}.
+This avoids issues due to initial buffering by providing a constant waiting time.
 
 \chapter{Results}\label{appendix:results}
-In the following, judgments for all experiments are shown.
-Here, episodic judgments are presented for all conducted experiments.
+In the following, judgments for the here presented experiments are shown.
+First, episodic judgments are presented as box plots for each usage episode per condition and experiment.
 Finally, all multi-episodic judgments per experiment and condition are presented.
 
 \newpage
@@ -153,7 +153,7 @@ Finally, all multi-episodic judgments per experiment and condition are presented
 	<<plotE2b, echo=F, fig.height=7.5>>=
 		ggplot_timeseries_create(subset(timeseries, experiment=="E2b" & service != "bundle")) + geom_boxplot(aes(factor(id), y=QU), na.rm=T) + facet_grid(condition + service~ .) + xlab("Usage Episode")
 	@
-	\caption{One session (\EIIa{}): box plot of episodic judgments.}
+	\caption{One session (\EIIb{}): box plot of episodic judgments.}
 \end{figure}
 
 \begin{figure}[H]
@@ -169,13 +169,13 @@ Finally, all multi-episodic judgments per experiment and condition are presented
 	<<plotE6, echo=F, fig.height=9>>=
 		ggplot_timeseries_create(subset(timeseries, experiment=="E6a")) + geom_boxplot(aes(factor(id), y=QU), na.rm=T) + facet_grid(condition ~ .) + xlab("Usage Episode")
 	@
-	\caption{One session (\E6{}): box plot of episodic judgments.}
+	\caption{Multiple days (\E6{}): box plot of episodic judgments.}
 \end{figure}
 
 \section{Multi-episodic Judgments}
 \begin{table}[H]
 	\centering
-	\caption{Multi-episodic judgments per condition and experiment for \E1{}, \EIIa{}, \EIIb{}, \E3{}.}
+	\caption{Multi-episodic judgments per condition and experiment for \E1{}, \EIIa{}, \EIIb{}, and \E3{}.}
 	\begin{tabulary}{\textwidth}{C|C|C|C|C}
 	Experiment &  Condition & \multicolumn{3}{c}{Multi-episodic Judgment} \\
 	& & 1st & 2nd & 3rd \\

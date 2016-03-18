@@ -3,7 +3,7 @@ opts_knit$set(progress = TRUE, verbose = TRUE)
 source('R_plot.R')
 
 data = read.csv("data/data_modeling.csv")
-data$model_FACET = factor(data$model == "weight_linear_create", labels=c("Window (WW)", "Linear (LI)")) #label and order; FALSE will be first; then attach labels for FACET
+data$model_FACET = factor(data$model == "weight_linear_create", labels=c("Window (WI)", "Linear (LI)")) #label and order; FALSE will be first; then attach labels for FACET
 
 #We only do \ac{MOS} for non-adjusted
 data_nonadjusted = subset(data,  grepl("average", data$condition) & !grepl("adjusted", data$condition) & data$experiment %in% c("E1", "E2a", "E6a"))
@@ -12,7 +12,7 @@ data_nonadjusted_avg = aggregate(data_nonadjusted$RMSD, by=list(experiment=data_
 names(data_nonadjusted_avg)[5] = "RMSD"
 data_nonadjusted_avg$condition = "EXPERIMENT_average"
 data_nonadjusted_avg$PEARSON = NA
-data_nonadjusted_avg$model_FACET = factor(data_nonadjusted_avg$model == "weight_linear_create", labels=c("Window (WW)", "Linear (LI)")) #label and order; FALSE will be first; then attach labels for FACET
+data_nonadjusted_avg$model_FACET = factor(data_nonadjusted_avg$model == "weight_linear_create", labels=c("Window (WI)", "Linear (LI)")) #label and order; FALSE will be first; then attach labels for FACET
 data_nonadjusted = rbind(data_nonadjusted, data_nonadjusted_avg)
 
 data_nonadjusted$condition = factor(data_nonadjusted$condition, labels=c("C1", "C2a", "C3", "C4", "C5a", "C5b", "C6", "C7", "C8", "All"))
@@ -30,7 +30,7 @@ data_adjusted_avg = aggregate(data_adjusted$RMSD, by=list(experiment=data_adjust
 names(data_adjusted_avg)[5] = "RMSD"
 data_adjusted_avg$condition = "EXPERIMENT_average"
 data_adjusted_avg$PEARSON = NA
-data_adjusted_avg$model_FACET = factor(data_adjusted_avg$model == "weight_linear_create", labels=c("Window (WW)", "Linear (LI)")) #label and order; FALSE will be first; then attach labels for FACET
+data_adjusted_avg$model_FACET = factor(data_adjusted_avg$model == "weight_linear_create", labels=c("Window (WI)", "Linear (LI)")) #label and order; FALSE will be first; then attach labels for FACET
 data_adjusted = rbind(data_adjusted, data_adjusted_avg)
 
 data_adjusted$condition = factor(data_adjusted$condition, labels=c("C1", "C2a", "C3", "C4", "C5a", "C5b", "C6", "C7", "C8", "All"))
@@ -48,8 +48,8 @@ However, results are limited due to the limited impact on multi-episodic judgmen
 This chapter starts with an overview of observed effects in the conducted experiments that are relevant for prediction of multi-episodic judgments.
 Following, model types are presented that seem suited for successfully predicting multi-episodic judgments.
 The prediction accuracy for those model types is evaluated using \E1{}, \EIIa{}, and \E6{}.
-Those experiments yielded a large data set in itself consistent data set.\footnote{An approach towards modeling based upon the experiment of \citet{moller_single-call_2011} and \E5{} is published in \citet{guse_modelling_2014}. However, these two experiments are omitted for modeling here.}
-All other experiments are not considered suited for modeling, because only a very limited set of conditions was investigated.
+Those experiments yielded a large and in itself consistent data set.\footnote{An approach towards modeling based upon the experiment of \citet{moller_single-call_2011} and \E5{} is published in \citet{guse_modelling_2014}. However, these two experiments are omitted for modeling here.}
+All other conducted experiments are not considered suitable for modeling, because only a very limited set of conditions was investigated.
 
 %All other experiments can be used for verification of an implemented model.
 
@@ -88,18 +88,18 @@ In fact, the small difference might also be attributed to a recency effect.
 A peak effect is not considered for modeling, because such an effect could not be observed in the conducted experiments (\autoref{hypo:strength}).
 Even, if in \C7{} of \E1{} a peak effect occurred, the influence on the final judgment seems to be rather small.
 
-In \E1{} also the recovery of a negatively affect multi-episodic judgment was investigated (\autoref{hypo:recovery}).
+In \E1{} also the recovery of a negatively affected multi-episodic judgment was investigated (\autoref{hypo:recovery}).
 %Here, additional \ac{HP} episodes are presented after a negatively affected multi-episodic judgment and the improvement assessed.
 This was studied in two conditions for one session.
 Here, nine usage episodes were presented while non-\ac{HP} episodes were presented after as 5th and 6th usage episode.
 The multi-episodic judgment after the 6th usage episode showed a negative effect, but the judgments after the 3rd and 9th usage episode were not significant different.
 However, in both conditions a slight negative impact is indicated on the final judgment.
-This finding can be explained by a recency effect, but might also due to the increased number of \ac{HP} episodes.
+This finding can be explained by a recency effect but also due to the overall increased number of \ac{HP} episodes.
 
 For one-session also a duration neglect was investigated (\autoref{hypo:duration}). 
 This was investigated in \E3{}.
-Here, doubling the duration of a \ac{LP} episode did not negatively affect a following multi-episodic judgments.
-In fact, even episodic judgments were not negatively affect.
+Here, doubling the duration of a \ac{LP} episode did not negatively affect a following multi-episodic judgment.
+In fact, even episodic judgments were not negatively affected.
 It is thus concluded that duration neglect was observed.
 Therefore, the duration of an episode is not considered for prediction.
 
@@ -126,7 +126,7 @@ Thus, the prediction model for~$\mathit{\hat{m}_n}$ is defined as:
 \end{equation}
 
 The weighted average model is in itself a rather simple model, because it is only parametrized with a weighting function.
-However, selecting a suiting weighting function is not a simple task, because overfitting is an issue.
+However, selecting a suitable weighting function is not a simple task, because overfitting is an issue.
 Following Occam's Razor, a lower degree of freedom for a weighting function is preferable.
 Here, two weighting functions are proposed, which both can account for a recency effect.
 
@@ -167,7 +167,7 @@ In case of the observed saturation effect, both weighting functions will be too 
 Here, three \ac{LP} episodes/days are not judged worse than two.
 This implies that one \ac{LP} episode/day is not judged different than one \ac{HP} episode with regard to the multi-episodic judgment.
 This can be modeled in two ways.
-On the one hand, the weight of one of the three \ac{LP} episodes/days can be set to zero, and and the weight of \ac{HP} episodes increased.
+On the one hand, the weight of one of the three \ac{LP} episodes/days can be set to zero, and the weight of \ac{HP} episodes increased.
 The later would be necessary due to the reduced number of \ac{HP} episodes.
 On the other hand, the episodic judgment of one \ac{LP} episode/day can be adjusted.
 Here, the episodic judgment(s) of this episode/day would be changed to a \ac{HP}.
@@ -187,7 +187,7 @@ Beside a low \ac{RMSD}, a lower $\mathit{w}$ is preferable, because this reduces
 Overall, a model is preferable that explains a higher number of conditions rather than individual conditions only.
 %The \ac{RMSD} is complemented by the Pearson correlation.
 %The Pearson correlation evaluates the linear dependency of two variables.
-%For modeling fitting, \ie, selection of best suiting parameter, both metrics are equally used.
+%For modeling fitting, \ie, selection of best suitable parameter, both metrics are equally used.
 %In a perfect case a \ac{RMSD}~of~0, \ie, no deviation, and correlation coefficient~$R$~of~1, \ie, perfect linear relationship, should reached.
 
 \section{Evaluation}
@@ -204,7 +204,7 @@ Afterwards, the improvement due to accounting for a saturation effect is investi
 \subsection{One Session}\label{results:prediction}
 
 \subparagraph*{Experiment \E1{}}
-In \E1{} two-party conversation was investigated with 6 to 9 usage episodes.
+In \E1{}, a two-party conversation was investigated with 6 to 9 usage episodes.
 With regard to the multi-episodic judgment after the 3rd usage episode, \ie, \ac{HP} only, both model types perform very similar.
 \autoref{fig:pred:E1base} shows the \ac{RMSD} for both model types with regard to $\mathit{w}$ for each condition.
 The black dashed line represents the average \ac{RMSD} for this experiment.
@@ -227,14 +227,14 @@ ggplot_model_create(subset(data_nonadjusted, data_nonadjusted$experiment == "E1"
 
 With regard to the multi-episodic judgment after the 6th usage episode, both model types perform slightly different.
 \autoref{fig:pred:E1pred6} shows the \ac{RMSD} for the 6th usage episode for both model types.
-Here, WW performs better while increasing $\mathit{w}=4$.
+Here, WI performs better while increasing $\mathit{w}=4$.
 However, the prediction accuracy depends on the considered condition.
-For example, \C3{} is far off for $\mathit{w}=1$ and improves until~3 while \C4{} is best predicted with~$\mathit{w}=5$.
+For example, \C3{} is far off for $\mathit{w}=1$ and improves until $\mathit{w}=3$ while \C4{} is best predicted with~$\mathit{w}=5$.
 LI outperforms WI in prediction accuracy and is, furthermore, more consistent.
 The best accuracy is observed for $\mathit{w}=2$.
 All conditions except \C4{} and \C6{} yield here the minimal \ac{RMSD}.
 In fact, \C4{} and \C6{} reach their minimum at~$\mathit{w}=3$.
-It must be noted that \ac{RMSD} is in the best case close to \Sexpr{round(min(subset(data_nonadjusted, data_nonadjusted[["experiment"]] == "E1" & data_nonadjusted[["id"]] == 6 & data_nonadjusted[["model"]] == "weight_linear_create" & data_nonadjusted[["condition"]] == "All")[["RMSD"]]), 2)} (linear, $\mathit{w}=2$).
+It must be noted that \ac{RMSD} is in the best case close to \Sexpr{round(min(subset(data_nonadjusted, data_nonadjusted[["experiment"]] == "E1" & data_nonadjusted[["id"]] == 6 & data_nonadjusted[["model"]] == "weight_linear_create" & data_nonadjusted[["condition"]] == "All")[["RMSD"]]), 2)} (LI, $\mathit{w}=2$).
 This is close to the prediction accuracy for presenting \ac{HP} only.
 
 \begin{figure}[h]
@@ -252,9 +252,9 @@ ggplot_model_create(subset(data_nonadjusted, data_nonadjusted$experiment == "E1"
 
 With regard to the recovery (\autoref{hypo:recovery}) two conditions were investigated.
 The \ac{RMSD} is shown for both weighting functions in \autoref{fig:pred:E1pred9}.
-In this case, LI is preferable over WW.
-In fact, the WW is very precise for $\mathit{w}=4$, but is otherwise far off.
-WI performs well for~\CVb{} with $\mathit{w} \geq 3$ and performs for all $\mathit{w}$ very similar for \C7{}.
+In this case, LI is preferable over WI.
+In fact, the WI is very precise for $\mathit{w}=4$, but is otherwise far off.
+LI performs well for~\CVb{} with $\mathit{w} \geq 3$ and performs for all $\mathit{w}$ very similar for \C7{}.
 Thus, the linear weight is preferable, because it has a higher robustness.
 
 \begin{figure}[h]
@@ -270,13 +270,13 @@ ggplot_model_create(subset(data_nonadjusted, data_nonadjusted$experiment == "E1"
 
 \subparagraph*{Experiment \EIIa{}}
 This experiment complemented \E1{} with a passive usage situation while sharing the same performance levels.
-With regard to prediction of \ac{HP} only usage episodes results are slightly different than \E1{}.
+With regard to prediction of \ac{HP} only usage episodes, results are slightly different than for \E1{}.
 The prediction accuracy for the multi-episodic judgment after the 3rd usage episode is shown in \autoref{fig:pred:E2pred3}.
 Here, the prediction accuracy improves for an increasing $\mathit{w}$.
-However, this is due to strong deviation of~\C3{} alone. 
-Omitting \C3{} shows similar results to~\E1{}, \ie, prediction accuracy is not affected by $\mathit{w}$.
-In fact, \ac{RMSD} reaches a similar than for~\E1{}.
-Here, no difference between~WW and~LI is observed.
+However, this is due to strong deviation of~\C4{} alone. 
+Omitting \C4{} shows similar results to~\E1{}, \ie, prediction accuracy is not affected by $\mathit{w}$.
+In fact, \ac{RMSD} reaches a similar  value than for~\E1{}.
+Here, no difference between~WI and~LI is observed.
 
 \begin{figure}[h]
 	\centering
@@ -291,9 +291,9 @@ ggplot_model_create(subset(data_nonadjusted, data_nonadjusted$experiment == "E2a
 	\label{fig:pred:E2pred3}
 \end{figure}
 
-With regard to prediction to of the multi-episodic judgment after the 6th usage episode results closely resemble \E1{}.
-The \ac{RMSD} is shown in \autoref{fig:pred:E2pred3}.
-For WW a minimum is reached at $\mathit{w}=3$ and $\mathit{w}=4$ (\Sexpr{round(min(subset(data_nonadjusted, data_nonadjusted[["experiment"]] == "E2a" & data_nonadjusted[["id"]] == 6 & data_nonadjusted[["model"]] == "weight_window_create" & data_nonadjusted[["condition"]] == "All")[["RMSD"]]), 2)}).
+With regard to the prediction of the multi-episodic judgment after the 6th usage episode, results closely resemble \E1{}.
+The \ac{RMSD} is shown in \autoref{fig:pred:E2pred6}.
+For WI a minimum is reached at $\mathit{w}=3$ and $\mathit{w}=4$ (\Sexpr{round(min(subset(data_nonadjusted, data_nonadjusted[["experiment"]] == "E2a" & data_nonadjusted[["id"]] == 6 & data_nonadjusted[["model"]] == "weight_window_create" & data_nonadjusted[["condition"]] == "All")[["RMSD"]]), 2)}).
 For LI the minimal \ac{RMSD} is achieved at $\mathit{w}=2$ (\Sexpr{round(min(subset(data_nonadjusted, data_nonadjusted[["experiment"]] == "E2a" & data_nonadjusted[["id"]] == 6 & data_nonadjusted[["model"]] == "weight_linear_create" & data_nonadjusted[["condition"]] == "All")[["RMSD"]]), 2)}).
 In fact, the found parameters are identical to \E1{}.
 Furthermore, even the \ac{RMSD} behaves similar for individual conditions.
@@ -313,7 +313,7 @@ ggplot_model_create(subset(data_nonadjusted, data_nonadjusted$experiment == "E2a
 
 \subparagraph*{Conclusion}
 For prediction of multi-episodic judgments in one session, both model types perform quite well.
-For both experiments it is notably that the same parameters were found for the two weighting functions, although the usage situation is different.
+For both experiments it is notable that the same parameters were found for the two weighting functions, although the usage situation is different.
 With regard to prediction accuracy LI is preferable over~WI.
 Besides, linear weighting seems to be more robust against selected parameter.
 For both experiments a minimal \ac{RMSD} could be achieved for $\mathit{w}=2$.
@@ -321,14 +321,14 @@ The multi-episodic judgments after the 9th usage episode is optimal for $\mathit
 However, as only two conditions were investigated, adjusting $\mathit{w}$ seems improper.
 
 \subsection{Multiple Days: E6}
-In \E6{} a usage period of six~days was investigated for use of a \ac{AoD} service.
+In \E6{} a usage period of six~days was investigated for use of an \ac{AoD} service.
 This service was used twice per day.
 In this experiment, the first three days (six usage episodes) were presented in \ac{HP} only.
 Afterwards, the multi-episodic perceived quality is assessed.
 Prediction accuracy for this judgment is shown in \autoref{fig:pred:E6pred6}.
-Here, increasing $\mathit{w}$ results, improves prediction accuracy.
-This is more prevalent for WW than for LI.
-WW achieves its minimal \ac{RMSD} with $\mathit{w}=6$ while LI provides only a slight decrease after $\mathit{w}=3$.
+Here, increasing $\mathit{w}$, improves prediction accuracy.
+This is more prevalent for WI than for LI.
+WI achieves its minimal \ac{RMSD} with $\mathit{w}=6$ while LI provides only a slight decrease after $\mathit{w}=3$.
 
 \begin{figure}[h]
 	\centering
@@ -343,12 +343,12 @@ ggplot_model_create(subset(data_nonadjusted, data_nonadjusted$experiment == "E6a
 	\label{fig:pred:E6pred6}
 \end{figure}
 
-With regard to prediction the multi-episodic judgment after the 6th day, both weighting functions perform different.
+With regard to prediction the multi-episodic judgment after the 6th day, both weighting functions perform differently.
 \autoref{fig:pred:E6pred12} shows the \ac{RMSD} for both weighting functions.
-While LI reaches a minimal \ac{RMSD} at $\mathit{w}=4$, WW achieves its minimal \ac{RMSD} not until $\mathit{w}=8$.
-In addition, LI achieves a minimal \ac{RMSD} of \Sexpr{round(min(subset(data_nonadjusted, data_nonadjusted[["experiment"]] == "E6a" & data_nonadjusted[["id"]] == 14 & data_nonadjusted[["model"]] == "weight_linear_create" & data_nonadjusted[["condition"]] == "All")[["RMSD"]]), 1)} while WW only achieves a minimal \ac{RMSD} of
+While LI reaches a minimal \ac{RMSD} at $\mathit{w}=4$, WI achieves its minimal \ac{RMSD} not until $\mathit{w}=8$.
+In addition, LI achieves a minimal \ac{RMSD} of \Sexpr{round(min(subset(data_nonadjusted, data_nonadjusted[["experiment"]] == "E6a" & data_nonadjusted[["id"]] == 14 & data_nonadjusted[["model"]] == "weight_linear_create" & data_nonadjusted[["condition"]] == "All")[["RMSD"]]), 1)} while WI only achieves a minimal \ac{RMSD} of
 \Sexpr{round(min(subset(data_nonadjusted, data_nonadjusted[["experiment"]] == "E6a" & data_nonadjusted[["id"]] == 14 & data_nonadjusted[["model"]] == "weight_window_create" & data_nonadjusted[["condition"]] == "All")[["RMSD"]]), 2)}.
-With regard to \E6{}, LI is preferable to WW, because a higher prediction accuracy is achieved.
+With regard to \E6{}, LI is preferable to WI, because a higher prediction accuracy is achieved.
 Furthermore, LI requires a smaller $\mathit{w}$ and provides a higher robustness for choosing $\mathit{w}$.
 
 \begin{figure}[h]
@@ -373,7 +373,7 @@ It is here proposed to replace the judgment of the first encountered \ac{LP} epi
 This should resemble a sufficient approximation to account for the saturation effect.
 This adjustment actually modifies \C6{} to be similar to \C5{}, which only differ in the performance level of the 4th episode/day.
 In the following, the prediction accuracy of both model types between \C5{}, \C6{}, and \C6{}~(adjusted) is presented.
-For \E1{} and \EIIa{}, this is shown in \autoref{fig:pred:SAT:E1} and, respectively, \autoref{fig:pred:SAT:E2a}.
+For \E1{} and \EIIa{}, this is shown in \autoref{fig:pred:SAT:E1} and \autoref{fig:pred:SAT:E2a}, respectively.
 
 \begin{figure}[h]
 	\centering
@@ -389,11 +389,11 @@ ggplot_model_create(subset(data_adjusted_only, data_adjusted_only$experiment == 
 \end{figure}
 
 For \E1{} and \EIIa{}, the adjustment results in a shift of the minimal \ac{RMSD} for the two model types.
-In case of WW, the minimal \ac{RMSD} shifts from~$\mathit{w}=4$ to~$\mathit{w}=3$ for both experiments.
+In case of WI, the minimal \ac{RMSD} shifts from~$\mathit{w}=4$ to~$\mathit{w}=3$ for both experiments.
 LI shows a similar effect.
 Here, the minimal \ac{RMSD} shifts from~$\mathit{w}=3$ to~$\mathit{w}=2$.
 It is notable for both experiments, that the adjustment leads to a similar shape of \ac{RMSD} for \C5{} and \C6{}~(adjusted).
-Furthermore, the minimal \ac{RMSD} is reached earlier, but that increasing $\mathit{w}$ further is worse for \C6{}~(adjusted) than \C6{}.
+Furthermore, the minimal \ac{RMSD} is reached earlier, but with increasing $\mathit{w}$ the \ac{RMSD} is worse for \C6{}~(adjusted) than \C6{}.
 \begin{figure}[h]
 	\centering
 <<plotE2SAT, echo=F, fig.height=3>>=
@@ -407,7 +407,7 @@ ggplot_model_create(subset(data_adjusted_only, data_adjusted_only$experiment == 
 	\label{fig:pred:SAT:E2a}
 \end{figure}
 
-With regard to \E6{} similar effects are observed.
+With regard to \E6{}, similar effects are observed.
 The minimal \ac{RMSD} shifts from 9~to~6 for window and for linear from~7 to~4.
 Here, \C6{}~(adjusted) also resembles \C5{} closely (see \autoref{fig:pred:SAT:E6}).
 
@@ -442,14 +442,14 @@ In fact, this overall reduction is rather small and it can thus be concluded tha
 
 
 \section{Conclusion}
-In this chapter, two model types based upon the weighted average for prediction multi-episodic perceived quality were presented.
+In this chapter, two model types based upon the weighted average for predicting multi-episodic perceived quality were presented.
 It could be shown that a weighted average using either a window function, or a linear weighting function enables to predict multi-episodic judgments.
-Both model types perform similar, if only \ac{HP} usage episodes are presented.
+Both model types perform similarly, if only \ac{HP} usage episodes are presented.
 In fact, if \ac{LP} usages episodes were presented, both models outperform the unweighted average.
-Comparing WI and LI, the latter shows a prediction accuracy and higher robustness for choosing the parameter.
+Comparing WI and LI, the latter shows a better prediction accuracy and higher robustness for choosing the parameter.
 This is observed for all three experiments.
 With regard to one-session experiments one interesting observation is made.
-For both models, the highest prediction accuracy is achieved for the same $\mathit{w}$ in both experiments, \ie, LI: $\mathit{w}=2$ and WW: $\mathit{w}=4$.
+For both models, the highest prediction accuracy is achieved for the same $\mathit{w}$ in both experiments, \ie, LI: $\mathit{w}=2$ and WI: $\mathit{w}=4$.
 Thus, the usage situation must actually not be considered in this case for predicting multi-episodic perceived quality.
 
 In fact, it must be noted that the weighted average using rather simple weighting functions with one degree of freedom enables a decent prediction accuracy.

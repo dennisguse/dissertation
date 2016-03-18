@@ -544,11 +544,11 @@ A one-sided post-hoc test finds that the reference is significantly different to
 
 With regard to the number of \ac{LP} episodes before a multi-episodic judgment, both experiments yield similar findings.
 Both show a decrease in the multi-episodic judgment, if the number in \ac{LP} episodes increased from zero to one and from one to two.
-If no \ac{HP} episodes follow, decrease of circa \unit[1]{pt} for each presented \ac{LP} episode is observed.
+If no \ac{HP} episodes follow, decrease of approximately \unit[1]{pt} for each presented \ac{LP} episode is observed.
 However, it must be noted that both experiments show consistently no decrease from two to three \ac{LP} episodes.
 Rather than decreasing further, the multi-episodic judgments seems to saturate.
 
-In both experiments a decrease of circa \unit[1]{pt} is also observed, if a \ac{HP} episode follows one \ac{LP} episode(s).
+In both experiments a decrease of approximately \unit[1]{pt} is also observed, if a \ac{HP} episode follows one \ac{LP} episode(s).
 For two episodes, only a decrease less than \unit[0.5]{pt} is observed in both experiments.
 
 It can thus be concluded that \autoref{hypo:number} is only partly true.
