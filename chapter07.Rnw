@@ -699,8 +699,8 @@ Between those two conditions the judgment after the 6th (\Sexpr{wilcox(IQU~condi
  \caption{One-session experiments: multi-episodic judgments after the 3rd, 6th and 9th episode for \autoref{hypo:recovery}.}
  \label{tab:lab:hyporecovery}
  \begin{tabulary}{\columnwidth}{c|C|C|C|C}
-	\multirow{2}{*}{Conditions}	& \multirow{2}{*}{Episodic Performance}			& \multicolumn{3}{c}{Multi-episodic Judgments} \\
-				&					 			& 3rd		& 6th		& 9th  \\
+	\multirow{2}{*}{Conditions}	& \multirow{2}{*}{Episodic Performance}			& \multicolumn{3}{c}{Multi-episodic Judgment} \\
+				&					 			& 3rd	& 6th	& 9th \\
 	\midrule
 	\CVb{}			& 4:\ac{HP}, 5:\ac{LP}, 6:\ac{LP}	& \Sexpr{mos_iqu_with_sd_by_condition("E1", "5b", 3)}	& \Sexpr{mos_iqu_with_sd_by_condition("E1", "5b", 6)}	& \Sexpr{mos_iqu_with_sd_by_condition("E1", "5b", 9)}\\
 	\hline

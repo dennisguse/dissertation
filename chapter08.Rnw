@@ -8,6 +8,8 @@ timeseries=timeseries[-which(timeseries$experiment == "E1" & timeseries$conditio
 timeseries=timeseries[-which(timeseries$experiment == "E5" & timeseries$id == "1"), ]
 timeseries$id[timeseries$experiment == "E5"] = timeseries$id[timeseries$experiment == "E5"] - 1
 
+timeseries=timeseries[-which(timeseries$experiment == "E6a" & timeseries$id %in% c("1", "2")), ]
+
 attach(timeseries)
 @
 

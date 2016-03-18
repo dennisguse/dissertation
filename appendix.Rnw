@@ -5,6 +5,9 @@ source('R_eval.R')
 source('R_plot.R')
 
 timeseries=timeseries[-which(timeseries$experiment == "E1" & timeseries$condition == "5a")]
+timeseries=timeseries[-which(timeseries$experiment == "E6a" & timeseries$id %in% c("1", "2")), ]
+timeseries$id[timeseries$experiment == "E6a"] = timeseries$id[timeseries$experiment == "E6a"] - 2
+
 attach(timeseries)
 @
 
@@ -178,7 +181,7 @@ Finally, all multi-episodic judgments per experiment and condition are presented
 	\caption{Multi-episodic judgments per condition and experiment for \E1{}, \EIIa{}, \EIIb{}, and \E3{}.}
 	\begin{tabulary}{\textwidth}{C|C|C|C|C}
 	Experiment &  Condition & \multicolumn{3}{c}{Multi-episodic Judgment} \\
-	& & 1st & 2nd & 3rd \\
+	& & 3rd episode & 6th episode & 9th episode \\
 	\midrule
 	\E1{} & \C1{} 	& \Sexpr{mos_iqu_with_sd_by_condition("E1", "1", 3)} 		& \Sexpr{mos_iqu_with_sd_by_condition("E1", "1", 6)} 		& -  \\
 	\hline
