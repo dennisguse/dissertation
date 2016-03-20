@@ -82,7 +82,7 @@
 \include{support/FrontBackmatter/Titleback}
 \cleardoublepage\include{support/FrontBackmatter/Dedication}
 %\cleardoublepage\include{FrontBackmatter/Foreword}
-%\cleardoublepage\include{support/FrontBackmatter/Abstract}
+\cleardoublepage\include{support/FrontBackmatter/Abstract}
 \cleardoublepage\include{support/FrontBackmatter/Publications}
 %\cleardoublepage\include{support/FrontBackmatter/Acknowledgments}
 \pagestyle{scrheadings}
