@@ -235,7 +235,7 @@ In all experiments, a diotic representation is provided using a pair of headphon
 The experimental setups are described in the \appendix{}~\ref{appendix:setups} (p.~\pageref{appendix:setups}).
 
 \subsection{Procedure}\label{sec:training}
-The one-session experiments consist of 4 stages with an overall duration of \unit[45...90]{min}.
+The one-session experiments consist of 4 stages with an overall duration of up to \unit[90]{min}.
 In the \emph{first stage}, participants were informed about the experiment, the task(s), and the experimental procedure.
 In this stage, participants reported demographic data.
 
@@ -779,7 +779,7 @@ Nevertheless, participants were able to attribute the usage episodes and their e
 
 \section{Discussion and Conclusion}
 The four experiments show that multi-episodic \ac{QoE} can be assessed in one session.
-Here, the judgment of a multi-episodic experience in one session with a duration of \unit[30..45]{min} was investigated.
+Here, the judgment of a multi-episodic experience in one session with a duration of up to \unit[45]{min} was investigated.
 Although the selected degradation for \ac{LP} (LPC-10) is not used for speech telephony, its presentation resulted in observable effects on following multi-episodic judgments.
 This allowed to investigate the formation process of multi-episodic perceived quality.
 

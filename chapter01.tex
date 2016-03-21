@@ -11,7 +11,7 @@ A service provider maintains the network infrastructure to provide telecommunica
 An actual service is produced when a user interacts with a telecommunication service.
 
 As a service is produced when it is used, the provided \emph{performance} might be varying within a usage instance as well as between distinct usage instances.
-Here, performance are absolutely measurable parameters of this service like transmission bandwidth and one-way transmission delay~\citep[][p. 12]{moller_assessment_2000}.
+Here, the performance can be determined by measurable parameters of this service like transmission bandwidth and one-way transmission delay~\citep[][p.~12]{moller_assessment_2000}.
 In case of a telecommunication service, varying performance can be the result of current network load conditions, network equipment failure, but also related to end-user devices.
 The usage of telecommunication services can be divided into two aspects.
 First, a user can actively interact with a service like starting and engaging a telephone conversation.
@@ -26,13 +26,12 @@ The perceived quality of an interaction with a service is affected by the experi
 Understanding the relationship between performance of a service and perceived quality has become an important field of research investigating the so-called \ac{QoE}.
 Starting from speech transmission for telephony \citep[][]{ieee_audio_and_electroacoustics_group_ieee_1969} and its inherent impairments, \ac{QoE} now mainly considers digital transmission of multimedia data. % \citep{moller_quality_2014}.
 This includes the production, coding, transmission, decoding and reproduction of text, voice, speech, audio, image and video information.
-Specific characteristics of human perceptual systems have been used to develop enhanced coding mechanisms like \ac{MP3} and H.264.
+Specific characteristics of human perceptual systems have been used to develop enhanced coding mechanisms like \ac{MP3} and video codec~H.264.
 These apply compression to provide a reduction in data rate while maintain only little reduction in perceived quality.
-
-Another application of knowledge about \ac{QoE} is the monitoring of network transmission infrastructure.
-This allows to estimate the actual impact of provided performance on a user.
-Such knowledge enables a service provider to react accordingly to avoid reductions in perceived quality.
-For example, in case of a video streaming service stalling, provoked by a temporary reduction in network bandwidth, could be avoided by reducing the transmission bandwidth.
+Knowledge about \ac{QoE} is also applied to planning and monitoring of network transmission infrastructure for telecommunication services \citep[][]{schatz_qoe-based_2014}.
+This enables telecommunication service providers to tailor their network infrastructure to the estimated need and on-the-fly control their infrastructure to avoid reductions in perceived quality for their users.
+%Such knowledge enables a service provider to react accordingly to avoid reductions in perceived quality.
+For example, in case of a video streaming service, stalling, provoked by a temporary limitation in network bandwidth, might be avoided by reducing the coding bandwidth.
 Although perceived quality is likely to be affected, the service is still provided and remains useful for the user.
 
 %Service choice
@@ -90,8 +89,10 @@ I will conduct this investigation for different \emph{usage periods}.
 Usage periods denotes the time frame in which a user interacts repeatedly with a service.
 Here, I consider two usage periods.
 First, I investigate multi-episodic perceived quality in one session consisting of several usage episodes.
-Second, I investigated multi-episodic perceived quality several days.
-This is necessary, because it is not known if the time between usage episodes affects the formation process of multi-episodic perceived quality.
+The duration of one session is here chosen to be \unit[45]{min}, because this enables the investigation of multi-episodic perceived quality in subjective experiments similar to standardized methods.
+Second, I investigated the formation process of multi-episodic perceived quality over a usage period of several days.
+These two usage periods provide an initial starting point for the investigation of the formation process of multi-episodic perceived quality.
+Considering two different usage period is necessary, because it is not yet known, if the time between usage episodes affects the formation process of multi-episodic perceived quality.
 
 \section{Structure}
 This thesis is structured as follows.
@@ -102,7 +103,7 @@ Finally, the prior work on multi-episodic perceived quality is presented and dis
 %Here, the assessment method developed by \citet{moller_single-call_2011}, which is the following denoted as \emph{defined-use}, is presented in detail.
 
 Then, I present my work towards multi-episodic perceived quality. % based upon the defined use method.
-In \autoref{chap:towards}, I describe the selected aspects of the defined-use method and the to be investigated hypotheses.
+In \autoref{chap:towards}, I describe the considered aspects of the defined-use method as well as the hypotheses that are to be investigated.
 Those hypotheses are the basis for my investigations on multi-episodic perceived quality in one session (\autoref{chap:lab}) as well as over several days (\autoref{chap:field}).
 %Those different time frames are necessary to investigate as it is not known, if the time between usage episodes affect the formation process.
 Based upon the conducted experiments, I investigate potential models for the prediction of multi-episodic judgments based upon prior episodic judgments (\autoref{chap:modeling}).
