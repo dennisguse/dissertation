@@ -109,13 +109,13 @@ In the second condition, denoted as \C9{}, both services were presented in \ac{H
 This resulted in \unit[8]{days} presented \ac{HP} versus \unit[6]{days} presented in \ac{LP}. 
 While \C0{} replicates the baseline condition of \citet{moller_single-call_2011}, \C9{} should lead to a reduction in multi-episodic judgments.
 
-After finishing an episode, participants assessed the episodic perceived quality on the 7-point \ac{CCR} scale (\cf, \autoref{img:chap05:quality-scale}).
+After finishing an episode, participants assessed the episodic perceived quality on the 7-point \ac{CoCR} scale (\cf, \autoref{img:chap05:quality-scale}).
 The multi-episodic perceived quality for each service was assessed after the 4th, 7th, 10th, and 14th day directly after finishing the daily episode with the \ac{VoD} service.
 
 For the speech telephony service the G.722 was used for both performance levels with a packet-length of \unit[20]{ms}.
 Neither \ac{FEC} nor \ac{PLC} were applied.
 For \ac{LP} a random packet-loss of 5\% was inserted in addition.
-For the \ac{VoD} service the video was encoded with \ac{H.264} with a resolution of $720x576$ and the audio with \ac{AAC} (\unit[48]{kHz}, \unit[165]{kbit/s}, stereo).
+For the \ac{VoD} service the video was encoded with H.264 with a resolution of $720x576$ and the audio with \ac{AAC} (\unit[48]{kHz}, \unit[165]{kbit/s}, stereo).
 For this service the two performance levels only differed in video encoding bandwidth.
 For \ac{HP} a video bandwidth of \unit[2]{Mbit/s} and for \ac{LP} a video bandwidth of \unit[125]{kbit/s} was used.
 
@@ -241,12 +241,12 @@ The audio book was cut into individual scenes with a duration of \unit[12]{min} 
 For the \ac{VoD} service scenes of \emph{The Big Bang Theory} (Season One, BluRay Version, German) were used.
 Here meaningful scenes were cut resulting in durations of \unit[8]{min} to \unit[12]{min} per episode.
 The audio signal was treated like the \ac{AoD} service.
-The video signal was encoded to the native resolution of the mobile device ($800x480$ at 4.3~inch) with 25~\ac{FPS} with \ac{H.264} (two-pass).
+The video signal was encoded to the native resolution of the mobile device ($800x480$ at 4.3~inch) with 25~\ac{FPS} with H.264 (two-pass).
 For \ac{HP} a video encoding bandwidth was set to \unit[3]{Mbit/s} and for \ac{LP} to \unit[0.25]{Mbit/s}.
 Degradations on both modalities were inserted to increase the perceptual difference between \ac{HP} and \ac{LP}.
 Details of the technical setup are described in the \appendix{}~\ref{appendix:setups} (p.~\pageref{appendix:setups}).
 
-Episodic judgments were taken on the 7-point \ac{CCR} scale after every episode.
+Episodic judgments were taken on the 7-point \ac{CoCR} scale after every episode.
 Multi-episodic judgments per service were taken at the 2nd, 5th, 8th, 11th and 14th day.
 This judgment was done after finishing the daily episode with the \ac{VoD} service.
 
@@ -404,7 +404,7 @@ Then, participants were presented typical speech telephony related degradations 
 Finally, each participant used the \ac{AoD} service for two usage episodes to ensure participants understood how to use the service.
 
 During the field experiment, the first usage episode of a day needed to be conducted between \unit[7]{am} and \unit[1]{pm}, and the second usage episode between \unit[3]{pm} and \unit[10]{pm}.
-Episodic judgments and multi-episodic judgments were taken on the 7-point \ac{CCR} scale.
+Episodic judgments and multi-episodic judgments were taken on the 7-point \ac{CoCR} scale.
 Multi-episodic judgments were collected after the second episode of the \unit[3rd]{day} and the \unit[6th]{day}.
 In fact, the judgment after the 3rd day is only based upon \ac{HP} episodes.
 Thus, it can be used as reference point to assess the impact of the presented \ac{LP} episodes on following multi-episodic judgments, which is in the following denoted as \emph{reference}.

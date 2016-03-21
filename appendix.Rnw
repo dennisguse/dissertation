@@ -74,7 +74,7 @@ This \unit[7]{inch} display of this device was set to maximum brightness without
 
 In those three experiments non-degraded recordings of two-party conversations of experiment \E1{} were selected.
 Those recordings were processed with the ITU-T~STL2009 tools \citep{itu-t_recommendation_g.191_software_2010} for coding with G.722 and with SOX for coding with LPC-10.
-For \EIIb{} the video material was cut with \emph{Adobe Premiere 6} and exported with \ac{H.264} (\unit[1280x720]{px}, \unit[5]{Mbit/s}, two-pass) and \ac{AAC} (\unit[448]{kbit/s}, stereo).
+For \EIIb{} the video material was cut with \emph{Adobe Premiere 6} and exported with H.264 (\unit[1280x720]{px}, \unit[5]{Mbit/s}, two-pass) and \ac{AAC} (\unit[448]{kbit/s}, stereo).
 Afterwards it was processed with \emph{FFmpeg}\footnote{The FFmpeg project is available at \url{https://www.ffmpeg.org/}.} to re-encode with the desired \ac{QP} factor while leaving the audio unchanged.
 
 \section{Experiment E4}

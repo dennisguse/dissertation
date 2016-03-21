@@ -59,7 +59,7 @@ For all experiments the first three episodes were presented with the best perfor
 This enables participants to experience the service in a well-working setting,l similar to \citet[][]{moller_single-call_2011}.
 Non-\ac{HP} were only introduced per service for episode 4, 5, and 6.
 
-In all experiments, a multi-episodic judgment on the 7-point \ac{CCR} scale is taken after every third  episode with the service.
+In all experiments, a multi-episodic judgment on the 7-point \ac{CoCR} scale is taken after every third  episode with the service.
 Thus, the first multi-episodic judgment is taken after presenting only \ac{HP} episodes and is similar between all conditions.
 This allows to investigate potential impact of the between-subject design, because this judgment should be similar for between all conditions.
 Furthermore, this judgment can be used as a reference to assess the impact of the presented \ac{LP} episode(s) on following multi-episodic judgments.
@@ -187,16 +187,16 @@ In comparison to LPC-10, the re-synthesized speech signal contains far less arti
 
 As LPC-10 is rarely compared to G.711 or G.722, a technical evaluation using \ac{POLQA} \citep{itu-t_recommendation_p.863_perceptual_2014} has been conducted.
 \ac{POLQA} estimates the \ac{MOS} for the 5-point \ac{ACR} scale.
-\citet{koster_comparison_2015} presented a transformation function that allows to transform judgments from the 5-point \ac{ACR} scale to the 7-point \ac{CCR} scale.
+\citet{koster_comparison_2015} presented a transformation function that allows to transform judgments from the 5-point \ac{ACR} scale to the 7-point \ac{CoCR} scale.
 For the evaluation \unit[12]{sec} German speech samples have been processed with all three codecs and then evaluated with \ac{POLQA} in super-wideband mode.
 The results are shown in \autoref{tab:lab:performance}.
 It must be noted that LPC-10 is very different to G.722 and G.711.
-It only achieves a \ac{MOS} of 1.9 on the 7-point~\ac{CCR}.
+It only achieves a \ac{MOS} of 1.9 on the 7-point~\ac{CoCR}.
 
 \begin{table}
  \centering
  \caption[Performance levels: Comparison of the selected codecs with \acs{POLQA}]{Performance levels: Comparison of the selected codecs with  for \acs{HP}, \acs{MP}, and \acs{LP} with \acs{POLQA}.
- The prediction was transformed to the 7-point \acs{CCR} scale \citep{koster_comparison_2015}.}
+ The prediction was transformed to the 7-point \acs{CoCR} scale \citep{koster_comparison_2015}.}
  \label{tab:lab:performance}
  \begin{tabulary}{\columnwidth}{C|C|C|C}
    Performance & Signal bandwidth & Codec & \acs{POLQA}\\
@@ -221,7 +221,7 @@ This might result in a reduction in perceived quality in a conversational case a
 The \ac{VoD} service for \EIIb{} was presented on a tablet computer.
 %Presenting both services on the same device rather than different devices, prevents that participants associate each service with an individual device and use the device as cue for recall.
 Here, a \emph{Nexus 7 (2013)} is used, which provides a 7~inch screen with a resolution of \unit[$1920x1200$]{px}.
-For \ac{HP}, content is downscaled to a resolution of \unit[$1280x720$]{px} and encoded with \ac{H.264} (25~\ac{FPS}, \unit[5]{Mbit/s}, two-pass).
+For \ac{HP}, content is downscaled to a resolution of \unit[$1280x720$]{px} and encoded with H.264 (25~\ac{FPS}, \unit[5]{Mbit/s}, two-pass).
 For \ac{LP}, the video signal is degraded by setting the \ac{QP} factor to 50.
 This results in a constant blockiness for \ac{LP}.
 %In difference to limiting the encoding bandwidth, this leads to near constant degradation over multiple frames. 
@@ -252,11 +252,11 @@ Those stimuli contained different signal bandwidths (wideband, narrowband), code
 In \EIIb{}, also degradations for the \ac{VoD} service were presented.
 22 videos with an approximate duration of \unit[8]{sec} were used.
 Here, only the \ac{QP} factor was varied (0, 42, 47, and 50).
-After the presentation of a stimulus, the perceived quality was assessed using the 7-point \ac{CCR} scale. %\footnote{The question was phrased in German: "Wie bewerten Sie die Gesamtqualität der gehörten Audioaufnahme?" for speech telephony training and "Wie bewerten Sie die Gesamtqualität des gerade gesehenen Videos?" in case of the video training.}
+After the presentation of a stimulus, the perceived quality was assessed using the 7-point \ac{CoCR} scale. %\footnote{The question was phrased in German: "Wie bewerten Sie die Gesamtqualität der gehörten Audioaufnahme?" for speech telephony training and "Wie bewerten Sie die Gesamtqualität des gerade gesehenen Videos?" in case of the video training.}
 
 In the \emph{fourth stage} the multi-episodic part was conducted.
 Here, usage episodes were presented one after the other.
-Directly after finishing an episode, participants judged the episodic quality on the 7-point \ac{CCR} scale.
+Directly after finishing an episode, participants judged the episodic quality on the 7-point \ac{CoCR} scale.
 In addition, participants could describe the experienced degradation in qualitative form.
 After every 3rd usage episode per service, a multi-episodic judgment is taken on the same scale.
 %In \EIIa{}, \EIIb{}, and \E3{}, pre-processed content was presented
