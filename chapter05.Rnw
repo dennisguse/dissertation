@@ -33,7 +33,7 @@ Also, a user's behavior towards a service might change due to perceived quality 
 Multi-episodic perceived quality is thus the result of a sequential process.
 Here, the order of usage episodes and their individual experiences affect the final outcome.
 Investigations on multi-episodic perceived quality can therefore only be undertaken in experiments adhering to a between-subject design.
-Here, every participant is only exposed to one \emph{multi-episodic} condition alone.
+Here, every participant is only exposed to one \emph{multi-episodic} condition alone\footnote{A within-subject design might applicable for the investigation of multi-episodic perceived quality, if it can be ensured that the presentation order of different \emph{multi-episodic} conditions do not affect each other.}.
 
 In the field of perceived quality, multi-episodic integration has so far only received limited attention.
 For practical use, it is often sufficient to understand the relationship between different performance parameters and the general effect on perceived quality in the range of seconds up to some minutes.
@@ -58,8 +58,7 @@ In this experiment participants evaluated also changes in their satisfaction wit
 Both experiments showed that the usage and also emotions towards the product under investigation changes over time.
 In the beginning interaction is more playful and exploratory, but over time gets more task-oriented and productive.
 
-Although multi-episodic integration is not a key aspect for \ac{UX}, it is an important aspect.
-Especially, with to regard to adaption of new products and also services.
+Although multi-episodic integration is not a key point for \ac{UX}, it is an important aspect especially regarding the adaption of new products and also services.
 
 \subsection{Average Perceived Quality \citep{duncanson_average_1969}}
 First work in the direction of multi-episodic perceived quality of telecommunication services was performed by \citet{duncanson_average_1969}.
@@ -130,12 +129,11 @@ All these aspects might affect the formation process of multi-episodic perceived
 However, so far the impact of those aspects on multi-episodic judgments is not understood.
 
 \paragraph{Assessment Methods}
-Assessing multi-episodic perceived quality can be conducted by two methods.
-One method is to let users freely interact with a service on their own to solve their task.
-The other method actually does not consider users, but rather participants.
-Here, it is defined how a service should be used.
-
-In the following, both methods are presented and at the end discussed.
+Multi-episodic perceived quality can be assessed using two diametric methods, which differ in the behavioral freedom of users.
+One the one hand, users are are allowed to interact freely with the service under investigation.
+In this setting, each user can decide individually when, how often, for which tasks, and how to use this service, \ie, the individual user behavior is not limited.
+One the other hand, a similar user behavior can be enforced by defining when, how, for which tasks the service should be used.
+In the following, both methods are presented in detail and the implications are discussed.
 
 \subparagraph*{Free-use}
 Multi-episodic perceived quality can be assessed by observing user's interaction with a service without restricting their usage behavior.
@@ -172,14 +170,14 @@ In addition, performance of a service can hardly be controlled and the desired d
 In fact, modifying the performance of a service on purpose might introduce ethical issues, if users are not informed about this.
 
 This is not an issue for the defined-use method.
-Here, participants are instructed how to use a service.
+Here, participants are instructed when and how to use a service incl. specific tasks.
 %The latter might influences the quality formation process by setting expectations and thus affects multi-episodic perceived quality judgments.
 Beside limited ecological validity, this method requires that a service is a available that can provide desired performance in a precise and reliable manner.
 This means that it must be possible to introduce degradations, when defined, and prevent degradations, when none are defined.
 This is a challenging task for telecommunication services especially due to the necessary data transmission and often uncontrollable network performance.
-In addition, to technological challenges in the deployment of such a service, a participant needs to solve artificial tasks at a specific point in time.
+In addition to technological challenges in the deployment of such a service, a participant needs to solve each artificial task at a specific point in time.
 This is not an issue, if multi-episodic perceived quality is studied in one session, \eg, several consecutive usage episodes.
-Investigating multi-episodic perceived quality over larger time-spans covering several days, weeks, or months, however, increases the required effort for a user to stick to a defined usage pattern.
+Investigating multi-episodic perceived quality over longer time-spans covering several days, weeks, or months, however, increases the required effort for a user to stick to a defined usage pattern.
 Larger time-spans also increase the likelihood that a defined usage pattern cannot be fulfilled by individual participant, because each participant must embedded the usage pattern into their daily life.
 
 However, investigating multi-episodic perceived quality beyond one session is necessary to derive knowledge about the influence of time between usage episodes.
@@ -241,7 +239,7 @@ The first two days are presented in each condition with the best performance lev
 The experiment was conducted by the participants in their home environments using their private computer and broadband Internet access.
 This limits the necessary effort for participants and allows them to embed the experiment into their daily life.
 In addition, each pair of participants was required to know each other beforehand to reduce their effort.
-In this experiment, participants were equipped with a headset and a webcam to avoid an impact of varying terminal equipment.
+In this experiment, participants were equipped with a headset and a webcam to avoid an impact of varying terminal equipment~\citep[][]{moller_single-call_2011}.
 
 \paragraph*{Results}
 This experiment was conducted with \unit[58]{participants}. % in Berlin, Germany. aging from 14 to \unit[64]{years}.
