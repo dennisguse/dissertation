@@ -195,7 +195,7 @@ It only achieves a \ac{MOS} of 1.9 on the 7-point~\ac{CoCR}.
 
 \begin{table}
  \centering
- \caption[Performance levels: Comparison of the selected codecs with \acs{POLQA}]{Performance levels: Comparison of the selected codecs with  for \acs{HP}, \acs{MP}, and \acs{LP} with \acs{POLQA}.
+ \caption[Performance levels: comparison of the selected codecs with \acs{POLQA}]{Performance levels: Comparison of the selected codecs with  for \acs{HP}, \acs{MP}, and \acs{LP} with \acs{POLQA}.
  The prediction was transformed to the 7-point \acs{CoCR} scale \citep{koster_comparison_2015}.}
  \label{tab:lab:performance}
  \begin{tabulary}{\columnwidth}{C|C|C|C}

@@ -66,7 +66,7 @@ However, the performance levels were different between the three experiments.
 \label{E4}\label{E5}\label{E6}
 \begin{table}[h]
 	\centering
-	\caption{Multiple days: Overview on experiments.}
+	\caption{Multiple days: overview on experiments.}
 	\label{tab:field:experiments}
 	\begin{tabulary}{\textwidth}{C|C|C|C|C}
 	Experiment	& Service Type 		& Tasks															& Days	& Participants \\
@@ -152,7 +152,7 @@ Thus, a \ac{MOS} evaluation cannot be conducted as participants were exposed to 
 	<<plotE4C0, echo=F, fig.height=3>>=
 ggplot_timeseries_create(subset(timeseries, experiment=="E4a" & condition=="A1" & service == "VoD" & id != 0)) + geom_boxplot(aes(factor(id), y=QU), na.rm=T) + xlab("Day")
 	@
-	\caption{Multiple days (\E4{}): Episodic judgments for the \ac{VoD} service in \C9{}.}
+	\caption{Multiple days (\E4{}): episodic judgments for the \ac{VoD} service in \C9{}.}
 	\label{img:field:E4conditionA1TELboxplot}
 \end{figure}
 
@@ -291,7 +291,7 @@ In this experiment no increase of episodic judgments for \ac{HP} episodes is obs
 	<<plotE5C0, echo=F, fig.height=3>>=
 		ggplot_timeseries_create(subset(timeseries, experiment=="E5" & condition=="P1")) + geom_boxplot(aes(factor(id), y=QU), na.rm=T) + xlab("Day")
 	@
-	\caption[Multiple days (\E5{}): Box plot of episodic judgments for \C9{} and \CX{}]{Multiple days: Box plot of episodic judgments in \E5{} for \C9{} (top) and \CX{} (bottom).}
+	\caption[Multiple days (\E5{}): box plots of episodic judgments for \C9{} and \CX{}]{Multiple days: box plots of episodic judgments in \E5{} for \C9{} (top) and \CX{} (bottom).}
 	\label{img:field:boxplotE5}
 \end{figure}
 
@@ -307,7 +307,7 @@ Between the two conditions, only the judgments after the 2nd day are significant
 
 \begin{table}[h]
 	\centering
-	\caption{Multiple days (\E5{}): Multi-episodic judgments.}
+	\caption{Multiple days (\E5{}): multi-episodic judgments.}
 	\label{tab:field:e5results}
 	\begin{tabular}{c|c|c||c|c}
 	Day & \multicolumn{4}{c}{Multi-episodic Judgment} \\
