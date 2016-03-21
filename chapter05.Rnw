@@ -4,7 +4,6 @@ timeseries = read.csv("data/data_minimal.csv")
 source('R_eval.R')
 source('R_plot.R')
 
-timeseries=timeseries[-which(timeseries$experiment == "E1" & timeseries$condition == "5a")]
 attach(timeseries)
 @
 
