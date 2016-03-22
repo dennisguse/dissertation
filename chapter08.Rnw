@@ -528,7 +528,7 @@ For \C5{} and \C6{} no significant difference is found (\Sexpr{wilcox.pairwise.p
 
 \begin{table}[h]
 	\centering
-	\caption{Multiple days (\E6{}): multi-episodic judgments after the 6th day for \autoref{hypo:number}.}
+	\caption[Multiple days (\E6{}): multi-episodic judgments after the 6th day for \autoref{hypo:number}.]{Multiple days (\E6{}): multi-episodic judgments after the 6th day for \autoref{hypo:number}. Reported as \ac{MOS} with standard deviation in brackets.}
 	\label{tab:field:hyponumber}
 	\begin{tabulary}{\columnwidth}{c|c|C}
 	Condition	& \ac{LP} episode(s) 	& Multi-episodic Judgment\\
@@ -561,7 +561,7 @@ For two days with \C4{} and \C5{}.
 
 \begin{table}[h]
 	\centering
-	\caption{Multiple days (\E6{}): multi-episodic judgment after the 6th day for \autoref{hypo:position}.}
+	\caption[Multiple days (\E6{}): multi-episodic judgment after the 6th day for \autoref{hypo:position}.]{Multiple days (\E6{}): multi-episodic judgment after the 6th day for \autoref{hypo:position}. Reported as \ac{MOS} with standard deviation in brackets.}
 	\label{tab:field:hypoposition}
 	\begin{tabulary}{\columnwidth}{c|c|C}
 	Condition   & \ac{LP} episode(s) 	& Multi-episodic Judgment \\
@@ -589,7 +589,7 @@ The three conditions are not significantly different with regard to the last mul
 
 \begin{table}[h]
 	\centering
-	\caption{Multiple days (\E6{}): multi-episodic judgment after the 6th day for \autoref{hypo:consecutive}.}
+	\caption[Multiple days (\E6{}): multi-episodic judgment after the 6th day for \autoref{hypo:consecutive}.]{Multiple days (\E6{}): multi-episodic judgment after the 6th day for \autoref{hypo:consecutive}. Reported as \ac{MOS} with standard deviation in brackets.}
 	\label{tab:field:hypoconsecutive}
 	\begin{tabular}{c|c|c}
 	Condition   & \ac{LP} episode(s) 	& Multi-episodic Judgment \\
