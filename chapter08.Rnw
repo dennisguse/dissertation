@@ -69,7 +69,7 @@ However, the performance levels were different between the three experiments.
 	\caption{Multiple days: overview on experiments.}
 	\label{tab:field:experiments}
 	\begin{tabulary}{\textwidth}{C|C|C|C|C}
-	Experiment	& Service Type 		& Tasks															& Days	& Participants \\
+	Experiment	& Service Types 		& Tasks															& Days	& Participants \\
 	\midrule
 	\E4{}		& Telephony	and \ac{VoD}	& Two-party conversation (\ac{SCS})	& 14		& \Sexpr{participants("E4a")}\\ %Study 1/E4a
 	\hline
