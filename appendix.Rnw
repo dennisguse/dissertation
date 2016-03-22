@@ -126,6 +126,26 @@ Participants were only required to use as web browser either \emph{Google Chrome
 As the buffering strategy for media content cannot be controlled by a website using standardized HTML5, the preloading was initiated, when the website was loaded while presenting a loading animation of \unit[5]{sec}.
 This avoids issues due to initial buffering by providing a constant waiting time.
 
+\chapter{Questionnaires}\label{appendix:questions}
+\begin{table}
+ \centering
+ \caption{Questions for the episodic and multi-episodic judgments for all conducted experiments.}
+ \label{tab:appendix:questions}
+ \begin{tabulary}{\columnwidth}{C|C|C}
+   Experiment & Episodic & Multi-episodic\\
+   \midrule
+   \E1{}  	& Wie bewerten Sie die Gesamtqualität des gerade beendeten Telefonates? & Wie bewerten Sie die Gesamtqualität aller bisher geführten Telefonate? \\
+   \hline
+   \EIIa{}	 and \EIIb{} (Speech) & Wie bewerten Sie die Gesamtqualität des gerade gehörten Telefonates? & Wie bewerten Sie die Gesamtqualität aller bisher gehörten Telefonate? \\
+   \hline
+   \EIIb{} \ac{VoD} & Wie bewerten Sie die Gesamtqualität des gerade gesehenen Videos? & Wie bewertest Du die Gesamtqualität aller bisher gesehenen Videos? \\
+   \hline 
+   \EIIb{} Speech and \ac{VoD} & - & Wie bewerten Sie die Gesamtqualität des Systems bezüglich aller Interaktionen? \\
+   \hline
+   \E3{} & Wie bewertest Du die Gesamtqualität der gerade gehörten Episode? & Wie bewertest Du die Gesamtqualität aller bisher gehörten Episoden? \\
+   \end{tabulary}
+\end{table}
+
 \chapter{Results}\label{appendix:results}
 In the following, judgments for the here presented experiments are shown.
 First, episodic judgments are presented as box plots for each usage episode per condition and experiment.

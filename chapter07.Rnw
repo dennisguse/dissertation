@@ -240,8 +240,9 @@ In the \emph{first stage}, participants were informed about the experiment, the 
 In this stage, participants reported demographic data.
 
 In the \emph{second stage}, participants were checked for hearing impairments.
-Here, an adapted Békésy audiometry was conducted covering the spectrum for wideband speech telephony.\footnote{Audiometry was conducted with an \emph{Ear 1.7} audiometer (\url{http://www.ear20.de/ear_1_7.html}) connected to a \emph{Sennheiser HDA 200} for \unit[125]{Hz}, \unit[250]{Hz}, \unit[500]{Hz}, \unit[1]{kHz}, \unit[2]{kHz}, \unit[4]{kHz}, and \unit[8]{kHz}.}
-This stage was skipped in \EIIb{} and \E3{}.
+Here, an adapted Békésy audiometry was conducted covering the spectrum for wideband speech telephony.\footnote{Audiometry was conducted with an \emph{Ear~1.7} audiometer (\url{http://www.ear20.de/ear_1_7.html}) connected to a \emph{Sennheiser~HDA~200} for \unit[125]{Hz}, \unit[250]{Hz}, \unit[500]{Hz}, \unit[1]{kHz}, \unit[2]{kHz}, \unit[4]{kHz}, and \unit[8]{kHz}.}
+A participant is considered to have an impaired hearing, if a \unit[30]{dB} loss on one ear in wideband spectrum is found.
+For \EIIb{} audiometry was skipped due to the increased duration of the multi-episodic part as well as in \E3{} due to the focus on the perception of duration.
 
 In the \emph{third stage}, typical speech telephony degradations were presented.
 %Presenting a training showing a range of potential degradations is expect to reduce intra-personal variations.
@@ -251,14 +252,18 @@ In each stimuli two sentences are presented by one human speaker.
 Those stimuli contained different signal bandwidths (wideband, narrowband), codecs (G.711, G.722, GSM\=/FR, LPC\=/10), white noise (fullband without codec), and random packet-loss (2\%, and 5\%; G.722, Mode~1, no \ac{PLC}).
 In \EIIb{}, also degradations for the \ac{VoD} service were presented.
 22 videos with an approximate duration of \unit[8]{sec} were used.
-Here, only the \ac{QP} factor was varied (0, 42, 47, and 50).
+Here, only the \ac{QP}~factor was varied (0, 42, 47, and 50).
 After the presentation of a stimulus, the perceived quality was assessed using the 7\=/point \ac{CoCR} scale. %\footnote{The question was phrased in German: "Wie bewerten Sie die Gesamtqualität der gehörten Audioaufnahme?" for speech telephony training and "Wie bewerten Sie die Gesamtqualität des gerade gesehenen Videos?" in case of the video training.}
 
 In the \emph{fourth stage} the multi-episodic part was conducted.
 Here, usage episodes were presented one after the other.
 Directly after finishing an episode, participants judged the episodic quality on the 7\=/point \ac{CoCR} scale.
-In addition, participants could describe the experienced degradation in qualitative form.
+In addition, the experienced degradations could be described in qualitative form (German: "Falls Störungen aufgetreten sind, dann beschreiben Sie diese bitte."; English: "If degradations occurred, then please describe them.").
 After every 3rd usage episode per service, a multi-episodic judgment is taken on the same scale.
+The episodic judgment was presented with the question "How would you judge the overall quality of the just finished episode?" and the multi-episodic judgment "How would you judge the overall quality of all episodes so far?".
+These questions were modified, \ie, replacing the term episode to telephone call or similar, to customize them for each experiment.
+The exact questions for each experiment are presented in the \appendix{}~\ref{appendix:questions} (p.~\pagere{appendix:questions}).
+
 %In \EIIa{}, \EIIb{}, and \E3{}, pre-processed content was presented
 % varying from \unit[2]{min} to \unit[3]{min} in duration.
 %In \E1{} the duration was not controlled as the \acp{SCS} needed to be fulfilled in a two-party conversation, which leads varying duration.
@@ -282,7 +287,7 @@ After every 3rd usage episode per service, a multi-episodic judgment is taken on
 To achieve comparable two-party conversations in \E1{}, one \ac{SCS} \citep{itu-t_recommendation_p.805_subjective_2007} per usage episode needed to be solved.
 Here, the presentation order of \acp{SCS} was kept constant for all conditions.
 %In difference to \citet{itu-t_recommendation_g.107_e-model_2015} no \ac{SCS} needed to be solved beforehand, but participants were given a written and oral explanation using an exemplary \ac{SCS}.
-In this experiment, all conversations were recorded before applying the performance level.
+For later use in \EIIa{} and \EIIb{}, the conversations of all participants of \E1{} were recorded.
 For \EIIa{} and \EIIb{}, one recording for each of the episodes 1..6 was selected.
 Those were required to show common task solving behavior.
 %Furthermore, no emotional reaction like laughing should be present and not contain any degradations due to other sound sources like audible breathing, but only clear and clean speech.
@@ -306,7 +311,7 @@ Usage episodes varied in duration from \unit[174]{s} to \unit[199]{s} with an av
 
 \section{Participants}
 All four experiments were conducted at TU~Berlin, Germany.
-Participants were required to have no hearing impairments.
+Participants were required to have no hearing impairments, \ie, over the whole frequency spectrum for speech less than \unit[30]{dB} sensitivity loss.
 In \EIIb{} normal vision was also mandatory.
 
 \E1{} was conducted from April~2014 to December~2015 with 78~female and 51~male participants aging from 18~to 53~years (${\mu=26.7}$, ${\sigma=5.9}$). %mean(subset(data, data$Study == "Lab-TEL" & data$Condtion != "5a")$Age), nrow(subset(data, data$Study == "Lab-LST" & data$Sex == "female")) 
