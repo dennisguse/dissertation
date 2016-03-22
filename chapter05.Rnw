@@ -252,7 +252,7 @@ Following, first the episodic judgments and then the multi-episodic judgments ar
 \ac{MOS} for all episodic judgments and multi-episodic judgments per condition are shown in  \autoref{tab:state:MOLLERepisodic}.
 An exemplary box plot of episodic judgments is shown for condition~4 in \autoref{img:state:MOLLERboxplot}.
 
-\begin{figure}[h]
+\begin{figure}
 	\centering
 	<<plotMOLLER, echo=F, fig.height=3>>=
 		ggplot_timeseries_create(subset(timeseries, experiment=="MOELLER" & condition=="S2")) + geom_boxplot(aes(factor(id), y=QU), na.rm=T) + scale_x_discrete(breaks=seq(1, 24, by=2), labels=c(1:12)) + xlab("Day")
@@ -263,15 +263,16 @@ An exemplary box plot of episodic judgments is shown for condition~4 in \autoref
 
 \subparagraph*{Episodic Judgments}
 For all conditions the episodic judgments reflect the applied episodic performance, \ie, \ac{HP} and \ac{MP} are judged better than \ac{LP}.
-It can thus be concluded that the setup worked as desired.
+It can thus be concluded that the technical setup worked as desired.
 %Condition 5 is evaluated alone as the absence of \ac{HP} might affect episodic and multi-episodic judgments
-However, episodic judgments for condition 1..4 are significantly different for \ac{HP} (\Sexpr{kruskal(QU~condition, "MOELLER", "HP", c("S1", "S2", "S3", "S5"))}).
-A post-hoc test shows that all conditions except condition~2 and condition~3 are significantly different ($p\leq0.04$). %wilcox.pairwise.print(QU~condition, "MOELLER", "HP", c("S1", "S2", "S3", "S5"))
+However, comparing the episodic judgments for \ac{HP} episodes conditions~1..4 significant differences are found (\Sexpr{kruskal(QU~condition, "MOELLER", "HP", c("S1", "S2", "S3", "S5"))}).
+A post-hoc test, \ie, pairwise Wilcoxon rank-sum test with Holms' correction, shows that the episodic judgments for \ac{HP} are not significantly different between condition~3 and condition~4 ($p=0.137$), but all other conditions are significantly different to each other ($p\leq0.04$). %wilcox.pairwise.print(QU~condition, "MOELLER", "HP", c("S1", "S2", "S3", "S5"))
 For \ac{LP} episodic judgments are not significantly different between conditions 2..4 (\Sexpr{kruskal(QU~condition, "MOELLER", "LP", c("S1", "S2", "S3"))}).
-In fact, the differences between those conditions are relatively small and likely an artifact of the between-subject design.
-For condition~2..4 a significant difference between the two performance level is observed (\Sexpr{wilcox(QU~performance_level, "MOELLER", c("HP", "LP"), c("S1", "S2", "S3"))}).
-It must be noted that although \ac{HP} and \ac{LP} are different, \ac{LP} was still judged as "fair".
-It thus seems not to be perceived as a severe degradation.
+The observed difference for episodic judgments \ac{HP} are relatively small and likely an artifact of the applied between-subject design.
+
+For condition~2..4 a significant difference between the two performance levels is observed (\Sexpr{wilcox(QU~performance_level, "MOELLER", c("HP", "LP"), c("S1", "S2", "S3"))}).
+It must be noted that although \ac{HP} and \ac{LP} are different, \ac{LP} was still judged approximately as "fair".
+It thus seems not to be perceived as a \emph{severe} degradation.
 With regard to condition~5, the episodic judgments of \ac{LP} episodes are close to those in condition~2..4.
 However, \ac{MP} judgments are only slightly lower than \ac{HP} judgments for condition~1..4.
 As \ac{MP} and \ac{HP} were not presented together, this indicates that either the scale is used differently between conditions, or that both performance levels were not judged differently.
@@ -283,7 +284,7 @@ In addition, it is reported that \ac{HP} episodes, following \ac{LP} episodes, s
 \citet{moller_single-call_2011} suggested a recovery period of up to two usage episodes.
 A statistical analysis is omitted due to the relative small (potential) difference between episodic judgments and the high standard deviation.
 
-\begin{table}[h]
+\begin{table}
 	\centering
 	\caption[\citet{moller_single-call_2011}: episodic judgments and multi-episodic judgments.]{Episodic judgments and multi-episodic judgments by \citet{moller_single-call_2011}. Reported as \ac{MOS} with standard deviation in brackets.}
 	\label{tab:state:MOLLERepisodic}
@@ -306,20 +307,34 @@ A statistical analysis is omitted due to the relative small (potential) differen
 \subparagraph*{Multi-episodic Judgments}
 With regard to multi-episodic judgments the result of this experiment are limited.
 Here, the multi-episodic judgments are rather close, ranging only from \Sexpr{mos_iqu_with_sd_by_condition("MOELLER", "S2", 14)} to \Sexpr{mos_iqu_with_sd_by_condition("MOELLER", "S5", 24)}.
-In addition, the large variation of episodic judgments and multi-episodic judgments limits the investigation of differences between conditions.
-In fact, even for condition 1, which presented only \ac{HP}, the multi-episodic judgments vary from \Sexpr{mos_iqu_with_sd_by_condition("MOELLER", "S5", 14)} to \Sexpr{mos_iqu_with_sd_by_condition("MOELLER", "S5", 24)}.
-A statistical evaluation is therefore omitted here.
+A significant difference between multi-episodic judgments is only found for condition~4 (\Sexpr{kruskal(IQU~id, "MOELLER", c("LP", "HP"), "S2", c(4, 14, 24))}).
+In all other conditions no significant difference is observed.
+For condition~4 a post-hoc test (pairwise Wilcoxon rank-sum test with Holms' correction) shows that the multi-episodic judgment on the 2nd~day is significantly different to the judgment after the 7th~day (\Sexpr{wilcox.pairwise.print(IQU~id, "MOELLER", c("LP", "HP"), "S2", c(4, 14, 24))[1,1]}).
+The judgment after the 2nd~day is not significant different to the judgment after the 12th~day as well as the judgment after the 7th~day is not significant different to the 12th~day (each \Sexpr{wilcox.pairwise.print(IQU~id, "MOELLER", c("LP", "HP"), "S2", c(4, 14, 24))[2,2]}).
+In fact, an absolute comparison with regard to multi-episodic judgments between the conducted five conditions is not directly feasible due to the observed differences between conditions for episodic judgments.
+It must thus be concluded that only condition~4 resulted in an observable, although rather small, effect on multi-episodic judgments due to the presentation of the 3rd and 4th~day in \ac{LP}.
+
 %With regard to condition~5 an interesting observation can be made.
 %It is notable that multi-episodic judgments for condition~5 were rather close to the other conditions.
 %This also indicates that \ac{MP} and \ac{HP} did not affect multi-episodic judgments.
 
-Thus, it must be concluded that the applied conditions did not affect the multi-episodic formation process in an observable manner.
+%kruskal(IQU~condition, "MOELLER", c("HP", "LP"), c("S1", "S2", "S3", "S4", "S5"), "4") %N
+%kruskal(IQU~condition, "MOELLER", c("HP", "LP"), c("S1", "S2", "S3", "S4", "S5"), "14") 
+%wilcox.pairwise.print(IQU~condition, "MOELLER", c("LP", "HP"), c("S1", "S2", "S3", "S5"), 14) %S2 vs. S5: 0.01
+%kruskal(IQU~condition, "MOELLER", c("HP", "LP"), c("S1", "S2", "S3", "S4", "S5"), "24") %SIG
+%wilcox.pairwise.print(IQU~condition, "MOELLER", c("LP", "HP"), c("S1", "S2", "S3", "S5"), 24) %N SIG
+%kruskal(IQU~id, "MOELLER", c("LP", "HP"), "S1", c(4, 14, 24))
+%kruskal(IQU~id, "MOELLER", c("LP", "HP"), "S2", c(4, 14, 24)) %SIG
+%wilcox.pairwise.print(IQU~id, "MOELLER", c("LP", "HP"), "S2", c(4, 14, 24)) %SIG 4 vs 14: 0.003
+%kruskal(IQU~id, "MOELLER", c("LP", "HP"), "S3", c(4, 14, 24))
+%kruskal(IQU~id, "MOELLER", c("LP", "MP"), "S4", c(4, 14, 24))
+%kruskal(IQU~id, "MOELLER", c("LP", "HP"), "S5", c(4, 14, 24))
 
 \subparagraph{Discussion}
 \citet{moller_single-call_2011} successfully applied the defined-use assessment method for the assessment of multi-episodic \ac{QoE} in a field experiment with a usage period of 12 days.
 The episodic quality judgments are consistent with the desired performance levels, showing that the deployed system could provide the performance in a reliable manner.
 However, the multi-episodic perceived quality judgments only provide limited insight, because the differences between conditions are rather small.
-This might be due to the fact that \ac{LP} did not represent a \emph{severe} degradation, or that the number of degraded usage episodes was too small.
+This might be due to the fact that \ac{LP} did not represent a \emph{severe} degradation, or that the number of degraded usage episodes was too low.
 
 Beside this, an issue with this experiment is that no details about the technical parameters were provided.
 This is likely due to the use of (proprietary) technology provided by Skype.

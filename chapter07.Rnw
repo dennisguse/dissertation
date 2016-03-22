@@ -181,7 +181,7 @@ In fact, this codec is not used for speech telephony.
 However, LPC\=/10 is useful for the investigation of multi-episodic perceived quality, because it allows to create severe reduction in performance while providing a understandable speech signal.
 
 For \ac{MP}, \emph{G.711}~\citep{itu-t_recommendation_g.711_pulse_1988} is selected.
-This codec is the common reference condition for narrowband speech telephony.
+This codec is often as reference for narrowband speech telephony.
 Compared to G.722 the difference between narrowband and wideband is measurable. %TODO
 In comparison to LPC\=/10, the re-synthesized speech signal contains far less artifacts.
 

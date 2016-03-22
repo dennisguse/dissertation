@@ -259,7 +259,7 @@ Typical degradations were not presented.
 \subsection{Participants}
 This experiment was conducted in Berlin, Germany from June until August 2013.
 21~participants (11~female, 10~male) took part in this experiment with an average of \unit[27.8]{years} ($\sigma = 4.0$).
-11 participants were assigned to the \ac{AoD} service with condition \C9{} and the \ac{VoD} service with condition \CX{} and 10 vice versa.
+11 participants were assigned to the \ac{AoD} service with \C9{} and the \ac{VoD} service with \CX{} and 10 vice versa.
 Participants received \unit[40]{EUR} as compensation.
 Out of the overall 294~usage episodes, 9~were not conducted for the \ac{AoD} service and 13~not for the \ac{VoD} service.
 6~multi-episodic judgments were missing.
@@ -389,7 +389,7 @@ The conducted conditions are \C1{}, \C3{}, \C4{}, \C5{}, \C6{}, and \C8{}.
 
 For the investigation of \autoref{hypo:number}, the results of the \C3{}, \C5{}, and \C6{} can be compared.
 \autoref{hypo:position} can be evaluated by comparing the results of conditions \C1{} and \C3{} as well as \C4{} and \C5{}.
-Finally, \autoref{hypo:consecutive} is evaluated by comparing the results condition \C8{} with \C3{} and \C5{}.
+Finally, \autoref{hypo:consecutive} is evaluated by comparing the results of \C8{} with \C3{} and \C5{}.
 \autoref{tab:field:e6episodic} gives an overview on the conditions and the number of participants.
 
 Here, the audio book Isabel Allende's \emph{"City of the Beats"} has been used.
