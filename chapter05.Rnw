@@ -197,11 +197,11 @@ Furthermore, each pair of participants was allowed to use the service for privat
 
 After finishing a call, each participant rated the perceived quality of this usage episode (\emph{episodic quality}).
 After the last call on the 2nd, 7th, and 12th day the perceived quality of all experienced usage episodes \emph{so far} is assessed (\emph{multi-episodic judgment}).
-The episodic and multi-episodic judgment were both taken on a 7-point \ac{CoCR} scale\footnote{For a comparison between discrete 5-point \ac{ACR} scale and 7-point \ac{CoCR} scale see \citet{koster_comparison_2015}.} \citep[][p.~18]{itu-t_recommendation_p.832_subjective_2000}. The scale is shown in \autoref{img:chap05:quality-scale}.
+The episodic and multi-episodic judgment were both taken on a 7\=/point \ac{CoCR} scale\footnote{For a comparison between discrete 5-point \ac{ACR} scale and 7\=/point \ac{CoCR} scale see \citet{koster_comparison_2015}.} \citep[][p.~18]{itu-t_recommendation_p.832_subjective_2000}. The scale is shown in \autoref{img:chap05:quality-scale}.
 
 \begin{figure}
 	\includegraphics[width=1\textwidth]{figure/quality7pt_scale}
-	\caption[7-point \acs{CoCR} scale]{7-point \acs{CoCR} scale with German labels; labels from left-to-right: extremely bad~(0), bad~(1), poor~(2), fair~(3), good~(4), excellent~(5) and ideal~(6) \citep{itu-t_recommendation_p.832_subjective_2000} (own illustration).}
+	\caption[7\=/point \acs{CoCR} scale]{7\=/point \acs{CoCR} scale with German labels; labels from left-to-right: extremely bad~(0), bad~(1), poor~(2), fair~(3), good~(4), excellent~(5) and ideal~(6) \citep{itu-t_recommendation_p.832_subjective_2000} (own illustration).}
 	\label{img:chap05:quality-scale}
 \end{figure}
 

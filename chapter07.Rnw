@@ -59,7 +59,7 @@ For all experiments the first three episodes were presented with the best perfor
 This enables participants to experience the service in a well-working setting,l similar to \citet[][]{moller_single-call_2011}.
 Non-\ac{HP} were only introduced per service for episode 4, 5, and 6.
 
-In all experiments, a multi-episodic judgment on the 7-point \ac{CoCR} scale is taken after every third  episode with the service.
+In all experiments, a multi-episodic judgment on the 7\=/point \ac{CoCR} scale is taken after every third  episode with the service.
 Thus, the first multi-episodic judgment is taken after presenting only \ac{HP} episodes and is similar between all conditions.
 This allows to investigate potential impact of the between-subject design, because this judgment should be similar for between all conditions.
 Furthermore, this judgment can be used as a reference to assess the impact of the presented \ac{LP} episode(s) on following multi-episodic judgments.
@@ -173,25 +173,25 @@ For digital transmission of wideband speech the codec \emph{G.722} (Mode~1)~\cit
 This codec achieves very similar judgments like uncompressed wideband speech signals. %TODO Add refs, Moeller, Raake, Marcel
 %In subjective listening-only experiments G.722 typically achieves a \ac{MOS} of 4.5~on the 5-point \ac{ACR} scale.
 
-For \ac{LP}, the speech signal is coded with \emph{LPC-10}\footnote{LPC-10 is also known as \emph{FS-1015} and \emph{STANAG 4198}.}.
+For \ac{LP}, the speech signal is coded with \emph{LPC\=/10}\footnote{LPC\=/10 is also known as \emph{FS-1015} and \emph{STANAG 4198}.}.
 This codec is designed for low bit rate radio transmission while providing intelligibility rather than natural reproduction.
 The re-synthesized speech signal sounds very unnatural and is described as robotic, and muddy with a hissing background noise.\citet{}
-%LPC-10 achieves a 5-point $\ac{MOS}$ of 2.3 \citep[][]{gibson_multimedia_2000} while requiring only \unit[2.4]{kbit/s} transmission bandwidth. %Gibson J.D. (ed.)-Multimedia Communications_ Directions and Innovations (2001).pdf
+%LPC\=/10 achieves a 5-point $\ac{MOS}$ of 2.3 \citep[][]{gibson_multimedia_2000} while requiring only \unit[2.4]{kbit/s} transmission bandwidth. %Gibson J.D. (ed.)-Multimedia Communications_ Directions and Innovations (2001).pdf
 In fact, this codec is not used for speech telephony.
-However, LPC-10 is useful for the investigation of multi-episodic perceived quality, because it allows to create severe reduction in performance while providing a understandable speech signal.
+However, LPC\=/10 is useful for the investigation of multi-episodic perceived quality, because it allows to create severe reduction in performance while providing a understandable speech signal.
 
 For \ac{MP}, \emph{G.711}~\citep{itu-t_recommendation_g.711_pulse_1988} is selected.
 This codec is the common reference condition for narrowband speech telephony.
 Compared to G.722 the difference between narrowband and wideband is measurable. %TODO
-In comparison to LPC-10, the re-synthesized speech signal contains far less artifacts.
+In comparison to LPC\=/10, the re-synthesized speech signal contains far less artifacts.
 
-As LPC-10 is rarely compared to G.711 or G.722, a technical evaluation using \ac{POLQA} \citep{itu-t_recommendation_p.863_perceptual_2014} has been conducted.
+As LPC\=/10 is rarely compared to G.711 or G.722, a technical evaluation using \ac{POLQA} \citep{itu-t_recommendation_p.863_perceptual_2014} has been conducted.
 \ac{POLQA} estimates the \ac{MOS} for the 5-point \ac{ACR} scale.
-\citet{koster_comparison_2015} presented a transformation function that allows to transform judgments from the 5-point \ac{ACR} scale to the 7-point \ac{CoCR} scale.
+\citet{koster_comparison_2015} presented a transformation function that allows to transform judgments from the 5-point \ac{ACR} scale to the 7\=/point \ac{CoCR} scale.
 For the evaluation \unit[12]{sec} German speech samples have been processed with all three codecs and then evaluated with \ac{POLQA} in super-wideband mode.
 The results are shown in \autoref{tab:lab:performance}.
-It must be noted that LPC-10 is very different to G.722 and G.711.
-It only achieves a \ac{MOS} of 1.9 on the 7-point~\ac{CoCR}.
+It must be noted that LPC\=/10 is very different to G.722 and G.711.
+It only achieves a \ac{MOS} of 1.9 on the 7\=/point~\ac{CoCR}.
 
 \begin{table}
  \centering
@@ -205,17 +205,17 @@ It only achieves a \ac{MOS} of 1.9 on the 7-point~\ac{CoCR}.
    \hline
    \ac{MP} & 300..\unit[3400]{Hz} & G.711         & 3.3 \\ %MOS1-5: 3.3
    \hline
-   \ac{LP} & 300..\unit[3400]{Hz} & LPC-10        & 1.9 \\ %MOS1-5: 2.0
+   \ac{LP} & 300..\unit[3400]{Hz} & LPC\=/10        & 1.9 \\ %MOS1-5: 2.0
    \end{tabulary}
 \end{table}
 
 End-to-end delay is an additional factor influencing perceived quality.
 This is important for \E1{} due to the use of a conversational task.
 A one-way delay up to \unit[100]{ms} is rarely noticeable and thus not perceived as degradation~\citep[][p.~9]{itu-t_recommendation_g.107_e-model_2015}.
-LPC-10 requires a look-ahead of \unit[90]{ms} while a frame duration of \unit[22.5]{ms} is applied.
+LPC\=/10 requires a look-ahead of \unit[90]{ms} while a frame duration of \unit[22.5]{ms} is applied.
 This results in coding delay alone of up to \unit[112.5]{ms}.
 G.711 and G.722 provide a algorithmic delay without look-ahead of \unit[0.125]{ms} and both codecs can be used with a minimal frame duration of \unit[10]{ms}.
-Thus, LPC-10 alone might introduce a noticeable difference due to the additional delay.
+Thus, LPC\=/10 alone might introduce a noticeable difference due to the additional delay.
 This might result in a reduction in perceived quality in a conversational case and thus \E1{}.
 
 The \ac{VoD} service for \EIIb{} was presented on a tablet computer.
@@ -248,15 +248,15 @@ In the \emph{third stage}, typical speech telephony degradations were presented.
 Here, participants assessed the perceived quality of 27~speech~stimuli with a duration of approximately~\unit[8]{sec}.
 In each stimuli two sentences are presented by one human speaker.
 %Three different speakers were used: two male and one female speaker.
-Those stimuli contained different signal bandwidths (wideband, narrowband), codecs (G.711, G.722, GSM-FR, LPC-10), white noise (fullband without codec), and random packet-loss (2\%, and 5\%; G.722, Mode~1, no \ac{PLC}).
+Those stimuli contained different signal bandwidths (wideband, narrowband), codecs (G.711, G.722, GSM\=/FR, LPC\=/10), white noise (fullband without codec), and random packet-loss (2\%, and 5\%; G.722, Mode~1, no \ac{PLC}).
 In \EIIb{}, also degradations for the \ac{VoD} service were presented.
 22 videos with an approximate duration of \unit[8]{sec} were used.
 Here, only the \ac{QP} factor was varied (0, 42, 47, and 50).
-After the presentation of a stimulus, the perceived quality was assessed using the 7-point \ac{CoCR} scale. %\footnote{The question was phrased in German: "Wie bewerten Sie die Gesamtqualität der gehörten Audioaufnahme?" for speech telephony training and "Wie bewerten Sie die Gesamtqualität des gerade gesehenen Videos?" in case of the video training.}
+After the presentation of a stimulus, the perceived quality was assessed using the 7\=/point \ac{CoCR} scale. %\footnote{The question was phrased in German: "Wie bewerten Sie die Gesamtqualität der gehörten Audioaufnahme?" for speech telephony training and "Wie bewerten Sie die Gesamtqualität des gerade gesehenen Videos?" in case of the video training.}
 
 In the \emph{fourth stage} the multi-episodic part was conducted.
 Here, usage episodes were presented one after the other.
-Directly after finishing an episode, participants judged the episodic quality on the 7-point \ac{CoCR} scale.
+Directly after finishing an episode, participants judged the episodic quality on the 7\=/point \ac{CoCR} scale.
 In addition, participants could describe the experienced degradation in qualitative form.
 After every 3rd usage episode per service, a multi-episodic judgment is taken on the same scale.
 %In \EIIa{}, \EIIb{}, and \E3{}, pre-processed content was presented
@@ -287,7 +287,7 @@ For \EIIa{} and \EIIb{}, one recording for each of the episodes 1..6 was selecte
 Those were required to show common task solving behavior.
 %Furthermore, no emotional reaction like laughing should be present and not contain any degradations due to other sound sources like audible breathing, but only clear and clean speech.
 The duration of the selected conversations ranged from \unit[128]{sec} to \unit[194]{sec} with an average of \unit[153]{s}.
-%The recordings were normalized per speaker, mixed into one channel and encoded with G.722 or LPC-10, respectively.
+%The recordings were normalized per speaker, mixed into one channel and encoded with G.722 or LPC\=/10, respectively.
 %The six selected recordings were presented in \EIIa{} and \EIIb{} in the same order as in \E1{}.
 
 For the \ac{VoD} service used in \EIIb{}, scenes of a sitcom were selected.
@@ -780,7 +780,7 @@ Nevertheless, participants were able to attribute the usage episodes and their e
 \section{Discussion and Conclusion}
 The four experiments show that multi-episodic \ac{QoE} can be assessed in one session.
 Here, the judgment of a multi-episodic experience in one session with a duration of up to \unit[45]{min} was investigated.
-Although the selected degradation for \ac{LP} (LPC-10) is not used for speech telephony, its presentation resulted in observable effects on following multi-episodic judgments.
+Although the selected degradation for \ac{LP} (LPC\=/10) is not used for speech telephony, its presentation resulted in observable effects on following multi-episodic judgments.
 This allowed to investigate the formation process of multi-episodic perceived quality.
 
 It could be consistently shown that increasing the number of \ac{LP} episodes leads to a reduction in multi-episodic judgments (\autoref{hypo:number}).
