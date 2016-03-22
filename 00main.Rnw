@@ -62,6 +62,7 @@
 \usepackage{chngcntr}
 \counterwithout{footnote}{chapter}
 
+\usepackage[shortcuts]{extdash}
 % ********************************************************************
 % GO!GO!GO! MOVE IT!
 %*******************************************************
