@@ -239,14 +239,14 @@ The one-session experiments consist of 4 stages with an overall duration of up t
 In the \emph{first stage}, participants were informed about the experiment, the task(s), and the experimental procedure.
 In this stage, participants reported demographic data.
 
-In the \emph{second stage}, participants were checked for hearing impairments.
+In the \emph{second stage}, participants were checked for normal hearing.
 Here, an adapted Békésy audiometry was conducted covering the spectrum for wideband speech telephony.\footnote{Audiometry was conducted with an \emph{Ear~1.7} audiometer (\url{http://www.ear20.de/ear_1_7.html}) connected to a \emph{Sennheiser~HDA~200} for \unit[125]{Hz}, \unit[250]{Hz}, \unit[500]{Hz}, \unit[1]{kHz}, \unit[2]{kHz}, \unit[4]{kHz}, and \unit[8]{kHz}.}
-A participant is considered to have an impaired hearing, if a \unit[30]{dB} loss on one ear in wideband spectrum is found.
+A participant is considered to have hearing capabilities within normal limits, if hearing sensitivity is between \unit[0]{dbHL} and \unit[25]{dBHL} \citep[][p.~256]{roeser_audiology_2007}.
 For \EIIb{} audiometry was skipped due to the increased duration of the multi-episodic part as well as in \E3{} due to the focus on the perception of duration.
 
 In the \emph{third stage}, typical speech telephony degradations were presented.
 %Presenting a training showing a range of potential degradations is expect to reduce intra-personal variations.
-Here, participants assessed the perceived quality of 27~speech~stimuli with a duration of approximately~\unit[8]{sec}.
+Here, participants assessed the perceived quality of 27~speech stimuli with a duration of approximately~\unit[8]{sec}.
 In each stimuli two sentences are presented by one human speaker.
 %Three different speakers were used: two male and one female speaker.
 Those stimuli contained different signal bandwidths (wideband, narrowband), codecs (G.711, G.722, GSM\=/FR, LPC\=/10), white noise (fullband without codec), and random packet-loss (2\%, and 5\%; G.722, Mode~1, no \ac{PLC}).
@@ -262,7 +262,7 @@ In addition, the experienced degradations could be described in qualitative form
 After every 3rd usage episode per service, a multi-episodic judgment is taken on the same scale.
 The episodic judgment was presented with the question "How would you judge the overall quality of the just finished episode?" and the multi-episodic judgment "How would you judge the overall quality of all episodes so far?".
 These questions were modified, \ie, replacing the term episode to telephone call or similar, to customize them for each experiment.
-The exact questions for each experiment are presented in the \appendix{}~\ref{appendix:questions} (p.~\pagere{appendix:questions}).
+The exact questions for each experiment are presented in the \appendix{}~\ref{appendix:questions} (p.~\pageref{appendix:questions}).
 
 %In \EIIa{}, \EIIb{}, and \E3{}, pre-processed content was presented
 % varying from \unit[2]{min} to \unit[3]{min} in duration.
@@ -296,7 +296,7 @@ The duration of the selected conversations ranged from \unit[128]{sec} to \unit[
 %The six selected recordings were presented in \EIIa{} and \EIIb{} in the same order as in \E1{}.
 
 For the \ac{VoD} service used in \EIIb{}, scenes of a sitcom were selected.
-Scenes were taken from \emph{The Big Bang Theory} (Season One, BluRay Version, German).
+Scenes were taken from \emph{The Big Bang Theory} (Season One, Blu-ray Version, German).
 The scenes were selected to be meaningful and self-contained.
 Those scenes were selected, so the duration of the two-party conversational recordings were closely matched.
 For each episode one scene was presented.
@@ -311,7 +311,7 @@ Usage episodes varied in duration from \unit[174]{s} to \unit[199]{s} with an av
 
 \section{Participants}
 All four experiments were conducted at TU~Berlin, Germany.
-Participants were required to have no hearing impairments, \ie, over the whole frequency spectrum for speech less than \unit[30]{dB} sensitivity loss.
+Participants were required to have no normal hearing (see \autoref{sec:training}).
 In \EIIb{} normal vision was also mandatory.
 
 \E1{} was conducted from April~2014 to December~2015 with 78~female and 51~male participants aging from 18~to 53~years (${\mu=26.7}$, ${\sigma=5.9}$). %mean(subset(data, data$Study == "Lab-TEL" & data$Condtion != "5a")$Age), nrow(subset(data, data$Study == "Lab-LST" & data$Sex == "female")) 
@@ -381,8 +381,8 @@ If this tests shows significant differences, then a post-hoc test is conducted.
 Here, a \emph{pairwise Wilcoxon rank-sum test with Holms' correction} is used.
 Paired samples are evaluated with a \emph{Wilcoxon signed-rank test}.
 For tests, a significance level of 5\% is applied.
-
-Non-parametric statistical tests are chosen over parametric tests, because the applied assumptions of parametric tests are likely to be violated. % due to the between subject design.
+Nonparametric tests are applied due to the rather small sample size for some conditions.
+% due to the between subject design.
 
 \subsection{Episodic Judgments}\label{lab:episodic}
 The episodic judgments of all conditions are compared to investigate for an influence of the applied between-subject design.
@@ -429,15 +429,13 @@ For the episodic judgments of \ac{LP} episodes no significant differences betwee
 Although \ac{HP} episodes were significantly different between conditions, an analysis did not yield a reason for the difference.
 It is thus considered an artifact of the between-subject design due to the larger sample size of \C7{}.
 The episodic judgments are significantly different between \ac{HP} and \ac{LP} (\Sexpr{wilcox(QU~performance_level, "E1", c("HP", "LP"))}).
+%The episodic judgments show that the performance levels \ac{HP}, \Sexpr{mos_qu_with_sd_by_condition("E1", "HP")}, and \ac{LP}, \Sexpr{mos_qu_with_sd_by_condition("E1", "LP")}, are perceived differently.
 A comparison of \ac{MP} is done for the evaluation of \autoref{hypo:strength}, because it was only presented in \C7{}.
-
-The episodic judgments show that the performance levels \ac{HP}, \Sexpr{mos_qu_with_sd_by_condition("E1", "HP")}, and \ac{LP}, \Sexpr{mos_qu_with_sd_by_condition("E1", "LP")}, are perceived differently.
-
-It can thus be concluded that \E1{} is consistent.
+It can thus be concluded that the results of \E1{} are consistent.
 
 \subparagraph*{Experiment \EIIa{} and \EIIb{}}
 For \EIIa{}, episodic judgments of \ac{HP} episodes are significantly different between conditions (\Sexpr{kruskal(QU~condition, "E2a", "HP")}).
-However, conducting a post-hoc does not show significant differences.
+However, conducting a post-hoc does not show significant differences between conditions for episoidc judgments of \ac{HP} episodes (${p \geq 0.066}$).
 %A post-hoc test shows a significant difference between condition \C4{} and \C6{} (\Sexpr{wilcox.pairwise.print(QU~condition, "E2a", "HP", condition)[5,4]}).
 %Again an analysis did not yield a reason for the difference, which seems to be an artifact due the between-subject design.
 For episodic judgments of \ac{LP} episodes, no significant difference between conditions is shown (\Sexpr{kruskal(QU~condition, "E2a", "LP")}).
@@ -448,9 +446,10 @@ For the \ac{VoD} service, episodic judgments of \ac{HP} episodes are not signifi
 The episodic judgment of \ac{HP} and \ac{LP} episodes are significantly different for the telephony service (\Sexpr{wilcox(QU~performance_level, "E2b", performance_level, condition, id, "telephony")}) and the \ac{VoD} service (\Sexpr{wilcox(QU~performance_level, "E2b", performance_level, condition, id, "VoD")}).
 
 Comparing \EIIa{} and \EIIb{} with regard to the speech telephony service, the judgments of \ac{LP} episodes are not significantly different (\Sexpr{wilcox(QU~experiment, c("E2a", "E2b"), "LP", condition, id, "telephony")}), but a significant difference is found for \ac{HP} (\Sexpr{wilcox(QU~experiment, c("E2a", "E2b"), "HP", condition, id, "telephony")}).
-This might be due to the differences in the used audio equipment, \ie, headphones and also sound card (\cf, \appendix{}~\ref{appendix:setups} on p.~\pageref{appendix:setups}).
-Here, differences between experiments are observed.
-Nevertheless, both experiments yield consistent judgments.
+This might be attributed to the different audio equipment, \ie, headphones and sound card, used for both experiments, but might also be an artifact due to the 
+This might be due to the differences in the used audio equipment, \ie, headphones and also sound card incl. calibration (\cf, \appendix{}~\ref{appendix:setups} on p.~\pageref{appendix:setups}), or the presence of the \ac{VoD} service.
+However, the actual reason could not be determined.
+With regard to episodic judgments both experiments yield consistent results but differences between the experiments are observed.
 
 \subparagraph*{Experiment \E3{}}
 In \E3{} no significant differences between the two conditions for episodic judgments of \ac{HP} (\Sexpr{wilcox(QU~condition, "E3", "HP")}) and \ac{LP} are found (\Sexpr{wilcox(QU~condition, "E3", "LP")}).
@@ -647,8 +646,8 @@ timeseries_E1_peak$condition[timeseries_E1_peak$condition == "7"] = 4
 wilcox_episodic_peak = pairwise.wilcox.test(timeseries_E1_peak$QU, timeseries_E1_peak$condition, exact=F, alternative="less")
 @
 
-In \autoref{hypo:strength} it is assumed that the lowest episodic performance (here \ac{LP}) has a stronger negative effect on the multi-episodic judgments whereas lesser degraded episode(s) (here \ac{MP}) yield a smaller effect or no effect at all.
-The later case, would indicate the occurrence of a peak-effect.
+In \autoref{hypo:strength} it is assumed that the lowest episodic performance (here \ac{LP}) has a stronger negative effect on the multi-episodic judgments whereas \emph{lesser degraded} episode(s) (here \ac{MP}) yield a smaller effect or no effect at all.
+This is denoted as peak-effect (\cf, \autoref{chap03:effects}).
 This is evaluated in \E1{} only by comparing \CIIa{}, \CVb{}, and \C7{}.
 These present the 5th episode in \ac{LP}, but differ in the performance level of the 6th usage episode (\autoref{tab:lab:hypothesesComparison}).
 \autoref{tab:lab:hypostrength} shows the multi-episodic judgments after the 6th usage episode as well as the episodic judgment of this episode.
@@ -715,8 +714,8 @@ Between those two conditions the judgment after the 6th (\Sexpr{wilcox(IQU~condi
 
 Both conditions show an increase in the final multi-episodic judgment due to the three additional \ac{HP} episodes.
 In fact, both conditions do not show a significant difference between the multi-episodic judgments after the 3rd and 9th usage episode.
-However, for both conditions a small effect of the non-\ac{HP} episodes on the last multi-episodic judgment is indicated, because both remain lower than the first judgment.
-This is supported by the found difference between the final judgments of both conditions.
+However, for both conditions a small effect of the non-\ac{HP} episodes on the last multi-episodic judgment is indicated, because both remain lower than the first multi-episodic judgment.
+%This is supported by the found difference between the final judgments of both conditions.
 
 It must be concluded that the multi-episodic judgment recovers, if three additional \ac{HP} episodes are presented, and thus \autoref{hypo:recovery} is accepted.
 However, from the two conditions alone it cannot be deduced, if a recency effect occurred or the increased number of \ac{HP} episodes alone lead to the increase.

@@ -290,7 +290,7 @@ A statistical analysis is omitted due to the relative small (potential) differen
 	\label{tab:state:MOLLERepisodic}
 	\begin{tabular}{c||c|c|c||c|c|c}
 	\multirow{2}{*}{\rotatebox{90}{Cond.}} & \multicolumn{3}{c||}{Episodic Judgments} &  \multicolumn{3}{c}{Multi-episodic Judgments} \\
-	  & \ac{HP}	& \ac{MP} & \ac{LP} & 2	& 7 & 12 \\
+	  & \ac{HP}	& \ac{MP} & \ac{LP} & 2nd	day & 7th day & 12th day \\
 	\midrule
 	1 			& \Sexpr{mos_qu_with_sd_by_condition("MOELLER", "HP", "S5")} & - & - & \Sexpr{mos_iqu_with_sd_by_condition("MOELLER", "S5", 4)} & \Sexpr{mos_iqu_with_sd_by_condition("MOELLER", "S5", 14)} & \Sexpr{mos_iqu_with_sd_by_condition("MOELLER", "S5", 24)} \\
 	\hline
@@ -311,7 +311,7 @@ A significant difference between multi-episodic judgments is only found for cond
 In all other conditions no significant difference is observed.
 For condition~4 a post-hoc test (pairwise Wilcoxon rank-sum test with Holms' correction) shows that the multi-episodic judgment on the 2nd~day is significantly different to the judgment after the 7th~day (\Sexpr{wilcox.pairwise.print(IQU~id, "MOELLER", c("LP", "HP"), "S2", c(4, 14, 24))[1,1]}).
 The judgment after the 2nd~day is not significant different to the judgment after the 12th~day as well as the judgment after the 7th~day is not significant different to the 12th~day (each \Sexpr{wilcox.pairwise.print(IQU~id, "MOELLER", c("LP", "HP"), "S2", c(4, 14, 24))[2,2]}).
-In fact, an absolute comparison with regard to multi-episodic judgments between the conducted five conditions is not directly feasible due to the observed differences between conditions for episodic judgments.
+In fact, an absolute comparison with regard to multi-episodic judgments between the conducted five conditions is not possible due to the observed differences between conditions for episodic judgments, \ie, an artifact that might be attributed to the between-subject design.
 It must thus be concluded that only condition~4 resulted in an observable, although rather small, effect on multi-episodic judgments due to the presentation of the 3rd and 4th~day in \ac{LP}.
 
 %With regard to condition~5 an interesting observation can be made.
