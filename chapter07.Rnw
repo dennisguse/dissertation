@@ -263,6 +263,7 @@ After every 3rd usage episode per service, a multi-episodic judgment is taken on
 The episodic judgment was presented with the question "How would you judge the overall quality of the just finished episode?" and the multi-episodic judgment "How would you judge the overall quality of all episodes so far?".
 These questions were modified, \ie, replacing the term episode to telephone call or similar, to customize them for each experiment.
 The exact questions for each experiment are presented in the \appendix{}~\ref{appendix:questions} (p.~\pageref{appendix:questions}).
+The  7\=/point \ac{CoCR} scale and questions are similar to \citet{moller_single-call_2011}.
 
 %In \EIIa{}, \EIIb{}, and \E3{}, pre-processed content was presented
 % varying from \unit[2]{min} to \unit[3]{min} in duration.
