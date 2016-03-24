@@ -41,12 +41,13 @@ Because perception and experience are influenced by an actor's behavior, varying
 This can be overcome by either limiting the user behavior completely, \ie, passive consumption and assessment only, or by enforcing a certain behavior.
 The latter can can be achieved by instructing a participant, or let them solve a suiting task.
 
-%For speech telephony a method called \emph{simulated conversations} has been developed to enforce a \emph{realistic} and reproducible user behavior~\citep{berger_estimation_2008}.
-%The simulated conversation method splits an episode in individual parts and assess those individual.
-%A part either consists of recorded listening-only material or requests a participant to speak a certain message.
-%This allows to maintain a \emph{scripted} conversation and thus achieve a comparable performance for multiple participants as the conversation can be precisely reproduced by limiting the user behavior.
-%The role of listener to talker are switched rather frequently and often in a not predictable manner.
-%This is especially problematic for the assessment of macroscopic performance fluctuations.
+For speech telephony a method called \emph{simulated conversations} has been developed to enforce a \emph{realistic} and reproducible user behavior including speaker changes~\citep{weiss_modeling_2009, berger_estimation_2008}.
+This method is standardized as ETSI~102506 \citep{etsi_speech_2011}.
+Here, a telephone conversation is split into individual parts of listening and speaking.
+Speaking parts and listening parts are then alternating concatenated in a meaningful order to create a simulated conversation.
+For speaking parts, predefined questions should be answered, which has been done orally as well as written.
+This should a otherwise passive listener to feel as taking part in a real conversation.
+This method allows to evaluate the perceived quality for macroscopic performance fluctuations for ecological valid usage scenarios required for speech telephony while restricting the user behavior as required.
 
 \subsection{Effects on Retrospective Judgments}
 The impact of macroscopic performance fluctuations on retrospective judgments has been investigated mainly for video transmission and speech telephony.
@@ -77,6 +78,9 @@ For example, \citet{ninassi_considering_2009} did not find a recency effect for 
 
 Beside video transmission, the impact of macroscopic performance fluctuations has been investigated for (speech) telephony. %In difference to \ac{PSTN}-based telephony 
 Here, also a recency effect could be observed \citep[\eg,][]{rosenbluth_testing_1998, hamberg_time-varying_1999, gros_instantaneous_2001, gros_effects_2004, belmudez_audiovisual_2015, weiss_modeling_2009, lewcio_management_2014} whereas a negative peak effect has been observed less often \citep[\eg,][]{weiss_modeling_2009, belmudez_audiovisual_2015, lewcio_management_2014}.
+The work of \citep{weiss_modeling_2009, lewcio_management_2014, belmudez_audiovisual_2015} is based upon the method of \emph{simulated conversations} \citep{etsi_speech_2011}.
+For this the perceived quality of a simulated conversation is complemented by judgments of the individual listening parts and speaking parts.
+Analyzing the relation between the intermediate judgments and the retrospective judgment enabled to determine the observed effects.
 In fact, a duration neglect has only been investigated and observed by \citet{rosenbluth_testing_1998}.
 
 With regard to macroscopic performance fluctuations and their impact on a retrospective judgment of perceived quality the state of the art is rather limited.
