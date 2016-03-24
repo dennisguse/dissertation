@@ -64,6 +64,7 @@ The overall system achieved a constant, glitch-free one-way end-to-end delay of 
 Due to the performance of the \emph{Beyerdynamic~DT~790~Pro} headsets, which provide a pair of closed headphones as well as a directional microphone, neither echo cancellation nor denoising algorithms were applied.
 Both systems were configured to provide neither side tone nor comfort noise, if not introduced by the codec.
 No additional audio processing was applied.
+The participants were located in two sound-insulated test rooms which met the requirements according to \citet{itu-t_recommendation_p.800_methods_1996}.
 
 \section{Experiments E2a, E2b, and E3}
 For the experiments \EIIa{}, \EIIb{}, and \E3{} audio signals were presented with a pair of \emph{Sennheiser~HD~25\=/1} headphones.
