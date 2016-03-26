@@ -135,9 +135,11 @@ This function is parametrized by the window parameter $\mathit{w}$.
 All episodic judgments of usage episode in this window are assigned a weighting factor of 1 and all before a weighting factor of 0:
 \begin{equation}\label{eq:weight:window}
 WI: a_i= \left\{
-\begin{array}{lr}
-  1 & : i - n + w > 0 \\
-  0 & : i - n + w \leq 0
+\begin{array}{ll}
+%  1 & : i - n + w > 0 \\
+%  0 & : i - n + w \leq 0
+  1,& \text{if } i - n + w > 0 \\
+  0,& \text{otherwise}
 \end{array}
 \right.
 \end{equation}
@@ -149,14 +151,14 @@ To overcome this a linear weighting function, denoted as \emph{LI}, is proposed 
 Here, the weight for usage episodes decreases linearly with an increasing distance to the multi-episodic judgment.
 \begin{equation}\label{eq:weight:linear}  %\frac{n-i}{w} & :i - n + w > 0 \\
 LI: a_i= \left\{
-\begin{array}{cr}
-	i - n + w & : i - n + 2*w > 0 \\
-  0 & : i - n + 2*w \leq 0
+\begin{array}{ll}
+%	i - n + w & : i - n + 2*w > 0 \\
+%  0 & : i - n + 2*w \leq 0
+	i - n + w,& \text{if } i - n + 2*w > 0 \\
+  0,& \text{otherwise}
 \end{array}
 \right.
 \end{equation}
-%	i-n & : i - n + w > 0 \\
-%  0 & : i - n + w \leq 0
 Here, $\mathit{w}$ is also limited to $\mathit{w}~\in~\mathbb{N}$ and $0~<~\mathit{w}~\leq~\mathit{n}$.
 However, the actual window is increased by $\mathit{2*w}$, so the very first episodic judgment can be considered with a maximum weight of $\geq 0.5$.\footnote{Please note that normalization due to the weighting function is handled by the weighting average.}
 Limiting $\mathit{w}$ for both models to the same values, allows to compare the accuracy of both models directly.
