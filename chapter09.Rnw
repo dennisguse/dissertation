@@ -117,7 +117,7 @@ However, prediction accuracy decreases, if longer sequences of multi-episodic us
 In this thesis, a weighted average model is proposed to increase prediction accuracy. %(\autoref{eq:average})
 This allows to assign an individual weight to each episodic judgment and thus model the impact on a to be predicted multi-episodic judgment.
 In the following, episodic judgments are denoted as~$\mathit{e_i}$ and multi-episodic judgments are denoted as~$\mathit{m_n}$.
-$\mathit{i}$ denotes the usage episode and $\mathit{n}$~denotes the usage episode/day after which a multi-episodic judgment was taken.
+$\mathit{i}$~denotes the usage episode and $\mathit{n}$~denotes the usage episode/day after which a multi-episodic judgment was taken.
 The weight for a usage episode is denoted as~$\mathit{a_i}$.
 Thus, the prediction model for~$\mathit{\hat{m}_n}$ is defined as: 
 
@@ -131,7 +131,7 @@ Following Occam's Razor, a lower degree of freedom for a weighting function is p
 Here, two weighting functions are proposed, which both can account for a recency effect.
 
 The first weighting function is a window function, which is in the following denoted as \emph{WI}.
-This function is parametrized by the window parameter $\mathit{w}$.
+This function is parametrized by the window parameter~$\mathit{w}$.
 All episodic judgments of usage episode in this window are assigned a weighting factor of 1 and all before a weighting factor of 0:
 \begin{equation}\label{eq:weight:window}
 WI: a_i= \left\{
@@ -376,6 +376,24 @@ This should resemble a sufficient approximation to account for the saturation ef
 This adjustment actually modifies \C6{} to be similar to \C5{}, which only differ in the performance level of the 4th episode/day.
 In the following, the prediction accuracy of both model types between \C5{}, \C6{}, and \C6{}~(adjusted) is presented.
 For \E1{} and \EIIa{}, this is shown in \autoref{fig:pred:SAT:E1} and \autoref{fig:pred:SAT:E2a}, respectively.
+
+\begin{equation}\label{eq:saturate:modify}
+e_3:= \left\{
+\begin{array}{ll}
+  \frac{e_6 + e_5 + e_4}{3},& \text{if episodes 1..3:LP and 4..6:HP}\\
+  e_3,& \text{otherwise}
+\end{array}
+\right.
+\end{equation}
+
+\begin{equation}\label{eq:saturate:addition}
+\hat{m}_n = \left\{
+\begin{array}{ll}
+  a_3 * (\frac{e_6 + e_5 + e_4}{3} - e_3),& \text{if episodes 1..3:LP and 4..6:HP}\\
+  0,& \text{otherwise}
+\end{array}
+\right.
+\end{equation}
 
 \begin{figure}[h]
 	\centering
