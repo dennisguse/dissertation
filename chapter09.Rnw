@@ -387,9 +387,9 @@ e_3:= \left\{
 \end{equation}
 
 \begin{equation}\label{eq:saturate:addition}
-\hat{m}_n = \left\{
+\widehat{ms}_n = \hat{m}_n + \left\{
 \begin{array}{ll}
-  a_3 * (\frac{e_6 + e_5 + e_4}{3} - e_3),& \text{if episodes 1..3:LP and 4..6:HP}\\
+  \frac{a_3 * ((e_6 + e_5 + e_4)/3 - e_3)}{\sum\limits_{i=1}^{n}a_i},& \text{if episodes 1..3:LP and 4..6:HP}\\
   0,& \text{otherwise}
 \end{array}
 \right.
