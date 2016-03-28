@@ -19,7 +19,7 @@ The systems designed for experiments \E4{}, \E5{}, and \E6{} were designed for u
 \section{Experiment E1}
 For experiment \E1{} two systems were required.
 First, a listening-only training was conducted, presenting typical speech telephony degradations.
-For the multi-episodic assessment a two-party speech telephony system was required.
+For the multi\=/episodic assessment a two-party speech telephony system was required.
 
 \subsection{Listening-only Training}
 The listening-only training conducted in experiment \E1{} was conducted with a tablet computer (\emph{Fujitsu~Stylistic~ST6012}).
@@ -30,7 +30,7 @@ For the generation of stimuli the ITU\=/T~STL2009 tools \citep{itu-t_recommendat
 The STL2009 were used for coding G.711, G.722~(Mode~1) and inserting packet-loss for G.722 (Mode~1), whereas SOX was used for coding GSM\=/FR, and LPC\=/10 as well as filtering wideband, narrowband, and white noise.
 
 \subsection{Two-party Speech telephony}
-For the multi-episodic assessment of experiment \E1{} a speech telephony system for two-party conversations was required.
+For the multi\=/episodic assessment of experiment \E1{} a speech telephony system for two-party conversations was required.
 
 \paragraph*{Network-based Setup}
 In the first part of the experiment a \ac{VoIP}\=/based system consisting of three computers was used.
@@ -130,7 +130,7 @@ This avoids issues due to initial buffering by providing a constant waiting time
 \chapter{Questionnaires}\label{appendix:questions}
 \begin{table}
  \centering
- \caption{Questions for the episodic and multi-episodic judgments for all conducted experiments.}
+ \caption{Questions for the episodic and multi\=/episodic judgments for all conducted experiments.}
  \label{tab:appendix:questions}
  \begin{tabulary}{\columnwidth}{C|C|C}
    Experiment & Episodic & Multi-episodic\\
@@ -150,7 +150,7 @@ This avoids issues due to initial buffering by providing a constant waiting time
 \chapter{Results}\label{appendix:results}
 In the following, judgments for the here presented experiments are shown.
 First, episodic judgments are presented as box plots for each usage episode per condition and experiment.
-Finally, all multi-episodic judgments per experiment and condition are presented.
+Finally, all multi\=/episodic judgments per experiment and condition are presented.
 
 \newpage
 
