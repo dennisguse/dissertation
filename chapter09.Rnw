@@ -370,21 +370,20 @@ ggplot_model_create(subset(data_nonadjusted, data_nonadjusted$experiment == "E6a
 In all three experiments a saturation effect could be observed.
 Here, multi-episodic judgments remain on the same level independent if two or three \ac{LP} episodes/days are presented.
 Beside modifying the weighting function to decrease the weight of \ac{LP} episode(s) and increase the weight of \ac{HP} episodes for this special case, also the episodic judgments can be adjusted.
-
-It is here proposed to replace the judgment of the first encountered \ac{LP} episode/day with the average of \ac{HP} episodic judgments.
-This should resemble a sufficient approximation to account for the saturation effect.
-This adjustment actually modifies \C6{} to be similar to \C5{}, which only differ in the performance level of the 4th episode/day.
-In the following, the prediction accuracy of both model types between \C5{}, \C6{}, and \C6{}~(adjusted) is presented.
-For \E1{} and \EIIa{}, this is shown in \autoref{fig:pred:SAT:E1} and \autoref{fig:pred:SAT:E2a}, respectively.
+It is here proposed to replace the judgment of the first encountered \ac{LP} episode/day with the average of \ac{HP} episodic judgments:
 
 \begin{equation}\label{eq:saturate:modify}
-e_3:= \left\{
+\tilde{e}_3:= \left\{
 \begin{array}{ll}
   \frac{e_6 + e_5 + e_4}{3},& \text{if episodes 1..3:LP and 4..6:HP}\\
   e_3,& \text{otherwise}
 \end{array}
 \right.
 \end{equation}
+
+This should resemble a sufficient approximation to account for the saturation effect.
+This adjustment actually modifies \C6{} to be similar to \C5{}, which only differ in the performance level of the 4th episode/day.
+This is equivalent to extending $m_n$ with the adjustment term:
 
 \begin{equation}\label{eq:saturate:addition}
 \widehat{ms}_n = \hat{m}_n + \left\{
@@ -394,6 +393,9 @@ e_3:= \left\{
 \end{array}
 \right.
 \end{equation}
+
+In the following, the prediction accuracy of both model types between \C5{}, \C6{}, and \C6{}~(adjusted) is presented.
+For \E1{} and \EIIa{}, this is shown in \autoref{fig:pred:SAT:E1} and \autoref{fig:pred:SAT:E2a}, respectively.
 
 \begin{figure}[h]
 	\centering
