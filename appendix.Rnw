@@ -68,7 +68,7 @@ The participants were located in two sound-insulated test rooms which met the re
 
 \section{Experiments E2a, E2b, and E3}
 For the experiments \EIIa{}, \EIIb{}, and \E3{} audio signals were presented with a pair of \emph{Sennheiser~HD~25\=/1} headphones.
-For \EIIa{} and \E3{} those were connected to the internal sound card of a \emph{Microsoft Surface Pro} tablet computer whereas for experiment \EIIb{} those were connected to the internal sound card of the used \emph{Nexus 7 (2013)}.
+For \EIIa{} and \E3{} those were connected to the internal sound card of a \emph{Microsoft~Surface~Pro} tablet computer whereas for experiment \EIIb{} those were connected to the internal sound card of the used \emph{Nexus 7 (2013)}.
 In all three experiments the sound pressure level was calibrated to \unit[75]{dB20$\mu$Pa} using the \emph{HSM~II.3} with babble noise and the experiments conducted in a sound-proof cabin following \citet{itu-t_recommendation_p.800_methods_1996}.
 In \EIIb{} the \ac{VoD} service was presented on the display of the Nexus~7~(2013) showing videos horizontally in full screen.
 This \unit[7]{inch} display of this device was set to maximum brightness without applying any device related color adaption.
@@ -86,9 +86,9 @@ For recording and audio reproduction participants were provided a \emph{Logitech
 \subsection{Speech Telephony Service}
 For conducting \E4{} a publicly reachable \ac{VoIP} telephony service was set up.
 The service needed to be able to allow parallel two-party speech conversations and be able to insert packet-loss for individual conversations.
-For this service one server was installed in the data center of \emph{TU~Berlin} reachable by a public IPv4 address.
+For this service one server was installed in the data center of \emph{Technische~Universität~Berlin} reachable by a public IPv4 address.
 As operating system \emph{FreeBSD~9.0} was selected, because it provides a built-in firewall with integrated traffic shaper called \emph{Dummynet}~\citep{rizzo_dummynet_1997}.
-This traffic shaper allows to add network impairments like packet-loss, delay, and jitter per individual connection, \ie, protocol, port, source address, destination address and if a packet is incoming or outgoing.
+This traffic shaper allows to add network impairments such as packet-loss, delay, and jitter per individual connection, \ie, protocol, port, source address, destination address and if a packet is incoming or outgoing.
 On this server the \ac{VoIP} software \emph{Asterisk~10} was installed, which was configured to act as a \ac{SIP} registrar as well as \ac{RTP}\=/Proxy for the \ac{UDP}\=/based media streams.
 On call initiation of a client Asterisk informed Dummynet about the desired packet-loss rate for the media streams of this call.
 Packet-loss was not inserted to the \ac{SIP} connections between clients and server, because this affects the reactivity of the telephony system and might lead to call drops.

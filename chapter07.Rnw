@@ -170,7 +170,7 @@ For digital telecommunication services this can be achieved in the compression s
 \ac{HP} should provide state of the art performance.
 For speech telephony this is at the time of this writing the transmission in wideband with proper loudness, but without temporal clipping, noise, echo or other negative factors.
 For digital transmission of wideband speech the codec \emph{G.722} (Mode~1)~\citep{itu-t_recommendation_g.722_7khz_2012} is often used as reference condition.
-This codec achieves very similar judgments like uncompressed wideband speech signals. %TODO Add refs, Moeller, Raake, Marcel
+This codec achieves very similar judgments such as uncompressed wideband speech signals. %TODO Add refs, Moeller, Raake, Marcel
 %In subjective listening-only experiments G.722 typically achieves a \ac{MOS} of 4.5~on the 5-point \ac{ACR} scale.
 
 For \ac{LP}, the speech signal is coded with \emph{LPC\=/10}\footnote{LPC\=/10 is also known as \emph{FS-1015} and \emph{STANAG 4198}.}.
@@ -291,7 +291,7 @@ Here, the presentation order of \acp{SCS} was kept constant for all conditions.
 For later use in \EIIa{} and \EIIb{}, the conversations of all participants of \E1{} were recorded.
 For \EIIa{} and \EIIb{}, one recording for each of the episodes 1..6 was selected.
 Those were required to show common task solving behavior.
-%Furthermore, no emotional reaction like laughing should be present and not contain any degradations due to other sound sources like audible breathing, but only clear and clean speech.
+%Furthermore, no emotional reaction such as laughing should be present and not contain any degradations due to other sound sources such as audible breathing, but only clear and clean speech.
 The duration of the selected conversations ranged from \unit[128]{sec} to \unit[194]{sec} with an average of \unit[153]{s}.
 %The recordings were normalized per speaker, mixed into one channel and encoded with G.722 or LPC\=/10, respectively.
 %The six selected recordings were presented in \EIIa{} and \EIIb{} in the same order as in \E1{}.

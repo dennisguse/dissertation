@@ -242,7 +242,7 @@ Here, the audio book \emph{"City of the Beats"} from Isabelle Allende was used.
 The audio book was cut into individual scenes with a duration of \unit[12]{min} to \unit[17]{min} per episode.
 For the \ac{VoD} service scenes of \emph{The Big Bang Theory} (Season One, BluRay Version, German) were used.
 Here meaningful scenes were cut resulting in durations of \unit[8]{min} to \unit[12]{min} per episode.
-The audio signal was treated like the \ac{AoD} service.
+The audio signal was treated such as the \ac{AoD} service.
 The video signal was encoded to the native resolution of the mobile device ($800x480$ at 4.3~inch) with 25~\ac{FPS} with H.264 (two-pass).
 For \ac{HP} a video encoding bandwidth was set to \unit[3]{Mbit/s} and for \ac{LP} to \unit[0.25]{Mbit/s}.
 Degradations on both modalities were inserted to increase the perceptual difference between \ac{HP} and \ac{LP}.
