@@ -58,6 +58,7 @@ In \E5{}, it the adaption speed of multi\=/episodic judgments was planed to be i
 Based upon \E4{}, \E5{}, and the one-session experiments, \E6{} was designed.
 Here, \autoref{hypo:number}, \autoref{hypo:position}, and \autoref{hypo:consecutive} were investigated.
 In this experiment only one service was used in a usage period of \unit[7]{days}.
+
 In all three experiments two performance levels were applied.
 Those are also denoted as \ac{HP} and \ac{LP}.
 Performance level were applied day-wise, \ie, usage episodes on the same day with the same service are presented with the same performance level.
