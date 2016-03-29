@@ -78,10 +78,10 @@ if (FALSE) {
  
  timeseries = data.frame(id, QU, IQU)
  
- weight_window_3 = weight_window_create(10)
+ weight_window_3 = weight_window_create(8)
  weight_window_3(timeseries)
  
- timeseries = subset(timeseries, timeseries$ id <= 2)
+# timeseries = subset(timeseries, timeseries$ id <= 2)
  weight_linear_3 = weight_linear_create(1)
  weight_linear_3(timeseries)
 }

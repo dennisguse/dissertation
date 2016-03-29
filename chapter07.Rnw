@@ -549,24 +549,21 @@ A one-sided post-hoc test finds that the reference is significantly different to
 
 With regard to the number of \ac{LP} episodes before a multi\=/episodic judgment, both experiments yield similar findings.
 Both show a decrease in the multi\=/episodic judgment, if the number in \ac{LP} episodes increased from zero to one and from one to two.
-If no \ac{HP} episodes follow, decrease of approximately \unit[1]{pt} for each presented \ac{LP} episode is observed.
+If no \ac{HP} episodes follow, a decrease of approximately \unit[1]{pt} for each presented \ac{LP} episode is observed.
 However, it must be noted that both experiments show consistently no decrease from two to three \ac{LP} episodes.
-Rather than decreasing further, the multi\=/episodic judgments seems to saturate.
-
+It must be noted that in this case, the multi\=/episodic judgment remains \emph{above} the episodic judgments of \ac{LP} episodes.
 In both experiments a decrease of approximately \unit[1]{pt} is also observed, if a \ac{HP} episode follows one \ac{LP} episode(s).
 For two episodes, only a decrease less than \unit[0.5]{pt} is observed in both experiments.
 
-It can thus be concluded that \autoref{hypo:number} is only partly true.
+It must thus be concluded that \autoref{hypo:number} is only partly true.
 A decrease can be observed, if up to two \ac{LP} episodes are presented.
 Presenting a third \ac{LP} episode does not seem have an effect on the multi\=/episodic judgment.
-In fact, the multi\=/episodic judgment remains above the episodic judgments of \ac{LP} episodes.
-This occurs before the multi\=/episodic judgment reaches the level of episodic judgment for \ac{LP}, \Sexpr{mos_qu_with_sd_by_condition("E1", "LP")}.
+In fact, the multi\=/episodic judgment remains above the episodic judgments of \ac{LP} episodes, \ie, the difference is approximately~\unit[0.6]{pt}.
 This indicates that prior presented \ac{HP} episodes still attribute to this multi\=/episodic judgment.
 
-\autoref{hypo:number} can be partly accepted.
-For an increasing number of \ac{LP} episode a saturation could be observed.
 In fact, both experiments show similar effects in the evaluated conditions.
 However, it must be noted that in absolute numbers the multi\=/episodic judgments of \EIIa{} seem to be higher than for \E1{} except for the reference.
+This might be due to the difference usage situation, \ie, two-party conversation vs. third-party listening.
 
 \subsubsection{\autoref{hypo:position}: Position of \acs{LP} Episode(s)}
 In \autoref{hypo:position} it is hypothesized that presenting \ac{HP} episodes after one or two \ac{LP} episode(s) reduces the negative impact on the following multi\=/episodic judgment.
