@@ -66,7 +66,7 @@ The largest observed effect on multi\=/episodic judgments is the decrease due to
 This has been observed in \E1{}, \EIIa{}, and \E6{}.
 Here, a decrease is observed until saturation occurred.
 Then multi\=/episodic judgments do not decrease further.
-This occurred, if more than two \ac{LP} episode/days were presented.
+This occurred, if more than two \ac{LP} episodes/days were presented.
 In fact, multi\=/episodic judgments still remain above the episodic judgments of \ac{LP}.
 This shows that multi\=/episodic judgments are still affected by previous \ac{HP} episodes.
 This indicates a longer integration interval than 3~usage episodes or 3~days, respectively.
@@ -115,7 +115,7 @@ This model provides accurate prediction for earlier multi\=/episodic judgments.
 However, prediction accuracy decreases, if longer sequences of multi\=/episodic use are to be predicted.
 
 In this thesis, a weighted average model is proposed to increase prediction accuracy. %(\autoref{eq:average})
-This allows to assign an individual weight to each episodic judgment and thus model the impact on a to be predicted multi\=/episodic judgment.
+This allows to assign an individual weight to each episodic judgment and thus model the impact on a multi\=/episodic judgment that is to be predicted.
 In the following, episodic judgments are denoted as~$\mathit{e_i}$ and multi\=/episodic judgments are denoted as~$\mathit{m_n}$.
 $\mathit{i}$~denotes the usage episode and $\mathit{n}$~denotes the usage episode after which a multi\=/episodic judgment was taken.
 The weight for a usage episode is denoted as~$\mathit{a_i}$.
@@ -225,7 +225,7 @@ ggplot_model_create(subset(data_nonadjusted, data_nonadjusted$experiment == "E1"
 	\label{fig:pred:E1base}
 \end{figure}
 
-With regard to the multi\=/episodic judgment after the 6th usage episode, both model types perform slightly different.
+With regard to the multi\=/episodic judgment after the 6th usage episode, both model types perform slightly differently.
 \autoref{fig:pred:E1pred6} shows the \ac{RMSD} for the 6th usage episode for both model types.
 Here, WI performs better while increasing $\mathit{w}=4$.
 However, the prediction accuracy depends on the considered condition.
