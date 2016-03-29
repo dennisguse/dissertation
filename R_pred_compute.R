@@ -32,7 +32,7 @@ if (FALSE) {
  to_model_experiments_lab = unique(subset(timeseries, experiment %in% c("E1", "E2a", "E2b", "E3"))[, c("experiment", "condition")], MARGIN=2)
  to_model_experiments_lab_tmp = expand.grid(experiment=to_model_experiments_lab$experiment, id=c(3, 6, 9))
  to_model_experiments_lab = unique(merge(to_model_experiments_lab, to_model_experiments_lab_tmp), MARGIN=2)
- to_model_experiments_lab = subset(to_model_experiments_lab, (to_model_experiments_lab$condition %in% c("5b", "5b_average", "7", "7_average") & to_model_experiments_lab$id == 9) | (to_model_experiments_lab$condition  %nin% c("5b", "7") & to_model_experiments_lab$id != 9)) #Only exists for C5b and C7
+ to_model_experiments_lab = subset(to_model_experiments_lab, (to_model_experiments_lab$condition %in% c("5b", "5b_average", "7", "7_average") & to_model_experiments_lab$id %in% c(3, 6, 9)) | (to_model_experiments_lab$condition  %nin% c("5b", "7") & to_model_experiments_lab$id != 9)) #Only exists for C5b and C7
  
  #FIELD
  to_model_experiments_field= unique(subset(timeseries, experiment %in% c("E6a"))[, c("experiment", "condition")], MARGIN=2)
