@@ -448,7 +448,7 @@ The episodic judgment of \ac{HP} and \ac{LP} episodes are significantly differen
 
 Comparing \EIIa{} and \EIIb{} with regard to the speech telephony service, the judgments of \ac{LP} episodes are not significantly different (\Sexpr{wilcox(QU~experiment, c("E2a", "E2b"), "LP", condition, id, "telephony")}), but a significant difference is found for \ac{HP} (\Sexpr{wilcox(QU~experiment, c("E2a", "E2b"), "HP", condition, id, "telephony")}).
 This might be attributed to the different audio equipment, \ie, headphones and sound card, used for both experiments, but might also be an artifact due to the 
-This might be due to the differences in the used audio equipment, \ie, headphones and also sound card incl. calibration (\cf, \appendix{}~\ref{appendix:setups} on p.~\pageref{appendix:setups}), or the presence of the \ac{VoD} service.
+This might be due to the differences in the used audio equipment, \ie, headphones and also sound card including calibration (\cf, \appendix{}~\ref{appendix:setups} on p.~\pageref{appendix:setups}), or the presence of the \ac{VoD} service.
 However, the actual reason could not be determined.
 With regard to episodic judgments both experiments yield consistent results but differences between the experiments are observed.
 
