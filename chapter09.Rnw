@@ -221,9 +221,9 @@ For each experiment first the multi\=/episodic judgment for \ac{HP}-only usage e
 Following, the prediction accuracy is evaluated for multi\=/episodic judgments affected by \ac{LP} episode(s).
 Afterwards, the improvement due to accounting for a saturation effect is investigated for all experiments together.
 
-\subsection{One Session}\label{results:prediction}
+\subsection{One Session: E1 and E2a}\label{results:prediction}
 
-\subparagraph*{Experiment \E1{}}
+\subparagraph*{Experiment E1}
 In \E1{}, a two-party conversation was investigated with 6 to 9 usage episodes.
 With regard to the multi\=/episodic judgment after the 3rd usage episode, \ie, \ac{HP} only, both model types perform very similar.
 \autoref{fig:pred:E1base} shows the \ac{RMSD} for both model types with regard to $\mathit{w}$ for each condition.
@@ -306,7 +306,7 @@ ggplot_model_create(subset(data_mos_nonadjusted, data_mos_nonadjusted$experiment
 	\label{fig:pred:E1pred9}
 \end{figure}
 
-\subparagraph*{Experiment \EIIa{}}
+\subparagraph*{Experiment E2a}
 This experiment complemented \E1{} with a passive usage situation while sharing the same performance levels.
 With regard to prediction of \ac{HP} only usage episodes, results are slightly different than for \E1{}.
 The prediction accuracy for the multi\=/episodic judgment after the 3rd usage episode is shown in \autoref{fig:pred:E2pred3}.
@@ -483,7 +483,7 @@ This is equivalent to extending $\mathit{\hat{m}_n}$ in the case of \C6{} with t
 
 
 In the following, the prediction accuracy of both model types between \C5{}, \C6{}, and \C6{}~(adjusted) is presented.
-For \E1{} and \EIIa{}, this is shown in \autoref{fig:pred:SAT:E1} and \autoref{fig:pred:SAT:E2a}, respectively.
+For \E1{} and \EIIa{}, this is shown in \autoref{fig:pred:SAT:E1}1} and \autoref{fig:pred:SAT:E2a}, respectively.
 
 \begin{figure}[h]
 	\centering
