@@ -127,7 +127,7 @@ For audio reproduction and recording a \emph{Logitech~PC120} headset was provide
 The video was always played in full screen independent of the actual screen size or resolution.
 The speech telephony was implemented as a \ac{VoIP} service while the \ac{VoD} service was only simulated.
 The latter only played local preprocessed content.
-A complete description of the technical setup can be found in the \appendix{}~\ref{appendix:setups} (p.~\pageref{appendix:setups}).
+A complete description of the technical setup can be found in the \appendix{}~\ref{appendix:setups} (p.\,\pageref{appendix:setups}).
 
 On the day before starting the \unit[14]{day} usage period, an introductory session was conducted with each pair of participants.
 In this session participants received detailed instructions for the experiment and provided demographic data.
@@ -247,7 +247,7 @@ The audio signal was treated such as the \ac{AoD} service.
 The video signal was encoded to the native resolution of the mobile device ($800x480$ at 4.3~inch) with 25~\ac{FPS} with H.264 (two-pass).
 For \ac{HP} a video encoding bandwidth was set to \unit[3]{Mbit/s} and for \ac{LP} to \unit[0.25]{Mbit/s}.
 Degradations on both modalities were inserted to increase the perceptual difference between \ac{HP} and \ac{LP}.
-Details of the technical setup are described in the \appendix{}~\ref{appendix:setups} (p.~\pageref{appendix:setups}).
+Details of the technical setup are described in the \appendix{}~\ref{appendix:setups} (p.\,\pageref{appendix:setups}).
 
 Episodic judgments were taken on the 7\=/point \ac{CoCR} scale after every episode.
 Multi-episodic judgments per service were taken at the 2nd, 5th, 8th, 11th and 14th day.
@@ -426,7 +426,7 @@ For \ac{HP} the source material (CD, \unit[44.1]{kHz}, stereo) was encoded with 
 This is necessary to enable distribution via Internet as uncompressed audio data is not suited for this.
 In fact, the bitrate was selected to produce no audible impairments for the speech-only content.
 For \ac{LP} the content was first encoded with LPC\=/10 before encoding it finally with \ac{MP3}.
-A detailed description of the implemented system is given in the \appendix{}~\ref{appendix:setups} (p.~\pageref{appendix:setups}).
+A detailed description of the implemented system is given in the \appendix{}~\ref{appendix:setups} (p.\,\pageref{appendix:setups}).
 
 \subsection{Participants}
 \E6{} was conducted in Berlin from September 2015 until November 2015.
@@ -490,7 +490,7 @@ For \ac{LP} significant differences between conditions are also found (\Sexpr{kr
 A post-hoc tests shows that \C5{} is significantly different to \C1{}, \C4{}, and \C8{} ($p<0.05$). %wilcox.pairwise.print(QU~condition, "E6a", "LP")
 It must be noted that episodic judgments of \C5{} resulted in the highest \ac{MOS} for \ac{HP} and in the lowest for \ac{LP}.
 A detailed analysis did not yield a reason for the difference, and it is thus considered an artifact due to the between-subject design.
-Box plots for all conditions can be found in the \appendix{}~\ref{appendix:results} (p.~\pageref{appendix:results}).
+Box plots for all conditions can be found in the \appendix{}~\ref{appendix:results} (p.\,\pageref{appendix:results}).
 
 \begin{table}
 	\centering

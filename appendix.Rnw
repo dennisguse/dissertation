@@ -272,15 +272,15 @@ Finally, all multi\=/episodic judgments per experiment and condition are present
 %	\begin{tabular}{c|c|c}
 %	Episode & Title & Page \\
 %	\hline
-%	1 & Travel Agent (German: Reisebüro) & p.~16f \\
-%	2 & Rail Travel Information (German: Bahnauskunft) & p.~18f \\
-%	3 & Theater Box office (German: Theaterkasse) & p.~30f \\
-%	4 & Renting a car (German: Autovermietung) & p.~26f \\
-%	5 & Information on Flights (German: Flugumbuchung) & Based upon p.~24f \\
-%	6 & Eye Specialist's Appointment (German: Arzttermin) & p.~50f \\
-%	7 & Pizza Service (German: Pizzaservice) & p.~38f \\
-%	8 & Flat to Let (German: Wohnungsanzeige) & p.~46f \\
-%	9 & Booking an Apartment (German: Appartmentreservierung) & p.~36f \\
+%	1 & Travel Agent (German: Reisebüro) & p.\,16f \\
+%	2 & Rail Travel Information (German: Bahnauskunft) & p.\,18f \\
+%	3 & Theater Box office (German: Theaterkasse) & p.\,30f \\
+%	4 & Renting a car (German: Autovermietung) & p.\,26f \\
+%	5 & Information on Flights (German: Flugumbuchung) & Based upon p.\,24f \\
+%	6 & Eye Specialist's Appointment (German: Arzttermin) & p.\,50f \\
+%	7 & Pizza Service (German: Pizzaservice) & p.\,38f \\
+%	8 & Flat to Let (German: Wohnungsanzeige) & p.\,46f \\
+%	9 & Booking an Apartment (German: Appartmentreservierung) & p.\,36f \\
 %	\end{tabular}
 %	\label{tab:appendix:labsct}
 %\end{table}

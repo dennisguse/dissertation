@@ -45,7 +45,7 @@ Effects of multi\=/episodic usage while focusing on changes in user behavior hav
 \ac{QoE} and \ac{UX} conceptually overlap as both focus on experience in general and experience with technology \citep[\cf,][]{wechsung_quality_2014}.
 \ac{UX}, stemming from usability, focuses on the interaction with technology and how interactions affect usage as well as emotions towards used technology.\footnote{For a longer discussion on similarities and difference between \ac{QoE} and \ac{UX} see \citet{wechsung_quality_2014} and also \citet{hassenzahl_user_2008}.}
 Multi-episodic evaluation is an important aspect of \ac{UX}, because user behavior towards technology changes as a user learns how to use the technology and which tasks are well-suited.
-The multi\=/episodic concept is described by \citet[p.~8]{roto_user_2011}.
+The multi\=/episodic concept is described by \citet[p.\,8]{roto_user_2011}.
 However, they missed to put it into context with prior work and omitted their definitions.
 
 Two major experiments assessing the use of products over a longer usage period have been conducted.
@@ -66,7 +66,7 @@ Duncanson asked regular users of an oversea speech telephone service about their
 He investigated, if there is a difference between \emph{a)} the \emph{perceived quality of a just finished call} with average performance and \emph{b)} the \emph{assumed quality} of a call with average performance.
 For this experiment, Duncanson used a 4-point \ac{ACR} scale\footnote{\citet{duncanson_average_1969} applied a 4-point \ac{ACR} scale with the labels excellent (4), good (3), fair (2), and poor (1).}. % and \emph{Thurstone's Law of Categorical Judgment}.
 It could be shown that judgments for case a) yield a higher score than for case b).
-Duncanson concludes ``that ratings of single, recent telephone calls yield results different from ratings of subjectively averaged, past telephone calls of the same type'' \citep[][p.~116]{duncanson_average_1969}.
+Duncanson concludes ``that ratings of single, recent telephone calls yield results different from ratings of subjectively averaged, past telephone calls of the same type'' \citep[][p.\,116]{duncanson_average_1969}.
 
 Although Duncanson studied episodic perceived quality and assumed quality of a usage episode} with average performance, it revealed an important aspect of multi\=/episodic perceived quality.
 The results indicate that the integration process of episodic perceived quality leads to a lower judgment of perceived quality than expected.
@@ -80,7 +80,7 @@ In the following, first aspects are presented, which are known to affect perceiv
 Afterwards, the two potential assessment methods for multi\=/episodic perceived quality are presented. 
 
 \paragraph*{Aspects}
-Perceived quality for short stimuli as well as complete usage episodes is investigated by exposing multiple participants to same stimulus/condition and assess the resulting perceived quality. %\citep[][p.~11]{blauert_spatial_1996}.
+Perceived quality for short stimuli as well as complete usage episodes is investigated by exposing multiple participants to same stimulus/condition and assess the resulting perceived quality. %\citep[][p.\,11]{blauert_spatial_1996}.
 The calculation of a \ac{MOS}, independent of the type of judgment or scale, results in the description of the \emph{average perceived quality}.
 %The \ac{MOS} is in general assumed to reflect the perceived quality judgment of the \emph{average participant}.
 With regard to multi\=/episodic perceived quality and perceived quality over time in general, a \ac{MOS} can only be calculated about judgments that result from the same or very similar conditions.
@@ -195,7 +195,7 @@ Furthermore, each pair of participants was allowed to use the service for privat
 
 After finishing a call, each participant rated the perceived quality of this usage episode (\emph{episodic quality}).
 After the last call on the 2nd, 7th, and 12th day the perceived quality of all experienced usage episodes \emph{so far} was assessed (\emph{multi\=/episodic judgment}).
-The episodic judgments and multi\=/episodic judgments were both taken on a 7\=/point \ac{CoCR} scale\footnote{For a comparison between discrete 5-point \ac{ACR} scale and 7\=/point \ac{CoCR} scale see \citet{koster_comparison_2015}.} \citep[][p.~18]{itu-t_recommendation_p.832_subjective_2000}. The scale is shown in \autoref{img:chap05:quality-scale}.
+The episodic judgments and multi\=/episodic judgments were both taken on a 7\=/point \ac{CoCR} scale\footnote{For a comparison between discrete 5-point \ac{ACR} scale and 7\=/point \ac{CoCR} scale see \citet{koster_comparison_2015}.} \citep[][p.\,18]{itu-t_recommendation_p.832_subjective_2000}. The scale is shown in \autoref{img:chap05:quality-scale}.
 
 \begin{figure}
 	\includegraphics[width=1\textwidth]{figure/quality7pt_scale}

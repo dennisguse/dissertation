@@ -211,7 +211,7 @@ It only achieves a \ac{MOS} of 1.9 on the 7\=/point~\ac{CoCR}.
 
 End-to-end delay is an additional factor influencing perceived quality.
 This is important for \E1{} due to the use of a conversational task.
-A one-way delay up to \unit[100]{ms} is rarely noticeable and thus not perceived as degradation~\citep[][p.~9]{itu-t_recommendation_g.107_e-model_2015}.
+A one-way delay up to \unit[100]{ms} is rarely noticeable and thus not perceived as degradation~\citep[][p.\,9]{itu-t_recommendation_g.107_e-model_2015}.
 LPC\=/10 requires a look-ahead of \unit[90]{ms} while a frame duration of \unit[22.5]{ms} is applied.
 This results in coding delay alone of up to \unit[112.5]{ms}.
 G.711 and G.722 provide a algorithmic delay without look-ahead of \unit[0.125]{ms} and both codecs can be used with a minimal frame duration of \unit[10]{ms}.
@@ -232,7 +232,7 @@ However, both services are presented on the same device.
 % might still be used for comparison while evaluating the perceived quality of the telephony service.
 
 In all experiments, a diotic representation is provided using a pair of headphones.
-The experimental setups are described in the \appendix{}~\ref{appendix:setups} (p.~\pageref{appendix:setups}).
+The experimental setups are described in the \appendix{}~\ref{appendix:setups} (p.\,\pageref{appendix:setups}).
 
 \subsection{Procedure}\label{sec:training}
 The one-session experiments consist of 4 stages with an overall duration of up to \unit[90]{min}.
@@ -241,7 +241,7 @@ In this stage, participants reported demographic data.
 
 In the \emph{second stage}, participants were checked for normal hearing.
 Here, an adapted Békésy audiometry was conducted covering the spectrum for wideband speech telephony.\footnote{Audiometry was conducted with an \emph{Ear~1.7} audiometer (\url{http://www.ear20.de/ear_1_7.html}) connected to a \emph{Sennheiser~HDA~200} for \unit[125]{Hz}, \unit[250]{Hz}, \unit[500]{Hz}, \unit[1]{kHz}, \unit[2]{kHz}, \unit[4]{kHz}, and \unit[8]{kHz}.}
-A participant is considered to have hearing capabilities within normal limits, if hearing sensitivity is between \unit[0]{dbHL} and \unit[25]{dBHL} \citep[][p.~256]{roeser_audiology_2007}.
+A participant is considered to have hearing capabilities within normal limits, if hearing sensitivity is between \unit[0]{dbHL} and \unit[25]{dBHL} \citep[][p.\,256]{roeser_audiology_2007}.
 For \EIIb{} audiometry was skipped due to the increased duration of the multi\=/episodic part as well as in \E3{} due to the focus on the perception of duration.
 
 In the \emph{third stage}, typical speech telephony degradations were presented.
@@ -262,7 +262,7 @@ In addition, the experienced degradations could be described in qualitative form
 After every 3rd usage episode per service, a multi\=/episodic judgment is taken on the same scale.
 The episodic judgment was presented with the question "How would you judge the overall quality of the just finished episode?" and the multi\=/episodic judgment "How would you judge the overall quality of all episodes so far?".
 These questions were modified, \ie, replacing the term episode to telephone call or similar, to customize them for each experiment.
-The exact questions for each experiment are presented in the \appendix{}~\ref{appendix:questions} (p.~\pageref{appendix:questions}).
+The exact questions for each experiment are presented in the \appendix{}~\ref{appendix:questions} (p.\,\pageref{appendix:questions}).
 The  7\=/point \ac{CoCR} scale and questions are similar to \citet{moller_single-call_2011}.
 
 %In \EIIa{}, \EIIb{}, and \E3{}, pre-processed content was presented
@@ -272,7 +272,7 @@ The  7\=/point \ac{CoCR} scale and questions are similar to \citet{moller_single
 %In the \emph{fifth stage} final feedback about the fourth stage is collected.
 %In all experiments the underlying question of the \ac{NPS} is collected.
 %The \ac{NPS} has been proposed as the one sufficient question indicating business success~\citep[\cf,][]{reichheld_one_2003}.
-%This score assessed on 11-point discrete scale ranging from 0 to 10 and is phrased as "How likely is it that you would recommend our company/product/service to a friend or colleague?"~\citep[][p.~5]{reichheld_one_2003}.
+%This score assessed on 11-point discrete scale ranging from 0 to 10 and is phrased as "How likely is it that you would recommend our company/product/service to a friend or colleague?"~\citep[][p.\,5]{reichheld_one_2003}.
 %In this study it was rephrased to "On scale ranging from 0 (unlikely) to 10 (likely), how likely is it that you would recommend the service to a friend or colleague?"\footnote{The question was phrased in German: "Auf einer Skala von 0 (unwahrscheinlich) bis 10 (wahrscheinlich), wie wahrscheinlich ist es, dass Sie das System einem Freund oder Kollegen weiterempfehlen werden?".}.
 %In \E1{}, \EIIa{}, \EIIb{}, and \E3{} requested to answer the following questions, if degradations have been perceived.
 %First the total count of degraded episodes needed to be answered, followed by request to denote the exact episodes with degradations.
@@ -374,7 +374,7 @@ First, episodic judgments are inspected with regard to consistency between condi
 Then differences between the usage situation are investigated with \E1{} and \EIIa{}.
 Finally, multi\=/episodic judgments are evaluated with regard to the presented hypotheses (\autoref{chap:towards}).
 
-All results are reported as \ac{MOS} ranging from 0 to 6 (for the scale see p.~\pageref{img:chap05:quality-scale}) with standard deviation in brackets.
+All results are reported as \ac{MOS} ranging from 0 to 6 (for the scale see p.\,\pageref{img:chap05:quality-scale}) with standard deviation in brackets.
 In addition, a statistical evaluation is conducted.
 Two unpaired samples are evaluated with a \emph{Wilcoxon rank-sum test}.
 More than two unpaired samples are compared with a \emph{Kruskal-Wallis test}.
@@ -392,7 +392,7 @@ Such an effect could not be observed in the one-session experiments.
 
 \autoref{tab:lab:episodicMOS} shows \ac{MOS} of episodic judgments for all four experiments by performance level and service.
 In the following, the differences in episodic judgments between conditions are investigated for each experiment.
-Box plots for all conditions per experiments are in the \appendix{}~\ref{appendix:results} (p.~\pageref{appendix:results}).
+Box plots for all conditions per experiments are in the \appendix{}~\ref{appendix:results} (p.\,\pageref{appendix:results}).
 
 \begin{table}
   \centering
@@ -448,7 +448,7 @@ The episodic judgment of \ac{HP} and \ac{LP} episodes are significantly differen
 
 Comparing \EIIa{} and \EIIb{} with regard to the speech telephony service, the judgments of \ac{LP} episodes are not significantly different (\Sexpr{wilcox(QU~experiment, c("E2a", "E2b"), "LP", condition, id, "telephony")}), but a significant difference is found for \ac{HP} (\Sexpr{wilcox(QU~experiment, c("E2a", "E2b"), "HP", condition, id, "telephony")}).
 This might be attributed to the different audio equipment, \ie, headphones and sound card, used for both experiments, but might also be an artifact due to the 
-This might be due to the differences in the used audio equipment, \ie, headphones and also sound card including calibration (\cf, \appendix{}~\ref{appendix:setups} on p.~\pageref{appendix:setups}), or the presence of the \ac{VoD} service.
+This might be due to the differences in the used audio equipment, \ie, headphones and also sound card including calibration (\cf, \appendix{}~\ref{appendix:setups} on p.\,\pageref{appendix:setups}), or the presence of the \ac{VoD} service.
 However, the actual reason could not be determined.
 With regard to episodic judgments both experiments yield consistent results but differences between the experiments are observed.
 
