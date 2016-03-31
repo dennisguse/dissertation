@@ -129,7 +129,7 @@ This is investigated by introducing a third performance level \ac{MP}.
 This should provide a performance and perceived quality worse than \ac{HP} but better than \ac{LP}.
 Comparing the multi\=/episodic judgment after the 6th usage episode of \C7{} with \C5{} and \CIIa{}, allows to investigate this hypothesis.
 Those three conditions differ only in the performance level of the 6th episode presenting it in \ac{MP}, \ac{HP}, and \ac{LP}.
-If a peak-effect occurs for multi\=/episodic perceived quality, the result of condition \C7{} should be closer to \CIIa{}.
+If a peak effect occurs for multi\=/episodic perceived quality, the result of condition \C7{} should be closer to \CIIa{}.
 
 \autoref{hypo:recovery} is closely related to \autoref{hypo:position}.
 Here, the recovery between two multi\=/episodic judgments due to presentation of additional \ac{HP} episodes is investigated.
@@ -645,7 +645,7 @@ wilcox_episodic_peak = pairwise.wilcox.test(timeseries_E1_peak$QU, timeseries_E1
 @
 
 In \autoref{hypo:strength} it is assumed that the lowest episodic performance (here \ac{LP}) has a stronger negative effect on the multi\=/episodic judgments whereas \emph{lesser degraded} episode(s) (here \ac{MP}) yield a smaller effect or no effect at all.
-This is denoted as peak-effect (\cf, \autoref{chap03:effects}).
+This is denoted as peak effect (\cf, \autoref{chap03:effects}).
 This is evaluated in \E1{} only by comparing \CIIa{}, \CVb{}, and \C7{}.
 These present the 5th episode in \ac{LP}, but differ in the performance level of the 6th usage episode (\autoref{tab:lab:hypothesesComparison}).
 \autoref{tab:lab:hypostrength} shows the multi\=/episodic judgments after the 6th usage episode as well as the episodic judgment of this episode.
@@ -678,7 +678,7 @@ With regard to the interpretation it is problematic that the episodic judgments 
 In fact, it is indicated that \ac{MP} episodes were perceived and judged slightly worse.
 %However, it must be noted that the episodic judgment of 6th episode in \CIIa{} is judged almost \unit[0.6]{pt} lower than the episodic \ac{MOS} for all \ac{HP} episodes in this experiment (\Sexpr{mos_qu_with_sd_by_condition("E1", "HP")}).
 This leaves three interpretations.
-Either this is an artifact of the required between-subject design, \ac{HP} and \ac{MP} were not different enough, or a peak-effect could be observed.
+Either this is an artifact of the required between-subject design, \ac{HP} and \ac{MP} were not different enough, or a peak effect could be observed.
 Thus, \autoref{hypo:strength} must be left unanswered.
 %This indicates that presenting the 6th episode either in \ac{MP} or \ac{HP} does not affect the multi\=/episodic judgment although the episodic judgments are different.
 %It can thus be concluded that \autoref{hypo:strength} is verified.
@@ -808,7 +808,7 @@ Thus, \autoref{hypo:consecutive} cannot be accepted.
 %It is indicated that non-consecutive \ac{LP} episodes are judged slightly better.
 %However, this might also be an artifact due to a recency effect.
 
-In \E1{} also a (negative) peak-effect was investigated (\autoref{hypo:strength}).
+In \E1{} also a (negative) peak effect was investigated (\autoref{hypo:strength}).
 However, the results are inconclusive and thus this hypothesis is left unanswered.
 In \E1{} also recovery of multi\=/episodic judgments was investigated (\autoref{hypo:recovery}).
 Here three \ac{HP} episodes were presented after two non-\ac{HP} episodes.
@@ -828,6 +828,6 @@ The results show that episodic judgments and multi\=/episodic judgments are asse
 
 The results show that multi\=/episodic judgments in one session are affected by several effects.
 Here a recency effect, and a duration neglect could be observed.
-The existence of a peak-effect could not be proven. 
+The existence of a peak effect could not be proven. 
 The experimental results, beyond analysis of occurring effects, allow to derive a prediction model.
 Here, the large number of conditions in \E1{} and \EIIa{} are well suited.
