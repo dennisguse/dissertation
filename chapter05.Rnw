@@ -34,6 +34,7 @@ Multi-episodic perceived quality is thus the result of a sequential process.
 Here, the order of usage episodes and their individual experiences affect the final outcome.
 Investigations on multi\=/episodic perceived quality can therefore only be undertaken in experiments adhering to a between-subject design.
 Here, every participant is only exposed to one \emph{multi\=/episodic} condition alone\footnote{A within-subject design might applicable for the investigation of multi\=/episodic perceived quality, if it can be ensured that the presentation order of different \emph{multi\=/episodic} conditions does not affect the multi-episodic judgment for each condition.}.
+In the following the word \emph{episode} is used as a synonym of usage episode.
 
 In the field of perceived quality, multi\=/episodic integration has so far only received limited attention.
 For practical use, it is often sufficient to understand the relationship between different performance parameters and the impact on perceived quality in the range of seconds up to some minutes.
