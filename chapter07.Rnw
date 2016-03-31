@@ -9,13 +9,14 @@ attach(timeseries)
 @
 
 \chapter{Multi-episodic Perceived Quality in One Session}\label{chap:lab}
-Four experiments were conducted for the evaluation of the seven hypotheses on multi\=/episodic perceived quality in one session with a time-span of up to~\unit[45]{min}.
+Four experiments were conducted for the evaluation of the seven hypotheses on multi\=/episodic perceived quality in one session.
+The session duration is limited here to up to~\unit[45]{min}.
 These experiments follow the same procedure, but differ in usage situation, task, and service type, respectively.
 %In all four experiments speech-based services are used.
 An overview on the four experiments is given in \autoref{tab:lab:experiments}.
 In fact, in each experiment only a subset of hypotheses is investigated.
 \E1{} and \EIIa{} are the main experiments, focusing most importantly on \autoref{hypo:number} and \autoref{hypo:position}.
-Both differ in usage situation, \ie, an active conversation vs. third-party listening.
+Both differ in usage situation, \ie, two-party conversation vs. third-party listening.
 \EIIb{} and \E3{} are especially designed for the investigation of \autoref{hypo:independent} and \autoref{hypo:duration}, respectively.
 
 \label{E1}\label{E2a}\label{E2b}\label{E2}\label{E3}
@@ -40,28 +41,29 @@ Both differ in usage situation, \ie, an active conversation vs. third-party list
 In the following, first the experimental design that is shared between the four experiments is presented.
 Here, the conditions for the investigation of the seven hypotheses are presented.
 Then, the performance levels, procedure and content are presented.
-In the second part of this chapter, the results of the experiments are presented by hypothesis.
+In the second part of this chapter, the results of the experiments are presented per hypothesis.
 
 \section{Design}
 For the investigation of multi\=/episodic perceived quality in one session, service types were selected that are based upon speech interaction or speech content.
 Using unimodal rather than multi-modal service types omits considering multi-modal integration for the quality formation process.
-\E1{}, \EIIa{}, and \EIIb{} focus on speech telephony.
+In \E1{}, \EIIa{}, and \EIIb{} on speech telephony is used.
 Two-party conversation is used in \E1{} while third-party listening is used in \EIIa{} and \EIIb{}.
-An \ac{AoD} service is used in \E3{} while presenting a speech-only audio book.
+An \ac{AoD} service is used in \E3{}, presenting a speech-only audio book.
 For the investigation on the impact of a second service (\autoref{hypo:independent}), a multi-modal service is used for \EIIb{} as a second service.
 Here, a \ac{VoD} service is used.
 
-The four experiments consisted of at least 6 usage episodes in which each usage episode should have a minimal duration of 2 min.
-In fact, all experiments except \E1{} apply a passive situation and thus the usage duration can be defined beforehand.
+The four experiments consisted of at least 6 usage episodes.
+Here, the minimal duration per episode is at least \unit[2]{min}.
+In fact, all experiments except \E1{} apply a passive situation and thus the duration per episode can be defined beforehand.
 
 Except for \EIIa{} only two performance levels are used per experiment, \ie, \acf{HP} and \acf{LP}.
-For all experiments the first three episodes were presented with the best performance.
-This enables participants to experience the service in a well-working setting,l similar to \citet[][]{moller_single-call_2011}.
+For all experiments the first three episodes were presented with in \ac{HP}.
+This enables participants to experience the service in a well-working setting, similar to \citet[][]{moller_single-call_2011}.
 Non-\ac{HP} were only introduced per service for episode 4, 5, and 6.
 
 In all experiments, a multi\=/episodic judgment on the 7\=/point \ac{CoCR} scale is taken after every third  episode with the service.
-Thus, the first multi\=/episodic judgment is taken after presenting only \ac{HP} episodes and is similar between all conditions.
-This allows to investigate potential impact of the between-subject design, because this judgment should be similar for between all conditions.
+Thus, the first multi\=/episodic judgment is taken after presenting only \ac{HP} episodes and thus should be similar between all conditions.
+In fact, this allows to investigate the potential impact of the between-subject design.
 Furthermore, this judgment can be used as a reference to assess the impact of the presented \ac{LP} episode(s) on following multi\=/episodic judgments.
 %It is assumed that multi\=/episodic judgments do not change, if the same performance level is presented only.
 %This judgment can thus be used as \emph{reference}.
@@ -69,11 +71,11 @@ Furthermore, this judgment can be used as a reference to assess the impact of th
 This judgment is in the following denoted as the \emph{reference}.
 
 \subsection{Conditions}\label{C0}\label{C1}\label{C2}\label{C2a}\label{C2b}\label{C3}\label{C4}\label{C5}\label{C5a}\label{C5b}\label{C6}\label{C7}\label{C8}
-Overall 11 conditions were created that allow to investigate the seven hypotheses in detail.
+Overall \unit[11]{conditions} were created that allow to investigate the seven hypotheses in detail.
 All conditions are shown in \autoref{tab:lab:hypothesesComparison}.
-The impact of varying episodic performance on multi\=/episodic perceived quality can be evaluated by comparing multi\=/episodic judgments between conditions.
+The impact of varying episodic performance on multi\=/episodic perceived quality can be evaluated by comparing the multi\=/episodic judgments between conditions.
 %that were taken after the same usage episode, \ie, participants experienced the same number of usage episodes so far.
-In addition, an influence of the different usage situations and service types can be investigated by comparing episodic judgments as well as multi\=/episodic judgments of the same condition between experiment \E1{} and \EIIa{}.
+In addition, an influence of the different usage situations, \ie, two-party conversation vs. third-party listening, can be investigated by comparing episodic judgments as well as multi\=/episodic judgments of the same condition between \E1{} and \EIIa{}.
 
 \begin{table}
  \centering
@@ -110,58 +112,59 @@ In addition, an influence of the different usage situations and service types ca
 
 All hypotheses except \autoref{hypo:recovery} are investigated with regard to the multi\=/episodic judgment after the 6th usage episode.
 Condition \C0{}, which presents only \ac{HP} usage episode, is only conducted in \EIIb{} for the \ac{VoD} service.
-For all other cases, this condition is omitted.
+For all other experiments, this condition is omitted.
 Here, the reference is used as approximation for the multi\=/episodic judgment after the 6th usage episode of \C0{}.
 
-\autoref{hypo:number}, \ie, increasing the number of \ac{LP} episodes reduces the following multi\=/episodic judgment, can be investigated by comparing the multi\=/episodic judgment after the 6th usage episode for \C3{}, \C5{}\footnote{With regard to the multi\=/episodic judgment after the 6th usage episode, it is not differentiated between \CVa{} and \CVb{}, because both are identical until this judgment.}, and \C6{} as well as \CIIa{} and \C4{}.
-The former presents an increasing number of \ac{LP} episodes directly before the multi\=/episodic judgment whereas the latter presents the last episode before the multi\=/episodic judgment in \ac{HP}.
+\autoref{hypo:number}, \ie, increasing the number of \ac{LP} episodes reduces the following multi\=/episodic judgment, can be investigated by comparing the multi\=/episodic judgments after the 6th usage episode for \C3{}, \C5{}\footnote{With regard to the multi\=/episodic judgment after the 6th usage episode, it is not differentiated between \CVa{} and \CVb{}, because both conditions are identical until this judgment.}, and \C6{} as well as \CIIa{} and \C4{}.
+\C3{}, \C5{}, and \C6{} present an increasing number of \ac{LP} episodes directly before the multi\=/episodic judgment whereas the \CIIa{} and \C4{} present the last episode before the multi\=/episodic judgment in \ac{HP}.
 
 \autoref{hypo:position} focuses on the position of the \ac{LP} episodes towards the following multi\=/episodic judgment.
-Based upon the recency effect, it is expected that increasing the number of \ac{HP} episodes before the multi\=/episodic judgment reduces the negative effect of presented \ac{LP} episodes.
-This can be investigated by comparing the multi\=/episodic judgment of conditions \C1{}, \CIIa{}, and \C3{} as well as conditions \C4{} and \C5{} (a+b) for one and two \ac{LP} usage episodes, respectively.
+Based upon the recency effect, it is expected that increasing the number of \ac{HP} episodes before the multi\=/episodic judgment reduces the negative effect of previously presented \ac{LP} episodes.
+This can be investigated by comparing the multi\=/episodic judgment of conditions \C1{}, \CIIa{}, and \C3{} as well as conditions \C4{} and \C5{}for one and two \ac{LP} usage episodes, respectively.
 
 In \autoref{hypo:consecutive}, it is assumed that consecutive \ac{LP} episodes are preferred over the same number of non-consecutive \ac{LP} episodes, because the performance varies less often.
 This should lead to higher multi\=/episodic judgments for the consecutive case.
 This hypothesis can be investigated by comparing \C8{} with \C4{} and \C5{}.
 
-\autoref{hypo:strength} focuses on the investigation of a peak effect, \ie, a multi\=/episodic judgment is more affected by the lowest episodic performance. 
-This is investigated by introducing a third performance level \ac{MP}.
+\autoref{hypo:strength} focuses on the investigation of a peak effect, \ie, multi\=/episodic judgments are more affected by the lowest episodic performance than less severe degradations. 
+This is investigated by introducing the performance level \ac{MP} in addition to \ac{HP} and \ac{LP}.
 This should provide a performance and perceived quality worse than \ac{HP} but better than \ac{LP}.
 Comparing the multi\=/episodic judgment after the 6th usage episode of \C7{} with \C5{} and \CIIa{}, allows to investigate this hypothesis.
 Those three conditions differ only in the performance level of the 6th episode presenting it in \ac{MP}, \ac{HP}, and \ac{LP}.
-If a peak effect occurs for multi\=/episodic perceived quality, the result of condition \C7{} should be closer to \CIIa{}.
+If a peak effect occurs for multi\=/episodic perceived quality, the result of \C7{} should be closer to \CIIa{}.
 
 \autoref{hypo:recovery} is closely related to \autoref{hypo:position}.
 Here, the recovery between two multi\=/episodic judgments due to presentation of additional \ac{HP} episodes is investigated.
 This can be evaluated with \CVb{} and \C7{}.
 Both are extended by an additional block of three \ac{HP} episodes.
-Here, the multi\=/episodic judgment after the 6th episode should show a larger negative effect than after the judgment following the 9th episode.
+Here, the multi\=/episodic judgments after the 6th episode should show a larger negative effect than the judgment after the 9th episode.
 
-\autoref{hypo:duration} focuses on the impact of duration of one \ac{LP} episode on the following multi\=/episodic judgment expecting a higher reduction, if a longer \ac{LP} episode is presented.
+\autoref{hypo:duration} focuses on the impact of duration of one \ac{LP} episode on the following multi\=/episodic judgment.
+Here, a higher reduction is expected if a longer \ac{LP} episode is presented.
 This is evaluated by comparing \CIIa{} and \CIIb{}, which both present the 5th usage episode in \ac{LP}.
 All episodes in \CIIa{} and \CIIb{} have a similar duration, except the 5th episode of \CIIb{}.
-The duration of this episode is doubled.
+This episode is presented with the doubled duration.
 Doubling the duration should enforce a measurable effect, if duration is not neglected.
 The 5th episode is used for this, so the difference in duration between episodes is less obvious to participants for their multi\=/episodic judgment after the 6th usage episode.
 %In fact, \CIIb{} is similar to \C4{}.
 %Both present the same overall duration of \ac{LP}, which is split in \C4{} into two episodes, followed by one \ac{HP} episode before the multi\=/episodic judgment.
 
-In \autoref{hypo:independent} it is hypothesized that multi\=/episodic perceived quality is judged on a per-service basis, \ie, usage of other service(s) in the same usage period does not affect the multi\=/episodic judgment.
+In \autoref{hypo:independent} it is hypothesized that multi\=/episodic perceived quality is judged on a per-service basis, \ie, usage of other service(s) in the same usage period does not affect multi\=/episodic judgments of the judged service.
 This can be be investigated by presenting a second service in the same session.
-Following the experimental approach of sequential usage episodes, this can be investigated by using both services alternatingly.
-This is investigated in \EIIb{} presenting a speech telephony service in \C5{}.
-Here, a second service is either presented in \C0{}, \C4{}, or not at all.
-The 2nd service is presented in two conditions to investigate, if the condition of the 2nd service affect the judgment the to be assessed service.
+Following the experimental approach of sequential usage episodes, this can be investigated by using the two services alternatingly.
+This is investigated in \EIIb{} by presenting a speech telephony service in \C5{}.
+Here, the second service is either presented in \C0{}, \C4{}, or not at all.
+This service is presented in two conditions to investigate, if its multi\=/episodic conditions affects the judgment the speech telephony service.
 As second service a \ac{VoD} service is used.
 
 \subsection{Performance Levels}
 In each of the four experiments a speech-only service was used.
 By using very similar parameters for the performance levels, the results of conditions shared between experiments can be compared.
-This allows drawing conclusion about the impact of the usage situation and service type on the multi\=/episodic judgments.
+This allows drawing conclusions about the impact of the usage situation and service type on the formation process of multi\=/episodic perceived quality.
 
-Three performance levels (\ac{HP}, \ac{MP}, and \ac{LP}), which result in different episodic judgments need to be selected.
+Three performance levels (\ac{HP}, \ac{MP}, and \ac{LP}), which result in different episodic judgments needed to be selected.
 Here, \ac{LP} should produce a measurable effect on multi\=/episodic judgments.
-Thus, \ac{LP} should not only be noticeable, but rather a \emph{severe} reduction in performance.
+Thus, \ac{LP} should not only be noticeable different, but rather a \emph{severe} reduction in performance.
 However, it must ensured that task fulfillment is possible. 
 All performance level should lead to \emph{constant} impairments rather than macroscopic fluctuations.
 For digital telecommunication services this can be achieved in the compression stage, \eg, selecting and configuring a codec.
@@ -169,7 +172,7 @@ For digital telecommunication services this can be achieved in the compression s
 
 \ac{HP} should provide state of the art performance.
 For speech telephony this is at the time of this writing the transmission in wideband with proper loudness, but without temporal clipping, noise, echo or other negative factors.
-For digital transmission of wideband speech the codec \emph{G.722} (Mode~1)~\citep{itu-t_recommendation_g.722_7khz_2012} is often used as reference condition.
+For digital transmission of wideband speech the codec \emph{G.722} (Mode~1)~\citep{itu-t_recommendation_g.722_7khz_2012} is often used.
 This codec achieves very similar judgments such as uncompressed wideband speech signals. %TODO Add refs, Moeller, Raake, Marcel
 %In subjective listening-only experiments G.722 typically achieves a \ac{MOS} of 4.5~on the 5-point \ac{ACR} scale.
 
@@ -181,17 +184,18 @@ In fact, this codec is not used for speech telephony.
 However, LPC\=/10 is useful for the investigation of multi\=/episodic perceived quality, because it allows to create severe reduction in performance while providing a understandable speech signal.
 
 For \ac{MP}, \emph{G.711}~\citep{itu-t_recommendation_g.711_pulse_1988} is selected.
-This codec is often as reference for narrowband speech telephony.
-Compared to G.722 the difference between narrowband and wideband is measurable. %TODO
+This codec is often used as reference for narrowband speech telephony.
+Compared to G.722, the difference between narrowband and wideband on perceived quality is measurable. %TODO
 In comparison to LPC\=/10, the re-synthesized speech signal contains far less artifacts.
 
 As LPC\=/10 is rarely compared to G.711 or G.722, a technical evaluation using \ac{POLQA} \citep{itu-t_recommendation_p.863_perceptual_2014} has been conducted.
 \ac{POLQA} estimates the \ac{MOS} for the 5-point \ac{ACR} scale.
-\citet{koster_comparison_2015} presented a transformation function that allows to transform judgments from the 5-point \ac{ACR} scale to the 7\=/point \ac{CoCR} scale.
-For the evaluation \unit[12]{sec} German speech samples have been processed with all three codecs and then evaluated with \ac{POLQA} in super-wideband mode.
+\citet{koster_comparison_2015} presented a transformation function that allows to transform judgments from the 5-point \ac{ACR} scale to the 7\=/point \ac{CoCR} scale. %for speech telephony
+For the evaluation \unit[12]{sec} German speech samples have been processed with all three codecs.
+The resulting speech signals were then evaluated with \ac{POLQA} in super-wideband mode.
 The results are shown in \autoref{tab:lab:performance}.
 It must be noted that LPC\=/10 is very different to G.722 and G.711.
-It only achieves a \ac{MOS} of 1.9 on the 7\=/point~\ac{CoCR}.
+LPC\=/ only achieves a \ac{MOS} of 1.9 on the 7\=/point~\ac{CoCR}.
 
 \begin{table}
  \centering
@@ -211,19 +215,19 @@ It only achieves a \ac{MOS} of 1.9 on the 7\=/point~\ac{CoCR}.
 
 End-to-end delay is an additional factor influencing perceived quality.
 This is important for \E1{} due to the use of a conversational task.
-A one-way delay up to \unit[100]{ms} is rarely noticeable and thus not perceived as degradation~\citep[][p.\,9]{itu-t_recommendation_g.107_e-model_2015}.
+A one-way delay of up to \unit[100]{ms} is rarely noticeable and thus not perceived as degradation~\citep[][p.\,9]{itu-t_recommendation_g.107_e-model_2015}.
 LPC\=/10 requires a look-ahead of \unit[90]{ms} while a frame duration of \unit[22.5]{ms} is applied.
 This results in coding delay alone of up to \unit[112.5]{ms}.
 G.711 and G.722 provide a algorithmic delay without look-ahead of \unit[0.125]{ms} and both codecs can be used with a minimal frame duration of \unit[10]{ms}.
-Thus, LPC\=/10 alone might introduce a noticeable difference due to the additional delay.
-This might result in a reduction in perceived quality in a conversational case and thus \E1{}.
+Thus, LPC\=/10 alone might introduce a noticeable difference due to the additional coding delay.
+This might result in a reduction in perceived quality in a conversational case.
 
 The \ac{VoD} service for \EIIb{} was presented on a tablet computer.
 %Presenting both services on the same device rather than different devices, prevents that participants associate each service with an individual device and use the device as cue for recall.
 Here, a \emph{Nexus 7 (2013)} is used, which provides a 7~inch screen with a resolution of \unit[$1920x1200$]{px}.
-For \ac{HP}, content is downscaled to a resolution of \unit[$1280x720$]{px} and encoded with H.264 (25~\ac{FPS}, \unit[5]{Mbit/s}, two-pass).
+For \ac{HP}, content is downscaled to a resolution of \unit[$1280x720$]{px} and encoded with H.264 (\unit[25]{\acs{FPS}}, \unit[5]{Mbit/s}, two-pass).
 For \ac{LP}, the video signal is degraded by setting the \ac{QP} factor to 50.
-This results in a constant blockiness for \ac{LP}.
+This results in a constant blockiness.
 %In difference to limiting the encoding bandwidth, this leads to near constant degradation over multiple frames. 
 The audio channel is encoded with \ac{AAC} (\unit[48]{kHz}, stereo) for both performance levels.
 Degrading the video channel only is chosen to prevent a direct comparison of degradations between the two services.
