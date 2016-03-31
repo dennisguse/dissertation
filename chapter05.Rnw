@@ -26,7 +26,7 @@ In addition, goal achievement as a requirement is added, following the concept o
 \begin{definition}[Usage Episode]\label{def:episode}
 A usage episode is a distinct, meaningful, and self-contained interaction by a user with a service or system to achieve his goal(s).
 \end{definition}
-Multi-episodic perceived quality results from an \emph{integration process}, combining prior experiences and their perceived quality.
+Multi-episodic perceived quality results from an \emph{formation process}, combining prior experiences and their perceived quality.
 It is assumed that multi\=/episodic perceived quality is integrated mainly per service.
 In fact, prior experiences can affect the \emph{quality formation process} and thus influence the perceived quality of later experiences. 
 Also, a user's behavior towards a service might change due to perceived quality affecting usage frequency, task solving strategies, or even lead to abandoning the service completely.
@@ -69,9 +69,9 @@ For this experiment, Duncanson used a 4-point \ac{ACR} scale\footnote{\citet{dun
 It could be shown that judgments for case a) yield a higher score than for case b).
 Duncanson concludes ``that ratings of single, recent telephone calls yield results different from ratings of subjectively averaged, past telephone calls of the same type'' \citep[][p.\,116]{duncanson_average_1969}.
 
-Although Duncanson studied episodic perceived quality and assumed quality of a usage episode} with average performance, it revealed an important aspect of multi\=/episodic perceived quality.
-The results indicate that the integration process of episodic perceived quality leads to a lower judgment of perceived quality than expected.
-This suggests that the integration process does not equally weight all prior experiences with said service, but rather focuses of low performing episodes.
+Although Duncanson studied episodic perceived quality and assumed quality of a usage episode with average performance, it revealed an important aspect of multi\=/episodic perceived quality.
+The results indicate that the formation process of episodic perceived quality leads to a lower judgment of perceived quality than expected.
+This suggests that the formation process does not equally weight all prior experiences with said service, but rather focuses of low performing episodes.
 
 \subsection{Assessment of Multi-episodic Perceived Quality}
 Prior work in direction of multi\=/episodic evaluation focuses on use, experience, and perception of a service or product under realistic conditions.
@@ -87,7 +87,7 @@ The calculation of a \ac{MOS}, independent of the type of judgment or scale, res
 With regard to multi\=/episodic perceived quality and perceived quality over time in general, a \ac{MOS} can only be calculated about judgments that result from the same or very similar conditions.
 In fact, this implicitly assumes that effects are similar for different participants, \ie, the same effects with a similar characteristic occur.
 In experiments on perceived quality this assumption of \emph{temporal consistency} is in general neglected as time frames under investigation are small in enough, \ie, in the range of seconds up to some minutes.
-For multi\=/episodic perceived quality it must be taken into account as a potential factor of noise as it is not yet known, if the integration process is \emph{universal} or affected by differences between individuals.
+For multi\=/episodic perceived quality it must be taken into account as a potential factor of noise as it is not yet known, if the formation process is \emph{universal} or affected by differences between individuals.
 In the following, factors are discussed that might affect multi\=/episodic perceived quality and thus should be kept constant to apply a \ac{MOS} evaluation.
 
 %\subparagraph*{Prior Knowledge and Expectations}

@@ -456,7 +456,7 @@ For \E6{} $\mathit{w}=7$~(LI) and $\mathit{w}=9$~(WW) are required for \C6{} whi
 It must be noted that the optimal value of $\mathit{w}$ in the case of \C5{} is identical to the smallest near optimum values for $\mathit{w}$ for LI and WI.
 Thus, the overall prediction performance for both weighting functions can be improved slightly if $\mathit{w}$ can be reduced to the smallest near optimum value for \C6{}.
 Although the underlying reason for the observed saturation effect cannot be deduced from the experiments alone, this can be achieved by \emph{modifying} the episodic judgment(s) of the 4th episode/day for \C6{}, so it resembles \C5{} with regard to episodic judgments, \ie, replacing it by the average of episodic judgment of \ac{HP} episodes.
-%However, a simpler approach can be derived by assuming that one of the \ac{LP} usage episodes/days did not only not contribute to the multi\=/episodic judgment, but rather is considered as \ac{HP} for the judgment of multi\=/episodic perceived quality, \ie, that \C5{} and \C6{} are not considered differently with regard to the integration process.
+%However, a simpler approach can be derived by assuming that one of the \ac{LP} usage episodes/days did not only not contribute to the multi\=/episodic judgment, but rather is considered as \ac{HP} for the judgment of multi\=/episodic perceived quality, \ie, that \C5{} and \C6{} are not considered differently with regard to the formation process.
 It is thus here proposed to change $\mathit{e_4}$ in case of \C6{} for \E1{} and \EIIa{}:
 \begin{equation}\label{eq:saturate:modify1}
 \tilde{e}_4=\nicefrac{1}{3} * \sum\limits_{i=1}^{3}e_i \, .
