@@ -131,9 +131,9 @@ A complete description of the technical setup can be found in the \appendix{}~\r
 
 On the day before starting the \unit[14]{day} usage period, an introductory session was conducted with each pair of participants.
 In this session participants received detailed instructions for the experiment and provided demographic data.
+Afterwards, a short training was conducted presenting typical degradations with regard to speech telephony and also video transmission.
 In addition, one usage episode for both services need to be solved.
 Those were presented in \ac{HP}.
-In this experiment typical degradations for the two services were presented in the introductory session.
 %This allowed that participants know how to use the two service and understood the necessary requirements for this experiment.
 %Here also the \ac{NPS} was assessed for each service individually and for both services as a bundle.
 
@@ -142,8 +142,8 @@ In this experiment typical degradations for the two services were presented in t
 For each of the two conditions, \unit[5]{pairs} successfully finished this experiment with an average age of \unit[22.9]{years} ($\sigma = 3.1$) consisting of \unit[11]{male} and \unit[9]{female} participants.
 Of the \unit[280]{scheduled calls}, 5~were not done and \unit[18]{episodic} judgments missing.
 For the \ac{VoD} service all usage episodes were conducted, but \unit[13]{episodic} judgments and one multi\=/episodic judgment were missing.
-
-Due to the small sample size and the missing ground truth, no participant was removed from the data analysis.
+This is, in fact, an issue with regard to the evaluation according to the \ac{MOS} assumption as desired by applying the defined-use method, because not all participants assigned to a condition were exposed to the same multi-episodic condition.
+However, due to the small sample size and the missing ground truth, no participant was removed from the data analysis.
 
 \subsection{Data Analysis}
 First the episodic judgments are evaluated for the \ac{VoD} service followed by a detailed analysis of the multi\=/episodic judgments.
@@ -258,14 +258,15 @@ Similar to \E4{}, one episode with each service was presented in \ac{HP}.
 Typical degradations were not presented. 
 
 \subsection{Participants}
-This experiment was conducted in Berlin, Germany from June until August 2013.
+This experiment was conducted in Berlin, Germany from June until August~2013.
 \unit[21]{participants} (\unit[11]{female}, \unit[10]{male}) took part in this experiment with an average of \unit[27.8]{years} ($\sigma = 4.0$).
 \unit[11]{participants} were assigned to the \ac{AoD} service with \C9{} and the \ac{VoD} service with \CX{} and 10 vice versa.
 Participants received \unit[40]{\textsc{\lowercase{EUR}}} as compensation.
-Out of the overall 294~usage episodes, 9~were not conducted for the \ac{AoD} service and 13~not for the \ac{VoD} service.
-\unit[6]{multi\=/episodic} judgments were missing.
 
-\subsection{Data Analysis}
+Out of the overall \unit[294]{usage} episodes, 9~were not conducted for the \ac{AoD} service and 13~not for the \ac{VoD} service.
+\unit[6]{multi\=/episodic} judgments were missing.
+Similar to \E4{} no participant was removed data analysis due to the lack of ground truth and the small size.
+In this \subsection{Data Analysis}
 In this experiment no issues with the technical setup were observed.
 In the following, data is analyzed of all participants starting episodic judgments followed by multi\=/episodic judgments.
 
@@ -279,7 +280,7 @@ Neither episodic judgments of \ac{HP} (\Sexpr{wilcox(QU~condition, "E5",  "HP", 
 The episodic judgments are significantly different between the two performance levels (\Sexpr{wilcox(QU~performance_level, "E5",  c("HP", "LP"), c("P1", "P2"),id, "VoD")}).
 
 For \ac{HP} episodes, both services are judged significantly different (\Sexpr{wilcox(QU~service, "E5",  "HP", c("P1", "P2"), id, c("AoD", "VoD"))}).
-In fact, the difference is very small (approximately 0.1pt).
+In fact, the difference is very small (approximately \unit[0.1]{pt}).
 It is thus assumed not to affect the multi\=/episodic hypotheses testing.
 For \ac{LP} no significant difference is found (\Sexpr{wilcox(QU~service, "E5",  "LP", c("P1", "P2"), id, c("AoD", "VoD"))}).
 In \autoref{img:field:boxplotE5} the episodic judgments for both conditions are presented without discriminating by service.
@@ -468,7 +469,7 @@ None of the participants fulfilled this criteria.
 In addition, the content related questions were evaluated.
 Here, it is required that participant can at least answer 50\%~correct.
 Out of the 24~questions, participants answered on average \Sexpr{round(mean(content[["x"]]), 1)} ($\sigma = \Sexpr{round(sd(content[["x"]]), 1)}$) correct.
-One participant, who participated in \C8{}, is excluded from data analysis, because only 8~questions were correctly answered.
+One participant, who participated in \C8{}, is excluded from data analysis, because only \unit[8]{questions} were correctly answered.
 
 <<echo=F>>=
 content[content$x > 15, ] = NA

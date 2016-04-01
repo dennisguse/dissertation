@@ -224,8 +224,8 @@ This might result in a reduction in perceived quality in a conversational case.
 
 The \ac{VoD} service for \EIIb{} was presented on a tablet computer.
 %Presenting both services on the same device rather than different devices, prevents that participants associate each service with an individual device and use the device as cue for recall.
-Here, a \emph{Nexus~7~(2013)} is used, which provides a \unit[7]{inch} screen with a resolution of \unit[$1920x1200$]{px}.
-For \ac{HP}, content is downscaled to a resolution of \unit[$1280x720$]{px} and encoded with H.264 (\unit[25]{\acs{FPS}}, \unit[5]{Mbit/s}, two-pass).
+Here, a \emph{Nexus~7~(2013)} is used, which provides a \unit[7]{inch} screen with a resolution of \unit[1920$x$1200]{px}.
+For \ac{HP}, content is downscaled to a resolution of \unit[1280$x$720]{px} and encoded with H.264 (\unit[25]{\acs{FPS}}, \unit[5]{Mbit/s}, two-pass).
 For \ac{LP}, the video signal is degraded by setting the \ac{QP} factor to 50.
 This results in a constant blockiness.
 %In difference to limiting the encoding bandwidth, this leads to near constant degradation over multiple frames. 

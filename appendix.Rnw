@@ -81,7 +81,7 @@ This \unit[7]{inch} display of this device was set to maximum brightness without
 
 In those three experiments non-degraded recordings of two-party conversations of experiment \E1{} were selected.
 Those recordings were processed with the \textsc{\lowercase{ITU\=/T}~\lowercase{STL2009}} tools \citep{itu-t_recommendation_g.191_software_2010} for coding with G.722 and with \textsc{\lowercase{SOX}} for coding with \textsc{\lowercase{LPC\=/10}}.
-For \EIIb{} the video material was cut with \emph{Adobe Premiere 6} and exported with H.264 (\unit[1280x720]{px}, \unit[5]{Mbit/s}, two-pass) and \ac{AAC} (\unit[448]{kbit/s}, stereo).
+For \EIIb{} the video material was cut with \emph{Adobe Premiere 6} and exported with H.264 (\unit[1280$x$720]{px}, \unit[5]{Mbit/s}, two-pass) and \ac{AAC} (\unit[448]{kbit/s}, stereo).
 Afterwards it was processed with \emph{FFmpeg}\footnote{The FFmpeg project is available at \url{https://www.ffmpeg.org/}.} to re-encode with the desired \ac{QP} factor while leaving the audio unchanged.
 
 \section{Experiment E4}
@@ -119,7 +119,7 @@ In difference to the speech telephony service, this system achieved the desired 
 \section{Experiment E5}
 Based upon the reliability of the simulation of a \ac{VoD} service for experiment \E4{}, an \ac{AoD} service and \ac{VoD} service were used in experiment \E5{}, but simulating both services.
 For this experiment ten \emph{Samsung~Galaxy~SII~(GT\=/I9210)} mobile phones running \emph{Android~2.3} were available.
-This mobile phone has a \unit[4.5]{inch} display with a resolution of $\unit[480x800]{px}$.
+This mobile phone has a \unit[4.5]{inch} display with a resolution of \unit[480$x$800]{px}.
 A native Android application was implemented with the same functionality as the implementation used in experiment \E4{}, \ie, storing media content locally while providing login functionality and initial buffering.
 For media playback the \ac{VoD} service presented the video horizontally in full screen while the \ac{AoD} presented an equalizer.
 In addition to the mobile phone each participant received a pair of \emph{Shure~240} headphones.
