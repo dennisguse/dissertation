@@ -15,7 +15,7 @@ attach(timeseries)
 
 \chapter{Multi-episodic Perceived Quality in Multiple Days}\label{chap:field}
 %\begin{chapter-abstract}
-%Here I present all studies that I conducted on multi\=/episodic QoE over several days.
+%Here I present all studies that I conducted on multi\-/episodic QoE over several days.
 %This will include studies with one service only, but also with two services (multi-service) part.
 %
 %\textit{Key question:} do field trials (longer timespan) yield similar effects as found in lab trials (chap 6).
@@ -33,10 +33,10 @@ attach(timeseries)
 %\section{Introduction}
 
 
-The integration of perceived quality of usage episodes into a multi\=/episodic perceived quality is not limited to one session alone.
+The integration of perceived quality of usage episodes into a multi\-/episodic perceived quality is not limited to one session alone.
 Rather usage episodes with a service often occur regularly, covering multiple days or even longer usage periods.
 In difference to consecutive usage in one session, here the time that passes between usage episodes might be longer.
-However, it is so far unknown how and if at all the time between episodes affects the quality formation process of multi\=/episodic perceived quality.
+However, it is so far unknown how and if at all the time between episodes affects the quality formation process of multi\-/episodic perceived quality.
 %Due to the lack of ground truth, the findings for one session (\cf, \autoref{chap:lab}) are used as a basis towards this investigation.
 
 A feasible option to cover such time spans in an experiment, is to conduct it as a field experiment.
@@ -48,13 +48,13 @@ Second, participants cannot be directly supervised during the experiment.
 Both might be sources of unexplainable variance in such an experiment.
 In addition, technical systems must be robust while providing the desired performance per usage episode.
 
-For the investigation of multi\=/episodic perceived quality with a usage period of multiple days, three experiments were conducted denoted as \E4{}, \E5{}, and \E6{}.
+For the investigation of multi\-/episodic perceived quality with a usage period of multiple days, three experiments were conducted denoted as \E4{}, \E5{}, and \E6{}.
 Those experiments follow the defined-use method.
 Following \citet{moller_single-call_2011}, each usage episode was presented individually, \ie, one episode per session.
-\E4{} and \E5{} focused on general feasibility of investigating multi\=/episodic perceived quality in a field experiment.
+\E4{} and \E5{} focused on general feasibility of investigating multi\-/episodic perceived quality in a field experiment.
 Those experiments covered a usage period of \unit[14]{days} in which participants used two services on a daily basis.
 Beside feasibility, \E4{} focused on the reproduction of the results of \citet{moller_single-call_2011}.
-In \E5{}, it the adaption speed of multi\=/episodic judgments was planed to be investigated.
+In \E5{}, it the adaption speed of multi\-/episodic judgments was planed to be investigated.
 Based upon \E4{}, \E5{}, and the one-session experiments, \E6{} was designed.
 Here, \autoref{hypo:number}, \autoref{hypo:position}, and \autoref{hypo:consecutive} were investigated.
 In this experiment only one service was used in a usage period of \unit[7]{days}.
@@ -91,9 +91,9 @@ This experiment indicated only little differences between on multi-episodic judg
 This might be due to the limited number of degraded episodes, or that introduced degradations were not severe enough.
 The goal \E4{} was to apply the defined-use method in a similar usage period and understand practical aspects of a field experiment.
 Beside this, \E4{} focused on two aspects.
-First, to achieve a larger difference of multi\=/episodic judgments between conditions.
+First, to achieve a larger difference of multi\-/episodic judgments between conditions.
 For this \emph{a)} the number of \ac{LP} episodes was increased and \emph{b)} the performance parameters selected to increase the perceptual difference between \ac{HP} and \ac{LP}.
-Second, two services are used to investigate the integration of multi\=/episodic perceived quality with two services.
+Second, two services are used to investigate the integration of multi\-/episodic perceived quality with two services.
 
 \subsection{Design}
 In this experiment a speech telephony service and a \ac{VoD} service were selected.
@@ -110,10 +110,10 @@ In this experiment, two conditions were investigated.
 In the first one, all usage episodes were presented in \ac{HP} (denoted as \C0{}).
 In the second condition, denoted as \C9{}, both services were presented in \ac{HP} for the first two days, followed by two days \ac{LP} and so on. \label{C9}
 This resulted in \unit[8]{days} presented \ac{HP} versus \unit[6]{days} presented in \ac{LP}. 
-While \C0{} replicates the baseline condition of \citet{moller_single-call_2011}, \C9{} should lead to a reduction in multi\=/episodic judgments.
+While \C0{} replicates the baseline condition of \citet{moller_single-call_2011}, \C9{} should lead to a reduction in multi\-/episodic judgments.
 
 After finishing an episode, participants assessed the episodic perceived quality on the 7\=/point \ac{CoCR} scale (\cf, \autoref{img:chap05:quality-scale}).
-The multi\=/episodic perceived quality for each service was assessed after the 4th, 7th, 10th, and 14th day directly after finishing the daily episode with the \ac{VoD} service.
+The multi\-/episodic perceived quality for each service was assessed after the 4th, 7th, 10th, and 14th day directly after finishing the daily episode with the \ac{VoD} service.
 
 For the speech telephony service the G.722 was used for both performance levels with a packet-length of \unit[20]{ms}.
 Neither \acs{FEC} nor \acs{PLC} were applied.
@@ -141,12 +141,12 @@ Those were presented in \ac{HP}.
 \E4{} was conducted in Berlin, Germany from August to September~2012.
 For each of the two conditions, \unit[5]{pairs} successfully finished this experiment with an average age of \unit[22.9]{years} ($\sigma = 3.1$) consisting of \unit[11]{male} and \unit[9]{female} participants.
 Of the \unit[280]{scheduled calls}, 5~were not done and \unit[18]{episodic} judgments missing.
-For the \ac{VoD} service all usage episodes were conducted, but \unit[13]{episodic} judgments and one multi\=/episodic judgment were missing.
+For the \ac{VoD} service all usage episodes were conducted, but \unit[13]{episodic} judgments and one multi\-/episodic judgment were missing.
 This is, in fact, an issue with regard to the evaluation according to the \ac{MOS} assumption as desired by applying the defined-use method, because not all participants assigned to a condition were exposed to the same multi-episodic condition.
 However, due to the small sample size and the missing ground truth, no participant was removed from the data analysis.
 
 \subsection{Data Analysis}
-First the episodic judgments are evaluated for the \ac{VoD} service followed by a detailed analysis of the multi\=/episodic judgments.
+First the episodic judgments are evaluated for the \ac{VoD} service followed by a detailed analysis of the multi\-/episodic judgments.
 An analysis of the speech telephony service is omitted here as the implemented setup failed to provide desired performance levels reliably. 
 Thus, a \ac{MOS} evaluation cannot be conducted as participants were exposed to different performance.
 \autoref{img:field:E4conditionA1TELboxplot} shows the box plot for the episodic judgments for the \ac{VoD} service in \C9{}.
@@ -172,15 +172,15 @@ For \C9{} the two performance levels are significantly different (\Sexpr{wilcox(
 However, the difference is rather smaller than desired as only a reduction of approximately \unit[1]{pt} is introduced.
 
 \paragraph*{Multi-episodic Judgments}
-The multi\=/episodic judgments for the \ac{VoD} service are shown in \autoref{tab:field:e4results}.
-For \C0{} no significant differences in multi\=/episodic judgments are found between the four measurements (\Sexpr{kruskal(IQU~id, "E4a", c("HP", "LP"), "A0", unique(timeseries[["id"]]), "VoD")}).
+The multi\-/episodic judgments for the \ac{VoD} service are shown in \autoref{tab:field:e4results}.
+For \C0{} no significant differences in multi\-/episodic judgments are found between the four measurements (\Sexpr{kruskal(IQU~id, "E4a", c("HP", "LP"), "A0", unique(timeseries[["id"]]), "VoD")}).
 Also for \C9{} no significant differences are observed (\Sexpr{kruskal(IQU~id, "E4a", c("HP", "LP"), "A1", unique(timeseries[["id"]]), "VoD")}).
-In fact, even between the two conditions no differences in multi\=/episodic judgments are indicated  (\cf, \autoref{tab:field:e4results}).
+In fact, even between the two conditions no differences in multi\-/episodic judgments are indicated  (\cf, \autoref{tab:field:e4results}).
 Statistical evaluation for this is omitted due to the sample size, high variance and closeness of judgments.
 
 \begin{table}
 	\centering
-	\caption{Multiple days (\E4{}): multi\=/episodic judgments for the \ac{VoD} service.}
+	\caption{Multiple days (\E4{}): multi\-/episodic judgments for the \ac{VoD} service.}
 	\label{tab:field:e4results}
 	\begin{tabular}{c|c|c|c}
 	\multirow{2}{*}{Day} & \multicolumn{3}{c}{Multi-episodic Judgment} \\
@@ -199,32 +199,32 @@ Statistical evaluation for this is omitted due to the sample size, high variance
 \subsection{Discussion}
 \E4{} was only partly successful.
 It could be shown that the defined-use method could be applied successfully and practical knowledge acquired.
-However, with regard to multi\=/episodic \ac{QoE}, the results are limited.
+However, with regard to multi\-/episodic \ac{QoE}, the results are limited.
 Most prominent is the failure of the speech telephony service.
 This system did not provide desired performance levels.
-This technical failure prevented that participants were exposed to the same condition with regard to multi\=/episodic perceived quality and thus a \ac{MOS} evaluation cannot be conducted.
+This technical failure prevented that participants were exposed to the same condition with regard to multi\-/episodic perceived quality and thus a \ac{MOS} evaluation cannot be conducted.
 Here, it was missed to improve the robustness against temporary network limitations.
 In addition, some pairs of participants found it very difficult to conduct two calls daily.
 Here, it was problematic to find the time slots and embed them into their daily life.
 
 Also the results for the \ac{VoD} service are limited although the system worked as desired.
-With regard to the multi\=/episodic judgments no significant differences between the two conditions could be found.
+With regard to the multi\-/episodic judgments no significant differences between the two conditions could be found.
 In fact, the final judgments are nearly identical between the two conditions.
 This indicates that the applied performance for \ac{LP} was not severe enough.
 This is also indicated by the rather small difference between episodic judgments for \ac{HP} and \ac{LP}.
-The results of \C0{} are as expected, \ie, multi\=/episodic judgments do not differ from episodic judgments.
+The results of \C0{} are as expected, \ie, multi\-/episodic judgments do not differ from episodic judgments.
 This is in line with \citet{moller_single-call_2011}.
 In addition, here also a slight increase of episodic judgments over the usage period is indicated.
 The reason for this unknown and cannot be deduced from the experiments alone.
 
-With regard to multi\=/episodic \ac{QoE} the gathered data is not sufficient for the creation of a prediction model.
+With regard to multi\-/episodic \ac{QoE} the gathered data is not sufficient for the creation of a prediction model.
 
 \section{Experiment E5}
 Based upon the practical insights of \E4{}, in \E5{} only media-consumption was used.
 \footnote{The results of \E5{} are published in \citet{guse_modelling_2014}.}
 Here, a \ac{VoD} service and an \ac{AoD} service are used.
 Similar to \E4{} the services needed to be used in a usage period of \unit[14]{days}.
-In this experiment, the impact of an increase of the number of performance changes between usage episodes on multi\=/episodic judgment is investigated.
+In this experiment, the impact of an increase of the number of performance changes between usage episodes on multi\-/episodic judgment is investigated.
 The number of \ac{LP} episodes is kept constant.
 %This reduced technical complexity as only one platform was used.
 %while limit an influence due to prior experiences and expectations with their own equipment.
@@ -264,11 +264,11 @@ This experiment was conducted in Berlin, Germany from June until August~2013.
 Participants received \unit[40]{\textsc{\lowercase{EUR}}} as compensation.
 
 Out of the overall \unit[294]{usage} episodes, 9~were not conducted for the \ac{AoD} service and 13~not for the \ac{VoD} service.
-\unit[6]{multi\=/episodic} judgments were missing.
+\unit[6]{multi\-/episodic} judgments were missing.
 Similar to \E4{} no participant was removed data analysis due to the lack of ground truth and the small size.
 In this \subsection{Data Analysis}
 In this experiment no issues with the technical setup were observed.
-In the following, data is analyzed of all participants starting episodic judgments followed by multi\=/episodic judgments.
+In the following, data is analyzed of all participants starting episodic judgments followed by multi\-/episodic judgments.
 
 \paragraph*{Episodic Judgments}
 The \ac{AoD} service resulted for \ac{HP} episodes in \ac{MOS} of \Sexpr{mos_qu_with_sd_by_condition("E5", "HP", c("P1", "P2"), id, "AoD")} and for \ac{LP} episodes in \Sexpr{mos_qu_with_sd_by_condition("E5", "LP", c("P1", "P2"), id, "AoD")}.
@@ -281,7 +281,7 @@ The episodic judgments are significantly different between the two performance l
 
 For \ac{HP} episodes, both services are judged significantly different (\Sexpr{wilcox(QU~service, "E5",  "HP", c("P1", "P2"), id, c("AoD", "VoD"))}).
 In fact, the difference is very small (approximately \unit[0.1]{pt}).
-It is thus assumed not to affect the multi\=/episodic hypotheses testing.
+It is thus assumed not to affect the multi\-/episodic hypotheses testing.
 For \ac{LP} no significant difference is found (\Sexpr{wilcox(QU~service, "E5",  "LP", c("P1", "P2"), id, c("AoD", "VoD"))}).
 In \autoref{img:field:boxplotE5} the episodic judgments for both conditions are presented without discriminating by service.
 
@@ -300,18 +300,18 @@ In this experiment no increase of episodic judgments for \ac{HP} episodes is obs
 \end{figure}
 
 \paragraph*{Multi-episodic Judgments}
-The multi\=/episodic judgments for both services and conditions are shown in \autoref{tab:field:e5results}.
-For the \ac{AoD} service, no significant difference between multi\=/episodic judgments is observed for \C9{} (\Sexpr{kruskal(IQU~id, "E5", c("HP", "LP"), "P1", id, "AoD")}), but for \CX{} (\Sexpr{kruskal(IQU~id, "E5", c("HP", "LP"), "P2", id, "AoD")}).
+The multi\-/episodic judgments for both services and conditions are shown in \autoref{tab:field:e5results}.
+For the \ac{AoD} service, no significant difference between multi\-/episodic judgments is observed for \C9{} (\Sexpr{kruskal(IQU~id, "E5", c("HP", "LP"), "P1", id, "AoD")}), but for \CX{} (\Sexpr{kruskal(IQU~id, "E5", c("HP", "LP"), "P2", id, "AoD")}).
 However, a post-hoc test does not find a significant difference for \CX{} ($p<0.055$). %\Sexpr{wilcox.pairwise.print(IQU~id, "E5", c("HP", "LP"), "P2", c(2, 5, 8, 11, 14), "AoD")}
-Comparing the multi\=/episodic judgments day-wise between the two conditions, no significant difference is found.
+Comparing the multi\-/episodic judgments day-wise between the two conditions, no significant difference is found.
 
 For the \ac{VoD} service no significant differences are found for \C9{} (\Sexpr{kruskal(IQU~id, "E5", c("HP", "LP"), "P1", id, "VoD")}), but for \CX{} (\Sexpr{kruskal(IQU~id, "E5", c("HP", "LP"), "P2", id, "VoD")}).
-For \CX{}, a post-hoc test shows that the multi\=/episodic judgment after the 2nd day is significantly different to all following judgments ($p<0.006$). %\Sexpr{wilcox.pairwise.print(IQU~id, "E5", c("HP", "LP"), "P2", c(2, 5, 8, 11, 14), "VoD")}
+For \CX{}, a post-hoc test shows that the multi\-/episodic judgment after the 2nd day is significantly different to all following judgments ($p<0.006$). %\Sexpr{wilcox.pairwise.print(IQU~id, "E5", c("HP", "LP"), "P2", c(2, 5, 8, 11, 14), "VoD")}
 Between the two conditions, only the judgments after the 2nd day are significantly different (\Sexpr{wilcox(IQU~condition, "E5",  c("HP", "LP"), c("P1", "P2"), 2, "VoD")}).
 
 \begin{table}[h]
 	\centering
-	\caption{Multiple days (\E5{}): multi\=/episodic judgments.}
+	\caption{Multiple days (\E5{}): multi\-/episodic judgments.}
 	\label{tab:field:e5results}
 	\begin{tabular}{c|c|c||c|c}
 	Day & \multicolumn{4}{c}{Multi-episodic Judgment} \\
@@ -348,25 +348,25 @@ Between the two conditions, only the judgments after the 2nd day are significant
 
 \subsection{Discussion}
 In \E5{} the implemented setup was able to provide the desired performance levels in a reliable manner as reflected by the episodic judgments.
-As long as only \ac{HP} episodes are presented, the following multi\=/episodic judgments are similar to previous episodic judgments for both services (\CX{}).
+As long as only \ac{HP} episodes are presented, the following multi\-/episodic judgments are similar to previous episodic judgments for both services (\CX{}).
 This is in line with \citet{moller_single-call_2011} and \E4{}.
 It is notable that the episodic judgments are not very different between the two services.
 A reason for this might be that both services presented the audio modality with the same performance and thus similar degradations.
 
-As desired, the presentation of \ac{LP} episodes affected following multi\=/episodic judgment.
-However, the two conditions only show little variation of multi\=/episodic judgments after the first \ac{LP} episode is presented.
-Except for the first multi\=/episodic judgment of the \ac{VoD} service, no difference between the two conditions could be observed.
+As desired, the presentation of \ac{LP} episodes affected following multi\-/episodic judgment.
+However, the two conditions only show little variation of multi\-/episodic judgments after the first \ac{LP} episode is presented.
+Except for the first multi\-/episodic judgment of the \ac{VoD} service, no difference between the two conditions could be observed.
 In \C9{} even the presentation of three consecutive days in \ac{HP} only indicated a \emph{slight}, non-significant increase.
-This indicates a longer integration interval for the multi\=/episodic judgments than three days, \ie, prior experiences still affect the judgment.
-That no difference between the two conditions could be observed, indicates that the number of day-wise performance changes does not seem not to affect the multi\=/episodic quality formation process.
-%It must be noted that multi\=/episodic judgment remained on a similar level and did not decrease further towards episodic judgments of \ac{LP}.
-%Thus, multi\=/episodic judgments tend to stay between episodic judgments for \ac{HP} and \ac{LP} without a tendency towards one of both.
+This indicates a longer integration interval for the multi\-/episodic judgments than three days, \ie, prior experiences still affect the judgment.
+That no difference between the two conditions could be observed, indicates that the number of day-wise performance changes does not seem not to affect the multi\-/episodic quality formation process.
+%It must be noted that multi\-/episodic judgment remained on a similar level and did not decrease further towards episodic judgments of \ac{LP}.
+%Thus, multi\-/episodic judgments tend to stay between episodic judgments for \ac{HP} and \ac{LP} without a tendency towards one of both.
 %As only two conditions have been investigated in this experiment, a precise characteristic cannot be determined.
 The results of \E5{} can be used for model verification only, because the two conditions yielded very similar results.
 
 \section{Experiment E6}
 \E6{} is a follow-up upon the one-session experiments, but extends the usage period to \unit[6]{days} with one usage episode per session.
-The main goal of this experiment was to investigate, if the effects observed for multi\=/episodic \ac{QoE} in one session can also be observed in longer usage periods.
+The main goal of this experiment was to investigate, if the effects observed for multi\-/episodic \ac{QoE} in one session can also be observed in longer usage periods.
 Besides interesting knowledge, this is an important aspect for the implementation of a prediction model.
 %If similar effects are observed, a prognosis model can be implemented that can be applied in both settings.
 %If not, then individual prognosis models have to be developed or add the length of usage period as a parameter.
@@ -408,10 +408,10 @@ Then, participants were presented typical speech telephony related degradations 
 Finally, each participant used the \ac{AoD} service for two usage episodes to ensure participants understood how to use the service.
 
 During the field experiment, the first usage episode of a day needed to be conducted between \unit[7]{am} and \unit[1]{pm}, and the second usage episode between \unit[3]{pm} and \unit[10]{pm}.
-Episodic judgments and multi\=/episodic judgments were taken on the 7\=/point \ac{CoCR} scale.
+Episodic judgments and multi\-/episodic judgments were taken on the 7\=/point \ac{CoCR} scale.
 Multi-episodic judgments were collected after the second episode of the \unit[3rd]{day} and the \unit[6th]{day}.
 In fact, the judgment after the 3rd day is only based upon \ac{HP} episodes.
-Thus, it can be used as reference point to assess the impact of the presented \ac{LP} episodes on following multi\=/episodic judgments, which is in the following denoted as \emph{reference}.
+Thus, it can be used as reference point to assess the impact of the presented \ac{LP} episodes on following multi\-/episodic judgments, which is in the following denoted as \emph{reference}.
 To force participants to follow the content, two content-related questions needed to be answered after every usage episode.
 Here, the correct answer out of three options needed to be selected.
 This allows to evaluate, if participant had experienced an episode and thus could answer the questions correctly.
@@ -479,7 +479,7 @@ timeseries[timeseries$username %in% content$username, ] = NA
 \subsection{Data Analysis}
 In the following, the data of \E6{} are analyzed.
 First the episodic judgments are evaluated to investigate potential differences between the conditions.
-Then, the multi\=/episodic judgments are evaluated with regard to the hypotheses under investigation.
+Then, the multi\-/episodic judgments are evaluated with regard to the hypotheses under investigation.
 
 \subsubsection{Consistency}
 An impact of the between-subject design is investigated by evaluating the episodic judgments of \ac{HP} and \ac{LP}.
@@ -514,14 +514,14 @@ Box plots for all conditions can be found in the \appendix{}~\ref{appendix:resul
 	\end{tabulary}
 \end{table}
 
-For the multi\=/episodic judgment after the 3rd day, no significant differences between conditions are observed (\Sexpr{kruskal(IQU~condition, "E6a", "HP", condition, c(8))}).
-This indicates that, as long as only \ac{HP} episodes are presented, the between-subject design did not affect multi\=/episodic judgments.
+For the multi\-/episodic judgment after the 3rd day, no significant differences between conditions are observed (\Sexpr{kruskal(IQU~condition, "E6a", "HP", condition, c(8))}).
+This indicates that, as long as only \ac{HP} episodes are presented, the between-subject design did not affect multi\-/episodic judgments.
 
 \subsubsection{\autoref{hypo:number}: Number of \acs{LP} Episodes}
-In \autoref{hypo:number} it is assumed that increasing the number of \ac{LP} episodes before a multi\=/episodic judgment results in a decrease of this judgment.
-This hypothesis can be evaluated by comparing the final multi\=/episodic judgments between the reference, \C3{}, \C5{}, and \C6{}.
-Those present none, one, two, and three days in \ac{LP} before the multi\=/episodic judgment.
-\autoref{tab:field:hyponumber} shows the final multi\=/episodic judgment and the reference for those conditions.
+In \autoref{hypo:number} it is assumed that increasing the number of \ac{LP} episodes before a multi\-/episodic judgment results in a decrease of this judgment.
+This hypothesis can be evaluated by comparing the final multi\-/episodic judgments between the reference, \C3{}, \C5{}, and \C6{}.
+Those present none, one, two, and three days in \ac{LP} before the multi\-/episodic judgment.
+\autoref{tab:field:hyponumber} shows the final multi\-/episodic judgment and the reference for those conditions.
 
 Here, \C3{}, \C5{}, \C6{}, and the reference are significantly different (\Sexpr{kruskal(IQU~condition, "E6a", performance_level, c("3", "5a", "6"), 14, reference=14)}).
 A post-hoc test finds that the reference is significantly different to all three conditions (\Sexpr{wilcox.pairwise.print(IQU~condition, "E6a", performance_level, c("3", "5a", "6"), 14, reference=14)[1,1]}).
@@ -530,7 +530,7 @@ For \C5{} and \C6{} no significant difference is found (\Sexpr{wilcox.pairwise.p
 
 \begin{table}[h]
 	\centering
-	\caption[Multiple days (\E6{}): multi\=/episodic judgments after the 6th day for \autoref{hypo:number}.]{Multiple days (\E6{}): multi\=/episodic judgments after the 6th day for \autoref{hypo:number}. Reported as \ac{MOS} with standard deviation in brackets.}
+	\caption[Multiple days (\E6{}): multi\-/episodic judgments after the 6th day for \autoref{hypo:number}.]{Multiple days (\E6{}): multi\-/episodic judgments after the 6th day for \autoref{hypo:number}. Reported as \ac{MOS} with standard deviation in brackets.}
 	\label{tab:field:hyponumber}
 	\begin{tabulary}{\columnwidth}{c|c|C}
 	Condition	& \ac{LP} episode(s) 	& Multi-episodic Judgment\\
@@ -545,25 +545,25 @@ For \C5{} and \C6{} no significant difference is found (\Sexpr{wilcox.pairwise.p
 	\end{tabulary}
 \end{table}
 
-The results show that increasing the number \ac{LP} days directly before the multi\=/episodic judgment results in a reduction of this judgment.
+The results show that increasing the number \ac{LP} days directly before the multi\-/episodic judgment results in a reduction of this judgment.
 Here, a reduction of approximately \unit[1]{pt} for none to one and one to two days is observed.
 However, no further decrease can be observed, if three days are presented in \ac{LP}.
-It must be noted that the multi\=/episodic judgments remain \unit[1]{pt} higher than the episodic judgment of \ac{LP} episodes.
+It must be noted that the multi\-/episodic judgments remain \unit[1]{pt} higher than the episodic judgment of \ac{LP} episodes.
 With regard to \autoref{hypo:number} the results are in line the one-session experiments \E1{} and \EIIa{}.
-In both usage periods, the multi\=/episodic judgments decrease until three episodes/days are presented in \ac{LP}.
+In both usage periods, the multi\-/episodic judgments decrease until three episodes/days are presented in \ac{LP}.
 Then, the judgment remains on the same level.
 Thus, \autoref{hypo:number} can also be partly accepted.
 However, the observed saturation must be left for further investigation.
 
 \subsubsection{\autoref{hypo:position}: Position of \acs{LP} Episode(s)}
-In \autoref{hypo:position} it is assumed that presenting \ac{HP} episodes after \ac{LP} episodes reduces the negative impact on the directly following multi\=/episodic judgment.
+In \autoref{hypo:position} it is assumed that presenting \ac{HP} episodes after \ac{LP} episodes reduces the negative impact on the directly following multi\-/episodic judgment.
 This can be investigated for one day in \ac{LP} with \C1{} and \C3{}.
 For two days with \C4{} and \C5{}.
-\autoref{tab:field:hypoposition} shows the final multi\=/episodic judgments for those four conditions.
+\autoref{tab:field:hypoposition} shows the final multi\-/episodic judgments for those four conditions.
 
 \begin{table}[h]
 	\centering
-	\caption[Multiple days (\E6{}): multi\=/episodic judgment after the 6th day for \autoref{hypo:position}.]{Multiple days (\E6{}): multi\=/episodic judgment after the 6th day for \autoref{hypo:position}. Reported as \ac{MOS} with standard deviation in brackets.}
+	\caption[Multiple days (\E6{}): multi\-/episodic judgment after the 6th day for \autoref{hypo:position}.]{Multiple days (\E6{}): multi\-/episodic judgment after the 6th day for \autoref{hypo:position}. Reported as \ac{MOS} with standard deviation in brackets.}
 	\label{tab:field:hypoposition}
 	\begin{tabulary}{\columnwidth}{c|c|C}
 	Condition   & \ac{LP} episode(s) 	& Multi-episodic Judgment \\
@@ -579,19 +579,19 @@ For two days with \C4{} and \C5{}.
 	\end{tabulary}
 \end{table}
 
-With regard to the final multi\=/episodic judgment neither \C1{} and \C3{} (\Sexpr{wilcox(IQU~condition, "E6a", c("HP", "LP"), c("1", "3"), 14, alternative="greater")}) nor \C4 and \C5 (\Sexpr{wilcox(IQU~condition, "E6a", c("HP", "LP"), c("4", "5a"), 14, alternative="greater")}) are significantly different.
+With regard to the final multi\-/episodic judgment neither \C1{} and \C3{} (\Sexpr{wilcox(IQU~condition, "E6a", c("HP", "LP"), c("1", "3"), 14, alternative="greater")}) nor \C4 and \C5 (\Sexpr{wilcox(IQU~condition, "E6a", c("HP", "LP"), c("4", "5a"), 14, alternative="greater")}) are significantly different.
 Still, in both cases an effect of position is indicated and thus a recency effect might be observable.
 Thus, \autoref{hypo:position} can neither be accepted nor rejected based upon the results of \E6{}.
 
 \subsubsection{\autoref{hypo:consecutive}: Consecutive vs. Non-consecutive \acs{LP} Episodes}
-In \autoref{hypo:consecutive} it is assumed that consecutive \ac{LP} episodes yield a better multi\=/episodic judgment than the same number of \ac{LP} episodes presented non-consecutively.
+In \autoref{hypo:consecutive} it is assumed that consecutive \ac{LP} episodes yield a better multi\-/episodic judgment than the same number of \ac{LP} episodes presented non-consecutively.
 This hypothesis can be evaluated by comparing \C4{} and \C5{} with \C8{}.
 \C4{} and \C5{} present each two days \ac{LP} consecutively whereas \C8{} presents the 4th and the 6th day in \ac{LP}.
-The three conditions are not significantly different with regard to the last multi\=/episodic judgment (\Sexpr{kruskal(IQU~condition, "E6a", c("HP", "LP"), c("4", "5a", "8"), 14)}).
+The three conditions are not significantly different with regard to the last multi\-/episodic judgment (\Sexpr{kruskal(IQU~condition, "E6a", c("HP", "LP"), c("4", "5a", "8"), 14)}).
 
 \begin{table}[h]
 	\centering
-	\caption[Multiple days (\E6{}): multi\=/episodic judgment after the 6th day for \autoref{hypo:consecutive}.]{Multiple days (\E6{}): multi\=/episodic judgment after the 6th day for \autoref{hypo:consecutive}. Reported as \ac{MOS} with standard deviation in brackets.}
+	\caption[Multiple days (\E6{}): multi\-/episodic judgment after the 6th day for \autoref{hypo:consecutive}.]{Multiple days (\E6{}): multi\-/episodic judgment after the 6th day for \autoref{hypo:consecutive}. Reported as \ac{MOS} with standard deviation in brackets.}
 	\label{tab:field:hypoconsecutive}
 	\begin{tabular}{c|c|c}
 	Condition   & \ac{LP} episode(s) 	& Multi-episodic Judgment \\
@@ -610,27 +610,27 @@ However, the slight improvement in the judgment of \C4{} compared to \C5{} and \
 This is similar to \EIIa{} and was also indicated in \E5{}.
 
 \subsection{Discussion}
-In this experiment three hypotheses were investigated complementing the one-session experiments on multi\=/episodic \ac{QoE}.
+In this experiment three hypotheses were investigated complementing the one-session experiments on multi\-/episodic \ac{QoE}.
 In fact, an absolute comparison between \E6{} and the one-session experiments cannot be conducted due to differences in the experimental design.
 However, in \E6{} similar effects could be observed or indicated.
 
-For \autoref{hypo:number}, a decrease in multi\=/episodic judgments could be observed, if up to two days were presented in \ac{LP}.
+For \autoref{hypo:number}, a decrease in multi\-/episodic judgments could be observed, if up to two days were presented in \ac{LP}.
 Presenting three consecutive days did not result in a further decrease.
 This closely resembles the findings of \E1{} and \EIIa{}.
 
 With regard to varying the position of one or two days in \ac{LP} an effect is indicated (\autoref{hypo:position}).
-For both cases a (non-significant) increase of the multi\=/episodic judgments is indicated, if \ac{HP} episodes are presented directly before the final judgment.
+For both cases a (non-significant) increase of the multi\-/episodic judgments is indicated, if \ac{HP} episodes are presented directly before the final judgment.
 This is in line with the findings of \E1{} and partly for \EIIa{}.
 In the latter, no effect could be observed for one \ac{LP} episode, but only for two \ac{LP} episodes.
 
 \autoref{hypo:consecutive} could not be answered in \E6{}.
-Similar to \EIIa{} the multi\=/episodic judgments are rather close.
+Similar to \EIIa{} the multi\-/episodic judgments are rather close.
 The slight difference between conditions could be the result of a recency effect.
 In fact, this might even be an anomaly due to the between-subject design.
 
 \section{Conclusion}
 \E6{} was conducted based upon the practical knowledge gained in \E4{} and \E5{}.
-\E4{} and \E5{} showed that multi\=/episodic \ac{QoE} can be investigated in a field experiment with the defined-use method.
+\E4{} and \E5{} showed that multi\-/episodic \ac{QoE} can be investigated in a field experiment with the defined-use method.
 Although the results were very limited, it was found that a media-consumption service can be set up in a reliable manner.
 Beside avoiding technical complexity, also employing pairs of participants has been found difficult in a field experiment (\E4{}).
 Especially, the necessary effort to organize the usage episodes is limiting.
@@ -641,8 +641,8 @@ This lead to the design of \E6{}, which is also inspired by the one-session expe
 %This experiment could be conducted with a larger number of participants in a rather short period.
 %Most important here, was that participants used their own hardware only.
 For \autoref{hypo:number} very similar results to the one-session experiments were obtained.
-A decrease in multi\=/episodic judgments could be observed, if more \ac{LP} episodes are presented, and yielding an effect of saturation.
-This might occur, because previous \ac{HP} episodes are still recallable for the final multi\=/episodic judgment.
+A decrease in multi\-/episodic judgments could be observed, if more \ac{LP} episodes are presented, and yielding an effect of saturation.
+This might occur, because previous \ac{HP} episodes are still recallable for the final multi\-/episodic judgment.
 This indicates that the integration interval is longer than \unit[3]{days}.
 With regard to \autoref{hypo:position} an effect is indicated (non-significant).
 Here, a recency effect seems to occur.
@@ -657,7 +657,7 @@ This indicates that in the quality formation process usage episodes have a highe
 However, a direct comparison of the experiments cannot be conducted due to the difference in the experimental design, \eg, tasks, service types.
 
 In difference to \E4{} and \E5{}, \E6{} does provide a large data set (6~conditions, 95~participants).
-This is used in the following to create a prediction model for multi\=/episodic judgments based upon episodic judgments.
+This is used in the following to create a prediction model for multi\-/episodic judgments based upon episodic judgments.
 
 
 %OPTIONAL!
