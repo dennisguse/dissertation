@@ -93,18 +93,18 @@ For recording and audio reproduction participants were provided a \emph{Logitech
 For conducting \E4{} a publicly reachable \ac{VoIP} telephony service was set up.
 The service needed to be able to allow parallel two-party speech conversations and be able to insert packet-loss for individual conversations.
 For this service one server was installed in the data center of \emph{Technische~Universität~Berlin} reachable by a public IPv4 address.
-As operating system \emph{FreeBSD~9.0} was selected, because it provides a built-in firewall with integrated traffic shaper called \emph{Dummynet}~\citep{rizzo_dummynet_1997}.
+As operating system \emph{FreeBSD\,9.0} was selected, because it provides a built-in firewall with integrated traffic shaper called \emph{Dummynet}~\citep{rizzo_dummynet_1997}.
 This traffic shaper allows to add network impairments such as packet-loss, delay, and jitter per individual connection, \ie, protocol, port, source address, destination address and if a packet is incoming or outgoing.
-On this server the \ac{VoIP} software \emph{Asterisk~10} was installed, which was configured to act as a \ac{SIP} registrar as well as \ac{RTP}\=/Proxy for the \ac{UDP}\=/based media streams.
-On call initiation of a client Asterisk informed Dummynet about the desired packet-loss rate for the media streams of this call.
+On this server the \ac{VoIP} software \emph{Asterisk\,10} was installed, which was configured to act as a \ac{SIP} registrar as well as \acs{RTP}\=/Proxy for the \acs{UDP}\=/based media streams.
+On call initiation of a client, Asterisk informed Dummynet about the desired packet-loss rate for the media streams of this call.
 Packet-loss was not inserted to the \ac{SIP} connections between clients and server, because this affects the reactivity of the telephony system and might lead to call drops.
-As client the multi-platform client \emph{Jitsi~1.0} was installed on each participant's computer.
+As client the multi-platform client \emph{Jitsi\,1.0} was installed on each participant's computer.
 
 While the speech telephony server was running well while testing, it was not able to fulfill the desired performance levels in the experiment.
 Two limitations have been observed while using the overall system.
 First of all, participants connected using their own Internet access (minimal bandwidth: \unit[6]{MBit/s}).
 The performance of this connection could neither be estimated nor enforced, but for some calls severe, often bursty, packet-loss was observed.
-However, for the media streams no counter measures were taken against packet-loss as the used speech codec G.722 (Mode~1) was used with neither \ac{PLC} nor \ac{FEC} on \ac{UDP} connections without retransmission.
+However, for the media streams no counter measures were taken against packet-loss as the used speech codec G.722 (Mode\,1) was used with neither \acs{PLC} nor \acs{FEC} on \acs{UDP} connections without retransmission.
 Second, packet-loss was added by Dummynet in addition to packet-loss occurring due to connection issues resulting in potentially higher loss than desired.
 
 \subsection{\acl{VoD}}

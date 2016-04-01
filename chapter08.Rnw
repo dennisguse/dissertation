@@ -116,7 +116,7 @@ After finishing an episode, participants assessed the episodic perceived quality
 The multi\=/episodic perceived quality for each service was assessed after the 4th, 7th, 10th, and 14th day directly after finishing the daily episode with the \ac{VoD} service.
 
 For the speech telephony service the G.722 was used for both performance levels with a packet-length of \unit[20]{ms}.
-Neither \ac{FEC} nor \ac{PLC} were applied.
+Neither \acs{FEC} nor \acs{PLC} were applied.
 For \ac{LP} a random packet-loss of 5\% was inserted in addition.
 For the \ac{VoD} service the video was encoded with H.264 with a resolution of $720x576$ and the audio with \ac{AAC} (\unit[48]{kHz}, \unit[165]{kbit/s}, stereo).
 For this service the two performance levels only differed in video encoding bandwidth.

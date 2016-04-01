@@ -108,7 +108,7 @@ In \E1{} also the recovery of a negatively affected multi\=/episodic judgment wa
 %Here, additional \ac{HP} episodes are presented after a negatively affected multi\=/episodic judgment and the improvement assessed.
 This was studied in two conditions for one session.
 Here, nine usage episodes were presented while non-\ac{HP} episodes were presented after as 5th and 6th usage episode.
-The multi\=/episodic judgment after the 6th usage episode showed a negative effect, but the judgments after the 3rd and 9th usage episode were not significant different.
+The multi\=/episodic judgment after the 6th usage episode showed a negative effect, but the judgments after the 3rd and 9th usage episode were not significantly different.
 However, in both conditions a slight negative impact is indicated on the final judgment.
 This finding can be explained by a recency effect but also due to the overall increased number of \ac{HP} episodes.
 
