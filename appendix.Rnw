@@ -133,12 +133,12 @@ Participants were only required to use as web browser either \emph{Google Chrome
 As the buffering strategy for media content cannot be controlled by a website using standardized HTML5, the preloading was initiated, when the website was loaded while presenting a loading animation of \unit[5]{sec}.
 This avoids issues due to initial buffering by providing a constant waiting time.
 
-\chapter{Questionnaires}\label{appendix:questions}
-\begin{table}
+\chapter{Episodic and Multi-episodic Questions }\label{appendix:questions}
+\begin{table}[h]
  \centering
  \caption{Questions for the episodic and multi\=/episodic judgments for all conducted experiments.}
  \label{tab:appendix:questions}
- \begin{tabulary}{\columnwidth}{C|C|C}
+ \begin{tabulary}{\textwidth}{C|C|C}
    Experiment & Episodic & Multi-episodic\\
    \midrule
    \E1{}  	& Wie bewerten Sie die Gesamtqualität des gerade beendeten Telefonates? & Wie bewerten Sie die Gesamtqualität aller bisher geführten Telefonate? \\
@@ -150,6 +150,16 @@ This avoids issues due to initial buffering by providing a constant waiting time
    \EIIb{} Speech and \ac{VoD} & - & Wie bewerten Sie die Gesamtqualität des Systems bezüglich aller Interaktionen? \\
    \hline
    \E3{} & Wie bewertest Du die Gesamtqualität der gerade gehörten Episode? & Wie bewertest Du die Gesamtqualität aller bisher gehörten Episoden? \\
+   \hline
+   \E4{} \ac{VoD} & Wie beurteilen Sie die Gesamtqualität der gesehenen Folge? & Wie beurteilen Sie die Gesamtqualität des Fernsehdienstes bis zum jetzigen Zeitpunkt? \\
+   \hline
+   \E4{} (Speech) & Wie beurteilen Sie die Gesamtqualität der Telefonverbindung? & Wie beurteilen Sie die Gesamtqualität der Telefonieverbindungen bis zum jetzigen Zeitpunkt?\\
+   \hline
+   \E5{} \ac{AoD} & Wie beurteilen Sie die Gesamtqualität der gerade abgeschlossenen Nutzung? & Wie beurteilen Sie die Gesamtqualität des Audio-on-Demand-Dienstes seit Beginn der Studie? \\
+   \hline
+   \E5{} \ac{VoD} & Wie beurteilen Sie die Gesamtqualität der gerade abgeschlossenen Nutzung? & Wie beurteilen Sie die Gesamtqualität des Video-on-Demand-Dienstes seit Beginn der Studie? \\
+   \hline
+   \E6{} & Wie bewertest Du die Gesamtqualität der gerade gehörten Episode? & Wie bewertest Du die Gesamtqualität aller bisher gehörten Episoden? \\
    \end{tabulary}
 \end{table}
 
