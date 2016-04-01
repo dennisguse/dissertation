@@ -75,7 +75,7 @@
 \selectlanguage{american} % american ngerman
 %\renewcommand*{\bibname}{new name}
 %\setbibpreamble{}
-\pagenumbering{roman}
+\pagenumbering{Roman}
 \pagestyle{plain}
 %********************************************************************
 % Frontmatter
@@ -133,7 +133,7 @@
 \renewcommand{\thesection}{\Roman{chapter}.\Roman{section}}
 \renewcommand{\theHsubsection}{\Roman{chapter}.\Roman{section}.\Roman{subsection}}
 \renewcommand{\thesubsection}{\Roman{chapter}.\Roman{section}.\Roman{subsection}}
-\pagenumbering{Roman}\setcounter{page}{1}
+\pagenumbering{roman}\setcounter{page}{1}
 \part*{Appendix}\label{chap:appendix}\cleardoublepage
 
 \include{appendix}
