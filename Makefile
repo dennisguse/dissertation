@@ -16,6 +16,7 @@ update :
 	cp ../cscu-tools_svn/#r-evaluation/*.csv ./data/
 
 clean:
+	-rm *.bak
 	-rm *.aux
 	-rm *~
 	-rm *.old

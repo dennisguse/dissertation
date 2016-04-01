@@ -87,7 +87,7 @@ In the following, the experiments are presented one after the other.
 
 \section{Experiment E4}
 \E4{} was inspired by \citet{moller_single-call_2011}.\footnote{The results of \E4{} are published in \citet{guse_macro-temporal_2013}.}
-The experiment of \citet{moller_single-call_2011} showed only little, not significant differences of multi\=/episodic judgments between conditions (\cf, \autoref{prior:moeller}).
+This experiment indicated only little differences between on multi-episodic judgments between the evaluated multi-episodic conditions (\cf, \autoref{prior:moeller}).
 This might be due to the limited number of degraded episodes, or that introduced degradations were not severe enough.
 The goal \E4{} was to apply the defined-use method in a similar usage period and understand practical aspects of a field experiment.
 Beside this, \E4{} focused on two aspects.
