@@ -180,7 +180,7 @@ Statistical evaluation for this is omitted due to the sample size, high variance
 
 \begin{table}
 	\centering
-	\caption{Multiple days (\E4{}): multi\-/episodic judgments for the \ac{VoD} service.}
+	\caption[Multiple days (\E4{}): multi\-/episodic judgments for the \ac{VoD} service.]{Multiple days (\E4{}): multi\-/episodic judgments for the \ac{VoD} service. Reported as \ac{MOS} with standard deviation in brackets.}
 	\label{tab:field:e4results}
 	\begin{tabular}{c|c|c|c}
 	\multirow{2}{*}{Day} & \multicolumn{3}{c}{Multi-episodic Judgment} \\
@@ -311,7 +311,7 @@ Between the two conditions, only the judgments after the 2nd day are significant
 
 \begin{table}[h]
 	\centering
-	\caption{Multiple days (\E5{}): multi\-/episodic judgments.}
+	\caption[Multiple days (\E5{}): multi\-/episodic judgments.]{Multiple days (\E5{}): multi\-/episodic judgments. Reported as \ac{MOS} with standard deviation in brackets.}
 	\label{tab:field:e5results}
 	\begin{tabular}{c|c|c||c|c}
 	Day & \multicolumn{4}{c}{Multi-episodic Judgment} \\
@@ -495,7 +495,7 @@ Box plots for all conditions can be found in the \appendix{}~\ref{appendix:resul
 
 \begin{table}
 	\centering
-	\caption{Multiple days (\E6{}): overview on conditions.}
+	\caption[Multiple days (\E6{}): overview on conditions.]{Multiple days (\E6{}): overview on conditions. Reported as \ac{MOS} with standard deviation in brackets.}
 	\label{tab:field:e6episodic}
 	\begin{tabulary}{\textwidth}{C|C|C|C|C}
 	Condition & \ac{LP} days & Participants &  \ac{HP} & \ac{LP} \\
