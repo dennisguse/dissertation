@@ -138,10 +138,10 @@ In this experiment typical degradations for the two services were presented in t
 %Here also the \ac{NPS} was assessed for each service individually and for both services as a bundle.
 
 \subsection{Participants}
-\E4{} was conducted in Berlin, Germany from August to September 2012.
-For each of the two conditions, 5~pairs successfully finished this experiment with an average age of \unit[22.9]{years} ($\sigma = 3.1$) consisting of \unit[11]{male} and \unit[9]{female} participants.
-Of the 280~scheduled calls, 5~were not done and 18~episodic judgments missing.
-For the \ac{VoD} service all usage episodes were conducted, but 13~episodic judgments and one multi\=/episodic judgment were missing.
+\E4{} was conducted in Berlin, Germany from August to September~2012.
+For each of the two conditions, \unit[5]{pairs} successfully finished this experiment with an average age of \unit[22.9]{years} ($\sigma = 3.1$) consisting of \unit[11]{male} and \unit[9]{female} participants.
+Of the \unit[280]{scheduled calls}, 5~were not done and \unit[18]{episodic} judgments missing.
+For the \ac{VoD} service all usage episodes were conducted, but \unit[13]{episodic} judgments and one multi\=/episodic judgment were missing.
 
 Due to the small sample size and the missing ground truth, no participant was removed from the data analysis.
 
@@ -259,11 +259,11 @@ Typical degradations were not presented.
 
 \subsection{Participants}
 This experiment was conducted in Berlin, Germany from June until August 2013.
-21~participants (11~female, 10~male) took part in this experiment with an average of \unit[27.8]{years} ($\sigma = 4.0$).
-11 participants were assigned to the \ac{AoD} service with \C9{} and the \ac{VoD} service with \CX{} and 10 vice versa.
+\unit[21]{participants} (\unit[11]{female}, \unit[10]{male}) took part in this experiment with an average of \unit[27.8]{years} ($\sigma = 4.0$).
+\unit[11]{participants} were assigned to the \ac{AoD} service with \C9{} and the \ac{VoD} service with \CX{} and 10 vice versa.
 Participants received \unit[40]{EUR} as compensation.
 Out of the overall 294~usage episodes, 9~were not conducted for the \ac{AoD} service and 13~not for the \ac{VoD} service.
-6~multi\=/episodic judgments were missing.
+\unit[6]{multi\=/episodic} judgments were missing.
 
 \subsection{Data Analysis}
 In this experiment no issues with the technical setup were observed.
@@ -401,7 +401,7 @@ This should enable participants to focus on the content, but limit the effort.
 Again, the audio book was cut, so individual scenes are self-contained and were presented in the original order.
 
 %\subsubsection{Feedback}
-Before starting the 6-day usage period, an introductory session was conducted.
+Before starting the 6\=/day usage period, an introductory session was conducted.
 Here, participants received all necessary information about the experiment, and provided demographic data.
 Then, participants were presented typical speech telephony related degradations in the same way than in the one-session experiments (\cf, \autoref{sec:training}).
 Finally, each participant used the \ac{AoD} service for two usage episodes to ensure participants understood how to use the service.
@@ -429,7 +429,7 @@ For \ac{LP} the content was first encoded with LPC\=/10 before encoding it final
 A detailed description of the implemented system is given in the \appendix{}~\ref{appendix:setups} (p.\,\pageref{appendix:setups}).
 
 \subsection{Participants}
-\E6{} was conducted in Berlin from September 2015 until November 2015.
+\E6{} was conducted in Berlin from September 2015 until November~2015.
 Participants were required to have non-impaired hearing.
 This experiment was conducted with \unit[57]{female} and \unit[38]{male} participants aging from of 18~to~\unit[33]{years} ($\mu=25.8$, $\sigma=4.0$). %data=read.csv("#DataRaw/field-aod_data.csv"); data = data[-which(!data$Valid), ]
 Participants received \unit[20]{EUR} as compensation.

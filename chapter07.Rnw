@@ -319,11 +319,11 @@ All four experiments were conducted at TU~Berlin, Germany.
 Participants were required to have normal hearing (see \autoref{sec:training}).
 In \EIIb{} normal vision was also mandatory.
 
-\E1{} was conducted from April~2014 to December~2015 with 78~female and 51~male participants aging from 18~to 53~years (${\mu=26.7}$, ${\sigma=5.9}$). %mean(subset(data, data$Study == "Lab-TEL" & data$Condtion != "5a")$Age), nrow(subset(data, data$Study == "Lab-LST" & data$Sex == "female")) 
-\EIIa{} was conducted from August~2014 to March~2015 with 75~female and 40~male participants aging from 18~to 50~years (${\mu=26.2}$, ${\sigma=4.6}$).
-\EIIb{} was conducted in January~2016 with 20~female and 13~male participants aging from 19~to 34~years (${\mu=26.6}$, ${\sigma=4.3}$). 
+\E1{} was conducted from April~2014 to December~2015 with \unit[78]{female} and \unit[51]{male} participants aging from 18~to \unit[53]{years} (${\mu=26.7}$, ${\sigma=5.9}$). %mean(subset(data, data$Study == "Lab-TEL" & data$Condtion != "5a")$Age), nrow(subset(data, data$Study == "Lab-LST" & data$Sex == "female")) 
+\EIIa{} was conducted from August~2014 to March~2015 with \unit[75]{female} and \unit[40]{male} participants aging from 18~to \unit[50]{years} (${\mu=26.2}$, ${\sigma=4.6}$).
+\EIIb{} was conducted in January~2016 with \unit[20]{female} and 13~male participants aging from 19~to 34~years (${\mu=26.6}$, ${\sigma=4.3}$). 
 \E3{} was conducted in October and November~2015 with 20~female and 16~male participants aging from 18~to 32~years (${\mu=25.0}$, ${\sigma=3.9}$).
-Participation in \E1{} was compensated with 20~EUR, in \EIIa{} and \E3{} with 10~EUR, and in \EIIb{} with 15~EUR.
+Participation in \E1{} was compensated with \unit[20]{EUR}, in \EIIa{} and \E3{} with \unit[10]{EUR}, and in \EIIb{} with \unit[15]{EUR}.
 
 The conducted audiometry in \E1{} and \EIIa{} did show normal hearing for all participants.
 All participants were individually checked for inconsistent episodic judgments.
@@ -333,8 +333,8 @@ However, due to the lack of ground-truth on episodic judgments in multi\=/episod
 This criteria was met for no participant, and thus none was excluded from the data analysis.
 
 \autoref{tab:lab:participants} gives an overview on the number of participants per condition for the four experiments.
-Every condition was at least assessed by 11~participants.
-A larger number of participants were used for \C7{} (\E1{}) to precisely quantify the impact of recovery \autore{hypo:recovery}.
+Every condition was at least assessed by \unit[11]{participants}.
+A larger number of participants were used for \C7{} (\E1{}) to precisely quantify the impact of recovery (\autoref{hypo:recovery}).
 %In \EIIa{}, a higher number of participants was used for \CVa{} and \C6{} as both are important for \autoref{hypo:number} and \autoref{hypo:position}.
 
 \begin{table} %TODO Appendix
@@ -378,7 +378,7 @@ First, episodic judgments are inspected with regard to consistency between condi
 Then the impact of the different usage situations \E1{} and \EIIa{} are investigated.
 Finally, multi\=/episodic judgments are evaluated with regard to the presented hypotheses (\cf, \autoref{chap:towards}).
 
-All results are reported as \ac{MOS} ranging from 0 to 6 (for the scale see p.\,\pageref{img:chap05:quality-scale}) with standard deviation in brackets.
+All results are reported as \ac{MOS} ranging from~0 to~6 (for the scale see p.\,\pageref{img:chap05:quality-scale}) with standard deviation in brackets.
 In addition, a statistical evaluation is conducted.
 Two unpaired samples are evaluated with a \emph{Wilcoxon rank-sum test}.
 More than two unpaired samples are compared with a \emph{Kruskal-Wallis test}.
