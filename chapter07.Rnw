@@ -16,7 +16,7 @@ These experiments follow the same procedure, but differ in usage situation, task
 An overview on the four experiments is given in \autoref{tab:lab:experiments}.
 In fact, in each experiment only a subset of hypotheses is investigated.
 \E1{} and \EIIa{} are the main experiments, focusing most importantly on \autoref{hypo:number} and \autoref{hypo:position}.
-Both differ in usage situation, \ie, two-party conversation vs. third-party listening.
+Both differ in usage situation, \ie, two\=/party conversation vs. third-party listening.
 \EIIb{} and \E3{} are especially designed for the investigation of \autoref{hypo:independent} and \autoref{hypo:duration}, respectively.
 
 \label{E1}\label{E2a}\label{E2b}\label{E2}\label{E3}
@@ -224,7 +224,7 @@ This might result in a reduction in perceived quality in a conversational case.
 
 The \ac{VoD} service for \EIIb{} was presented on a tablet computer.
 %Presenting both services on the same device rather than different devices, prevents that participants associate each service with an individual device and use the device as cue for recall.
-Here, a \emph{Nexus 7 (2013)} is used, which provides a 7~inch screen with a resolution of \unit[$1920x1200$]{px}.
+Here, a \emph{Nexus~7~(2013)} is used, which provides a \unit[7]{inch} screen with a resolution of \unit[$1920x1200$]{px}.
 For \ac{HP}, content is downscaled to a resolution of \unit[$1280x720$]{px} and encoded with H.264 (\unit[25]{\acs{FPS}}, \unit[5]{Mbit/s}, two-pass).
 For \ac{LP}, the video signal is degraded by setting the \ac{QP} factor to 50.
 This results in a constant blockiness.
@@ -250,7 +250,7 @@ For \EIIb{} audiometry was skipped due to the increased duration of the multi\=/
 
 In the \emph{third stage}, typical speech telephony degradations were presented.
 %Presenting a training showing a range of potential degradations is expect to reduce intra-personal variations.
-Here, participants assessed the perceived quality of 27~speech stimuli with a duration of approximately~\unit[8]{sec}.
+Here, participants assessed the perceived quality of \unit[27]{speech stimuli} with a duration of approximately~\unit[8]{sec}.
 In each stimuli two sentences are presented by one human speaker.
 %Three different speakers were used: two male and one female speaker.
 Those stimuli contained different signal bandwidths (wideband, narrowband), codecs (G.711, G.722, GSM\=/FR, LPC\=/10), white noise (fullband without codec), and random packet-loss (2\%, and 5\%; G.722, Mode~1, no \ac{PLC}).

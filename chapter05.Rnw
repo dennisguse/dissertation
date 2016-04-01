@@ -65,7 +65,7 @@ Although multi\=/episodic integration is not a key aspect for \ac{UX}, but it is
 First work in the direction of multi\=/episodic perceived quality for telecommunication services was performed by \citet{duncanson_average_1969}.
 Duncanson asked regular users of an oversea speech telephone service about their experience with the said service.
 He investigated, if there is a difference between \emph{a)} the \emph{perceived quality of a just finished call} with average performance and \emph{b)} the \emph{assumed quality} of a call with average performance.
-For this experiment, Duncanson used a 4-point \ac{ACR} scale\footnote{\citet{duncanson_average_1969} applied a 4-point \ac{ACR} scale with the labels excellent (4), good (3), fair (2), and poor (1).}. % and \emph{Thurstone's Law of Categorical Judgment}.
+For this experiment, Duncanson used a 4\=/point \ac{ACR} scale\footnote{\citet{duncanson_average_1969} applied a 4\=/point \ac{ACR} scale with the labels excellent (4), good (3), fair (2), and poor (1).}. % and \emph{Thurstone's Law of Categorical Judgment}.
 It could be shown that judgments for case a) yield a higher score than for case b).
 Duncanson concludes ``that ratings of single, recent telephone calls yield results different from ratings of subjectively averaged, past telephone calls of the same type'' \citep[][p.\,116]{duncanson_average_1969}.
 
@@ -196,7 +196,7 @@ Furthermore, each pair of participants was allowed to use the service for privat
 
 After finishing a call, each participant rated the perceived quality of this usage episode (\emph{episodic quality}).
 After the last call on the 2nd, 7th, and 12th day the perceived quality of all experienced usage episodes \emph{so far} was assessed (\emph{multi\=/episodic judgment}).
-The episodic judgments and multi\=/episodic judgments were both taken on a 7\=/point \ac{CoCR} scale\footnote{For a comparison between discrete 5-point \ac{ACR} scale and 7\=/point \ac{CoCR} scale see \citet{koster_comparison_2015}.} \citep[][p.\,18]{itu-t_recommendation_p.832_subjective_2000}. The scale is shown in \autoref{img:chap05:quality-scale}.
+The episodic judgments and multi\=/episodic judgments were both taken on a 7\=/point \ac{CoCR} scale\footnote{For a comparison between discrete 5\=/point \ac{ACR} scale and 7\=/point \ac{CoCR} scale see \citet{koster_comparison_2015}.} \citep[][p.\,18]{itu-t_recommendation_p.832_subjective_2000}. The scale is shown in \autoref{img:chap05:quality-scale}.
 
 \begin{figure}
 	\includegraphics[width=1\textwidth]{figure/quality7pt_scale}
@@ -344,7 +344,7 @@ Another factor that might have influenced the results is the usage of a widely k
 This might have influenced expectations due to prior knowledge and experiences with Skype.
 Furthermore, participants were allowed in this experiment to use the service for personal communication beside the defined usage episodes.
 Some participants might have used the service more often than others, which might have affected the multi\=/episodic quality judgments.
-%Selecting a two-party conversation (\ie, \ac{SCS}) might have been another issue.
+%Selecting a two\=/party conversation (\ie, \ac{SCS}) might have been another issue.
 %\acp{SCS} try to enforce a conversation flow, which is however influenced by the usage behavior of the two parties, and thus might affect the individual duration of usage episodes as reported by \citet{moller_single-call_2011}.
 %This implicitly assumes a \emph{duration neglect} with regard to multi\=/episodic perceived quality.
 %The effect of duration neglect, however, has not neither been proven nor disproven so far for multi\=/episodic perceived quality.
