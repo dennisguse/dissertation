@@ -32,8 +32,8 @@ The listening-only training conducted in \E1{} was conducted with a tablet compu
 For binaural representation a pair of \emph{AKG~K\=/271} was connected to the internal sound card of the tablet computer.
 The system was calibrated using a \emph{HEAD acoustics} head and torso simulator \emph{HSM~II.3} to a sound pressure level of \unit[75]{dB20$\mu$Pa} for babble noise.
 
-For the generation of the stimuli the ITU\=/T~STL2009 tools \citep{itu-t_recommendation_g.191_software_2010} and the audio-processing tool \emph{SOX} were used.
-The STL2009 were used for coding G.711, G.722~(Mode~1) and inserting packet-loss for G.722 (Mode~1), whereas SOX was used for coding GSM\=/FR, and LPC\=/10 as well as filtering wideband, narrowband, and white noise.
+For the generation of the stimuli the \textsc{\lowercase{ITU\=/T}~\lowercase{STL2009}} tools \citep{itu-t_recommendation_g.191_software_2010} and the audio-processing tool \textsc{\lowercase{SOX}} were used.
+The \textsc{\lowercase{STL2009}} were used for coding G.711, G.722~(Mode~1) and inserting packet-loss for G.722 (Mode~1), whereas \textsc{\lowercase{SOX}} was used for coding \textsc{\lowercase{GSM\=/FR}}, and \textsc{\lowercase{LPC\=/10}} as well as filtering wideband, narrowband, and white noise.
 
 \subsection{Two-party Speech telephony}
 For the multi\=/episodic assessment of experiment \E1{} a speech telephony system for two-party conversations was required.
@@ -62,7 +62,7 @@ The two headsets were connected to the processing computer (\emph{Lenovo~X61}) w
 As the individual signals were transmitted using analogue audio cables with a length of \unit[10]{m}, the microphone signals were amplified beforehand using a \emph{RME~QuadMic~II} microphone preamplifier to avoid a degradation of the signal due to the cable length.
 
 On the computer \emph{PureData}, an open-source audio processing program, is used to modify the speech signals.
-As no speech codecs were available in PureData, PureData was extended with the speech codecs G.711, G.722~(Mode~1) and LPC\=/10.
+As no speech codecs were available in PureData, PureData was extended with the speech codecs G.711, G.722~(Mode~1) and \textsc{\lowercase{LPC\=/10}}.
 It was verified that the PureData setup provides similar characteristics as the network\=/based setup described above.
 The overall system achieved a constant, glitch-free one-way end-to-end delay of \unit[70]{ms}.
 
@@ -80,7 +80,7 @@ In \EIIb{} the \ac{VoD} service was presented on the display of the Nexus~7~(201
 This \unit[7]{inch} display of this device was set to maximum brightness without applying any device related color adaption.
 
 In those three experiments non-degraded recordings of two-party conversations of experiment \E1{} were selected.
-Those recordings were processed with the ITU\=/T~STL2009 tools \citep{itu-t_recommendation_g.191_software_2010} for coding with G.722 and with SOX for coding with LPC\=/10.
+Those recordings were processed with the \textsc{\lowercase{ITU\=/T}~\lowercase{STL2009}} tools \citep{itu-t_recommendation_g.191_software_2010} for coding with G.722 and with \textsc{\lowercase{SOX}} for coding with \textsc{\lowercase{LPC\=/10}}.
 For \EIIb{} the video material was cut with \emph{Adobe Premiere 6} and exported with H.264 (\unit[1280x720]{px}, \unit[5]{Mbit/s}, two-pass) and \ac{AAC} (\unit[448]{kbit/s}, stereo).
 Afterwards it was processed with \emph{FFmpeg}\footnote{The FFmpeg project is available at \url{https://www.ffmpeg.org/}.} to re-encode with the desired \ac{QP} factor while leaving the audio unchanged.
 
@@ -128,9 +128,9 @@ In addition to the mobile phone each participant received a pair of \emph{Shure~
 For \E6{} only an \ac{AoD} service was used.
 For this experiment it was chosen not to provide any equipment for participants, but rather let participants use their own equipment.
 Rather than installing a software on the participant's computer, the \ac{AoD} service was implemented as a website available online.
-This website used HTML5 multi-media features to download and playback the audio content.
+This website used \textsc{\lowercase{HTML5}} multi-media features to download and playback the audio content.
 Participants were only required to use as web browser either \emph{Google Chrome} or \emph{Chromium} to limit the testing effort for the website.
-As the buffering strategy for media content cannot be controlled by a website using standardized HTML5, the preloading was initiated, when the website was loaded while presenting a loading animation of \unit[5]{s}.
+As the buffering strategy for media content cannot be controlled by a website using standardized \textsc{\lowercase{HTML5}}, the preloading was initiated, when the website was loaded while presenting a loading animation of \unit[5]{s}.
 This avoids issues due to initial buffering by providing a constant waiting time.
 
 \chapter{Episodic and Multi-episodic Questions }\label{appendix:questions}

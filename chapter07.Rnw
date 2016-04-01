@@ -176,26 +176,26 @@ For digital transmission of wideband speech the codec \emph{G.722} (Mode~1)~\cit
 This codec achieves very similar judgments such as uncompressed wideband speech signals. %TODO Add refs, Moeller, Raake, Marcel
 %In subjective listening-only experiments G.722 typically achieves a \ac{MOS} of 4.5~on the 5-point \ac{ACR} scale.
 
-For \ac{LP}, the speech signal is coded with \emph{LPC\=/10}\footnote{LPC\=/10 is also known as \emph{FS-1015} and \emph{STANAG 4198}.}.
+For \ac{LP}, the speech signal is coded with \textsc{\lowercase{LPC\=/10}}\footnote{\textsc{\lowercase{LPC\=/10}} is also known as \emph{\textsc{\lowercase{FS-}}1015} and \emph{\textsc{\lowercase{STANAG}} 4198}.}.
 This codec is designed for low bit rate radio transmission while providing intelligibility rather than natural reproduction.
 The re-synthesized speech signal sounds very unnatural and is described as robotic, and muddy with a hissing background noise.\citet{}
 %LPC\=/10 achieves a 5-point $\ac{MOS}$ of 2.3 \citep[][]{gibson_multimedia_2000} while requiring only \unit[2.4]{kbit/s} transmission bandwidth. %Gibson J.D. (ed.)-Multimedia Communications_ Directions and Innovations (2001).pdf
 In fact, this codec is not used for speech telephony.
-However, LPC\=/10 is useful for the investigation of multi\=/episodic perceived quality, because it allows to create severe reduction in performance while providing a understandable speech signal.
+However, \textsc{\lowercase{LPC\=/10}} is useful for the investigation of multi\=/episodic perceived quality, because it allows to create severe reduction in performance while providing a understandable speech signal.
 
 For \ac{MP}, \emph{G.711}~\citep{itu-t_recommendation_g.711_pulse_1988} is selected.
 This codec is often used as reference for narrowband speech telephony.
 Compared to G.722, the difference between narrowband and wideband on perceived quality is measurable. %TODO
-In comparison to LPC\=/10, the re-synthesized speech signal contains far less artifacts.
+In comparison to \textsc{\lowercase{LPC\=/10}}, the re-synthesized speech signal contains far less artifacts.
 
-As LPC\=/10 is rarely compared to G.711 or G.722, a technical evaluation using \ac{POLQA} \citep{itu-t_recommendation_p.863_perceptual_2014} has been conducted.
+As \textsc{\lowercase{LPC\=/10}} is rarely compared to G.711 or G.722, a technical evaluation using \ac{POLQA} \citep{itu-t_recommendation_p.863_perceptual_2014} has been conducted.
 \ac{POLQA} estimates the \ac{MOS} for the 5-point \ac{ACR} scale.
 \citet{koster_comparison_2015} presented a transformation function that allows to transform judgments from the 5-point \ac{ACR} scale to the 7\=/point \ac{CoCR} scale. %for speech telephony
 For the evaluation \unit[12]{s} German speech samples have been processed with all three codecs.
 The resulting speech signals were then evaluated with \ac{POLQA} in super-wideband mode.
 The results are shown in \autoref{tab:lab:performance}.
-It must be noted that LPC\=/10 is very different to G.722 and G.711.
-LPC\=/ only achieves a \ac{MOS} of 1.9 on the 7\=/point~\ac{CoCR}.
+It must be noted that \textsc{\lowercase{LPC\=/10}} is very different to G.722 and G.711.
+\textsc{\lowercase{LPC\=/10}} only achieves a \ac{MOS} of 1.9 on the 7\=/point~\ac{CoCR}.
 
 \begin{table}
  \centering
@@ -209,17 +209,17 @@ LPC\=/ only achieves a \ac{MOS} of 1.9 on the 7\=/point~\ac{CoCR}.
    \hline
    \ac{MP} & 300..\unit[3400]{Hz} & G.711         & 3.3 \\ %MOS1-5: 3.3
    \hline
-   \ac{LP} & 300..\unit[3400]{Hz} & LPC\=/10        & 1.9 \\ %MOS1-5: 2.0
+   \ac{LP} & 300..\unit[3400]{Hz} & \textsc{\lowercase{LPC\=/10}}        & 1.9 \\ %MOS1-5: 2.0
    \end{tabulary}
 \end{table}
 
 End-to-end delay is an additional factor influencing perceived quality.
 This is important for \E1{} due to the use of a conversational task.
 A one-way delay of up to \unit[100]{ms} is rarely noticeable and thus not perceived as degradation~\citep[][p.\,9]{itu-t_recommendation_g.107_e-model_2015}.
-LPC\=/10 requires a look-ahead of \unit[90]{ms} while a frame duration of \unit[22.5]{ms} is applied.
+\textsc{\lowercase{LPC\=/10}} requires a look-ahead of \unit[90]{ms} while a frame duration of \unit[22.5]{ms} is applied.
 This results in coding delay alone of up to \unit[112.5]{ms}.
 G.711 and G.722 provide a algorithmic delay without look-ahead of \unit[0.125]{ms} and both codecs can be used with a minimal frame duration of \unit[10]{ms}.
-Thus, LPC\=/10 alone might introduce a noticeable difference due to the additional coding delay.
+Thus, \textsc{\lowercase{LPC\=/10}} alone might introduce a noticeable difference due to the additional coding delay.
 This might result in a reduction in perceived quality in a conversational case.
 
 The \ac{VoD} service for \EIIb{} was presented on a tablet computer.
@@ -253,7 +253,7 @@ In the \emph{third stage}, typical speech telephony degradations were presented.
 Here, participants assessed the perceived quality of \unit[27]{speech stimuli} with a duration of approximately~\unit[8]{s}.
 In each stimuli two sentences are presented by one human speaker.
 %Three different speakers were used: two male and one female speaker.
-Those stimuli contained different signal bandwidths (wideband, narrowband), codecs (G.711, G.722, GSM\=/FR, LPC\=/10), white noise (fullband, no codec), and random packet-loss (2\%, and 5\%; G.722, Mode~1, no \acs{PLC}).
+Those stimuli contained different signal bandwidths (wideband, narrowband), codecs (G.711, G.722, \textsc{\lowercase{GSM\=/FR}}, \textsc{\lowercase{LPC\=/10}}), white noise (fullband, no codec), and random packet-loss (2\%, and 5\%; G.722, Mode~1, no \acs{PLC}).
 In \EIIb{}, also degradations for the \ac{VoD} service were presented.
 22\,videos with an approximate duration of \unit[8]{s} were used.
 Here, only the \ac{QP}~factor was varied for H.264 (0, 42, 47, and 50).
@@ -307,7 +307,7 @@ Those scenes were selected, so the duration of the two-party conversational reco
 For each episode one scene was presented.
 Those ranged from \unit[134]{s} to \unit[198]{s} with an average duration of \unit[166]{s}.
 For \E3{}, an audio book was selected.
-Here, Isabel Allende's \emph{"City of the Beats"} was used, spoken by a male German native speaker.\footnote{The audio book is sold as 24 CD collection: Isabel Allende: \emph{Die Stadt der wilden Götter / Im Reich des goldenen Drachen / Im Bann der Masken}, ISBN: 978-86717-191-5.}
+Here, Isabel Allende's \emph{"City of the Beats"} was used, spoken by a male German native speaker.\footnote{The audio book is sold as 24 \textsc{\lowercase{CD}} collection: Isabel Allende: \emph{Die Stadt der wilden Götter / Im Reich des goldenen Drachen / Im Bann der Masken}, ISBN: 978-86717-191-5.}
 Usage episodes varied in duration from \unit[174]{s} to \unit[199]{s} with an average duration of \unit[184]{s}.
 
 %In all experiments the content is completely in German.
@@ -323,7 +323,7 @@ In \EIIb{} normal vision was also mandatory.
 \EIIa{} was conducted from August~2014 to March~2015 with \unit[75]{female} and \unit[40]{male} participants aging from 18~to \unit[50]{years} (${\mu=26.2}$, ${\sigma=4.6}$).
 \EIIb{} was conducted in January~2016 with \unit[20]{female} and 13~male participants aging from 19~to 34~years (${\mu=26.6}$, ${\sigma=4.3}$). 
 \E3{} was conducted in October and November~2015 with 20~female and 16~male participants aging from 18~to 32~years (${\mu=25.0}$, ${\sigma=3.9}$).
-Participation in \E1{} was compensated with \unit[20]{EUR}, in \EIIa{} and \E3{} with \unit[10]{EUR}, and in \EIIb{} with \unit[15]{EUR}.
+Participation in \E1{} was compensated with \unit[20]{\textsc{\lowercase{EUR}}}, in \EIIa{} and \E3{} with \unit[10]{\textsc{\lowercase{EUR}}}, and in \EIIb{} with \unit[15]{\textsc{\lowercase{EUR}}}.
 
 The conducted audiometry in \E1{} and \EIIa{} did show normal hearing for all participants.
 All participants were individually checked for inconsistent episodic judgments.
@@ -786,7 +786,7 @@ Thus \autoref{hypo:independent} can be accepted.
 \section{Discussion and Conclusion}
 The four experiments show that multi\=/episodic perceived quality can be assessed in one session.
 Here, the formation process of multi-episodic perceived quality for one session of up to \unit[45]{min} was investigated.
-Although the selected degradation for \ac{LP} (LPC\=/10) is not actually used for speech telephony, its presentation resulted in observable effects on episodic and multi\=/episodic judgments.
+Although the selected degradation for \ac{LP} (\textsc{\lowercase{LPC\=/10}}) is not actually used for speech telephony, its presentation resulted in observable effects on episodic and multi\=/episodic judgments.
 %This allowed to investigate the formation process of multi\=/episodic perceived quality.
 
 It could be observed consistently that increasing the number of \ac{LP} episodes leads to a reduction in multi\=/episodic judgments (\autoref{hypo:number}).

@@ -182,17 +182,17 @@ Statistical evaluation for this is omitted due to the sample size, high variance
 	\centering
 	\caption{Multiple days (\E4{}): multi\=/episodic judgments for the \ac{VoD} service.}
 	\label{tab:field:e4results}
-	\begin{tabular}{c|c|c}
-	\multirow{2}{*}{Day} & \multicolumn{2}{c}{Multi-episodic Judgment} \\
-	& \C0{} & \C9{} \\
+	\begin{tabular}{c|c|c|c}
+	\multirow{2}{*}{Day} & \multicolumn{3}{c}{Multi-episodic Judgment} \\
+	& \C0{} & \C9{} & Statistic\\
 	\midrule
-	4 & \Sexpr{mos_iqu_with_sd_by_condition("E4a", "A0", 4, "VoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E4a", "A1", 4, "VoD")}  \\
+	4 & \Sexpr{mos_iqu_with_sd_by_condition("E4a", "A0", 4, "VoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E4a", "A1", 4, "VoD")} & \Sexpr{wilcox(IQU~condition, "E4a", unique(timeseries[["performance_level"]]), unique(timeseries[["condition"]]), 4, "VoD")} \\
 	\hline
-	7 & \Sexpr{mos_iqu_with_sd_by_condition("E4a", "A0", 7, "VoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E4a", "A1", 7, "VoD")} \\
+	7 & \Sexpr{mos_iqu_with_sd_by_condition("E4a", "A0", 7, "VoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E4a", "A1", 7, "VoD")} & \Sexpr{wilcox(IQU~condition, "E4a", unique(timeseries[["performance_level"]]), unique(timeseries[["condition"]]), 7, "VoD")}\\
 	\hline
-	10 & \Sexpr{mos_iqu_with_sd_by_condition("E4a", "A0", 10, "VoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E4a", "A1", 10, "VoD")} \\
+	10 & \Sexpr{mos_iqu_with_sd_by_condition("E4a", "A0", 10, "VoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E4a", "A1", 10, "VoD")} & \Sexpr{wilcox(IQU~condition, "E4a", unique(timeseries[["performance_level"]]), unique(timeseries[["condition"]]), 10, "VoD")} \\
 	\hline
-	14 & \Sexpr{mos_iqu_with_sd_by_condition("E4a", "A0", 14, "VoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E4a", "A1", 14, "VoD")} \\
+	14 & \Sexpr{mos_iqu_with_sd_by_condition("E4a", "A0", 14, "VoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E4a", "A1", 14, "VoD")} & \Sexpr{wilcox(IQU~condition, "E4a", unique(timeseries[["performance_level"]]), unique(timeseries[["condition"]]), 14, "VoD")}\\
 	\end{tabular}
 \end{table}
 
@@ -261,7 +261,7 @@ Typical degradations were not presented.
 This experiment was conducted in Berlin, Germany from June until August 2013.
 \unit[21]{participants} (\unit[11]{female}, \unit[10]{male}) took part in this experiment with an average of \unit[27.8]{years} ($\sigma = 4.0$).
 \unit[11]{participants} were assigned to the \ac{AoD} service with \C9{} and the \ac{VoD} service with \CX{} and 10 vice versa.
-Participants received \unit[40]{EUR} as compensation.
+Participants received \unit[40]{\textsc{\lowercase{EUR}}} as compensation.
 Out of the overall 294~usage episodes, 9~were not conducted for the \ac{AoD} service and 13~not for the \ac{VoD} service.
 \unit[6]{multi\=/episodic} judgments were missing.
 
@@ -421,18 +421,18 @@ Here, participants were interviewed about issues with the technical system.
 %In addition, potential issues with the provided technical system were assessed.
 
 In this experiment participants used their own computer and their own pair of headphones.
-Participants could access the \ac{AoD} via Internet using a HTML5-capable web browser.
-For \ac{HP} the source material (CD, \unit[44.1]{kHz}, stereo) was encoded with \ac{MP3} (\unit[192]{kbit/s}).
+Participants could access the \ac{AoD} via Internet using a \textsc{\lowercase{HTML5}}-capable web browser.
+For \ac{HP} the source material (\textsc{\lowercase{CD}}, \unit[44.1]{kHz}, stereo) was encoded with \ac{MP3} (\unit[192]{kbit/s}).
 This is necessary to enable distribution via Internet as uncompressed audio data is not suited for this.
 In fact, the bitrate was selected to produce no audible impairments for the speech-only content.
-For \ac{LP} the content was first encoded with LPC\=/10 before encoding it finally with \ac{MP3}.
+For \ac{LP} the content was first encoded with \textsc{\lowercase{LPC\=/10}} before encoding it finally with \ac{MP3}.
 A detailed description of the implemented system is given in the \appendix{}~\ref{appendix:setups} (p.\,\pageref{appendix:setups}).
 
 \subsection{Participants}
 \E6{} was conducted in Berlin from September 2015 until November~2015.
 Participants were required to have non-impaired hearing.
 This experiment was conducted with \unit[57]{female} and \unit[38]{male} participants aging from of 18~to~\unit[33]{years} ($\mu=25.8$, $\sigma=4.0$). %data=read.csv("#DataRaw/field-aod_data.csv"); data = data[-which(!data$Valid), ]
-Participants received \unit[20]{EUR} as compensation.
+Participants received \unit[20]{\textsc{\lowercase{EUR}}} as compensation.
 In this experiment, all usage episodes were conducted and all questionnaires filled.%\footnote{In \E6{} participants were informed by email, when a usage episode should be conducted. This reminded them to conduct the task.}
 
 <<echo=F>>=
