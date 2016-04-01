@@ -130,7 +130,7 @@ For this experiment it was chosen not to provide any equipment for participants,
 Rather than installing a software on the participant's computer, the \ac{AoD} service was implemented as a website available online.
 This website used HTML5 multi-media features to download and playback the audio content.
 Participants were only required to use as web browser either \emph{Google Chrome} or \emph{Chromium} to limit the testing effort for the website.
-As the buffering strategy for media content cannot be controlled by a website using standardized HTML5, the preloading was initiated, when the website was loaded while presenting a loading animation of \unit[5]{sec}.
+As the buffering strategy for media content cannot be controlled by a website using standardized HTML5, the preloading was initiated, when the website was loaded while presenting a loading animation of \unit[5]{s}.
 This avoids issues due to initial buffering by providing a constant waiting time.
 
 \chapter{Episodic and Multi-episodic Questions }\label{appendix:questions}

@@ -191,7 +191,7 @@ In comparison to LPC\=/10, the re-synthesized speech signal contains far less ar
 As LPC\=/10 is rarely compared to G.711 or G.722, a technical evaluation using \ac{POLQA} \citep{itu-t_recommendation_p.863_perceptual_2014} has been conducted.
 \ac{POLQA} estimates the \ac{MOS} for the 5-point \ac{ACR} scale.
 \citet{koster_comparison_2015} presented a transformation function that allows to transform judgments from the 5-point \ac{ACR} scale to the 7\=/point \ac{CoCR} scale. %for speech telephony
-For the evaluation \unit[12]{sec} German speech samples have been processed with all three codecs.
+For the evaluation \unit[12]{s} German speech samples have been processed with all three codecs.
 The resulting speech signals were then evaluated with \ac{POLQA} in super-wideband mode.
 The results are shown in \autoref{tab:lab:performance}.
 It must be noted that LPC\=/10 is very different to G.722 and G.711.
@@ -250,12 +250,12 @@ For \EIIb{} audiometry was skipped due to the increased duration of the multi\=/
 
 In the \emph{third stage}, typical speech telephony degradations were presented.
 %Presenting a training showing a range of potential degradations is expect to reduce intra-personal variations.
-Here, participants assessed the perceived quality of \unit[27]{speech stimuli} with a duration of approximately~\unit[8]{sec}.
+Here, participants assessed the perceived quality of \unit[27]{speech stimuli} with a duration of approximately~\unit[8]{s}.
 In each stimuli two sentences are presented by one human speaker.
 %Three different speakers were used: two male and one female speaker.
 Those stimuli contained different signal bandwidths (wideband, narrowband), codecs (G.711, G.722, GSM\=/FR, LPC\=/10), white noise (fullband, no codec), and random packet-loss (2\%, and 5\%; G.722, Mode~1, no \acs{PLC}).
 In \EIIb{}, also degradations for the \ac{VoD} service were presented.
-22\,videos with an approximate duration of \unit[8]{sec} were used.
+22\,videos with an approximate duration of \unit[8]{s} were used.
 Here, only the \ac{QP}~factor was varied for H.264 (0, 42, 47, and 50).
 After the presentation of a stimulus, the perceived quality was assessed using the 7\=/point \ac{CoCR} scale. %\footnote{The question was phrased in German: "Wie bewerten Sie die Gesamtqualität der gehörten Audioaufnahme?" for speech telephony training and "Wie bewerten Sie die Gesamtqualität des gerade gesehenen Videos?" in case of the video training.}
 
@@ -296,7 +296,7 @@ For later use in \EIIa{} and \EIIb{}, the conversations of all participants of \
 For \EIIa{} and \EIIb{}, one recording for each of the episodes 1..6 was selected.
 Those were required to show common task solving behavior.
 %Furthermore, no emotional reaction such as laughing should be present and not contain any degradations due to other sound sources such as audible breathing, but only clear and clean speech.
-The duration of the selected conversations ranged from \unit[128]{sec} to \unit[194]{sec} with an average of \unit[153]{sec}.
+The duration of the selected conversations ranged from \unit[128]{s} to \unit[194]{s} with an average of \unit[153]{s}.
 %The recordings were normalized per speaker, mixed into one channel and encoded with G.722 or LPC\=/10, respectively.
 %The six selected recordings were presented in \EIIa{} and \EIIb{} in the same order as in \E1{}.
 
@@ -305,10 +305,10 @@ Scenes were taken from \emph{The Big Bang Theory} (Season One, Blu-ray Version, 
 The scenes were selected to be meaningful and self-contained.
 Those scenes were selected, so the duration of the two-party conversational recordings were closely matched.
 For each episode one scene was presented.
-Those ranged from \unit[134]{sec} to \unit[198]{sec} with an average duration of \unit[166]{sec}.
+Those ranged from \unit[134]{s} to \unit[198]{s} with an average duration of \unit[166]{s}.
 For \E3{}, an audio book was selected.
 Here, Isabel Allende's \emph{"City of the Beats"} was used, spoken by a male German native speaker.\footnote{The audio book is sold as 24 CD collection: Isabel Allende: \emph{Die Stadt der wilden Götter / Im Reich des goldenen Drachen / Im Bann der Masken}, ISBN: 978-86717-191-5.}
-Usage episodes varied in duration from \unit[174]{sec} to \unit[199]{sec} with an average duration of \unit[184]{sec}.
+Usage episodes varied in duration from \unit[174]{s} to \unit[199]{s} with an average duration of \unit[184]{s}.
 
 %In all experiments the content is completely in German.
 %In case of the \ac{VoD} content the German-dubbed version was used.
@@ -726,7 +726,7 @@ In \E3{} the impact of varying duration of one \ac{LP} episode on the following 
 It is hypothesized that an increased duration of a \ac{LP} episode will lead to a higher reduction in multi\=/episodic judgments.
 In this experiment \CIIa{} and \CIIb{} present the 5th episode in \ac{LP}.
 While all other episodes are presented with a similar duration, the 5th episode is presented in \CIIb{} with approximately the doubled duration.
-In \CIIa{} this episodes has a duration of \unit[180]{sec} and for \CIIb{} of \unit[360]{sec}.
+In \CIIa{} this episodes has a duration of \unit[180]{s} and for \CIIb{} of \unit[360]{s}.
 The episodic judgment for these conditions and the multi\=/episodic judgments are shown \autoref{tab:lab:hypoduration}.
 
 \begin{table}[h!]
