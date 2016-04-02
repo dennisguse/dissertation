@@ -292,12 +292,20 @@ In this experiment no increase of episodic judgments for \ac{HP} episodes is obs
 
 \begin{figure}[h]
 	\centering
-	<<plotE5C9, echo=F, fig.height=3>>=
-		ggplot_timeseries_create(subset(timeseries, experiment=="E5" & condition=="P2")) + geom_boxplot(aes(factor(id), y=QU), na.rm=T) + xlab("Day")
-	@
-	<<plotE5C0, echo=F, fig.height=3>>=
-		ggplot_timeseries_create(subset(timeseries, experiment=="E5" & condition=="P1")) + geom_boxplot(aes(factor(id), y=QU), na.rm=T) + xlab("Day")
-	@
+%	<<plotE5C9, echo=F, fig.height=3>>=
+%		ggplot_timeseries_create(subset(timeseries, experiment=="E5" & condition=="P2")) + geom_boxplot(aes(factor(id), y=QU), na.rm=T) + xlab("Day") 
+%	@
+%	<<plotE5C0, echo=F, fig.height=3>>=
+%		ggplot_timeseries_create(subset(timeseries, experiment=="E5" & condition=="P1")) + geom_boxplot(aes(factor(id), y=QU), na.rm=T) + xlab("Day")
+%	@
+
+	<<plotE5, echo=F, fig.height=6>>=
+		e5Plot = subset(timeseries, experiment=="E5" & condition %in% c("P1", "P2"))
+		e5Plot$condition_label[e5Plot$condition == "P1"] = "C10"
+		e5Plot$condition_label[e5Plot$condition == "P2"] = "C9"
+		e5Plot$condition_label = factor(e5Plot$condition_label, levels=c("C9", "C10"))
+		ggplot_timeseries_create(e5Plot) + geom_boxplot(aes(factor(id), y=QU), na.rm=T) + xlab("Usage Episode") + facet_grid(condition_label ~ .)	 + theme(panel.margin = unit(2, "lines"))
+	@	
 	\caption[Multiple days (\E5{}): box plots of episodic judgments for \C9{} and \CX{}]{Multiple days: box plots of episodic judgments in \E5{} for \C9{} (top) and \CX{} (bottom).}
 	\label{img:field:boxplotE5}
 \end{figure}

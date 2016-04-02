@@ -12,7 +12,7 @@ timeseries$id[timeseries$experiment == "E6a"] = timeseries$id[timeseries$experim
 timeseries=timeseries[-which(timeseries$experiment %nin% c("E1", "E2a", "E2b", "E3", "E6a")), ]
 
 timeseries$condition_org = timeseries$condition
-timeseries$condition = factor(timeseries$condition, labels=c("C1", "C2a", "C2b", "C3", "C4", "C5a", "C5a (telephony); C0 (VoD)", "C5a (telephony); C4 (VoD)", "C5b", "C6", "C7", "C8"))
+timeseries$condition = factor(timeseries$condition, labels=c("C1", "C2a", "C2b", "C3", "C4", "C5a", "VoD: C0", "VoD: C4", "C5b", "C6", "C7", "C8"))
 
 attach(timeseries)
 @
