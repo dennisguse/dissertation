@@ -597,7 +597,7 @@ However, the results of \E6{} are inconclusive and thus \autoref{hypo:position} 
 \subsubsection{\autoref{hypo:consecutive}: Consecutive vs. Non-consecutive \acs{LP} Episodes}
 In \autoref{hypo:consecutive} it is assumed that consecutive \ac{LP} episodes yield a better multi\-/episodic judgment than the same number of \ac{LP} episodes presented non-consecutively.
 This hypothesis can be evaluated by comparing \C4{} and \C5{} with \C8{}.
-\C4{} and \C5{} present each two days \ac{LP} consecutively whereas \C8{} presents the 4th and the \unit[6th]{day in \ac{LP}.
+\C4{} and \C5{} present each two days \ac{LP} consecutively whereas \C8{} presents the 4th and the \unit[6th]{day} in \ac{LP}.
 \autoref{tab:field:hypoconsecutive} shows the episodic and multi-episodic judgments.
 The three conditions are not significantly different with regard to the last multi\-/episodic judgment (\Sexpr{kruskal(IQU~condition, "E6a", c("HP", "LP"), c("4", "5a", "8"), 14)}).
 

@@ -427,7 +427,8 @@ Box plots for all conditions per experiments are presented in the \appendix{}~\r
 %	\label{img:lab:E1condition7boxplot}
 %\end{figure}
 
-\subparagraph*{Experiment \E1{}}
+%\subparagraph*{Experiment \E1{}}
+\subparagraph*{Experiment E1}
 In \E1{}, significant differences between episodic judgments of \ac{HP} episodes are found (\Sexpr{kruskal(QU~condition, "E1", "HP")}).
 A post-hoc test shows that \CIIa{} (\ac{MOS}: $\Sexpr{mos_qu_with_sd_by_condition("E1", "HP", "2a")}$) and \C7{} (\ac{MOS}: $\Sexpr{mos_qu_with_sd_by_condition("E1", "HP", "7")}$) are significantly different (\Sexpr{wilcox.pairwise.print(QU~condition, "E1", "HP")[6,2]}).
 For the episodic judgments of \ac{LP} episodes no significant differences between conditions are found (\Sexpr{kruskal(QU~condition, "E1", "LP", condition)}).
@@ -438,7 +439,8 @@ The episodic judgments are significantly different between \ac{HP} and \ac{LP} (
 A comparison of \ac{MP} is done later in the evaluation of \autoref{hypo:strength}, because it was only presented in \C7{}.
 It can thus be concluded that the results of \E1{} are consistent.
 
-\subparagraph*{Experiment \EIIa{} and \EIIb{}}
+%\subparagraph*{Experiments \EIIa{} and \EIIb{}}
+\subparagraph*{Experiments E2a and E2b}
 For \EIIa{}, episodic judgments of \ac{HP} episodes are significantly different between conditions (\Sexpr{kruskal(QU~condition, "E2a", "HP")}).
 However, conducting a post-hoc does not show significant differences between conditions for episodic judgments of \ac{HP} episodes (${p \geq 0.066}$).
 %A post-hoc test shows a significant difference between condition \C4{} and \C6{} (\Sexpr{wilcox.pairwise.print(QU~condition, "E2a", "HP", condition)[5,4]}).
@@ -455,7 +457,8 @@ This might be due to the differences in the used audio equipment, \ie, headphone
 However, the actual reason could not be determined.
 With regard to episodic judgments both experiments yield consistent results, but differences between the experiments are observed.
 
-\subparagraph*{Experiment \E3{}}
+%\subparagraph*{Experiment \E3{}}
+\subparagraph*{Experiment E3}
 In \E3{} no significant differences between the two conditions for episodic judgments of \ac{HP} (\Sexpr{wilcox(QU~condition, "E3", "HP")}) and \ac{LP} are found (\Sexpr{wilcox(QU~condition, "E3", "LP")}).
 It must be noted that judgments of the \ac{LP} episode are not different although both conditions differ in the duration of this episode.
 \CIIa{} (normal duration) resulted in a \ac{MOS} of \Sexpr{mos_qu_with_sd_by_condition("E3", "LP", "2a")} whereas \CIIb{} (doubled duration) resulted in \Sexpr{mos_qu_with_sd_by_condition("E3", "LP", "2b")}.
@@ -464,7 +467,8 @@ Thus, a duration neglect for episodic judgments is observed.
 The two performance levels are significantly different (\Sexpr{wilcox(QU~performance_level, "E3")}).
 
 
-\subparagraph*{Impact of Usage Situation: Experiment \E1{} vs. \EIIa{}}
+%\subparagraph*{Impact of Usage Situation: Experiments \E1{} vs. \EIIa{}}
+\subparagraph*{Impact of Usage Situation: Experiments E1 vs. E2a}
 By comparing the episodic judgments between \E1{} and \EIIa{}, a potential impact of the usage situation can be investigated.
 Between the two experiments, the episodic judgments for \ac{HP} are not significantly different (\Sexpr{wilcox(QU~experiment, c("E1", "E2a"), "HP")}).
 With regard to \ac{LP}, both experiments show a significant difference (\Sexpr{wilcox(QU~experiment, c("E1", "E2a"), "LP",condition)}).
@@ -512,14 +516,14 @@ This hypothesis can be evaluated by comparing the multi\-/episodic judgments aft
 This is investigated in \E1{} and \EIIa{}.
 The multi\-/episodic judgments are shown in \autoref{tab:lab:hyponumber}.
 
-For \E1{}, the reference, \C3{}, \CVb{}, and \C6{} are significantly different (\Sexpr{kruskal(IQU~condition, "E1", performance_level, c("3", "5b", "6"), c(6), reference=T)}).
+For \E1{} the reference, \C3{}, \CVb{}, and \C6{} are significantly different (\Sexpr{kruskal(IQU~condition, "E1", performance_level, c("3", "5b", "6"), c(6), reference=T)}).
 A one-sided post-hoc test finds that the reference is significantly different to those three conditions (\Sexpr{wilcox.pairwise.print(IQU~condition, "E1", performance_level, c("3", "5b", "6"), c("6"), reference=T, alternative="less")[1,1]}).
 Also, \C3{} and \CVb{} (\Sexpr{wilcox.pairwise.print(IQU~condition, "E1", performance_level, c("3", "5b", "6"), c("6"), reference=T)[2,2]}) as well as \C3{} and \C6{} are significantly different (\Sexpr{wilcox.pairwise.print(IQU~condition, "E1", performance_level, c("3", "5b", "6"), c("6"), reference=T)[3,2]}).
 No significant difference is found between \CVb{} and \C6{} (\Sexpr{wilcox.pairwise.print(IQU~condition, "E1", performance_level, c("3", "5b", "6"), c("6"), reference=T, alternative="less")[3,3]}).
 The reference, \CIIa{}, and \C4{} are significantly different (\Sexpr{kruskal(IQU~condition, "E1", performance_level, c("2a", "4"), c("6"), reference=T)}).
 A one-sided post-hoc test finds that the reference is significantly different to \CIIa{} and \C4{} (\Sexpr{wilcox.pairwise.print(IQU~condition, "E1", performance_level, c("2a", "4"), c("6"), alternative="less", reference=T)[1,1]}) and that \CIIa{} is significantly different from \C4{} (\Sexpr{wilcox.pairwise.print(IQU~condition, "E1", performance_level, c("2a", "4"), c("6"), alternative="less", reference=T)[2,2]}).
 
-For \EIIa{}, the reference, \C3{}, \CVa{}, and \C6{}, are also significantly different (\Sexpr{kruskal(IQU~condition, "E2a", performance_level, c("3", "5a", "6"), c(6), reference=T)}).
+For \EIIa{} the reference, \C3{}, \CVa{}, and \C6{}, are also significantly different (\Sexpr{kruskal(IQU~condition, "E2a", performance_level, c("3", "5a", "6"), c(6), reference=T)}).
 A one-sided post-hoc test finds that the reference is significantly different to those three conditions (\C3{}: \Sexpr{wilcox.pairwise.print(IQU~condition, "E2a", performance_level, c("3", "5a", "6"), c("6"), reference=T, alternative="less")[1,1]}; \CVa{} and \C6{}: \Sexpr{wilcox.pairwise.print(IQU~condition, "E2a", performance_level, c("3", "5a", "6"), c("6"), reference=T, alternative="less")[2,1]}).
 Also, \C3{} and \CVa{} (\Sexpr{wilcox.pairwise.print(IQU~condition, "E2a",performance_level, c("3", "5a", "6"), c("6"), reference=T, alternative="less")[2,2]}) as well as \C3{} and \C6{} (\Sexpr{wilcox.pairwise.print(IQU~condition, "E2a",performance_level, c("3", "5a", "6"), c("6"), reference=T, alternative="less")[3,2]}) are significantly different.
 No significant difference is found for \CVa{} and \C6{} (\Sexpr{wilcox.pairwise.print(IQU~condition, "E2a",performance_level, c("3", "5a", "6"), c("6"), reference=T, alternative="less")[3,3]}).
