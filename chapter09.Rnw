@@ -97,7 +97,7 @@ This might be attributed to the passive usage situation.
 In \E1{} a two-party conversation was used whereas \EIIa{} applied a third-party listening task.
 Although not statistically significant, a recency effect was indicated in \E6{} for both cases, \ie, one or two days presented in \ac{LP}.
 
-In \E1{} and \E6{} also the impact of non-consecutive \ac{LP} presentation was investigated (\autoref{hypo:consecutive}).
+In \E1{} and \E6{} also the impact of non\-/consecutive \ac{LP} presentation was investigated (\autoref{hypo:consecutive}).
 An effect could not be observed in both experiments and thus the number of performance changes is assumed to be neglectable for prediction.
 In fact, the small difference might also be attributed to a recency effect.
 
