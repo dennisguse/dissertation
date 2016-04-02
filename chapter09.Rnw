@@ -53,21 +53,23 @@ data_mos_adjusted$condition = factor(data_mos_adjusted$condition, labels=c("C1",
 @
 
 \chapter{Prediction of Multi-episodic Judgments}\label{chap:modeling}
-An initial approach on prediction of multi\-/episodic judgments has been conducted by \citet{moller_single-call_2011}.
-Here, all prior episodic judgments are averaged as predictor.
-\citet{moller_single-call_2011} evaluated the precision of this predictor with their \unit[14]{day} experiment (\cf, \autoref{prior:moeller}).
-In this experiment multi\-/episodic judgments have been taken after the 2nd, 7th and 14th~day.
-With regard to the five conditions, it could be shown that the predictor is precise for the 2nd day.
+An initial approach on the prediction of multi\-/episodic judgments has been conducted by \citet{moller_single-call_2011}.
+Here, it is proposed to average all \emph{prior} episodic judgments to predict a multi\-/episodic judgment.
+\citet{moller_single-call_2011} evaluated the precision of this approach with their \unit[14]{day} experiment (\cf, \autoref{prior:moeller}).
+Instead of evaluating the prediction accuracy for \ac{MOS}, the precision accuracy for each individual participant was evaluated for all three multi\-/episodic judgments.
+In this experiment multi\-/episodic judgments have been taken after the 2nd, 7th, and \unit[14th]{day}.
+With regard to the five conditions it could be shown that the predictor is precise for the \unit[2nd]{day}.
 Precision decreases for later multi\-/episodic judgments.
-However, results are limited due to the limited impact on multi\-/episodic judgments of the conditions, \ie, presentation of \ac{LP} episodes.
+However, the results are limited due to the limited impact on multi\-/episodic judgments of the conditions, \ie, presentation of \ac{LP} episodes.
 
-This chapter starts with an overview of observed effects in the conducted experiments that are relevant for prediction of multi\-/episodic judgments.
-Following, model types are presented that seem suited for successfully predicting multi\-/episodic judgments.
+This chapter starts with an overview of observed effects in the conducted experiments that seem relevant for prediction of multi\-/episodic judgments.
+Following, model types are presented that seem suited for predicting multi\-/episodic judgments.
 The prediction accuracy for those model types is evaluated using \E1{}, \EIIa{}, and \E6{}.
-Those experiments yielded a large and in itself consistent data set.\footnote{An approach towards modeling based upon the experiment of \citet{moller_single-call_2011} and \E5{} is published in \citet{guse_modelling_2014}. However, these two experiments are omitted for modeling here.}
+Those experiments yielded a large and in itself consistent data set.\footnote{An approach towards modeling based upon the experiment of \citet{moller_single-call_2011} and \E5{} is published in \citet{guse_modelling_2014}. However, these two experiments are omitted here for modeling due to the limited effects on multi\-/episodic judgments.}
 All other conducted experiments are not considered suitable for modeling, because only a very limited set of conditions was investigated.
-
-%All other experiments can be used for verification of an implemented model.
+In difference to \cite{moller_single-call_2011} the goal here is to predict the multi\-/episodic \ac{MOS} based upon the episodic \ac{MOS} rather than the judgments of individual participants.
+The latter might desirable, but the conducted experiments did not collect sufficient data to be able to explain individual differences.
+In fact, the defined\-/use method was applied, so a \ac{MOS} could be derived.
 
 \section{Effects on Multi-episodic Judgments}
 In the conducted experiments several effects have been observed.
