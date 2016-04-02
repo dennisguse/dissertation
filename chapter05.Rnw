@@ -264,7 +264,7 @@ An exemplary box plot of episodic judgments is shown for condition~4 in \autoref
 For all conditions the episodic judgments reflect the applied episodic performance level, \ie, \ac{HP} and \ac{MP} are judged better than \ac{LP}.
 It can thus be concluded that the technical setup worked as desired.
 %Condition 5 is evaluated alone as the absence of \ac{HP} might affect episodic and multi\-/episodic judgments
-However, comparing the episodic judgments for \ac{HP} episodes conditions~1..4 shows significant differences (\Sexpr{kruskal(QU~condition, "MOELLER", "HP", c("S1", "S2", "S3", "S5"))}).
+However, comparing the episodic judgments for \ac{HP} episodes conditions~1..4 show significant differences (\Sexpr{kruskal(QU~condition, "MOELLER", "HP", c("S1", "S2", "S3", "S5"))}).
 A post-hoc test, \ie, pairwise Wilcoxon rank-sum test with Holms' correction, shows that the episodic judgments for \ac{HP} are not significantly different between condition~3 and condition~4 ($p=0.137$), but all other conditions are significantly different to each other ($p\leq0.04$). %wilcox.pairwise.print(QU~condition, "MOELLER", "HP", c("S1", "S2", "S3", "S5"))
 For \ac{LP} episodic judgments are not significantly different between conditions 2..4 (\Sexpr{kruskal(QU~condition, "MOELLER", "LP", c("S1", "S2", "S3"))}).
 The observed difference for episodic judgments \ac{HP} are relatively small and likely an artifact of the applied between-subject design.
