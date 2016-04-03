@@ -111,7 +111,7 @@ In addition, an influence of the different usage situations, \ie, two-party conv
 \end{table}
 
 All hypotheses except \autoref{hypo:recovery} are investigated with regard to the multi\-/episodic judgment after the 6th usage episode.
-Condition \C0{}, which presents only \ac{HP} usage episode, is only conducted in \EIIb{} for the \ac{VoD} service.
+Condition \C0{}, which presents only \ac{HP} usage episodes, is only conducted in \EIIb{} for the \ac{VoD} service.
 For all other experiments, this condition is omitted.
 Here, the reference is used as approximation for the multi\-/episodic judgment after the 6th usage episode of \C0{}.
 
@@ -235,7 +235,7 @@ However, both services are presented on the same device.
 %The audio modality of the \ac{VoD} service might still be used in the evaluation of 
 % might still be used for comparison while evaluating the perceived quality of the telephony service.
 
-In all experiments, a diotic representation is provided using a pair of headphones.
+In all experiments a diotic representation is provided using a pair of headphones.
 The experimental setups are described in the \appendix{}~\ref{appendix:setups} (p.\,\pageref{appendix:setups}).
 
 \subsection{Procedure}\label{sec:training}
@@ -248,7 +248,7 @@ Here, an adapted Békésy audiometry was conducted covering the spectrum for wid
 A participant is considered to have hearing capabilities within normal limits, if hearing sensitivity is between \unit[0]{dB\,HL} and \unit[25]{dB\,HL} \citep[][p.\,256]{roeser_audiology_2007}.
 For \EIIb{} audiometry was skipped due to the increased duration of the multi\-/episodic part as well as in \E3{} due to the focus on the perception of duration.
 
-In the \emph{third stage}, typical speech telephony degradations were presented.
+In the \emph{third stage} typical speech telephony degradations were presented.
 %Presenting a training showing a range of potential degradations is expect to reduce intra-personal variations.
 Here, participants assessed the perceived quality of \unit[27]{speech stimuli} with a duration of approximately~\unit[8]{s}.
 In each stimuli two sentences are presented by one human speaker.
@@ -257,7 +257,7 @@ Those stimuli contained different signal bandwidths (wideband, narrowband), code
 In \EIIb{}, also degradations for the \ac{VoD} service were presented.
 22\,videos with an approximate duration of \unit[8]{s} were used.
 Here, only the \ac{QP}~factor was varied for H.264 (0, 42, 47, and 50).
-After the presentation of a stimulus, the perceived quality was assessed using the 7\=/point \ac{CoCR} scale. %\footnote{The question was phrased in German: "Wie bewerten Sie die Gesamtqualität der gehörten Audioaufnahme?" for speech telephony training and "Wie bewerten Sie die Gesamtqualität des gerade gesehenen Videos?" in case of the video training.}
+After the presentation of a stimulus the perceived quality was assessed using the 7\=/point \ac{CoCR} scale. %\footnote{The question was phrased in German: "Wie bewerten Sie die Gesamtqualität der gehörten Audioaufnahme?" for speech telephony training and "Wie bewerten Sie die Gesamtqualität des gerade gesehenen Videos?" in case of the video training.}
 
 In the \emph{fourth stage} the multi\-/episodic part was conducted.
 Here, usage episodes were presented one after the other.
@@ -429,7 +429,7 @@ Box plots for all conditions per experiments are presented in the \appendix{}~\r
 
 %\subparagraph*{Experiment \E1{}}
 \subparagraph*{Experiment E1}
-In \E1{}, significant differences between episodic judgments of \ac{HP} episodes are found (\Sexpr{kruskal(QU~condition, "E1", "HP")}).
+In \E1{} significant differences between episodic judgments of \ac{HP} episodes are found (\Sexpr{kruskal(QU~condition, "E1", "HP")}).
 A post-hoc test shows that \CIIa{} (\ac{MOS}: $\Sexpr{mos_qu_with_sd_by_condition("E1", "HP", "2a")}$) and \C7{} (\ac{MOS}: $\Sexpr{mos_qu_with_sd_by_condition("E1", "HP", "7")}$) are significantly different (\Sexpr{wilcox.pairwise.print(QU~condition, "E1", "HP")[6,2]}).
 For the episodic judgments of \ac{LP} episodes no significant differences between conditions are found (\Sexpr{kruskal(QU~condition, "E1", "LP", condition)}).
 Although \ac{HP} episodes were significantly different between conditions, an analysis did not yield a reason for the difference.
@@ -448,7 +448,7 @@ However, conducting a post-hoc does not show significant differences between con
 For episodic judgments of \ac{LP} episodes, no significant difference between conditions is shown (\Sexpr{kruskal(QU~condition, "E2a", "LP")}).
 The episodic judgments for \ac{HP} and \ac{LP} are significantly different (\Sexpr{wilcox(QU~performance_level, "E2a")}).
 
-In \EIIb{}, the episodic judgments of the telephony service are not significantly different between the three conditions for \ac{HP} (\Sexpr{kruskal(QU~condition, "E2b", "HP", c("5a", "5a0", "5a4"), id, "telephony")}) and not for \ac{LP} (\Sexpr{kruskal(QU~condition, "E2b", "LP", c("5a", "5a0", "5a4"), id, "telephony")}).
+In \EIIb{} the episodic judgments of the telephony service are not significantly different between the three conditions for \ac{HP} (\Sexpr{kruskal(QU~condition, "E2b", "HP", c("5a", "5a0", "5a4"), id, "telephony")}) and not for \ac{LP} (\Sexpr{kruskal(QU~condition, "E2b", "LP", c("5a", "5a0", "5a4"), id, "telephony")}).
 For the \ac{VoD} service, episodic judgments of \ac{HP} episodes are not significantly different (\Sexpr{wilcox(QU~condition, "E2b", "HP", c("5a0", "5a4"), id, "VoD")}).
 The episodic judgment of \ac{HP} and \ac{LP} episodes are significantly different for the telephony service (\Sexpr{wilcox(QU~performance_level, "E2b", performance_level, condition, id, "telephony")}) and the \ac{VoD} service (\Sexpr{wilcox(QU~performance_level, "E2b", performance_level, condition, id, "VoD")}).
 
@@ -563,7 +563,7 @@ In both experiments a decrease of approximately \unit[1]{pt} is also observed, i
 For two episodes, only a decrease less than \unit[0.5]{pt} is observed in both experiments.
 
 It must thus be concluded that \autoref{hypo:number} is only partly true.
-A decrease can be observed, if up to two \ac{LP} episodes are presented.
+A decrease can be observed if up to two \ac{LP} episodes are presented.
 Presenting a third \ac{LP} episode does not seem have an effect on the multi\-/episodic judgments.
 In fact, the multi\-/episodic judgments remain above the episodic judgments of \ac{LP} episodes, \ie, the difference is approximately~\unit[0.6]{pt}.
 This indicates that prior presented \ac{HP} episodes still attribute to these multi\-/episodic judgments.
@@ -697,7 +697,7 @@ This is investigated in \E1{} by comparing \CVb{} and \C7{}.
 Both present nine episodes while non-\ac{HP} is presented for the 5th and 6th usage episode.
 \autoref{tab:lab:hyporecovery} shows the three multi\-/episodic judgments of those conditions.
 
-For each condition, the three multi\-/episodic judgments are significantly different (\CVb{}: \Sexpr{kruskal(IQU~id, "E1", performance_level,"5b", c(3, 6, 9))}; \C7{}: \Sexpr{kruskal(IQU~id, "E1", performance_level, "7", c(3, 6, 9))}).
+For each condition the three multi\-/episodic judgments are significantly different (\CVb{}: \Sexpr{kruskal(IQU~id, "E1", performance_level,"5b", c(3, 6, 9))}; \C7{}: \Sexpr{kruskal(IQU~id, "E1", performance_level, "7", c(3, 6, 9))}).
 For \CVb{}, a paired post-hoc test shows significant differences between the judgment after the 3rd and 6th episode (\Sexpr{wilcox.pairwise.print(QU~id, "E1", performance_level, "5b", c(3, 6, 9), paired=T)[1,1]}) and the 6th and 9th episode (\Sexpr{wilcox.pairwise.print(QU~id, "E1", performance_level, "5b", c(3, 6, 9), paired=T)[2,2]}).
 The judgment after the 3rd and 9th are not significantly different (\Sexpr{wilcox.pairwise.print(QU~id, "E1", performance_level, "5b", c(3, 6, 9), paired=T)[2,1]}).
 A paired post-hoc test for \C7{} yields similar findings (3rd vs. 6th: \Sexpr{wilcox.pairwise.print(QU~id, "E1", performance_level, "7", c(3, 6, 9), paired=T)[1,1]}; 6th vs. 9th: \Sexpr{wilcox.pairwise.print(QU~id, "E1", performance_level, "7", c(3, 6, 9), paired=T)[2,2]}; 3rd vs. 9th: \Sexpr{wilcox.pairwise.print(QU~id, "E1", performance_level, "7", c(3, 6, 9), paired=T)[2,1]}).
