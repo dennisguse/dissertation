@@ -127,12 +127,12 @@
 \bookmarksetup{startatroot}
 \setcounter{chapter}{0}
 \addtocontents{toc}{\protect\newpage}
-\renewcommand{\theHchapter}{\alph{chapter}}
-\renewcommand{\thechapter}{\alph{chapter}}
-\renewcommand{\theHsection}{\alph{chapter}.\alph{section}}
-\renewcommand{\thesection}{\alph{chapter}.\alph{section}}
-\renewcommand{\theHsubsection}{\alph{chapter}.\alph{section}.\alph{subsection}}
-\renewcommand{\thesubsection}{\alph{chapter}.\alph{section}.\alph{subsection}}
+\renewcommand{\theHchapter}{\roman{chapter}}
+\renewcommand{\thechapter}{\roman{chapter}}
+\renewcommand{\theHsection}{\roman{chapter}.\roman{section}}
+\renewcommand{\thesection}{\roman{chapter}.\roman{section}}
+\renewcommand{\theHsubsection}{\roman{chapter}.\roman{section}.\roman{subsection}}
+\renewcommand{\thesubsection}{\roman{chapter}.\roman{section}.\roman{subsection}}
 \pagenumbering{roman}\setcounter{page}{1}
 \part*{Appendix}\label{chap:appendix}\cleardoublepage
 
