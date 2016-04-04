@@ -27,7 +27,7 @@
 %
 % **************************************************************************************************************
 \RequirePackage{fix-cm} % fix some latex issues see: http://texdoc.net/texmf-dist/doc/latex/base/fixltx2e.pdf
-\documentclass[ %twoside,
+\documentclass[ twoside,
                 dottedtoc,
                 openright,titlepage,numbers=noenddot,headinclude,%1headlines,% letterpaper a4paper
                 footinclude=true,cleardoublepage=empty,abstractoff, % <--- obsolete, remove (todo)
@@ -114,15 +114,25 @@
 \include{chapter10}
 \cleardoublepage
 
-%\newpage
-%\thispagestyle{empty}
-%\vspace*{3cm}
-%\begin{center}
+\newpage
+\thispagestyle{empty}
+\vspace*{3cm}
+\begin{center}
 %So long, and thanks for all the fish
 %\\ \medskip
 %    --- Douglas Adams
-%\end{center}
-%\cleardoublepage
+
+Are you pondering what I'm pondering? \\
+\smallskip
+Whoof, oh, I'd have to say the odds of that are terribly slim, Brain. \\
+\smallskip
+True.
+\\ \medskip
+    --- Pinky \& Brain
+\end{center}
+\cleardoublepage
+
+
 
 \bookmarksetup{startatroot}
 \setcounter{chapter}{0}
