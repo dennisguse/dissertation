@@ -1,7 +1,6 @@
 <<setup, echo=F, cache=F, results='hide'>>=
 opts_knit$set(progress = TRUE, verbose = TRUE)
 source('R_plot.R')
-
 data = read.csv("data/data_modeling.csv")
 data$model_FACET = factor(data$model == "weight_linear_create", labels=c("Window (WI)", "Linear (LI)")) #label and order; FALSE will be first; then attach labels for FACET
 
@@ -247,7 +246,7 @@ ggplot_model_create(subset(data_mos_nonadjusted, data_mos_nonadjusted$experiment
 # scale_color_manual(name="Condition", values=c("#00BFC4", "#00BE67", "#7CAE00", "#00A9FF", "#CD9600", "#F8766D", "#C77CFF", "#000000")) + 
 # scale_size_manual(name="Condition", values=c(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 1))
 @
-	\caption[One session (\E1{}): prediction accuracy for \ac{HP} only episodes]{One session (\E1{}): prediction accuracy for \ac{HP} only episodes (3rd usage episode).}
+	\caption[One session (\E1{}): multi-episodic prediction accuracy for 3rd\,usage episode (\acs{HP} only)]{One session (\E1{}): multi-episodic prediction accuracy for \ac{HP} only episodes (3rd usage episode).}
 	\label{fig:pred:E1base}
 \end{figure}
 
@@ -280,7 +279,7 @@ ggplot_model_create(subset(data_mos_nonadjusted, data_mos_nonadjusted$experiment
 # scale_color_manual(name="Condition", values=c("#00BFC4", "#00BE67", "#7CAE00", "#00A9FF", "#CD9600", "#F8766D", "#C77CFF", "#000000")) + 
 # scale_size_manual(name="Condition", values=c(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 1))
 @
-	\caption[One session (\E1{}): prediction accuracy for all conditions]{One session (\E1{}): prediction accuracy for all conditions (6th usage episode).}
+	\caption[One session (\E1{}): multi-episodic prediction accuracy for 6th\,usage episode]{One session (\E1{}): multi-episodic prediction accuracy for all conditions (6th usage episode).}
 	\label{fig:pred:E1pred6}
 \end{figure}
 
@@ -301,7 +300,7 @@ ggplot_model_create(subset(data_mos_nonadjusted, data_mos_nonadjusted$experiment
 #	geom_line(aes(x=parameter, y=RMSD, colour=condition)) + facet_grid(. ~ model_FACET)  + 
 #  scale_size_manual(name="Condition", values=c(0.5, 0.5))
 @
-	\caption[One session (\E1{}): prediction accuracy for recovery]{One session (\E1{}): prediction accuracy for recovery (9th usage episode).}
+	\caption[One session (\E1{}): multi-episodic prediction accuracy for recovery]{One session (\E1{}): multi-episodic prediction accuracy for recovery (9th usage episode).}
 	\label{fig:pred:E1pred9}
 \end{figure}
 
@@ -330,7 +329,7 @@ ggplot_model_create(subset(data_mos_nonadjusted, data_mos_nonadjusted$experiment
 # scale_color_manual(name="Condition", values=c("#00BFC4", "#00BE67", "#7CAE00", "#00A9FF", "#CD9600", "#F8766D", "#C77CFF", "#000000")) + 
 # scale_size_manual(name="Condition", values=c(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 1))
  @
-	\caption[One session (\EIIa{}): prediction accuracy for \ac{HP} only episodes]{One session (\EIIa{}): prediction accuracy for \ac{HP} only episodes (3rd usage episode).}
+	\caption[One session (\EIIa{}): multi-episodic prediction accuracy for 3rd\,usage episode (\acs{HP} only)]{One session (\EIIa{}): multi-episodic prediction accuracy for \acs{HP} only episodes (3rd\,usage episode).}
 	\label{fig:pred:E2pred3}
 \end{figure}
 
@@ -355,7 +354,8 @@ ggplot_model_create(subset(data_mos_nonadjusted, data_mos_nonadjusted$experiment
 #	scale_color_manual(name="Condition", values=c("#00BFC4", "#00BE67", "#7CAE00", "#00A9FF", "#CD9600", "#F8766D", "#C77CFF", "#000000")) + 
 #	scale_size_manual(name="Condition", values=c(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 1))
  @
-	\caption[One session (\EIIa{}): prediction accuracy for all conditions]{One session (\EIIa{}): prediction accuracy for all conditions (6th usage episode).}
+ 
+	\caption[One session (\EIIa{}): multi-episodic prediction accuracy for 6th\,usage episode]{One session (\EIIa{}): multi-episodic prediction accuracy for all conditions (6th\,usage episode).}
 	\label{fig:pred:E2pred6}
 \end{figure}
 
@@ -393,7 +393,7 @@ ggplot_model_create(subset(data_mos_nonadjusted, data_mos_nonadjusted$experiment
 #	scale_color_manual(name="Condition", values=c("#00BFC4", "#00BE67", "#7CAE00", "#00A9FF", "#CD9600", "#F8766D", "#000000")) + 
 #	scale_size_manual(name="Condition", values=c(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 1))
 @
-	\caption[Multiple days (\E6{}): prediction accuracy for \ac{HP} only episodes]{Multiple days (\E6{}): prediction accuracy for \ac{HP} only episodes (3rd day, \ie, 6th usage episode).}
+	\caption[Multiple days (\E6{}): multi-episodic prediction accuracy after the 3rd\,day (\acs{HP} only)]{Multiple days (\E6{}): multi-episodic prediction accuracy for \ac{HP} only episodes (3rd\,day, \ie, 6th\,usage episode).}
 	\label{fig:pred:E6pred6}
 \end{figure}
 
@@ -420,17 +420,17 @@ ggplot_model_create(subset(data_mos_nonadjusted, data_mos_nonadjusted$experiment
 #	scale_color_manual(name="Condition", values=c("#00BFC4", "#00BE67", "#7CAE00", "#00A9FF", "#CD9600", "#F8766D", "#000000")) + 
 #	scale_size_manual(name="Condition", values=c(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 1))
 @
-	\caption[Multiple days (\E6{}): prediction accuracy for all conditions]{Multiple days (\E6{}): prediction accuracy for all conditions (6th day, \ie, 12th usage episode).}
+	\caption[Multiple days (\E6{}): multi-episodic prediction accuracy after the 6th\,day]{Multiple days (\E6{}): multi-episodic prediction accuracy for all conditions (6th\,day, \ie, 12th\,usage episode).}
 	\label{fig:pred:E6pred12}
 \end{figure}
 
-\subsection{Saturation}\label{pred:saturation}
+\subsection{Saturation Effect}\label{pred:saturation}
 In all three experiments a saturation effect could be observed.
 Here, multi\-/episodic judgments remain on the same level independent if two or three \ac{LP} episodes/days are presented, \ie, \C5{} and \C6{} are judged not different.
 In both cases the multi-episodic judgment remains above the episodic judgment for \ac{LP} episodes (approx.\,~\unit[1]{pt}).
-In fact, \C5{} and \C6{} only differ in the performance level of the 4th episode/day.
+In fact, \C5{} and \C6{} only differ in the performance level of the 4th\,episode/day.
 For \C5{} this episode/day is presented in \ac{HP} while \C6{} presented this episode/day in \ac{LP}.
-As both conditions are not judged different, this suggests that the difference in performance level of the 4th episode/day does not seem to affect the formation process of the multi\-/episodic judgment.
+As both conditions are not judged different, this suggests that the difference in performance level of the 4th\,episode/day does not seem to affect the formation process of the multi\-/episodic judgment.
 
 %This implies that one \ac{LP} episode/day is not judged different than one \ac{HP} episode with regard to the multi\-/episodic judgment.
 %This can be modeled in two ways.
@@ -482,7 +482,7 @@ This is equivalent to extending $\mathit{\hat{m}_n}$ in the case of \C6{} with t
 
 The modified version of \C6{} is in the following denoted as \C6{}~(adjusted).
 In the following, the prediction accuracy of both model types between \C5{}, \C6{}, and \C6{}~(adjusted) is presented.
-For \E1{} and \EIIa{}, this is shown in \autoref{fig:pred:SAT:E1} and \autoref{fig:pred:SAT:E2a}, respectively.
+For \E1{} and \EIIa{} this is shown in \autoref{fig:pred:SAT:E1} and \autoref{fig:pred:SAT:E2a}, respectively.
 
 \begin{figure}[h]
 	\centering
@@ -493,7 +493,7 @@ ggplot_model_create(subset(data_mos_adjusted_only, data_mos_adjusted_only$experi
 	scale_color_manual(name="Condition", values=c("#00BFC4", "#7CAE00", "#7CAE00")) +
 	scale_size_manual(name="Condition", values=c(0.5, 0.5, 0.5))
 @
-	\caption[One session (\E1{}): prediction accuracy for saturation effect]{One session (\E1{}): prediction accuracy for saturation effect (6th usage episode).}
+	\caption[One session (\E1{}): multi-episodic prediction accuracy for the saturation effect]{One session (\E1{}):  multi-episodic prediction accuracy for saturation effect (6th\,usage episode).}
 	\label{fig:pred:SAT:E1}
 \end{figure}
 
@@ -512,7 +512,7 @@ ggplot_model_create(subset(data_mos_adjusted_only, data_mos_adjusted_only$experi
 	scale_color_manual(name="Condition", values=c("#00BFC4", "#7CAE00", "#7CAE00")) +
 	scale_size_manual(name="Condition", values=c(0.5, 0.5, 0.5))
 @
-	\caption[One session (\EIIa{}): prediction accuracy for saturation effect]{One session (\EIIa{}): prediction accuracy for saturation effect (6th usage episode).}
+	\caption[One session (\EIIa{}):  multi-episodic prediction accuracy for the saturation effect]{One session (\EIIa{}):  multi-episodic prediction accuracy for the saturation effect (6th\,usage episode).}
 	\label{fig:pred:SAT:E2a}
 \end{figure}
 
@@ -529,7 +529,7 @@ ggplot_model_create(subset(data_mos_adjusted_only, data_mos_adjusted_only$experi
 	scale_color_manual(name="Condition",values=c("#00BFC4", "#7CAE00", "#7CAE00")) +
 	scale_size_manual(name="Condition", values=c(0.5, 0.5, 0.5))
 @
-	\caption[Multiple days (\E6{}): prediction accuracy for saturation effect]{Multiple days (\E6{}): prediction accuracy for saturation effect (6th day, \ie, 6th usage episode).}
+	\caption[Multiple days (\E6{}):  multi-episodic prediction accuracy for the saturation effect]{Multiple days (\E6{}):  multi-episodic prediction accuracy for the saturation effect (6th\,day, \ie, 6th\,usage episode).}
 	\label{fig:pred:SAT:E6}
 \end{figure}
 

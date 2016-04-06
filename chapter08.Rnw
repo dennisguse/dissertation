@@ -183,7 +183,7 @@ In fact, even between the two conditions no differences between multi\-/episodic
 
 \begin{table}
 	\centering
-	\caption[Multiple days (\E4{}): multi\-/episodic judgments for the \ac{VoD} service.]{Multiple days (\E4{}): multi\-/episodic judgments for the \ac{VoD} service. Reported as \ac{MOS} with standard deviation in brackets.}
+	\caption[Multiple days (\E4{}): multi\-/episodic judgments for the \acs{VoD} service]{Multiple days (\E4{}): multi\-/episodic judgments for the \ac{VoD} service. Reported as \ac{MOS} with standard deviation in brackets.}
 	\label{tab:field:e4results}
 	\begin{tabular}{c|c|c|c}
 	\multirow{2}{*}{Day} & \multicolumn{3}{c}{Multi-episodic Judgment} \\
@@ -396,9 +396,9 @@ The conditions are similar to the one-session experiments and thus denoted with 
 In all conditions the first three days were presented in \ac{HP}.
 \ac{LP} episodes were only presented from day 4 to day 6.
 The conditions are \C1{}, \C3{}, \C4{}, \C5{}, \C6{}, and \C8{}.
-\C1{} and \C3{} present either the 4th or the 6th day in \ac{LP}.
-\C4{}, \C5{}, and \C8{} present two days between the 4th and the 6th day in \ac{LP}.
-\C6{} presents all three days between the 4th and 6th day in \ac{LP}.
+\C1{} and \C3{} present either the 4th or the 6th\,day in \ac{LP}.
+\C4{}, \C5{}, and \C8{} present two days between the 4th and the 6th\,day in \ac{LP}.
+\C6{} presents all three days between the 4th and 6th\,day in \ac{LP}.
 
 For the investigation of \autoref{hypo:number} the results of the \C3{}, \C5{}, and \C6{} can be compared.
 \autoref{hypo:position} can be evaluated by comparing the results of conditions \C1{} and \C3{} as well as \C4{} and \C5{}.
@@ -507,7 +507,7 @@ Box plots for all conditions can be found in the \appendix{}~\ref{appendix:resul
 
 \begin{table}
 	\centering
-	\caption[Multiple days (\E6{}): overview on conditions.]{Multiple days (\E6{}): overview on conditions. Reported as \ac{MOS} with standard deviation in brackets.}
+	\caption[Multiple days (\E6{}): overview on conditions]{Multiple days (\E6{}): overview on conditions. Reported as \ac{MOS} with standard deviation in brackets.}
 	\label{tab:field:e6episodic}
 	\begin{tabulary}{\textwidth}{C|C|C|C|C}
 	Condition & \ac{LP} days & Participants &  \ac{HP} & \ac{LP} \\
@@ -542,7 +542,7 @@ For \C5{} and \C6{} no significant difference is found (\Sexpr{wilcox.pairwise.p
 
 \begin{table}[h]
 	\centering
-	\caption[Multiple days (\E6{}): multi\-/episodic judgments after the 6th day for \autoref{hypo:number}.]{Multiple days (\E6{}): multi\-/episodic judgments after the 6th day for \autoref{hypo:number}. Reported as \ac{MOS} with standard deviation in brackets.}
+	\caption[Multiple days (\E6{}): multi\-/episodic judgments after the 6th\,day for \autoref{hypo:number}]{Multiple days (\E6{}): multi\-/episodic judgments after the 6th\,day for \autoref{hypo:number}. Reported as \ac{MOS} with standard deviation in brackets.}
 	\label{tab:field:hyponumber}
 	\begin{tabulary}{\columnwidth}{c|c|C}
 	Condition	& \ac{LP} episode(s) 	& Multi-episodic Judgment\\
@@ -574,7 +574,7 @@ This can be investigated for one day in \ac{LP} with \C1{} and \C3{} as well as 
 
 \begin{table}[h]
 	\centering
-	\caption[Multiple days (\E6{}): multi\-/episodic judgment after the 6th day for \autoref{hypo:position}.]{Multiple days (\E6{}): multi\-/episodic judgment after the 6th day for \autoref{hypo:position}. Reported as \ac{MOS} with standard deviation in brackets.}
+	\caption[Multiple days (\E6{}): multi\-/episodic judgment after the 6th\,day for \autoref{hypo:position}]{Multiple days (\E6{}): multi\-/episodic judgment after the 6th\,day for \autoref{hypo:position}. Reported as \ac{MOS} with standard deviation in brackets.}
 	\label{tab:field:hypoposition}
 	\begin{tabulary}{\columnwidth}{c|c|C}
 	Condition   & \ac{LP} episode(s) 	& Multi-episodic Judgment \\
@@ -603,7 +603,7 @@ The three conditions are not significantly different with regard to the last mul
 
 \begin{table}[h]
 	\centering
-	\caption[Multiple days (\E6{}): multi\-/episodic judgment after the 6th day for \autoref{hypo:consecutive}.]{Multiple days (\E6{}): multi\-/episodic judgment after the 6th day for \autoref{hypo:consecutive}. Reported as \ac{MOS} with standard deviation in brackets.}
+	\caption[Multiple days (\E6{}): multi\-/episodic judgment after the 6th\,day for \autoref{hypo:consecutive}]{Multiple days (\E6{}): multi\-/episodic judgment after the 6th\,day for \autoref{hypo:consecutive}. Reported as \ac{MOS} with standard deviation in brackets.}
 	\label{tab:field:hypoconsecutive}
 	\begin{tabular}{c|c|c}
 	Condition   & \ac{LP} episode(s) 	& Multi-episodic Judgment \\

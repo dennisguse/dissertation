@@ -181,7 +181,7 @@ Finally, all multi\-/episodic judgments per experiment and condition are present
 	<<plotE1, echo=F, fig.height=12>>=
 		ggplot_timeseries_create(subset(timeseries, experiment=="E1")) + geom_boxplot(aes(factor(id), y=QU), na.rm=T) + facet_grid(condition ~ .) + xlab("Usage Episode")
 	@
-	\caption{One session (\E1{}): box plot of episodic judgments.}
+	\caption[One session (\E1{}): box plot of episodic judgments]{One session (\E1{}): box plot of episodic judgments.}
 \end{figure}
 
 \begin{figure}[H]
@@ -189,7 +189,7 @@ Finally, all multi\-/episodic judgments per experiment and condition are present
 	<<plotE2a, echo=F, fig.height=10.5>>=
 		ggplot_timeseries_create(subset(timeseries, experiment=="E2a")) + geom_boxplot(aes(factor(id), y=QU), na.rm=T) + facet_grid(condition ~ .) + xlab("Usage Episode")
 	@
-	\caption{One session (\EIIa{}): box plot of episodic judgments.}	
+	\caption[One session (\EIIa{}): box plot of episodic judgments]{One session (\EIIa{}): box plot of episodic judgments.}	
 \end{figure}
 
 \begin{figure}[H]
@@ -197,7 +197,7 @@ Finally, all multi\-/episodic judgments per experiment and condition are present
 	<<plotE2b, echo=F, fig.height=7.5>>=
 		ggplot_timeseries_create(subset(timeseries, experiment=="E2b" & service != "bundle")) + geom_boxplot(aes(factor(id), y=QU), na.rm=T) + facet_grid(condition + service~ .) + xlab("Usage Episode")
 	@
-	\caption{One session (\EIIb{}): box plot of episodic judgments.}
+	\caption[One session (\EIIb{}): box plot of episodic judgments]{One session (\EIIb{}): box plot of episodic judgments.}
 \end{figure}
 
 \begin{figure}[H]
@@ -205,7 +205,7 @@ Finally, all multi\-/episodic judgments per experiment and condition are present
 	<<plotE3, echo=F, fig.height=3>>=
 		ggplot_timeseries_create(subset(timeseries, experiment=="E3")) + geom_boxplot(aes(factor(id), y=QU), na.rm=T) + facet_grid(condition ~ .) + xlab("Usage Episode")
 	@
-	\caption{One session (\E3{}): box plot of episodic judgments.}
+	\caption[One session (\E3{}): box plot of episodic judgments]{One session (\E3{}): box plot of episodic judgments.}
 \end{figure}
 
 \begin{figure}[H]
@@ -213,7 +213,7 @@ Finally, all multi\-/episodic judgments per experiment and condition are present
 	<<plotE6, echo=F, fig.height=9>>=
 		ggplot_timeseries_create(subset(timeseries, experiment=="E6a")) + geom_boxplot(aes(factor(id), y=QU), na.rm=T) + facet_grid(condition ~ .) + xlab("Usage Episode")
 	@
-	\caption{Multiple days (\E6{}): box plot of episodic judgments.}
+	\caption[Multiple days (\E6{}): box plot of episodic judgments]{Multiple days (\E6{}): box plot of episodic judgments.}
 \end{figure}
 
 \section{Multi-episodic Judgments}
@@ -223,7 +223,7 @@ Finally, all multi\-/episodic judgments per experiment and condition are present
 @
 \begin{table}[H]
 	\centering
-	\caption{Multi-episodic judgments per condition and experiment for \E1{}, \EIIa{}, \EIIb{}, and \E3{}.}
+	\caption[Multi-episodic judgments per condition and experiment for \E1{}, \EIIa{}, \EIIb{}, and \E3{}]{Multi-episodic judgments per condition and experiment for \E1{}, \EIIa{}, \EIIb{}, and \E3{}.}
 	\begin{tabulary}{\textwidth}{C|C|C|C|C}
 	Experiment &  Condition & \multicolumn{3}{c}{Multi-episodic Judgment} \\
 	& & 3rd episode & 6th episode & 9th episode \\
