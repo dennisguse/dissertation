@@ -21,7 +21,7 @@ attach(timeseries)
 Services are in general used on a regular basis by a user~\citep[\cf,][]{geerts_linking_2010}.
 The experiences of a usage episode lead to a perceived quality in the user of this very episode.
 The definition of \emph{usage episode} in the context of multi\-/episodic perceived quality is derived from concepts of episodic memory (\cf, \autoref{chap:03}), focusing on usage of telecommunication systems.
-In addition, goal achievement as a requirement is added, following the concept of utility and expected utility by \citet{kahneman_experienced_2000}.
+In addition, goal achievement as a requirement is added, following the concepts of utility and expected utility by \citet{kahneman_experienced_2000}.
 
 \begin{definition}[Usage Episode]\label{def:episode}
 A usage episode is a distinct, meaningful, and self-contained interaction by a user with a service or system to achieve his goal(s).
@@ -40,8 +40,6 @@ For practical use, it is often sufficient to understand the relationship between
 Thus, an influence of time, tasks, and other factors on perceived quality is often neglected.
 However, understanding the formation process of multi\-/episodic perceived quality enables, for example, a service provider to serve a better service for his users.
 
-to understand the user's perspective and provide a better service.
-
 \subsection{Excursus: Multi-episodic usage in \acs{UX}}
 Effects of multi\-/episodic usage while focusing on changes in user behavior have been evaluated in \ac{UX}.
 \ac{QoE} and \ac{UX} conceptually overlap as both focus on experiences in general and experiences with technology \citep[\cf,][]{wechsung_quality_2014}.
@@ -50,7 +48,7 @@ Multi-episodic evaluation is an important aspect of \ac{UX}, as user behavior to
 The multi\-/episodic concept is described by \citet[p.\,8]{roto_user_2011}.
 However, they failed to put it into context with prior work and omitted their definitions.
 
-Two major experiments assessing the use of products over a longer usage period have been conducted.
+Two major experiments that assessed the use of products over a longer usage period have been conducted.
 \citet{karapanos_user_2009} investigated in an experiment how the expectations and behavior towards a new smart phone change in a usage period of four weeks. % with \unit[6]{subjects}
 This is extended by \citet{kujala_ux_2011}.
 Here, a participant evaluates his experiences with a product or service in retrospect.
