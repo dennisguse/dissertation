@@ -309,13 +309,13 @@ In this experiment no increase of episodic judgments for \ac{HP} episodes is obs
 
 \paragraph*{Multi-episodic Judgments}
 The multi\-/episodic judgments for both services and conditions are shown in \autoref{tab:field:e5results}.
-For the \ac{AoD} service no significant difference between multi\-/episodic judgments is observed for \C9{} (\Sexpr{kruskal(IQU~id, "E5", c("HP", "LP"), "P1", id, "AoD")}) but for \CX{} (\Sexpr{kruskal(IQU~id, "E5", c("HP", "LP"), "P2", id, "AoD")}).
+For the \ac{AoD} service, no significant difference between multi\-/episodic judgments is observed for \C9{} (\Sexpr{kruskal(IQU~id, "E5", c("HP", "LP"), "P1", id, "AoD")}) but for \CX{} (\Sexpr{kruskal(IQU~id, "E5", c("HP", "LP"), "P2", id, "AoD")}).
 However, a post-hoc test does not find significant differences for \CX{} ($p\geq0.055$). %\Sexpr{wilcox.pairwise.print(IQU~id, "E5", c("HP", "LP"), "P2", c(2, 5, 8, 11, 14), "AoD")}
-Comparing the multi\-/episodic judgments day-wise between the two conditions does not show significant differences.
+Comparing the multi\-/episodic judgments day-wise between the two conditions, does not seem to be different.
 
-For the \ac{VoD} service no significant differences are found for \C9{} (\Sexpr{kruskal(IQU~id, "E5", c("HP", "LP"), "P1", id, "VoD")}) but for \CX{} (\Sexpr{kruskal(IQU~id, "E5", c("HP", "LP"), "P2", id, "VoD")}).
+For the \ac{VoD} service, no significant differences are found for \C9{} (\Sexpr{kruskal(IQU~id, "E5", c("HP", "LP"), "P1", id, "VoD")}) but for \CX{} (\Sexpr{kruskal(IQU~id, "E5", c("HP", "LP"), "P2", id, "VoD")}).
 For \CX{}, a post-hoc test shows that the multi\-/episodic judgment after the 2nd\,day is significantly different to all following judgments ($p<0.006$). %\Sexpr{wilcox.pairwise.print(IQU~id, "E5", c("HP", "LP"), "P2", c(2, 5, 8, 11, 14), "VoD")}
-Between the two conditions only the judgments after the 2nd',day are significantly different (\Sexpr{wilcox(IQU~condition, "E5",  c("HP", "LP"), c("P1", "P2"), 2, "VoD")}).
+Between the two conditions only the judgments after the 2nd\,day are significantly different (\Sexpr{wilcox(IQU~condition, "E5",  c("HP", "LP"), c("P1", "P2"), 2, "VoD")}).
 
 \begin{table}[h]
 	\centering
