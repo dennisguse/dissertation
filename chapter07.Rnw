@@ -44,7 +44,7 @@ Then, the performance levels, procedure and content are presented.
 In the second part of this chapter, the results of the experiments are presented per hypothesis.
 
 \section{Design}
-For the investigation of multi\-/episodic perceived quality in one session, service types were selected that are based upon speech interaction or speech content.
+For the investigation of multi\-/episodic perceived quality in one session, service types were selected that are based on speech interaction or speech content.
 Using unimodal rather than multi-modal service types omits considering multi-modal integration for the quality formation process.
 In \E1{}, \EIIa{}, and \EIIb{} a speech telephony service is used.
 Two-party conversation is applied in \E1{} while third-party listening is used in \EIIa{} and \EIIb{}.
@@ -119,7 +119,7 @@ Here, the reference is used as approximation for the multi\-/episodic judgment a
 \C3{}, \C5{}, and \C6{} present an increasing number of \ac{LP} episodes directly before the multi\-/episodic judgment whereas \CIIa{} and \C4{} present the last episode before the multi\-/episodic judgment in \ac{HP}.
 
 \autoref{hypo:position} focuses on the position of the \ac{LP} episodes towards the following multi\-/episodic judgment.
-Based upon the recency effect, it is expected that increasing the number of \ac{HP} episodes before the multi\-/episodic judgment reduces the negative effect of previously presented \ac{LP} episodes.
+Based on the recency effect, it is expected that increasing the number of \ac{HP} episodes before the multi\-/episodic judgment reduces the negative effect of previously presented \ac{LP} episodes.
 This can be investigated by comparing the multi\-/episodic judgment of \C1{}, \CIIa{}, and \C3{} as well as \C4{} and \C5{} for one and two \ac{LP} usage episodes.
 
 In \autoref{hypo:consecutive} it is assumed that consecutive \ac{LP} episodes are preferred over the same number of non-consecutive \ac{LP} episodes, because the performance varies less often.
@@ -781,7 +781,7 @@ The final multi\-/episodic judgment of the \ac{VoD} service is significantly dif
 This shows that the two \ac{LP} episodes affect the multi\-/episodic judgment of this service.
 With regard to the speech telephony service no significant difference on the final multi\-/episodic judgment is found (\Sexpr{kruskal(IQU~condition, "E2b", performance_level, c("5a", "5a0", "5a4"), c(6), "telephony")}).
 
-As the multi\-/episodic judgments of the speech telephony service is not different if a \ac{VoD} service is present or not, it can be concluded that the speech telephony service was assessed based upon on the usage episodes with this service alone.
+As the multi\-/episodic judgments of the speech telephony service is not different if a \ac{VoD} service is present or not, it can be concluded that the speech telephony service was assessed based on on the usage episodes with this service alone.
 In fact, the participants could only use the content, degradation, and presentation modality to differentiate the two services, because both services were presented on the same device.
 Nevertheless, participants were able to attribute the usage episodes and their experience to each service.
 Thus, \autoref{hypo:independent} can be accepted.

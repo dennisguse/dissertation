@@ -41,7 +41,7 @@ For the multi\-/episodic assessment of \E1{} a speech telephony system for two-p
 In the first part of \E1{} a \ac{VoIP}\=/based system consisting of three computers was used.
 Those three computers were connected via Ethernet (CAT\=/5). 
 One computer (\emph{Lenovo~X61}) acted as a Server running the open-source telephony software \emph{Asterisk 11}\footnote{The Asterisk project is hosted under \url{http://www.asterisk.org}.}.
-Two \emph{Fujitsu~Lifebook~S761} were running each a custom client based upon \emph{PJSIP~2.1}\footnote{PJSIP is an open-source library for \ac{SIP}\=/based \ac{VoIP} (\url{http://www.pjsip.org}).}, which were connected via \ac{SIP} with the server.
+Two \emph{Fujitsu~Lifebook~S761} were running each a custom client based on \emph{PJSIP~2.1}\footnote{PJSIP is an open-source library for \ac{SIP}\=/based \ac{VoIP} (\url{http://www.pjsip.org}).}, which were connected via \ac{SIP} with the server.
 The custom client presented only a minimal user interface consisting of one button for call initiation and hangup, one button to set the current presence status, and an image presenting the presence status of the other client.
 Call initiation was only possible if both clients set their presence status to available.
 The two clients could not communicate directly with each other as all connections as the Asterisk server acted as proxy.
@@ -119,7 +119,7 @@ Storing the content locally rather downloading it, if needed, avoided the setup 
 In difference to the speech telephony service, this system achieved the desired performance levels in a reliable manner.
 
 \section{Experiment E5}
-Based upon the reliability of the simulation of a \ac{VoD} service for \E4{}, an \ac{AoD} service and \ac{VoD} service were selected for \E5{}, again simulating both services.
+Based on the reliability of the simulation of a \ac{VoD} service for \E4{}, an \ac{AoD} service and \ac{VoD} service were selected for \E5{}, again simulating both services.
 For this experiment ten \emph{Samsung~Galaxy~SII~(GT\=/I9210)} mobile phones running \emph{Android~2.3} were available.
 This mobile phone has a \unit[4.5]{inch} display with a resolution of \unit[480$x$800]{px}.
 A native Android application was implemented with the same functionality as the website used in \E4{}, \ie, storing media content locally while providing login functionality and initial buffering.
@@ -290,7 +290,7 @@ Finally, all multi\-/episodic judgments per experiment and condition are present
 %	2 & Rail Travel Information (German: Bahnauskunft) & p.\,18f \\
 %	3 & Theater Box office (German: Theaterkasse) & p.\,30f \\
 %	4 & Renting a car (German: Autovermietung) & p.\,26f \\
-%	5 & Information on Flights (German: Flugumbuchung) & Based upon p.\,24f \\
+%	5 & Information on Flights (German: Flugumbuchung) & Based on p.\,24f \\
 %	6 & Eye Specialist's Appointment (German: Arzttermin) & p.\,50f \\
 %	7 & Pizza Service (German: Pizzaservice) & p.\,38f \\
 %	8 & Flat to Let (German: Wohnungsanzeige) & p.\,46f \\

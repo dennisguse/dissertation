@@ -63,9 +63,9 @@ Precision decreases for later multi\-/episodic judgments.
 This chapter starts with an overview of observed effects in the conducted experiments that seem relevant for prediction of multi\-/episodic judgments.
 Following, model types are presented that seem suited for the prediction.
 The prediction accuracy for those model types is evaluated using only \E1{}, \EIIa{}, and \E6{}.
-Those experiments yielded a large and in itself consistent data set.\footnote{An approach towards modeling based upon the experiment of \citet{moller_single-call_2011} and \E5{} is published in \citet{guse_modelling_2014}. However, these two experiments are omitted here for modeling due to the limited effects on multi\-/episodic judgments.}
+Those experiments yielded a large and in itself consistent data set.\footnote{An approach towards modeling based on the experiment of \citet{moller_single-call_2011} and \E5{} is published in \citet{guse_modelling_2014}. However, these two experiments are omitted here for modeling due to the limited effects on multi\-/episodic judgments.}
 All other here presented experiments are not considered suitable for modeling, because only a very limited set of conditions was investigated.
-In difference to \citet{moller_single-call_2011}, who predicted multi\-/episodic judgments using episodic judgments per individual participant, the goal here is to predict the multi\-/episodic \ac{MOS} based upon the episodic \ac{MOS}.
+In difference to \citet{moller_single-call_2011}, who predicted multi\-/episodic judgments using episodic judgments per individual participant, the goal here is to predict the multi\-/episodic \ac{MOS} based on the episodic \ac{MOS}.
 Predicting individual judgments might be desirable, but the conducted experiments did not collect sufficient data to be able to explain individual differences.
 In fact, the defined\-/use method was applied, so a \ac{MOS} could be derived, reflecting the judgment of the \emph{average actor}.
 
@@ -102,7 +102,7 @@ In fact, the small difference might also be explainable by a recency effect.
 A peak effect is not considered for modeling, because such an effect could not be observed in \E1{} (\autoref{hypo:strength}).
 Even if in \C7{} of \E1{} a peak effect occurred, the influence on the multi\-/episodic judgment seems to be rather small.
 
-For one-session also the recovery of a negatively affected multi\-/episodic judgments was investigated (\autoref{hypo:recovery}).
+For one session also the recovery of a negatively affected multi\-/episodic judgments was investigated (\autoref{hypo:recovery}).
 %Here, additional \ac{HP} episodes are presented after a negatively affected multi\-/episodic judgment and the improvement assessed.
 This was studied with two conditions in \E1{}.
 Here, nine episodes were presented while non-\ac{HP} episodes were presented as the 5th and the \unit[6th]{episode}.
@@ -208,7 +208,7 @@ Overall, a model is preferable that explains a higher number of conditions rathe
 %In a perfect case a \ac{RMSD}~of~0, \ie, no deviation, and correlation coefficient~$R$~of~1, \ie, perfect linear relationship, should reached.
 
 \section{Evaluation}
-%The evaluation is conducted based upon individual judgments, \ie, for each participants, rather than on a \ac{MOS}.
+%The evaluation is conducted based on individual judgments, \ie, for each participants, rather than on a \ac{MOS}.
 %This is applied due to the limited conditions, number of participants, and between-subject design.
 
 In the following, the evaluation of the prediction accuracy for the model types is done individually for \E1{}, \EIIa{}, and \E6{}.
@@ -444,7 +444,7 @@ As both conditions are not judged different, this suggests that the difference i
 %One option to enhance the prediction model is to adjust the weight function to decrease the weight of one or more \ac{LP} episode(s) and increase the weight of one or more \ac{HP} episode(s).
 %The later is necessary to compensate for the lack of one \ac{HP} usage episodes/day.
 
-With regard to the applicability of a weighted average model this is problematic, as a model needs to produce a similar prediction based upon different input, \ie, one \ac{HP} episode/day and two \ac{LP} episodes/days (\C5{}) versus three \ac{LP} episodes/days (\C6{}).
+With regard to the applicability of a weighted average model this is problematic, as a model needs to produce a similar prediction based on different input, \ie, one \ac{HP} episode/day and two \ac{LP} episodes/days (\C5{}) versus three \ac{LP} episodes/days (\C6{}).
 As the multi-episodic judgment remains above the level of episodic judgments of \ac{LP} episodes, at least the last four episodes/days must be considered in the case of \C6{} while \C5{} only requires three episodes/days.
 For all three experiments, LI and WI require a larger $\mathit{w}$ to reach the best prediction accuracy for \C6{} compared to all other conditions.
 For \E1{} and \EIIa{} $\mathit{w}=3$~(LI) and $\mathit{w}=4$~(WI) are required for \C6{} while \C5{} achieves its minimum already at $\mathit{w}=2$~(LI) and $\mathit{w}=3$~(WI).
@@ -549,7 +549,7 @@ In fact, this overall reduction is rather small with regard to all conditions.
 
 
 \section{Conclusion}
-In this chapter two model types based upon the weighted average for predicting the multi\-/episodic \ac{MOS} using the episodic \acp{MOS} were presented.
+In this chapter two model types based on the weighted average for predicting the multi\-/episodic \ac{MOS} using the episodic \acp{MOS} were presented.
 It could be shown that a weighted average using either a window function or a linear weight function enables to predict multi\-/episodic judgments.
 Both model types perform similarly if only \ac{HP} usage episodes are presented.
 In fact, if \ac{LP} usages episodes were presented, both models outperform the unweighted average of all prior episodic judgments, \ie, a lower $\mathit{w}$ achieves a better prediction accuracy.
