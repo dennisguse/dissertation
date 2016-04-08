@@ -62,8 +62,8 @@ Precision decreases for later multi\-/episodic judgments.
 
 This chapter starts with an overview of observed effects in the conducted experiments that seem relevant for prediction of multi\-/episodic judgments.
 Following, model types are presented that seem suited for the prediction.
-The prediction accuracy for those model types is evaluated using only \E1{}, \EIIa{}, and \E6{}.
-Those experiments yielded a large and in itself consistent data set.\footnote{An approach towards modeling based on the experiment of \citet{moller_single-call_2011} and \E5{} is published in \citet{guse_modelling_2014}. However, these two experiments are omitted here for modeling due to the limited effects on multi\-/episodic judgments.}
+The prediction accuracy for these model types is evaluated using only \E1{}, \EIIa{}, and \E6{}.
+These experiments yielded a large and in itself consistent data set.\footnote{An approach towards modeling based on the experiment of \citet{moller_single-call_2011} and \E5{} is published in \citet{guse_modelling_2014}. However, these two experiments are omitted here for modeling due to the limited effects on multi\-/episodic judgments.}
 All other here presented experiments are not considered suitable for modeling, because only a very limited set of conditions was investigated.
 In difference to \citet{moller_single-call_2011}, who predicted multi\-/episodic judgments using episodic judgments per individual participant, the goal here is to predict the multi\-/episodic \ac{MOS} based on the episodic \ac{MOS}.
 Predicting individual judgments might be desirable, but the conducted experiments did not collect sufficient data to be able to explain individual differences.
