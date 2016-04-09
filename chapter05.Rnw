@@ -242,7 +242,7 @@ In this experiment, participants were equipped with a headset and a webcam to av
 
 \paragraph*{Results}
 This experiment was conducted with \unit[58]{participants}. % in Berlin, Germany. aging from 14 to \unit[64]{years}.
-Two participants were removed from further data analysis as the required bandwidth was not achieved.
+Two participants were removed from further data analysis as the required transmission bandwidth was not achieved.
 This left 10 participants for each condition 2..5 and \unit[16]{participants} for condition\,1.
 In the following, the data of \citet{moller_single-call_2011} is analyzed.
 Results are reported as \ac{MOS} ranging from 0~to~6, with standard deviation in brackets.\footnote{For details about the applied statistical tests see \autoref{method:statistic}.}
@@ -258,6 +258,26 @@ An exemplary box plot of episodic judgments is shown for condition\,4 in \autore
 	\caption[\citet{moller_single-call_2011}: box plot of episodic judgments for condition~4.]{Box plot of episodic judgments for condition~4 of \citet{moller_single-call_2011} (own illustration).}
 	\label{img:state:MOLLERboxplot}
 \end{figure}
+
+\begin{table}[h]
+	\centering
+	\caption[\citet{moller_single-call_2011}: episodic judgments and multi\-/episodic judgments.]{Episodic judgments and multi\-/episodic judgments by \citet{moller_single-call_2011}. Reported as \ac{MOS} with standard deviation in brackets.}
+	\label{tab:state:MOLLERepisodic}
+	\begin{tabular}{c||c|c|c||c|c|c}
+	\multirow{2}{*}{\rotatebox{90}{Cond.}} & \multicolumn{3}{c||}{Episodic Judgments} &  \multicolumn{3}{c}{Multi-episodic Judgments} \\
+	  & \ac{HP}	& \ac{MP} & \ac{LP} & 2nd	day & 7th day & 12th day \\
+	\midrule
+	1 			& \Sexpr{mos_qu_with_sd_by_condition("MOELLER", "HP", "S5")} & - & - & \Sexpr{mos_iqu_with_sd_by_condition("MOELLER", "S5", 4)} & \Sexpr{mos_iqu_with_sd_by_condition("MOELLER", "S5", 14)} & \Sexpr{mos_iqu_with_sd_by_condition("MOELLER", "S5", 24)} \\
+	\hline
+	2 			& \Sexpr{mos_qu_with_sd_by_condition("MOELLER", "HP", "S3")} & - & \Sexpr{mos_qu_with_sd_by_condition("MOELLER", "LP", "S3")} & \Sexpr{mos_iqu_with_sd_by_condition("MOELLER", "S3", 4)} & \Sexpr{mos_iqu_with_sd_by_condition("MOELLER", "S3", 14)} & \Sexpr{mos_iqu_with_sd_by_condition("MOELLER", "S3", 24)} \\
+	\hline
+	3 			& \Sexpr{mos_qu_with_sd_by_condition("MOELLER", "HP", "S1")} & - & \Sexpr{mos_qu_with_sd_by_condition("MOELLER", "LP", "S1")} & \Sexpr{mos_iqu_with_sd_by_condition("MOELLER", "S1", 4)} & \Sexpr{mos_iqu_with_sd_by_condition("MOELLER", "S1", 14)} & \Sexpr{mos_iqu_with_sd_by_condition("MOELLER", "S1", 24)} \\
+	\hline
+	4 			& \Sexpr{mos_qu_with_sd_by_condition("MOELLER", "HP", "S2")} & - & \Sexpr{mos_qu_with_sd_by_condition("MOELLER", "LP", "S2")} & \Sexpr{mos_iqu_with_sd_by_condition("MOELLER", "S2", 4)} & \Sexpr{mos_iqu_with_sd_by_condition("MOELLER", "S2", 14)} & \Sexpr{mos_iqu_with_sd_by_condition("MOELLER", "S2", 24)} \\
+	\hline
+	5 			& -	& \Sexpr{mos_qu_with_sd_by_condition("MOELLER", "MP", "S4")} & \Sexpr{mos_qu_with_sd_by_condition("MOELLER", "LP", "S4")} & \Sexpr{mos_iqu_with_sd_by_condition("MOELLER", "S4", 4)} & \Sexpr{mos_iqu_with_sd_by_condition("MOELLER", "S4", 14)} & \Sexpr{mos_iqu_with_sd_by_condition("MOELLER", "S4", 24)} \\
+	\end{tabular}
+\end{table}
 
 \subparagraph*{Episodic Judgments}
 For all conditions, the episodic judgments reflect the applied episodic performance level, \ie, \ac{HP} and \ac{MP} are judged to be better than \ac{LP}.
@@ -281,26 +301,6 @@ Here, an increase of \unit[0.3]{pt} of \ac{MOS} is reported over all five condit
 In addition, it is reported that the judgments of \ac{HP} episodes which follow \ac{LP} episodes, seem to be negatively affected by the preceding \ac{LP} episodes.
 \citet{moller_single-call_2011} suggested a recovery period of up to two usage episodes.
 A statistical analysis is omitted due to the relative small (potential) difference between episodic judgments, the high standard deviation, and the small number of participants.
-
-\begin{table}
-	\centering
-	\caption[\citet{moller_single-call_2011}: episodic judgments and multi\-/episodic judgments.]{Episodic judgments and multi\-/episodic judgments by \citet{moller_single-call_2011}. Reported as \ac{MOS} with standard deviation in brackets.}
-	\label{tab:state:MOLLERepisodic}
-	\begin{tabular}{c||c|c|c||c|c|c}
-	\multirow{2}{*}{\rotatebox{90}{Cond.}} & \multicolumn{3}{c||}{Episodic Judgments} &  \multicolumn{3}{c}{Multi-episodic Judgments} \\
-	  & \ac{HP}	& \ac{MP} & \ac{LP} & 2nd	day & 7th day & 12th day \\
-	\midrule
-	1 			& \Sexpr{mos_qu_with_sd_by_condition("MOELLER", "HP", "S5")} & - & - & \Sexpr{mos_iqu_with_sd_by_condition("MOELLER", "S5", 4)} & \Sexpr{mos_iqu_with_sd_by_condition("MOELLER", "S5", 14)} & \Sexpr{mos_iqu_with_sd_by_condition("MOELLER", "S5", 24)} \\
-	\hline
-	2 			& \Sexpr{mos_qu_with_sd_by_condition("MOELLER", "HP", "S3")} & - & \Sexpr{mos_qu_with_sd_by_condition("MOELLER", "LP", "S3")} & \Sexpr{mos_iqu_with_sd_by_condition("MOELLER", "S3", 4)} & \Sexpr{mos_iqu_with_sd_by_condition("MOELLER", "S3", 14)} & \Sexpr{mos_iqu_with_sd_by_condition("MOELLER", "S3", 24)} \\
-	\hline
-	3 			& \Sexpr{mos_qu_with_sd_by_condition("MOELLER", "HP", "S1")} & - & \Sexpr{mos_qu_with_sd_by_condition("MOELLER", "LP", "S1")} & \Sexpr{mos_iqu_with_sd_by_condition("MOELLER", "S1", 4)} & \Sexpr{mos_iqu_with_sd_by_condition("MOELLER", "S1", 14)} & \Sexpr{mos_iqu_with_sd_by_condition("MOELLER", "S1", 24)} \\
-	\hline
-	4 			& \Sexpr{mos_qu_with_sd_by_condition("MOELLER", "HP", "S2")} & - & \Sexpr{mos_qu_with_sd_by_condition("MOELLER", "LP", "S2")} & \Sexpr{mos_iqu_with_sd_by_condition("MOELLER", "S2", 4)} & \Sexpr{mos_iqu_with_sd_by_condition("MOELLER", "S2", 14)} & \Sexpr{mos_iqu_with_sd_by_condition("MOELLER", "S2", 24)} \\
-	\hline
-	5 			& -	& \Sexpr{mos_qu_with_sd_by_condition("MOELLER", "MP", "S4")} & \Sexpr{mos_qu_with_sd_by_condition("MOELLER", "LP", "S4")} & \Sexpr{mos_iqu_with_sd_by_condition("MOELLER", "S4", 4)} & \Sexpr{mos_iqu_with_sd_by_condition("MOELLER", "S4", 14)} & \Sexpr{mos_iqu_with_sd_by_condition("MOELLER", "S4", 24)} \\
-	\end{tabular}
-\end{table}
 
 \subparagraph*{Multi-episodic Judgments}
 In terms of multi\-/episodic judgments, the result of this experiment are limited.
