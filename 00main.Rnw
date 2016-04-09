@@ -94,10 +94,12 @@
 %********************************************************************
 % Mainmatter
 %*******************************************************
+\cleardoublepage
 \pagenumbering{arabic}\setcounter{page}{1}
 \include{chapter01}
 
 %\part{Related Work and State-of-the-Art}\cleardoublepage %TODO Make one Chapter to rule them all!
+\cleardoublepage
 \chapter{Related Work}\label{chap:02}
 \input{chapter02}
 \input{chapter03}
@@ -105,14 +107,13 @@
 \input{chapter05}
 
 %\part{Towards Multi-episodic \ac{QoE}}\cleardoublepage
-\include{chapter06}
+\cleardoublepage\include{chapter06}
 
-\include{chapter07}
-\include{chapter08}
-\include{chapter09}
+\cleardoublepage\include{chapter07}
+\cleardoublepage\include{chapter08}
+\cleardoublepage\include{chapter09}
 
-\include{chapter10}
-\cleardoublepage
+\cleardoublepage\include{chapter10}
 
 \newpage
 \thispagestyle{empty}
@@ -144,7 +145,7 @@ True.
 \renewcommand{\theHsubsection}{\roman{chapter}.\roman{section}.\roman{subsection}}
 \renewcommand{\thesubsection}{\roman{chapter}.\roman{section}.\roman{subsection}}
 \pagenumbering{roman}\setcounter{page}{1}
-\part*{Appendix}\label{chap:appendix}\cleardoublepage
+\part*{Appendix}\label{chap:appendix}
 
 \include{appendix}
 
