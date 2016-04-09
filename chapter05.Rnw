@@ -284,12 +284,12 @@ For all conditions, the episodic judgments reflect the applied episodic performa
 It can thus be concluded that the technical setup worked as desired.
 %Condition 5 is evaluated alone as the absence of \ac{HP} might affect episodic and multi\-/episodic judgments
 However, comparing the episodic judgments for \ac{HP} episodes conditions\,1..4 show significant differences (\Sexpr{kruskal(QU~condition, "MOELLER", "HP", c("S1", "S2", "S3", "S5"))}).
-A post-hoc test, \ie, the pairwise Wilcoxon rank-sum test with Holms' correction, shows that the episodic judgments for \ac{HP} are not significantly different between condition\,3 and condition\,4 ($p=0.137$), but all other conditions are significantly different to each other ($p\leq0.04$). %wilcox.pairwise.print(QU~condition, "MOELLER", "HP", c("S1", "S2", "S3", "S5"))
+A post-hoc test (pairwise Wilcoxon rank-sum test with Holms' correction) shows that the episodic judgments for \ac{HP} are not significantly different between condition\,3 and condition\,4 ($p=0.137$), but all other conditions are significantly different to each other ($p\leq0.04$). %wilcox.pairwise.print(QU~condition, "MOELLER", "HP", c("S1", "S2", "S3", "S5"))
 Episodic judgments of \ac{LP} are not significantly different between conditions\,2..4 (\Sexpr{kruskal(QU~condition, "MOELLER", "LP", c("S1", "S2", "S3"))}).
-The observed difference for episodic judgments of \ac{HP} are relatively small and are likely an artifact of the applied between-subject design.
+The observed difference for episodic judgments of \ac{HP} are relatively small and are likely an artifact of the between-subject design.
 
 For condition\,2..4, a significant difference between the two performance levels is observed (\Sexpr{wilcox(QU~performance_level, "MOELLER", c("HP", "LP"), c("S1", "S2", "S3"))}).
-It must be noted that although \ac{HP} and \ac{LP} are different, \ac{LP} was still judged approximately as \emph{fair}.
+It must be noted that although \ac{HP} and \ac{LP} were judged to be different, \ac{LP} was still judged approximately as \emph{fair}.
 It thus does not seem to be perceived as a \emph{severe} degradation.
 With regard to condition\,5, the episodic judgments of \ac{LP} episodes are close to condition\,2..4.
 In fact, \ac{MP} judgments are only slightly lower than \ac{HP} judgments for condition~1..4.
@@ -299,7 +299,7 @@ The results show that the defined-use method could be applied successfully, sinc
 \citet{moller_single-call_2011} noted that episodic judgments of \ac{HP} episodes have a tendency to slowly increase over the usage period.
 Here, an increase of \unit[0.3]{pt} of \ac{MOS} is reported over all five conditions.
 In addition, it is reported that the judgments of \ac{HP} episodes which follow \ac{LP} episodes, seem to be negatively affected by the preceding \ac{LP} episodes.
-\citet{moller_single-call_2011} suggested a recovery period of up to two usage episodes.
+\citet{moller_single-call_2011} suggested a recovery period of up to two episodes for episodic judgments.
 A statistical analysis is omitted due to the relative small (potential) difference between episodic judgments, the high standard deviation, and the small number of participants.
 
 \subparagraph*{Multi-episodic Judgments}
@@ -308,7 +308,7 @@ Here, the multi\-/episodic judgments are rather close, ranging only from \Sexpr{
 A significant difference between multi\-/episodic judgments per condition is only found for condition\,4 (\Sexpr{kruskal(IQU~id, "MOELLER", c("LP", "HP"), "S2", c(4, 14, 24))}).
 In all other conditions, no significant difference is observed.
 For condition\,4, a post-hoc test (pairwise Wilcoxon rank-sum test with Holms' correction) shows that the multi\-/episodic judgment on the 2nd\,day is significantly different from the judgment after the 7th\,day (\Sexpr{wilcox.pairwise.print(IQU~id, "MOELLER", c("LP", "HP"), "S2", c(4, 14, 24))[1,1]}).
-However, the judgment after the 2nd\,day is not significantly different from the judgment after the 12th\,day, in addition to the judgment after the 7th\,day is not significantly different from the 12th\,day (each \Sexpr{wilcox.pairwise.print(IQU~id, "MOELLER", c("LP", "HP"), "S2", c(4, 14, 24))[2,2]}).
+However, the judgment after the 2nd\,day is not significantly different from the judgment after the 12th\,day, and the judgment after the 7th\,day is not significantly different from the 12th\,day (each \Sexpr{wilcox.pairwise.print(IQU~id, "MOELLER", c("LP", "HP"), "S2", c(4, 14, 24))[2,2]}).
 In fact, an absolute comparison with regard to multi\-/episodic judgments between the five conditions conducted must be omitted due to the observed differences for episodic judgments between conditions, \ie, an artifact that might be attributed to the between-subject design.
 It must thus be concluded that only condition\,4 resulted in an observable, although rather small, effect on multi\-/episodic judgments, due to the presentation of the 3rd and 4th\,day in \ac{LP}.
 
@@ -331,7 +331,7 @@ It must thus be concluded that only condition\,4 resulted in an observable, alth
 \subparagraph{Discussion}
 \citet{moller_single-call_2011} successfully applied the defined-use method for the assessment of multi\-/episodic perceived quality in a field experiment with a usage period of \unit[12]{days}.
 The episodic quality judgments are consistent with the desired performance levels, showing that the used service could provide the performance levels in a reliable manner.
-However, the multi\-/episodic perceived quality judgments only provide limited insight, since the differences between conditions are rather small.
+However, the multi\-/episodic judgments only provide limited insight, since the differences between conditions are rather small.
 This might be due to the fact that \ac{LP} did not represent a \emph{severe} degradation, or that the number of degraded usage episodes was too low.
 
 Alongside this, a difficulty with this experiment is that no useful details about the technical parameters were provided.
@@ -341,7 +341,7 @@ Also, recordings or monitoring data about the actual network transmission is not
  
 Another factor that might have influenced the results is the usage of a widely known service.
 This might have influenced expectations, due to prior knowledge and experiences with Skype.
-Furthermore, participants were allowed in this experiment to use the service for personal communication beside the defined usage episodes.
+Furthermore, participants were allowed in this experiment to use the service for personal communication beside the defined usage pattern.
 Some participants might have used the service more often than others.
 This might have affected their episodic and multi\-/episodic quality judgments.
 %Selecting a two\=/party conversation (\ie, \ac{SCS}) might have been another issue.
@@ -354,7 +354,7 @@ Although participants used the service in their home environment on their own, \
 
 \section{Conclusion}
 Multi-episodic perceived quality has so far only received limited attention.
-The work of \citet{duncanson_average_1969} and \citet{moller_single-call_2011} form a basis for the investigation of the multi\-/episodic quality formation process.
+The work of \citet{duncanson_average_1969} and \citet{moller_single-call_2011} form a basis for the investigation of the formation process of multi\-/episodic quality.
 In particular, the defined-use method developed and tested by \citet{moller_single-call_2011} seems suitable for this investigation.
 However, neither \citet{duncanson_average_1969} nor \citet{moller_single-call_2011} were able to investigate the formation process of multi\-/episodic perceived quality in detail.
 
