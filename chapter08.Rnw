@@ -150,7 +150,6 @@ First, the episodic judgments are evaluated for the \ac{VoD} service followed by
 An analysis of the speech telephony service is omitted here, as the implemented setup failed to provide the desired performance levels. 
 Thus, a \ac{MOS} evaluation cannot be conducted as participants were not exposed to the same multi\-/episodic condition.
 \autoref{img:field:E4conditionA1TELboxplot} shows the box plot for the episodic judgments for the \ac{VoD} service in \C9{}.
-Episodic judgments and multi\-/episodic judgments are shown in \autoref{tab:field:e4results}.
 In the following, first the episodic judgments are analyzed followed by the analysis of the multi\-/episodic judgments.
 
 \begin{figure}
@@ -161,6 +160,18 @@ ggplot_timeseries_create(subset(timeseries, experiment=="E4a" & condition=="A1" 
 	\caption{Multiple days (\E4{}): episodic judgments for the \ac{VoD} service in \C9{}.}
 	\label{img:field:E4conditionA1TELboxplot}
 \end{figure}
+
+\paragraph*{Episodic Judgments}
+The episodic judgments for \ac{HP} episodes between the two conditions are significantly different (\Sexpr{wilcox(QU~condition, "E4a",  "HP", c("A0", "A1"), id, "VoD")}).
+\C0{} resulted in a \ac{MOS} of \Sexpr{mos_qu_with_sd_by_condition("E4a", "HP", "A1", c(1:15), "VoD")} and \C9{} resulted in \Sexpr{mos_qu_with_sd_by_condition("E4a", "HP", "A0", c(1:15), "VoD")}. 
+However, the difference is rather small and likely an artifact due to the between-subject design.
+For \C0{}, a slight increase in episodic judgments over the usage period is indicated.
+The first episode is judged with \Sexpr{mos_qu_with_sd_by_condition("E4a", "HP", c("A0", "A1"), c(1), "VoD")} while the last episode reaches \Sexpr{mos_qu_with_sd_by_condition("E4a", "HP", c("A0", "A1"), c(14), "VoD")}.
+However, this increase is not significant (\Sexpr{wilcox(QU~id, "E4a",  "HP", c("A0"), c(1, 14), "VoD")}).
+
+The episodic judgments of \ac{LP} for \C9{} resulted in \Sexpr{mos_qu_with_sd_by_condition("E4a", "LP", "A1", c(1:15), "VoD")}.
+For \C9{}, the two performance levels are significantly different (\Sexpr{wilcox(QU~performance_level, "E4a",  c("HP", "LP"), "A1", id, "VoD")}).
+However, the difference is smaller than desired as only a reduction of approximately \unit[1]{pt} is introduced.
 
 \begin{table}[h]
 	\centering
@@ -179,18 +190,6 @@ ggplot_timeseries_create(subset(timeseries, experiment=="E4a" & condition=="A1" 
 	14 & \Sexpr{mos_iqu_with_sd_by_condition("E4a", "A0", 14, "VoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E4a", "A1", 14, "VoD")} & \Sexpr{wilcox(IQU~condition, "E4a", unique(timeseries[["performance_level"]]), unique(timeseries[["condition"]]), 14, "VoD")}\\
 	\end{tabular}
 \end{table}
-
-\paragraph*{Episodic Judgments}
-The episodic judgments for \ac{HP} episodes between the two conditions are significantly different (\Sexpr{wilcox(QU~condition, "E4a",  "HP", c("A0", "A1"), id, "VoD")}).
-\C0{} resulted in a \ac{MOS} of \Sexpr{mos_qu_with_sd_by_condition("E4a", "HP", "A1", c(1:15), "VoD")} and \C9{} resulted in \Sexpr{mos_qu_with_sd_by_condition("E4a", "HP", "A0", c(1:15), "VoD")}. 
-However, the difference is rather small and likely an artifact due to the between-subject design.
-For \C0{}, a slight increase in episodic judgments over the usage period is indicated.
-The first episode is judged with \Sexpr{mos_qu_with_sd_by_condition("E4a", "HP", c("A0", "A1"), c(1), "VoD")} while the last episode reaches \Sexpr{mos_qu_with_sd_by_condition("E4a", "HP", c("A0", "A1"), c(14), "VoD")}.
-However, this increase is not significant (\Sexpr{wilcox(QU~id, "E4a",  "HP", c("A0"), c(1, 14), "VoD")}).
-
-The episodic judgments of \ac{LP} for \C9{} resulted in \Sexpr{mos_qu_with_sd_by_condition("E4a", "LP", "A1", c(1:15), "VoD")}.
-For \C9{}, the two performance levels are significantly different (\Sexpr{wilcox(QU~performance_level, "E4a",  c("HP", "LP"), "A1", id, "VoD")}).
-However, the difference is smaller than desired as only a reduction of approximately \unit[1]{pt} is introduced.
 
 \paragraph*{Multi-episodic Judgments}
 The multi\-/episodic judgments for the \ac{VoD} service are shown in \autoref{tab:field:e4results}.
