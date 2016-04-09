@@ -694,7 +694,7 @@ Thus, \autoref{hypo:strength} must be left unanswered.
 \subsubsection{\autoref{hypo:recovery}: Recovery after \acs{LP} Episodes}\label{lab:result:recovery}
 In \autoref{hypo:recovery}, the recovery of the multi\-/episodic judgments is investigated.
 This is investigated in \E1{} by comparing \CVb{} and \C7{}.
-Both present nine episodes while non-\ac{HP} is presented for the 5th and 6th\,episode.
+Both present 9 episodes while non-\ac{HP} is presented for the 5th and 6th\,episode.
 \autoref{tab:lab:hyporecovery} shows the three multi\-/episodic judgments of these conditions.
 
 \begin{table}[h!]

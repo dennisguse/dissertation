@@ -105,7 +105,7 @@ Even if in \C7{} of \E1{} a peak effect occurred, the influence on the multi\-/e
 For one session, also the recovery of a negatively affected multi\-/episodic judgments was investigated (\autoref{hypo:recovery}).
 %Here, additional \ac{HP} episodes are presented after a negatively affected multi\-/episodic judgment and the improvement assessed.
 This was studied with two conditions in \E1{}.
-Here, nine episodes were presented while non-\ac{HP} episodes were presented as the 5th and the \unit[6th]{episode}.
+Here, 9 episodes were presented while non-\ac{HP} episodes were presented as the 5th and the \unit[6th]{episode}.
 The multi\-/episodic judgment after the \unit[6th]{episode} showed a negative effect, but the judgments after the 3rd and \unit[9th]{episode} were not significantly different.
 However, in both conditions a slight negative impact is indicated on the final multi\-/episodic judgment.
 This finding can be explained by a recency effect but also due to the overall increased number of \ac{HP} episodes.
@@ -450,7 +450,7 @@ For all three experiments, LI and WI require a larger $\mathit{w}$ to reach the 
 For \E1{} and \EIIa{}, $\mathit{w}=3$~(LI) and $\mathit{w}=4$~(WI) are required for \C6{} while \C5{} achieves its minimum already at $\mathit{w}=2$~(LI) and $\mathit{w}=3$~(WI).
 For \E6{}, $\mathit{w}=7$~(LI) and $\mathit{w}=9$~(WI) are required for \C6{} while \C5{} achieves its minimum at $\mathit{w}=4$~(LI) and $\mathit{w}=7$~(WI).
 It must be noted that the optimal value(s) of $\mathit{w}$ for \C5{} are identical to the optimal $\mathit{w}$ for all conditions for LI and WI.
-Thus, the overall prediction performance for both weighting functions can be improved if $\mathit{w}$ can be reduced to this value in case of \C6{}.
+Thus, the overall prediction performance for both weight functions can be improved if $\mathit{w}$ can be reduced to this value in case of \C6{}.
 Although the underlying reason for the observed saturation effect could not be deduced, this can be achieved by \emph{modifying} the episodic judgment(s) of the 4th\,episode/day for \C6{}, so it resembles \C5{} with regard to episodic judgments.
 This modification can be achieved by replacing these judgment(s) by the average of episodic judgment of \ac{HP} episodes. 
 %However, a simpler approach can be derived by assuming that one of the \ac{LP} usage episodes/days did not only not contribute to the multi\-/episodic judgment, but rather is considered as \ac{HP} for the judgment of multi\-/episodic perceived quality, \ie, that \C5{} and \C6{} are not considered differently with regard to the formation process.
