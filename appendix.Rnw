@@ -34,7 +34,7 @@ The system was calibrated using a \emph{HEAD acoustics} head and torso simulator
 The stimuli were generated with the \textsc{\lowercase{ITU\=/T}~\lowercase{STL2009}} tools \citep{itu-t_recommendation_g.191_software_2010} and the audio-processing tool \textsc{\lowercase{SOX}}\footnote{The \textsc{\lowercase{SOX}} project is hosted under \url{http://sox.sourceforge.net}.}.
 The \textsc{\lowercase{STL2009}} were used for coding G.711, G.722~(Mode~1), and inserting packet-loss for G.722 (Mode~1), whereas \textsc{\lowercase{SOX}} was used for coding \textsc{\lowercase{GSM\=/FR}}, and \textsc{\lowercase{LPC\=/10}} as well as filtering wideband, narrowband, and white noise.
 
-\subsection{Two-party Speech telephony}
+\subsection{Two-party Speech Telephony}
 For the multi\-/episodic assessment of \E1{}, a speech telephony system for two-party conversations was required.
 
 \paragraph*{Network-based Setup}
