@@ -150,7 +150,7 @@ First, the episodic judgments are evaluated for the \ac{VoD} service followed by
 An analysis of the speech telephony service is omitted here, as the implemented setup failed to provide the desired performance levels. 
 Thus, a \ac{MOS} evaluation cannot be conducted as participants were not exposed to the same multi\-/episodic condition.
 \autoref{img:field:E4conditionA1TELboxplot} shows the box plot for the episodic judgments for the \ac{VoD} service in \C9{}.
-
+Episodic judgments and multi\-/episodic judgments are shown in \autoref{tab:field:e4results}.
 In the following, first the episodic judgments are analyzed followed by the analysis of the multi\-/episodic judgments.
 
 \begin{figure}
@@ -161,6 +161,24 @@ ggplot_timeseries_create(subset(timeseries, experiment=="E4a" & condition=="A1" 
 	\caption{Multiple days (\E4{}): episodic judgments for the \ac{VoD} service in \C9{}.}
 	\label{img:field:E4conditionA1TELboxplot}
 \end{figure}
+
+\begin{table}[h]
+	\centering
+	\caption[Multiple days (\E4{}): multi\-/episodic judgments for the \acs{VoD} service]{Multiple days (\E4{}): multi\-/episodic judgments for the \ac{VoD} service. Reported as \ac{MOS} with standard deviation in brackets.}
+	\label{tab:field:e4results}
+	\begin{tabular}{c|c|c|c}
+	\multirow{2}{*}{Day} & \multicolumn{3}{c}{Multi-episodic Judgment} \\
+	& \C0{} & \C9{} & Statistic\\
+	\midrule
+	4 & \Sexpr{mos_iqu_with_sd_by_condition("E4a", "A0", 4, "VoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E4a", "A1", 4, "VoD")} & \Sexpr{wilcox(IQU~condition, "E4a", unique(timeseries[["performance_level"]]), unique(timeseries[["condition"]]), 4, "VoD")} \\
+	\hline
+	7 & \Sexpr{mos_iqu_with_sd_by_condition("E4a", "A0", 7, "VoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E4a", "A1", 7, "VoD")} & \Sexpr{wilcox(IQU~condition, "E4a", unique(timeseries[["performance_level"]]), unique(timeseries[["condition"]]), 7, "VoD")}\\
+	\hline
+	10 & \Sexpr{mos_iqu_with_sd_by_condition("E4a", "A0", 10, "VoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E4a", "A1", 10, "VoD")} & \Sexpr{wilcox(IQU~condition, "E4a", unique(timeseries[["performance_level"]]), unique(timeseries[["condition"]]), 10, "VoD")} \\
+	\hline
+	14 & \Sexpr{mos_iqu_with_sd_by_condition("E4a", "A0", 14, "VoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E4a", "A1", 14, "VoD")} & \Sexpr{wilcox(IQU~condition, "E4a", unique(timeseries[["performance_level"]]), unique(timeseries[["condition"]]), 14, "VoD")}\\
+	\end{tabular}
+\end{table}
 
 \paragraph*{Episodic Judgments}
 The episodic judgments for \ac{HP} episodes between the two conditions are significantly different (\Sexpr{wilcox(QU~condition, "E4a",  "HP", c("A0", "A1"), id, "VoD")}).
@@ -179,24 +197,6 @@ The multi\-/episodic judgments for the \ac{VoD} service are shown in \autoref{ta
 For \C0{} no significant differences in multi\-/episodic judgments are found between the four measurements (\Sexpr{kruskal(IQU~id, "E4a", c("HP", "LP"), "A0", unique(timeseries[["id"]]), "VoD")}).
 Also for \C9{}, no significant differences are observed (\Sexpr{kruskal(IQU~id, "E4a", c("HP", "LP"), "A1", unique(timeseries[["id"]]), "VoD")}).
 In fact, even between the two conditions no differences between multi\-/episodic judgments are indicated  (\cf, \autoref{tab:field:e4results}).
-
-\begin{table}
-	\centering
-	\caption[Multiple days (\E4{}): multi\-/episodic judgments for the \acs{VoD} service]{Multiple days (\E4{}): multi\-/episodic judgments for the \ac{VoD} service. Reported as \ac{MOS} with standard deviation in brackets.}
-	\label{tab:field:e4results}
-	\begin{tabular}{c|c|c|c}
-	\multirow{2}{*}{Day} & \multicolumn{3}{c}{Multi-episodic Judgment} \\
-	& \C0{} & \C9{} & Statistic\\
-	\midrule
-	4 & \Sexpr{mos_iqu_with_sd_by_condition("E4a", "A0", 4, "VoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E4a", "A1", 4, "VoD")} & \Sexpr{wilcox(IQU~condition, "E4a", unique(timeseries[["performance_level"]]), unique(timeseries[["condition"]]), 4, "VoD")} \\
-	\hline
-	7 & \Sexpr{mos_iqu_with_sd_by_condition("E4a", "A0", 7, "VoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E4a", "A1", 7, "VoD")} & \Sexpr{wilcox(IQU~condition, "E4a", unique(timeseries[["performance_level"]]), unique(timeseries[["condition"]]), 7, "VoD")}\\
-	\hline
-	10 & \Sexpr{mos_iqu_with_sd_by_condition("E4a", "A0", 10, "VoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E4a", "A1", 10, "VoD")} & \Sexpr{wilcox(IQU~condition, "E4a", unique(timeseries[["performance_level"]]), unique(timeseries[["condition"]]), 10, "VoD")} \\
-	\hline
-	14 & \Sexpr{mos_iqu_with_sd_by_condition("E4a", "A0", 14, "VoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E4a", "A1", 14, "VoD")} & \Sexpr{wilcox(IQU~condition, "E4a", unique(timeseries[["performance_level"]]), unique(timeseries[["condition"]]), 14, "VoD")}\\
-	\end{tabular}
-\end{table}
 
 \subsection{Discussion}
 \E4{} was only partly successful.

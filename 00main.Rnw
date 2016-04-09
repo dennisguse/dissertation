@@ -64,7 +64,7 @@
 
 \usepackage[shortcuts]{extdash}
 
-\def\UrlFont{\em}
+\def\UrlFont{\color{black}\em}
 % ********************************************************************
 % GO!GO!GO! MOVE IT!
 %*******************************************************
