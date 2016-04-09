@@ -118,7 +118,7 @@ The multi\-/episodic perceived quality for each service was assessed after the 4
 For the speech telephony service, the speech codec G.722 was used \ac{HP} as well as \ac{LP} with a packet-length of \unit[20]{ms}.
 Neither \acs{FEC} nor \acs{PLC} were applied.
 For \ac{LP}, a random packet-loss of 5\% was inserted in addition.
-For the \ac{VoD} service, the video was encoded with H.264 at a resolution of \unit[720$x$576]{px} and the audio channel with \ac{AAC} (\unit[48]{kHz}, \unit[165]{kbit/s}, stereo).
+For the \ac{VoD} service, the video was encoded with H.264 at a resolution of \unit[720$x$576]{px} and the audio channel with \acs{AAC} (\unit[48]{kHz}, \unit[165]{kbit/s}, stereo).
 The two performance levels for this service differed only in the video encoding bandwidth.
 For \ac{HP}, a bandwidth of \unit[2]{Mbit/s} and for \ac{LP} a bandwidth of \unit[125]{kbit/s} was applied.
 
@@ -238,8 +238,8 @@ In difference to \E4{}, the two services were presented in different conditions.
 For this experiment, all necessary equipment, \ie, a mobile phone and a pair of headphones, was provided to the participants.
 This eliminates differences of equipment as disturbing factor and also reduces the complexity of the setup.
 For the \ac{AoD} service, an audio book with speech-only content was used.
-For \ac{HP}, this was encoded with \ac{AAC} (\unit[44.1]{kHz}, \unit[320]{kbit/s}, stereo) and for \ac{LP} in \textsc{\lowercase{GSM\=/FR}}.
-Here, the audio book \emph{"City of the Beats"} from Isabelle Allende was used as in \E3{}. 
+For \ac{HP}, this was encoded with \acs{AAC} (\unit[44.1]{kHz}, \unit[320]{kbit/s}, stereo) and for \ac{LP} in \textsc{\lowercase{GSM\=/FR}}.
+Here, the audio book \emph{City of the Beats} from Isabelle Allende was used as in \E3{}. 
 The audio book was cut into individual scenes with a duration of \unit[12]{min} to \unit[17]{min} per episode.
 For the \ac{VoD} service, scenes of \emph{The Big Bang Theory} (Season One, BluRay Version, German) were used.
 Here, meaningful scenes were cut, resulting in a duration of \unit[8]{min} to \unit[12]{min} per episode.

@@ -238,7 +238,7 @@ In all experiments a diotic representation is provided using a pair of headphone
 The experimental setups are described in the \appendix{}~\ref{appendix:setups} (p.\,\pageref{appendix:setups}).
 
 \subsection{Procedure}\label{sec:training}
-The one-session experiments consist of 4\,stages with an overall duration of up to \unit[90]{min}.
+The one-session experiments consisted of 4\,stages with an overall duration of up to \unit[90]{min}.
 In the \emph{first stage}, participants were informed about the experiment, the task(s), and the experimental procedure.
 In this stage, participants reported demographic data.
 
@@ -255,7 +255,7 @@ In each stimuli, two sentences were presented by one human speaker.
 These stimuli contained different signal bandwidths (wideband, narrowband), codecs (G.711, G.722, \textsc{\lowercase{GSM\=/FR}}, \textsc{\lowercase{LPC\=/10}}), white noise (fullband, no codec), and random packet-loss (2\%, and 5\%; G.722, Mode~1, no \acs{PLC}).
 In \EIIb{}, also degradations for the \ac{VoD} service were presented.
 22\,videos with an approximate duration of \unit[8]{s} were used.
-Here, only the \ac{QP}~factor was varied for H.264 (0, 42, 47, and 50).
+Here, only the \acs{QP}~factor was varied for H.264 (0, 42, 47, and 50).
 After the presentation of a stimulus, the perceived quality was assessed using the 7\=/point \ac{CoCR} scale. %\footnote{The question was phrased in German: "Wie bewerten Sie die Gesamtqualität der gehörten Audioaufnahme?" for speech telephony training and "Wie bewerten Sie die Gesamtqualität des gerade gesehenen Videos?" in case of the video training.}
 
 In the \emph{fourth stage}, the multi\-/episodic part was conducted.

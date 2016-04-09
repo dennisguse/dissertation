@@ -83,8 +83,8 @@ The brightness of this \unit[7]{inch} display was set to maximum without applyin
 
 For these three experiments, non-degraded recordings of two-party conversations of \E1{} were selected.
 These recordings were processed with the \textsc{\lowercase{ITU\=/T}~\lowercase{STL2009}} tools \citep{itu-t_recommendation_g.191_software_2010} for coding G.722 and with \textsc{\lowercase{SOX}} for coding \textsc{\lowercase{LPC\=/10}}.
-For \EIIb{}, the video material was cut with \emph{Adobe Premiere 6} and exported with H.264 (\unit[1280$x$720]{px}, \unit[5]{Mbit/s}, two-pass) and \ac{AAC} (\unit[448]{kbit/s}, stereo).
-Subsequently, the scenes was processed with \emph{FFmpeg}\footnote{The FFmpeg project is available at \url{https://www.ffmpeg.org/}.} to re-encode with the desired \ac{QP} factor while leaving the audio unchanged.
+For \EIIb{}, the video material was cut with \emph{Adobe Premiere 6} and exported with H.264 (\unit[1280$x$720]{px}, \unit[5]{Mbit/s}, two-pass) and \acs{AAC} (\unit[448]{kbit/s}, stereo).
+Subsequently, the scenes was processed with \emph{FFmpeg}\footnote{The FFmpeg project is available at \url{https://www.ffmpeg.org/}.} to re-encode with the desired \acs{QP} factor while leaving the audio unchanged.
 
 \section{Experiment E4}
 \E4{} was the first experiment for this thesis conducted as a field experiment with a usage period of multiple days.
