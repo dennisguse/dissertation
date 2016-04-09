@@ -187,7 +187,7 @@ This codec is often used as reference for narrowband speech telephony.
 Compared to G.722, the difference between narrowband and wideband on perceived quality is measurable. %TODO
 In comparison to \textsc{\lowercase{LPC\=/10}}, the re-synthesized speech signal contains far less artifacts.
 
-As \textsc{\lowercase{LPC\=/10}} is rarely compared to G.711 or G.722, an objective evaluation using \ac{POLQA} \citep{itu-t_recommendation_p.863_perceptual_2014} has been conducted.
+As \textsc{\lowercase{LPC\=/10}} is rarely compared to G.711 or G.722, an objective evaluation using \ac{POLQA} \citep{itu-t_recommendation_p.863_perceptual_2014} was conducted.
 \ac{POLQA} estimates the \ac{MOS} for the 5-point \ac{ACR} scale.
 \citet{koster_comparison_2015} presented a transformation function that allows to transform judgments from the 5-point \ac{ACR} scale to the 7\=/point \ac{CoCR} scale. %for speech telephony
 For the evaluation \unit[12]{s} German speech samples have been processed with all three codecs.
