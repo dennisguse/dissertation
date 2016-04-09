@@ -210,9 +210,6 @@ Performance of the service was varied on a per day basis, \ie, all usage episode
 \citet{moller_single-call_2011} tested five multi-episodic conditions (\autoref{tab:chap05:conditions}).
 Here, the condition defines the time for each usage episode, task, and also performance level.
 In each condition, usage episodes were presented on one or two performance levels.
-It must be noted that condition\,5 is different, because only \ac{MP} and \ac{LP} are applied, and thus \ac{MP} represents the best performance for this condition.
-Depending on the prior experiences of the participants, this might affect quality judgments, as \ac{LP} can only be compared to \ac{MP}.
-The first two days are presented in each condition with the best performance level for this condition.
 
 \begin{table}[h]
 	\centering
@@ -233,6 +230,10 @@ The first two days are presented in each condition with the best performance lev
 	5 & \textit{\ac{MP}} & \textbf{\acs{LP}} & \textit{\acs{MP}} & \textit{\acs{MP}} & \textbf{\acs{LP}} & \textit{\acs{MP}} & \textit{\acs{MP}} \\
 	\end{tabular}
 \end{table}
+
+It must be noted that condition\,5 is different, because only \ac{MP} and \ac{LP} are applied, and thus \ac{MP} represents the best performance for this condition.
+Depending on the prior experiences of the participants, this might affect quality judgments, as \ac{LP} can only be compared to \ac{MP}.
+The first two days are presented in each condition with the best performance level for this condition.
 
 The experiment was conducted by the participants in their home environments using their own private computer and broadband Internet access.
 This limits the necessary effort for participants and allows them to integrate the experiment into their daily life.
