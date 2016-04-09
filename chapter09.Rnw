@@ -176,7 +176,7 @@ However, the actual window is increased by $\mathit{2*w}$, so the very first epi
 Limiting $\mathit{w}$ for both models to the same set, allows to compare the accuracy of both models directly.
 
 Employing a weighted average is expected to increase prediction accuracy, because a recency effect can modeled.
-However, for one observed effect a weighted average with one of the two proposed weight functions will necessarily produce a deviation.
+However, for one observed effect, a weighted average with one of the two proposed weight functions will necessarily produce a deviation.
 In case of the observed saturation effect, both weight functions will be too negative.
 Here, the presentation of the 4th, 5th, and 6th\,episodes/days in \ac{LP} (\C6{}) results in a similar multi\-/episodic judgment than the presentation of the 4th\,episode in \ac{HP}  and the 5th and 6th\,episodes/days in \ac{LP} (\C5{}).
 The modeling approach for this specific case is presented and evaluated in \autoref{pred:saturation}.
@@ -307,7 +307,7 @@ ggplot_model_create(subset(data_mos_nonadjusted, data_mos_nonadjusted$experiment
 With regard to the prediction of \ac{HP} only episodes, the results are slightly different compared to \E1{}.
 The prediction accuracy for the multi\-/episodic judgment after the 3rd\,episode is shown in \autoref{fig:pred:E2pred3}.
 Here, the prediction accuracy improves if $\mathit{w}$ is increased.
-However, this is a strong deviation due to~\C4{} alone.
+However, this is mainly due to~\C4{}.
 The reason for this could not be determined.
 Omitting \C4{} shows similar results to~\E1{}, \ie, the prediction accuracy is not affected by the selection of $\mathit{w}$.
 The \ac{RMSD} is similar for all $\mathit{w}$ ($> 0.1$).
@@ -501,7 +501,7 @@ In case of WI, the minimal \ac{RMSD} shifts from~$\mathit{w}=4$ to~$\mathit{w}=3
 This is also observed for LI.
 Here, the minimal \ac{RMSD} shifts from~$\mathit{w}=3$ to~$\mathit{w}=2$.
 It is notable for both experiments that the adjustment leads to a similar shape of \ac{RMSD} for \C5{} and \C6{}\,(adjusted).
-Furthermore, the minimal \ac{RMSD} is reached earlier, but with increasing $\mathit{w}$ the \ac{RMSD} is slightly worse for \C6{}\,(adjusted) than \C6{}.
+Furthermore, the minimal \ac{RMSD} is reached earlier, but with increasing $\mathit{w}$ the \ac{RMSD} is worse for \C6{}\,(adjusted) than \C6{}.
 \begin{figure}[h]
 	\centering
 <<plotE2SAT, echo=F, fig.height=3>>=
