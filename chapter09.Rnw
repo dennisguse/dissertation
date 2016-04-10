@@ -221,7 +221,7 @@ Finally, the potential improvement of accounting for a saturation effect is inve
 \subsection{One Session: E1 and E2a}\label{results:prediction}
 
 \subparagraph*{Experiment E1}
-In \E1{}, a two-party conversation was investigated with 6 to 9\,episodes.
+In \E1{}, a two-party conversation was investigated with 6 and 9\,episodes.
 With regard to the multi\-/episodic judgment after the 3rd\,episode, \ie, \ac{HP} only, both model types perform very similar.
 \autoref{fig:pred:E1base} shows the \ac{RMSD} for both model types with regard to $\mathit{w}$ for each condition.
 The black dashed line represents the average \ac{RMSD} for all conditions.
