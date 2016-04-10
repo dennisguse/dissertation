@@ -460,7 +460,7 @@ With regard to episodic judgments both experiments yield consistent results, but
 \subparagraph*{Experiment E3}
 In \E3{}, no significant differences between the two conditions for episodic judgments of \ac{HP} (\Sexpr{wilcox(QU~condition, "E3", "HP")}) and \ac{LP} are found (\Sexpr{wilcox(QU~condition, "E3", "LP")}).
 It must be noted that judgments of the \ac{LP} episode are not significantly different although both conditions differ in the duration of this episode.
-\CIIa{} (normal duration) resulted in a \ac{MOS} of \Sexpr{mos_qu_with_sd_by_condition("E3", "LP", "2a")} whereas \CIIb{} (doubled duration) resulted in \Sexpr{mos_qu_with_sd_by_condition("E3", "LP", "2b")}.
+\CIIa{} (normal duration) resulted in a \ac{MOS} of $\Sexpr{mos_qu_with_sd_by_condition("E3", "LP", "2a")}$ whereas \CIIb{} (doubled duration) resulted in $\Sexpr{mos_qu_with_sd_by_condition("E3", "LP", "2b")}$.
 It is thus concluded that the duration did not affect the episodic judgment of the single \ac{LP} episode.
 Thus, a duration neglect for episodic judgments is observed.
 The two performance levels \ac{HP} and \ac{LP} are significantly different (\Sexpr{wilcox(QU~performance_level, "E3")}).
@@ -528,7 +528,7 @@ The multi\-/episodic judgments are shown in \autoref{tab:lab:hyponumber}.
 	\hline
 	\C3{}			& 6						& \Sexpr{mos_iqu_with_sd_by_condition("E1", "3", 6)} 			& \Sexpr{mos_iqu_with_sd_by_condition("E2a", "3", 6)} \\
 	\hline
-	\C5{} (a+b)	& 5..6				& \Sexpr{mos_iqu_with_sd_by_condition("E1", "5b", 6)}	& \Sexpr{mos_iqu_with_sd_by_condition("E2a", "5a", 6)} \\
+	\CVa{} and \CVb{}	& 5..6				& \Sexpr{mos_iqu_with_sd_by_condition("E1", "5b", 6)}	& \Sexpr{mos_iqu_with_sd_by_condition("E2a", "5a", 6)} \\
 	\hline
 	\C6{}			& 4..6					& \Sexpr{mos_iqu_with_sd_by_condition("E1", "6", 6)} 			& \Sexpr{mos_iqu_with_sd_by_condition("E2a", "6", 6)} \\
 	\hline
@@ -594,7 +594,7 @@ In \autoref{hypo:position}, it is hypothesized that presenting \ac{HP} episodes 
 	\hline
 	\C4{}			& 4..5			& \Sexpr{mos_iqu_with_sd_by_condition("E1", "4", 6)} 		& \Sexpr{mos_iqu_with_sd_by_condition("E2a", "4", 6)} \\
 	\hline
-	\C5{} (a+b) 	& 5..6	& \Sexpr{mos_iqu_with_sd_by_condition("E1", "5b", 6)}		& \Sexpr{mos_iqu_with_sd_by_condition("E2a", "5a", 6)} \\
+	\CVa{} and \CVb{} 	& 5..6	& \Sexpr{mos_iqu_with_sd_by_condition("E1", "5b", 6)}		& \Sexpr{mos_iqu_with_sd_by_condition("E2a", "5a", 6)} \\
  \end{tabulary}
 \end{table}
 
