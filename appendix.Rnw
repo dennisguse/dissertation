@@ -55,8 +55,8 @@ Before starting the experiment, the output on both clients was once calibrated t
 
 \paragraph*{Sound card Setup}
 The network-based setup was replaced later by a more elaborate system, which provided easier setup and reduced the complexity for verification.
-For this system, only one computer without an actual network is used.
-Rather than transmitting the signals via Ethernet, an analogue transmission via audio cables is used.
+For this system, only one computer without an actual network was used.
+Rather than transmitting the signals via Ethernet, an analogue transmission via audio cables was used.
 Here, the \emph{Beyerdynamic~DT~790~Pro} headsets were also used.
 The two headsets were connected to the processing computer (\emph{Lenovo~X61}) with one \emph{Edirol~UA\=/25EX} sound card.
 The signal of each microphone was amplified with a \emph{RME~QuadMic~II} microphone preamplifier to counter potential signal loss due to the cable length of \unit[10]{m}.
@@ -110,12 +110,12 @@ The performance of this connection could neither be estimated nor enforced.
 Thus, for some calls severe, often bursty, packet-loss was observed.
 However, for the media streams no counter measures were taken against packet-loss, \ie, neither \acs{PLC} nor \acs{FEC}. 
 % are available for , as the used speech codec G.722 (Mode\,1) was used with neither \acs{PLC} nor \acs{FEC} on \acs{UDP} connections without retransmission.
-Second, packet-loss was added by Dummynet in addition to packet-loss occurring due to connection issues.
+Second, packet-loss was added by Dummynet in addition to packet-loss occurring due to the network issues.
 This lead to potentially higher packet-loss than desired.
 
 \subsection{\acl{VoD}}
 For the \ac{VoD} service, an actual service was simulated offline rather than providing it as an online service.
-Here, a video player was implemented with \emph{Microsoft Silverlight} that replicated a video streaming website including login procedure and initial buffering
+Here, a video player was implemented with \emph{Microsoft Silverlight} that replicated a video streaming website including login procedure and initial buffering.
 This video player could only be executed in a web browser.
 The video player was bundled together with the preprocessed videos on a \acs{USB} flash drive.
 Participants were instructed that for using the \ac{VoD} service the \acs{USB} flash drive must be inserted into the computer and remain connected.
