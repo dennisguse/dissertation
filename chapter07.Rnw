@@ -399,7 +399,7 @@ Box plots for all conditions per experiments are presented in the \appendix{}~\r
 
 \begin{table}
   \centering
-  \caption[One-session experiments: episodic judgments.]{One-session experiments: episodic judgments. Reported as \ac{MOS} with standard deviation in brackets.}
+  \caption[One-session experiments: episodic judgments]{One-session experiments: episodic judgments. Reported as \ac{MOS} with standard deviation in brackets.}
 	\label{tab:lab:episodicMOS}
 	\begin{tabulary}{\textwidth}{c|C|c|c|c}
 	\multirow{2}{*}{Experiment}	& \multirow{2}{*}{Service} & \multicolumn{3}{c}{Episodic Judgment} \\
@@ -499,7 +499,7 @@ Although not directly comparable due to differences between experiments, it must
 
 \begin{table}[h]
 	\centering
-	\caption[One-session experiments: multi\-/episodic judgments after the 3rd episode.]{One-session experiments: multi\-/episodic judgments after the 3rd episode. Reported as \ac{MOS} with standard deviation in brackets.} %HP only
+	\caption[One-session experiments: multi\-/episodic judgments after the 3rd episode]{One-session experiments: multi\-/episodic judgments after the 3rd episode. Reported as \ac{MOS} with standard deviation in brackets.} %HP only
 	\label{tab:lab:multiconsistency}
 	\begin{tabulary}{\textwidth}{C|C|C|C|C|C}
 	Experiment & \E1{} & \EIIa{} &\EIIb{} (telephony) & \EIIb{}	(\ac{VoD})	& \E3{} \\
@@ -579,7 +579,7 @@ In \autoref{hypo:position}, it is hypothesized that presenting \ac{HP} episodes 
 
 \begin{table}[h]
 	\centering
-	\caption[One-session experiments: multi\-/episodic judgment after the 6th episode for \autoref{hypo:position}.]{One-session experiments: multi\-/episodic judgment after the 6th episode for \autoref{hypo:position}. Reported as \ac{MOS} with standard deviation in brackets.}
+	\caption[One-session experiments: multi\-/episodic judgment after the 6th episode for \autoref{hypo:position}]{One-session experiments: multi\-/episodic judgment after the 6th episode for \autoref{hypo:position}. Reported as \ac{MOS} with standard deviation in brackets.}
 	\label{tab:lab:hypoposition}
 	\begin{tabulary}{\textwidth}{C|c|C|C}
 	Condition   & \ac{LP} episode(s) 	& \multicolumn{2}{c}{Multi-episodic Judgment} \\
@@ -699,7 +699,7 @@ Both present 9 episodes while non-\ac{HP} is presented for the 5th and 6th\,epis
 
 \begin{table}[h!]
  \centering
- \caption[One-session experiments: multi\-/episodic judgments after the 3rd, 6th, and 9th\,episode for \autoref{hypo:recovery}.]{One-session experiments: multi\-/episodic judgments after the 3rd, 6th, and 9th\,episode for \autoref{hypo:recovery}. Reported as \ac{MOS} with standard deviation in brackets.}
+ \caption[One-session experiments: multi\-/episodic judgments after the 3rd, 6th, and 9th\,episode for \autoref{hypo:recovery}]{One-session experiments: multi\-/episodic judgments after the 3rd, 6th, and 9th\,episode for \autoref{hypo:recovery}. Reported as \ac{MOS} with standard deviation in brackets.}
  \label{tab:lab:hyporecovery}
  \begin{tabulary}{\columnwidth}{c|C|C|C|C}
 	\multirow{2}{*}{Conditions}	& \multirow{2}{*}{Episodic Performance}			& \multicolumn{3}{c}{Multi-episodic Judgment} \\
@@ -735,7 +735,7 @@ The episodic judgment for these conditions and the multi\-/episodic judgments ar
 
 \begin{table}[h!]
  \centering
- \caption[One-session experiments: multi\-/episodic judgment after the 6th episode for \autoref{hypo:duration}.]{One-session experiments: multi\-/episodic judgment after the 6th episode for \autoref{hypo:duration}. Reported as \ac{MOS} with standard deviation in brackets.}
+ \caption[One-session experiments: multi\-/episodic judgment after the 6th episode for \autoref{hypo:duration}]{One-session experiments: multi\-/episodic judgment after the 6th episode for \autoref{hypo:duration}. Reported as \ac{MOS} with standard deviation in brackets.}
  \label{tab:lab:hypoduration} 
  \begin{tabulary}{\columnwidth}{c|C|C|C}
  Conditions	& \multicolumn{2}{c|}{5th usage episode} & Multi-episodic Judgment\\
@@ -763,7 +763,7 @@ The episodic judgments and multi\-/episodic judgments are shown in \autoref{tab:
 
 \begin{table}[h!]
  \centering
- \caption[One-session experiments: multi\-/episodic judgment after the 6th episode for \autoref{hypo:independent}.]{One-session experiments: multi\-/episodic judgment after the 6th episode for \autoref{hypo:independent}. Reported as \ac{MOS} with standard deviation in brackets.}
+ \caption[One-session experiments: multi\-/episodic judgment after the 6th episode for \autoref{hypo:independent}]{One-session experiments: multi\-/episodic judgment after the 6th episode for \autoref{hypo:independent}. Reported as \ac{MOS} with standard deviation in brackets.}
  \label{tab:lab:hypoindependent}
  \begin{tabulary}{\columnwidth}{C|C|C}
 	Conditions \ac{VoD}	& \multicolumn{2}{c}{Multi-episodic Judgment} \\

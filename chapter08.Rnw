@@ -319,7 +319,7 @@ Between the two conditions, only the judgments of the 2nd\,day are significantly
 
 \begin{table}[h]
 	\centering
-	\caption[Multiple days (\E5{}): multi\-/episodic judgments.]{Multiple days (\E5{}): multi\-/episodic judgments. Reported as \ac{MOS} with standard deviation in brackets.}
+	\caption[Multiple days (\E5{}): multi\-/episodic judgments]{Multiple days (\E5{}): multi\-/episodic judgments. Reported as \ac{MOS} with standard deviation in brackets.}
 	\label{tab:field:e5results}
 	\begin{tabular}{c|c|c||c|c}
 	Day & \multicolumn{4}{c}{Multi-episodic Judgment} \\
