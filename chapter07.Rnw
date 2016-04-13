@@ -308,7 +308,7 @@ These ranged from \unit[134]{s} to \unit[198]{s} with an average duration of \un
 For \E3{}, an audio book was selected.
 Here, Isabel Allende's \emph{"City of the Beasts"} was used, spoken by a male German native speaker.\footnote{The audio book is sold as 24 \textsc{\lowercase{CD}} collection: Isabel Allende: \emph{Die Stadt der wilden Götter / Im Reich des goldenen Drachen / Im Bann der Masken}, ISBN: 978-86717-191-5.}
 Usage episodes varied in duration from \unit[174]{s} to \unit[199]{s} with an average duration of \unit[184]{s}.
-
+The usage episode with doubled duration was \unit[362]{s} long.
 %In all experiments the content is completely in German.
 %In case of the \ac{VoD} content the German-dubbed version was used.
 %Versuchspersonenanzahl per Condition (15)?
