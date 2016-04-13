@@ -238,7 +238,7 @@ For this experiment, all necessary equipment, \ie, a mobile phone and a pair of 
 This eliminated differences of equipment as confounding factor and also reduces the complexity of the setup.
 For the \ac{AoD} service, an audio book with speech-only content was used.
 For \ac{HP}, this was encoded with \acs{AAC} (\unit[44.1]{kHz}, \unit[320]{kbit/s}, stereo) and for \ac{LP} in \textsc{\lowercase{GSM\=/FR}}.
-Here, the audio book \emph{City of the Beats} from Isabelle Allende was used as in \E3{}. 
+Here, the audio book \emph{City of the Beasts} from Isabelle Allende was used as in \E3{}. 
 The audio book was cut into individual scenes with a duration of \unit[12]{min} to \unit[17]{min} per episode.
 For the \ac{VoD} service, scenes of \emph{The Big Bang Theory} (Season One, BluRay Version, German) were used.
 Here, meaningful scenes were cut, resulting in a duration of \unit[8]{min} to \unit[12]{min} per episode.
@@ -401,7 +401,7 @@ For the investigation of \autoref{hypo:number}, the results of the \C3{}, \C5{},
 Finally, \autoref{hypo:consecutive} is evaluated by comparing the results of \C8{} with \C3{} and \C5{}.
 %\autoref{tab:field:e6episodic} gives an overview on the conditions and the number of participants.
 
-Here, the audio book Isabel Allende's \emph{City of the Beats} was used, as in \E3{} and \E5{}.
+Here, the audio book Isabel Allende's \emph{City of the Beasts} was used, as in \E3{} and \E5{}.
 In \E3{}, episodes with a duration of approximately \unit[3]{min} were used, while \E5{} used \unit[12..17]{min}.
 For \E6{}, a duration of \unit[6..8]{min} was chosen.
 This should enable participants to focus on the content while limiting their effort.

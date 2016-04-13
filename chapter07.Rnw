@@ -306,7 +306,7 @@ These scenes were selected, so the duration of the two-party conversational reco
 For each episode one scene was presented.
 These ranged from \unit[134]{s} to \unit[198]{s} with an average duration of \unit[166]{s}.
 For \E3{}, an audio book was selected.
-Here, Isabel Allende's \emph{"City of the Beats"} was used, spoken by a male German native speaker.\footnote{The audio book is sold as 24 \textsc{\lowercase{CD}} collection: Isabel Allende: \emph{Die Stadt der wilden Götter / Im Reich des goldenen Drachen / Im Bann der Masken}, ISBN: 978-86717-191-5.}
+Here, Isabel Allende's \emph{"City of the Beasts"} was used, spoken by a male German native speaker.\footnote{The audio book is sold as 24 \textsc{\lowercase{CD}} collection: Isabel Allende: \emph{Die Stadt der wilden Götter / Im Reich des goldenen Drachen / Im Bann der Masken}, ISBN: 978-86717-191-5.}
 Usage episodes varied in duration from \unit[174]{s} to \unit[199]{s} with an average duration of \unit[184]{s}.
 
 %In all experiments the content is completely in German.
