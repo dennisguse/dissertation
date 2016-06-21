@@ -18,9 +18,9 @@ attach(timeseries)
 
 %\cite{staelens_assessing_2009}
 %\cite{schatz_vienna_2011}, 3 Weeks!
-Services are in general used on a regular basis by a user~\citep[\cf,][]{geerts_linking_2010}.
+Services are in general used on a regular basis by a user~\citep[\cf{}][]{geerts_linking_2010}.
 The experiences of a usage episode lead to a perceived quality in the user of this very episode.
-The definition of \emph{usage episode} in the context of multi\-/episodic perceived quality is derived from the concept of episodic memory (\cf, \autoref{chap:03}), focusing on usage of telecommunication systems.
+The definition of \emph{usage episode} in the context of multi\-/episodic perceived quality is derived from the concept of episodic memory (\cf{} \autoref{chap:03}), focusing on usage of telecommunication systems.
 In addition, goal achievement as a requirement is added, following the concepts of utility and expected utility by \citet{kahneman_experienced_2000}.
 
 \begin{definition}[Usage Episode]\label{def:episode}
@@ -42,7 +42,7 @@ However, understanding the formation process of multi\-/episodic perceived quali
 
 \subsection{Excursus: Multi-episodic usage in \acs{UX}}
 Effects of multi\-/episodic usage while focusing on changes in user behavior have been evaluated in \ac{UX}.
-\ac{QoE} and \ac{UX} conceptually overlap as both focus on experiences in general and experiences with technology \citep[\cf,][]{wechsung_quality_2014}.
+\ac{QoE} and \ac{UX} conceptually overlap as both focus on experiences in general and experiences with technology \citep[\cf{}][]{wechsung_quality_2014}.
 \ac{UX}, stemming from usability, focuses on the interaction with technology and how interactions affect usage as well as emotions towards used technology.\footnote{For a longer discussion on similarities and difference between \ac{QoE} and \ac{UX} see \citet{wechsung_quality_2014} and also \citet{hassenzahl_user_2008}.}
 Multi-episodic evaluation is an important aspect of \ac{UX}, because user behavior towards technology changes as a user learns how to use the technology and which tasks are well-suited to its use.
 The multi\-/episodic concept is described by \citet[p.\,8]{roto_user_2011}.
@@ -91,7 +91,7 @@ In fact, it is not yet known if the formation process is \emph{universal} or aff
 In the following, factors are discussed that might affect multi\-/episodic perceived quality and thus should be kept constant to apply a \ac{MOS} evaluation.
 
 %\subparagraph*{Prior Knowledge and Expectations}
-Perceived quality is influenced by \emph{prior knowledge} about the service under consideration (\cf, \autoref{related:perceivedQuality}).
+Perceived quality is influenced by \emph{prior knowledge} about the service under consideration (\cf{} \autoref{related:perceivedQuality}).
 This includes knowledge about the specific service and also about the type of service in general.
 For example, information on the reliability of telephony services as well as knowledge about potential degradations may set expectations.
 Also, promises about the performance by a service provider are considered as knowledge, \eg, performance promises about a service in an advertisement.
@@ -186,7 +186,7 @@ In the following, first the experimental design and then the results are present
 
 \paragraph*{Design}
 In this experiment, pairs of two participants used a video-telephony service (Skype) over a usage period of \unit[12]{days}.
-\citet{moller_single-call_2011}\footnote{It must be noted that \citet{moller_single-call_2011} uses the term \emph{service quality} as synonym to multi\-/episodic perceived quality, rather than service quality in terms of \citet{parasuraman_conceptual_1985} (\cf, \autoref{chap:03}).} followed the premise that the service works in general, \ie, it provides the best achievable performance, but sometimes usage episodes are only presented with reduced performance.
+\citet{moller_single-call_2011}\footnote{It must be noted that \citet{moller_single-call_2011} uses the term \emph{service quality} as synonym to multi\-/episodic perceived quality, rather than service quality in terms of \citet{parasuraman_conceptual_1985} (\cf{} \autoref{chap:03}).} followed the premise that the service works in general, \ie, it provides the best achievable performance, but sometimes usage episodes are only presented with reduced performance.
 It was necessary to use the service twice a day, with the first call between \unit[6]{h} and \unit[15]{h} and the second call between \unit[15]{h} and midnight.
 For each of these \unit[24]{calls}, the \ac{SCS} needed to be solved \citep{itu-t_recommendation_p.805_subjective_2007}.
 \acp{SCS} suggest a conversational structure to limit the behavioral freedom of caller and callee.\footnote{A detailed explanation on \acs{SCS} is given in \autoref{method:sct}.} 
@@ -362,4 +362,4 @@ However, neither \citet{duncanson_average_1969} nor \citet{moller_single-call_20
 
 
 
-%Starting from effects on the retrospective judgments found in assessment of general experiences (\cf, \autoref{chap:03})
+%Starting from effects on the retrospective judgments found in assessment of general experiences (\cf{} \autoref{chap:03})

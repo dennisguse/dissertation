@@ -274,7 +274,7 @@ The  7\=/point \ac{CoCR} scale and questions are similar to \citet{moller_single
 
 %In the \emph{fifth stage} final feedback about the fourth stage is collected.
 %In all experiments the underlying question of the \ac{NPS} is collected.
-%The \ac{NPS} has been proposed as the one sufficient question indicating business success~\citep[\cf,][]{reichheld_one_2003}.
+%The \ac{NPS} has been proposed as the one sufficient question indicating business success~\citep[\cf{}][]{reichheld_one_2003}.
 %This score assessed on 11-point discrete scale ranging from 0 to 10 and is phrased as "How likely is it that you would recommend our company/product/service to a friend or colleague?"~\citep[][p.\,5]{reichheld_one_2003}.
 %In this study it was rephrased to "On scale ranging from 0 (unlikely) to 10 (likely), how likely is it that you would recommend the service to a friend or colleague?"\footnote{The question was phrased in German: "Auf einer Skala von 0 (unwahrscheinlich) bis 10 (wahrscheinlich), wie wahrscheinlich ist es, dass Sie das System einem Freund oder Kollegen weiterempfehlen werden?".}.
 %In \E1{}, \EIIa{}, \EIIb{}, and \E3{} requested to answer the following questions, if degradations have been perceived.
@@ -375,7 +375,7 @@ A larger number of participants were used for \C7{} (\E1{}) to precisely quantif
 In the following, the results of the experiments are analyzed.
 First, episodic judgments are inspected with regard to consistency between conditions for each experiment.
 Second, the impact of the different usage situations \E1{} and \EIIa{} are investigated.
-Finally, multi\-/episodic judgments are evaluated with regard to the hypotheses (\cf, \autoref{chap:towards}).
+Finally, multi\-/episodic judgments are evaluated with regard to the hypotheses (\cf{} \autoref{chap:towards}).
 
 All results are reported as \ac{MOS} ranging from~0 to~6, with standard deviation in brackets (for the scale see p.\,\pageref{img:chap05:quality-scale}).
 In addition, statistical evaluation is conducted.
@@ -452,7 +452,7 @@ For the \ac{VoD} service, episodic judgments of \ac{HP} episodes are not signifi
 The episodic judgment of \ac{HP} and \ac{LP} episodes are significantly different for the telephony service (\Sexpr{wilcox(QU~performance_level, "E2b", performance_level, condition, id, "telephony")}) and the \ac{VoD} service (\Sexpr{wilcox(QU~performance_level, "E2b", performance_level, condition, id, "VoD")}).
 
 Comparing \EIIa{} and \EIIb{} with regard to the speech telephony service, the judgments of \ac{LP} episodes are not significantly different (\Sexpr{wilcox(QU~experiment, c("E2a", "E2b"), "LP", condition, id, "telephony")}), but a significant difference is found for \ac{HP} (\Sexpr{wilcox(QU~experiment, c("E2a", "E2b"), "HP", condition, id, "telephony")}).
-This might be due to the differences in the used audio equipment, \ie, headphones and also sound card including loudness calibration (\cf, \appendix{}~\ref{appendix:setups} on p.\,\pageref{appendix:setups}), or the presence of the \ac{VoD} service.
+This might be due to the differences in the used audio equipment, \ie, headphones and also sound card including loudness calibration (\cf{} \appendix{}~\ref{appendix:setups} on p.\,\pageref{appendix:setups}), or the presence of the \ac{VoD} service.
 However, the actual reason could not be determined.
 With regard to episodic judgments both experiments yield consistent results, but differences between the experiments were found.
 
@@ -617,7 +617,7 @@ Thus, \autoref{hypo:position} can be accepted for two-party conversations, but o
 \subsubsection{\autoref{hypo:consecutive}: Non-consecutive vs. Consecutive \acs{LP} Episodes}
 In \autoref{hypo:consecutive}, it is assumed that the presentation of consecutive \ac{LP} episodes yields a better multi\-/episodic judgment than the same number of \ac{LP} episodes presented non-consecutively.
 This hypothesis is investigated in \EIIa{} only.
-It can be evaluated by comparing the final multi\-/episodic judgment of \C4{} and \CVa{}, which both present two \ac{LP} episodes consecutively, with \C8{}. %, for which it has already been shown that those two conditions yield a different result (\cf, \autoref{hypo:position}),
+It can be evaluated by comparing the final multi\-/episodic judgment of \C4{} and \CVa{}, which both present two \ac{LP} episodes consecutively, with \C8{}. %, for which it has already been shown that those two conditions yield a different result (\cf{} \autoref{hypo:position}),
 \C8{} presents the 4th and 6th\,episode in \ac{LP}.
 \autoref{tab:lab:hypoconsecutive} shows the multi\-/episodic judgments for these three conditions.
 
@@ -652,7 +652,7 @@ wilcox_episodic_peak = pairwise.wilcox.test(timeseries_E1_peak$QU, timeseries_E1
 @
 
 In \autoref{hypo:strength}, it is assumed that the lowest episodic performance (here \ac{LP}) has a stronger negative effect on the multi\-/episodic judgments whereas \emph{lesser degraded} episode(s) (here \ac{MP}) yield a smaller effect or even no effect at all.
-This is denoted as peak effect (\cf, \autoref{chap03:effects}).
+This is denoted as peak effect (\cf{} \autoref{chap03:effects}).
 This is only evaluated in \E1{} by comparing \CIIa{}, \CVb{}, and \C7{}.
 These present the 5th\,episode in \ac{LP}, but differ in the performance level of the 6th\,episode.
 \autoref{tab:lab:hypostrength} shows the multi\-/episodic judgments after the 6th\,episode as well as the episodic judgment of this episode.
@@ -747,7 +747,7 @@ The episodic judgment for these conditions and the multi\-/episodic judgments ar
  \end{tabulary}
 \end{table}
 
-Between the two conditions, the episodic judgments of the 5th episode are not significantly different (\cf, \autoref{lab:episodic}).
+Between the two conditions, the episodic judgments of the 5th episode are not significantly different (\cf{} \autoref{lab:episodic}).
 The multi\-/episodic judgment after the 6th\,episode are not significantly different (\Sexpr{wilcox(IQU~condition, "E3", performance_level, c("2a", "2b"), c(6))}).
 Thus, \autoref{hypo:duration} can be accepted, \ie, a neglect of duration is observed, as even doubling the duration did not produce a measurable effect.
 In fact, the duration seems to be neglected for the episodic judgments and the multi\-/episodic judgments.

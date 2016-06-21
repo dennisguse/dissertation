@@ -37,7 +37,7 @@ The integration of perceived quality of usage episodes into a multi\-/episodic p
 Rather usage episodes with a service often occur regularly, covering multiple days or even longer usage periods.
 In difference to consecutive usage in one session, the time that passes between episodes might be longer.
 However, it is so far unknown how and if at all the time between episodes affects the quality formation process of multi\-/episodic perceived quality.
-%Due to the lack of ground truth, the findings for one session (\cf, \autoref{chap:lab}) are used as a basis towards this investigation.
+%Due to the lack of ground truth, the findings for one session (\cf{} \autoref{chap:lab}) are used as a basis towards this investigation.
 A feasible option to cover such time spans in an experiment is to conduct it as a field experiment.
 Here, field experiment refers to a subjective experiment conducted by participants in their home environment over several days.
 This enables repeated-use of a service for rather short episodes while limiting the effort for participants.
@@ -86,7 +86,7 @@ In the following, the experiments are presented one after the other.
 
 \section{Experiment E4}
 \E4{} was inspired by \citet{moller_single-call_2011}.\footnote{The results of \E4{} are published in \citet{guse_macro-temporal_2013}.}
-The experiment of \citet{moller_single-call_2011} indicated only little differences for multi-episodic judgments between the evaluated multi-episodic conditions (\cf, \autoref{prior:moeller}).
+The experiment of \citet{moller_single-call_2011} indicated only little differences for multi-episodic judgments between the evaluated multi-episodic conditions (\cf{} \autoref{prior:moeller}).
 This might be due to the limited number of degraded episodes or that introduced degradations were not severe enough.
 The goal of \E4{} was the application the defined-use method in a similar usage period to \citet{moller_single-call_2011} and to gather practical knowledge about conducting a field experiment.
 In addition, conducting \E4{} had two goals:
@@ -112,7 +112,7 @@ In the second condition, denoted as \C9{}, both services were presented in \ac{H
 This resulted in \unit[8]{days} presented \ac{HP} versus \unit[6]{days} presented in \ac{LP}. 
 While \C0{} replicates the baseline condition of \citet{moller_single-call_2011}, \C9{} should lead to a reduction in multi\-/episodic judgments.
 
-After finishing an episode, participants assessed the episodic perceived quality on the 7\=/point \ac{CoCR} scale (\cf, \autoref{img:chap05:quality-scale}).
+After finishing an episode, participants assessed the episodic perceived quality on the 7\=/point \ac{CoCR} scale (\cf{} \autoref{img:chap05:quality-scale}).
 The multi\-/episodic perceived quality for each service was assessed on the 4th, 7th, 10th, and 14th day directly after finishing the daily episode with the \ac{VoD} service (same scale).
 
 For the speech telephony service, the speech codec G.722 was used with a packet-length of \unit[20]{ms} for \ac{HP} and for \ac{LP}.
@@ -195,7 +195,7 @@ However, the difference is smaller than desired as only a reduction of approxima
 The multi\-/episodic judgments for the \ac{VoD} service are shown in \autoref{tab:field:e4results}.
 For \C0{} no significant differences in multi\-/episodic judgments are found between the four measurements (\Sexpr{kruskal(IQU~id, "E4a", c("HP", "LP"), "A0", unique(timeseries[["id"]]), "VoD")}).
 Also for \C9{}, no significant differences are observed (\Sexpr{kruskal(IQU~id, "E4a", c("HP", "LP"), "A1", unique(timeseries[["id"]]), "VoD")}).
-Even between the two conditions, no significant differences between multi\-/episodic judgments are found (\cf, \autoref{tab:field:e4results}).
+Even between the two conditions, no significant differences between multi\-/episodic judgments are found (\cf{} \autoref{tab:field:e4results}).
 
 \subsection{Discussion}
 \E4{} was only partly successful.
@@ -411,7 +411,7 @@ The scenes were presented in the chronological order.
 %\subsubsection{Feedback}
 Before starting the 6\,day usage period an introductory session was conducted.
 Here, participants received all necessary information about the experiment, and demographic data was collected.
-Then, participants were presented typical speech telephony related degradations in the same way than in the one-session experiments (\cf, \autoref{sec:training}).
+Then, participants were presented typical speech telephony related degradations in the same way than in the one-session experiments (\cf{} \autoref{sec:training}).
 Finally, each participant used the \ac{AoD} service for two episodes to ensure that participants understood how to use the service.
 
 During the multi-episodic part of this experiment the first episode of a day needed to be conducted between \unit[7]{am} and \unit[1]{pm} and the second episode between \unit[3]{pm} and \unit[10]{pm}.
