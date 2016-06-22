@@ -292,7 +292,9 @@ Thus, LI is preferable, as it provides a higher robustness for the selection of 
 <<plotE1PRED9, echo=F, fig.height=3>>=
 ggplot_model_create(subset(data_mos_nonadjusted, data_mos_nonadjusted$experiment == "E1" & data_mos_nonadjusted$id == 9 & data_mos_nonadjusted$condition != "All"), 0.75) + 
 	geom_line(aes(x=parameter, y=RMSD, colour=condition)) + facet_grid(. ~ model_FACET)  + 
-  scale_size_manual(name="Condition", values=c(0.5, 0.5))
+	scale_linetype_manual(name="Condition", values=c("solid", "solid") +
+	scale_color_manual(name="Condition", values=c("#00BFC4", "#00BE67") + 
+	scale_size_manual(name="Condition", values=c(0.5, 0.5))
   
 #ggplot_model_create(subset(data_nonadjusted, data_nonadjusted$experiment == "E1" & data_nonadjusted$id == 9 & data_nonadjusted$condition != "All"), 1.0) + 
 #	geom_line(aes(x=parameter, y=RMSD, colour=condition)) + facet_grid(. ~ model_FACET)  + 
