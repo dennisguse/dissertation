@@ -131,7 +131,7 @@ In this thesis, a weighted average model is proposed to increase prediction accu
 This allows to assign an individual weight to each episodic judgment and thus model the impact on a multi\-/episodic judgment that is to be predicted.
 In the following, episodic judgments are denoted as~$\mathit{e_i}$ and multi\-/episodic judgments are denoted as~$\mathit{m_n}$.
 $\mathit{i}$~denotes the episode and $\mathit{n}$~denotes the episode after which a multi\-/episodic judgment was taken.
-The weight for an episode is denoted as~$\mathit{a_i}$.
+The weight for an episodic judgment is denoted as~$\mathit{a_i}$.
 Thus, the prediction model for~$\mathit{\hat{m}_n}$ is defined as: 
 \begin{equation}\label{eq:average}
 \hat{m}_n=\frac{\sum\limits_{i=1}^{n}a_i*e_i}{\sum\limits_{i=1}^{n}a_i} \, .
