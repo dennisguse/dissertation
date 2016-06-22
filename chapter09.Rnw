@@ -428,7 +428,7 @@ ggplot_model_create(subset(data_mos_nonadjusted, data_mos_nonadjusted$experiment
 \subsection{Saturation Effect}\label{pred:saturation}
 In all three experiments, a saturation effect could be observed.
 Here, multi\-/episodic judgments remained on the same level independent if two or three \ac{LP} episodes/days were presented, \ie, \C5{} and \C6{} were judged not different.
-In both cases, the multi-episodic judgments remained above the episodic judgment for \ac{LP} episodes (approx.\,~\unit[1]{pt}).
+In both cases, the multi-episodic judgments remained above the episodic judgment for \ac{LP} episodes (approx.\,\unit[1]{pt}).
 In fact, \C5{} and \C6{} only differ in the performance level of the 4th episode/day.
 For \C5{} this episode/day is presented in \ac{HP} while \C6{} presented this episode/day in \ac{LP}.
 As both conditions are not judged different, this suggests that the difference in performance level of the 4th\,episode/day does not seem to affect the formation process of the multi\-/episodic judgment.
