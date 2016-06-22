@@ -199,7 +199,7 @@ This scale is shown in \autoref{img:chap05:quality-scale}.
 
 \begin{figure}
 	\includegraphics[width=1\textwidth]{figure/quality7pt_scale}
-	\caption[7\=/point \acs{CoCR} scale]{7\=/point \acs{CoCR} scale with German labels; labels from left-to-right: extremely bad~(0), bad~(1), poor~(2), fair~(3), good~(4), excellent~(5), and ideal~(6) \citep{itu-t_recommendation_p.832_subjective_2000} (own illustration).}
+	\caption[7\=/point \acs{CoCR} scale]{7\=/point \acs{CoCR} scale with German labels; labels from left-to-right: extremely bad~(0), bad~(1), poor~(2), fair~(3), good~(4), excellent~(5), and ideal~(6) \citep[][p.\,19]{itu-t_recommendation_p.851_subjective_2003} (own illustration).}
 	\label{img:chap05:quality-scale}
 \end{figure}
 
