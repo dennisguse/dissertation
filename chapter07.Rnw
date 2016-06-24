@@ -623,7 +623,7 @@ It can be evaluated by comparing the final multi\-/episodic judgment of \C4{} an
 
 \begin{table}[h!]
  \centering
- \caption[One-session experiments: multi\-/episodic judgment after the 6th episode for \autoref{hypo:consecutive}. ]{One-session experiments: multi\-/episodic judgment after the 6th episode for \autoref{hypo:consecutive}. Reported as \ac{MOS} with standard deviation in brackets.}
+ \caption[One-session experiments: multi\-/episodic judgment after the 6th episode for \autoref{hypo:consecutive}.]{One-session experiments: multi\-/episodic judgment after the 6th episode for \autoref{hypo:consecutive}. Reported as \ac{MOS} with standard deviation in brackets.}
  \label{tab:lab:hypoconsecutive} 
  \begin{tabulary}{\columnwidth}{c|c|C}
 	Condition   & \ac{LP} episode(s) 	& \EIIa{} \\

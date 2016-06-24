@@ -41,13 +41,13 @@ For the multi\-/episodic assessment of \E1{}, a speech telephony system for two-
 \paragraph*{Network-based Setup}
 In the first part of \E1{}, a \ac{VoIP}\=/based system consisting of three computers was used.
 These three computers were connected via Ethernet (\textsc{\lowercase{CAT\=/5}}). 
-One computer (\emph{Lenovo~X61}) acted as a Server running the open-source telephony software \emph{Asterisk 11}\footnote{The Asterisk project is hosted under \url{http://www.asterisk.org}.}.
+One computer (\emph{Lenovo~X61}) acted as a Server running the open-source telephony software \emph{Asterisk~11}\footnote{The Asterisk project is hosted under \url{http://www.asterisk.org}.}.
 Two \emph{Fujitsu~Lifebook~S761} were running each a customized client based on \emph{PJSIP~2.1}\footnote{PJSIP is an open-source library for \ac{SIP}\=/based \ac{VoIP} (\url{http://www.pjsip.org}).}, which were connected via \ac{SIP} with the server.
 The clients presented only a minimal user interface, consisting of one button for call initiation and hangup, one button to set the current presence status, and a presence status indicator of the remote client.
 Call initiation was only possible if both clients set their presence status to available.
 The two clients could not communicate directly with each other as the Asterisk server acted as proxy.
 Transmission of the speech signal between Asterisk and the clients (both directions) was lossless by using the \emph{L16} codec (clock rate: \unit[16]{kHz}).
-Asterisk applied the desired performance levels (codec) by compression the signal and immediately decompressing it before relaying the signal.\footnote{The performance levels were set by using the transcoding capability of Asterisk. On an incoming call coded with L16, Asterisk initiated a call to himself with the desired codec (\ie, G.722, or LPC\=/10). The later call triggered an outgoing call to the callee encoded in L16.}
+Asterisk applied the desired performance levels (codec) by compression the signal and immediately decompressing it before relaying the signal.\footnote{The performance levels were set by using the transcoding capability of Asterisk. On an incoming call coded with L16, Asterisk initiated a call to himself with the desired codec (\ie, G.722, or \textsc{\lowercase{LPC\=/10}}). The later call triggered an outgoing call to the callee encoded in L16.}
 This system achieved a one-way end-to-end delay of \unit[120]{ms}.
 
 On each of the two client computers, one \emph{Beyerdynamic~DT~790~Pro} headset connected to a \emph{Edirol~UA\=/25EX} sound card was used for recording and diotic reproduction.
@@ -76,15 +76,15 @@ The participants were located in two sound-insulated test rooms which met the re
 \section{Experiments E2a, E2b, and E3}
 For the experiments \EIIa{}, \EIIb{}, and \E3{}, audio signals were presented with a pair of \emph{Sennheiser~HD~25\=/1} headphones.
 For \EIIa{} and \E3{}, these were connected to the internal sound card of a \emph{Microsoft~Surface~Pro} tablet computer.
-For \EIIb{}, these were connected to the internal sound card of the \emph{Nexus 7 (2013)}.
+For \EIIb{}, these were connected to the internal sound card of the \emph{Nexus~7~(2013)}.
 In all three experiments, the sound pressure level was calibrated to \unit[75]{dB20$\mu$Pa} using a \emph{HEAD acoustics} head and torso simulator \emph{HSM~II.3}.
 The experiments were conducted in a sound-proof cabin following \citet{itu-t_recommendation_p.800_methods_1996}.
-In \EIIb{}, the \ac{VoD} service was presented on the display of the Nexus\,7, presenting the videos horizontally in full screen.
+In \EIIb{}, the \ac{VoD} service was presented on the display of the Nexus~7, presenting the videos horizontally in full screen.
 The brightness of this \unit[7]{inch} display was set to maximum without applying any device related color adaption.
 
 For these three experiments, non-degraded recordings of two-party conversations of \E1{} were selected.
 These recordings were processed with the \textsc{\lowercase{ITU\=/T}~\lowercase{STL2009}} tools \citep{itu-t_recommendation_g.191_software_2010} for coding G.722 and with \textsc{\lowercase{SOX}} for coding \textsc{\lowercase{LPC\=/10}}.
-For \EIIb{}, the video material was cut with \emph{Adobe Premiere 6} and exported with H.264 (\unit[1280$x$720]{px}, \unit[5]{Mbit/s}, two-pass) and \acs{AAC} (\unit[448]{kbit/s}, stereo).
+For \EIIb{}, the video material was cut with \emph{Adobe~Premiere~6} and exported with H.264 (\unit[1280$x$720]{px}, \unit[5]{Mbit/s}, two-pass) and \acs{AAC} (\unit[448]{kbit/s}, stereo).
 Subsequently, the scenes was processed with \emph{FFmpeg}\footnote{The FFmpeg project is available at \url{https://www.ffmpeg.org/}.} to apply with the desired \acs{QP} factor while leaving the audio unchanged.
 
 \section{Experiment E4}
@@ -96,9 +96,9 @@ For recording and audio reproduction, participants were provided a \emph{Logitec
 For conducting \E4{}, a publicly reachable \ac{VoIP} telephony service was set up.
 The service needed to be able to allow multiple two-party speech conversations at the same time while being able to insert packet-loss for individual conversations.
 For this service, one server was installed in the data center of \emph{TU~Berlin}.
-As operating system \emph{FreeBSD\,9.0} was selected, because it provides a built-in firewall with integrated traffic shaper called \emph{Dummynet}~\citep{rizzo_dummynet_1997}.
+As operating system \emph{FreeBSD~9.0} was selected, because it provides a built-in firewall with integrated traffic shaper called \emph{Dummynet}~\citep{rizzo_dummynet_1997}.
 This traffic shaper allows to add network impairments (packet-loss, delay, and jitter) per individual connection, \ie, protocol, port, and address.
-On this server, the \ac{VoIP} software \emph{Asterisk\,10} was installed, which was configured to act as a \ac{SIP} registrar as well as \acs{RTP}\=/relay for the \acs{UDP}\=/based media streams.
+On this server, the \ac{VoIP} software \emph{Asterisk~10} was installed, which was configured to act as a \ac{SIP} registrar as well as \acs{RTP}\=/relay for the \acs{UDP}\=/based media streams.
 On call initiation of a client, Asterisk informed Dummynet about the desired packet-loss rate for the media streams of this call.
 Packet-loss was not inserted to the \ac{SIP} connections between clients and server, because this affects the reactivity of the telephony system and might lead to call drops.
 On each participant's computer, the \ac{VoIP} client \emph{Jitsi\,1.0} was installed.
