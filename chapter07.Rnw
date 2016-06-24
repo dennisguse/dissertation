@@ -712,14 +712,13 @@ Both present 9 episodes while non-\ac{HP} is presented for the 5th and 6th\,epis
 \end{table}
 
 For each condition, the three multi\-/episodic judgments are significantly different (\CVb{}: \Sexpr{kruskal(IQU~id, "E1", performance_level,"5b", c(3, 6, 9))}; \C7{}: \Sexpr{kruskal(IQU~id, "E1", performance_level, "7", c(3, 6, 9))}).
-For \CVb{}, a paired post-hoc test shows significant differences between the judgment after the 3rd and 6th episode (\Sexpr{wilcox.pairwise.print(QU~id, "E1", performance_level, "5b", c(3, 6, 9), paired=T)[1,1]}) and the 6th and 9th episode (\Sexpr{wilcox.pairwise.print(QU~id, "E1", performance_level, "5b", c(3, 6, 9), paired=T)[2,2]}).
-The judgment after the 3rd and 9th episode are not significantly different (\Sexpr{wilcox.pairwise.print(QU~id, "E1", performance_level, "5b", c(3, 6, 9), paired=T)[2,1]}).
-A paired post-hoc test for \C7{} yields similar findings (3rd vs. 6th: \Sexpr{wilcox.pairwise.print(QU~id, "E1", performance_level, "7", c(3, 6, 9), paired=T)[1,1]}; 6th vs. 9th: \Sexpr{wilcox.pairwise.print(QU~id, "E1", performance_level, "7", c(3, 6, 9), paired=T)[2,2]}; 3rd vs. 9th: \Sexpr{wilcox.pairwise.print(QU~id, "E1", performance_level, "7", c(3, 6, 9), paired=T)[2,1]}).
+For \CVb{}, a paired post-hoc test shows significant differences between the judgment after the 3rd and 6th episode (\Sexpr{wilcox.pairwise.print(IQU~id, "E1", performance_level, "5b", c(3, 6, 9), paired=T)[1,1]}), the 6th and 9th episode (\Sexpr{wilcox.pairwise.print(IQU~id, "E1", performance_level, "5b", c(3, 6, 9), paired=T)[2,2]}), and the 3rd and 9th episode (\Sexpr{wilcox.pairwise.print(IQU~id, "E1", performance_level, "5b", c(3, 6, 9), paired=T)[2,1]}).
+A paired post-hoc test for \C7{} yields similar findings (3rd vs. 6th: \Sexpr{wilcox.pairwise.print(IQU~id, "E1", performance_level, "7", c(3, 6, 9), paired=T)[1,1]}; 6th vs. 9th: \Sexpr{wilcox.pairwise.print(IQU~id, "E1", performance_level, "7", c(3, 6, 9), paired=T)[2,2]}; 3rd vs. 9th: \Sexpr{wilcox.pairwise.print(IQU~id, "E1", performance_level, "7", c(3, 6, 9), paired=T)[2,1]}).
 Between these two conditions, the judgments after the 6th\,episode (\Sexpr{wilcox(IQU~condition, "E1", performance_level, c("5b", "7"), c(6))}) and the 9th episodes (\Sexpr{wilcox(IQU~condition, "E1", performance_level, c("5b", "7"), c(9))}) are significantly different.
 
 Both conditions show an increase in the final multi\-/episodic judgment due to the three additional \ac{HP} episodes.
-In fact, both conditions do not show a significant difference between the multi\-/episodic judgments after the 3rd and 9th\,episode.
-However, for both conditions a small effect of the non-\ac{HP} episodes on the last multi\-/episodic judgment is indicated, as these remain lower than the first multi\-/episodic judgment.
+In fact, both conditions do still show a significant difference between the multi\-/episodic judgments after the 3rd and 9th\,episode.
+Thus, a negative effect of the presented non-\ac{HP} episodes is still present, as these remain lower than the first multi\-/episodic judgment. 
 %This is supported by the found difference between the final judgments of both conditions.
 
 It must be concluded that the multi\-/episodic judgment recovers if three additional \ac{HP} episodes are presented, and thus \autoref{hypo:recovery} is accepted.
