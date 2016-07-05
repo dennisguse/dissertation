@@ -409,7 +409,7 @@ Box plots for all conditions per experiments are presented in the \appendix{}~\r
 	\hline
 	\EIIa{}			& Telephony (Listening) 		& \Sexpr{mos_qu_with_sd_by_condition("E2a", "HP")}	& - 																				& \Sexpr{mos_qu_with_sd_by_condition("E2a", "LP")} \\
 	\hline
-	\multirow{2}{*}{\EIIb{}}	& Telephony (Listening)	& \Sexpr{mos_qu_with_sd_by_condition("E2b", "HP", c("5a0", "5a4"), c(1:6), "telephony")} 	& - 							& \Sexpr{mos_qu_with_sd_by_condition("E2b", "LP", c("5a", "5a0", "5a4"), c(1:6), "telephony")} \\
+	\multirow{2}{*}{\EIIb{}}	& Telephony (Listening)	& \Sexpr{mos_qu_with_sd_by_condition("E2b", "HP", c("5a", "5a0", "5a4"), c(1:6), "telephony")} 	& - 							& \Sexpr{mos_qu_with_sd_by_condition("E2b", "LP", c("5a", "5a0", "5a4"), c(1:6), "telephony")} \\
 	& \ac{VoD}															& \Sexpr{mos_qu_with_sd_by_condition("E2b", "HP", c("5a0", "5a4"), c(1:6), "VoD")} 	& - 														& \Sexpr{mos_qu_with_sd_by_condition("E2b", "LP", c("5a4"), c(1:6), "VoD")} \\
 	\hline
 	\E3{}				& \ac{AoD} 								& \Sexpr{mos_qu_with_sd_by_condition("E3", "HP")} 	& - 																					& \Sexpr{mos_qu_with_sd_by_condition("E3", "LP")} \\
