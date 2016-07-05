@@ -189,7 +189,7 @@ In comparison to \textsc{\lowercase{LPC\=/10}}, the re-synthesized speech signal
 
 As \textsc{\lowercase{LPC\=/10}} is rarely compared to G.711 or G.722, an objective evaluation using \ac{POLQA} \citep{itu-t_recommendation_p.863_perceptual_2014} was conducted.
 \ac{POLQA} estimates the \ac{MOS} for the 5-point \ac{ACR} scale.
-\citet{koster_comparison_2015} presented a transformation function that allows to transform judgments from the 5-point \ac{ACR} scale to the 7\=/point \ac{CoCR} scale. %for speech telephony
+\citet{koster_comparison_2015} presented a transformation function that allows to transform judgments from the 5\=/point \ac{ACR} scale to the 7\=/point \ac{CoCR} scale. %for speech telephony
 For the evaluation \unit[12]{s} German speech samples have been processed with all three codecs.
 The resulting speech signals were then evaluated with \ac{POLQA} in super-wideband mode.
 The results are shown in \autoref{tab:lab:performance}.

@@ -519,7 +519,7 @@ Box plots for all conditions can be found in the \appendix{}~\ref{appendix:resul
 	\hline
 	\C6 & 4..6	& \Sexpr{participants("E6a", "6")}	& \Sexpr{mos_qu_with_sd_by_condition("E6a", "HP", "6")}		& \Sexpr{mos_qu_with_sd_by_condition("E6a", "LP", "6")} \\
 	\hline
-	\C8	& 4, 6	& \Sexpr{participants("E6a", "8")} & \Sexpr{mos_qu_with_sd_by_condition("E6a", "HP", "8")}		& \Sexpr{mos_qu_with_sd_by_condition("E6a", "LP", "8")} \\
+	\C8	& 4 and 6	& \Sexpr{participants("E6a", "8")} & \Sexpr{mos_qu_with_sd_by_condition("E6a", "HP", "8")}		& \Sexpr{mos_qu_with_sd_by_condition("E6a", "LP", "8")} \\
 	\end{tabulary}
 \end{table}
 
