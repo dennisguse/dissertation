@@ -172,7 +172,7 @@ For digital telecommunication services this can be achieved in the compression s
 \ac{HP} should provide the state-of-the-art performance.
 For speech telephony, this is at the time of this writing the transmission in wideband with proper loudness, but without temporal clipping, noise, echo, or other negative factors.
 Here, the codec \emph{G.722} (Mode~1)~is selected \citep{itu-t_recommendation_g.722_7khz_2012}.
-This codec provides a similar perceived quality similar to uncompressed wideband. %TODO Add refs, Moeller, Raake, Marcel
+This codec provides a similar perceived quality to uncompressed wideband. %TODO Add refs, Moeller, Raake, Marcel
 %In subjective listening-only experiments G.722 typically achieves a \ac{MOS} of 4.5~on the 5-point \ac{ACR} scale.
 
 For \ac{LP}, the speech signal is coded with \textsc{\lowercase{LPC\=/10}}\footnote{\textsc{\lowercase{LPC\=/10}} is also known as \emph{\textsc{\lowercase{FS-}}1015} and \emph{\textsc{\lowercase{STANAG}} 4198}.}.
