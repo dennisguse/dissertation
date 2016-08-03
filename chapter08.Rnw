@@ -327,9 +327,13 @@ Between the two conditions, only the judgments of the 2nd\,day are significantly
  	& \C9{} & \CX{} & \C9{} & \CX{} \\
 	\midrule
 	2 & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P1", 2, "AoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P2", 2, "AoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P1", 2, "VoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P2", 2, "VoD")} \\
+	\hline
 	5 & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P1", 5, "AoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P2", 5, "AoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P1", 5, "VoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P2", 5, "VoD")} \\
+	\hline
 	8 & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P1", 8, "AoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P2", 8, "AoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P1", 8, "VoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P2", 8, "VoD")} \\
+	\hline
 	11 & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P1", 11, "AoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P2", 11, "AoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P1", 11, "VoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P2", 11, "VoD")} \\
+	\hline
 	14 & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P1", 14, "AoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P2", 14, "AoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P1", 14, "VoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E5", "P2", 14, "VoD")} \\
 	\end{tabular}
 \end{table}
