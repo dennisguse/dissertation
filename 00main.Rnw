@@ -87,7 +87,7 @@
 %\cleardoublepage\include{FrontBackmatter/Foreword}
 \cleardoublepage\include{support/FrontBackmatter/Abstract}
 \cleardoublepage\include{support/FrontBackmatter/Publications}
-%\cleardoublepage\include{support/FrontBackmatter/Acknowledgments}
+\cleardoublepage\include{support/FrontBackmatter/Acknowledgments}
 \pagestyle{scrheadings}
 
 \cleardoublepage\include{support/FrontBackmatter/Contents}
