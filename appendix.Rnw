@@ -96,7 +96,7 @@ For recording and audio reproduction, participants were provided a \emph{Logitec
 For conducting \E4{}, a publicly reachable \ac{VoIP} telephony service was set up.
 The service needed to be able to allow multiple two-party speech conversations at the same time while being able to insert packet-loss for individual conversations.
 For this service, one server was installed in the data center of \emph{TU~Berlin}.
-As operating system \emph{FreeBSD~9.0} was selected, because it provides a built-in firewall with integrated traffic shaper called \emph{Dummynet}~\citep{rizzo_dummynet_1997}.
+As operating system \emph{FreeBSD~9.0} was selected, because it provides a built-in firewall with integrated traffic shaper called \emph{Dummynet}~\citep{rizzo_dummynet:_1997}.
 This traffic shaper allows to add network impairments (packet-loss, delay, and jitter) per individual connection, \ie, protocol, port, and address.
 On this server, the \ac{VoIP} software \emph{Asterisk~10} was installed, which was configured to act as a \ac{SIP} registrar as well as \acs{RTP}\=/relay for the \acs{UDP}\=/based media streams.
 On call initiation of a client, Asterisk informed Dummynet about the desired packet-loss rate for the media streams of this call.
