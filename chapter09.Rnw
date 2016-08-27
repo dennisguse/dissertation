@@ -252,7 +252,7 @@ ggplot_model_create(subset(data_mos_nonadjusted, data_mos_nonadjusted$experiment
 
 With regard to the multi\-/episodic judgment after the 6th\,episode, both model types perform slightly differently.
 \autoref{fig:pred:E1pred6} shows the \ac{RMSD} for the 6th\,episode for both model types.
-Here, WI performs better while increasing $\mathit{w}$ to 4.
+Here, WI performs better while increasing $\mathit{w}$ to 4 (\Sexpr{round(subset(data_mos_nonadjusted, data_mos_nonadjusted[["experiment"]] == "E1" & data_mos_nonadjusted[["id"]] == 6 & data_mos_nonadjusted[["model"]] == "weight_window_create" & data_mos_nonadjusted[["condition"]] == "All" & data_mos_nonadjusted["parameter"] == 4)["RMSD"], 2)}).
 However, the prediction accuracy depends on the considered condition.
 For example, \C3{} is far off for $\mathit{w}=1$ and improves until $\mathit{w}=3$ while \C4{} is best predicted with~$\mathit{w}=5$.
 LI outperforms WI in prediction accuracy and is, furthermore, more robust.
@@ -336,7 +336,7 @@ ggplot_model_create(subset(data_mos_nonadjusted, data_mos_nonadjusted$experiment
 
 With regard to the prediction of the multi\-/episodic judgment after the 6th\,episode, the results closely resemble \E1{}.
 The \ac{RMSD} is shown in \autoref{fig:pred:E2pred6}.
-For WI, the minimal \ac{RMSD} is reached at $\mathit{w}=4$ (\Sexpr{round(min(subset(data_mos_nonadjusted, data_mos_nonadjusted[["experiment"]] == "E2a" & data_mos_nonadjusted[["id"]] == 6 & data_mos_nonadjusted[["model"]] == "weight_window_create" & data_mos_nonadjusted[["condition"]] == "All")[["RMSD"]]), 2)}) while $\mathit{w}=3$ is rather close.
+For WI, the minimal \ac{RMSD} is reached at $\mathit{w}=4$ (\Sexpr{round(min(subset(data_mos_nonadjusted, data_mos_nonadjusted[["experiment"]] == "E2a" & data_mos_nonadjusted[["id"]] == 6 & data_mos_nonadjusted[["model"]] == "weight_window_create" & data_mos_nonadjusted[["condition"]] == "All")[["RMSD"]]), 2)}) while $\mathit{w}=3$ (\Sexpr{round(subset(data_mos_nonadjusted, data_mos_nonadjusted[["experiment"]] == "E2a" & data_mos_nonadjusted[["id"]] == 6 & data_mos_nonadjusted[["model"]] == "weight_window_create" & data_mos_nonadjusted[["condition"]] == "All" & data_mos_nonadjusted["parameter"] == 3)["RMSD"], 2)}) is rather close.
 For LI, the minimal \ac{RMSD} is achieved at $\mathit{w}=2$ (\Sexpr{round(min(subset(data_mos_nonadjusted, data_mos_nonadjusted[["experiment"]] == "E2a" & data_mos_nonadjusted[["id"]] == 6 & data_mos_nonadjusted[["model"]] == "weight_linear_create" & data_mos_nonadjusted[["condition"]] == "All")[["RMSD"]]), 2)}).
 In fact, the found parameters are very similar to \E1{} while the \ac{RMSD} behaves similarly for individual conditions.
 
