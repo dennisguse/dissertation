@@ -64,6 +64,9 @@
 
 \usepackage[shortcuts]{extdash}
 
+%Centering column type Y for tabularx
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+
 \def\UrlFont{\color{black}\em}
 % ********************************************************************
 % GO!GO!GO! MOVE IT!

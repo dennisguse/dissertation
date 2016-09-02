@@ -1,5 +1,5 @@
-mean_sd <- function(d, precision=1) {
- paste0(format(round(mean(d, na.rm=T), precision), nsmall=precision), " (", format(round(sd(d, na.rm=T), precision), nsmall=precision), ")")
+mean_sd <- function(d, precision=1, sep=" ") {
+ paste0(format(round(mean(d, na.rm=T), precision), nsmall=precision), sep, "(", format(round(sd(d, na.rm=T), precision), nsmall=precision), ")")
  #sprintf("%f (%f)", mean(d, na.rm=T), sd(d, na.rm=T))
 }
 
@@ -13,20 +13,20 @@ participants <- function(experiment_filter, condition_filter=unique(timeseries$c
 # participants("E1", 3)
 # participants("E2b", "5a4")
 
-mos_qu_with_sd_by_condition <- function(experiment_filter, performance_level_filter=unique(timeseries$performance_level), condition_filter=unique(timeseries$condition), id_filter=unique(timeseries$id), service_filter=unique(timeseries$service)) {
+mos_qu_with_sd_by_condition <- function(experiment_filter, performance_level_filter=unique(timeseries$performance_level), condition_filter=unique(timeseries$condition), id_filter=unique(timeseries$id), service_filter=unique(timeseries$service), sep=" ") {
  d = subset(timeseries$QU, experiment %in% experiment_filter & performance_level %in% performance_level_filter & condition %in% condition_filter & id %in% id_filter & service %in% service_filter)
  
- mean_sd(d)
+ mean_sd(d, sep=sep)
 }
 # mos_qu_with_sd_by_condition("E1", "HP", c(1:3), 1)
 # mos_qu_with_sd_by_condition("E2b", "HP", c("5a"),  c(1:3), "telephony")
 # mos_qu_with_sd_by_condition("E2b", "HP", c("5a0"),  c(1:6), "VoD")
 # mos_qu_with_sd_by_condition("E2b", "LP", c("5a4"),  c(1:6), "VoD")
 
-mos_iqu_with_sd_by_condition <- function(experiment_filter, condition_filter=unique(timeseries$condition), id_filter=unique(timeseries$id), service_filter=unique(timeseries$service)) {
+mos_iqu_with_sd_by_condition <- function(experiment_filter, condition_filter=unique(timeseries$condition), id_filter=unique(timeseries$id), service_filter=unique(timeseries$service), sep=" ") {
  d = subset(timeseries$IQU, experiment %in% experiment_filter & condition %in% condition_filter & id %in% id_filter & service %in% service_filter)
  
- mean_sd(d)
+ mean_sd(d, sep=sep)
 }
 # mos_iqu_with_sd_by_condition("E1", 4, 3)
 # mos_qu_with_sd_by_condition("E1", "LP", "2b", 5)

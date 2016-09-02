@@ -34,7 +34,7 @@ attach(timeseries)
 
 
 The integration of perceived quality of usage episodes into a multi\-/episodic perceived quality is not limited to one session alone.
-Rather usage episodes with a service often occur regularly, covering multiple days or even longer usage periods.
+Rather usage episodes with a service often occur regularly and might cover multiple days or even longer usage periods.
 In difference to consecutive usage in one session, the time that passes between episodes might be longer.
 However, it is so far unknown how and if at all the time between episodes affects the quality formation process of multi\-/episodic perceived quality.
 %Due to the lack of ground truth, the findings for one session (\cf{} \autoref{chap:lab}) are used as a basis towards this investigation.
@@ -45,18 +45,18 @@ However, this approach has two inherent limitations.
 First, the usage environment cannot be controlled and is unlikely to be identical between participants.
 Second, participants cannot be directly supervised during the experiment.
 Both might be confounding factors.
-In addition, technical systems must be robust while providing the desired performance levels per usage episode.
+In addition, technical systems must be robust while providing the desired performance level per usage episode.
 
 For the investigation of multi\-/episodic perceived quality with a usage period of multiple days, three experiments were conducted denoted as \E4{}, \E5{}, and \E6{}.
-These experiments follow the defined-use method.
+These experiments apply the defined-use method.
 Following \citet{moller_single-call_2011}, each usage episode was presented individually, \ie, one episode per session.
 \E4{} and \E5{} focused on general feasibility of investigating multi\-/episodic perceived quality in a field experiment.
 These experiments covered a usage period of \unit[14]{days} in which participants used two services on a daily basis.
 Besides feasibility, \E4{} focused on the reproduction of the results of \citet{moller_single-call_2011}.
-In \E5{}, the adaption speed of multi\-/episodic judgments was planed to be investigated.
+In \E5{}, the adaptation speed of multi\-/episodic judgments was planed to be investigated.
 Based on \E4{}, \E5{}, and the one-session experiments, \E6{} was designed.
 Here, \autoref{hypo:number}, \autoref{hypo:position}, and \autoref{hypo:consecutive} were investigated.
-In this experiment only one service was used in a usage period of \unit[7]{days}.
+In this experiment only one service was used in a usage period of 6~days.
 
 In all three experiments, two performance levels were applied.
 These are also denoted as \ac{HP} and \ac{LP}.
@@ -69,7 +69,7 @@ However, the performance levels were different between the three experiments.
 	\centering
 	\caption{Multiple days: overview on experiments.}
 	\label{tab:field:experiments}
-	\begin{tabulary}{\textwidth}{Z{1.1cm}|Z{2.3cm}|Z{3.4cm}|Z{0.8cm}|Z{1.4cm}}
+	\begin{tabulary}{\textwidth}{Z{1.1cm}|Z{2.3cm}|Z{3.4cm}|Z{1.0cm}|Z{1.4cm}}
 %	\begin{tabulary}{\textwidth}{C|C|Z{2.5cm}|Z{0.8cm}|Z{0.8cm}}
 	Experi-ment	& Service Types 		& Tasks															& Days	& Partici-pants \\
 	\midrule
@@ -81,13 +81,13 @@ However, the performance levels were different between the three experiments.
 	\end{tabulary}
 \end{table}
 
-\autoref{tab:field:experiments} gives an overview of the experiments including service types, tasks and number of participants.
+\autoref{tab:field:experiments} gives an overview of the experiments including service types, tasks, and number of participants.
 In the following, the experiments are presented one after the other.
 
 \section{Experiment E4}
 \E4{} was inspired by \citet{moller_single-call_2011}.\footnote{The results of \E4{} are published in \citet{guse_macro-temporal_2013}.}
-The experiment of \citet{moller_single-call_2011} indicated only little differences for multi-episodic judgments between the evaluated multi-episodic conditions (\cf{} \autoref{prior:moeller}).
-This might be due to the limited number of degraded episodes or that introduced degradations were not severe enough.
+The experiment of \citet{moller_single-call_2011} indicated only little differences for multi-episodic judgments between the evaluated multi-episodic conditions (\cf{} \hyperref[prior:moeller]{Section \ref*{prior:moeller}}).
+This might be due to the limited number of degraded episodes or the introduced degradations were not severe enough.
 The goal of \E4{} was the application the defined-use method in a similar usage period to \citet{moller_single-call_2011} and to gather practical knowledge about conducting a field experiment.
 In addition, conducting \E4{} had two goals:
 First, a larger difference of multi\-/episodic judgments between conditions was desired to investigate the formation process.
@@ -116,7 +116,8 @@ After finishing an episode, participants assessed the episodic perceived quality
 The multi\-/episodic perceived quality for each service was assessed on the 4th, 7th, 10th, and 14th day directly after finishing the daily episode with the \ac{VoD} service (same scale).
 
 For the speech telephony service, the speech codec G.722 was used with a packet-length of \unit[20]{ms} for \ac{HP} and for \ac{LP}.
-Neither \acs{FEC} nor \acs{PLC} were applied.
+Neither \acs{FEC} nor elaborate algorithms for \acs{PLC} were applied.
+For \acs{PLC}, only zero insertion was used.
 For \ac{LP}, a random packet-loss of 5\% was inserted in addition.
 For the \ac{VoD} service, the video was encoded with H.264 at a resolution of \unit[720$x$576]{px} and the audio channel encoded with \acs{AAC} (\unit[48]{kHz}, \unit[165]{kbit/s}, stereo).
 The two performance levels for this service differed only in the video encoding bandwidth.
@@ -130,7 +131,7 @@ The video was always played in full screen independent of the actual screen size
 A complete description of the technical setup can be found in the \appendix{}~\ref{appendix:setups} (p.\,\pageref{appendix:setups}).
 
 On the day before starting the \unit[14]{day} usage period, an introductory session was conducted with each pair of participants.
-In this session, participants received detailed instructions for this experiment and provided demographic data.
+In this session, participants received detailed instructions for this experiment and provided their demographic data.
 Afterwards, a short training was conducted, presenting typical degradations with regard to digital transmission of speech and video.
 Also, one episode for both services need to be solved.
 These were presented in \ac{HP}.
@@ -193,7 +194,7 @@ However, the difference is smaller than desired as only a reduction of approxima
 
 \paragraph*{Multi-episodic Judgments}
 The multi\-/episodic judgments for the \ac{VoD} service are shown in \autoref{tab:field:e4results}.
-For \C0{} no significant differences in multi\-/episodic judgments are found between the four measurements (\Sexpr{kruskal(IQU~id, "E4a", c("HP", "LP"), "A0", unique(timeseries[["id"]]), "VoD")}).
+For \C0{}, no significant differences in multi\-/episodic judgments are found between the four measurements (\Sexpr{kruskal(IQU~id, "E4a", c("HP", "LP"), "A0", unique(timeseries[["id"]]), "VoD")}).
 Also for \C9{}, no significant differences are observed (\Sexpr{kruskal(IQU~id, "E4a", c("HP", "LP"), "A1", unique(timeseries[["id"]]), "VoD")}).
 Even between the two conditions, no significant differences between multi\-/episodic judgments are found (\cf{} \autoref{tab:field:e4results}).
 
@@ -216,11 +217,11 @@ This is also indicated by the rather small difference between episodic judgments
 Nevertheless, the results of \C0{} are as expected, \ie, multi\-/episodic judgments do not differ from episodic judgments.
 This is in line with \citet{moller_single-call_2011}.
 In addition, a slight increase of episodic judgments over the usage period is indicated.
-The reason for this is unknown and could be deduced from the experiments.
+The reason for this is unknown and could be not deduced from the experiments.
 The gathered data is not sufficient for the implementing of a prediction model for multi\-/episodic judgments.
 
 \section{Experiment E5}
-Based on the practical insights of \E4{}, in \E5{} only media-consumption was used.\footnote{The results of \E5{} are published in \citet{guse_modelling_2014}.}
+Based on the practical insights of \E4{}, in \E5{} only media consumption was used.\footnote{The results of \E5{} are published in \citet{guse_modelling_2014}.}
 Here, a \ac{VoD} service and an \ac{AoD} service were used.
 Similar to \E4{}, the services needed to be used over a usage period of \unit[14]{days}.
 In this experiment, the impact of increasing the number of performance changes between episodes on multi\-/episodic judgment was investigated.
@@ -645,10 +646,10 @@ It must be concluded that increasing the number of performance level changes did
 \section{Conclusion}
 \E6{} was conducted based on the practical knowledge gained in \E4{} and \E5{}.
 \E4{} and \E5{} showed that multi\-/episodic perceived quality can be investigated in a field experiment with the defined-use method.
-Although the results were very limited, it was found that a media-consumption service can be set up in a reliable manner.
+Although the results were very limited, it was found that a media\-/on\-/demand service can be set up in a reliable manner.
 Beside avoiding technical complexity also employing pairs of participants has been found difficult in a field experiment (\E4{}).
 Especially, the necessary effort for each pair of participants to conduct the episodes together was found limiting.
-These limitations could be overcome by using media-consumption tasks.
+These limitations could be overcome by using media\-/consumption tasks.
 In addition, this allows to avoid the impact of varying user behavior.
 This lead to the design of \E6{}.
 This experiment is also inspired by the one-session experiments.

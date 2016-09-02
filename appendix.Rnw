@@ -80,7 +80,7 @@ For \EIIb{}, these were connected to the internal sound card of the \emph{Nexus~
 In all three experiments, the sound pressure level was calibrated to \unit[75]{dB20$\mu$Pa} using a \emph{HEAD acoustics} head and torso simulator \emph{HSM~II.3}.
 The experiments were conducted in a sound-proof cabin following \citet{itu-t_recommendation_p.800_methods_1996}.
 In \EIIb{}, the \ac{VoD} service was presented on the display of the Nexus~7, presenting the videos horizontally in full screen.
-The brightness of this \unit[7]{inch} display was set to maximum without applying any device related color adaption.
+The brightness of this \unit[7]{inch} display was set to maximum without applying any device related color adaptation.
 
 For these three experiments, non-degraded recordings of two-party conversations of \E1{} were selected.
 These recordings were processed with the \textsc{\lowercase{ITU\=/T}~\lowercase{STL2009}} tools \citep{itu-t_recommendation_g.191_software_2010} for coding G.722 and with \textsc{\lowercase{SOX}} for coding \textsc{\lowercase{LPC\=/10}}.
@@ -108,7 +108,7 @@ Two limitations have been observed.
 First of all, participants connected using their own Internet access (minimal bandwidth: \unit[6]{MBit/s}).
 The performance of this connection could neither be estimated nor enforced.
 Thus, for some calls severe, often bursty, packet-loss was observed.
-However, for the media streams no counter measures were taken against packet-loss, \ie, neither \acs{PLC} nor \acs{FEC}. 
+However, for the media streams no counter measures were taken against packet-loss, \ie, neither elaborate \acs{PLC} (only zero insertion) nor \acs{FEC}. 
 % are available for , as the used speech codec G.722 (Mode\,1) was used with neither \acs{PLC} nor \acs{FEC} on \acs{UDP} connections without retransmission.
 Second, packet-loss was added by Dummynet in addition to packet-loss occurring due to the network issues.
 This lead to potentially higher packet-loss than desired.
