@@ -51,7 +51,7 @@ For the investigation of multi\-/episodic perceived quality with a usage period 
 These experiments apply the defined-use method.
 Following \citet{moller_single-call_2011}, each usage episode was presented individually, \ie, one episode per session.
 \E4{} and \E5{} focused on general feasibility of investigating multi\-/episodic perceived quality in a field experiment.
-These experiments covered a usage period of \unit[14]{days} in which participants used two services on a daily basis.
+These experiments covered a usage period of 14~days in which participants used two services on a daily basis.
 Besides feasibility, \E4{} focused on the reproduction of the results of \citet{moller_single-call_2011}.
 In \E5{}, the adaptation speed of multi\-/episodic judgments was planed to be investigated.
 Based on \E4{}, \E5{}, and the one-session experiments, \E6{} was designed.
@@ -98,7 +98,7 @@ This enabled to investigate the formation process in presence of two services.
 
 \subsection{Design}
 In this experiment, a speech telephony service and a \ac{VoD} service were selected.
-The two services needed to be used daily over a usage period of \unit[14]{days}.
+The two services needed to be used daily over a usage period of 14~days.
 The telephony service was used by a pair of participants together.
 Each pair needed to solve two \acp{SCS} per day: the first one between \unit[6]{am} and \unit[1]{pm} and the second one between \unit[3]{pm} and midnight.
 The \ac{VoD} service needed to be used daily for one episode between \unit[1]{pm} and midnight.
@@ -110,7 +110,7 @@ For each usage episode one part was presented.
 In this experiment, two conditions were investigated.
 In the first one, all usage episodes were presented in \ac{HP} (denoted as \C0{}).
 In the second condition, denoted as \C9{}, both services were presented in \ac{HP} for the first two days followed by two days \ac{LP} and so forth. \label{C9}
-This resulted in \unit[8]{days} presented \ac{HP} versus \unit[6]{days} presented in \ac{LP}. 
+This resulted in 8~days presented \ac{HP} versus 6~days presented in \ac{LP}. 
 While \C0{} replicates the baseline condition of \citet{moller_single-call_2011}, \C9{} should lead to a reduction in multi\-/episodic judgments.
 
 After finishing an episode, participants assessed the episodic perceived quality on the 7\=/point \ac{CoCR} scale (\cf{} \autoref{img:chap05:quality-scale}).
@@ -131,7 +131,7 @@ The latter only played local preprocessed content.
 The video was always played in full screen independent of the actual screen size or resolution.
 A complete description of the technical setup can be found in the \appendix{}~\ref{appendix:setups} (p.\,\pageref{appendix:setups}).
 
-On the day before starting the \unit[14]{day} usage period, an introductory session was conducted with each pair of participants.
+On the day before starting the 14~day usage period, an introductory session was conducted with each pair of participants.
 In this session, participants received detailed instructions for this experiment and provided their demographic data.
 Also, one episode for both services need to be solved.
 These were presented in \ac{HP}.
@@ -140,9 +140,9 @@ These were presented in \ac{HP}.
 
 \subsection{Participants}
 \E4{} was conducted in Berlin, Germany from August to September~2012.
-For each of the two conditions, \unit[5]{pairs} successfully finished this experiment with an average age of \unit[22.9]{years} ($\sigma = 3.1$), consisting of \unit[11]{male} and \unit[9]{female} participants.
-Of the \unit[280]{scheduled calls}, 5~were not conducted and \unit[18]{episodic} judgments missing.
-For the \ac{VoD} service, all episodes were conducted, but \unit[13]{episodic} judgments and one multi\-/episodic judgment were missing.
+For each of the two conditions, 5~pairs successfully finished this experiment with an average age of 22.9~years ($\sigma = 3.1$), consisting of 11~male and 9~female participants.
+Of the 280~scheduled calls}, 5~were not conducted and 18~episodic judgments missing.
+For the \ac{VoD} service, all episodes were conducted, but 13~episodic judgments and one multi\-/episodic judgment were missing.
 This is, in fact, an issue with regard to the evaluation according to the \ac{MOS} assumption as desired by applying the defined-use method, because not all participants assigned to a condition were exposed to the same multi-episodic condition.
 However, due to the small sample size and the missing ground truth, no participant was removed from the data analysis.
 
@@ -222,7 +222,7 @@ With regard to the implementation of a prediction model for multi\-/episodic jud
 \section{Experiment E5}
 Based on the practical insights of \E4{}, in \E5{} only media consumption was used.\footnote{The results of \E5{} are published in \citet{guse_modelling_2014}.}
 Here, a \ac{VoD} service and an \ac{AoD} service were used.
-Similar to \E4{}, the services needed to be used over a usage period of \unit[14]{days}.
+Similar to \E4{}, the services needed to be used over a usage period of 14~days.
 In this experiment, the impact of increasing the number of performance changes between episodes on multi\-/episodic judgment was investigated.
 The number of \ac{LP} episodes was kept constant.
 %This reduced technical complexity as only one platform was used.
@@ -249,20 +249,20 @@ Degradations on both modalities were inserted to increase the perceptual differe
 Details of the technical setup are described in the \appendix{}~\ref{appendix:setups} (p.\,\pageref{appendix:setups}).
 
 Episodic judgments were taken on the 7\=/point \ac{CoCR} scale after every episode.
-Multi-episodic judgments per service were taken at the 2nd, 5th, 8th, 11th, and 14th\,day.
+Multi-episodic judgments per service were taken at the 2nd, 5th, 8th, 11th, and 14th~day.
 This judgment was taken after finishing the daily episode with the \ac{VoD} service.
 
-On the day before starting the \unit[14]{day} usage period, an introductory session was conducted with every participant.
+On the day before starting the 14~day usage period, an introductory session was conducted with every participant.
 Similar to \E4{}, one \ac{HP} episode with each service was presented in the introductory session.
 
 \subsection{Participants}
 This experiment was conducted in Berlin, Germany from June until August~2013.
-\unit[21]{participants} (\unit[11]{female}, \unit[10]{male}) took part in this experiment with an average of \unit[27.8]{years} ($\sigma = 4.0$).
-\unit[11]{participants} were assigned to the \ac{AoD} service with \C9{} and the \ac{VoD} service with \CX{} and 10 vice versa.
+21~participants (11~female}, 10~male) took part in this experiment with an average of 27.8~years ($\sigma = 4.0$).
+11~participants were assigned to the \ac{AoD} service with \C9{} and the \ac{VoD} service with \CX{} and 10 vice versa.
 Participants received \unit[40]{\textsc{\lowercase{EUR}}} as compensation.
 
-Out of the overall \unit[294]{usage} episodes, 9~were not conducted for the \ac{AoD} service and 13~not conducted for the \ac{VoD} service.
-\unit[6]{multi\-/episodic} judgments were missing.
+Out of the overall 294~usage episodes, 9~were not conducted for the \ac{AoD} service and 13~not conducted for the \ac{VoD} service.
+6~multi\-/episodic judgments were missing.
 Similar to \E4{}, no participant was removed from the data analysis due to the lack of ground truth and the small sample size.
 
 \subsection{Data Analysis}
@@ -359,7 +359,7 @@ That no difference between the two conditions could be observed, indicates that 
 The results of \E5{} can be used for model verification only, as the two conditions yielded very similar results.
 
 \section{Experiment E6}
-\E6{} is a follow-up to the one-session experiments, but extends the usage period to \unit[6]{days} with one usage episode per session.
+\E6{} is a follow-up to the one-session experiments, but extends the usage period to 6~days with one usage episode per session.
 The main goal of this experiment was to investigate if the effects observed in one session can also be observed in longer usage periods.
 Besides interesting knowledge, this is an important aspect for the implementation of a prediction model.
 %If similar effects are observed, a prognosis model can be implemented that can be applied in both settings.
@@ -369,7 +369,7 @@ Here, the impact of the number of \ac{LP} episodes (\autoref{hypo:number}), the 
 
 \subsection{Design}
 The experimental design of \E6{} is similar to the one-session experiments.
-On each of the \unit[6]{days}, the \ac{AoD} service needed to be used twice per day.
+On each of the 6~days, the \ac{AoD} service needed to be used twice per day.
 %In this experiment, two different performance level were applied, \ie, \ac{HP} and \ac{LP}.
 %\subsubsection{Conditions}
 For the investigation of the three hypotheses, six multi\-/episodic conditions were created.
@@ -378,8 +378,8 @@ The conditions were similar to the one-session experiments and thus denoted with
 In all conditions, the first three days were presented in \ac{HP}.
 \ac{LP} episodes were only presented from the 4th~day to the 6th~day.
 The conditions are \C1{}, \C3{}, \C4{}, \C5{}, \C6{}, and \C8{}.
-\C1{} and \C3{} present either the 4th or the 6th\,day in \ac{LP}.
-\C4{}, \C5{}, and \C8{} present two days between the 4th and the 6th\,day in \ac{LP}.
+\C1{} and \C3{} present either the 4th or the 6th~day in \ac{LP}.
+\C4{}, \C5{}, and \C8{} present two days between the 4th and the 6th~day in \ac{LP}.
 \C6{} presents all usage episodes on these three days in \ac{LP}.
 
 For the investigation of \autoref{hypo:number}, the results of the \C3{}, \C5{}, and \C6{} can be compared.
@@ -395,15 +395,15 @@ Again, the audio book was cut, so individual scenes were self-contained.
 The scenes were presented in the chronological order.
 
 %\subsubsection{Feedback}
-Before starting the 6\,day usage period an introductory session was conducted.
+Before starting the 6~day usage period an introductory session was conducted.
 Here, participants received all necessary information about the experiment and demographic data was collected.
 Then, participants were presented typical speech telephony related degradations in the same way than in the one-session experiments (\cf{} \autoref{sec:training}).
 Finally, each participant used the \ac{AoD} service for two episodes to ensure that participants understood how to use the service.
 
 During the multi-episodic part of this experiment the first episode of a day needed to be conducted between \unit[7]{am} and \unit[1]{pm} and the second episode between \unit[3]{pm} and \unit[10]{pm}.
 Episodic judgments and multi\-/episodic judgments were taken on the 7\=/point \ac{CoCR} scale.
-Multi-episodic judgments were collected after the second episode of the \unit[3rd]{day} and the \unit[6th]{day}.
-In fact, the judgment after the \unit[3rd]{day} is only based on \ac{HP} episodes.
+Multi-episodic judgments were collected after the second episode of the 3rd~day and the 6th~day.
+In fact, the judgment after the 3rd~day is only based on \ac{HP} episodes.
 Thus, it can be used as reference point to assess the impact of the presented \ac{LP} episodes on following multi\-/episodic judgments.
 This is similar to the one-session experiments and in the following denoted also as \emph{reference}.
 After each episode, two content-related questions were presented to force participants to pay attention to the content.
@@ -426,7 +426,7 @@ A detailed description of the implemented system is given in the \appendix{}~\re
 \subsection{Participants}
 \E6{} was conducted in Berlin from September~2015 until November~2015.
 Participants were required to have normal hearing capabilities.
-This experiment was conducted with \unit[57]{female} and \unit[38]{male} participants aging from of 18~to~\unit[33]{years} ($\mu=25.8$, $\sigma=4.0$). %data=read.csv("#DataRaw/field-aod_data.csv"); data = data[-which(!data$Valid), ]
+This experiment was conducted with 57~female and 38~male participants aging from of 18~to~33~years ($\mu=25.8$, $\sigma=4.0$). %data=read.csv("#DataRaw/field-aod_data.csv"); data = data[-which(!data$Valid), ]
 Participants received \unit[20]{\textsc{\lowercase{EUR}}} as compensation.
 In this experiment, all usage episodes were conducted and all questionnaires filled.
 Here, participants were informed by email, when a usage episode should be conducted while a digital questionnaire system was used.
@@ -443,7 +443,7 @@ None of the participants fulfilled this criteria.
 In addition, the content related questions were evaluated.
 Here, it was required that participants should answer at least 50\% of the questions correctly and thus assume they followed the experimental instructions.
 Out of the 24~questions, participants answered on average \Sexpr{round(mean(content[["x"]]), 1)} questions ($\sigma = \Sexpr{round(sd(content[["x"]]), 1)}$) correct.
-One participant, who participated in \C8{}, is excluded from data analysis, because only \unit[8]{questions} were correctly answered.
+One participant, who participated in \C8{}, is excluded from data analysis, because only 8~questions were correctly answered.
 
 <<echo=F>>=
 content[content$x > 15, ] = NA
@@ -499,7 +499,7 @@ These present none, one, two, and three days in \ac{LP} before the multi\-/episo
 
 \begin{table}[h]
 	\centering
-	\caption[Multiple days (\E6{}): multi\-/episodic judgments after the 6th\,day for \autoref{hypo:number}]{Multiple days (\E6{}): multi\-/episodic judgments after the 6th\,day for \autoref{hypo:number}. Reported as \ac{MOS} with standard deviation in brackets.}
+	\caption[Multiple days (\E6{}): multi\-/episodic judgments after the 6th~day for \autoref{hypo:number}]{Multiple days (\E6{}): multi\-/episodic judgments after the 6th~day for \autoref{hypo:number}. Reported as \ac{MOS} with standard deviation in brackets.}
 	\label{tab:field:hyponumber}
 	\begin{tabulary}{\columnwidth}{c|c|C}
 	Condition	& \ac{LP} episode(s) 	& Multi-episodic Judgment\\
@@ -536,7 +536,7 @@ This can be investigated for one day in \ac{LP} with \C1{} and \C3{} as well as 
 
 \begin{table}[h]
 	\centering
-	\caption[Multiple days (\E6{}): multi\-/episodic judgment after the 6th\,day for \autoref{hypo:position}]{Multiple days (\E6{}): multi\-/episodic judgment after the 6th\,day for \autoref{hypo:position}. Reported as \ac{MOS} with standard deviation in brackets.}
+	\caption[Multiple days (\E6{}): multi\-/episodic judgment after the 6th~day for \autoref{hypo:position}]{Multiple days (\E6{}): multi\-/episodic judgment after the 6th~day for \autoref{hypo:position}. Reported as \ac{MOS} with standard deviation in brackets.}
 	\label{tab:field:hypoposition}
 	\begin{tabulary}{\columnwidth}{c|c|C}
 	Condition   & \ac{LP} episode(s) 	& Multi-episodic Judgment \\
@@ -559,13 +559,13 @@ However, the results of \E6{} are inconclusive and thus \autoref{hypo:position} 
 \subsubsection{\autoref{hypo:consecutive}: Consecutive vs. Non-consecutive \acs{LP} Episodes}
 In \autoref{hypo:consecutive}, it is assumed that consecutive \ac{LP} episodes yield a better multi\-/episodic judgment than the same number of \ac{LP} episodes presented non-consecutively.
 This hypothesis can be evaluated by comparing \C4{} and \C5{} with \C8{}.
-\C4{} and \C5{} present each two days \ac{LP} consecutively whereas \C8{} presents the 4th and the \unit[6th]{day} in \ac{LP}.
+\C4{} and \C5{} present each two days \ac{LP} consecutively whereas \C8{} presents the 4th and the 6th~day in \ac{LP}.
 \autoref{tab:field:hypoconsecutive} shows the episodic judgment and multi-episodic judgments.
 The three conditions are not significantly different with regard to the last multi\-/episodic judgment (\Sexpr{kruskal(IQU~condition, "E6a", c("HP", "LP"), c("4", "5a", "8"), 14)}).
 
 \begin{table}[h]
 	\centering
-	\caption[Multiple days (\E6{}): multi\-/episodic judgment after the 6th\,day for \autoref{hypo:consecutive}]{Multiple days (\E6{}): multi\-/episodic judgment after the 6th\,day for \autoref{hypo:consecutive}. Reported as \ac{MOS} with standard deviation in brackets.}
+	\caption[Multiple days (\E6{}): multi\-/episodic judgment after the 6th~day for \autoref{hypo:consecutive}]{Multiple days (\E6{}): multi\-/episodic judgment after the 6th~day for \autoref{hypo:consecutive}. Reported as \ac{MOS} with standard deviation in brackets.}
 	\label{tab:field:hypoconsecutive}
 	\begin{tabular}{c|c|c}
 	Condition   & \ac{LP} episode(s) 	& Multi-episodic Judgment \\
@@ -618,7 +618,7 @@ This experiment is also inspired by the one-session experiments.
 For \autoref{hypo:number}, very similar results to the one-session experiments were observed.
 A decrease in multi\-/episodic judgments could be observed if more \ac{LP} episodes are presented.
 In addition, also an effect of saturation could be observed.
-This indicates that the integration interval of the formation process is longer than \unit[3]{days}, as previous \ac{HP} episodes still affected the final multi\-/episodic judgment.
+This indicates that the integration interval of the formation process is longer than 3~days, as previous \ac{HP} episodes still affected the final multi\-/episodic judgment.
 With regard to \autoref{hypo:position}, \ie, impact of varying position of \ac{LP} episodes, an effect is indicated (non-significant).
 Here, a recency effect seems to occur.
 This is line with the results of \E1{} and \EIIa{}.

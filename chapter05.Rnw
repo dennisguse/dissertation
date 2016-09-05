@@ -49,7 +49,7 @@ The multi\-/episodic concept is described by \citet[p.\,8]{roto_user_2011}.
 However, they failed to put it into context with prior work and omitted their definitions.
 
 Two major experiments that assessed the use of products over a longer usage period have been conducted.
-\citet{karapanos_user_2009} investigated in an experiment how the expectations and behavior towards a new smart phone change in a usage period of four weeks. % with \unit[6]{subjects}
+\citet{karapanos_user_2009} investigated in an experiment how the expectations and behavior towards a new smart phone change in a usage period of four weeks. % with 6~subjects
 This is extended by \citet{kujala_ux_2011} with the \emph{\ac{UX} curve} method.
 Here, a participant evaluates his experiences with a product or service in retrospect.
 The participant draws a line reflecting how his satisfaction changed over time and annotates the vertices with the reasons for the changes.
@@ -185,15 +185,15 @@ Initial work on multi\-/episodic perceived quality with the defined-use method w
 In the following, first the experimental design and then the results are presented.
 
 \paragraph*{Design}
-In this experiment, pairs of two participants used a video-telephony service (Skype) over a usage period of \unit[12]{days}.
+In this experiment, pairs of two participants used a video-telephony service (Skype) over a usage period of 12~days.
 \citet{moller_single-call_2011}\footnote{It must be noted that \citet{moller_single-call_2011} uses the term \emph{service quality} as synonym to multi\-/episodic perceived quality, rather than service quality in terms of \citet{parasuraman_conceptual_1985} (\cf{} \autoref{chap:03}).} followed the premise that the service works in general, \ie, it provides the best achievable performance, but sometimes usage episodes are only presented with reduced performance.
 The service needed to be used twice per day, \ie, first call between \unit[6]{h} and \unit[15]{h} and the second call between \unit[15]{h} and midnight.
-For each of these \unit[24]{calls}, the \ac{SCS} needed to be solved \citep{itu-t_recommendation_p.805_subjective_2007}.
+For each of these 24~calls, the \ac{SCS} needed to be solved \citep{itu-t_recommendation_p.805_subjective_2007}.
 \acp{SCS} suggest a conversational structure to limit the behavioral freedom of caller and callee.\footnote{A detailed explanation on \acs{SCS} is given in \autoref{method:sct}.} 
 Furthermore, each pair of participants was allowed to use the service for private communication if desired.
 
 After finishing a call, each participant rated the perceived quality of this usage episode (\emph{episodic judgment}).
-After the 2nd\,defined call on the 2nd, 7th, and 12th day, the perceived quality of all experienced usage episodes \emph{up to that point} was assessed (\emph{multi\-/episodic judgment}).
+After the 2nd~defined call on the 2nd, 7th, and 12th~day, the perceived quality of all experienced usage episodes \emph{up to that point} was assessed (\emph{multi\-/episodic judgment}).
 The episodic judgments and multi\-/episodic judgments were both taken on the 7\=/point \ac{CoCR} scale \citep[][p.\,18]{itu-t_recommendation_p.832_subjective_2000}.\footnote{For a comparison between discrete 5\=/point \ac{ACR} scale and 7\=/point \ac{CoCR} scale see \citet{koster_comparison_2015}.}
 This scale is shown in \autoref{img:chap05:quality-scale}.
 
@@ -231,7 +231,7 @@ In each condition, one or two performance levels were used only.
 	\end{tabular}
 \end{table}
 
-It must be noted that condition\,5 is different, because only \ac{MP} and \ac{LP} are applied, and thus \ac{MP} represents the best performance for this condition.
+It must be noted that condition~5 is different, because only \ac{MP} and \ac{LP} are applied, and thus \ac{MP} represents the best performance for this condition.
 Depending on the prior experiences of the participants, this might affect quality judgments, as \ac{LP} can only be compared to \ac{MP}.
 The first two days are presented in each condition with the best performance level for this condition.
 
@@ -241,14 +241,14 @@ For the same reason, each pair of participants was required to know each other b
 In this experiment, participants were equipped with a headset and a webcam to avoid any impact of varying terminal equipment~\citep[][]{moller_single-call_2011}.
 
 \paragraph*{Results}
-This experiment was conducted with \unit[58]{participants}. % in Berlin, Germany. aging from 14 to \unit[64]{years}.
+This experiment was conducted with 58~participants. % in Berlin, Germany. aging from 14 to~64~years.
 Two participants were removed from further data analysis as the required transmission bandwidth was not achieved.
-This left 10 participants for each condition 2..5 and \unit[16]{participants} for condition\,1.
+This left 10 participants for each condition 2..5 and 16~participants for condition~1.
 In the following, the data of \citet{moller_single-call_2011} is analyzed.
 Results are reported as \ac{MOS} ranging from 0~to~6, with standard deviation in brackets.\footnote{For details about the applied statistical tests see \autoref{method:statistic}.}
 Following, first the episodic judgments and then the multi\-/episodic judgments are analyzed.
 \ac{MOS} for all episodic judgments and multi\-/episodic judgments per condition are shown in  \autoref{tab:state:MOLLERepisodic}.
-An exemplary box plot of episodic judgments is shown for condition\,4 in \autoref{img:state:MOLLERboxplot}.
+An exemplary box plot of episodic judgments is shown for condition~4 in \autoref{img:state:MOLLERboxplot}.
 
 \begin{figure}
 	\centering
@@ -284,15 +284,15 @@ For all conditions, the episodic judgments reflect the applied episodic performa
 It can thus be concluded that the technical setup worked as desired.
 %Condition 5 is evaluated alone as the absence of \ac{HP} might affect episodic and multi\-/episodic judgments
 However, comparing the episodic judgments for \ac{HP} episodes between the conditions~1..4 show significant differences (\Sexpr{kruskal(QU~condition, "MOELLER", "HP", c("S1", "S2", "S3", "S5"))}).
-A post-hoc test (pairwise Wilcoxon rank-sum test with Holms' correction) shows that the episodic judgments for \ac{HP} are not significantly different between condition\,3 and condition\,4 ($p=0.137$), but all other conditions are significantly different to each other ($p\leq0.04$). %wilcox.pairwise.print(QU~condition, "MOELLER", "HP", c("S1", "S2", "S3", "S5"))
-Episodic judgments of \ac{LP} are not significantly different between conditions\,2..4 (\Sexpr{kruskal(QU~condition, "MOELLER", "LP", c("S1", "S2", "S3"))}).
+A post-hoc test (pairwise Wilcoxon rank-sum test with Holms' correction) shows that the episodic judgments for \ac{HP} are not significantly different between condition~3 and condition~4 ($p=0.137$), but all other conditions are significantly different to each other ($p\leq0.04$). %wilcox.pairwise.print(QU~condition, "MOELLER", "HP", c("S1", "S2", "S3", "S5"))
+Episodic judgments of \ac{LP} are not significantly different between conditions~2..4 (\Sexpr{kruskal(QU~condition, "MOELLER", "LP", c("S1", "S2", "S3"))}).
 The observed difference for episodic judgments of \ac{HP} are relatively small and are likely an artifact of the between-subject design.
 
-For condition\,2..4, a significant difference between the two performance levels is observed (\Sexpr{wilcox(QU~performance_level, "MOELLER", c("HP", "LP"), c("S1", "S2", "S3"))}).
+For condition~2..4, a significant difference between the two performance levels is observed (\Sexpr{wilcox(QU~performance_level, "MOELLER", c("HP", "LP"), c("S1", "S2", "S3"))}).
 It must be noted that although \ac{HP} and \ac{LP} were judged to be different, \ac{LP} was still judged approximately as \emph{fair}.
 It thus does not seem to be perceived as a \emph{severe} degradation.
-With regard to condition\,5, the episodic judgments of \ac{LP} episodes are close to condition\,2..4.
-In fact, \ac{MP} judgments are only slightly lower than \ac{HP} judgments for condition~1..4.
+With regard to condition~5, the episodic judgments of \ac{LP} episodes are close to conditions~2..4.
+In fact, \ac{MP} judgments are only slightly lower than \ac{HP} judgments for conditions~1..4.
 As \ac{MP} and \ac{HP} were not presented together, this indicates that either the scale is used differently between conditions, or that both performance levels were judged similarly.
 
 The results show that the defined-use method could be applied successfully, since episodic judgments could be taken reliably even in a field experiment.
@@ -310,7 +310,7 @@ In all other conditions, no significant difference is observed.
 For condition~4, a post-hoc test (pairwise Wilcoxon rank-sum test with Holms' correction) shows that the multi\-/episodic judgment after the 2nd~day is significantly different from the judgment after the 7th~day (\Sexpr{wilcox.pairwise.print(IQU~id, "MOELLER", c("LP", "HP"), "S2", c(4, 14, 24))[1,1]}).
 However, the judgment after the 2nd~day is not significantly different from the judgment after the 12th~day as well as the judgment after the 7th~day is not significantly different from the judgment after the 12th~day (each \Sexpr{wilcox.pairwise.print(IQU~id, "MOELLER", c("LP", "HP"), "S2", c(4, 14, 24))[2,2]}).
 In fact, an absolute comparison with regard to multi\-/episodic judgments between the five conditions conducted must be omitted due to the observed differences for episodic judgments between the conditions, \ie, an artifact that might be attributed to the between-subject design.
-It must thus be concluded that only condition\,4 resulted in an observable, although rather small, effect on multi\-/episodic judgments, due to the presentation of the 3rd and 4th\,day in \ac{LP}.
+It must thus be concluded that only condition~4 resulted in an observable, although rather small, effect on multi\-/episodic judgments, due to the presentation of the 3rd and 4th~day in \ac{LP}.
 
 %With regard to condition~5 an interesting observation can be made.
 %It is notable that multi\-/episodic judgments for condition~5 were rather close to the other conditions.
@@ -329,7 +329,7 @@ It must thus be concluded that only condition\,4 resulted in an observable, alth
 %kruskal(IQU~id, "MOELLER", c("LP", "HP"), "S5", c(4, 14, 24))
 
 \subparagraph{Discussion}
-\citet{moller_single-call_2011} successfully applied the defined-use method for the assessment of multi\-/episodic perceived quality in a field experiment with a usage period of \unit[12]{days}.
+\citet{moller_single-call_2011} successfully applied the defined-use method for the assessment of multi\-/episodic perceived quality in a field experiment with a usage period of 12~days.
 The episodic judgments are consistent with the desired performance levels, showing that the used service could provide the performance levels in a reliable manner.
 However, the multi\-/episodic judgments only provide limited insight, since the differences between conditions are rather small.
 This might be due to the fact that \ac{LP} did not represent a \emph{severe} degradation, or that the number of degraded usage episodes was too low.
