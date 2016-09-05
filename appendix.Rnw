@@ -149,7 +149,7 @@ This avoids issues due to initial buffering by providing a constant waiting time
  \caption{Questions for the episodic and multi\-/episodic judgments for all conducted experiments.}
  \label{tab:appendix:questions}
  \begin{tabulary}{\textwidth}{C|C|C}
-   Experiment & Episodic Judgment & Multi-episodic Judgment\\
+   Experiment & Episodic judgment & Multi-episodic judgment\\
    \midrule
    \E1{}  	& Wie bewerten Sie die Gesamtqualität des gerade beendeten Telefonates? & Wie bewerten Sie die Gesamtqualität aller bisher geführten Telefonate? \\
    \hline
@@ -231,7 +231,7 @@ Finally, all multi\-/episodic judgments per experiment and condition are present
 	\centering
 	\caption[Multi-episodic judgments per condition and experiment for \E1{}, \EIIa{}, \EIIb{}, and \E3{}]{Multi-episodic judgments per condition and experiment for \E1{}, \EIIa{}, \EIIb{}, and \E3{}.}
 	\begin{tabulary}{\textwidth}{C|C|C|C|C}
-	Experiment &  Condition & \multicolumn{3}{c}{Multi-episodic Judgment} \\
+	Experiment &  Condition & \multicolumn{3}{c}{Multi-episodic judgment} \\
 	& & 3rd episode & 6th episode & 9th episode \\
 	\midrule
 	\E1{} & \C1{} 	& \Sexpr{mos_iqu_with_sd_by_condition("E1", "1", 3)} 		& \Sexpr{mos_iqu_with_sd_by_condition("E1", "1", 6)} 		& -  \\

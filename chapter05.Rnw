@@ -264,7 +264,7 @@ An exemplary box plot of episodic judgments is shown for condition~4 in \autoref
 	\caption[\citet{moller_single-call_2011}: episodic judgments and multi\-/episodic judgments]{Episodic judgments and multi\-/episodic judgments by \citet{moller_single-call_2011}. Reported as \ac{MOS} with standard deviation in brackets.}
 	\label{tab:state:MOLLERepisodic}
 	\begin{tabular}{c||c|c|c||c|c|c}
-	\multirow{2}{*}{\rotatebox{90}{Cond.}} & \multicolumn{3}{c||}{Episodic Judgments} &  \multicolumn{3}{c}{Multi-episodic Judgments} \\
+	\multirow{2}{*}{\rotatebox{90}{Cond.}} & \multicolumn{3}{c||}{Episodic judgments} &  \multicolumn{3}{c}{Multi-episodic judgments} \\
 	  & \ac{HP}	& \ac{MP} & \ac{LP} & 2nd	day & 7th day & 12th day \\
 	\midrule
 	1 			& \Sexpr{mos_qu_with_sd_by_condition("MOELLER", "HP", "S5")} & - & - & \Sexpr{mos_iqu_with_sd_by_condition("MOELLER", "S5", 4)} & \Sexpr{mos_iqu_with_sd_by_condition("MOELLER", "S5", 14)} & \Sexpr{mos_iqu_with_sd_by_condition("MOELLER", "S5", 24)} \\
