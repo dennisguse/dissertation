@@ -15,7 +15,7 @@ These experiments follow the same experimental procedure but differ in usage sit
 %In all four experiments speech-based services are used.
 An overview on the four experiments is given in \autoref{tab:lab:experiments}.
 In fact, in each experiment only a subset of hypotheses is investigated.
-\E1{} and \EIIa{} are the main experiments, focusing most importantly on \autoref{hypo:number} and \autoref{hypo:position}.
+\E1{} and \EIIa{} are the major experiments, focusing most importantly on \autoref{hypo:number} and \autoref{hypo:position}.
 Both experiments differ in usage situation, \ie, two\=/party conversation vs. third-party listening.
 \EIIb{} and \E3{} are especially designed for the investigation of \autoref{hypo:independent} and \autoref{hypo:duration}, respectively.
 

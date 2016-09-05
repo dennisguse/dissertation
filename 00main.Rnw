@@ -126,11 +126,11 @@
 %\\ \medskip
 %    --- Douglas Adams
 
-Are you pondering what I'm pondering? \\
+\emph{Brain}: Are you pondering what I'm pondering? \\
 \smallskip
-Whoof, oh, I'd have to say the odds of that are terribly slim, Brain. \\
+\emph{Pinky}: Whoof, oh, I'd have to say the odds of that are terribly slim, Brain. \\
 \smallskip
-True.
+\emph{Brain}: True.
 \\ \medskip
     --- Pinky \& Brain
 \end{center}
