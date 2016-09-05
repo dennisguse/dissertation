@@ -451,7 +451,7 @@ For all three experiments, LI and WI require a larger $\mathit{w}$ to reach the 
 For \E1{} and \EIIa{}, $\mathit{w}=3$~(LI) and $\mathit{w}=4$~(WI) are required for \C6{} while \C5{} achieves its lowest prediction error already at $\mathit{w}=2$~(LI) and $\mathit{w}=3$~(WI).
 For \E6{}, $\mathit{w}=7$~(LI) and $\mathit{w}=9$~(WI) are required for \C6{} while \C5{} achieves its lowest prediction error at $\mathit{w}=4$~(LI) and $\mathit{w}=7$~(WI).
 It must be noted that the optimal value(s) of $\mathit{w}$ for \C5{} are identical to the optimal $\mathit{w}$ for all conditions for LI and WI.
-Thus, the overall prediction performance for both weight functions can be improved, if $\mathit{w}$ can be reduced to this value in case of \C6{}.
+Thus, the overall prediction performance for both weight functions can be improved if $\mathit{w}$ can be reduced to this value in case of \C6{}.
 Although the underlying reason for the observed saturation effect could not be deduced, this can be achieved by \emph{modifying} the episodic judgment(s) of the 4th\,episode/day for \C6{}, so it resembles \C5{} with regard to episodic judgments.
 This modification can be achieved by replacing these judgment(s) by the average of episodic judgment of \ac{HP} episodes. 
 %However, a simpler approach can be derived by assuming that one of the \ac{LP} usage episodes/days did not only not contribute to the multi\-/episodic judgment, but rather is considered as \ac{HP} for the judgment of multi\-/episodic perceived quality, \ie, that \C5{} and \C6{} are not considered differently with regard to the formation process.

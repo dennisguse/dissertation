@@ -65,7 +65,7 @@ In all experiments, a multi\-/episodic judgment were taken on the 7\=/point \ac{
 Thus, the first multi\-/episodic judgment were taken after presenting only \ac{HP} episodes and thus should be similar between all conditions.
 In fact, this allows to investigate the potential impact of the applied between-subject design.
 Furthermore, this judgment can be used as a reference to assess the impact of the presented \ac{LP} episode(s) on following multi\-/episodic judgments.
-%It is assumed that multi\-/episodic judgments do not change, if the same performance level is presented only.
+%It is assumed that multi\-/episodic judgments do not change if the same performance level is presented only.
 %This judgment can thus be used as \emph{reference}.
 %In fact, it can be assumed that as long as only \ac{HP} episodes are presented, the multi\-/episodic judgment would not change.
 This judgment is in the following denoted as the \emph{reference}.
@@ -282,15 +282,15 @@ The  7\=/point \ac{CoCR} scale and questions were inspired by \citet{moller_sing
 %The \ac{NPS} has been proposed as the one sufficient question indicating business success~\citep[\cf{}][]{reichheld_one_2003}.
 %This score assessed on 11-point discrete scale ranging from 0 to 10 and is phrased as "How likely is it that you would recommend our company/product/service to a friend or colleague?"~\citep[][p.\,5]{reichheld_one_2003}.
 %In this study it was rephrased to "On scale ranging from 0 (unlikely) to 10 (likely), how likely is it that you would recommend the service to a friend or colleague?"\footnote{The question was phrased in German: "Auf einer Skala von 0 (unwahrscheinlich) bis 10 (wahrscheinlich), wie wahrscheinlich ist es, dass Sie das System einem Freund oder Kollegen weiterempfehlen werden?".}.
-%In \E1{}, \EIIa{}, \EIIb{}, and \E3{} requested to answer the following questions, if degradations have been perceived.
+%In \E1{}, \EIIa{}, \EIIb{}, and \E3{} requested to answer the following questions if degradations have been perceived.
 %First the total count of degraded episodes needed to be answered, followed by request to denote the exact episodes with degradations.
-%It was furthermore asked, if macroscopic performance fluctuations occurred within individual episodes.
+%It was furthermore asked if macroscopic performance fluctuations occurred within individual episodes.
 %In \EIIb{} those three questions were asked separate for the speech service and \ac{VoD} service.
 %Those questions can be used as integrity check for participants.
 %Telefonie (Papier; PEAK: digital);- Anzahl gestoerter Telefonate (Freitext vs. 0-9)
 %- Welche (Freitext vs. 0-9)?
 %- Dauer der Stoerung (Ja/Nein)
-%In \E3{} it was in addition assessed, if all episodes were similar in length and and how long one episode was.
+%In \E3{} it was in addition assessed if all episodes were similar in length and and how long one episode was.
 
 \subsection{Content}
 To achieve comparable two-party conversations in \E1{}, one \ac{SCS} \citep{itu-t_recommendation_p.805_subjective_2007} per episode needed to be solved.
@@ -564,7 +564,7 @@ These show a decrease in the multi\-/episodic judgments if the number in \ac{LP}
 If no \ac{HP} episodes follow, a decrease of approximately \unit[1]{pt} for each presented \ac{LP} episode is observed.
 However, it must be noted that both experiments show consistently no decrease from two to three \ac{LP} episodes.
 In this case, the multi\-/episodic judgment remains \emph{above} the episodic judgments of \ac{LP} episodes.
-In both experiments, a decrease of approximately \unit[1]{pt} is also observed, if one \ac{HP} episode follows one \ac{LP} episode(s).
+In both experiments, a decrease of approximately \unit[1]{pt} is also observed if one \ac{HP} episode follows one \ac{LP} episode(s).
 For two \ac{HP} episodes, a decrease less than \unit[0.5]{pt} is observed in both experiments.
 
 It must thus be concluded that \autoref{hypo:number} is only partly true.
@@ -613,7 +613,7 @@ For \EIIa{}, \C1{}, \CIIa{}, and \C3{} are not significantly different (\Sexpr{k
 With regard to \autoref{hypo:position}, both experiments yield similarities and differences while varying the position of one or two \ac{LP} episodes.
 For \E1{}, presenting the \ac{LP} episode(s) earlier reduces the impact on the directly following multi-episodic judgment.
 Thus, a recency effect is observed.
-In fact, this effect could for one \ac{LP} episode only observed, if more than one \ac{HP} episode was presented afterwards.
+In fact, this effect could for one \ac{LP} episode only observed if more than one \ac{HP} episode was presented afterwards.
 For \EIIa{}, this could only be observed for two \ac{LP} episodes but not for one \ac{LP} episode.
 This indicates that the usage situation affects the multi\-/episodic formation process.
 However, the actual reason for this could not be deduced.
@@ -729,7 +729,7 @@ Thus, a negative effect of the presented non-\ac{HP} episodes is still present, 
 %This is supported by the found difference between the final judgments of both conditions.
 
 It must be concluded that the multi\-/episodic judgment recovers if three additional \ac{HP} episodes are presented, and thus \autoref{hypo:recovery} is accepted.
-However, from the two conditions alone it cannot be deduced, if a recency effect occurred or the increased number of \ac{HP} episodes alone lead to the increase.
+However, from the two conditions alone it cannot be deduced if a recency effect occurred or the increased number of \ac{HP} episodes alone lead to the increase.
 
 \subsubsection{\autoref{hypo:duration}: Duration of a \acs{LP} Episode}
 In \E3{}, the impact of varying duration of one \ac{LP} episode on the following multi\-/episodic judgment is investigated (\autoref{hypo:duration}).
