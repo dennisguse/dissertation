@@ -144,11 +144,12 @@ This avoids issues due to initial buffering by providing a constant waiting time
 
 \chapter{Episodic and Multi-episodic Questions }\label{appendix:questions}
 \begin{table}[h]
+ \small
  \centering
  \caption{Questions for the episodic and multi\-/episodic judgments for all conducted experiments.}
  \label{tab:appendix:questions}
  \begin{tabulary}{\textwidth}{C|C|C}
-   Experiment & Episodic & Multi-episodic\\
+   Experiment & Episodic Judgment & Multi-episodic Judgment\\
    \midrule
    \E1{}  	& Wie bewerten Sie die Gesamtqualität des gerade beendeten Telefonates? & Wie bewerten Sie die Gesamtqualität aller bisher geführten Telefonate? \\
    \hline
@@ -156,17 +157,17 @@ This avoids issues due to initial buffering by providing a constant waiting time
    \hline
    \EIIb{} \ac{VoD} & Wie bewerten Sie die Gesamtqualität des gerade gesehenen Videos? & Wie bewertest Du die Gesamtqualität aller bisher gesehenen Videos? \\
    \hline 
-   \EIIb{} Speech and \ac{VoD} & - & Wie bewerten Sie die Gesamtqualität des Systems bezüglich aller Interaktionen? \\
+   \EIIb{} (Speech and \ac{VoD}) & - & Wie bewerten Sie die Gesamtqualität des Systems bezüglich aller Interaktionen? \\
    \hline
    \E3{} & Wie bewertest Du die Gesamtqualität der gerade gehörten Episode? & Wie bewertest Du die Gesamtqualität aller bisher gehörten Episoden? \\
    \hline
-   \E4{} \ac{VoD} & Wie beurteilen Sie die Gesamtqualität der gesehenen Folge? & Wie beurteilen Sie die Gesamtqualität des Fernsehdienstes bis zum jetzigen Zeitpunkt? \\
+   \E4{} (\ac{VoD}) & Wie beurteilen Sie die Gesamtqualität der gesehenen Folge? & Wie beurteilen Sie die Gesamtqualität des Fernsehdienstes bis zum jetzigen Zeitpunkt? \\
    \hline
    \E4{} (Speech) & Wie beurteilen Sie die Gesamtqualität der Telefonverbindung? & Wie beurteilen Sie die Gesamtqualität der Telefonieverbindungen bis zum jetzigen Zeitpunkt?\\
    \hline
-   \E5{} \ac{AoD} & Wie beurteilen Sie die Gesamtqualität der gerade abgeschlossenen Nutzung? & Wie beurteilen Sie die Gesamtqualität des Audio-on-Demand-Dienstes seit Beginn der Studie? \\
+   \E5{} (\ac{AoD}) & Wie beurteilen Sie die Gesamtqualität der gerade abgeschlossenen Nutzung? & Wie beurteilen Sie die Gesamtqualität des Audio-on-Demand-Dienstes seit Beginn der Studie? \\
    \hline
-   \E5{} \ac{VoD} & Wie beurteilen Sie die Gesamtqualität der gerade abgeschlossenen Nutzung? & Wie beurteilen Sie die Gesamtqualität des Video-on-Demand-Dienstes seit Beginn der Studie? \\
+   \E5{} (\ac{VoD}) & Wie beurteilen Sie die Gesamtqualität der gerade abgeschlossenen Nutzung? & Wie beurteilen Sie die Gesamtqualität des Video-on-Demand-Dienstes seit Beginn der Studie? \\
    \hline
    \E6{} & Wie bewertest Du die Gesamtqualität der gerade gehörten Episode? & Wie bewertest Du die Gesamtqualität aller bisher gehörten Episoden? \\
    \end{tabulary}
@@ -184,7 +185,7 @@ Finally, all multi\-/episodic judgments per experiment and condition are present
 \begin{figure}[H]
 	\centering
 	<<plotE1, echo=F, fig.height=12>>=
-		ggplot_timeseries_create(subset(timeseries, experiment=="E1")) + geom_boxplot(aes(factor(id), y=QU), na.rm=T) + facet_grid(condition ~ .) + xlab("Usage Episode")
+		ggplot_timeseries_create(subset(timeseries, experiment=="E1")) + geom_boxplot(aes(factor(id), y=QU), na.rm=T) + facet_grid(condition ~ .) + xlab("Usage Episode") + theme(panel.margin = unit(1, "lines"))
 	@
 	\caption[One session (\E1{}): box plot of episodic judgments]{One session (\E1{}): box plot of episodic judgments.}
 \end{figure}
@@ -192,7 +193,7 @@ Finally, all multi\-/episodic judgments per experiment and condition are present
 \begin{figure}[H]
 	\centering
 	<<plotE2a, echo=F, fig.height=10.5>>=
-		ggplot_timeseries_create(subset(timeseries, experiment=="E2a")) + geom_boxplot(aes(factor(id), y=QU), na.rm=T) + facet_grid(condition ~ .) + xlab("Usage Episode")
+		ggplot_timeseries_create(subset(timeseries, experiment=="E2a")) + geom_boxplot(aes(factor(id), y=QU), na.rm=T) + facet_grid(condition ~ .) + xlab("Usage Episode") + theme(panel.margin = unit(1, "lines"))
 	@
 	\caption[One session (\EIIa{}): box plot of episodic judgments]{One session (\EIIa{}): box plot of episodic judgments.}	
 \end{figure}
@@ -200,7 +201,7 @@ Finally, all multi\-/episodic judgments per experiment and condition are present
 \begin{figure}[H]
 	\centering
 	<<plotE2b, echo=F, fig.height=7.5>>=
-		ggplot_timeseries_create(subset(timeseries, experiment=="E2b" & service != "bundle")) + geom_boxplot(aes(factor(id), y=QU), na.rm=T) + facet_grid(condition + service~ .) + xlab("Usage Episode")
+		ggplot_timeseries_create(subset(timeseries, experiment=="E2b" & service != "bundle")) + geom_boxplot(aes(factor(id), y=QU), na.rm=T) + facet_grid(condition + service~ .) + xlab("Usage Episode") + theme(panel.margin = unit(1, "lines"))
 	@
 	\caption[One session (\EIIb{}): box plot of episodic judgments]{One session (\EIIb{}): box plot of episodic judgments.}
 \end{figure}
@@ -208,7 +209,7 @@ Finally, all multi\-/episodic judgments per experiment and condition are present
 \begin{figure}[H]
 	\centering
 	<<plotE3, echo=F, fig.height=3>>=
-		ggplot_timeseries_create(subset(timeseries, experiment=="E3")) + geom_boxplot(aes(factor(id), y=QU), na.rm=T) + facet_grid(condition ~ .) + xlab("Usage Episode")
+		ggplot_timeseries_create(subset(timeseries, experiment=="E3")) + geom_boxplot(aes(factor(id), y=QU), na.rm=T) + facet_grid(condition ~ .) + xlab("Usage Episode") + theme(panel.margin = unit(1, "lines"))
 	@
 	\caption[One session (\E3{}): box plot of episodic judgments]{One session (\E3{}): box plot of episodic judgments.}
 \end{figure}
@@ -216,7 +217,7 @@ Finally, all multi\-/episodic judgments per experiment and condition are present
 \begin{figure}[H]
 	\centering
 	<<plotE6, echo=F, fig.height=9>>=
-		ggplot_timeseries_create(subset(timeseries, experiment=="E6a")) + geom_boxplot(aes(factor(id), y=QU), na.rm=T) + facet_grid(condition ~ .) + xlab("Usage Episode")
+		ggplot_timeseries_create(subset(timeseries, experiment=="E6a")) + geom_boxplot(aes(factor(id), y=QU), na.rm=T) + facet_grid(condition ~ .) + xlab("Usage Episode") + theme(panel.margin = unit(1, "lines"))
 	@
 	\caption[Multiple days (\E6{}): box plot of episodic judgments]{Multiple days (\E6{}): box plot of episodic judgments.}
 \end{figure}

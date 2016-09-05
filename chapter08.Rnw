@@ -69,8 +69,7 @@ However, the performance levels were different between the three experiments.
 	\centering
 	\caption{Multiple days: overview on experiments.}
 	\label{tab:field:experiments}
-	\begin{tabulary}{\textwidth}{Z{1.1cm}|Z{2.3cm}|Z{3.4cm}|Z{1.0cm}|Z{1.4cm}}
-%	\begin{tabulary}{\textwidth}{C|C|Z{2.5cm}|Z{0.8cm}|Z{0.8cm}}
+	\begin{tabulary}{\textwidth}{Z{1.3cm}|Z{2.3cm}|Z{3.4cm}|Z{1.2cm}|Z{1.5cm}}
 	Experi-ment	& Service Types 		& Tasks															& Days	& Partici-pants \\
 	\midrule
 	\E4{}		& Telephony	and \ac{VoD}	& Two-party conversation (\ac{SCS})	& 14		& \Sexpr{participants("E4a")}\\ %Study 1/E4a
@@ -83,6 +82,8 @@ However, the performance levels were different between the three experiments.
 
 \autoref{tab:field:experiments} gives an overview of the experiments including service types, tasks, and number of participants.
 In the following, the experiments are presented one after the other.
+The results are reported as \ac{MOS} ranging from 0~to~6 with standard deviation in brackets.
+A statistical evaluation is conducted by applying the nonparametric tests, as for the one-session experiments (\cf{} \autoref{method:statistic}).
 
 \section{Experiment E4}
 \E4{} was inspired by \citet{moller_single-call_2011}.\footnote{The results of \E4{} are published in \citet{guse_macro-temporal_2013}.}
@@ -132,7 +133,6 @@ A complete description of the technical setup can be found in the \appendix{}~\r
 
 On the day before starting the \unit[14]{day} usage period, an introductory session was conducted with each pair of participants.
 In this session, participants received detailed instructions for this experiment and provided their demographic data.
-Afterwards, a short training was conducted, presenting typical degradations with regard to digital transmission of speech and video.
 Also, one episode for both services need to be solved.
 These were presented in \ac{HP}.
 %This allowed that participants know how to use the two service and understood the necessary requirements for this experiment.
@@ -180,7 +180,7 @@ However, the difference is smaller than desired as only a reduction of approxima
 	\label{tab:field:e4results}
 	\begin{tabular}{c|c|c|c}
 	\multirow{2}{*}{Day} & \multicolumn{3}{c}{Multi-episodic Judgment} \\
-	& \C0{} & \C9{} & Statistic\\
+	& \C0{} & \C9{} & Statistical difference\\
 	\midrule
 	4 & \Sexpr{mos_iqu_with_sd_by_condition("E4a", "A0", 4, "VoD")} & \Sexpr{mos_iqu_with_sd_by_condition("E4a", "A1", 4, "VoD")} & \Sexpr{wilcox(IQU~condition, "E4a", unique(timeseries[["performance_level"]]), unique(timeseries[["condition"]]), 4, "VoD")} \\
 	\hline

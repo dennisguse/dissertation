@@ -383,7 +383,7 @@ First, episodic judgments are inspected with regard to consistency between the c
 Second, the impact of the different usage situations \E1{} and \EIIa{} are investigated.
 Finally, multi\-/episodic judgments are evaluated with regard to the hypotheses (\cf{} \autoref{chap:towards}).
 
-All results are reported as \ac{MOS} ranging from~0 to~6, with standard deviation in brackets (for the scale see p.\,\pageref{img:chap05:quality-scale}).
+All results are reported as \ac{MOS} ranging from~0 to~6 with standard deviation in brackets (for the scale see p.\,\pageref{img:chap05:quality-scale}).
 In addition, a statistical evaluation is conducted.
 Two unpaired samples are evaluated with a \emph{Wilcoxon rank-sum test}.
 More than two unpaired samples are compared with a \emph{Kruskal-Wallis test}.
@@ -648,6 +648,7 @@ This might indicate a higher impact of the very last episode in terms of a recen
 
 Thus, \autoref{hypo:consecutive} must be rejected, \ie, the non-consecutive presentation is not judged differently from a consecutive presentation of \ac{LP} episodes.
 It must be concluded that either such an effect does not exists, or it is too small to be observed in the conducted experiment.
+However, an outstanding importance of the performance level of the last episode is suggested.
 
 \subsubsection{\autoref{hypo:strength}: Strength of Degradation}
 
@@ -815,11 +816,8 @@ This indicates that the usage situation affects the multi\-/episodic formation p
 In fact, participants experienced a listening-only situation in \EIIa{} whereas in \E1{} a two-party conversation was used.
 The latter might be more mentally demanding.
 Thus, participants might forget the experienced \ac{LP} episode faster if \ac{HP} episode(s) are presented afterwards.
-With regard to consecutive vs. non-consecutive \ac{LP} episodes the results are conclusive (\autoref{hypo:consecutive}).
-The three conditions yielded similar multi\-/episodic judgments.
-Thus, \autoref{hypo:consecutive} cannot be accepted.
-%It is indicated that non-consecutive \ac{LP} episodes are judged slightly better.
-%However, this might also be an artifact due to a recency effect.
+In \EIIa{}, the impact of consecutive vs. non-consecutive \ac{LP} episodes was investigated, and the results are conclusive (\autoref{hypo:consecutive}).
+The three conditions yielded similar multi\-/episodic judgments and thus \autoref{hypo:consecutive} cannot be accepted.
 
 In \E1{}, a (negative) peak effect was investigated (\autoref{hypo:strength}).
 However, the results are inconclusive and thus this hypothesis must be left unanswered.
@@ -831,7 +829,7 @@ In \E3{}, the duration of one \ac{LP} episode was varied.
 It was expected that presenting this episode with doubled duration would lead to a higher reduction of the multi\-/episodic judgments than normal duration (\autoref{hypo:duration}).
 However, no significant difference has between observed between the two conditions.
 This indicates that the actual duration of an episode does not seem to affect the formation process of multi\-/episodic perceived quality.
-Thus, \autoref{hypo:duration} must be rejected in this case.
+Thus, \autoref{hypo:duration} must be rejected.
 In fact, this might be related to use of constant performance rather than macroscopic fluctuations.
 In the latter case, the actual duration might be easier to memorize and recall, and thus a duration neglect might not occur.
 
