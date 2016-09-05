@@ -173,7 +173,7 @@ For digital telecommunication services this can be achieved in the compression s
 
 \ac{HP} should provide the state-of-the-art performance.
 For speech telephony, this is at the time of this writing the transmission in wideband with proper loudness, but without temporal clipping, noise, echo, or other negative factors.
-Here, the codec \emph{\textsc{\lowercase{G.722}}} (Mode~1)~is selected \citep{itu-t_recommendation_\textsc{\lowercase{G.722}}_7khz_2012}.
+Here, the codec \emph{\textsc{\lowercase{G.722}}} (Mode~1)~is selected \citep{itu-t_recommendation_g.722_7khz_2012}.
 This codec provides a similar perceived quality to uncompressed wideband. %TODO Add refs, Moeller, Raake, Marcel
 %In subjective listening-only experiments \textsc{\lowercase{G.722}} typically achieves a \ac{MOS} of 4.5~on the 5-point \ac{ACR} scale.
 
@@ -184,7 +184,7 @@ The re-synthesized speech signal sounds very unnatural and is described as robot
 In fact, this codec is not used for speech telephony.
 However, \textsc{\lowercase{LPC\=/10}} is useful for the investigation of multi\-/episodic perceived quality, as it allows to create a severe reduction in performance while maintaining intelligibility and thus tasks remain solvable.
 
-For \ac{MP}, \emph{\textsc{\lowercase{G.711}}}~\citep{itu-t_recommendation_\textsc{\lowercase{G.711}}_pulse_1988} is selected.
+For \ac{MP}, \emph{\textsc{\lowercase{G.711}}}~\citep{itu-t_recommendation_g.711_pulse_1988} is selected.
 This codec is often used as reference for narrowband speech telephony.
 Compared to \textsc{\lowercase{G.722}}, the difference between narrowband and wideband on perceived quality is measurable. %TODO
 In comparison to \textsc{\lowercase{LPC\=/10}}, the re-synthesized speech signal contains far less artifacts.
@@ -458,7 +458,7 @@ For the \ac{VoD} service, episodic judgments of \ac{HP} episodes are not signifi
 The episodic judgment of \ac{HP} and \ac{LP} episodes are significantly different for the telephony service (\Sexpr{wilcox(QU~performance_level, "E2b", performance_level, condition, id, "telephony")}) and the \ac{VoD} service (\Sexpr{wilcox(QU~performance_level, "E2b", performance_level, condition, id, "VoD")}).
 
 Comparing \EIIa{} and \EIIb{} with regard to the speech telephony service, the judgments of \ac{LP} episodes are not significantly different (\Sexpr{wilcox(QU~experiment, c("E2a", "E2b"), "LP", condition, id, "telephony")}), but a significant difference is found for \ac{HP} (\Sexpr{wilcox(QU~experiment, c("E2a", "E2b"), "HP", condition, id, "telephony")}).
-This might be due to the differences in the used audio equipment, \ie, used pair of headphones and also sound cards including loudness calibration (\cf{} \appendix{}~\ref{appendix:setups} on p.\,pageref{appendix:setups}), or the presence of the \ac{VoD} service.
+This might be due to the differences in the used audio equipment, \ie, used pair of headphones and also sound cards including loudness calibration (\cf{} \appendix{}~\ref{appendix:setups} on p.\,\pageref{appendix:setups}), or the presence of the \ac{VoD} service.
 However, the actual reason could not be determined.
 With regard to episodic judgments both experiments yield consistent results, but differences between the experiments were found.
 
@@ -703,8 +703,7 @@ In \autoref{hypo:recovery}, the recovery of the multi\-/episodic judgments is in
 This is investigated in \E1{} by comparing \CVb{} and \C7{}.
 Both present 9 episodes while non-\ac{HP} is presented for the 5th and 6th~episode.
 \autoref{tab:lab:hyporecovery} shows the three multi\-/episodic judgments of these conditions.
-
-\begin{table}[h!]
+\begin{table}[b]
  \centering
  \caption[One-session experiments: multi\-/episodic judgments after the 3rd, 6th, and 9th~episode for \autoref{hypo:recovery}]{One-session experiments: multi\-/episodic judgments after the 3rd, 6th, and 9th~episode for \autoref{hypo:recovery}. Reported as \ac{MOS} with standard deviation in brackets.}
  \label{tab:lab:hyporecovery}
@@ -717,7 +716,6 @@ Both present 9 episodes while non-\ac{HP} is presented for the 5th and 6th~episo
 	\C7{}			& 4:\ac{HP}, 5:\ac{LP}, 6:\ac{MP}	& \Sexpr{mos_iqu_with_sd_by_condition("E1", "7", 3)}	& \Sexpr{mos_iqu_with_sd_by_condition("E1", "7", 6)} & \Sexpr{mos_iqu_with_sd_by_condition("E1", "7", 9)}\\
  \end{tabulary}
 \end{table}
-
 For each condition, the three multi\-/episodic judgments are significantly different (\CVb{}: \Sexpr{kruskal(IQU~id, "E1", performance_level,"5b", c(3, 6, 9))}; \C7{}: \Sexpr{kruskal(IQU~id, "E1", performance_level, "7", c(3, 6, 9))}).
 For \CVb{}, a paired post-hoc test shows significant differences between all three multi\-/episodic judgments (3rd vs. 9th: \Sexpr{wilcox.pairwise.print(IQU~id, "E1", performance_level, "5b", c(3, 6, 9), paired=T)[1,1]}; 6th vs. 9th: \Sexpr{wilcox.pairwise.print(IQU~id, "E1", performance_level, "5b", c(3, 6, 9), paired=T)[2,2]}; 3rd vs. 9th \Sexpr{wilcox.pairwise.print(IQU~id, "E1", performance_level, "5b", c(3, 6, 9), paired=T)[2,1]}).
 A paired post-hoc test for \C7{} yields similar findings (3rd vs. 6th: \Sexpr{wilcox.pairwise.print(IQU~id, "E1", performance_level, "7", c(3, 6, 9), paired=T)[1,1]}; 6th vs. 9th: \Sexpr{wilcox.pairwise.print(IQU~id, "E1", performance_level, "7", c(3, 6, 9), paired=T)[2,2]}; 3rd vs. 9th: \Sexpr{wilcox.pairwise.print(IQU~id, "E1", performance_level, "7", c(3, 6, 9), paired=T)[2,1]}).
@@ -738,8 +736,7 @@ In this experiment, \CIIa{} and \CIIb{} present the 5th episode in \ac{LP}.
 While all other episodes are presented with a similar duration, the 5th~episode is presented in \CIIb{} with approximately the doubled duration.
 In \CIIa{}, this episodes has a duration of \unit[180]{s} and in \CIIb{} \unit[360]{s}.
 The episodic judgment for these conditions and the multi\-/episodic judgments are shown \autoref{tab:lab:hypoduration}.
-
-\begin{table}[h!]
+\begin{table}[b]
  \centering
  \caption[One-session experiments: multi\-/episodic judgment after the 6th~usage episode for \autoref{hypo:duration}]{One-session experiments: multi\-/episodic judgment after the 6th~usage episode for \autoref{hypo:duration}. Reported as \ac{MOS} with standard deviation in brackets.}
  \label{tab:lab:hypoduration} 
@@ -758,6 +755,7 @@ The multi\-/episodic judgment after the 6th~episode are not significantly differ
 Thus, \autoref{hypo:duration} has to be rejected, \ie, a neglect of duration is observed, as even doubling the duration did not produce a measurable effect.
 In fact, the duration seems to be neglected for the episodic judgments and the multi\-/episodic judgments.
 It can thus be concluded that the episodic judgment sufficiently describes the impact of a \ac{LP} episode on following multi\-/episodic judgments.
+
 
 \subsubsection{\autoref{hypo:independent}: Services are Judged Independent}
 In \EIIb{}, it was investigated if the multi\-/episodic judgments of two services are independent (\autoref{hypo:independent}).

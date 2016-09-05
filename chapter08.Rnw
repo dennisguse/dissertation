@@ -65,7 +65,7 @@ However, the performance levels were different between the three experiments.
 
 \newcolumntype{Z}[1]{>{\centering\arraybackslash}p{#1}}
 \label{E4}\label{E5}\label{E6}
-\begin{table}[h]
+\begin{table}[t]
 	\centering
 	\caption{Multiple days: overview on experiments.}
 	\label{tab:field:experiments}
@@ -174,7 +174,7 @@ The episodic judgments of \ac{LP} for \C9{} resulted in \Sexpr{mos_qu_with_sd_by
 For \C9{}, the two performance levels are significantly different (\Sexpr{wilcox(QU~performance_level, "E4a",  c("HP", "LP"), "A1", id, "VoD")}).
 However, the difference is smaller than desired as only a reduction of approximately \unit[1]{pt} is introduced.
 
-\begin{table}[h]
+\begin{table}[t]
 	\centering
 	\caption[Multiple days (\E4{}): multi\-/episodic judgments for the \acs{VoD} service]{Multiple days (\E4{}): multi\-/episodic judgments for the \ac{VoD} service. Reported as \ac{MOS} with standard deviation in brackets.}
 	\label{tab:field:e4results}
@@ -287,15 +287,8 @@ In \autoref{img:field:boxplotE5} the episodic judgments for both conditions are 
 In this experiment, no increase of episodic judgments for \ac{HP} episodes could be observed as reported by \citet{moller_single-call_2011} and found in \E4{}.
 However, statistical testing omitted due to the small sample size (see \autoref{img:field:boxplotE5}).
 
-\begin{figure}[h]
+\begin{figure}[t]
 	\centering
-%	<<plotE5C9, echo=F, fig.height=3>>=
-%		ggplot_timeseries_create(subset(timeseries, experiment=="E5" & condition=="P2")) + geom_boxplot(aes(factor(id), y=QU), na.rm=T) + xlab("Day") 
-%	@
-%	<<plotE5C0, echo=F, fig.height=3>>=
-%		ggplot_timeseries_create(subset(timeseries, experiment=="E5" & condition=="P1")) + geom_boxplot(aes(factor(id), y=QU), na.rm=T) + xlab("Day")
-%	@
-
 	<<plotE5, echo=F, fig.height=6>>=
 		e5Plot = subset(timeseries, experiment=="E5" & condition %in% c("P1", "P2"))
 		e5Plot$condition_label[e5Plot$condition == "P1"] = "C10"
@@ -497,7 +490,7 @@ This hypothesis can be evaluated by comparing the final multi\-/episodic judgmen
 These present none, one, two, and three days in \ac{LP} before the multi\-/episodic judgment.
 \autoref{tab:field:hyponumber} shows the final multi\-/episodic judgment and the reference for these conditions.
 
-\begin{table}[h]
+\begin{table}[t]
 	\centering
 	\caption[Multiple days (\E6{}): multi\-/episodic judgments after the 6th~day for \autoref{hypo:number}]{Multiple days (\E6{}): multi\-/episodic judgments after the 6th~day for \autoref{hypo:number}. Reported as \ac{MOS} with standard deviation in brackets.}
 	\label{tab:field:hyponumber}

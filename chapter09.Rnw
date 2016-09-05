@@ -228,7 +228,7 @@ For both model types the accuracy remains nearly independent of $\mathit{w}$.
 It is notable that the accuracy depends on the condition, \ie, \C7{} yields a very low \ac{RMSD} while \C1{} is far higher.
 This is likely an artifact due to the between\-/subject design.
 
-\begin{figure}[h]
+\begin{figure}[t]
 	\centering
 <<plotE1BASE, echo=F, fig.height=3>>=
 ggplot_model_create(subset(data_mos_nonadjusted, data_mos_nonadjusted$experiment == "E1" & data_mos_nonadjusted$id == 3), 0.26) + 
@@ -259,7 +259,7 @@ In fact, \C4{} and \C6{} reach their minimum at~$\mathit{w}=3$.
 Considering all conditions, the minimal \ac{RMSD} for LI is achieved at $\mathit{w}=2$ (\Sexpr{round(min(subset(data_mos_nonadjusted, data_mos_nonadjusted[["experiment"]] == "E1" & data_mos_nonadjusted[["id"]] == 6 & data_mos_nonadjusted[["model"]] == "weight_linear_create" & data_mos_nonadjusted[["condition"]] == "All")[["RMSD"]]), 2)}).
 This is close to the prediction accuracy for presenting \ac{HP} episodes only.
 
-\begin{figure}[h]
+\begin{figure}[b]
 	\centering
 <<plotE1PRED, echo=F, fig.height=3>>=
 ggplot_model_create(subset(data_mos_nonadjusted, data_mos_nonadjusted$experiment == "E1" & data_mos_nonadjusted$id == 6), 1.9) + 
@@ -284,7 +284,7 @@ WI is very precise for $\mathit{w}=4$ but is otherwise far off.
 LI performs well for~\CVb{} with $\mathit{w} \geq 3$ while it performs very similarly for all $\mathit{w}$ in case of \C7{}.
 Thus, LI is preferable, as it provides a higher robustness for the selection of $\mathit{w}$.
 
-\begin{figure}[h]
+\begin{figure}[t]
 	\centering
 <<plotE1PRED9, echo=F, fig.height=3>>=
 ggplot_model_create(subset(data_mos_nonadjusted, data_mos_nonadjusted$experiment == "E1" & data_mos_nonadjusted$id == 9 & data_mos_nonadjusted$condition != "All"), 0.75) + 
@@ -312,7 +312,7 @@ Omitting \C4{} shows similar results compared to~\E1{}, \ie, the prediction accu
 The \ac{RMSD} is similar for all $\mathit{w}$ ($> 0.1$).
 Here, no difference between~WI and~LI is observed.
 
-\begin{figure}[h]
+\begin{figure}[b]
 	\centering
 <<plotE2BASE, echo=F, fig.height=3>>=
 ggplot_model_create(subset(data_mos_nonadjusted, data_mos_nonadjusted$experiment == "E2a" & data_mos_nonadjusted$id == 3), 0.4) + 
@@ -376,7 +376,7 @@ Here, the prediction accuracy improves for an increasing $\mathit{w}$.
 This is more prevalent for WI than for LI.
 WI achieves its minimal \ac{RMSD} with $\mathit{w}=6$, \ie, all prior episodes, while LI provides only a marginal decrease after $\mathit{w}=3$.
 
-\begin{figure}[h]
+\begin{figure}[b]
 	\centering
 <<plotE6BASE, echo=F, fig.height=3>>=
 ggplot_model_create(subset(data_mos_nonadjusted, data_mos_nonadjusted$experiment == "E6a" & data_mos_nonadjusted$id == 8), 0.3) + 
@@ -403,7 +403,7 @@ In addition, LI achieves a minimal \ac{RMSD} of \Sexpr{round(min(subset(data_mos
 With regard to \E6{}, LI is preferable to WI, as a higher prediction accuracy is achieved.
 Furthermore, LI requires a smaller $\mathit{w}$ while it provides a higher robustness for choosing $\mathit{w}$.
 
-\begin{figure}[h]
+\begin{figure}[t]
 	\centering
 <<plotE6PRED, echo=F, fig.height=3>>=
 ggplot_model_create(subset(data_mos_nonadjusted, data_mos_nonadjusted$experiment == "E6a" & data_mos_nonadjusted$id == 14)) + 
@@ -472,7 +472,7 @@ This modified version of \C6{} is denoted as \emph{\C6{}~(adjusted)}.
 In the following, the prediction accuracy of both model types between \C5{}, \C6{}, and \C6{}~(adjusted) is presented.
 For \E1{} and \EIIa{}, this is shown in \autoref{fig:pred:SAT:E1} and \autoref{fig:pred:SAT:E2a}, respectively.
 
-\begin{figure}[h]
+\begin{figure}[b]
 	\centering
 <<plotE1SAT, echo=F, fig.height=3>>=
 ggplot_model_create(subset(data_mos_adjusted_only, data_mos_adjusted_only$experiment == "E1" & data_mos_adjusted_only$id == 6), 1.25) + 
@@ -491,7 +491,7 @@ This is also observed for LI.
 Here, the minimal \ac{RMSD} shifts from~$\mathit{w}=3$ to~$\mathit{w}=2$.
 It is notable for both experiments that the adjustment leads to a similar shape of \ac{RMSD} for \C5{} and \C6{}~(adjusted).
 Furthermore, the minimal \ac{RMSD} is reached earlier, but with increasing $\mathit{w}$ the \ac{RMSD} is worse for \C6{}~(adjusted) than \C6{}.
-\begin{figure}[h]
+\begin{figure}[t]
 	\centering
 <<plotE2SAT, echo=F, fig.height=3>>=
 ggplot_model_create(subset(data_mos_adjusted_only, data_mos_adjusted_only$experiment == "E2a" & data_mos_adjusted_only$id == 6), 1.0) + 
@@ -508,7 +508,7 @@ With regard to \E6{}, a similar observation is made.
 The minimal \ac{RMSD} shifts from $\mathit{w}=9$~to~ $\mathit{w}=6$ for WI and for LI from $\mathit{w}=7$ to $\mathit{w}=4$.
 Here, \C6{}~(adjusted) also resembles \C5{} closely (see \autoref{fig:pred:SAT:E6}).
 
-\begin{figure}[h]
+\begin{figure}[b]
 	\centering
 <<plotE6SAT, echo=F, fig.height=3>>=
 ggplot_model_create(subset(data_mos_adjusted_only, data_mos_adjusted_only$experiment == "E6a" & data_mos_adjusted_only$id == 14), 2.0) + 
