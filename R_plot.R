@@ -54,7 +54,7 @@ ggplot_model_create <- function(data, ylim=2.4) {
  p <- p + theme(panel.grid.major=element_line(color="darkgray",size=.25))
  p <- p + theme(panel.grid.minor=element_line(color="gray",size=.25))
 
- p <- p + ylab("RMSD") + xlab("Parameter w")
+ p <- p + ylab("RMSD\n") + xlab("Parameter w")
 #  p <- p + scale_colour_hue(name = "Model 1")
 #  p <- p + scale_colour_discrete(name  ="Payer")
 #  p <- p + scale_shape_discrete(name  ="Payer")
