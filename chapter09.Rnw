@@ -395,7 +395,7 @@ ggplot_model_create(subset(data_mos_nonadjusted, data_mos_nonadjusted$experiment
 	\label{fig:pred:E6pred6}
 \end{figure}
 
-With regard to prediction the multi\-/episodic judgment of the 6th~day, both weight functions perform differently.
+With regard to the prediction the multi\-/episodic judgment of the 6th~day, both weight functions perform differently.
 \autoref{fig:pred:E6pred12} shows the \ac{RMSD} for both weight functions.
 While LI reaches a minimal \ac{RMSD} at $\mathit{w}=4$, WI achieves its minimal \ac{RMSD} not until $\mathit{w}=8$.
 In addition, LI achieves a minimal \ac{RMSD} of \Sexpr{round(min(subset(data_mos_nonadjusted, data_mos_nonadjusted[["experiment"]] == "E6a" & data_mos_nonadjusted[["id"]] == 14 & data_mos_nonadjusted[["model"]] == "weight_linear_create" & data_mos_nonadjusted[["condition"]] == "All")[["RMSD"]]), 2)} while WI only achieves a minimal \ac{RMSD} of
