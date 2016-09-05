@@ -173,9 +173,9 @@ For digital telecommunication services this can be achieved in the compression s
 
 \ac{HP} should provide the state-of-the-art performance.
 For speech telephony, this is at the time of this writing the transmission in wideband with proper loudness, but without temporal clipping, noise, echo, or other negative factors.
-Here, the codec \emph{G.722} (Mode~1)~is selected \citep{itu-t_recommendation_g.722_7khz_2012}.
+Here, the codec \emph{\textsc{\lowercase{G.722}}} (Mode~1)~is selected \citep{itu-t_recommendation_\textsc{\lowercase{G.722}}_7khz_2012}.
 This codec provides a similar perceived quality to uncompressed wideband. %TODO Add refs, Moeller, Raake, Marcel
-%In subjective listening-only experiments G.722 typically achieves a \ac{MOS} of 4.5~on the 5-point \ac{ACR} scale.
+%In subjective listening-only experiments \textsc{\lowercase{G.722}} typically achieves a \ac{MOS} of 4.5~on the 5-point \ac{ACR} scale.
 
 For \ac{LP}, the speech signal is coded with \textsc{\lowercase{LPC\=/10}}\footnote{\textsc{\lowercase{LPC\=/10}} is also known as \emph{\textsc{\lowercase{FS-}}1015} and \emph{\textsc{\lowercase{STANAG}} 4198}.}.
 This codec is designed for low bit rate radio transmission while providing intelligibility rather than natural reproduction.
@@ -184,20 +184,20 @@ The re-synthesized speech signal sounds very unnatural and is described as robot
 In fact, this codec is not used for speech telephony.
 However, \textsc{\lowercase{LPC\=/10}} is useful for the investigation of multi\-/episodic perceived quality, as it allows to create a severe reduction in performance while maintaining intelligibility and thus tasks remain solvable.
 
-For \ac{MP}, \emph{G.711}~\citep{itu-t_recommendation_g.711_pulse_1988} is selected.
+For \ac{MP}, \emph{\textsc{\lowercase{G.711}}}~\citep{itu-t_recommendation_\textsc{\lowercase{G.711}}_pulse_1988} is selected.
 This codec is often used as reference for narrowband speech telephony.
-Compared to G.722, the difference between narrowband and wideband on perceived quality is measurable. %TODO
+Compared to \textsc{\lowercase{G.722}}, the difference between narrowband and wideband on perceived quality is measurable. %TODO
 In comparison to \textsc{\lowercase{LPC\=/10}}, the re-synthesized speech signal contains far less artifacts.
 
-As \textsc{\lowercase{LPC\=/10}} is rarely compared to G.711 or G.722, an objective evaluation using \ac{POLQA} \citep{itu-t_recommendation_p.863_perceptual_2014} was conducted.
+As \textsc{\lowercase{LPC\=/10}} is rarely compared to \textsc{\lowercase{G.711}} or \textsc{\lowercase{G.722}}, an objective evaluation using \ac{POLQA} \citep{itu-t_recommendation_p.863_perceptual_2014} was conducted.
 \ac{POLQA} estimates the \ac{MOS} for the 5-point \ac{ACR} scale.
 \citet{koster_comparison_2015} presented a transformation function that allows to transform judgments from the 5\=/point \ac{ACR} scale to the 7\=/point \ac{CoCR} scale. %for speech telephony
 For the evaluation \unit[12]{s} German speech samples have been processed with all three codecs.
 The resulting speech signals were then evaluated with \ac{POLQA} in super-wideband mode.
 The results are shown in \autoref{tab:lab:performance}.
-It must be noted that \textsc{\lowercase{LPC\=/10}} is very different to G.722 and G.711.
+It must be noted that \textsc{\lowercase{LPC\=/10}} is very different to \textsc{\lowercase{G.722}} and \textsc{\lowercase{G.711}}.
 \textsc{\lowercase{LPC\=/10}} only achieves a \ac{MOS} of 1.9 on the 7\=/point~\ac{CoCR}.
-In fact, G.722 results in higher \ac{MOS} than G.711, but the difference is smaller than between G.711 and \textsc{\lowercase{LPC\=/10}}.
+In fact, \textsc{\lowercase{G.722}} results in higher \ac{MOS} than \textsc{\lowercase{G.711}}, but the difference is smaller than between \textsc{\lowercase{G.711}} and \textsc{\lowercase{LPC\=/10}}.
 However, for the investigation of \autoref{hypo:strength}, the actual difference between the three performance levels is not important as long as episodic judgments are different.
 
 \begin{table}
@@ -208,9 +208,9 @@ However, for the investigation of \autoref{hypo:strength}, the actual difference
  \begin{tabulary}{\columnwidth}{C|C|C|C}
    Performance & Signal bandwidth & Codec & \acs{POLQA}\\
    \midrule
-   \ac{HP} & 50..\unit[7000]{Hz}  & G.722, Mode~1 & 4.0 \\ %MOS1-5: 3.9
+   \ac{HP} & 50..\unit[7000]{Hz}  & \textsc{\lowercase{G.722}}, Mode~1 & 4.0 \\ %MOS1-5: 3.9
    \hline
-   \ac{MP} & 300..\unit[3400]{Hz} & G.711         & 3.3 \\ %MOS1-5: 3.3
+   \ac{MP} & 300..\unit[3400]{Hz} & \textsc{\lowercase{G.711}}         & 3.3 \\ %MOS1-5: 3.3
    \hline
    \ac{LP} & 300..\unit[3400]{Hz} & \textsc{\lowercase{LPC\=/10}}        & 1.9 \\ %MOS1-5: 2.0
    \end{tabulary}
@@ -221,14 +221,14 @@ This is important for \E1{}, due to the use of a conversational task.
 A one-way delay of up to \unit[100]{ms} is rarely noticeable and thus not perceived as a degradation~\citep[][p.\,9]{itu-t_recommendation_g.107_e-model:_2015}.
 \textsc{\lowercase{LPC\=/10}} requires a look-ahead of \unit[90]{ms} while a frame duration of \unit[22.5]{ms} is applied.
 This results in coding delay of up to \unit[112.5]{ms}.
-G.711 and G.722 provide a algorithmic delay of \unit[0.125]{ms} and both codecs can be used with a minimal frame duration of \unit[10]{ms}.
+\textsc{\lowercase{G.711}} and \textsc{\lowercase{G.722}} provide a algorithmic delay of \unit[0.125]{ms} and both codecs can be used with a minimal frame duration of \unit[10]{ms}.
 Thus, \textsc{\lowercase{LPC\=/10}} might introduce a noticeable difference alone due to the additional coding delay.
 This might result in an additional reduction in perceived quality for two-party conversations.
 
 The \ac{VoD} service for \EIIb{} was presented on a tablet computer.
 %Presenting both services on the same device rather than different devices, prevents that participants associate each service with an individual device and use the device as cue for recall.
 Here, a \emph{Nexus~7~(2013)} is used, which provides a \unit[7]{inch} screen with a resolution of \unit[1920$x$1200]{px}.
-For \ac{HP}, content is downscaled to a resolution of \unit[1280$x$720]{px} and encoded with H.264 (\unit[25]{\acs{FPS}}, \unit[5]{Mbit/s}, two-pass).
+For \ac{HP}, content is downscaled to a resolution of \unit[1280$x$720]{px} and encoded with \textsc{\lowercase{H.264}} (\unit[25]{\acs{FPS}}, \unit[5]{Mbit/s}, two-pass).
 For \ac{LP}, the video signal is degraded by setting the \acs{QP} factor to 50.
 This results in a constant blockiness.
 %In difference to limiting the encoding bandwidth, this leads to near constant degradation over multiple frames. 
@@ -256,10 +256,10 @@ In the \emph{third stage}, typical speech telephony degradations were presented.
 Here, participants assessed the perceived quality of \unit[27]{speech stimuli} with a duration of approximately~\unit[8]{s}.
 In each stimuli, two sentences were presented by one human speaker.
 %Three different speakers were used: two male and one female speaker.
-These stimuli contained different signal bandwidths (wideband, narrowband), codecs (G.711, G.722, \textsc{\lowercase{GSM\=/FR}}, \textsc{\lowercase{LPC\=/10}}), white noise (fullband, no codec), and random packet-loss (2\%, and 5\%; G.722, Mode~1, \acs{PLC}: zero insertion).
+These stimuli contained different signal bandwidths (wideband, narrowband), codecs (\textsc{\lowercase{G.711}}, \textsc{\lowercase{G.722}}, \textsc{\lowercase{GSM\=/FR}}, \textsc{\lowercase{LPC\=/10}}), white noise (fullband, no codec), and random packet-loss (2\%, and 5\%; \textsc{\lowercase{G.722}}, Mode~1, \acs{PLC}: zero insertion).
 In \EIIb{}, also degradations for the \ac{VoD} service were presented.
 22\,videos with an approximate duration of \unit[8]{s} were used.
-Here, only the \acs{QP}~factor was varied for H.264 (0, 42, 47, and 50).
+Here, only the \acs{QP}~factor was varied for \textsc{\lowercase{H.264}} (0, 42, 47, and 50).
 After the presentation of each stimulus, the perceived quality of this stimulus was assessed using the 7\=/point \ac{CoCR} scale.
 %\footnote{The question was phrased in German: "Wie bewerten Sie die Gesamtqualität der gehörten Audioaufnahme?" for speech telephony training and "Wie bewerten Sie die Gesamtqualität des gerade gesehenen Videos?" in case of the video training.}
 
@@ -301,7 +301,7 @@ For \EIIa{} and \EIIb{}, one recording for each of the episodes 1..6 was selecte
 These were required to show normal task-solving behavior.
 %Furthermore, no emotional reaction such as laughing should be present and not contain any degradations due to other sound sources such as audible breathing, but only clear and clean speech.
 The duration of the selected conversations ranged from \unit[128]{s} to \unit[194]{s} with an average of \unit[153]{s}.
-%The recordings were normalized per speaker, mixed into one channel and encoded with G.722 or LPC\=/10, respectively.
+%The recordings were normalized per speaker, mixed into one channel and encoded with \textsc{\lowercase{G.722}} or LPC\=/10, respectively.
 %The six selected recordings were presented in \EIIa{} and \EIIb{} in the same order as in \E1{}.
 
 For the \ac{VoD} service used in \EIIb{}, scenes of a sitcom were selected.

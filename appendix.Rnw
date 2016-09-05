@@ -32,7 +32,7 @@ The listening-only training was conducted with a tablet computer (\emph{Fujitsu~
 For the diotic representation, a pair of \emph{AKG~K\=/271} headphones was connected to the internal sound card of the tablet computer.
 The system was calibrated using a \emph{HEAD acoustics} head and torso simulator \emph{HSM~II.3} (sound pressure level of \unit[75]{dB20$\mu$Pa}; babble noise).
 The stimuli were generated with the \textsc{\lowercase{ITU\=/T}~\lowercase{STL2009}} tools \citep{itu-t_recommendation_g.191_software_2010} and the audio-processing tool \textsc{\lowercase{SOX}}\footnote{The \textsc{\lowercase{SOX}} project is hosted under \url{http://sox.sourceforge.net}.}.
-The \textsc{\lowercase{STL2009}} were used for coding G.711 and G.722~(Mode~1), and inserting packet-loss for G.722 (Mode~1).
+The \textsc{\lowercase{STL2009}} were used for coding \textsc{\lowercase{G.711}} and \textsc{\lowercase{G.722}}~(Mode~1), and inserting packet loss for \textsc{\lowercase{G.722}}~(Mode~1, \ac{PLC mode 0}.
 \textsc{\lowercase{SOX}} was used for coding \textsc{\lowercase{GSM\=/FR}} and \textsc{\lowercase{LPC\=/10}} as well as filtering wideband, narrowband, and white noise.
 
 \subsection{Two-party Speech Telephony}
@@ -47,7 +47,7 @@ The clients presented only a minimal user interface, consisting of one button fo
 Call initiation was only possible if both clients set their presence status to available.
 The two clients could not communicate directly with each other as the Asterisk server acted as proxy.
 Transmission of the speech signal between Asterisk and the clients (both directions) was lossless by using the \emph{L16} codec (clock rate: \unit[16]{kHz}).
-Asterisk applied the desired performance levels (codec) by compression the signal and immediately decompressing it before relaying the signal.\footnote{The performance levels were set by using the transcoding capability of Asterisk. On an incoming call coded with L16, Asterisk initiated a call to himself with the desired codec (\ie, G.722, or \textsc{\lowercase{LPC\=/10}}). The later call triggered an outgoing call to the callee encoded in L16.}
+Asterisk applied the desired performance levels (codec) by compression the signal and immediately decompressing it before relaying the signal.\footnote{The performance levels were set by using the transcoding capability of Asterisk. On an incoming call coded with L16, Asterisk initiated a call to himself with the desired codec (\ie, \textsc{\lowercase{G.722}}, or \textsc{\lowercase{LPC\=/10}}). The later call triggered an outgoing call to the callee encoded in L16.}
 This system achieved a one-way end-to-end delay of \unit[120]{ms}.
 
 On each of the two client computers, one \emph{Beyerdynamic~DT~790~Pro} headset connected to a \emph{Edirol~UA\=/25EX} sound card was used for recording and diotic reproduction.
@@ -62,7 +62,7 @@ The two headsets were connected to the processing computer (\emph{Lenovo~X61}) w
 The signal of each microphone was amplified with a \emph{RME~QuadMic~II} microphone preamplifier to counter potential signal loss due to the cable length of \unit[10]{m}.
 
 On the processing computer \emph{PureData}, an open-source audio processing application, was used to modify the speech signals.
-As no speech codecs were available in PureData, the application was extended with the speech codecs G.711, G.722~(Mode~1), and \textsc{\lowercase{LPC\=/10}}.
+As no speech codecs were available in PureData, the application was extended with the speech codecs \textsc{\lowercase{G.711}}, \textsc{\lowercase{G.722}}~(Mode~1), and \textsc{\lowercase{LPC\=/10}}.
 It was verified that the PureData setup provides similar characteristics as the network-based setup.
 The overall system achieved a constant, glitch-free one-way end-to-end delay of \unit[70]{ms}.
 Before starting the experiment, the output was once calibrated to a comfortable listening level by the experimental supervisor.
@@ -83,7 +83,7 @@ In \EIIb{}, the \ac{VoD} service was presented on the display of the Nexus~7, pr
 The brightness of this \unit[7]{inch} display was set to maximum without applying any device related color adaptation.
 
 For these three experiments, non-degraded recordings of two-party conversations of \E1{} were selected.
-These recordings were processed with the \textsc{\lowercase{ITU\=/T}~\lowercase{STL2009}} tools \citep{itu-t_recommendation_g.191_software_2010} for coding G.722 and with \textsc{\lowercase{SOX}} for coding \textsc{\lowercase{LPC\=/10}}.
+These recordings were processed with the \textsc{\lowercase{ITU\=/T}~\lowercase{STL2009}} tools \citep{itu-t_recommendation_g.191_software_2010} for coding \textsc{\lowercase{G.722}} and with \textsc{\lowercase{SOX}} for coding \textsc{\lowercase{LPC\=/10}}.
 For \EIIb{}, the video material was cut with \emph{Adobe~Premiere~6} and exported with H.264 (\unit[1280$x$720]{px}, \unit[5]{Mbit/s}, two-pass) and \acs{AAC} (\unit[448]{kbit/s}, stereo).
 Subsequently, the scenes was processed with \emph{FFmpeg}\footnote{The FFmpeg project is available at \url{https://www.ffmpeg.org/}.} to apply with the desired \acs{QP} factor while leaving the audio unchanged.
 
@@ -109,7 +109,7 @@ First of all, participants connected using their own Internet access (minimal ba
 The performance of this connection could neither be estimated nor enforced.
 Thus, for some calls severe, often bursty, packet-loss was observed.
 However, for the media streams no counter measures were taken against packet-loss, \ie, neither elaborate \acs{PLC} (only zero insertion) nor \acs{FEC}. 
-% are available for , as the used speech codec G.722 (Mode\,1) was used with neither \acs{PLC} nor \acs{FEC} on \acs{UDP} connections without retransmission.
+% are available for , as the used speech codec \textsc{\lowercase{G.722}} (Mode\,1) was used with neither \acs{PLC} nor \acs{FEC} on \acs{UDP} connections without retransmission.
 Second, packet-loss was added by Dummynet in addition to packet-loss occurring due to the network issues.
 This lead to potentially higher packet-loss than desired.
 
