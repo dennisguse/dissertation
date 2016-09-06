@@ -312,7 +312,7 @@ For \CX{}, significant differences are found (\Sexpr{kruskal(IQU~id, "E5", c("HP
 A post-hoc test shows that the multi\-/episodic judgment of the 2nd~day is significantly different to all following judgments ($p<0.006$). %\Sexpr{wilcox.pairwise.print(IQU~id, "E5", c("HP", "LP"), "P2", c(2, 5, 8, 11, 14), "VoD")}
 Between the two conditions, only the judgments of the 2nd~day are significantly different (\Sexpr{wilcox(IQU~condition, "E5",  c("HP", "LP"), c("P1", "P2"), 2, "VoD")}).
 
-\begin{table}[ht]
+\begin{table}[t]
 	\centering
 	\caption[Multiple days (\E5{}): multi\-/episodic judgments]{Multiple days (\E5{}): multi\-/episodic judgments. Reported as \ac{MOS} with standard deviation in brackets.}
 	\label{tab:field:e5results}
@@ -527,7 +527,7 @@ In \autoref{hypo:position}, it is assumed that presenting \ac{HP} episodes after
 This can be investigated for one day in \ac{LP} with \C1{} and \C3{} as well as for two days with \C4{} and \C5{}.
 \autoref{tab:field:hypoposition} shows the final multi\-/episodic judgments for these four conditions.
 
-\begin{table}[h]
+\begin{table}[t]
 	\centering
 	\caption[Multiple days (\E6{}): multi\-/episodic judgment after the 6th~day for \autoref{hypo:position}]{Multiple days (\E6{}): multi\-/episodic judgment after the 6th~day for \autoref{hypo:position}. Reported as \ac{MOS} with standard deviation in brackets.}
 	\label{tab:field:hypoposition}
@@ -556,7 +556,7 @@ This hypothesis can be evaluated by comparing \C4{} and \C5{} with \C8{}.
 \autoref{tab:field:hypoconsecutive} shows the episodic judgment and multi\-/episodic judgments.
 The three conditions are not significantly different with regard to the last multi\-/episodic judgment (\Sexpr{kruskal(IQU~condition, "E6a", c("HP", "LP"), c("4", "5a", "8"), 14)}).
 
-\begin{table}[h]
+\begin{table}[b]
 	\centering
 	\caption[Multiple days (\E6{}): multi\-/episodic judgment after the 6th~day for \autoref{hypo:consecutive}]{Multiple days (\E6{}): multi\-/episodic judgment after the 6th~day for \autoref{hypo:consecutive}. Reported as \ac{MOS} with standard deviation in brackets.}
 	\label{tab:field:hypoconsecutive}

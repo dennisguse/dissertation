@@ -195,12 +195,7 @@ As \textsc{\lowercase{LPC\=/10}} is rarely compared to \textsc{\lowercase{G.711}
 For the evaluation \unit[12]{s} German speech samples have been processed with all three codecs.
 The resulting speech signals were then evaluated with \ac{POLQA} in super-wideband mode.
 The results are shown in \autoref{tab:lab:performance}.
-It must be noted that \textsc{\lowercase{LPC\=/10}} is very different to \textsc{\lowercase{G.722}} and \textsc{\lowercase{G.711}}.
-\textsc{\lowercase{LPC\=/10}} only achieves a \ac{MOS} of 1.9 on the 7\=/point~\ac{CoCR}.
-In fact, \textsc{\lowercase{G.722}} results in higher \ac{MOS} than \textsc{\lowercase{G.711}}, but the difference is smaller than between \textsc{\lowercase{G.711}} and \textsc{\lowercase{LPC\=/10}}.
-However, for the investigation of \autoref{hypo:strength}, the actual difference between the three performance levels is not important as long as episodic judgments are different.
-
-\begin{table}
+\begin{table}[t]
  \centering
  \caption[Performance levels: comparison of the selected codecs with \acs{POLQA}]{Performance levels: Comparison of the selected codecs for \acs{HP}, \acs{MP}, and \acs{LP} with \acs{POLQA}.
  The prediction was transformed to the 7\=/point \acs{CoCR} scale \citep{koster_comparison_2015}.}
@@ -215,8 +210,12 @@ However, for the investigation of \autoref{hypo:strength}, the actual difference
    \ac{LP} & 300..\unit[3400]{Hz} & \textsc{\lowercase{LPC\=/10}}        & 1.9 \\ %MOS1-5: 2.0
    \end{tabulary}
 \end{table}
+It must be noted that \textsc{\lowercase{LPC\=/10}} is very different to \textsc{\lowercase{G.722}} and \textsc{\lowercase{G.711}}.
+\textsc{\lowercase{LPC\=/10}} only achieves a \ac{MOS} of 1.9 on the 7\=/point~\ac{CoCR}.
+In fact, \textsc{\lowercase{G.722}} results in higher \ac{MOS} than \textsc{\lowercase{G.711}}, but the difference is smaller than between \textsc{\lowercase{G.711}} and \textsc{\lowercase{LPC\=/10}}.
+However, for the investigation of \autoref{hypo:strength}, the actual difference between the three performance levels is not important as long as episodic judgments are different.
 
-End-to-end delay is an additional factor influencing the perceived quality.
+The end-to-end delay is an additional factor influencing the perceived quality.
 This is important for \E1{}, due to the use of a conversational task.
 A one-way delay of up to \unit[100]{ms} is rarely noticeable and thus not perceived as a degradation~\citep[][p.\,9]{itu-t_recommendation_g.107_e-model:_2015}.
 \textsc{\lowercase{LPC\=/10}} requires a look-ahead of \unit[90]{ms} while a frame duration of \unit[22.5]{ms} is applied.
