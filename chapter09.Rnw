@@ -120,7 +120,7 @@ Here, the presentation of a second service did not lead to a measurable effect o
 This was found for the presentation of the second service with and without \ac{LP} episodes.
 Thus, the presence of a second service must not be considered for the prediction of multi\-/episodic judgments of the first service that is under multi\-/episodic assessment.
 
-\section{Types of Model}
+\section{Types of Models}
 For the implementation of a prediction model, the modeling approach of \citet{moller_single-call_2011} is extended.
 They proposed to the use the average of all prior episodic judgments to predict a multi\-/episodic judgment.
 This model provides an accurate prediction for earlier multi\-/episodic judgments.

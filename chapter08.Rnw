@@ -547,7 +547,7 @@ This can be investigated for one day in \ac{LP} with \C1{} and \C3{} as well as 
 
 With regard to the final multi\-/episodic judgments neither \C1{} and \C3{} (\Sexpr{wilcox(IQU~condition, "E6a", c("HP", "LP"), c("1", "3"), 14, alternative="greater")}) nor \C4 and \C5 (\Sexpr{wilcox(IQU~condition, "E6a", c("HP", "LP"), c("4", "5a"), 14, alternative="greater")}) are significantly different.
 Still, in both cases an effect of position is indicated and thus a recency effect might have been observed.
-However, the results of \E6{} are inconclusive and thus \autoref{hypo:position} can neither be accepted nor rejected based.
+However, the results of \E6{} are inconclusive and thus \autoref{hypo:position} can neither be accepted nor be rejected.
 
 \subsubsection{\autoref{hypo:consecutive}: Consecutive vs. Non-consecutive \acs{LP} Episodes}
 In \autoref{hypo:consecutive}, it is assumed that consecutive \ac{LP} episodes yield a better multi\-/episodic judgment than the same number of \ac{LP} episodes presented non-consecutively.
