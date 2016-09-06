@@ -86,7 +86,7 @@ The calculation of a \ac{MOS}, independent of the type of judgment or scale, res
 With regard to multi\-/episodic perceived quality and perceived quality over time in general, a \ac{MOS} can only be calculated with judgments that result from the same condition or very similar conditions.
 In fact, this implicitly assumes that effects/biases are similar for different participants with regard to the formation process of multi\-/perceived quality, \ie, the same effects with a similar characteristic occur for each participant.
 In experiments on perceived quality, this assumption of \emph{temporal consistency} is in general neglected, as the time frames under investigation are rather small, \ie, usually in the range of seconds up to some minutes.
-For the investigation of multi\-/episodic perceived quality, this must be taken into account, as a potential factor of noise.
+For the investigation of multi\-/episodic perceived quality, this must be taken into account as a potential factor of noise.
 In fact, it is not yet known if the formation process is \emph{universal} or affected by differences between individuals.
 In the following, factors are discussed that might affect multi\-/episodic perceived quality and thus should be kept constant to apply a \ac{MOS} evaluation.
 
@@ -243,7 +243,7 @@ In this experiment, participants were equipped with a headset and a webcam to av
 
 \paragraph*{Results}
 This experiment was conducted with 58~participants. % in Berlin, Germany. aging from 14 to~64~years.
-Two participants were removed from further data analysis as the required transmission bandwidth was not achieved.
+Two participants were removed from further data analysis, as the required transmission bandwidth was not achieved.
 This left 10 participants for each condition 2..5 and 16~participants for condition~1.
 In the following, the data of \citet{moller_single-call_2011} is analyzed.
 Results are reported as \ac{MOS} ranging from 0~to~6, with standard deviation in brackets.\footnote{For details about the applied statistical tests see \autoref{method:statistic}.}

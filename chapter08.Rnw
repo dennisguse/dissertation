@@ -411,7 +411,7 @@ Here, participants were interviewed about issues with the technical system.
 In this experiment, participants used their own computer and their own pair of headphones.
 Participants could access the \ac{AoD} service via the Internet using a \textsc{\lowercase{HTML5}}-capable web browser.
 For \ac{HP}, the source material (\textsc{\lowercase{CD}}, \unit[44.1]{kHz}, stereo) was encoded with \ac{MP3} (\unit[192]{kbit/s}).
-This was necessary to enable media distribution via Internet as uncompressed audio data is not suited for this.
+This was necessary to enable media distribution via Internet, as uncompressed audio data is not suited for this.
 In fact, the bitrate was selected to produce no audible impairments for the used speech-only content.
 For \ac{LP}, the content was first encoded with \textsc{\lowercase{LPC\=/10}} before encoding it finally with \ac{MP3}.
 A detailed description of the implemented system is given in the \appendix{}~\ref{appendix:setups} (p.\,\pageref{appendix:setups}).

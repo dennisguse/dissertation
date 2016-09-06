@@ -68,7 +68,7 @@ In difference to \citet{moller_single-call_2011}, who predicted multi\-/episodic
 Predicting individual judgments might be desirable, but the conducted experiments did not collect sufficient data to be able to explain differences between individual participants.
 In fact, the defined\-/use method was applied, so a \ac{MOS} could be derived, reflecting the judgment of the \emph{average actor}.
 
-The here presented modeling is necessarily limited to the development of best fitting predictor(s) as no data sets for cross\-/validation are available.
+The here presented modeling is necessarily limited to the development of best fitting predictor(s), as no data sets for cross\-/validation were available.
 Furthermore, he conducted experiments differ slightly in the experimental design and observed effects.
 Thus, models created for one experiment cannot be verified validly using data from the other experiments.
 
