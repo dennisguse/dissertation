@@ -45,11 +45,11 @@ In the second part of this chapter, the results of the experiments are presented
 
 \section{Design}
 For the investigation of multi\-/episodic perceived quality in one session, service types were selected that are based on speech interaction or speech content.
-Using unimodal rather than multi-modal service types omits considering multi-modal integration for the quality formation process.
+Using unimodal rather than multi\-/modal service types omits considering multi\-/modal integration for the quality formation process.
 In \E1{}, \EIIa{}, and \EIIb{}, a speech telephony service is used.
 Two-party conversation is applied in \E1{} while third-party listening is used in \EIIa{} and \EIIb{}.
 An \ac{AoD} service is used in \E3{}, presenting a speech-only audio book.
-For the investigation on the impact of a second service (\autoref{hypo:independent}), a multi-modal service (\ie, a \ac{VoD} service) is used for \EIIb{} in addition.
+For the investigation on the impact of a second service (\autoref{hypo:independent}), a multi\-/modal service (\ie, a \ac{VoD} service) is used for \EIIb{} in addition.
 
 The four experiments consisted of 6~episodes except for one condition of \E1{}.
 The minimal duration per episode was selected to be at least \unit[2]{min}.
@@ -256,7 +256,7 @@ In the \emph{third stage}, typical speech telephony degradations were presented.
 Here, participants assessed the perceived quality of 27~speech stimuli with a duration of approximately~\unit[8]{s}.
 In each stimuli, two sentences were presented by one human speaker.
 %Three different speakers were used: two male and one female speaker.
-These stimuli contained different signal bandwidths (wideband, narrowband), codecs (\textsc{\lowercase{G.711}}, \textsc{\lowercase{G.722}}, \textsc{\lowercase{GSM\=/FR}}, \textsc{\lowercase{LPC\=/10}}), white noise (fullband, no codec), and random packet-loss (2\%, and 5\%; \textsc{\lowercase{G.722}}, Mode~1, \acs{PLC}: zero insertion).
+These stimuli contained different signal bandwidths (wideband, narrowband), codecs (\textsc{\lowercase{G.711}}, \textsc{\lowercase{G.722}}, \textsc{\lowercase{GSM\=/FR}}, \textsc{\lowercase{LPC\=/10}}), white noise (fullband, no codec), and random packet loss (2\%, and 5\%; \textsc{\lowercase{G.722}}, Mode~1, \acs{PLC}: zero insertion).
 In \EIIb{}, also degradations for the \ac{VoD} service were presented.
 22~videos with an approximate duration of \unit[8]{s} were used.
 Here, only the \acs{QP}~factor was varied for \textsc{\lowercase{H.264}} (0, 42, 47, and 50).
@@ -334,7 +334,7 @@ Thus, no participant needed to be excluded due to impaired hearing.
 All participants were individually checked for inconsistent episodic judgments.
 A participant is considered inconsistent if more than two episodic judgments exceed the 1.5~$\times$~\emph{interquartile range} per usage episode of this condition.
 The interquartile range is, in fact, a rather conservative criteria.
-However, due to the lack of ground-truth on episodic judgments in multi\-/episodic assessment, participants should only be removed if severe differences occur.
+However, due to the lack of ground truth on episodic judgments in multi\-/episodic assessment, participants should only be removed if severe differences occur.
 This criteria was met for no participant, and thus none was excluded from the data analysis.
 
 \autoref{tab:lab:participants} gives an overview on the number of participants per condition for the four experiments.
@@ -611,7 +611,7 @@ In this experiment, \C4{} and \CVb{} are significantly different (\Sexpr{wilcox(
 For \EIIa{}, \C1{}, \CIIa{}, and \C3{} are not significantly different (\Sexpr{kruskal(IQU~condition, "E2a", performance_level, c("1", "2a", "3"), c(6))}), whereas \C4{} and \CVa{} are significantly different (\Sexpr{wilcox(IQU~condition, "E2a", unique(performance_level), c("4", "5a"), c(6), alternative = "greater")}).
 
 With regard to \autoref{hypo:position}, both experiments yield similarities and differences while varying the position of one or two \ac{LP} episodes.
-For \E1{}, presenting the \ac{LP} episode(s) earlier reduces the impact on the directly following multi-episodic judgment.
+For \E1{}, presenting the \ac{LP} episode(s) earlier reduces the impact on the directly following multi\-/episodic judgment.
 Thus, a recency effect is observed.
 In fact, this effect could for one \ac{LP} episode only observed if more than one \ac{HP} episode was presented afterwards.
 For \EIIa{}, this could only be observed for two \ac{LP} episodes but not for one \ac{LP} episode.
@@ -793,7 +793,7 @@ Thus, \autoref{hypo:independent} can be accepted.
 
 \section{Discussion and Conclusion}
 The four experiments show that multi\-/episodic perceived quality can be assessed in one session.
-Here, the formation process of multi-episodic perceived quality for one session of up to \unit[45]{min} was investigated.
+Here, the formation process of multi\-/episodic perceived quality for one session of up to \unit[45]{min} was investigated.
 Although the selected degradation for \ac{LP} (\textsc{\lowercase{LPC\=/10}}) is not actually used for speech telephony, its presentation resulted in observable effects on episodic judgments and multi\-/episodic judgments.
 %This allowed to investigate the formation process of multi\-/episodic perceived quality.
 

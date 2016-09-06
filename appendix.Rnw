@@ -94,24 +94,24 @@ For recording and audio reproduction, participants were provided a \emph{Logitec
 
 \subsection{Speech Telephony Service}
 For conducting \E4{}, a publicly reachable \ac{VoIP} telephony service was set up.
-The service needed to be able to allow multiple two-party speech conversations at the same time while being able to insert packet-loss for individual conversations.
+The service needed to be able to allow multiple two-party speech conversations at the same time while being able to insert packet loss for individual conversations.
 For this service, one server was installed in the data center of \emph{TU~Berlin}.
 As operating system \emph{FreeBSD~9.0} was selected, because it provides a built-in firewall with integrated traffic shaper called \emph{Dummynet}~\citep{rizzo_dummynet:_1997}.
-This traffic shaper allows to add network impairments (packet-loss, delay, and jitter) per individual connection, \ie, protocol, port, and address.
+This traffic shaper allows to add network impairments (packet loss, delay, and jitter) per individual connection, \ie, protocol, port, and address.
 On this server, the \ac{VoIP} software \emph{Asterisk~10} was installed, which was configured to act as a \ac{SIP} registrar as well as \acs{RTP}\=/relay for the \acs{UDP}\=/based media streams.
-On call initiation of a client, Asterisk informed Dummynet about the desired packet-loss rate for the media streams of this call.
-Packet-loss was not inserted to the \ac{SIP} connections between clients and server, because this affects the reactivity of the telephony system and might lead to call drops.
+On call initiation of a client, Asterisk informed Dummynet about the desired packet loss rate for the media streams of this call.
+Packet loss was not inserted to the \ac{SIP} connections between clients and server, because this affects the reactivity of the telephony system and might lead to call drops.
 On each participant's computer, the \ac{VoIP} client \emph{Jitsi~1.0} was installed.
 
 While the speech telephony server was running well while testing, it was not able to fulfill the desired performance levels in the experiment.
 Two limitations have been observed.
 First of all, participants connected using their own Internet access (minimal bandwidth: \unit[6]{MBit/s}).
 The performance of this connection could neither be estimated nor enforced.
-Thus, for some calls severe, often bursty, packet-loss was observed.
-However, for the media streams no counter measures were taken against packet-loss, \ie, neither elaborate \acs{PLC} (only zero insertion) nor \acs{FEC}. 
+Thus, for some calls severe, often bursty, packet loss was observed.
+However, for the media streams no counter measures were taken against packet loss, \ie, neither elaborate \acs{PLC} (only zero insertion) nor \acs{FEC}. 
 % are available for , as the used speech codec \textsc{\lowercase{G.722}} (Mode~1) was used with neither \acs{PLC} nor \acs{FEC} on \acs{UDP} connections without retransmission.
-Second, packet-loss was added by Dummynet in addition to packet-loss occurring due to the network issues.
-This lead to potentially higher packet-loss than desired.
+Second, packet loss was added by Dummynet in addition to packet loss occurring due to the network issues.
+This lead to potentially higher packet loss than desired.
 
 \subsection{\acl{VoD}}
 For the \ac{VoD} service, an actual service was simulated offline rather than providing it as an online service.
@@ -135,7 +135,7 @@ For audio reproduction, each participant received a pair of \emph{Shure~240} hea
 For \E6{}, only an \ac{AoD} service was used.
 For this experiment, it was chosen to let participants use their own equipment.
 The \ac{AoD} service was implemented as a website available online.
-This website used \textsc{\lowercase{HTML5}} multi-media features to download and playback the audio content.
+This website used \textsc{\lowercase{HTML5}} multimedia features to download and playback the audio content.
 Participants were only required to use \emph{Google Chrome}/\emph{Chromium} as web browser.
 This limited the testing effort for the website.
 As the buffering strategy for media content cannot be controlled by a website using standardized \textsc{\lowercase{HTML5}}, the preloading was initiated when the website was loaded.
@@ -288,7 +288,7 @@ Finally, all multi\-/episodic judgments per experiment and condition are present
 %\section{\acs{SCS} used in \E1, \E2a, \E2b, and E3}
 %\begin{table}[h]
 %	\centering
-%	\caption{The \acs{SCS} used in \E1, \E2, and \E3 were taken from \citet{itu-t_recommendation_p.805_subjective_2007} and out-dated information updated. The scenario of episode 4 was changed from a flight information and booking task to a change of booking task.}
+%	\caption{The \acs{SCS} used in \E1, \E2, and \E3 were taken from \citet{itu-t_recommendation_p.805_subjective_2007} and outdated information updated. The scenario of episode 4 was changed from a flight information and booking task to a change of booking task.}
 %	\begin{tabular}{c|c|c}
 %	Episode & Title & Page \\
 %	\hline

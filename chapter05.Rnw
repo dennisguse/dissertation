@@ -10,7 +10,7 @@ attach(timeseries)
 \section{Multi-episodic Perceived Quality}\label{chap:state-of-the-art}
 %\begin{chapter-abstract}
 %%NOTE: This chapter might be too small, consider merging with previous chapter.
-%Here I present the state-of-the-art on multi\-/episodic QoE \citet{duncanson_average_1969}, and \citet{moller_single-call_2011}.
+%Here I present the state of the art on multi\-/episodic QoE \citet{duncanson_average_1969}, and \citet{moller_single-call_2011}.
 %It is important to state again the research question (How do subjects integrate low episodic quality into an overall experience?) for this domain and introduce methodologies.
 %Major point here is the research method (task-driven, defined usage behavior, limited freedom in usage behavior).
 %At the end of this chapter I must have made clear what methodologies are used and also made clear what their respective target is.
@@ -26,13 +26,13 @@ In addition, goal achievement as a requirement is added, following the concepts 
 \begin{definition}[Usage Episode]\label{def:episode}
 A usage episode is a distinct, meaningful, and self-contained interaction by a user with a service or system to achieve his goal(s).
 \end{definition}
-Multi-episodic perceived quality results from a \emph{formation process}, combining prior experiences and their perceived quality.
+Multi\-/episodic perceived quality results from a \emph{formation process}, combining prior experiences and their perceived quality.
 In fact, prior experiences can affect the \emph{quality formation process} and thus influence the perceived quality of later experiences. 
 Also, a user's behavior towards a service might change due to perceived quality affecting usage frequency or task-solving strategies, or even lead to abandoning the service completely.
-Multi-episodic perceived quality is thus the result of a sequential process.
+Multi\-/episodic perceived quality is thus the result of a sequential process.
 Here, the order of usage episodes and their individual experiences affect the final judgment.
 Investigations on multi\-/episodic perceived quality can therefore only be undertaken in experiments adhering to a between-subject design.
-Here, every participant is only exposed to a single \emph{multi\-/episodic} condition.\footnote{A within-subject design might applicable for the investigation of multi\-/episodic perceived quality if it can be ensured that the presentation order of different \emph{multi\-/episodic} conditions does not affect the multi-episodic judgment for each condition.} 
+Here, every participant is only exposed to a single \emph{multi\-/episodic} condition.\footnote{A within-subject design might applicable for the investigation of multi\-/episodic perceived quality if it can be ensured that the presentation order of different \emph{multi\-/episodic} conditions does not affect the multi\-/episodic judgment for each condition.} 
 In the following, the word \emph{episode} is used as a synonym of usage episode.
 
 In the field of \ac{QoE}, multi\-/episodic perceived quality has so far only received limited attention.
@@ -44,7 +44,7 @@ However, understanding the formation process of multi\-/episodic perceived quali
 Effects of multi\-/episodic usage while focusing on changes in user behavior have been evaluated in \ac{UX}.
 \ac{QoE} and \ac{UX} conceptually overlap as both focus on experiences in general and experiences with technology \citep[\cf{}][]{wechsung_quality_2014}.
 \ac{UX}, stemming from usability, focuses on the interaction with technology and how interactions affect usage as well as emotions towards used technology.\footnote{For a longer discussion on similarities and difference between \ac{QoE} and \ac{UX} see \citet{wechsung_quality_2014} and also \citet{hassenzahl_user_2008}.}
-Multi-episodic evaluation is an important aspect of \ac{UX}, because user behavior towards technology changes as a user learns how to use the technology and which tasks are well-suited to its use.
+Multi\-/episodic evaluation is an important aspect of \ac{UX}, because user behavior towards technology changes as a user learns how to use the technology and which tasks are well-suited to its use.
 The multi\-/episodic concept is described by \citet[p.\,8]{roto_user_2011}.
 However, they failed to put it into context with prior work and omitted their definitions.
 
@@ -128,14 +128,14 @@ All these aspects might affect the formation process of multi\-/episodic perceiv
 However, so far, the potential impact of these aspects on multi\-/episodic judgments is not yet known.
 
 \paragraph{Assessment Methods}
-Multi-episodic perceived quality can be investigated using two diametric methods which differ in the behavioral freedom of users.
+Multi\-/episodic perceived quality can be investigated using two diametric methods which differ in the behavioral freedom of users.
 On the one hand, users are allowed to interact freely with the service under investigation.
 In this setting, each user can decide individually when, how, how often, and for which tasks to use this service, \ie, the individual user behavior is not limited.
 On the other hand, a similar user behavior can be enforced by defining when, how, and for which tasks the service should be used.
 In the following, both methods are presented in detail, and the implications are discussed.
 
 \subparagraph*{Free-use method}
-Multi-episodic perceived quality can be investigated by observing the interactions of a user with a service without restricting his usage behavior.
+Multi\-/episodic perceived quality can be investigated by observing the interactions of a user with a service without restricting his usage behavior.
 Here, users are free to select when and how to use a service, to abandon it, and also to acquire new information about it.
 This approach has for example been taken by \citet{duncanson_average_1969}.
 In fact, this allows the observation of \emph{real} users of a \emph{real} service.
@@ -176,8 +176,8 @@ This means that it must be possible to introduce degradations when defined, and 
 This is a challenging task for telecommunication services, in particular due to the necessary data transmission and often uncontrollable network performance.
 In addition to technological challenges in the deployment of such a service, a participant needs to solve each task at a specific point in time.
 This is not an issue if multi\-/episodic perceived quality is studied in one session, \eg, several consecutive usage episodes.
-Investigating multi\-/episodic perceived quality over longer time-spans spanning several days, weeks, or months increases the required effort for a user to follow the defined usage pattern.
-Longer time-spans also increase the likelihood that a defined usage pattern cannot be fulfilled by an individual participant, as each participant must integrate the usage pattern into his daily life.
+Investigating multi\-/episodic perceived quality over longer time spans spanning several days, weeks, or months increases the required effort for a user to follow the defined usage pattern.
+Longer time spans also increase the likelihood that a defined usage pattern cannot be fulfilled by an individual participant, as each participant must integrate the usage pattern into his daily life.
 However, investigating multi\-/episodic perceived quality beyond one session is necessary in order to derive knowledge about the influence of time between usage episodes.
 
 \subsection{Application of the Defined-use Method \citep{moller_single-call_2011}}\label{prior:moeller}
@@ -207,7 +207,7 @@ In this experiment, performance was varied between usage episodes by limiting th
 This is expected to avoid macroscopic fluctuations within a usage episode and thus avoid potential but unknown effects on multi\-/episodic perceived quality.
 Three performance levels were applied: \acf{HP}: \unit[500]{kbit/s}, \acf{MP}: \unit[150]{kbit/s}, and \acf{LP}: \unit[32]{kbit/s}.\footnote{A detailed description about the \emph{precise} technical parameters (\eg, codecs, bandwidth distribution, resolution) resulting from the bandwidth limitations was not published by \citet{moller_single-call_2011}.}
 Performance of the service was varied on a per day basis, \ie, all usage episodes in a day were presented with the same performance level.
-\citet{moller_single-call_2011} tested five multi-episodic conditions (\autoref{tab:chap05:conditions}).
+\citet{moller_single-call_2011} tested five multi\-/episodic conditions (\autoref{tab:chap05:conditions}).
 Here, the condition defines the time for each usage episode, task, and also performance level.
 In each condition, one or two performance levels were used only.
 
@@ -353,7 +353,7 @@ Nevertheless, \citet{moller_single-call_2011} showed that the defined-use method
 Although participants used the service in their home environment on their own, \ie, in settings that were uncontrolled and unknown to the researchers, the episodic results show that perceived quality can be assessed successfully with this method.
 
 \section{Conclusion}
-Multi-episodic perceived quality has so far only received limited attention.
+Multi\-/episodic perceived quality has so far only received limited attention.
 The work of \citet{duncanson_average_1969} and \citet{moller_single-call_2011} form a basis for the investigation of the formation process of multi\-/episodic perceived quality.
 In particular, the defined-use method developed and tested by \citet{moller_single-call_2011} seems suitable for this investigation.
 However, neither \citet{duncanson_average_1969} nor \citet{moller_single-call_2011} were able to investigate the formation process of multi\-/episodic perceived quality in detail.

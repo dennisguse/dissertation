@@ -87,7 +87,7 @@ A statistical evaluation is conducted by applying the nonparametric tests, as fo
 
 \section{Experiment E4}
 \E4{} was inspired by \citet{moller_single-call_2011}.\footnote{The results of \E4{} are published in \citet{guse_macro-temporal_2013}.}
-The experiment of \citet{moller_single-call_2011} indicated only little differences for multi-episodic judgments between the evaluated multi-episodic conditions (\cf{} \hyperref[prior:moeller]{Section \ref*{prior:moeller}}).
+The experiment of \citet{moller_single-call_2011} indicated only little differences for multi\-/episodic judgments between the evaluated multi\-/episodic conditions (\cf{} \hyperref[prior:moeller]{Section \ref*{prior:moeller}}).
 This might be due to the limited number of degraded episodes or the introduced degradations were not severe enough.
 The goal of \E4{} was the application the defined-use method in a similar usage period to \citet{moller_single-call_2011} and to gather practical knowledge about conducting a field experiment.
 In addition, conducting \E4{} had two goals:
@@ -116,10 +116,10 @@ While \C0{} replicates the baseline condition of \citet{moller_single-call_2011}
 After finishing an episode, participants assessed the episodic perceived quality on the 7\=/point \ac{CoCR} scale (\cf{} \autoref{img:chap05:quality-scale}).
 The multi\-/episodic perceived quality for each service was assessed on the 4th, 7th, 10th, and 14th day directly after finishing the daily episode with the \ac{VoD} service (same scale).
 
-For the speech telephony service, the speech codec \textsc{\lowercase{G.722}} was used with a packet-length of \unit[20]{ms} for \ac{HP} and for \ac{LP}.
+For the speech telephony service, the speech codec \textsc{\lowercase{G.722}} was used with a packet length of \unit[20]{ms} for \ac{HP} and for \ac{LP}.
 Neither \acs{FEC} nor elaborate algorithms for \acs{PLC} were applied.
 For \acs{PLC}, only zero insertion was used.
-For \ac{LP}, a random packet-loss of 5\% was inserted in addition.
+For \ac{LP}, a random packet loss rate of 5\% was inserted in addition.
 For the \ac{VoD} service, the video was encoded with \textsc{\lowercase{H.264}} at a resolution of \unit[720$x$576]{px} and the audio channel encoded with \acs{AAC} (\unit[48]{kHz}, \unit[165]{kbit/s}, stereo).
 The two performance levels for this service differed only in the video encoding bandwidth.
 For \ac{HP}, a bandwidth of \unit[2]{Mbit/s} and for \ac{LP} a bandwidth of \unit[125]{kbit/s} was applied.
@@ -143,7 +143,7 @@ These were presented in \ac{HP}.
 For each of the two conditions, 5~pairs successfully finished this experiment with an average age of 22.9~years ($\sigma = 3.1$), consisting of 11~male and 9~female participants.
 Of the 280~scheduled calls, 5~were not conducted and 18~episodic judgments missing.
 For the \ac{VoD} service, all episodes were conducted, but 13~episodic judgments and one multi\-/episodic judgment were missing.
-This is, in fact, an issue with regard to the evaluation according to the \ac{MOS} assumption as desired by applying the defined-use method, because not all participants assigned to a condition were exposed to the same multi-episodic condition.
+This is, in fact, an issue with regard to the evaluation according to the \ac{MOS} assumption as desired by applying the defined-use method, because not all participants assigned to a condition were exposed to the same multi\-/episodic condition.
 However, due to the small sample size and the missing ground truth, no participant was removed from the data analysis.
 
 \subsection{Data Analysis}
@@ -249,7 +249,7 @@ Degradations on both modalities were inserted to increase the perceptual differe
 Details of the technical setup are described in the \appendix{}~\ref{appendix:setups} (p.\,\pageref{appendix:setups}).
 
 Episodic judgments were taken on the 7\=/point \ac{CoCR} scale after every episode.
-Multi-episodic judgments per service were taken at the 2nd, 5th, 8th, 11th, and 14th~day.
+Multi\-/episodic judgments per service were taken at the 2nd, 5th, 8th, 11th, and 14th~day.
 This judgment was taken after finishing the daily episode with the \ac{VoD} service.
 
 On the day before starting the 14~day usage period, an introductory session was conducted with every participant.
@@ -393,9 +393,9 @@ Here, participants received all necessary information about the experiment and d
 Then, participants were presented typical speech telephony related degradations in the same way than in the one-session experiments (\cf{} \autoref{sec:training}).
 Finally, each participant used the \ac{AoD} service for two episodes to ensure that participants understood how to use the service.
 
-During the multi-episodic part of this experiment the first episode of a day needed to be conducted between \unit[7]{am} and \unit[1]{pm} and the second episode between \unit[3]{pm} and \unit[10]{pm}.
+During the multi\-/episodic part of this experiment the first episode of a day needed to be conducted between \unit[7]{am} and \unit[1]{pm} and the second episode between \unit[3]{pm} and \unit[10]{pm}.
 Episodic judgments and multi\-/episodic judgments were taken on the 7\=/point \ac{CoCR} scale.
-Multi-episodic judgments were collected after the second episode of the 3rd~day and the 6th~day.
+Multi\-/episodic judgments were collected after the second episode of the 3rd~day and the 6th~day.
 In fact, the judgment after the 3rd~day is only based on \ac{HP} episodes.
 Thus, it can be used as reference point to assess the impact of the presented \ac{LP} episodes on following multi\-/episodic judgments.
 This is similar to the one-session experiments and in the following denoted also as \emph{reference}.
@@ -553,7 +553,7 @@ However, the results of \E6{} are inconclusive and thus \autoref{hypo:position} 
 In \autoref{hypo:consecutive}, it is assumed that consecutive \ac{LP} episodes yield a better multi\-/episodic judgment than the same number of \ac{LP} episodes presented non-consecutively.
 This hypothesis can be evaluated by comparing \C4{} and \C5{} with \C8{}.
 \C4{} and \C5{} present each two days \ac{LP} consecutively whereas \C8{} presents the 4th and the 6th~day in \ac{LP}.
-\autoref{tab:field:hypoconsecutive} shows the episodic judgment and multi-episodic judgments.
+\autoref{tab:field:hypoconsecutive} shows the episodic judgment and multi\-/episodic judgments.
 The three conditions are not significantly different with regard to the last multi\-/episodic judgment (\Sexpr{kruskal(IQU~condition, "E6a", c("HP", "LP"), c("4", "5a", "8"), 14)}).
 
 \begin{table}[h]
