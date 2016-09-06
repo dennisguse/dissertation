@@ -151,7 +151,7 @@ The 5th~episode is used for this, so the difference in duration between episodes
 %In fact, \CIIb{} is similar to \C4{}.
 %Both present the same overall duration of \ac{LP}, which is split in \C4{} into two episodes, followed by one \ac{HP} episode before the multi\-/episodic judgment.
 
-In \autoref{hypo:independent} it is hypothesized that multi\-/episodic perceived quality is judged on a per-service basis, \ie, usage of other service(s) in the same usage period does not affect the multi\-/episodic judgments of the judged service.
+In \autoref{hypo:independent}, it is hypothesized that multi\-/episodic perceived quality is judged on a per-service basis, \ie, usage of other service(s) in the same usage period does not affect the multi\-/episodic judgments of the judged service.
 This can be be investigated by presenting a second service in the same session.
 Following the experimental approach of sequential usage episodes, this can be investigated by presenting the two services alternatingly.
 This is investigated in \EIIb{} by presenting a speech telephony service in \C5{} and a \ac{VoD} service.
@@ -181,8 +181,9 @@ For \ac{LP}, the speech signal is coded with \textsc{\lowercase{LPC\=/10}}\footn
 This codec is designed for low bit rate radio transmission while providing intelligibility rather than natural reproduction.
 The re-synthesized speech signal sounds very unnatural and is described as robotic and muddy with a hissing background noise. 
 %LPC\=/10 achieves a 5-point $\ac{MOS}$ of 2.3 \citep[][]{gibson_multimedia_2000} while requiring only \unit[2.4]{kbit/s} transmission bandwidth. %Gibson J.D. (ed.)-Multimedia Communications_ Directions and Innovations (2001).pdf
-In fact, this codec is not used for speech telephony.
-However, \textsc{\lowercase{LPC\=/10}} is useful for the investigation of multi\-/episodic perceived quality, as it allows to create a severe reduction in performance while maintaining intelligibility and thus tasks remain solvable.
+As \textsc{\lowercase{LPC\=/10}} is not used for speech telephony, it is not an ecological valid degradation.
+Although this might limit generalizability of experimental results, \textsc{\lowercase{LPC\=/10}} is useful for the investigation of multi\-/episodic perceived quality, as it allows to create a severe reduction in performance while maintaining intelligibility and thus tasks remain solvable.
+Furthermore, \textsc{\lowercase{LPC\=/10}} can be used as baseline condition for future work, as an patent-free, open-source implementation is available.
 
 For \ac{MP}, \emph{\textsc{\lowercase{G.711}}}~\citep{itu-t_recommendation_g.711_pulse_1988} is selected.
 This codec is often used as reference for narrowband speech telephony.
@@ -192,7 +193,7 @@ In comparison to \textsc{\lowercase{LPC\=/10}}, the re-synthesized speech signal
 As \textsc{\lowercase{LPC\=/10}} is rarely compared to \textsc{\lowercase{G.711}} or \textsc{\lowercase{G.722}}, an objective evaluation using \ac{POLQA} \citep{itu-t_recommendation_p.863_perceptual_2014} was conducted.
 \ac{POLQA} estimates the \ac{MOS} for the 5-point \ac{ACR} scale.
 \citet{koster_comparison_2015} presented a transformation function that allows to transform judgments from the 5\=/point \ac{ACR} scale to the 7\=/point \ac{CoCR} scale. %for speech telephony
-For the evaluation \unit[12]{s} German speech samples have been processed with all three codecs.
+For the evaluation of \textsc{\lowercase{LPC\=/10}}, \unit[12]{s} German speech samples have been processed with all three codecs.
 The resulting speech signals were then evaluated with \ac{POLQA} in super-wideband mode.
 The results are shown in \autoref{tab:lab:performance}.
 \begin{table}[t]
@@ -213,7 +214,7 @@ The results are shown in \autoref{tab:lab:performance}.
 It must be noted that \textsc{\lowercase{LPC\=/10}} is very different to \textsc{\lowercase{G.722}} and \textsc{\lowercase{G.711}}.
 \textsc{\lowercase{LPC\=/10}} only achieves a \ac{MOS} of 1.9 on the 7\=/point~\ac{CoCR}.
 In fact, \textsc{\lowercase{G.722}} results in higher \ac{MOS} than \textsc{\lowercase{G.711}}, but the difference is smaller than between \textsc{\lowercase{G.711}} and \textsc{\lowercase{LPC\=/10}}.
-However, for the investigation of \autoref{hypo:strength}, the actual difference between the three performance levels is not important as long as episodic judgments are different.
+However, for the investigation of \autoref{hypo:strength}, the actual differences between the three performance levels are not important as long as episodic judgments are different.
 
 The end-to-end delay is an additional factor influencing the perceived quality.
 This is important for \E1{}, due to the use of a conversational task.
@@ -794,6 +795,9 @@ Thus, \autoref{hypo:independent} can be accepted.
 The four experiments show that multi\-/episodic perceived quality can be assessed in one session.
 Here, the formation process of multi\-/episodic perceived quality for one session of up to \unit[45]{min} was investigated.
 Although the selected degradation for \ac{LP} (\textsc{\lowercase{LPC\=/10}}) is not actually used for speech telephony, its presentation resulted in observable effects on episodic judgments and multi\-/episodic judgments.
+However, the selection of \textsc{\lowercase{LPC\=/10}} needs to be considered with regard to generalizability of the results.
+It might be that some of the observed effects occurred due to the use of \textsc{\lowercase{LPC\=/10}}.
+Nevertheless, the selected performance levels enabled to investigate the formation process of multi\-/episodic perceived quality.
 %This allowed to investigate the formation process of multi\-/episodic perceived quality.
 
 It could be observed consistently that increasing the number of \ac{LP} episodes leads to a reduction in multi\-/episodic judgments (\autoref{hypo:number}).
