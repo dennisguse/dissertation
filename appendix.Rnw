@@ -103,7 +103,7 @@ On call initiation of a client, Asterisk informed Dummynet about the desired pac
 Packet loss was not inserted to the \ac{SIP} connections between clients and server, because this affects the reactivity of the telephony system and might lead to call drops.
 On each participant's computer, the \ac{VoIP} client \emph{Jitsi~1.0} was installed.
 
-While the speech telephony server was running well while testing, it was not able to fulfill the desired performance levels in the experiment.
+The speech telephony server was running well while testing, whereas it was not able to fulfill the desired performance levels in the experiment.
 Two limitations have been observed.
 First of all, participants connected using their own Internet access (minimal bandwidth: \unit[6]{MBit/s}).
 The performance of this connection could neither be estimated nor enforced.

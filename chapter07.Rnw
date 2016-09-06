@@ -47,7 +47,7 @@ In the second part of this chapter, the results of the experiments are presented
 For the investigation of multi\-/episodic perceived quality in one session, service types were selected that are based on speech interaction or speech content.
 Using unimodal rather than multi\-/modal service types omits considering multi\-/modal integration for the quality formation process.
 In \E1{}, \EIIa{}, and \EIIb{}, a speech telephony service is used.
-Two-party conversation is applied in \E1{} while third-party listening is used in \EIIa{} and \EIIb{}.
+Two-party conversation is applied in \E1{}, whereas third-party listening is used in \EIIa{} and \EIIb{}.
 An \ac{AoD} service is used in \E3{}, presenting a speech-only audio book.
 For the investigation on the impact of a second service (\autoref{hypo:independent}), a multi\-/modal service (\ie, a \ac{VoD} service) is used for \EIIb{} in addition.
 
@@ -117,7 +117,7 @@ For all other experiments, this condition was omitted.
 Here, the reference is used as approximation for the multi\-/episodic judgment after the 6th~episode of \C0{}.
 
 \autoref{hypo:number}, \ie, increasing the number of \ac{LP} episodes reduces the following multi\-/episodic judgment, can be investigated by comparing the multi\-/episodic judgments after the 6th~episode for \C3{}, \C5{}\footnote{With regard to the multi\-/episodic judgment after the 6th~episode, it is not differentiated between \CVa{} and \CVb{}, because both conditions are identical until this judgment.}, and \C6{} as well as \CIIa{} and \C4{}.
-\C3{}, \C5{}, and \C6{} present an increasing number of \ac{LP} episodes directly before the multi\-/episodic judgment whereas \CIIa{} and \C4{} present the last episode before the multi\-/episodic judgment in \ac{HP}.
+\C3{}, \C5{}, and \C6{} present an increasing number of \ac{LP} episodes directly before the multi\-/episodic judgment, whereas \CIIa{} and \C4{} present the last episode before the multi\-/episodic judgment in \ac{HP}.
 
 \autoref{hypo:position} focuses on the position of the \ac{LP} episodes towards the following multi\-/episodic judgment.
 Based on the recency effect, it is expected that increasing the number of \ac{HP} episodes before the multi\-/episodic judgment reduces the negative effect of previously presented \ac{LP} episodes.
@@ -466,7 +466,7 @@ With regard to episodic judgments both experiments yield consistent results, but
 \subparagraph*{Experiment E3}
 In \E3{}, no significant differences between the two conditions for episodic judgments of \ac{HP} (\Sexpr{wilcox(QU~condition, "E3", "HP")}) and \ac{LP} are found (\Sexpr{wilcox(QU~condition, "E3", "LP")}).
 It must be noted that judgments of the \ac{LP} episode are not significantly different although both conditions differ in the duration of this episode.
-\CIIa{} (normal duration) resulted in a \ac{MOS} of $\Sexpr{mos_qu_with_sd_by_condition("E3", "LP", "2a")}$ whereas \CIIb{} (doubled duration) resulted in a \ac{MOS} of $\Sexpr{mos_qu_with_sd_by_condition("E3", "LP", "2b")}$.
+\CIIa{} (normal duration) resulted in a \ac{MOS} of $\Sexpr{mos_qu_with_sd_by_condition("E3", "LP", "2a")}$, whereas \CIIb{} (doubled duration) resulted in a \ac{MOS} of $\Sexpr{mos_qu_with_sd_by_condition("E3", "LP", "2b")}$.
 It is thus concluded that the duration did not affect the episodic judgment of this single \ac{LP} episode.
 Thus, a duration neglect for episodic judgments is observed.
 The two performance levels \ac{HP} and \ac{LP} are significantly different (\Sexpr{wilcox(QU~performance_level, "E3")}).
@@ -517,7 +517,7 @@ Although not directly comparable due to differences between experiments, it must
 \subsubsection{\autoref{hypo:number}: Number of Consecutive \acs{LP} Episodes}
 In \autoref{hypo:number}, it is assumed that increasing the number of \ac{LP} episodes before a multi\-/episodic judgment results in a decrease of this judgment.
 This hypothesis can be evaluated by comparing the multi\-/episodic judgments after the 3rd~episode as \emph{reference} with multi\-/episodic judgments after the 6th~episode of \C3{}, \C5{}, and \C6{} as well as \CIIa{} and \C4{}.
-\C3{}, \C5{}, and \C6{} present one to three \ac{LP} episodes directly before this multi\-/episodic judgment while \CIIa{} and \C4{} present one or two \ac{LP} episode followed by one \ac{HP} episode.
+\C3{}, \C5{}, and \C6{} present one to three \ac{LP} episodes directly before this multi\-/episodic judgment, whereas \CIIa{} and \C4{} present one or two \ac{LP} episode followed by one \ac{HP} episode.
 This is investigated in \E1{} and \EIIa{}.
 The multi\-/episodic judgments are shown in \autoref{tab:lab:hyponumber}.
 
@@ -561,7 +561,7 @@ A one-sided post-hoc test finds that the reference is significantly different to
 
 With regard to the number of \ac{LP} episodes before a multi\-/episodic judgment, both experiments yield similar findings.
 These show a decrease in the multi\-/episodic judgments if the number in \ac{LP} episodes increased from zero to one and from one to two.
-If no \ac{HP} episodes follow, a decrease of approximately \unit[1]{pt} for each presented \ac{LP} episode is observed.
+If no \ac{HP} episodes follow, a decrease of approximately \unit[1]{pt} for each presented \ac{LP} episode was observed.
 However, it must be noted that both experiments show consistently no decrease from two to three \ac{LP} episodes.
 In this case, the multi\-/episodic judgment remains \emph{above} the episodic judgments of \ac{LP} episodes.
 In both experiments, a decrease of approximately \unit[1]{pt} is also observed if one \ac{HP} episode follows one \ac{LP} episode(s).
@@ -580,7 +580,7 @@ This might be due to the difference usage situation, \ie, two-party conversation
 \subsubsection{\autoref{hypo:position}: Position of \acs{LP} Episode(s)}
 In \autoref{hypo:position}, it is hypothesized that presenting \ac{HP} episodes after one or two \ac{LP} episode(s) reduces the negative impact on the following multi\-/episodic judgment, \ie, after the 6th~episode.
 \C1{}, \CIIa{}, and \C3{} present each one \ac{LP} episode with either two, one, or no \ac{HP} episode(s) before this judgment.
-\C4{} and \C5{} present two consecutive \ac{LP} episodes while one or no \ac{HP} episode are presented before this judgment.
+\C4{} and \C5{} present two consecutive \ac{LP} episodes, whereas one or no \ac{HP} episode are presented before this judgment.
 \autoref{tab:lab:hypoposition} shows the multi\-/episodic judgments for these conditions.
 
 \begin{table}[h]
@@ -610,7 +610,7 @@ In this experiment, \C4{} and \CVb{} are significantly different (\Sexpr{wilcox(
 
 For \EIIa{}, \C1{}, \CIIa{}, and \C3{} are not significantly different (\Sexpr{kruskal(IQU~condition, "E2a", performance_level, c("1", "2a", "3"), c(6))}), whereas \C4{} and \CVa{} are significantly different (\Sexpr{wilcox(IQU~condition, "E2a", unique(performance_level), c("4", "5a"), c(6), alternative = "greater")}).
 
-With regard to \autoref{hypo:position}, both experiments yield similarities and differences while varying the position of one or two \ac{LP} episodes.
+With regard to \autoref{hypo:position}, both experiments yield similarities and differences for varying the position of one or two \ac{LP} episodes.
 For \E1{}, presenting the \ac{LP} episode(s) earlier reduces the impact on the directly following multi\-/episodic judgment.
 Thus, a recency effect is observed.
 In fact, this effect could for one \ac{LP} episode only observed if more than one \ac{HP} episode was presented afterwards.
@@ -658,7 +658,7 @@ timeseries_E1_peak$condition[timeseries_E1_peak$condition == "7"] = 4
 wilcox_episodic_peak = pairwise.wilcox.test(timeseries_E1_peak$QU, timeseries_E1_peak$condition, exact=F, alternative="less")
 @
 
-In \autoref{hypo:strength}, it is assumed that the lowest episodic performance (here \ac{LP}) has a stronger negative effect on the multi\-/episodic judgments whereas \emph{lesser degraded} episode(s) (here \ac{MP}) yield a smaller effect or even no effect at all.
+In \autoref{hypo:strength}, it is assumed that the lowest episodic performance (here \ac{LP}) has a stronger negative effect on the multi\-/episodic judgments, whereas \emph{lesser degraded} episode(s) (here \ac{MP}) yield a smaller effect or even no effect at all.
 This is denoted as peak effect (\cf{} \autoref{chap03:effects}).
 This is only evaluated in \E1{} by comparing \CIIa{}, \CVb{}, and \C7{}.
 These present the 5th~episode in \ac{LP}, but differ in the performance level of the 6th~episode.
@@ -811,7 +811,7 @@ Here, the position of one and two \ac{LP} episode(s) towards the following multi
 In \E1{}, the presentation of \ac{HP} episode(s) before the multi\-/episodic judgment had a positive effect on this judgment.
 In \EIIa{}, this could only be observed for two \ac{LP} episodes.
 This indicates that the usage situation affects the multi\-/episodic formation process.
-In fact, participants experienced a listening-only situation in \EIIa{} whereas in \E1{} a two-party conversation was used.
+In fact, participants experienced a listening-only situation in \EIIa{}, whereas in \E1{} a two-party conversation was used.
 The latter might be more mentally demanding.
 Thus, participants might forget the experienced \ac{LP} episode faster if \ac{HP} episode(s) are presented afterwards.
 In \EIIa{}, the impact of consecutive vs. non-consecutive \ac{LP} episodes was investigated, and the results are conclusive (\autoref{hypo:consecutive}).
