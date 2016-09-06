@@ -62,6 +62,8 @@
 \usepackage{chngcntr}
 \counterwithout{footnote}{chapter}
 
+\usepackage[bottom]{footmisc}
+
 \usepackage[shortcuts]{extdash}
 
 %Centering column type Y for tabularx

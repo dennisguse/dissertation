@@ -82,7 +82,7 @@ In addition, an influence of the different usage situations, \ie, two-party conv
  \caption[One-session experiments: overview on conditions]{One-session experiments: overview on conditions
  Non-\acs{HP} episodes are in \textbf{bold} (\acs{LP}) and \textit{italic} (\acs{MP}).}
  \label{tab:lab:hypothesesComparison}
- \begin{tabulary}{\textwidth}{C|C|C|C|C|C}
+ \begin{tabularx}{\textwidth}{c|Y|Y|Y|Y|Y}
  \multirow{2}{*}{Condition}& \multicolumn{5}{c}{Episodic performance}        \\
            	& 1-3	& 4			& 5           & 6           & 7-9 \\
  \midrule
@@ -107,7 +107,7 @@ In addition, an influence of the different usage situations, \ie, two-party conv
  \C7{}         & \ac{HP} 	& \ac{HP}          & \textbf{\ac{LP}} & \textit{\ac{MP}} & \ac{HP} \\
  \hline
  \C8{}         & \ac{HP} 	& \textbf{\ac{LP}} & \ac{HP}          & \textbf{\ac{LP}} & - \\
- \end{tabulary}
+ \end{tabularx}
 \end{table}
 
 All hypotheses except \autoref{hypo:recovery} were investigated with regard to the multi\-/episodic judgment after the 6th~episode.
@@ -201,7 +201,7 @@ The results are shown in \autoref{tab:lab:performance}.
  \caption[Performance levels: comparison of the selected codecs with \acs{POLQA}]{Performance levels: Comparison of the selected codecs for \acs{HP}, \acs{MP}, and \acs{LP} with \acs{POLQA}.
  The prediction was transformed to the 7\=/point \acs{CoCR} scale \citep{koster_comparison_2015}.}
  \label{tab:lab:performance}
- \begin{tabulary}{\columnwidth}{C|C|C|C}
+ \begin{tabularx}{\columnwidth}{Y|Y|Y|Y}
    Performance & Signal bandwidth & Codec & \acs{POLQA}\\
    \midrule
    \ac{HP} & 50..\unit[7000]{Hz}  & \textsc{\lowercase{G.722}}, Mode~1 & 4.0 \\ %MOS1-5: 3.9
@@ -209,7 +209,7 @@ The results are shown in \autoref{tab:lab:performance}.
    \ac{MP} & 300..\unit[3400]{Hz} & \textsc{\lowercase{G.711}}         & 3.3 \\ %MOS1-5: 3.3
    \hline
    \ac{LP} & 300..\unit[3400]{Hz} & \textsc{\lowercase{LPC\=/10}}        & 1.9 \\ %MOS1-5: 2.0
-   \end{tabulary}
+   \end{tabularx}
 \end{table}
 It must be noted that \textsc{\lowercase{LPC\=/10}} is very different to \textsc{\lowercase{G.722}} and \textsc{\lowercase{G.711}}.
 \textsc{\lowercase{LPC\=/10}} only achieves a \ac{MOS} of 1.9 on the 7\=/point~\ac{CoCR}.
@@ -347,8 +347,8 @@ A larger number of participants were used for \C7{} (\E1{}) to precisely quantif
 	\caption[One-session experiments: participants per condition]{Participants per condition for \E1{}, \EIIa{}, \EIIb{}, and \E3{}.
 	For \EIIb{} the conditions of the \acs{VoD} are shown as the telephony service was always presented in \CVa{}.}
 	\label{tab:lab:participants}
-	\begin{tabular}{c|c|c|c|c}
-	\multirow{2}{*}{Conditions} & \multicolumn{4}{c}{Experiments} \\
+	\begin{tabularx}{\columnwidth}{Y|Y|Y|Y|Y}
+	\multirow{2}{*}{Condition} & \multicolumn{4}{c}{Experiments} \\
 			& \E1{}	& \EIIa{} 	& \EIIb{} 	& \E3{}\\
 	\midrule
 	-				&	-									&	-						& \Sexpr{participants("E2b", "5a")} (no \ac{VoD}) & - \\
@@ -374,7 +374,7 @@ A larger number of participants were used for \C7{} (\E1{}) to precisely quantif
 	\C8{}		& -									&	\Sexpr{participants("E2a", "8")} 	&	-	&  - \\
 %	\midrule
 %	$\sum$ 	& \Sexpr{participants("E1", c("1", "2a", "3", "4", "5b", "6", "7"))}		&	\Sexpr{participants("E2a")}			&	\Sexpr{participants("E2b")} 	& \Sexpr{participants("E3")} \\
-	\end{tabular}
+	\end{tabularx}
 \end{table}
 
 \section{Data Analysis}\label{method:statistic}
@@ -473,7 +473,7 @@ The two performance levels \ac{HP} and \ac{LP} are significantly different (\Sex
 
 
 %\subparagraph*{Impact of Usage Situation: Experiments \E1{} vs. \EIIa{}}
-\subparagraph*{Impact of Usage Situation: Experiments E1 versus E2a}
+\subparagraph*{Impact of Usage Situation: Experiments E1 vs. E2a}
 By comparing the episodic judgments between \E1{} and \EIIa{}, a potential impact of the usage situation can be investigated.
 Between the two experiments, the episodic judgments for \ac{HP} are not significantly different (\Sexpr{wilcox(QU~experiment, c("E1", "E2a"), "HP")}).
 With regard to \ac{LP}, both experiments show a significant difference (\Sexpr{wilcox(QU~experiment, c("E1", "E2a"), "LP",condition)}).
@@ -503,7 +503,7 @@ This indicates that as long as only \ac{HP} episodes are presented, the between-
 Although not directly comparable due to differences between experiments, it must be noted that the judgments are rather close.
 %In fact, for the speech telephony in \E1{}, \EIIa{}, and \EIIb{} this judgment is not significantly different (\Sexpr{kruskal(IQU~experiment, c("E1", "E2a", "E2b"), "HP", condition, 3, "telephony")}).
 
-\begin{table}[h]
+\begin{table}[t]
 	\centering
 	\caption[One-session experiments: multi\-/episodic judgments after the 3rd episode]{One-session experiments: multi\-/episodic judgments after the 3rd episode. Reported as \ac{MOS} with standard deviation in brackets.} %HP only
 	\label{tab:lab:multiconsistency}
@@ -521,7 +521,7 @@ This hypothesis can be evaluated by comparing the multi\-/episodic judgment afte
 This is investigated in \E1{} and \EIIa{}.
 The multi\-/episodic judgments are shown in \autoref{tab:lab:hyponumber}.
 
-\begin{table}[h!]
+\begin{table}
 	\centering
 	\caption[One-session experiments: multi\-/episodic judgments after the 6th~usage episode for \autoref{hypo:number}]{One-session experiments: multi\-/episodic judgments after the 6th~usage episode for \autoref{hypo:number}. Reported as \ac{MOS} with standard deviation in brackets.} %	for \E1{} and \EIIa{}
 	\label{tab:lab:hyponumber}
@@ -583,7 +583,7 @@ In \autoref{hypo:position}, it is hypothesized that presenting \ac{HP} episodes 
 \C4{} and \C5{} present two consecutive \ac{LP} episodes, whereas one or no \ac{HP} episode are presented before this judgment.
 \autoref{tab:lab:hypoposition} shows the multi\-/episodic judgments for these conditions.
 
-\begin{table}[h]
+\begin{table}
 	\centering
 	\caption[One-session experiments: multi\-/episodic judgment after the 6th~usage episode for \autoref{hypo:position}]{One-session experiments: multi\-/episodic judgment after the 6th~usage episode for \autoref{hypo:position}. Reported as \ac{MOS} with standard deviation in brackets.}
 	\label{tab:lab:hypoposition}
@@ -627,11 +627,11 @@ It can be evaluated by comparing the final multi\-/episodic judgment of \C4{} an
 \C8{} presents the 4th and 6th~episode in \ac{LP}.
 \autoref{tab:lab:hypoconsecutive} shows the multi\-/episodic judgments for these three conditions.
 
-\begin{table}[h!]
+\begin{table}
  \centering
  \caption[One-session experiments: multi\-/episodic judgment after the 6th~usage episode for \autoref{hypo:consecutive}.]{One-session experiments: multi\-/episodic judgment after the 6th~usage episode for \autoref{hypo:consecutive}. Reported as \ac{MOS} with standard deviation in brackets.}
  \label{tab:lab:hypoconsecutive} 
- \begin{tabulary}{\columnwidth}{c|c|C}
+ \begin{tabularx}{\columnwidth}{Y|Y|Y}
 	Condition   & \ac{LP} episode(s) 	& \EIIa{} \\
 	\midrule
 	\C4{}			& 4..5			& \Sexpr{mos_iqu_with_sd_by_condition("E2a", "4", 6)}\\
@@ -639,7 +639,7 @@ It can be evaluated by comparing the final multi\-/episodic judgment of \C4{} an
 	\C8{}			& 4 and 6	& \Sexpr{mos_iqu_with_sd_by_condition("E2a", "8", 6)}\\
 	\hline
 	\CVa{}			& 5..6			& \Sexpr{mos_iqu_with_sd_by_condition("E2a", "5a", 6)}\\
- \end{tabulary}
+ \end{tabularx}
 \end{table}
 
 The multi\-/episodic judgments of these three conditions are not significantly different (\Sexpr{kruskal(IQU~condition, "E2a", performance_level, c("4", "8", "5a"), c(6))}).
@@ -703,7 +703,7 @@ In \autoref{hypo:recovery}, the recovery of the multi\-/episodic judgments is in
 This is investigated in \E1{} by comparing \CVb{} and \C7{}.
 Both present 9 episodes while non-\ac{HP} is presented for the 5th and 6th~episode.
 \autoref{tab:lab:hyporecovery} shows the three multi\-/episodic judgments of these conditions.
-\begin{table}[b]
+\begin{table}[hb!]
  \centering
  \caption[One-session experiments: multi\-/episodic judgments after the 3rd, 6th, and 9th~episode for \autoref{hypo:recovery}]{One-session experiments: multi\-/episodic judgments after the 3rd, 6th, and 9th~episode for \autoref{hypo:recovery}. Reported as \ac{MOS} with standard deviation in brackets.}
  \label{tab:lab:hyporecovery}
@@ -765,7 +765,7 @@ The speech telephony service was always presented in \CVa{}.
 The \ac{VoD} service was presented in \C0{}, \C4{}, or not presented at all.
 The episodic judgments and multi\-/episodic judgments are shown in \autoref{tab:lab:hypoindependent}.
 
-\begin{table}[h!]
+\begin{table}
  \centering
  \caption[One-session experiments: multi\-/episodic judgment after the 6th~usage episode for \autoref{hypo:independent}]{One-session experiments: multi\-/episodic judgment after the 6th~usage episode for \autoref{hypo:independent}. Reported as \ac{MOS} with standard deviation in brackets.}
  \label{tab:lab:hypoindependent}

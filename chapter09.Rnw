@@ -381,7 +381,7 @@ This is more prevalent for WI than for LI.
 WI achieves its minimal \ac{RMSD} with $\mathit{w}=6$, \ie, all prior episodes.
 LI provides only a marginal decrease after $\mathit{w}=3$.
 
-\begin{figure}[b]
+\begin{figure}[hb!]
 	\centering
 <<plotE6BASE, echo=F, fig.height=3>>=
 ggplot_model_create(subset(data_mos_nonadjusted, data_mos_nonadjusted$experiment == "E6a" & data_mos_nonadjusted$id == 8), 0.3) + 

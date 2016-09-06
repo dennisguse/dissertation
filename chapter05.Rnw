@@ -212,7 +212,7 @@ Performance of the service was varied on a per day basis, \ie, all usage episode
 Here, the condition defines the time for each usage episode, task, and also performance level.
 In each condition, one or two performance levels were used only.
 
-\begin{table}[h]
+\begin{table}[b]
 	\centering
 	\caption[\citet{moller_single-call_2011}: overview on conditions]{Conditions applied by \citet{moller_single-call_2011} with performance level per day.}
 	\label{tab:chap05:conditions}
@@ -251,7 +251,7 @@ Following, first the episodic judgments and then the multi\-/episodic judgments 
 \ac{MOS} for all episodic judgments and multi\-/episodic judgments per condition are shown in  \autoref{tab:state:MOLLERepisodic}.
 An exemplary box plot of episodic judgments is shown for condition~4 in \autoref{img:state:MOLLERboxplot}.
 
-\begin{figure}
+\begin{figure}[t]
 	\centering
 	<<plotMOLLER, echo=F, fig.height=3>>=
 		ggplot_timeseries_create(subset(timeseries, experiment=="MOELLER" & condition=="S2")) + geom_boxplot(aes(factor(id), y=QU), na.rm=T) + scale_x_discrete(breaks=seq(1, 24, by=2), labels=c(1:12)) + xlab("Day")
@@ -260,7 +260,7 @@ An exemplary box plot of episodic judgments is shown for condition~4 in \autoref
 	\label{img:state:MOLLERboxplot}
 \end{figure}
 
-\begin{table}[h]
+\begin{table}[b]
 	\centering
 	\caption[\citet{moller_single-call_2011}: episodic judgments and multi\-/episodic judgments]{Episodic judgments and multi\-/episodic judgments by \citet{moller_single-call_2011}. Reported as \ac{MOS} with standard deviation in brackets.}
 	\label{tab:state:MOLLERepisodic}

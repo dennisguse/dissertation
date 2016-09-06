@@ -257,7 +257,7 @@ Similar to \E4{}, one \ac{HP} episode with each service was presented in the int
 
 \subsection{Participants}
 This experiment was conducted in Berlin, Germany from June until August~2013.
-21~participants (11~female, 10~male) took part in this experiment with an average of 27.8~years ($\sigma = 4.0$).
+21~participants (11~female, 10~male) took part in this experiment with an average age of 27.8~years ($\sigma = 4.0$).
 11~participants were assigned to the \ac{AoD} service with \C9{} and the \ac{VoD} service with \CX{} and 10 vice versa.
 Participants received \unit[40]{\textsc{\lowercase{EUR}}} as compensation.
 
