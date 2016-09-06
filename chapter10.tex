@@ -58,26 +58,30 @@ This indicates that the actual duration of a degraded episode is not considered 
 For one session, also a peak effect was investigated.
 However, the results were inconclusive as no clear effect could be observed.
 
-The large number of conditions in \E1{}, \EIIa{}, and \E6{} enabled to evaluate the accuracy of prediction models (\autoref{chap:modeling}).
+The large number of conditions in \E1{}, \EIIa{}, and \E6{} enabled to evaluate the accuracy of potential prediction models (\autoref{chap:modeling}).
 Here, it was desired to predict the multi\-/episodic \ac{MOS} based on prior episodic \ac{MOS}.
 Based on \citet{moller_single-call_2011}, who evaluated the prediction accuracy of the average of all prior judgments, the \emph{weighted average} was applied.
-As weight functions, I evaluated a window function and a linear weight function.
+As weight functions, I evaluated a window function and a linear function.
 The evaluation shows that both weight functions achieve a better prediction accuracy than the unweighted average of all prior episodic judgments.
-With regard to prediction accuracy as well as robustness for parameter selection, the linear weight function performs better than the window function.
+With regard to prediction accuracy as well as robustness for parameter selection, the linear function performs better than the window function.
 For the one-session experiments (\E1{} and \EIIa{}), a $\mathit{w}=2$ and for multiple days (\E6{}) a $\mathit{w}=4$ provided the best prediction accuracy.
 In addition, the observed saturation was accounted for by adjusting the episodic judgments rather than the weight function (\autoref{pred:saturation}).
 If three consecutive \emph{similar} degraded episodes/days occur (\C6{}), then the episodic judgment of the first degraded episode/day is set to the average episodic judgments of all prior non-degraded episodes.
 This adjustment improves the prediction accuracy over all conditions, as it shifts the optimum $\mathit{w}$ of this condition to the overall optimal $\mathit{w}$.
 It can be concluded that the multi\-/episodic \ac{MOS} can predicted successfully using the episodic \ac{MOS} with a simple model type and weight functions.
-
 The derived knowledge on the formation process of multi\-/episodic perceived quality can be used as input for models on service quality, such as \citet{parasuraman_conceptual_1985}.
 In fact, knowledge about the business impact of performance fluctuations for repeated-use is highly desired by service providers of telecommunication services.
+Nevertheless, it is important to note that the modeling was conducted without cross\-/validation as no suitable data sets were available.
+Thus, the derived models are valid in terms of curve fitting for the underlaying data sets and might lack generalizability.
+
 
 \section{Discussion}
 The results of the conducted experiments showed that multi\-/episodic perceived quality can be assessed in one session as well as over multiple days using the defined-use method.
-This investigation was limited on purpose to severe degradations, so potential effects were likely being observable.
+This method enables to present the same multi\-/episodic condition to several participants and thus derive a \ac{MOS} as nearly the same condition can be presented.
+The conducted investigation was limited on purpose to severe degradations, so potential effects were likely being observable.
 Especially, the required between-subject design and the complexity of the experiments make this method unsuitable for the precise investigation of non-severe degradations.
-Moreover, this method has some inherent disadvantages, which might affect the formation process of multi\-/episodic perceived quality.
+Although the use of \textsc{\lowercase{LPC\=/10}} is unconventional for speech telephony and thus limits generalizability of the results, it provided a severe degradation while allowing successful task fulfillment.
+Moreover, the defined-use method has some inherent disadvantages, which might affect the formation process of multi\-/episodic perceived quality.
 First, this method forces participants to use a service in a specific manner.
 Here, it is defined when, how, and for what a service has to be used.
 This might affect the formation process of  multi\-/episodic perceived quality, because participants are not free to use a service to fulfill their own needs, \ie, tasks are not necessarily meaningful and important to them.
@@ -96,7 +100,7 @@ However, differences might be observed due to the very different usage situation
 The conducted experiments allowed to successfully investigate the formation process of multi\-/episodic perceived quality.
 It could be shown that the formation process of multi\-/episodic perceived quality is affected by several effects.
 Here, similar effects could be observed that are known to affect retrospective judgments, \ie, recency effect and duration neglect.
-In addition, a saturation effect was observed for the two studied usage periods.
+In addition, a saturation effect was observed for both studied usage periods.
 This effect has so far not been observed for retrospective judgments of perceived quality.
 In fact, the underlying reason(s) for the observed effects could not be deduced from the conducted experiments.
 %Although the model was created only based on the conducted experiments, it can be used as basis for further investigations.

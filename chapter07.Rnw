@@ -516,7 +516,7 @@ Although not directly comparable due to differences between experiments, it must
 
 \subsubsection{\autoref{hypo:number}: Number of Consecutive \acs{LP} Episodes}
 In \autoref{hypo:number}, it is assumed that increasing the number of \ac{LP} episodes before a multi\-/episodic judgment results in a decrease of this judgment.
-This hypothesis can be evaluated by comparing the multi\-/episodic judgments after the 3rd~episode as \emph{reference} with multi\-/episodic judgments after the 6th~episode of \C3{}, \C5{}, and \C6{} as well as \CIIa{} and \C4{}.
+This hypothesis can be evaluated by comparing the multi\-/episodic judgment after the 3rd~episode as \emph{reference} with the multi\-/episodic judgment after the 6th~episode of \C3{}, \C5{}, and \C6{} as well as \CIIa{} and \C4{}.
 \C3{}, \C5{}, and \C6{} present one to three \ac{LP} episodes directly before this multi\-/episodic judgment, whereas \CIIa{} and \C4{} present one or two \ac{LP} episode followed by one \ac{HP} episode.
 This is investigated in \E1{} and \EIIa{}.
 The multi\-/episodic judgments are shown in \autoref{tab:lab:hyponumber}.

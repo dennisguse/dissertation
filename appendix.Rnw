@@ -32,7 +32,7 @@ The listening-only training was conducted with a tablet computer (\emph{Fujitsu~
 For the diotic representation, a pair of \emph{AKG~K\=/271} headphones was connected to the internal sound card of the tablet computer.
 The system was calibrated using a \emph{HEAD acoustics} head and torso simulator \emph{HSM~II.3} (sound pressure level of \unit[75]{dB20$\mu$Pa}; babble noise).
 The stimuli were generated with the \textsc{\lowercase{ITU\=/T}~\lowercase{STL2009}} tools \citep{itu-t_recommendation_g.191_software_2010} and the audio-processing tool \textsc{\lowercase{SOX}}\footnote{The \textsc{\lowercase{SOX}} project is hosted under \url{http://sox.sourceforge.net}.}.
-The \textsc{\lowercase{STL2009}} were used for coding \textsc{\lowercase{G.711}} and \textsc{\lowercase{G.722}}~(Mode~1), and inserting packet loss for \textsc{\lowercase{G.722}}~(Mode~1, \ac{PLC mode 0}.
+The \textsc{\lowercase{STL2009}} were used for coding \textsc{\lowercase{G.711}} and \textsc{\lowercase{G.722}}~(Mode~1), and inserting packet loss for \textsc{\lowercase{G.722}}~(Mode~1, \ac{PLC} Mode~0).
 \textsc{\lowercase{SOX}} was used for coding \textsc{\lowercase{GSM\=/FR}} and \textsc{\lowercase{LPC\=/10}} as well as filtering wideband, narrowband, and white noise.
 
 \subsection{Two-party Speech Telephony}

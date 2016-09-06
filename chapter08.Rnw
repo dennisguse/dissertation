@@ -367,7 +367,7 @@ On each of the 6~days, the \ac{AoD} service needed to be used twice per day.
 %\subsubsection{Conditions}
 For the investigation of the three hypotheses, six multi\-/episodic conditions were created.
 Here, performance was varied on a per day basis, \ie, the two episodes of the same day were presented with the same performance level.
-The conditions were similar to the one-session experiments and thus denoted with the \emph{same} abbreviations.
+The conditions are similar to the one-session experiments and are thus denoted with the \emph{same} abbreviations.
 In all conditions, the first three days were presented in \ac{HP}.
 \ac{LP} episodes were only presented from the 4th~day to the 6th~day.
 The conditions are \C1{}, \C3{}, \C4{}, \C5{}, \C6{}, and \C8{}.
