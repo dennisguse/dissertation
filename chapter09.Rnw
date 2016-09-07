@@ -247,7 +247,7 @@ ggplot_model_create(subset(data_mos_nonadjusted, data_mos_nonadjusted$experiment
 # scale_color_manual(name="Condition", values=c("#00BFC4", "#00BE67", "#7CAE00", "#00A9FF", "#CD9600", "#F8766D", "#C77CFF", "#000000")) + 
 # scale_size_manual(name="Condition", values=c(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 1))
 @
-	\caption[One session (\E1{}): multi-episodic prediction accuracy for 3rd~usage episode (\acs{HP} only)]{One session (\E1{}): multi-episodic prediction accuracy for \ac{HP} only episodes (3rd usage episode).}
+	\caption[One session (\E1{}): multi-episodic prediction accuracy for the 3rd~usage episode (\acs{HP} only)]{One session (\E1{}): multi-episodic prediction accuracy for \ac{HP} only episodes (3rd usage episode).}
 	\label{fig:pred:E1base}
 \end{figure}
 
@@ -278,7 +278,7 @@ ggplot_model_create(subset(data_mos_nonadjusted, data_mos_nonadjusted$experiment
 # scale_color_manual(name="Condition", values=c("#00BFC4", "#00BE67", "#7CAE00", "#00A9FF", "#CD9600", "#F8766D", "#C77CFF", "#000000")) + 
 # scale_size_manual(name="Condition", values=c(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 1))
 @
-	\caption[One session (\E1{}): multi-episodic prediction accuracy for 6th~usage episode]{One session (\E1{}): multi-episodic prediction accuracy for all conditions (6th usage episode).}
+	\caption[One session (\E1{}): multi-episodic prediction accuracy for the 6th~usage episode]{One session (\E1{}): multi-episodic prediction accuracy for all conditions (6th usage episode).}
 	\label{fig:pred:E1pred6}
 \end{figure}
 
@@ -331,7 +331,7 @@ ggplot_model_create(subset(data_mos_nonadjusted, data_mos_nonadjusted$experiment
 # scale_color_manual(name="Condition", values=c("#00BFC4", "#00BE67", "#7CAE00", "#00A9FF", "#CD9600", "#F8766D", "#C77CFF", "#000000")) + 
 # scale_size_manual(name="Condition", values=c(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 1))
  @
-	\caption[One session (\EIIa{}): multi-episodic prediction accuracy for 3rd~usage episode (\acs{HP} only)]{One session (\EIIa{}): multi-episodic prediction accuracy for \acs{HP} only episodes (3rd~usage episode).}
+	\caption[One session (\EIIa{}): multi-episodic prediction accuracy for the 3rd~usage episode (\acs{HP} only)]{One session (\EIIa{}): multi-episodic prediction accuracy for \acs{HP} only episodes (3rd~usage episode).}
 	\label{fig:pred:E2pred3}
 \end{figure}
 
@@ -357,7 +357,7 @@ ggplot_model_create(subset(data_mos_nonadjusted, data_mos_nonadjusted$experiment
 #	scale_size_manual(name="Condition", values=c(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 1))
  @
  
-	\caption[One session (\EIIa{}): multi-episodic prediction accuracy for 6th~usage episode]{One session (\EIIa{}): multi-episodic prediction accuracy for all conditions (6th~usage episode).}
+	\caption[One session (\EIIa{}): multi-episodic prediction accuracy for the 6th~usage episode]{One session (\EIIa{}): multi-episodic prediction accuracy for all conditions (6th~usage episode).}
 	\label{fig:pred:E2pred6}
 \end{figure}
 
@@ -545,15 +545,16 @@ In fact, this overall reduction is rather small with regard to all conditions.
 
 \section{Conclusion}
 In this chapter, two model types based on the weighted average for predicting the multi\-/episodic \ac{MOS} using the episodic \acp{MOS} were presented.
-It could be shown that a weighted average using either a window function or a linear function enables to predict multi\-/episodic judgments.
-Both model types perform similarly if only \ac{HP} usage episodes are presented.
+It could be shown that a weighted average using either a window function or a linear function enabled to predict the multi\-/episodic \ac{MOS}.
+Both model types perform similarly if only \ac{HP} usage episodes were presented.
 In fact, if \ac{LP} usages episodes were presented, both models outperform the unweighted average of all prior episodic judgments, \ie, a lower $\mathit{w}$ achieves a better prediction accuracy.
 Comparing WI and LI, the latter shows a better prediction accuracy and higher robustness for choosing the $\mathit{w}$.
 This is observed in all three experiments.
 One interesting observation is made with regard to the one-session experiments.
 For both models, the highest prediction accuracy is achieved for the same $\mathit{w}$ in case of \E1{} and \EIIa{}, \ie, LI:~$\mathit{w}=2$ and WI:~$\mathit{w}=4$.
-This suggests that the usage situation must actually not be considered in this case for predicting multi\-/episodic judgments.
+This suggests that the usage situation must actually not be considered in this case for predicting the multi\-/episodic \ac{MOS}.
+
 Although no reason for the observed saturation effect could be derived, accounting for it with the described algorithm improves the overall prediction accuracy for all three experiments.
 
 In fact, it must be noted that the weighted average with rather simple weight functions (one degree of freedom) enables a decent prediction accuracy for one session as well as a usage period of 6~days.
-Nevertheless, the conducted modeling is inherently limited to the data of the conducted experiments, and models could not be verified as no data sets that could be used for cross\-/validation were available.
+Nevertheless, the conducted modeling is inherently limited to the data of the conducted experiments, and models could not be verified as no data sets were available that could be used for cross\-/validation.

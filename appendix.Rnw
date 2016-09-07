@@ -187,7 +187,7 @@ Finally, all multi\-/episodic judgments per experiment and condition are present
 	<<plotE1, echo=F, fig.height=12>>=
 		ggplot_timeseries_create(subset(timeseries, experiment=="E1")) + geom_boxplot(aes(factor(id), y=QU), na.rm=T) + facet_grid(condition ~ .) + xlab("Usage Episode") + theme(panel.margin = unit(1, "lines"))
 	@
-	\caption[One session (\E1{}): box plot of episodic judgments]{One session (\E1{}): box plot of episodic judgments.}
+	\caption[One session (\E1{}): box plot of the episodic judgments]{One session (\E1{}): box plot of the episodic judgments.}
 \end{figure}
 
 \begin{figure}[H]
@@ -195,7 +195,7 @@ Finally, all multi\-/episodic judgments per experiment and condition are present
 	<<plotE2a, echo=F, fig.height=10.5>>=
 		ggplot_timeseries_create(subset(timeseries, experiment=="E2a")) + geom_boxplot(aes(factor(id), y=QU), na.rm=T) + facet_grid(condition ~ .) + xlab("Usage Episode") + theme(panel.margin = unit(1, "lines"))
 	@
-	\caption[One session (\EIIa{}): box plot of episodic judgments]{One session (\EIIa{}): box plot of episodic judgments.}	
+	\caption[One session (\EIIa{}): box plot of the episodic judgments]{One session (\EIIa{}): box plot of the episodic judgments.}	
 \end{figure}
 
 \begin{figure}[H]
@@ -203,7 +203,7 @@ Finally, all multi\-/episodic judgments per experiment and condition are present
 	<<plotE2b, echo=F, fig.height=7.5>>=
 		ggplot_timeseries_create(subset(timeseries, experiment=="E2b" & service != "bundle")) + geom_boxplot(aes(factor(id), y=QU), na.rm=T) + facet_grid(condition + service~ .) + xlab("Usage Episode") + theme(panel.margin = unit(1, "lines"))
 	@
-	\caption[One session (\EIIb{}): box plot of episodic judgments]{One session (\EIIb{}): box plot of episodic judgments.}
+	\caption[One session (\EIIb{}): box plot of the episodic judgments]{One session (\EIIb{}): box plot of the episodic judgments.}
 \end{figure}
 
 \begin{figure}[H]
@@ -211,7 +211,7 @@ Finally, all multi\-/episodic judgments per experiment and condition are present
 	<<plotE3, echo=F, fig.height=3>>=
 		ggplot_timeseries_create(subset(timeseries, experiment=="E3")) + geom_boxplot(aes(factor(id), y=QU), na.rm=T) + facet_grid(condition ~ .) + xlab("Usage Episode") + theme(panel.margin = unit(1, "lines"))
 	@
-	\caption[One session (\E3{}): box plot of episodic judgments]{One session (\E3{}): box plot of episodic judgments.}
+	\caption[One session (\E3{}): box plot of the episodic judgments]{One session (\E3{}): box plot of the episodic judgments.}
 \end{figure}
 
 \begin{figure}[H]

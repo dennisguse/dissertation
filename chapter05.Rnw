@@ -304,7 +304,7 @@ In addition, it is reported that the judgments of \ac{HP} episodes which follow 
 A statistical analysis is omitted due to the relative small (potential) difference between episodic judgments, the high standard deviation, and the small number of participants.
 
 \subparagraph*{Multi-episodic Judgments}
-In terms of multi\-/episodic judgments, the result of this experiment are limited.
+With regard to multi\-/episodic judgments, the result of this experiment are limited.
 Here, the multi\-/episodic judgments are rather close, ranging only from \Sexpr{mos_iqu_with_sd_by_condition("MOELLER", "S2", 14)} to \Sexpr{mos_iqu_with_sd_by_condition("MOELLER", "S5", 24)}.
 A significant difference between the multi\-/episodic judgments per condition is only found for condition~4 (\Sexpr{kruskal(IQU~id, "MOELLER", c("LP", "HP"), "S2", c(4, 14, 24))}).
 In all other conditions, no significant difference is observed.
@@ -350,7 +350,7 @@ This might have affected their episodic judgments and also multi\-/episodic judg
 %This implicitly assumes a \emph{duration neglect} with regard to multi\-/episodic perceived quality.
 %The effect of duration neglect, however, has not neither been proven nor disproven so far for multi\-/episodic perceived quality.
 
-Nevertheless, \citet{moller_single-call_2011} showed that the defined-use method can be applied in a field experiment.
+Nevertheless, \citet{moller_single-call_2011} showed the applicability of the defined-use method for investigations in field experiments.
 Although participants used the service in their home environment on their own, \ie, in settings that were uncontrolled and unknown to the researchers, the episodic results show that perceived quality can be assessed successfully with this method.
 
 \section{Conclusion}
