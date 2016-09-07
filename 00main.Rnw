@@ -69,6 +69,8 @@
 %Centering column type Y for tabularx
 \newcolumntype{Y}{>{\centering\arraybackslash}X}
 
+\deffootnote{0em}{0em}{\thefootnotemark\hspace*{.5em}}
+
 \def\UrlFont{\color{black}\em}
 % ********************************************************************
 % GO!GO!GO! MOVE IT!
