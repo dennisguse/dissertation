@@ -25,8 +25,8 @@ ggplot_timeseries_create <- function(timeseries) {
  p <- p + theme(panel.grid.minor=element_line(color="gray",size=.25))
   
  
- p <- p + xlab("Usage Episode")
- p <- p + ylab("Episodic Judgment\n")
+ p <- p + xlab("Usage episode")
+ p <- p + ylab("Episodic judgment\n")
  
  p <- p + theme(legend.position="none")
 
