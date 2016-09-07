@@ -87,7 +87,7 @@
 %*******************************************************
 %\include{support/FrontBackmatter/DirtyTitlepage}
 \include{support/FrontBackmatter/Titlepage}
-%\include{support/FrontBackmatter/Titleback}
+\include{support/FrontBackmatter/Titleback}
 \cleardoublepage\include{support/FrontBackmatter/Dedication}
 %\cleardoublepage\include{FrontBackmatter/Foreword}
 \cleardoublepage\include{support/FrontBackmatter/Abstract}
