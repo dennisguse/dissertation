@@ -32,7 +32,7 @@ The listening-only training was conducted with a tablet computer (\emph{Fujitsu~
 For the diotic representation, a pair of \emph{AKG~K\=/271} headphones was connected to the internal sound card of the tablet computer.
 The system was calibrated using a \emph{HEAD acoustics} head and torso simulator \emph{HSM~II.3} (sound pressure level of \unit[75]{dB20$\mu$Pa}; babble noise).
 The stimuli were generated with the \textsc{\lowercase{ITU\=/T}~\lowercase{STL2009}} tools \citep{itu-t_recommendation_g.191_software_2010} and the audio-processing tool \textsc{\lowercase{SOX}}\footnote{The \textsc{\lowercase{SOX}} project is hosted under \url{http://sox.sourceforge.net}.}.
-The \textsc{\lowercase{STL2009}} were used for coding \textsc{\lowercase{G.711}} and \textsc{\lowercase{G.722}}~(Mode~1), and inserting packet loss for \textsc{\lowercase{G.722}}~(Mode~1, \ac{PLC} Mode~0).
+The \textsc{\lowercase{STL2009}} were used for coding \textsc{\lowercase{G.711}} and \textsc{\lowercase{G.722}}~(Mode~1), and inserting packet loss for \textsc{\lowercase{G.722}}~(Mode~1, \acs{PLC} Mode~0).
 \textsc{\lowercase{SOX}} was used for coding \textsc{\lowercase{GSM\=/FR}} and \textsc{\lowercase{LPC\=/10}} as well as filtering wideband, narrowband, and white noise.
 
 \subsection{Two-party Speech Telephony}
@@ -42,22 +42,22 @@ For the multi\-/episodic assessment of \E1{}, a speech telephony system for two-
 In the first part of \E1{}, a \ac{VoIP}\=/based system consisting of three computers was used.
 These three computers were connected via Ethernet (\textsc{\lowercase{CAT\=/5}}). 
 One computer (\emph{Lenovo~X61}) acted as a Server running the open-source telephony software \emph{Asterisk~11}\footnote{The Asterisk project is hosted under \url{http://www.asterisk.org}.}.
-Two \emph{Fujitsu~Lifebook~S761} were running each a customized client based on \emph{PJSIP~2.1}\footnote{PJSIP is an open-source library for \ac{SIP}\=/based \ac{VoIP} (\url{http://www.pjsip.org}).}, which were connected via \ac{SIP} with the server.
-The clients presented only a minimal user interface, consisting of one button for call initiation and hangup, one button to set the current presence status, and a presence status indicator of the remote client.
+Two \emph{Fujitsu~Lifebook~S761} were running each a customized client based on \emph{PJSIP~2.1}\footnote{PJSIP is an open-source library for \ac{SIP}\=/based \ac{VoIP} (\url{http://www.pjsip.org}).}, which connected via \ac{SIP} to the server.
+The clients presented only a minimal user interface, consisting of one button for call initiation and hangup, one button to set the current presence status, and a presence status indicator for the remote client.
 Call initiation was only possible if both clients set their presence status to available.
-The two clients could not communicate directly with each other as the Asterisk server acted as proxy.
-Transmission of the speech signal between Asterisk and the clients (both directions) was lossless by using the \emph{\textsc{\lowercase{L16}}} codec (clock rate: \unit[16]{kHz}).
-Asterisk applied the desired performance levels (codec) by compression the signal and immediately decompressing it before relaying the signal.\footnote{The performance levels were set by using the transcoding capability of Asterisk. On an incoming call coded with \textsc{\lowercase{L16}}, Asterisk initiated a call to himself with the desired codec (\ie, \textsc{\lowercase{G.722}}, or \textsc{\lowercase{LPC\=/10}}). The later call triggered an outgoing call to the callee encoded in L16.}
+The two clients could not communicate directly with each other as the Asterisk server acted as a proxy.
+Transmission of the speech signal between Asterisk and the clients (both directions) was lossless by using the \emph{\textsc{\lowercase{L16}}} codec (sampling rate: \unit[16]{kHz}).
+Asterisk applied the desired performance levels, \ie, codec, by compressing the signal and immediately decompressing it before relaying the signal.\footnote{The performance levels were set by using the transcoding capability of Asterisk. On an incoming call coded with \textsc{\lowercase{L16}}, Asterisk initiated a call to himself with the desired codec (\ie, \textsc{\lowercase{G.722}}, or \textsc{\lowercase{LPC\=/10}}). The later call triggered an outgoing call to the callee encoded in L16.}
 This system achieved a one-way end-to-end delay of \unit[120]{ms}.
 
-On each of the two client computers, one \emph{Beyerdynamic~DT~790~Pro} headset connected to a \emph{Edirol~UA\=/25EX} sound card was used for recording and diotic reproduction.
+On each of the two client computers, one \emph{Beyerdynamic~DT~790~Pro} headset connected to one \emph{Edirol~UA\=/25EX} sound card were used for recording and diotic reproduction.
 Before starting the experiment, the output on both clients was once calibrated to a comfortable listening level by the experimental supervisor.
 
 \paragraph*{Sound card Setup}
 The network-based setup was replaced later by a more elaborate system, which provided easier setup and reduced the complexity for verification.
 For this system, only one computer without an actual network was used.
 Rather than transmitting the signals via Ethernet, an analogue transmission via audio cables was used.
-Here, the \emph{Beyerdynamic~DT~790~Pro} headsets were also used.
+Here, also the \emph{Beyerdynamic~DT~790~Pro} headsets were used.
 The two headsets were connected to the processing computer (\emph{Lenovo~X61}) with one \emph{Edirol~UA\=/25EX} sound card.
 The signal of each microphone was amplified with a \emph{RME~QuadMic~II} microphone preamplifier to counter potential signal loss due to the cable length of \unit[10]{m}.
 
