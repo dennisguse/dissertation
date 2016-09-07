@@ -72,6 +72,25 @@
 \deffootnote{0em}{0em}{\thefootnotemark\hspace*{.5em}}
 
 \def\UrlFont{\color{black}\em}
+
+%citet with " " and cite
+\usepackage{etoolbox}
+\pretocmd\citet{\renewcommand*{\nameyeardelim}{\addspace}}\relax\relax
+\pretocmd\citep{\renewcommand*{\nameyeardelim}{\addcomma\addspace}}\relax\relax
+
+%\usepackage{xparse}
+%\DeclareDocumentCommand{\citep}{ O{} O{} m}
+%{\IfNoValueTF{#1}
+%  {\parencite[#1]{#2}}
+%  {\parencite[#1][#2]{#3}}
+%}
+%\DeclareDocumentCommand{\citet}{ O{} O{} m}
+%{
+%\IfNoValueTF{#1}
+%  {\renewcommand*{\nameyeardelim}{\addspace}\textcite[#1]{#2}\renewcommand*{\nameyeardelim}{\addcomma\addspace}}
+%  {\renewcommand*{\nameyeardelim}{\addspace}\textcite[#1][#2]{#3}\renewcommand*{\nameyeardelim}{\addcomma\addspace}}
+%}
+
 % ********************************************************************
 % GO!GO!GO! MOVE IT!
 %*******************************************************
