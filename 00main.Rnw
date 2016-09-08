@@ -61,7 +61,6 @@
 
 \usepackage{chngcntr}
 \counterwithout{footnote}{chapter}
-
 \usepackage[bottom]{footmisc}
 
 \usepackage[shortcuts]{extdash}
