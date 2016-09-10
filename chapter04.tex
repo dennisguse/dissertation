@@ -5,7 +5,7 @@ With regard to perceived quality, only those performance fluctuations must be co
 
 Fluctuations that affect the quality formation process are distinguished as \emph{microscopic} and \emph{macroscopic} \citep[][p.\,72]{raake_short-_2006}.\footnote{\citet{raake_short-_2006} distinguishes microscopic and macroscopic with regard to packet-loss behavior for speech telephony. The notation used here is generalized to be independent of the actual source of fluctuations.}
 This differentiation focuses on performance fluctuations in one stimulus or episode.
-The former is a fluctuation that is not perceived as variation in perceived quality.
+The former are fluctuations that are not perceived as variation in perceived quality.
 Such fluctuations are often rather short, such as non-bursty packet loss in a \ac{VoIP} call \citep[\cf{}][p.\,72]{raake_short-_2006}.
 In contrast, macroscopic fluctuations are perceived and judged as variation in perceived quality.
 An example of macroscopic fluctuations is a noticeable change in video encoding bandwidth.
@@ -17,15 +17,16 @@ Subsequently, an overview on observed effects is given, followed by a short pres
 
 \subsection{Quality Assessment of \emph{Macroscopic} Fluctuations}
 The perceived quality for \emph{macroscopic} performance fluctuations can be assessed by requesting a user to judge the quality of this experience in retrospection.
-A retrospective judgment can be used to deduce the actual experience, but especially in the case of longer experiences, a retrospective judgment may not contain all desired information about an experience.
+A retrospective judgment can be used to deduce the actual experience.
+However, especially in the case of longer experiences, a retrospective judgment may not contain all desired information about an experience.
 A final retrospective judgment can be complemented by \emph{momentary} judgments and \emph{intermediate} retrospective judgments.
 
 For momentary judgments, the \emph{current} perceived quality is assessed continuously during the experience.
 This allows the investigation of the noticeability of fluctuations, which might not be deducible from a retrospective judgment alone.
 This method is called \ac{SSCQE} and is standardized for video quality assessment~\citep[][]{itu-r_recommendation_bt.500-13_methodology_2012}, but has also been applied for the evaluation of speech-only stimuli~\citep[\eg,][]{gros_instantaneous_2001}.
 While experiencing, the momentary perceived quality should be judged by adjusting a slider.
-The position of the slider should reflect the currently perceived quality.
-It has been observed that a reduction in performance almost instantaneously leads to a reduction in the momentary judgment, but that adaptation due to improvements are delayed~\citep[\eg,][]{hands_recency_2001, gros_instantaneous_2001, hamberg_time-varying_1999}.
+The position of the slider should reflect the current perceived quality.
+It has been observed that a reduction in performance almost instantaneously leads to a reduction in momentary judgments, but that adaptation due to improvements are delayed~\citep[\eg,][]{hands_recency_2001, gros_instantaneous_2001, hamberg_time-varying_1999}.
 \citet{borowiak_long_2013} extended the \ac{SSCQE} method by not assessing momentary judgments.
 Instead, a participant is allowed to react to macroscopic fluctuations by adjusting the performance to the desired level.
 %In fact, momentary judgments have the inherent limitation that they affect the actual experience as an additional task must be conducted while experiencing.
@@ -37,25 +38,26 @@ The intermediate judgments allow a fine-grained analysis of the impact of the fl
 
 With regard to the investigation of macroscopic fluctuation, the impact of varying user behavior is an issue.
 A \ac{MOS} can only be derived using those judgments, which are based on identical or very similar stimuli and thus are assumed to lead to similar experiences.
-Because perception and experience are influenced by an actor's behavior, varying usage behavior limits the applicability of the \ac{MOS} computation.
+Because perception and experiences are influenced by an actor's behavior, varying usage behavior limits the applicability of the \ac{MOS}.
 This can be overcome by either limiting the user behavior completely, \ie, permitting passive consumption and assessment only or by enforcing a certain behavior.
-The latter can be achieved by providing instructions to participants, or letting them solve a task that can only be solved in a limited number of ways.
+The latter can be achieved by providing instructions to participants or letting them solve a task that can only be solved in a limited number of ways.
 For the evaluation of conversational speech telephony, for example, \acp{SCS} have been developed.
 Here, the information that is to be exchanged is defined.
 Although a conversational structure is suggested, the exact timing is not enforced, and thus the assessment of macroscopic performance fluctuations is limited.
 An alternative is the method of \emph{simulated conversations} \citep{weiss_modeling_2009, berger_estimation_2008}.
-This method enforces a \emph{realistic} and reproducible user behavior including speaker changes, and is standardized as ETSI~102506 \citep{etsi_speech_2011}.
+This method enforces a \emph{realistic} and reproducible user behavior including speaker changes.
+It is standardized as ETSI~102506 \citep{etsi_speech_2011}.
 Here, a telephone conversation is split into individual parts of listening and speaking.
 Speaking parts and listening parts are then concatenated alternatingly in a meaningful order to create a simulated conversation.
 For speaking parts, predefined questions should be answered by the participant.
 This has been done orally as well as written.
 This should enable an otherwise passive listener to feel as though he is taking part in a real conversation.
-This method allows the presentation of a comparable stimulus, except for the exact speaking phases, to multiple participants including precisely timed degradations.
+This method allows the presentation of similar stimuli, except for the exact speaking phases, to multiple participants including precisely timed degradations.
 
 \subsection{Effects on Retrospective Judgments}
 The impact of macroscopic performance fluctuations on retrospective judgments has been investigated mainly for video transmission and speech telephony.
 Here, similar effects to retrospective judgments of general experiences have been observed (\cf{} \autoref{chap:03}).
-Most often, a recency effect, and in some cases a peak effect, were observed.
+Most often, a recency effect and in some cases a peak effect were observed.
 Duration neglect has received only limited attention, but could be observed in some cases.
 A primacy effect has not been observed for perceived quality.
 
@@ -65,9 +67,9 @@ Fundamental work was conducted by \citet{hands_recency_2001}.
 Their work is based on the \emph{belief-adjustment model}~\citep{hogarth_order_1992}.
 This model explains the occurrence of recency effect, primacy effect, and duration neglect for the integration of new information into one's belief. % depending on the complexity of new information and the underlying formation process.
 For \unit[30]{s} video sequences, \citet{hands_recency_2001} could observe a recency effect as well as a duration neglect.
-The duration neglect was shown by presenting either \unit[5]{s} or \unit[10]{s} of reduced performance, but no impact on retrospective judgments was observed.
+A duration neglect was shown by presenting either \unit[5]{s} or \unit[10]{s} of reduced performance, but no impact on retrospective judgments was observed.
 This effect occurred although participants were able to assess the duration closely. %(\unit[5]{s}: \unit[6.1]{s}; \unit[10]{s}: \unit[11.1]{s}).
-In fact, the recency effect could be observed only if no intermediate judgments were taken.
+A recency effect could be observed only if no intermediate judgments were taken.
 If momentary judgments were taken additionally, a recency effect could not be observed.
 This indicates that the momentary judgments affect the quality formation process due to the presence of the explicit assessment.
 \citet{hamberg_time-varying_1999} also observed both effects for video sequences of up to \unit[180]{s} while varying impairment duration from \unit[2]{s} to \unit[10]{s}.
