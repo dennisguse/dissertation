@@ -27,7 +27,7 @@
 %
 % **************************************************************************************************************
 \RequirePackage{fix-cm} % fix some latex issues see: http://texdoc.net/texmf-dist/doc/latex/base/fixltx2e.pdf
-\documentclass[ %twoside,
+\documentclass[ twoside,
                 dottedtoc,
                 openright,titlepage,numbers=noenddot,headinclude,%1headlines,% letterpaper a4paper
                 footinclude=true,cleardoublepage=empty,abstractoff, % <--- obsolete, remove (todo)
@@ -62,7 +62,14 @@
 \usepackage{chngcntr}
 \counterwithout{footnote}{chapter}
 
+\usepackage[bottom]{footmisc}
+
 \usepackage[shortcuts]{extdash}
+
+%Centering column type Y for tabularx
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+
+\deffootnote{0em}{0em}{\thefootnotemark\hspace*{.5em}}
 
 \def\UrlFont{\color{black}\em}
 % ********************************************************************
@@ -82,12 +89,12 @@
 %*******************************************************
 %\include{support/FrontBackmatter/DirtyTitlepage}
 \include{support/FrontBackmatter/Titlepage}
-%\include{support/FrontBackmatter/Titleback}
+\include{support/FrontBackmatter/Titleback}
 \cleardoublepage\include{support/FrontBackmatter/Dedication}
 %\cleardoublepage\include{FrontBackmatter/Foreword}
 \cleardoublepage\include{support/FrontBackmatter/Abstract}
 \cleardoublepage\include{support/FrontBackmatter/Publications}
-%\cleardoublepage\include{support/FrontBackmatter/Acknowledgments}
+\cleardoublepage\include{support/FrontBackmatter/Acknowledgments}
 \pagestyle{scrheadings}
 
 \cleardoublepage\include{support/FrontBackmatter/Contents}
@@ -115,6 +122,7 @@
 
 \cleardoublepage\include{chapter10}
 
+\cleardoublepage
 \newpage
 \thispagestyle{empty}
 \vspace*{3cm}
@@ -123,11 +131,11 @@
 %\\ \medskip
 %    --- Douglas Adams
 
-Are you pondering what I'm pondering? \\
+\emph{Brain}: Are you pondering what I'm pondering? \\
 \smallskip
-Whoof, oh, I'd have to say the odds of that are terribly slim, Brain. \\
+\emph{Pinky}: Whoof, oh, I'd have to say the odds of that are terribly slim, Brain. \\
 \smallskip
-True.
+\emph{Brain}: True.
 \\ \medskip
     --- Pinky \& Brain
 \end{center}

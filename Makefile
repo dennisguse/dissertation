@@ -4,6 +4,18 @@ build: tex
 #	makeindex 00main.idx
 	pdflatex 00main.tex
 
+embed: build
+	gs -dCompatibilityLevel=1.4 \
+        -dPDFSETTINGS=/screen \
+        -dCompressFonts=true \
+        -dSubsetFonts=true \
+        -dNOPAUSE \
+        -dBATCH \
+        -sDEVICE=pdfwrite \
+        -sOutputFile=00main_embedded.pdf \
+        -c ".setpdfwrite <</NeverEmbed [ ]>> setdistillerparams" \
+        -f 00main.pdf
+
 tex: 00main.tex chapter05.tex chapter07.tex chapter08.tex chapter09.tex appendix.tex
 	echo "Done"
 

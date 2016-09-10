@@ -53,27 +53,30 @@ data_mos_adjusted$condition = factor(data_mos_adjusted$condition, labels=c("C1",
 
 \chapter{Prediction of Multi-episodic Judgments}\label{chap:modeling}
 An initial approach on the prediction of multi\-/episodic judgments has been conducted by \citet{moller_single-call_2011}.
-Here, it is proposed to average all \emph{prior} episodic judgments to predict a multi\-/episodic judgment.
-\citet{moller_single-call_2011} evaluated the precision of this predictor with their \unit[14]{day} experiment (\cf{} \autoref{prior:moeller}).
-Instead of evaluating the prediction accuracy for \ac{MOS}, the precision accuracy for each individual participant was evaluated for all three multi\-/episodic judgments.
-In this experiment multi\-/episodic judgments have been taken after the 2nd, 7th, and \unit[14th]{day}.
-With regard to the five conditions, it could be shown that the predictor is precise for the \unit[2nd]{day}.
-Precision decreases for later multi\-/episodic judgments.
+The model\footnote{The term \emph{model} is used in the following in terms of curve fitting. A model is here a mathematical function, which might be parameterizable, and maps an input space to an output space.} proposed here is to average all \emph{prior} episodic judgments to predict a multi\-/episodic judgment.
+\citet{moller_single-call_2011} evaluated the precision of this predictor with their 14~day experiment (\cf{} \autoref{prior:moeller}).
+Instead of evaluating the prediction accuracy for \ac{MOS}, the prediction accuracy for each individual participant was evaluated for all three multi\-/episodic judgments taken in this experiment.
+Here, multi\-/episodic judgments were taken after the 2nd, 7th, and 14th~day.
+With regard to the five conducted multi\-/episodic conditions, it could be shown that the predictor is precise for the 2nd~day and precision decreases for later multi\-/episodic judgments.
 
-This chapter starts with an overview of the effects observed in the conducted experiments that seem relevant for prediction of multi\-/episodic judgments.
+This chapter starts with an overview of the effects observed in the here presented experiments that seem relevant for prediction of multi\-/episodic judgments.
 Subsequently, model types are presented that seem suited for the prediction.
 The prediction accuracy for these model types is evaluated using only \E1{}, \EIIa{}, and \E6{}.
 These experiments yielded large and in itself consistent data sets.\footnote{An approach towards modeling based on the experiment of \citet{moller_single-call_2011} and \E5{} is published in \citet{guse_modelling_2014}. However, these two experiments are omitted here for the development of prediction models due to the limited effects on multi\-/episodic judgments.}
 The other here presented experiments (\EIIb{}, \E3{}, \E4{}, and \E5{}) are not considered suitable for the implementation of a prediction model, as only a very limited set of conditions was investigated.
 In difference to \citet{moller_single-call_2011}, who predicted multi\-/episodic judgments using episodic judgments per individual participant, the goal is here the prediction of the multi\-/episodic \ac{MOS} based on the episodic \ac{MOS}.
-Predicting individual judgments might be desirable, but the conducted experiments did not collect sufficient data to be able to explain individual differences.
+Predicting individual judgments might be desirable, but the conducted experiments did not collect sufficient data to be able to explain differences between individual participants.
 In fact, the defined\-/use method was applied, so a \ac{MOS} could be derived, reflecting the judgment of the \emph{average actor}.
+
+The here presented modeling is necessarily limited to the development of best fitting predictor(s), as no data sets for cross\-/validation were available.
+Furthermore, he conducted experiments differ slightly in the experimental design and observed effects.
+Thus, models created for one experiment cannot be verified validly using data from the other experiments.
 
 \section{Effects on Multi-episodic Judgments}
 In the conducted experiments, several effects have been observed.
 First, it must be noted that multi\-/episodic judgments are very similar to episodic judgments if no degraded episodes are presented.
-This has been observed by \citet{moller_single-call_2011} and also in the conducted experiments.
-If no \ac{LP} episodes were presented, the experiment of \citet{moller_single-call_2011} and \E4{} indicated a slight increase of episodic judgments over the usage period.
+This has been observed by \citet{moller_single-call_2011} and also in the here presented experiments.
+If no \ac{LP} episodes were presented, the experiment of \citet{moller_single-call_2011} and \E4{} indicated a slight increase of episodic judgments from the first to the last episode in a multi\-/episodic condition.
 However, the indicated effect is rather small and the actual reason for this could not be deduced.
 It is thus not considered for the implementation of a prediction model.
 
@@ -83,7 +86,7 @@ This has been investigated in \E1{}, \EIIa{}, and \E6{}.
 Here, a decrease is observed until saturation occurred, \ie, multi\-/episodic judgments do not decrease further (saturation effect).
 This occurred if more than two \ac{LP} episodes/days were presented.
 In fact, multi\-/episodic judgments remain above the episodic judgments of \ac{LP}.
-This shows that multi\-/episodic judgments are still affected by previous \ac{HP} episodes, \ie, the integration interval is longer than 3\,episodes or 3\,days, respectively.
+This shows that multi\-/episodic judgments are still affected by previous \ac{HP} episodes, \ie, the integration interval is longer than 3~episodes or 3~days, respectively.
 In addition to the integration interval, this indicates that the 3 \ac{LP} episodes/days had a reduced impact on the final multi\-/episodic judgment compared to the \ac{HP} episodes/days.
 
 In addition, a position effect has been observed (\autoref{hypo:position}).
@@ -92,7 +95,7 @@ An impact of position and thus a recency effect could be observed in \E1{} and \
 Here, the impact of \ac{LP} episode(s) on a following multi\-/episodic judgment decreases the more \ac{HP} episodes are presented afterwards.
 While \E1{} showed such an effect in both cases, \ie, for one and two \ac{LP} episodes, it was only present in \EIIa{} for two \ac{LP} episodes.
 This might be attributed to the passive usage situation.
-In \E1{}, a two-party conversation was used whereas \EIIa{} applied a third-party listening task.
+In \E1{}, a two-party conversation was used, whereas \EIIa{} applied a third-party listening task.
 Although not statistically significant, a recency effect was indicated in \E6{} for both cases, \ie, one or two days presented in \ac{LP}.
 
 In \EIIa{} and \E6{}, the impact of non\-/consecutive \ac{LP} presentation was also investigated (\autoref{hypo:consecutive}).
@@ -105,32 +108,32 @@ Even if in \C7{} of \E1{} a peak effect occurred, the influence on the multi\-/e
 For one session, also the recovery of a negatively affected multi\-/episodic judgments was investigated (\autoref{hypo:recovery}).
 %Here, additional \ac{HP} episodes are presented after a negatively affected multi\-/episodic judgment and the improvement assessed.
 This was studied with two conditions in \E1{}.
-Here, 9 episodes were presented while non-\ac{HP} episodes were presented as the 5th and the \unit[6th]{episode}.
-The multi\-/episodic judgment after the \unit[6th]{episode} showed a negative effect, but the judgments after the 3rd and \unit[9th]{episode} were not significantly different.
+Here, 9 episodes were presented while non-\ac{HP} episodes were presented as the 5th and the 6th~episode.
+The multi\-/episodic judgment after the 6th~episode showed a negative effect, but the judgments after the 3rd and 9th~episode were not significantly different.
 However, in both conditions a slight negative impact is indicated on the final multi\-/episodic judgment.
 This finding can be explained by a recency effect but also due to the overall increased number of \ac{HP} episodes.
 
 In addition, for one session, a duration neglect was investigated in \E3{} (\autoref{hypo:duration}). 
 Here, doubling the duration of a \ac{LP} episode did not negatively affect the following multi\-/episodic judgment.
 In fact, even episodic judgments were not affected negatively.
-It is thus concluded that duration neglect for episodic judgments as well as multi\-/episodic judgments was observed.
-Therefore, it can be concluded that the duration of an episode without macroscopic fluctuations must not be accounted for the prediction of multi\-/episodic judgments.
+It is thus concluded that a duration neglect for episodic judgments as well as multi\-/episodic judgments was observed.
+Therefore, it can be concluded that the duration of an episode without macroscopic fluctuations does not have to be accounted for the prediction of multi\-/episodic judgments.
 
 Finally, in \EIIb{} the independence of multi\-/episodic judgments of two services has been investigated (\autoref{hypo:independent}).
 Here, the presentation of a second service did not lead to a measurable effect on the multi\-/episodic judgments of the first service.
 This was found for the presentation of the second service with and without \ac{LP} episodes.
-Thus, the presence of a second service must not be considered for the prediction of multi\-/episodic judgments of one service.
+Thus, the presence of a second service must not be considered for the prediction of multi\-/episodic judgments of the first service that is under multi\-/episodic assessment.
 
-\section{Types of Model}
+\section{Types of Models}
 For the implementation of a prediction model, the modeling approach of \citet{moller_single-call_2011} is extended.
 They proposed to the use the average of all prior episodic judgments to predict a multi\-/episodic judgment.
 This model provides an accurate prediction for earlier multi\-/episodic judgments.
 However, prediction accuracy decreases if longer sequences of multi\-/episodic use are to be predicted.
 
-In this thesis, a weighted average model is proposed to increase prediction accuracy.
-This allows to assign an individual weight to each episodic judgment and thus model the impact on a multi\-/episodic judgment that is to be predicted.
+In this thesis, weighted average models are proposed to increase prediction accuracy.
+These allow to assign an individual weight to each episodic judgment and thus model the impact on a multi\-/episodic judgment that is to be predicted.
 In the following, episodic judgments are denoted as~$\mathit{e_i}$ and multi\-/episodic judgments are denoted as~$\mathit{m_n}$.
-$\mathit{i}$~denotes the episode and $\mathit{n}$~denotes the episode after which a multi\-/episodic judgment was taken.
+The index $\mathit{i}$~denotes the episode and the index $\mathit{n}$~denotes the episode after which a multi\-/episodic judgment was taken.
 The weight for an episodic judgment is denoted as~$\mathit{a_i}$.
 Thus, the prediction model for~$\mathit{\hat{m}_n}$ is defined as: 
 \begin{equation}\label{eq:average}
@@ -159,8 +162,8 @@ Here, $\mathit{w}$ is limited to $\mathit{w}~\in~\mathbb{N}$ and $0~<~\mathit{w}
 Setting $\mathit{w := n}$, this model type becomes the average over all prior episodic judgments, \ie, the model proposed by \citet{moller_single-call_2011}.
 
 In fact, a static window is a rather unlikely case for the formation process, as the importance of episodic judgments is considered only as binary.
-To overcome this a linear weight function (denoted as \emph{LI}) is proposed.
-Here, the weight for usage episodes decreases linearly with an increasing distance to the multi\-/episodic judgment (\autoref{eq:weight:linear}).
+To overcome this a linear function (denoted as \emph{LI}) is proposed.
+Here, the weight for usage episodes decreases linearly for an increasing distance to the multi\-/episodic judgment (\autoref{eq:weight:linear}).
 \begin{equation}\label{eq:weight:linear}  %\frac{n-i}{w} & :i - n + w > 0 \\
 LI: a_i= \left\{
 \begin{array}{ll}
@@ -178,10 +181,10 @@ Limiting $\mathit{w}$ for both models to the same set, allows to compare the acc
 Employing a weighted average is expected to increase prediction accuracy, because a recency effect can modeled.
 However, for one observed effect, a weighted average with one of the two proposed weight functions will necessarily produce a deviation.
 In case of the observed saturation effect, both weight functions will be too negative.
-Here, the presentation of the 4th, 5th, and 6th\,episodes/days in \ac{LP} (\C6{}) results in a similar multi\-/episodic judgment than the presentation of the 4th\,episode in \ac{HP}  and the 5th and 6th\,episodes/days in \ac{LP} (\C5{}).
+Here, the presentation of the 4th, 5th, and 6th~episodes/days in \ac{LP} (\C6{}) results in a similar multi\-/episodic judgment than the presentation of the 4th~episode in \ac{HP}  and the 5th and 6th~episodes/days in \ac{LP} (\C5{}).
 The modeling approach for this specific case is presented and evaluated in \autoref{pred:saturation}.
 %This suggests that in the case of \C6{}, the 4th episode is actually 
-%This implies that one \ac{LP} episode/day is not judged different than one \ac{HP} episode with regard to the multi\-/episodic judgment.
+%This implies that one \ac{LP} episode/day is not judged differently than one \ac{HP} episode with regard to the multi\-/episodic judgment.
 %This can be modeled in two ways.
 %On the one hand, the weight of one of the three \ac{LP} episodes/days can be set to zero, and the weight of \ac{HP} episodes increased.
 %
@@ -221,15 +224,15 @@ Finally, the potential improvement of accounting for a saturation effect is inve
 \subsection{One Session: E1 and E2a}\label{results:prediction}
 
 \subparagraph*{Experiment E1}
-In \E1{}, a two-party conversation was investigated with 6 and 9\,episodes.
-With regard to the multi\-/episodic judgment after the 3rd\,episode, \ie, \ac{HP} only, both model types perform very similar.
+In \E1{}, a two-party conversation was investigated with 6 and 9~episodes.
+With regard to the multi\-/episodic judgment after the 3rd~episode, \ie, \ac{HP} only, both model types perform very similar.
 \autoref{fig:pred:E1base} shows the \ac{RMSD} for both model types with regard to $\mathit{w}$ for each condition.
 The black dashed line represents the average \ac{RMSD} for all conditions.
 For both model types the accuracy remains nearly independent of $\mathit{w}$.
-It is notable that the accuracy depends on the condition, \ie, \C7{} yields a very low \ac{RMSD} while \C1{} is far higher.
+It is notable that the accuracy depends on the condition, \ie, \C7{} yields a very low \ac{RMSD}, whereas \C1{} is far higher.
 This is likely an artifact due to the between\-/subject design.
 
-\begin{figure}[h]
+\begin{figure}[t]
 	\centering
 <<plotE1BASE, echo=F, fig.height=3>>=
 ggplot_model_create(subset(data_mos_nonadjusted, data_mos_nonadjusted$experiment == "E1" & data_mos_nonadjusted$id == 3), 0.26) + 
@@ -244,17 +247,15 @@ ggplot_model_create(subset(data_mos_nonadjusted, data_mos_nonadjusted$experiment
 # scale_color_manual(name="Condition", values=c("#00BFC4", "#00BE67", "#7CAE00", "#00A9FF", "#CD9600", "#F8766D", "#C77CFF", "#000000")) + 
 # scale_size_manual(name="Condition", values=c(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 1))
 @
-	\caption[One session (\E1{}): multi-episodic prediction accuracy for 3rd\,usage episode (\acs{HP} only)]{One session (\E1{}): multi-episodic prediction accuracy for \ac{HP} only episodes (3rd usage episode).}
+	\caption[One session (\E1{}): multi-episodic prediction accuracy for the 3rd~usage episode (\acs{HP} only)]{One session (\E1{}): multi-episodic prediction accuracy for \ac{HP} only episodes (3rd usage episode).}
 	\label{fig:pred:E1base}
 \end{figure}
 
-
-
-With regard to the multi\-/episodic judgment after the 6th\,episode, both model types perform slightly differently.
-\autoref{fig:pred:E1pred6} shows the \ac{RMSD} for the 6th\,episode for both model types.
-Here, WI performs better while increasing $\mathit{w}$ to 4.
+With regard to the multi\-/episodic judgment after the 6th~episode, both model types perform slightly differently.
+\autoref{fig:pred:E1pred6} shows the \ac{RMSD} for the 6th~episode for both model types.
+Here, WI performs better while increasing $\mathit{w}$ to 4 (\Sexpr{round(subset(data_mos_nonadjusted, data_mos_nonadjusted[["experiment"]] == "E1" & data_mos_nonadjusted[["id"]] == 6 & data_mos_nonadjusted[["model"]] == "weight_window_create" & data_mos_nonadjusted[["condition"]] == "All" & data_mos_nonadjusted["parameter"] == 4)["RMSD"], 2)}).
 However, the prediction accuracy depends on the considered condition.
-For example, \C3{} is far off for $\mathit{w}=1$ and improves until $\mathit{w}=3$ while \C4{} is best predicted with~$\mathit{w}=5$.
+For example, \C3{} is far off for $\mathit{w}=1$ and improves until $\mathit{w}=3$, whereas \C4{} is best predicted with~$\mathit{w}=5$.
 LI outperforms WI in prediction accuracy and is, furthermore, more robust.
 For LI, the best accuracy is achieved for $\mathit{w}=2$.
 All conditions except \C4{} and \C6{} yield here the minimal \ac{RMSD}.
@@ -262,7 +263,7 @@ In fact, \C4{} and \C6{} reach their minimum at~$\mathit{w}=3$.
 Considering all conditions, the minimal \ac{RMSD} for LI is achieved at $\mathit{w}=2$ (\Sexpr{round(min(subset(data_mos_nonadjusted, data_mos_nonadjusted[["experiment"]] == "E1" & data_mos_nonadjusted[["id"]] == 6 & data_mos_nonadjusted[["model"]] == "weight_linear_create" & data_mos_nonadjusted[["condition"]] == "All")[["RMSD"]]), 2)}).
 This is close to the prediction accuracy for presenting \ac{HP} episodes only.
 
-\begin{figure}[h]
+\begin{figure}[b]
 	\centering
 <<plotE1PRED, echo=F, fig.height=3>>=
 ggplot_model_create(subset(data_mos_nonadjusted, data_mos_nonadjusted$experiment == "E1" & data_mos_nonadjusted$id == 6), 1.9) + 
@@ -277,17 +278,17 @@ ggplot_model_create(subset(data_mos_nonadjusted, data_mos_nonadjusted$experiment
 # scale_color_manual(name="Condition", values=c("#00BFC4", "#00BE67", "#7CAE00", "#00A9FF", "#CD9600", "#F8766D", "#C77CFF", "#000000")) + 
 # scale_size_manual(name="Condition", values=c(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 1))
 @
-	\caption[One session (\E1{}): multi-episodic prediction accuracy for 6th\,usage episode]{One session (\E1{}): multi-episodic prediction accuracy for all conditions (6th usage episode).}
+	\caption[One session (\E1{}): multi-episodic prediction accuracy for the 6th~usage episode]{One session (\E1{}): multi-episodic prediction accuracy for all conditions (6th usage episode).}
 	\label{fig:pred:E1pred6}
 \end{figure}
 
 With regard to the recovery (\autoref{hypo:recovery}), two conditions were investigated.
 The \ac{RMSD} is shown for both weight functions in \autoref{fig:pred:E1pred9}.
 WI is very precise for $\mathit{w}=4$ but is otherwise far off.
-LI performs well for~\CVb{} with $\mathit{w} \geq 3$ while it performs very similarly for all $\mathit{w}$ in case of \C7{}.
+LI performs well for~\CVb{} with $\mathit{w} \geq 3$, whereas it performs very similarly for all $\mathit{w}$ in case of \C7{}.
 Thus, LI is preferable, as it provides a higher robustness for the selection of $\mathit{w}$.
 
-\begin{figure}[h]
+\begin{figure}[t]
 	\centering
 <<plotE1PRED9, echo=F, fig.height=3>>=
 ggplot_model_create(subset(data_mos_nonadjusted, data_mos_nonadjusted$experiment == "E1" & data_mos_nonadjusted$id == 9 & data_mos_nonadjusted$condition != "All"), 0.75) + 
@@ -305,17 +306,17 @@ ggplot_model_create(subset(data_mos_nonadjusted, data_mos_nonadjusted$experiment
 \end{figure}
 
 \subparagraph*{Experiment E2a}
-\EIIa{} complemented \E1{} with a passive usage situation while sharing the same performance levels.
+\EIIa{} complements \E1{} with a passive usage situation while it shares the same performance levels.
 With regard to the prediction of \ac{HP} only episodes, the results are slightly different compared to \E1{}.
-The prediction accuracy for the multi\-/episodic judgment after the 3rd\,episode is shown in \autoref{fig:pred:E2pred3}.
+The prediction accuracy for the multi\-/episodic judgment after the 3rd~episode is shown in \autoref{fig:pred:E2pred3}.
 Here, the prediction accuracy improves if $\mathit{w}$ is increased.
 However, this is mainly due to~\C4{}.
 The reason for this could not be determined.
-Omitting \C4{} shows similar results to~\E1{}, \ie, the prediction accuracy is not affected by the selection of $\mathit{w}$.
+Omitting \C4{} shows similar results compared to~\E1{}, \ie, the prediction accuracy is not affected by the selection of $\mathit{w}$.
 The \ac{RMSD} is similar for all $\mathit{w}$ ($> 0.1$).
 Here, no difference between~WI and~LI is observed.
 
-\begin{figure}[h]
+\begin{figure}[b]
 	\centering
 <<plotE2BASE, echo=F, fig.height=3>>=
 ggplot_model_create(subset(data_mos_nonadjusted, data_mos_nonadjusted$experiment == "E2a" & data_mos_nonadjusted$id == 3), 0.4) + 
@@ -330,13 +331,13 @@ ggplot_model_create(subset(data_mos_nonadjusted, data_mos_nonadjusted$experiment
 # scale_color_manual(name="Condition", values=c("#00BFC4", "#00BE67", "#7CAE00", "#00A9FF", "#CD9600", "#F8766D", "#C77CFF", "#000000")) + 
 # scale_size_manual(name="Condition", values=c(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 1))
  @
-	\caption[One session (\EIIa{}): multi-episodic prediction accuracy for 3rd\,usage episode (\acs{HP} only)]{One session (\EIIa{}): multi-episodic prediction accuracy for \acs{HP} only episodes (3rd\,usage episode).}
+	\caption[One session (\EIIa{}): multi-episodic prediction accuracy for the 3rd~usage episode (\acs{HP} only)]{One session (\EIIa{}): multi-episodic prediction accuracy for \acs{HP} only episodes (3rd~usage episode).}
 	\label{fig:pred:E2pred3}
 \end{figure}
 
-With regard to the prediction of the multi\-/episodic judgment after the 6th\,episode, the results closely resemble \E1{}.
+With regard to the prediction of the multi\-/episodic judgment after the 6th~episode, the results closely resemble \E1{}.
 The \ac{RMSD} is shown in \autoref{fig:pred:E2pred6}.
-For WI, the minimal \ac{RMSD} is reached at $\mathit{w}=4$ (\Sexpr{round(min(subset(data_mos_nonadjusted, data_mos_nonadjusted[["experiment"]] == "E2a" & data_mos_nonadjusted[["id"]] == 6 & data_mos_nonadjusted[["model"]] == "weight_window_create" & data_mos_nonadjusted[["condition"]] == "All")[["RMSD"]]), 2)}) while $\mathit{w}=3$ is rather close.
+For WI, the minimal \ac{RMSD} is reached at $\mathit{w}=4$ (\Sexpr{round(min(subset(data_mos_nonadjusted, data_mos_nonadjusted[["experiment"]] == "E2a" & data_mos_nonadjusted[["id"]] == 6 & data_mos_nonadjusted[["model"]] == "weight_window_create" & data_mos_nonadjusted[["condition"]] == "All")[["RMSD"]]), 2)}) while $\mathit{w}=3$ (\Sexpr{round(subset(data_mos_nonadjusted, data_mos_nonadjusted[["experiment"]] == "E2a" & data_mos_nonadjusted[["id"]] == 6 & data_mos_nonadjusted[["model"]] == "weight_window_create" & data_mos_nonadjusted[["condition"]] == "All" & data_mos_nonadjusted["parameter"] == 3)["RMSD"], 2)}) is rather close.
 For LI, the minimal \ac{RMSD} is achieved at $\mathit{w}=2$ (\Sexpr{round(min(subset(data_mos_nonadjusted, data_mos_nonadjusted[["experiment"]] == "E2a" & data_mos_nonadjusted[["id"]] == 6 & data_mos_nonadjusted[["model"]] == "weight_linear_create" & data_mos_nonadjusted[["condition"]] == "All")[["RMSD"]]), 2)}).
 In fact, the found parameters are very similar to \E1{} while the \ac{RMSD} behaves similarly for individual conditions.
 
@@ -356,7 +357,7 @@ ggplot_model_create(subset(data_mos_nonadjusted, data_mos_nonadjusted$experiment
 #	scale_size_manual(name="Condition", values=c(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 1))
  @
  
-	\caption[One session (\EIIa{}): multi-episodic prediction accuracy for 6th\,usage episode]{One session (\EIIa{}): multi-episodic prediction accuracy for all conditions (6th\,usage episode).}
+	\caption[One session (\EIIa{}): multi-episodic prediction accuracy for the 6th~usage episode]{One session (\EIIa{}): multi-episodic prediction accuracy for all conditions (6th~usage episode).}
 	\label{fig:pred:E2pred6}
 \end{figure}
 
@@ -365,21 +366,22 @@ For the prediction of multi\-/episodic judgments in one session, both model type
 For both experiments, it is notable that similar values for $\mathit{w}$ were found for each of the two weight functions.
 With regard to the prediction accuracy, LI is preferable over~WI.
 Moreover, LI seems to be more robust against improper selection of $\mathit{w}$.
-For both experiments, a minimal \ac{RMSD} could be achieved for $\mathit{w}=2$ for LI.
-For the prediction of the multi\-/episodic judgments after the 9th\,episode, which has only been investigated in \E1{}, LI ($\mathit{w}=3$) performs best. 
+For both experiments, a minimal \ac{RMSD} could be achieved for $\mathit{w}=2$ in case of LI.
+For the prediction of the multi\-/episodic judgments after the 9th~episode, which has only been investigated in \E1{}, LI ($\mathit{w}=3$) performs best. 
 However, as only two conditions with regard to recovery were investigated (\autoref{hypo:recovery}), adjusting $\mathit{w}$ seems improper.
 
 \subsection{Multiple Days: E6}
-In \E6{}, a usage period of six\,days was investigated for an \ac{AoD} service.
+In \E6{}, a usage period of six~days was investigated for an \ac{AoD} service.
 This service needed to be  used twice per day.
-In this experiment, the first three\,days (six\,episodes) were presented in \ac{HP} only.
+In this experiment, the first three~days (six~episodes) were presented in \ac{HP} only.
 Afterwards, the multi\-/episodic perceived quality was assessed.
 Prediction accuracy for this judgment is shown in \autoref{fig:pred:E6pred6}.
 Here, the prediction accuracy improves for an increasing $\mathit{w}$.
 This is more prevalent for WI than for LI.
-WI achieves its minimal \ac{RMSD} with $\mathit{w}=6$, \ie, all prior episodes, while LI provides only a marginal decrease after $\mathit{w}=3$.
+WI achieves its minimal \ac{RMSD} with $\mathit{w}=6$, \ie, all prior episodes.
+LI provides only a marginal decrease after $\mathit{w}=3$.
 
-\begin{figure}[h]
+\begin{figure}[hb!]
 	\centering
 <<plotE6BASE, echo=F, fig.height=3>>=
 ggplot_model_create(subset(data_mos_nonadjusted, data_mos_nonadjusted$experiment == "E6a" & data_mos_nonadjusted$id == 8), 0.3) + 
@@ -394,19 +396,19 @@ ggplot_model_create(subset(data_mos_nonadjusted, data_mos_nonadjusted$experiment
 #	scale_color_manual(name="Condition", values=c("#00BFC4", "#00BE67", "#7CAE00", "#00A9FF", "#CD9600", "#F8766D", "#000000")) + 
 #	scale_size_manual(name="Condition", values=c(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 1))
 @
-	\caption[Multiple days (\E6{}): multi-episodic prediction accuracy after the 3rd\,day (\acs{HP} only)]{Multiple days (\E6{}): multi-episodic prediction accuracy for \ac{HP} only episodes (3rd\,day, \ie, 6th\,usage episode).}
+	\caption[Multiple days (\E6{}): multi-episodic prediction accuracy after the 3rd~day (\acs{HP} only)]{Multiple days (\E6{}): multi-episodic prediction accuracy for \ac{HP} only episodes (3rd~day, \ie, 6th~usage episode).}
 	\label{fig:pred:E6pred6}
 \end{figure}
 
-With regard to prediction the multi\-/episodic judgment of the 6th\,day, both weight functions perform differently.
+With regard to the prediction the multi\-/episodic judgment of the 6th~day, both weight functions perform differently.
 \autoref{fig:pred:E6pred12} shows the \ac{RMSD} for both weight functions.
 While LI reaches a minimal \ac{RMSD} at $\mathit{w}=4$, WI achieves its minimal \ac{RMSD} not until $\mathit{w}=8$.
-In addition, LI achieves a minimal \ac{RMSD} of \Sexpr{round(min(subset(data_mos_nonadjusted, data_mos_nonadjusted[["experiment"]] == "E6a" & data_mos_nonadjusted[["id"]] == 14 & data_mos_nonadjusted[["model"]] == "weight_linear_create" & data_mos_nonadjusted[["condition"]] == "All")[["RMSD"]]), 2)} while WI only achieves a minimal \ac{RMSD} of
+In addition, LI achieves a minimal \ac{RMSD} of \Sexpr{round(min(subset(data_mos_nonadjusted, data_mos_nonadjusted[["experiment"]] == "E6a" & data_mos_nonadjusted[["id"]] == 14 & data_mos_nonadjusted[["model"]] == "weight_linear_create" & data_mos_nonadjusted[["condition"]] == "All")[["RMSD"]]), 2)}, and WI only achieves a minimal \ac{RMSD} of
 \Sexpr{round(min(subset(data_mos_nonadjusted, data_mos_nonadjusted[["experiment"]] == "E6a" & data_mos_nonadjusted[["id"]] == 14 & data_mos_nonadjusted[["model"]] == "weight_window_create" & data_mos_nonadjusted[["condition"]] == "All")[["RMSD"]]), 2)}.
 With regard to \E6{}, LI is preferable to WI, as a higher prediction accuracy is achieved.
-Furthermore, LI requires a smaller $\mathit{w}$ and provides a higher robustness for choosing $\mathit{w}$.
+Furthermore, LI requires a smaller $\mathit{w}$ while it provides a higher robustness for choosing $\mathit{w}$.
 
-\begin{figure}[h]
+\begin{figure}[t]
 	\centering
 <<plotE6PRED, echo=F, fig.height=3>>=
 ggplot_model_create(subset(data_mos_nonadjusted, data_mos_nonadjusted$experiment == "E6a" & data_mos_nonadjusted$id == 14)) + 
@@ -421,19 +423,20 @@ ggplot_model_create(subset(data_mos_nonadjusted, data_mos_nonadjusted$experiment
 #	scale_color_manual(name="Condition", values=c("#00BFC4", "#00BE67", "#7CAE00", "#00A9FF", "#CD9600", "#F8766D", "#000000")) + 
 #	scale_size_manual(name="Condition", values=c(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 1))
 @
-	\caption[Multiple days (\E6{}): multi-episodic prediction accuracy after the 6th\,day]{Multiple days (\E6{}): multi-episodic prediction accuracy for all conditions (6th\,day, \ie, 12th\,usage episode).}
+	\caption[Multiple days (\E6{}): multi-episodic prediction accuracy after the 6th~day]{Multiple days (\E6{}): multi-episodic prediction accuracy for all conditions (6th~day, \ie, 12th~usage episode).}
 	\label{fig:pred:E6pred12}
 \end{figure}
 
 \subsection{Saturation Effect}\label{pred:saturation}
 In all three experiments, a saturation effect could be observed.
-Here, multi\-/episodic judgments remained on the same level independent if two or three \ac{LP} episodes/days were presented, \ie, \C5{} and \C6{} were judged not different.
-In both cases, the multi-episodic judgments remained above the episodic judgment for \ac{LP} episodes (approx.\,\unit[1]{pt}).
+Here, multi\-/episodic judgments remained on the same level independent if two or three \ac{LP} episodes/days were presented, \ie, \C5{} and \C6{} were not judged differently.
+In both cases, the multi\-/episodic judgments remained above the episodic judgment for \ac{LP} episodes (approx.~\unit[1]{pt}).
 In fact, \C5{} and \C6{} only differ in the performance level of the 4th episode/day.
-For \C5{} this episode/day is presented in \ac{HP} while \C6{} presented this episode/day in \ac{LP}.
-As both conditions are not judged different, this suggests that the difference in performance level of the 4th\,episode/day does not seem to affect the formation process of the multi\-/episodic judgment.
+For \C5{}, this episode/day is presented in \ac{HP}, whereas \C6{} presented this episode/day in \ac{LP}.
+As both conditions are not judged differently, this suggests that the difference in performance level of the 4th~episode/day does not seem to affect the formation process of the multi\-/episodic judgment.
+In the following, \C5{} refers to \C5b{} in case of \E1{} and to \C5a{} in case of \EIIa{}.
 
-%This implies that one \ac{LP} episode/day is not judged different than one \ac{HP} episode with regard to the multi\-/episodic judgment.
+%This implies that one \ac{LP} episode/day is not judged differently than one \ac{HP} episode with regard to the multi\-/episodic judgment.
 %This can be modeled in two ways.
 %On the one hand, the weight of one of the three \ac{LP} episodes/days can be set to zero, and the weight of \ac{HP} episodes increased.
 %
@@ -448,44 +451,33 @@ As both conditions are not judged different, this suggests that the difference i
 %The later is necessary to compensate for the lack of one \ac{HP} usage episodes/day.
 
 With regard to the applicability of a weighted average model, this is problematic, as a model needs to produce a similar prediction based on different input, \ie, one \ac{HP} episode/day and two \ac{LP} episodes/days (\C5{}) versus three \ac{LP} episodes/days (\C6{}).
-As the multi-episodic judgment remained above the level of episodic judgments of \ac{LP} episodes, at least the last four episodes/days must be considered in the case of \C6{} while \C5{} only requires three episodes/days.
+As the multi-episodic judgment remained above the level of episodic judgments of \ac{LP} episodes, at least the last four episodes/days must be considered in the case of \C6{}, whereas \C5{} only requires at least three episodes/days.
 For all three experiments, LI and WI require a larger $\mathit{w}$ to reach the best prediction accuracy for \C6{} compared to all other conditions.
-For \E1{} and \EIIa{}, $\mathit{w}=3$~(LI) and $\mathit{w}=4$~(WI) are required for \C6{} while \C5{} achieves its minimum already at $\mathit{w}=2$~(LI) and $\mathit{w}=3$~(WI).
-For \E6{}, $\mathit{w}=7$~(LI) and $\mathit{w}=9$~(WI) are required for \C6{} while \C5{} achieves its minimum at $\mathit{w}=4$~(LI) and $\mathit{w}=7$~(WI).
+For \E1{} and \EIIa{}, $\mathit{w}=3$~(LI) and $\mathit{w}=4$~(WI) are required for \C6{}, whereas \C5{} achieves its lowest prediction error already at $\mathit{w}=2$~(LI) and $\mathit{w}=3$~(WI).
+For \E6{}, $\mathit{w}=7$~(LI) and $\mathit{w}=9$~(WI) are required for \C6{}, whereas \C5{} achieves its lowest prediction error at $\mathit{w}=4$~(LI) and $\mathit{w}=7$~(WI).
 It must be noted that the optimal value(s) of $\mathit{w}$ for \C5{} are identical to the optimal $\mathit{w}$ for all conditions for LI and WI.
-Thus, the overall prediction performance for both weight functions can be improved, if $\mathit{w}$ can be reduced to this value in case of \C6{}.
-Although the underlying reason for the observed saturation effect could not be deduced, this can be achieved by \emph{modifying} the episodic judgment(s) of the 4th\,episode/day for \C6{}, so it resembles \C5{} with regard to episodic judgments.
+Thus, the overall prediction performance for both weight functions can be improved if $\mathit{w}$ can be reduced to this value in case of \C6{}.
+Although the underlying reason for the observed saturation effect could not be deduced, this can be achieved by \emph{modifying} the episodic judgment(s) of the 4th~episode/day for \C6{}, so it resembles \C5{} with regard to episodic judgments.
 This modification can be achieved by replacing these judgment(s) by the average of episodic judgment of \ac{HP} episodes. 
 %However, a simpler approach can be derived by assuming that one of the \ac{LP} usage episodes/days did not only not contribute to the multi\-/episodic judgment, but rather is considered as \ac{HP} for the judgment of multi\-/episodic perceived quality, \ie, that \C5{} and \C6{} are not considered differently with regard to the formation process.
 It is thus here proposed to change $\mathit{e_4}$ in case of \C6{} for \E1{} and \EIIa{}:
 \begin{equation}\label{eq:saturate:modify1}
 \tilde{e}_4=\nicefrac{1}{3} \sum\limits_{i=1}^{3}e_i \, .
 \end{equation}
-For \E6{} the episodic judgments of $\mathit{e_7}$ and $\mathit{e_8}$ are adjusted as follows:
+For \E6{}, the episodic judgments of $\mathit{e_7}$ and $\mathit{e_8}$ are adjusted as follows:
 \begin{equation}\label{eq:saturate:modify2}
 \tilde{e}_{[7,8]}= \nicefrac{1}{6} \sum\limits_{i=1}^{6}e_i \, .
 \end{equation}
-%This adjustment actually modifies \C6{} to be similar to \C5{}.
 This is equivalent to extending $\mathit{\hat{m}_n}$ in the case of \C6{} with the addition of the term (here only shown for \E1{} and \EIIa{}):
-%\frac{a_4 * ((e_1 + e_2 + e_3)/3 - e_4)}{\sum\limits_{i=1}^{n}a_i}\, .
-%\frac{a_4}{\sum\limits_{i=1}^{n}a_i}*((e_1 + e_2 + e_3)/3 - e_4)
 \begin{equation}\label{eq:saturate:addition}
 (\nicefrac{\sum\limits_{i=1}^{3}e_i}{3} - e_4) \cdot  \nicefrac{a_4}{\sum\limits_{i=1}^{n}a_i}\, .
 \end{equation}
-%\begin{equation}\label{eq:saturate:addition}
-%\widehat{ms}_n = \hat{m}_n + \left\{
-%\begin{array}{ll}
-%  \frac{a_3 * ((e_6 + e_5 + e_4)/3 - e_3)}{\sum\limits_{i=1}^{n}a_i},& \text{if episodes 1..3:LP and 4..6:HP}\\
-%  0,& \text{otherwise}
-%\end{array}
-%\right.
-%\end{equation}
 
-The modified version of \C6{} is in the following denoted as \emph{\C6{}\,(adjusted)}.
-In the following, the prediction accuracy of both model types between \C5{}, \C6{}, and \C6{}\,(adjusted) is presented.
+This modified version of \C6{} is denoted as \emph{\C6{}~(adjusted)}.
+In the following, the prediction accuracy of both model types between \C5{}, \C6{}, and \C6{}~(adjusted) is presented.
 For \E1{} and \EIIa{}, this is shown in \autoref{fig:pred:SAT:E1} and \autoref{fig:pred:SAT:E2a}, respectively.
 
-\begin{figure}[h]
+\begin{figure}[b]
 	\centering
 <<plotE1SAT, echo=F, fig.height=3>>=
 ggplot_model_create(subset(data_mos_adjusted_only, data_mos_adjusted_only$experiment == "E1" & data_mos_adjusted_only$id == 6), 1.25) + 
@@ -494,7 +486,7 @@ ggplot_model_create(subset(data_mos_adjusted_only, data_mos_adjusted_only$experi
 	scale_color_manual(name="Condition", values=c("#00BFC4", "#7CAE00", "#7CAE00")) +
 	scale_size_manual(name="Condition", values=c(0.5, 0.5, 0.5))
 @
-	\caption[One session (\E1{}): multi-episodic prediction accuracy for the saturation effect]{One session (\E1{}):  multi-episodic prediction accuracy for saturation effect (6th\,usage episode).}
+	\caption[One session (\E1{}): multi-episodic prediction accuracy for the saturation effect]{One session (\E1{}):  multi-episodic prediction accuracy for saturation effect (6th~usage episode).}
 	\label{fig:pred:SAT:E1}
 \end{figure}
 
@@ -502,9 +494,9 @@ For \E1{} and \EIIa{}, the adjustment results in a shift of the minimal \ac{RMSD
 In case of WI, the minimal \ac{RMSD} shifts from~$\mathit{w}=4$ to~$\mathit{w}=3$ for both experiments.
 This is also observed for LI.
 Here, the minimal \ac{RMSD} shifts from~$\mathit{w}=3$ to~$\mathit{w}=2$.
-It is notable for both experiments that the adjustment leads to a similar shape of \ac{RMSD} for \C5{} and \C6{}\,(adjusted).
-Furthermore, the minimal \ac{RMSD} is reached earlier, but with increasing $\mathit{w}$ the \ac{RMSD} is worse for \C6{}\,(adjusted) than \C6{}.
-\begin{figure}[h]
+It is notable for both experiments that the adjustment leads to a similar shape of \ac{RMSD} for \C5{} and \C6{}~(adjusted).
+Furthermore, the minimal \ac{RMSD} is reached earlier, but with increasing $\mathit{w}$ the \ac{RMSD} is worse for \C6{}~(adjusted) than \C6{}.
+\begin{figure}[t]
 	\centering
 <<plotE2SAT, echo=F, fig.height=3>>=
 ggplot_model_create(subset(data_mos_adjusted_only, data_mos_adjusted_only$experiment == "E2a" & data_mos_adjusted_only$id == 6), 1.0) + 
@@ -513,24 +505,24 @@ ggplot_model_create(subset(data_mos_adjusted_only, data_mos_adjusted_only$experi
 	scale_color_manual(name="Condition", values=c("#00BFC4", "#7CAE00", "#7CAE00")) +
 	scale_size_manual(name="Condition", values=c(0.5, 0.5, 0.5))
 @
-	\caption[One session (\EIIa{}):  multi-episodic prediction accuracy for the saturation effect]{One session (\EIIa{}):  multi-episodic prediction accuracy for the saturation effect (6th\,usage episode).}
+	\caption[One session (\EIIa{}):  multi-episodic prediction accuracy for the saturation effect]{One session (\EIIa{}):  multi-episodic prediction accuracy for the saturation effect (6th~usage episode).}
 	\label{fig:pred:SAT:E2a}
 \end{figure}
 
 With regard to \E6{}, a similar observation is made.
 The minimal \ac{RMSD} shifts from $\mathit{w}=9$~to~ $\mathit{w}=6$ for WI and for LI from $\mathit{w}=7$ to $\mathit{w}=4$.
-Here, \C6{}\,(adjusted) also resembles \C5{} closely (see \autoref{fig:pred:SAT:E6}).
+Here, \C6{}~(adjusted) also resembles \C5{} closely (see \autoref{fig:pred:SAT:E6}).
 
-\begin{figure}[h]
+\begin{figure}[b]
 	\centering
 <<plotE6SAT, echo=F, fig.height=3>>=
 ggplot_model_create(subset(data_mos_adjusted_only, data_mos_adjusted_only$experiment == "E6a" & data_mos_adjusted_only$id == 14), 2.0) + 
 	geom_line(aes(x=parameter, y=RMSD, linetype=condition, size=condition, colour=condition)) + facet_grid(. ~ model_FACET) + 
-	scale_linetype_manual(name="Condition", values=c("solid", "twodash", "solid")) +
-	scale_color_manual(name="Condition",values=c("#00BFC4", "#7CAE00", "#7CAE00")) +
-	scale_size_manual(name="Condition", values=c(0.5, 0.5, 0.5))
+	scale_linetype_manual(name="Condition", values=c("solid", "twodash", "solid"), labels=c("C5", "C6 (adjusted)", "C6")) +
+	scale_color_manual(name="Condition",values=c("#00BFC4", "#7CAE00", "#7CAE00"), labels=c("C5", "C6 (adjusted)", "C6")) +
+	scale_size_manual(name="Condition", values=c(0.5, 0.5, 0.5), labels=c("C5", "C6 (adjusted)", "C6"))
 @
-	\caption[Multiple days (\E6{}):  multi-episodic prediction accuracy for the saturation effect]{Multiple days (\E6{}):  multi-episodic prediction accuracy for the saturation effect (6th\,day, \ie, 6th\,usage episode).}
+	\caption[Multiple days (\E6{}):  multi-episodic prediction accuracy for the saturation effect]{Multiple days (\E6{}):  multi-episodic prediction accuracy for the saturation effect (6th~day, \ie, 12th~usage episode).}
 	\label{fig:pred:SAT:E6}
 \end{figure}
 
@@ -553,14 +545,16 @@ In fact, this overall reduction is rather small with regard to all conditions.
 
 \section{Conclusion}
 In this chapter, two model types based on the weighted average for predicting the multi\-/episodic \ac{MOS} using the episodic \acp{MOS} were presented.
-It could be shown that a weighted average using either a window function or a linear weight function enables to predict multi\-/episodic judgments.
-Both model types perform similarly if only \ac{HP} usage episodes are presented.
+It could be shown that a weighted average using either a window function or a linear function enabled to predict the multi\-/episodic \ac{MOS}.
+Both model types perform similarly if only \ac{HP} usage episodes were presented.
 In fact, if \ac{LP} usages episodes were presented, both models outperform the unweighted average of all prior episodic judgments, \ie, a lower $\mathit{w}$ achieves a better prediction accuracy.
 Comparing WI and LI, the latter shows a better prediction accuracy and higher robustness for choosing the $\mathit{w}$.
-This is observed for all three experiments.
+This is observed in all three experiments.
 One interesting observation is made with regard to the one-session experiments.
 For both models, the highest prediction accuracy is achieved for the same $\mathit{w}$ in case of \E1{} and \EIIa{}, \ie, LI:~$\mathit{w}=2$ and WI:~$\mathit{w}=4$.
-This suggests that the usage situation must actually not be considered in this case for predicting multi\-/episodic judgments.
+This suggests that the usage situation must actually not be considered in this case for predicting the multi\-/episodic \ac{MOS}.
+
 Although no reason for the observed saturation effect could be derived, accounting for it with the described algorithm improves the overall prediction accuracy for all three experiments.
 
-In fact, it must be noted that the weighted average with rather simple weight functions (one degree of freedom) enables a decent prediction accuracy for one session as well as a usage period of 6\,days.
+In fact, it must be noted that the weighted average with rather simple weight functions (one degree of freedom) enables a decent prediction accuracy for one session as well as a usage period of 6~days.
+Nevertheless, the conducted modeling is inherently limited to the data of the conducted experiments, and models could not be verified as no data sets were available that could be used for cross\-/validation.

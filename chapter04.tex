@@ -6,7 +6,7 @@ With regard to perceived quality, only those performance fluctuations must be co
 Fluctuations that affect the quality formation process are distinguished as \emph{microscopic} and \emph{macroscopic} \citep[][p.\,72]{raake_short-_2006}.\footnote{\citet{raake_short-_2006} distinguishes microscopic and macroscopic with regard to packet-loss behavior for speech telephony. The notation used here is generalized to be independent of the actual source of fluctuations.}
 This differentiation focuses on performance fluctuations in one stimulus or episode.
 The former is a fluctuation that is not perceived as variation in perceived quality.
-Such fluctuations are often rather short, such as non-bursty packet-loss in a \ac{VoIP} call \citep[\cf{}][p.\,72]{raake_short-_2006}.
+Such fluctuations are often rather short, such as non-bursty packet loss in a \ac{VoIP} call \citep[\cf{}][p.\,72]{raake_short-_2006}.
 In contrast, macroscopic fluctuations are perceived and judged as variation in perceived quality.
 An example of macroscopic fluctuations is a noticeable change in video encoding bandwidth.
 
@@ -44,13 +44,13 @@ For the evaluation of conversational speech telephony, for example, \acp{SCS} ha
 Here, the information that is to be exchanged is defined.
 Although a conversational structure is suggested, the exact timing is not enforced, and thus the assessment of macroscopic performance fluctuations is limited.
 An alternative is the method of \emph{simulated conversations} \citep{weiss_modeling_2009, berger_estimation_2008}.
-This method enforces a \emph{realistic} and reproducible user behavior including speaker changes, and is standardized as ETSI\,102506 \citep{etsi_speech_2011}.
+This method enforces a \emph{realistic} and reproducible user behavior including speaker changes, and is standardized as ETSI~102506 \citep{etsi_speech_2011}.
 Here, a telephone conversation is split into individual parts of listening and speaking.
 Speaking parts and listening parts are then concatenated alternatingly in a meaningful order to create a simulated conversation.
 For speaking parts, predefined questions should be answered by the participant.
 This has been done orally as well as written.
-This should enable an otherwise passive listener enable to feel as though he is taking part in a real conversation.
-This method allows the presentation of a comparable stimulus, except the exact speaking phases, to multiple participants including precisely timed degradations.
+This should enable an otherwise passive listener to feel as though he is taking part in a real conversation.
+This method allows the presentation of a comparable stimulus, except for the exact speaking phases, to multiple participants including precisely timed degradations.
 
 \subsection{Effects on Retrospective Judgments}
 The impact of macroscopic performance fluctuations on retrospective judgments has been investigated mainly for video transmission and speech telephony.
@@ -80,15 +80,15 @@ For example, \citet{ninassi_considering_2009} did not find a recency effect for 
 %Here it was furthermore observed that increasing the number of stallings results in higher reduction in retrospective judgments than the increasing the duration of one stalling event.
 
 Beside video transmission, the impact of macroscopic performance fluctuations has been investigated for (speech) telephony. %In difference to \ac{PSTN}-based telephony 
-Here, a recency effect could also be observed \citep[\eg,][]{rosenbluth_testing_1998, hamberg_time-varying_1999, gros_instantaneous_2001, gros_effects_2004, belmudez_audiovisual_2015, weiss_modeling_2009, lewcio_management_2014} whereas a negative peak effect has been less often observed \citep[\eg,][]{weiss_modeling_2009, belmudez_audiovisual_2015, lewcio_management_2014}.
+Here, a recency effect could also be observed \citep[\eg,][]{rosenbluth_testing_1998, hamberg_time-varying_1999, gros_instantaneous_2001, gros_effects_2004, belmudez_audiovisual_2015, weiss_modeling_2009, lewcio_management_2014}, whereas a negative peak effect has been less often observed \citep[\eg,][]{weiss_modeling_2009, belmudez_audiovisual_2015, lewcio_management_2014}.
 The work of \citet{weiss_modeling_2009, lewcio_management_2014, belmudez_audiovisual_2015} is based on the method of \emph{simulated conversations} \citep{etsi_speech_2011}.
-Here, the perceived quality of a simulated conversation is complemented by judgments of the individual listening parts and speaking parts.
+Here, the perceived quality of a simulated conversation is complemented by judgments of the individual listening parts.
 Analyzing the relationship between the intermediate judgments and the retrospective judgment, enables the investigation of potential effects.
 In addition, \citet{rosenbluth_testing_1998} investigated and observed a duration neglect for speech telephony.
 
 With regard to macroscopic performance fluctuations and their impact on a retrospective judgment of the perceived quality, the state of the art is rather limited.
 Although recency effect, peak effect, and duration neglect have been observed, it is not known under which circumstances these occur.
-In fact, the characteristics of these effects are not yet fully understood, \eg, window of increased importance due to a recency effect for specific cases.
+In fact, the characteristics of these effects are not yet fully understood, \eg, length of the recency effect.
 One reason for this is the incomparability of the conducted experiments.
 Therefore, effects were observed repeatedly, but exact characteristics can hardly be derived.
 %Although a negative peak effect could be observed, a positive peak effect has to my knowledge not been investigated.
@@ -96,7 +96,7 @@ Therefore, effects were observed repeatedly, but exact characteristics can hardl
 \subsection{Prediction of Retrospective Judgments}
 One practical goal of research on \ac{QoE} is the prediction of retrospective judgments.
 Retrospective judgments can be predicted using either momentary or intermediate judgments as well as predictions of these judgments.\footnote{If the momentary or intermediate judgments are different to the final retrospective judgment, for example using a different scale or assessing something different, these judgments must be first transformed before predicting the retrospective judgment.}
-An alternative is to omit the prediction for these judgments and use a parametric description of the complete stimulus to predict the final retrospective judgment directly.
+An alternative is to omit the prediction for these judgments and use a parametric description of the complete stimulus to directly predict the final retrospective judgment.
 
 The \emph{baseline model} for temporal integration is based on the assumption that no effects occur, \ie, that all individual parts of an experience are equally important.
 This can be represented by the \emph{unweighted} arithmetic mean of all momentary or intermediate judgments.
@@ -111,11 +111,11 @@ However, the implemented prediction models in the state of the art for retrospec
 \subsection{Conclusion}
 Retrospective judgments of perceived quality show effects similar to the retrospective judgments of experiences in general.
 However, the findings with regard to perceived quality remain so far inconclusive, as effects are regularly observed but rarely quantified.
-Here, the major focus lies on a \emph{sufficiently} precise prediction independent of the underlying reason.
+Here, the major focus lies on a \emph{sufficient} precise prediction independent of the underlying reason.
 For example, a recency effect could be regularly observed, but it is not (yet) known under which circumstances it occurs, \eg, the minimal duration of an experience tending to show a recency effect.
 Furthermore, it is not known if recency is affected by the usage situation or modality (\eg, is visually presented content affected in a similar way to auditory content?) etc.
-In addition to a recency effect, a peak effect could be observed, while duration neglect only received limited attention.
+In addition to a recency effect, a peak effect could be observed while a duration neglect only received limited attention.
 
-In fact, research on \ac{QoE} has been and will probably remain a mainly technology\-/driven.
+In fact, research on \ac{QoE} has been and will probably remain mainly technology\-/driven.
 In particular, the wide variety of applications, technology, and fast-pacing technological changes limit the comparison and derivation of knowledge about the formation process of judgments on perceived quality.
 Nevertheless, the state of the art shows that not all parts of an experience affect a retrospective judgment equally.

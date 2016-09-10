@@ -10,11 +10,11 @@ ggplot_timeseries_create <- function(timeseries) {
  
 
  #  p <- p + scale_y_continuous(labels=c("extrem schlecht (0)","schlecht (1)","dürftig (2)", "ordentlich (3)", "gut (4)", "ausgezeichnet (5)", "ideal (6)"), breaks=0:6)
- p <- p + scale_y_continuous(labels=c("Extremely\nbad (0)","Bad (1)", "Poor (2)", "Fair (3)", "Good (4)", "Excellent (5)", "Ideal (6)"), breaks=0:6)
+ p <- p + scale_y_continuous(labels=c("Extremely bad (0)","Bad (1)", "Poor (2)", "Fair (3)", "Good (4)", "Excellent (5)", "Ideal (6)"), breaks=0:6)
 
  p <- p + theme(axis.text.x=element_text(colour="black"))
  p <- p + theme(axis.text.y=element_text(colour="black"))
- 
+
  p <- p + theme(text=element_text(family="Palatino"))
  p <- p + theme(strip.background = element_rect(colour="white", fill="white"), strip.text=element_text(size=12)) 
  
@@ -26,7 +26,7 @@ ggplot_timeseries_create <- function(timeseries) {
   
  
  p <- p + xlab("Usage Episode")
- p <- p + ylab("Episodic Judgment")
+ p <- p + ylab("Episodic Judgment\n")
  
  p <- p + theme(legend.position="none")
 
@@ -54,7 +54,7 @@ ggplot_model_create <- function(data, ylim=2.4) {
  p <- p + theme(panel.grid.major=element_line(color="darkgray",size=.25))
  p <- p + theme(panel.grid.minor=element_line(color="gray",size=.25))
 
- p <- p + ylab("RMSD") + xlab("Parameter w")
+ p <- p + ylab("RMSD\n") + xlab("Parameter w")
 #  p <- p + scale_colour_hue(name = "Model 1")
 #  p <- p + scale_colour_discrete(name  ="Payer")
 #  p <- p + scale_shape_discrete(name  ="Payer")
