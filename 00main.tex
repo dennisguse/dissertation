@@ -1,0 +1,244 @@
+% **************************************************************************************************************
+% A Classic Thesis Style
+% An Homage to The Elements of Typographic Style
+%
+% Copyright (C) 2015 André Miede http://www.miede.de
+%
+% If you like the style then I would appreciate a postcard. My address 
+% can be found in the file ClassicThesis.pdf. A collection of the 
+% postcards I received so far is available online at 
+% http://postcards.miede.de
+%
+% License:
+% This program is free software; you can redistribute it and/or modify
+% it under the terms of the GNU General Public License as published by
+% the Free Software Foundation; either version 2 of the License, or
+% (at your option) any later version.
+%
+% This program is distributed in the hope that it will be useful,
+% but WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+% GNU General Public License for more details.
+%
+% You should have received a copy of the GNU General Public License
+% along with this program; see the file COPYING.  If not, write to
+% the Free Software Foundation, Inc., 59 Temple Place - Suite 330,
+% Boston, MA 02111-1307, USA.
+%
+% **************************************************************************************************************
+\RequirePackage{fix-cm} % fix some latex issues see: http://texdoc.net/texmf-dist/doc/latex/base/fixltx2e.pdf
+\documentclass[ twoside,
+                dottedtoc,
+                openright,titlepage,numbers=noenddot,headinclude,%1headlines,% letterpaper a4paper
+                footinclude=true,cleardoublepage=empty,abstractoff, % <--- obsolete, remove (todo)
+                BCOR=5mm,paper=a4,fontsize=11pt,%11pt,a4paper,%
+                ngerman,american,%
+                ]{scrreprt}\usepackage[]{graphicx}\usepackage[]{color}
+%% maxwidth is the original width if it is less than linewidth
+%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
+\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
+\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+
+\usepackage{alltt}
+                
+%********************************************************************
+% Note: Make all your adjustments in here
+%*******************************************************
+
+\input{support/classicthesis-config}
+\DeclareUnicodeCharacter{00A0}{ } %Unbreakable spaces
+
+%\setlength\overfullrule{5pt}
+\renewcommand{\myVersion}{4215706}
+
+\DeclareNameAlias{sortname}{last-first}
+%********************************************************************
+% Bibliographies
+%*******************************************************
+\addbibresource{Bibliography.bib}
+
+%********************************************************************
+% Hyphenation
+%*******************************************************
+%\hyphenation{put special hyphenation here}
+\input{hypenate}
+\usepackage{float}
+\usepackage{multirow}
+
+\usepackage{chngcntr}
+\counterwithout{footnote}{chapter}
+\usepackage[bottom]{footmisc}
+
+\usepackage[shortcuts]{extdash}
+
+%Centering column type Y for tabularx
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+
+\deffootnote{0em}{0em}{\thefootnotemark\hspace*{.5em}}
+
+\def\UrlFont{\color{black}\em}
+
+%citet with " " and cite
+\usepackage{etoolbox}
+\pretocmd\citet{\renewcommand*{\nameyeardelim}{\addspace}}\relax\relax
+\pretocmd\citep{\renewcommand*{\nameyeardelim}{\addcomma\addspace}}\relax\relax
+
+%\usepackage{xparse}
+%\DeclareDocumentCommand{\citep}{ O{} O{} m}
+%{\IfNoValueTF{#1}
+%  {\parencite[#1]{#2}}
+%  {\parencite[#1][#2]{#3}}
+%}
+%\DeclareDocumentCommand{\citet}{ O{} O{} m}
+%{
+%\IfNoValueTF{#1}
+%  {\renewcommand*{\nameyeardelim}{\addspace}\textcite[#1]{#2}\renewcommand*{\nameyeardelim}{\addcomma\addspace}}
+%  {\renewcommand*{\nameyeardelim}{\addspace}\textcite[#1][#2]{#3}\renewcommand*{\nameyeardelim}{\addcomma\addspace}}
+%}
+
+%Get equal margins although we are twoside
+%Does not work as expected: \setlength{\oddsidemargin}{\dimexpr(\oddsidemargin+\evensidemargin)/2\relax}
+\oddsidemargin=65.59715pt
+\evensidemargin=\oddsidemargin
+
+% ********************************************************************
+% GO!GO!GO! MOVE IT!
+%*******************************************************
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\begin{document}
+\include{support/shade}
+\frenchspacing
+\raggedbottom
+\selectlanguage{american} % american ngerman
+%\renewcommand*{\bibname}{new name}
+%\setbibpreamble{}
+\pagenumbering{Roman}
+\pagestyle{plain}
+%********************************************************************
+% Frontmatter
+%*******************************************************
+%\include{support/FrontBackmatter/DirtyTitlepage}
+\include{support/FrontBackmatter/Titlepage}
+\include{support/FrontBackmatter/Titleback}
+\cleardoublepage\include{support/FrontBackmatter/Dedication}
+%\cleardoublepage\include{FrontBackmatter/Foreword}
+\cleardoublepage\include{support/FrontBackmatter/Abstract}
+\cleardoublepage\include{support/FrontBackmatter/Publications}
+\cleardoublepage\include{support/FrontBackmatter/Acknowledgments}
+\pagestyle{scrheadings}
+
+\cleardoublepage\include{support/FrontBackmatter/Contents}
+%********************************************************************
+% Mainmatter
+%*******************************************************
+\cleardoublepage
+\pagenumbering{arabic}\setcounter{page}{1}
+\include{chapter01}
+
+%\part{Related Work and State-of-the-Art}\cleardoublepage %TODO Make one Chapter to rule them all!
+\cleardoublepage
+\chapter{Related Work}\label{chap:02}
+\input{chapter02}
+\input{chapter03}
+\input{chapter04}
+\input{chapter05}
+
+%\part{Towards Multi-episodic \ac{QoE}}\cleardoublepage
+\cleardoublepage\include{chapter06}
+
+\cleardoublepage\include{chapter07}
+\cleardoublepage\include{chapter08}
+\cleardoublepage\include{chapter09}
+
+\cleardoublepage\include{chapter10}
+
+\cleardoublepage
+\newpage
+\thispagestyle{empty}
+\vspace*{3cm}
+\begin{center}
+%So long, and thanks for all the fish
+%\\ \medskip
+%    --- Douglas Adams
+
+\emph{Brain}: Are you pondering what I'm pondering? \\
+\smallskip
+\emph{Pinky}: Whoof, oh, I'd have to say the odds of that are terribly slim, Brain. \\
+\smallskip
+\emph{Brain}: True.
+\\ \medskip
+    --- Pinky \& Brain
+\end{center}
+\cleardoublepage
+
+
+
+\bookmarksetup{startatroot}
+\setcounter{chapter}{0}
+\addtocontents{toc}{\protect\newpage}
+\renewcommand{\theHchapter}{\roman{chapter}}
+\renewcommand{\thechapter}{\roman{chapter}}
+\renewcommand{\theHsection}{\roman{chapter}.\roman{section}}
+\renewcommand{\thesection}{\roman{chapter}.\roman{section}}
+\renewcommand{\theHsubsection}{\roman{chapter}.\roman{section}.\roman{subsection}}
+\renewcommand{\thesubsection}{\roman{chapter}.\roman{section}.\roman{subsection}}
+\pagenumbering{roman}\setcounter{page}{1}
+\part*{Appendix}\label{chap:appendix}
+
+\include{appendix}
+
+%********************************************************************
+% Other Stuff in the Back
+%*******************************************************
+\bookmarksetup{startatroot}
+\cleardoublepage\include{support/FrontBackmatter/Bibliography}
+%\cleardoublepage\include{FrontBackmatter/Declaration}
+%\cleardoublepage\include{FrontBackmatter/Colophon}
+% ********************************************************************
+% Game Over: Restore, Restart, or Quit?
+%*******************************************************
+\end{document}
+% ********************************************************************
