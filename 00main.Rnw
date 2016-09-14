@@ -90,6 +90,11 @@
 %  {\renewcommand*{\nameyeardelim}{\addspace}\textcite[#1][#2]{#3}\renewcommand*{\nameyeardelim}{\addcomma\addspace}}
 %}
 
+%Get equal margins although we are twoside
+%Does not work as expected: \setlength{\oddsidemargin}{\dimexpr(\oddsidemargin+\evensidemargin)/2\relax}
+\oddsidemargin=65.59715pt
+\evensidemargin=\oddsidemargin
+
 % ********************************************************************
 % GO!GO!GO! MOVE IT!
 %*******************************************************
